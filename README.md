@@ -1,5 +1,5 @@
 # TwoStep: Multi-agent Task Planning using Classical Planners and Large Language Models
-This repo contains the source code for generating multi-agent plans based on problems decribed by natural language.
+This repo contains the official source code of `TwoStep` for generating multi-agent plans based on problems decribed by natural language, in symbolic domains.
 
 ## Dependency
 
