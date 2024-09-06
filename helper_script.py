@@ -505,269 +505,6 @@ agent1 subgoals: It can help in filling ingredient1 in a shot glass, then pour i
     return helper_subgoal, end
 
 
-def validator_simulation(expt_path, args, log_file, multi=False, half_split=False):
-
-    # get relevant files for validation
-    domain_pddl_file =  f'./domains/{args.domain}/domain.pddl'
-    task_pddl_file =  f'./domains/{args.domain}/p{args.task_id}.pddl' # since we need actual init conds
-    with open(task_pddl_file, 'r') as f: task = f.read()
-    
-    if multi:
-        plan_main = []
-        plan_helper = []
-        # task_pddl_file_helper =  f"./{expt_path}/p{args.task_id}_subgoal.pddl"
-        # with open(task_pddl_file_helper, 'r') as f: task_helper = f.read()
-        plan_path = os.path.join(f"./{expt_path}", f"p{args.task_id}_plan.pddl" + '.*')
-        best_cost = 10e6
-        for fn in glob.glob(plan_path):
-            with open(fn, "r") as f:
-                plans = f.readlines()
-                cost = get_cost(plans[-1])
-                if cost < best_cost:
-                    best_cost = cost
-                    plan_file = fn
-        with open(plan_file, 'r') as f: plan_all = f.readlines()[:-1]
-        for i in plan_all:
-            if 'robot1' in i:
-                plan_main.append(i)
-            else:
-                plan_helper.append(i)
-    
-    elif half_split:
-        # task_pddl_file_helper =  f"./{expt_path}/p{args.task_id}_subgoal.pddl"
-        # with open(task_pddl_file_helper, 'r') as f: task_helper = f.read()
-        plan_path = os.path.join(f"./{expt_path}", f"p{args.task_id}_plan.pddl" + '.*')
-        best_cost = 10e6
-        for fn in glob.glob(plan_path):
-            with open(fn, "r") as f:
-                plans = f.readlines()
-                cost = get_cost(plans[-1])
-                if cost < best_cost:
-                    best_cost = cost
-                    plan_file = fn
-        with open(plan_file, 'r') as f: plan_all = f.readlines()[:-1]
-        half_len = int(len(plan_all)/2)
-        plan_helper = plan_all[:half_len]
-        plan_main = plan_all[half_len:]
-
-        
-    else:
-        # task_pddl_file_helper =  f"./{expt_path}/p{args.task_id}_subgoal.pddl"
-        # with open(task_pddl_file_helper, 'r') as f: task_helper = f.read()
-        plan_path = os.path.join(f"./{expt_path}", f"p{args.task_id}_subgoal_plan.pddl" + '.*')
-        best_cost = 10e6
-        for fn in glob.glob(plan_path):
-            with open(fn, "r") as f:
-                plans = f.readlines()
-                cost = get_cost(plans[-1])
-                if cost < best_cost:
-                    best_cost = cost
-                    plan_file = fn
-
-        with open(plan_file, 'r') as f: plan_helper = f.readlines()[:-1]
-        if '.pddl.sas' in plan_file or '.pddl.out' in plan_file:
-            return np.zeros((1,1)) + 1e6, False
-
-        # task_pddl_file_main =  f"./{expt_path}/p{args.task_id}.pddl" # since we need actual init conds
-        # with open(task_pddl_file_main, 'r') as f: task_main = f.read()
-        plan_path = os.path.join(f"./{expt_path}", f"p{args.task_id}_edited_init_plan.pddl" + '.*')
-        best_cost = 10e6
-        for fn in glob.glob(plan_path):
-            with open(fn, "r") as f:
-                plans = f.readlines()
-                cost = get_cost(plans[-1])
-                if cost < best_cost:
-                    best_cost = cost
-                    plan_file = fn
-        with open(plan_file, 'r') as f: plan_main = f.readlines()[:-1]
-        if '.pddl.sas' in plan_file or '.pddl.out' in plan_file:
-            return np.zeros((1,1)) + 1e6, False
-
-
-
-
-    # make temp val files
-    # task_path = f"./{expt_path}/p{args.task_id}_task_temp.txt"
-    # with open(task_path, 'w') as f: f.write(task)    
-    val_path_helper = f"./{expt_path}/helper_val_temp.txt"
-    val_path_main = f"./{expt_path}/main_val_temp.txt"
-    plan_path_helper = f"./{expt_path}/helper_plan_temp.txt"
-    plan_path_main = f"./{expt_path}/main_plan_temp.txt"
-
-    task_path_helper = f"./{expt_path}/helper_task_temp.txt"
-    task_path_main = f"./{expt_path}/main_task_temp.txt"
-
-    # os.remove(val_path_helper); os.remove(val_path_main)
-    # os.remove(plan_path_helper); os.remove(plan_path_main)
-    # os.remove(task_path_helper); os.remove(task_path_main)
-
-    with open(task_path_helper, 'w') as f: f.write(task)
-    with open(task_path_main, 'w') as f: f.write(task)
-
-    with open(val_path_helper, 'w') as f: f.write('')
-    with open(val_path_main, 'w') as f: f.write('')
-    with open(plan_path_helper, 'w') as f: f.write('')
-    with open(plan_path_main, 'w') as f: f.write('')
-
-    task_path_helper_temp = f"./{expt_path}/helper_task_temp_temp.txt"
-    task_path_main_temp = f"./{expt_path}/main_task_temp_temp.txt"
-    
-    # os.remove(task_path_helper_temp); os.remove(task_path_main_temp)
-
-    with open(task_path_helper_temp, 'w') as f: f.write(task)
-    with open(task_path_main_temp, 'w') as f: f.write(task)
-    i=0; j=0
-    task_helper = {}; task_helper[f'{i}_{j}'] = task
-    task_main = {}; task_main[f'{i}_{j}'] = task
-    plan_length = np.zeros((len(plan_helper)+1, len(plan_main)+1)) + 1e6; plan_length[0,0] = 0
-    main_executed = False; helper_executed = False
-    # import ipdb; ipdb.set_trace()
-
-    print(f"TASK: {args.domain} - {args.run} - ", args.task_id)
-    with open(log_file, 'a+') as f: f.write(f"TASK: {args.domain} - {args.run} - {args.task_id}\n")
-    while i < len(plan_helper) or j < len(plan_main):
-        # print(i, j)
-        with open(log_file, 'a+') as f: f.write(f'{i}, {j} ')
-        
-        V_mh = False; V_hm = False 
-        if i < len(plan_helper) and j < len(plan_main):
-            # helper -> main
-            with open(plan_path_helper, 'w') as f: f.write(plan_helper[i])
-            output_helper = subprocess.run(["./downward/validate", "-v", domain_pddl_file, task_path_helper, plan_path_helper], stdout=subprocess.PIPE)
-            with open(val_path_helper, 'w') as f: f.write(output_helper.stdout.decode('utf-8'))
-            if 'unsatisfied precondition' not in output_helper.stdout.decode('utf-8'):
-                get_updated_init_conditions(expt_path, args, validation_filename=val_path_helper, pddl_problem_filename=task_path_helper, pddl_problem_filename_edited=task_path_helper_temp, env_conds_only=False)
-                get_updated_init_conditions(expt_path, args, validation_filename=val_path_helper, pddl_problem_filename=task_path_main, pddl_problem_filename_edited=task_path_main_temp)
-                # for recursion
-                k = i+1
-                with open(task_path_main_temp, 'r') as f: task_main[f'{k}_{j}'] = f.read()
-                with open(task_path_helper_temp, 'r') as f: task_helper[f'{k}_{j}'] = f.read()
-                
-                # main step
-                with open(plan_path_main, 'w') as f: f.write(plan_main[j])
-                output_main = subprocess.run(["./downward/validate", "-v", domain_pddl_file, task_path_main_temp, plan_path_main], stdout=subprocess.PIPE)
-                with open(val_path_main, 'w') as f: f.write(output_main.stdout.decode('utf-8'))
-                if 'unsatisfied precondition' not in output_main.stdout.decode('utf-8'):
-                    V_hm = True
-            # main -> helper   
-            with open(plan_path_main, 'w') as f: f.write(plan_main[j])
-            output_main = subprocess.run(["./downward/validate", "-v", domain_pddl_file, task_path_main, plan_path_main], stdout=subprocess.PIPE)
-            with open(val_path_main, 'w') as f: f.write(output_main.stdout.decode('utf-8'))
-            if 'unsatisfied precondition' not in output_main.stdout.decode('utf-8'):
-                get_updated_init_conditions(expt_path, args, validation_filename=val_path_main, pddl_problem_filename=task_path_main, pddl_problem_filename_edited=task_path_main_temp, env_conds_only=False)
-                get_updated_init_conditions(expt_path, args, validation_filename=val_path_main, pddl_problem_filename=task_path_helper, pddl_problem_filename_edited=task_path_helper_temp)
-                # for recursion
-                k = j+1
-                with open(task_path_main_temp, 'r') as f: task_main[f'{i}_{k}'] = f.read()
-                with open(task_path_helper_temp, 'r') as f: task_helper[f'{i}_{k}'] = f.read()
-                
-                # helper step
-                with open(plan_path_helper, 'w') as f: f.write(plan_helper[i])
-                output_helper = subprocess.run(["./downward/validate", "-v", domain_pddl_file, task_path_helper_temp, plan_path_helper], stdout=subprocess.PIPE)
-                with open(val_path_helper, 'w') as f: f.write(output_helper.stdout.decode('utf-8'))
-                if 'unsatisfied precondition' not in output_helper.stdout.decode('utf-8'):
-                    V_mh = True
-        
-        if V_hm and V_mh:
-            output = output_helper
-            # move plan forward for both agents
-            # print('helper', i,  plan_helper[i], ' main', j,  plan_main[j])
-            with open(log_file, 'a+') as f: f.write(f"'helper', {i},  {plan_helper[i][:-1]}, ' main', {j},  {plan_main[j][:-1]}\n")
-            get_updated_init_conditions(expt_path, args, validation_filename=val_path_main, pddl_problem_filename=task_path_main, env_conds_only=False)
-            get_updated_init_conditions(expt_path, args, validation_filename=val_path_main, pddl_problem_filename=task_path_helper)
-            get_updated_init_conditions(expt_path, args, validation_filename=val_path_helper, pddl_problem_filename=task_path_main)
-            get_updated_init_conditions(expt_path, args, validation_filename=val_path_helper, pddl_problem_filename=task_path_helper, env_conds_only=False)
-            # s_{t+1}
-            i += 1; j += 1
-            plan_length[i,j] = 1 + min(plan_length[i-1,j], plan_length[i,j-1], plan_length[i-1,j-1])
-            # print(plan_length[i,j])
-            with open(task_path_main, 'r') as f: task_main[f'{i}_{j}'] = f.read() 
-            with open(task_path_helper, 'r') as f: task_helper[f'{i}_{j}'] = f.read()
-        
-        else:
-            if i < len(plan_helper):
-                with open(plan_path_helper, 'w') as f: f.write(plan_helper[i])
-                output = subprocess.run(["./downward/validate", "-v", domain_pddl_file, task_path_helper, plan_path_helper], stdout=subprocess.PIPE)
-                with open(val_path_helper, 'w') as f: f.write(output.stdout.decode('utf-8'))
-                if 'unsatisfied precondition' not in output.stdout.decode('utf-8'):
-                    # print('helper',i,  plan_helper[i], f' V_hm: {V_hm}, V_mh: {V_mh}')
-                    with open(log_file, 'a+') as f: f.write(f"'helper', {i},  {plan_helper[i][:-1]}, V_hm: {V_hm}, V_mh: {V_mh}\n")
-
-                    helper_executed = True
-                    get_updated_init_conditions(expt_path, args, validation_filename=val_path_helper, pddl_problem_filename=task_path_helper, env_conds_only=False)
-                    get_updated_init_conditions(expt_path, args, validation_filename=val_path_helper, pddl_problem_filename=task_path_main)
-                    i += 1
-                    plan_length[i,j] = 1 + plan_length[i-1,j] if j==0 else  1 + min(plan_length[i-1,j], plan_length[i,j-1]) 
-                    # print(plan_length[i,j])
-                    with open(task_path_main, 'r') as f: task_main[f'{i}_{j}'] = f.read()
-                    with open(task_path_helper, 'r') as f: task_helper[f'{i}_{j}'] = f.read()
-                elif not main_executed:
-                    helper_executed = False
-                    main_executed = True
-                    # reverse state conditions : reverse main if helper is stuck
-                    # reverse to state where last j-1 action was taken
-                    traceback_key = [key for key in task_main.keys() if re.match(fr"\d*_{j-1}$", key)]
-                    i, j = traceback_key[-1].split('_'); i = int(i); j = int(j)
-                    with open(task_path_helper, 'w') as f: f.write(task_helper[f'{i}_{j}'])
-                    with open(task_path_main, 'w') as f: f.write(task_main[f'{i}_{j}'])
-                    plan_length[i,j] = 1 + plan_length[i-1,j] if j==0 else  1 + min(plan_length[i-1,j], plan_length[i,j-1]) 
-                    # import ipdb; ipdb.set_trace()
-                    with open(log_file, 'a+') as f: f.write(f'reverse  ')
-                    continue
-                else:
-                    helper_executed = False
-
-            if j < len(plan_main):
-                with open(plan_path_main, 'w') as f: f.write(plan_main[j])
-                output = subprocess.run(["./downward/validate", "-v", domain_pddl_file, task_path_main, plan_path_main], stdout=subprocess.PIPE)
-                with open(val_path_main, 'w') as f: f.write(output.stdout.decode('utf-8'))
-                if 'unsatisfied precondition' not in output.stdout.decode('utf-8'):
-                    # print('main', j, plan_main[j], f' V_hm: {V_hm}, V_mh: {V_mh}')
-                    with open(log_file, 'a+') as f: f.write(f"'main', {j},  {plan_main[j][:-1]}, V_hm: {V_hm}, V_mh: {V_mh}\n")
-                    main_executed = True
-                    get_updated_init_conditions(expt_path, args, validation_filename=val_path_main, pddl_problem_filename=task_path_main, env_conds_only=False)
-                    get_updated_init_conditions(expt_path, args, validation_filename=val_path_main, pddl_problem_filename=task_path_helper)
-                    j += 1
-                    plan_length[i,j] = 1 + plan_length[i,j-1] if i==0 else 1 + min(plan_length[i-1,j], plan_length[i,j-1])
-                    # print(plan_length[i,j])
-                    with open(task_path_main, 'r') as f: task_main[f'{i}_{j}'] = f.read()
-                    with open(task_path_helper, 'r') as f: task_helper[f'{i}_{j}'] = f.read()
-                elif not helper_executed:
-                    main_executed = False
-                    helper_executed = True
-                    # reverse state conditions : reverse helper if it also failed to execute
-                    traceback_key = [key for key in task_main.keys() if re.match(fr"^{i-1}_\d*", key)]
-                    i1, j1 = traceback_key[0].split('_'); i1 = int(i1); j1 = int(j1)
-                    plan_length[i1,j1] = 1e6
-                    i, j = traceback_key[-1].split('_'); i = int(i); j = int(j)
-                    with open(task_path_helper, 'w') as f: f.write(task_helper[f'{i}_{j}'])
-                    with open(task_path_main, 'w') as f: f.write(task_main[f'{i}_{j}'])
-                    plan_length[i,j] = 1 + plan_length[i,j-1] if i==0 else 1 + min(plan_length[i-1,j], plan_length[i,j-1])
-                    # import ipdb; ipdb.set_trace()
-                    with open(log_file, 'a+') as f: f.write(f'reverse  ')
-                    continue
-                else:
-                    main_executed = False
-        
-        if plan_length[i,j] > len(plan_main) + len(plan_helper):
-            output = output.stdout.decode('utf-8')
-            with open(log_file, 'a+') as f: f.write(f'ERROR: plan_len > len of each \n ')
-            with open(log_file, 'a+') as f: f.write(f'\nparallel exec error: {output}\n')
-            # import ipdb; ipdb.set_trace()
-            
-            return -1, False
-        
-    if "Plan valid" in output.stdout.decode('utf-8'):
-        success =  True
-    else:
-        # import ipdb; ipdb.set_trace()
-        output = output.stdout.decode('utf-8')
-        with open(log_file, 'a+') as f: f.write(f'\nparallel exec goal not reached: {plan_helper[i-1]}, {plan_main[j-1]} - {output}\n')
-        success =  False
-    # import ipdb; ipdb.set_trace()
-    return plan_length, success
-
-
 
 def validator_simulation_recurssive(expt_path, args, log_file, multi=False, half_split=False):
 
@@ -917,544 +654,13 @@ def validator_simulation_recurssive(expt_path, args, log_file, multi=False, half
     print(plan_length, success)
     return plan_length, success
 
-def validator_sim_recurssion_function_(expt_path, domain_pddl_file, i, j, plan_helper, plan_main, task_helper, task_main, agent='both', success=False):
-    # print(f'{i}, {j} ')
-    with open(log_file, 'a+') as f: f.write(f'{i}, {j} ')
-    val_path_helper = f"./{expt_path}/helper_val_temp.txt"
-    val_path_main = f"./{expt_path}/main_val_temp.txt"
-    plan_path_helper = f"./{expt_path}/helper_plan_temp.txt"
-    plan_path_main = f"./{expt_path}/main_plan_temp.txt"
-    task_path_helper = f"./{expt_path}/helper_task_temp.txt"
-    task_path_main = f"./{expt_path}/main_task_temp.txt"
-
-    if agent=='helper':
-        # if len(plan_helper) == 0: return 1e10
-        # if i == len(plan_helper): return 0
-        # import ipdb; ipdb.set_trace()
-        with open(plan_path_helper, 'w') as f: f.write(plan_helper[i])
-        with open(task_path_helper, 'w') as f: f.write(task_helper)
-        with open(task_path_main, 'w') as f: f.write(task_main)
-        output = subprocess.run(["./downward/validate", "-v", domain_pddl_file, task_path_helper, plan_path_helper], stdout=subprocess.PIPE)
-        with open(val_path_helper, 'w') as f: f.write(output.stdout.decode('utf-8'))
-        if 'unsatisfied precondition' not in output.stdout.decode('utf-8'):
-            # print('helper',i,  plan_helper[i], f' V_hm: {V_hm}, V_mh: {V_mh}')
-            with open(log_file, 'a+') as f: f.write(f"'helper', {i},  {plan_helper[i][:-1]}\n")
-
-            get_updated_init_conditions(expt_path, args, validation_filename=val_path_helper, pddl_problem_filename=task_path_helper, env_conds_only=False)
-            get_updated_init_conditions(expt_path, args, validation_filename=val_path_helper, pddl_problem_filename=task_path_main)
-            i += 1
-            with open(task_path_main, 'r') as f: task_main = f.read()
-            with open(task_path_helper, 'r') as f: task_helper = f.read()
-
-            if i == len(plan_helper) and j == len(plan_main):
-                return 1
-            elif i == len(plan_helper):
-                plans = [len(plan_main)-j]
-            elif j == len(plan_main):
-                plans = [len(plan_helper)-i]
-            else:
-                plans = [validator_sim_recurssion_function(expt_path, domain_pddl_file, i, j, plan_helper, plan_main, task_helper, task_main, agent='helper'),
-                        validator_sim_recurssion_function(expt_path, domain_pddl_file, i, j, plan_helper, plan_main, task_helper, task_main, agent='main'),
-                        validator_sim_recurssion_function(expt_path, domain_pddl_file, i, j, plan_helper, plan_main, task_helper, task_main, agent='both')]
-
-            # plans = [validator_sim_recurssion_function(expt_path, domain_pddl_file, i, j, plan_helper, plan_main, task_helper, task_main, agent='helper'),
-            #             validator_sim_recurssion_function(expt_path, domain_pddl_file, i, j, plan_helper, plan_main, task_helper, task_main, agent='main'),
-            #             validator_sim_recurssion_function(expt_path, domain_pddl_file, i, j, plan_helper, plan_main, task_helper, task_main, agent='both')]
-            # plans = plans[:1] + plans[2:] if plans[1] == len(plan_main) else plans
-            plan_length = 1 + min(plans)
-            # print(plan_length, plans)
-            return plan_length
-            # print(plan_length[i,j])
-        else:
-            return 1e10
-
-    elif agent=='main':
-        # if len(plan_main) == 0: return 1e10
-        # if j == len(plan_main): return 0
-        with open(plan_path_main, 'w') as f: f.write(plan_main[j])
-        with open(task_path_main, 'w') as f: f.write(task_main)
-        with open(task_path_helper, 'w') as f: f.write(task_helper)
-        output = subprocess.run(["./downward/validate", "-v", domain_pddl_file, task_path_main, plan_path_main], stdout=subprocess.PIPE)
-        with open(val_path_main, 'w') as f: f.write(output.stdout.decode('utf-8'))
-        if 'unsatisfied precondition' not in output.stdout.decode('utf-8'):
-            # print('main', j, plan_main[j], f' V_hm: {V_hm}, V_mh: {V_mh}')
-            with open(log_file, 'a+') as f: f.write(f"'main', {j},  {plan_main[j][:-1]}\n")
-            get_updated_init_conditions(expt_path, args, validation_filename=val_path_main, pddl_problem_filename=task_path_main, env_conds_only=False)
-            get_updated_init_conditions(expt_path, args, validation_filename=val_path_main, pddl_problem_filename=task_path_helper)
-            j += 1
-            with open(task_path_main, 'r') as f: task_main = f.read()
-            with open(task_path_helper, 'r') as f: task_helper = f.read()
-
-            if i == len(plan_helper) and j == len(plan_main):
-                return 1
-            elif i == len(plan_helper):
-                plans = [len(plan_main)-j]
-            elif j == len(plan_main):
-                plans = [len(plan_helper)-i]
-            else:
-                plans = [validator_sim_recurssion_function(expt_path, domain_pddl_file, i, j, plan_helper, plan_main, task_helper, task_main, agent='helper'),
-                        validator_sim_recurssion_function(expt_path, domain_pddl_file, i, j, plan_helper, plan_main, task_helper, task_main, agent='main'),
-                        validator_sim_recurssion_function(expt_path, domain_pddl_file, i, j, plan_helper, plan_main, task_helper, task_main, agent='both')]
-
-            # plans = [validator_sim_recurssion_function(expt_path, domain_pddl_file, i, j, plan_helper, plan_main, task_helper, task_main, agent='helper'),
-            #           validator_sim_recurssion_function(expt_path, domain_pddl_file, i, j, plan_helper, plan_main, task_helper, task_main, agent='main'),
-            #             validator_sim_recurssion_function(expt_path, domain_pddl_file, i, j, plan_helper, plan_main, task_helper, task_main, agent='both')]
-            # plans = plans[1:] if plans[0] == len(plan_helper) else plans
-            plan_length = 1 + min(plans)
-            # print(plan_length, plans)
-            return plan_length
-            # print(plan_length[i,j])
-        else:
-            return 1e10
-
-
-    elif agent=='both':
-        # import ipdb; ipdb.set_trace()
-        # if len(plan_helper) == 0 or len(plan_main) == 0: return 1e10
-        # if i == len(plan_helper) or j == len(plan_main): return 0
-        task_path_helper_temp = f"./{expt_path}/helper_task_temp_temp.txt"
-        task_path_main_temp = f"./{expt_path}/main_task_temp_temp.txt"
-        V_mh = False; V_hm = False 
-        # helper -> main
-        with open(plan_path_helper, 'w') as f: f.write(plan_helper[i])
-        with open(task_path_helper, 'w') as f: f.write(task_helper)
-        with open(task_path_main, 'w') as f: f.write(task_main)
-        output_helper = subprocess.run(["./downward/validate", "-v", domain_pddl_file, task_path_helper, plan_path_helper], stdout=subprocess.PIPE)
-        with open(val_path_helper, 'w') as f: f.write(output_helper.stdout.decode('utf-8'))
-        if 'unsatisfied precondition' not in output_helper.stdout.decode('utf-8'):
-            get_updated_init_conditions(expt_path, args, validation_filename=val_path_helper, pddl_problem_filename=task_path_helper, pddl_problem_filename_edited=task_path_helper_temp, env_conds_only=False)
-            get_updated_init_conditions(expt_path, args, validation_filename=val_path_helper, pddl_problem_filename=task_path_main, pddl_problem_filename_edited=task_path_main_temp)
-            # for recursion
-            k = i+1  
-            # main step
-            with open(plan_path_main, 'w') as f: f.write(plan_main[j])
-            # with open(task_path_main, 'w') as f: f.write(task_main)
-            output_main = subprocess.run(["./downward/validate", "-v", domain_pddl_file, task_path_main_temp, plan_path_main], stdout=subprocess.PIPE)
-            with open(val_path_main, 'w') as f: f.write(output_main.stdout.decode('utf-8'))
-            if 'unsatisfied precondition' not in output_main.stdout.decode('utf-8'):
-                V_hm = True
-        # main -> helper   
-        with open(plan_path_main, 'w') as f: f.write(plan_main[j])
-        with open(task_path_helper, 'w') as f: f.write(task_helper)
-        with open(task_path_main, 'w') as f: f.write(task_main)
-        output_main = subprocess.run(["./downward/validate", "-v", domain_pddl_file, task_path_main, plan_path_main], stdout=subprocess.PIPE)
-        with open(val_path_main, 'w') as f: f.write(output_main.stdout.decode('utf-8'))
-        if 'unsatisfied precondition' not in output_main.stdout.decode('utf-8'):
-            get_updated_init_conditions(expt_path, args, validation_filename=val_path_main, pddl_problem_filename=task_path_main, pddl_problem_filename_edited=task_path_main_temp, env_conds_only=False)
-            get_updated_init_conditions(expt_path, args, validation_filename=val_path_main, pddl_problem_filename=task_path_helper, pddl_problem_filename_edited=task_path_helper_temp)
-            # for recursion
-            k = j+1
-            # helper step
-            with open(plan_path_helper, 'w') as f: f.write(plan_helper[i])
-            # with open(task_path_helper, 'w') as f: f.write(task_helper)
-            output_helper = subprocess.run(["./downward/validate", "-v", domain_pddl_file, task_path_helper_temp, plan_path_helper], stdout=subprocess.PIPE)
-            with open(val_path_helper, 'w') as f: f.write(output_helper.stdout.decode('utf-8'))
-            if 'unsatisfied precondition' not in output_helper.stdout.decode('utf-8'):
-                V_mh = True
-    
-        if V_hm and V_mh:
-            output = output_helper
-            # move plan forward for both agents
-            # print('helper', i,  plan_helper[i], ' main', j,  plan_main[j])
-            with open(log_file, 'a+') as f: f.write(f"'helper', {i},  {plan_helper[i][:-1]}, ' main', {j},  {plan_main[j][:-1]}\n")
-            get_updated_init_conditions(expt_path, args, validation_filename=val_path_main, pddl_problem_filename=task_path_main, env_conds_only=False)
-            get_updated_init_conditions(expt_path, args, validation_filename=val_path_main, pddl_problem_filename=task_path_helper)
-            get_updated_init_conditions(expt_path, args, validation_filename=val_path_helper, pddl_problem_filename=task_path_main)
-            get_updated_init_conditions(expt_path, args, validation_filename=val_path_helper, pddl_problem_filename=task_path_helper, env_conds_only=False)
-            i += 1; j += 1
-            # print(plan_length[i,j])
-            with open(task_path_main, 'r') as f: task_main = f.read()
-            with open(task_path_helper, 'r') as f: task_helper = f.read()
-            if i == len(plan_helper) and j == len(plan_main):
-                return 1
-            elif i == len(plan_helper):
-                plans = [len(plan_main)-j]
-            elif j == len(plan_main):
-                plans = [len(plan_helper)-i]
-            else:
-                plans = [validator_sim_recurssion_function(expt_path, domain_pddl_file, i, j, plan_helper, plan_main, task_helper, task_main, agent='helper'),
-                        validator_sim_recurssion_function(expt_path, domain_pddl_file, i, j, plan_helper, plan_main, task_helper, task_main, agent='main'),
-                        validator_sim_recurssion_function(expt_path, domain_pddl_file, i, j, plan_helper, plan_main, task_helper, task_main, agent='both')]
-
-            # plans = [validator_sim_recurssion_function(expt_path, domain_pddl_file, i, j, plan_helper, plan_main, task_helper, task_main, agent='helper'),
-            #             validator_sim_recurssion_function(expt_path, domain_pddl_file, i, j, plan_helper, plan_main, task_helper, task_main, agent='main'),
-            #             validator_sim_recurssion_function(expt_path, domain_pddl_file, i, j, plan_helper, plan_main, task_helper, task_main, agent='both')]    
-            plan_length = 1 + min(plans)
-            # print(plan_length, plans)
-            return plan_length
-        else:
-            return 1e10
-
-
-def validator_sim_recurssion_function(expt_path, domain_pddl_file, i, j, plan_helper, plan_main, task_helper, task_main, agent='both', success=False):
-    # print(f'{i}, {j} ')
-    with open(log_file, 'a+') as f: f.write(f'{i}, {j} ')
-    val_path_helper = f"./{expt_path}/helper_val_temp.txt"
-    val_path_main = f"./{expt_path}/main_val_temp.txt"
-    plan_path_helper = f"./{expt_path}/helper_plan_temp.txt"
-    plan_path_main = f"./{expt_path}/main_plan_temp.txt"
-    task_path_helper = f"./{expt_path}/helper_task_temp.txt"
-    task_path_main = f"./{expt_path}/main_task_temp.txt"
-
-    if agent=='helper':
-        # if len(plan_helper) == 0: return 1e10
-        # if i == len(plan_helper): return 0
-        # import ipdb; ipdb.set_trace()
-        with open(plan_path_helper, 'w') as f: f.write(plan_helper[i])
-        with open(task_path_helper, 'w') as f: f.write(task_helper)
-        with open(task_path_main, 'w') as f: f.write(task_main)
-        output = subprocess.run(["./downward/validate", "-v", domain_pddl_file, task_path_helper, plan_path_helper], stdout=subprocess.PIPE)
-        with open(val_path_helper, 'w') as f: f.write(output.stdout.decode('utf-8'))
-        if 'unsatisfied precondition' not in output.stdout.decode('utf-8'):
-            # print('helper',i,  plan_helper[i], f' V_hm: {V_hm}, V_mh: {V_mh}')
-            with open(log_file, 'a+') as f: f.write(f"'helper', {i},  {plan_helper[i][:-1]}\n")
-
-            get_updated_init_conditions(expt_path, args, validation_filename=val_path_helper, pddl_problem_filename=task_path_helper, env_conds_only=False)
-            get_updated_init_conditions(expt_path, args, validation_filename=val_path_helper, pddl_problem_filename=task_path_main)
-            i += 1
-            with open(task_path_main, 'r') as f: task_main = f.read()
-            with open(task_path_helper, 'r') as f: task_helper = f.read()
-
-            if i == len(plan_helper) and j == len(plan_main):
-                return 1
-            elif i == len(plan_helper):
-                plans = [len(plan_main)-j]
-            elif j == len(plan_main):
-                plans = [len(plan_helper)-i]
-            else:
-                # print('before', (i, j, 0), (i, j, 1), (i, j, 2), [execution_state[i, j, 0], execution_state[i, j, 1], execution_state[i, j, 2]])
-                execution_state[i, j, 0] = execution_state[i, j, 0] if execution_state[i, j, 0] != 1e6 else validator_sim_recurssion_function(expt_path, domain_pddl_file, i, j, plan_helper, plan_main, task_helper, task_main, agent='helper')
-                execution_state[i, j, 1] = execution_state[i, j, 1] if execution_state[i, j, 1] != 1e6 else validator_sim_recurssion_function(expt_path, domain_pddl_file, i, j, plan_helper, plan_main, task_helper, task_main, agent='main')
-                execution_state[i, j, 2] = execution_state[i, j, 2] if execution_state[i, j, 2] != 1e6 else validator_sim_recurssion_function(expt_path, domain_pddl_file, i, j, plan_helper, plan_main, task_helper, task_main, agent='both')
-
-                plans = [execution_state[i, j, 0], execution_state[i, j, 1], execution_state[i, j, 2]]
-                # print((i, j, 0), (i, j, 1), (i, j, 2), plans)
-
-            # plans = [validator_sim_recurssion_function(expt_path, domain_pddl_file, i, j, plan_helper, plan_main, task_helper, task_main, agent='helper'),
-            #             validator_sim_recurssion_function(expt_path, domain_pddl_file, i, j, plan_helper, plan_main, task_helper, task_main, agent='main'),
-            #             validator_sim_recurssion_function(expt_path, domain_pddl_file, i, j, plan_helper, plan_main, task_helper, task_main, agent='both')]
-            # plans = plans[:1] + plans[2:] if plans[1] == len(plan_main) else plans
-            plan_length = 1 + min(plans)
-            # print(plan_length, plans)
-            return plan_length
-            # print(plan_length[i,j])
-        else:
-            return 1e10
-
-    elif agent=='main':
-        # if len(plan_main) == 0: return 1e10
-        # if j == len(plan_main): return 0
-        with open(plan_path_main, 'w') as f: f.write(plan_main[j])
-        with open(task_path_main, 'w') as f: f.write(task_main)
-        with open(task_path_helper, 'w') as f: f.write(task_helper)
-        output = subprocess.run(["./downward/validate", "-v", domain_pddl_file, task_path_main, plan_path_main], stdout=subprocess.PIPE)
-        with open(val_path_main, 'w') as f: f.write(output.stdout.decode('utf-8'))
-        if 'unsatisfied precondition' not in output.stdout.decode('utf-8'):
-            # print('main', j, plan_main[j], f' V_hm: {V_hm}, V_mh: {V_mh}')
-            with open(log_file, 'a+') as f: f.write(f"'main', {j},  {plan_main[j][:-1]}\n")
-            get_updated_init_conditions(expt_path, args, validation_filename=val_path_main, pddl_problem_filename=task_path_main, env_conds_only=False)
-            get_updated_init_conditions(expt_path, args, validation_filename=val_path_main, pddl_problem_filename=task_path_helper)
-            j += 1
-            with open(task_path_main, 'r') as f: task_main = f.read()
-            with open(task_path_helper, 'r') as f: task_helper = f.read()
-
-            if i == len(plan_helper) and j == len(plan_main):
-                return 1
-            elif i == len(plan_helper):
-                plans = [len(plan_main)-j]
-            elif j == len(plan_main):
-                plans = [len(plan_helper)-i]
-            else:
-                # print('before', (i, j, 0), (i, j, 1), (i, j, 2), [execution_state[i, j, 0], execution_state[i, j, 1], execution_state[i, j, 2]])
-                execution_state[i, j, 0] = execution_state[i, j, 0] if execution_state[i, j, 0] != 1e6 else validator_sim_recurssion_function(expt_path, domain_pddl_file, i, j, plan_helper, plan_main, task_helper, task_main, agent='helper')
-                execution_state[i, j, 1] = execution_state[i, j, 1] if execution_state[i, j, 1] != 1e6 else validator_sim_recurssion_function(expt_path, domain_pddl_file, i, j, plan_helper, plan_main, task_helper, task_main, agent='main')
-                execution_state[i, j, 2] = execution_state[i, j, 2] if execution_state[i, j, 2] != 1e6 else validator_sim_recurssion_function(expt_path, domain_pddl_file, i, j, plan_helper, plan_main, task_helper, task_main, agent='both')
-
-                plans = [execution_state[i, j, 0], execution_state[i, j, 1], execution_state[i, j, 2]]
-                # print((i, j, 0), (i, j, 1), (i, j, 2), plans)
-            # plans = [validator_sim_recurssion_function(expt_path, domain_pddl_file, i, j, plan_helper, plan_main, task_helper, task_main, agent='helper'),
-            #           validator_sim_recurssion_function(expt_path, domain_pddl_file, i, j, plan_helper, plan_main, task_helper, task_main, agent='main'),
-            #             validator_sim_recurssion_function(expt_path, domain_pddl_file, i, j, plan_helper, plan_main, task_helper, task_main, agent='both')]
-            # plans = plans[1:] if plans[0] == len(plan_helper) else plans
-            plan_length = 1 + min(plans)
-            # print(plan_length, plans)
-            return plan_length
-            # print(plan_length[i,j])
-        else:
-            return 1e10
-
-
-    elif agent=='both':
-        # import ipdb; ipdb.set_trace()
-        # if len(plan_helper) == 0 or len(plan_main) == 0: return 1e10
-        # if i == len(plan_helper) or j == len(plan_main): return 0
-        task_path_helper_temp = f"./{expt_path}/helper_task_temp_temp.txt"
-        task_path_main_temp = f"./{expt_path}/main_task_temp_temp.txt"
-        V_mh = False; V_hm = False 
-        # helper -> main
-        with open(plan_path_helper, 'w') as f: f.write(plan_helper[i])
-        with open(task_path_helper, 'w') as f: f.write(task_helper)
-        with open(task_path_main, 'w') as f: f.write(task_main)
-        output_helper = subprocess.run(["./downward/validate", "-v", domain_pddl_file, task_path_helper, plan_path_helper], stdout=subprocess.PIPE)
-        with open(val_path_helper, 'w') as f: f.write(output_helper.stdout.decode('utf-8'))
-        if 'unsatisfied precondition' not in output_helper.stdout.decode('utf-8'):
-            get_updated_init_conditions(expt_path, args, validation_filename=val_path_helper, pddl_problem_filename=task_path_helper, pddl_problem_filename_edited=task_path_helper_temp, env_conds_only=False)
-            get_updated_init_conditions(expt_path, args, validation_filename=val_path_helper, pddl_problem_filename=task_path_main, pddl_problem_filename_edited=task_path_main_temp)
-            # for recursion
-            k = i+1  
-            # main step
-            with open(plan_path_main, 'w') as f: f.write(plan_main[j])
-            # with open(task_path_main, 'w') as f: f.write(task_main)
-            output_main = subprocess.run(["./downward/validate", "-v", domain_pddl_file, task_path_main_temp, plan_path_main], stdout=subprocess.PIPE)
-            with open(val_path_main, 'w') as f: f.write(output_main.stdout.decode('utf-8'))
-            if 'unsatisfied precondition' not in output_main.stdout.decode('utf-8'):
-                V_hm = True
-        # main -> helper   
-        with open(plan_path_main, 'w') as f: f.write(plan_main[j])
-        with open(task_path_helper, 'w') as f: f.write(task_helper)
-        with open(task_path_main, 'w') as f: f.write(task_main)
-        output_main = subprocess.run(["./downward/validate", "-v", domain_pddl_file, task_path_main, plan_path_main], stdout=subprocess.PIPE)
-        with open(val_path_main, 'w') as f: f.write(output_main.stdout.decode('utf-8'))
-        if 'unsatisfied precondition' not in output_main.stdout.decode('utf-8'):
-            get_updated_init_conditions(expt_path, args, validation_filename=val_path_main, pddl_problem_filename=task_path_main, pddl_problem_filename_edited=task_path_main_temp, env_conds_only=False)
-            get_updated_init_conditions(expt_path, args, validation_filename=val_path_main, pddl_problem_filename=task_path_helper, pddl_problem_filename_edited=task_path_helper_temp)
-            # for recursion
-            k = j+1
-            # helper step
-            with open(plan_path_helper, 'w') as f: f.write(plan_helper[i])
-            # with open(task_path_helper, 'w') as f: f.write(task_helper)
-            output_helper = subprocess.run(["./downward/validate", "-v", domain_pddl_file, task_path_helper_temp, plan_path_helper], stdout=subprocess.PIPE)
-            with open(val_path_helper, 'w') as f: f.write(output_helper.stdout.decode('utf-8'))
-            if 'unsatisfied precondition' not in output_helper.stdout.decode('utf-8'):
-                V_mh = True
-    
-        if V_hm and V_mh:
-            output = output_helper
-            # move plan forward for both agents
-            # print('helper', i,  plan_helper[i], ' main', j,  plan_main[j])
-            with open(log_file, 'a+') as f: f.write(f"'helper', {i},  {plan_helper[i][:-1]}, ' main', {j},  {plan_main[j][:-1]}\n")
-            get_updated_init_conditions(expt_path, args, validation_filename=val_path_main, pddl_problem_filename=task_path_main, env_conds_only=False)
-            get_updated_init_conditions(expt_path, args, validation_filename=val_path_main, pddl_problem_filename=task_path_helper)
-            get_updated_init_conditions(expt_path, args, validation_filename=val_path_helper, pddl_problem_filename=task_path_main)
-            get_updated_init_conditions(expt_path, args, validation_filename=val_path_helper, pddl_problem_filename=task_path_helper, env_conds_only=False)
-            i += 1; j += 1
-            # print(plan_length[i,j])
-            with open(task_path_main, 'r') as f: task_main = f.read()
-            with open(task_path_helper, 'r') as f: task_helper = f.read()
-            if i == len(plan_helper) and j == len(plan_main):
-                return 1
-            elif i == len(plan_helper):
-                plans = [len(plan_main)-j]
-            elif j == len(plan_main):
-                plans = [len(plan_helper)-i]
-            else:
-                # print('before', (i, j, 0), (i, j, 1), (i, j, 2), [execution_state[i, j, 0], execution_state[i, j, 1], execution_state[i, j, 2]])
-                execution_state[i, j, 0] = execution_state[i, j, 0] if execution_state[i, j, 0] != 1e6 else validator_sim_recurssion_function(expt_path, domain_pddl_file, i, j, plan_helper, plan_main, task_helper, task_main, agent='helper')
-                execution_state[i, j, 1] = execution_state[i, j, 1] if execution_state[i, j, 1] != 1e6 else validator_sim_recurssion_function(expt_path, domain_pddl_file, i, j, plan_helper, plan_main, task_helper, task_main, agent='main')
-                execution_state[i, j, 2] = execution_state[i, j, 2] if execution_state[i, j, 2] != 1e6 else validator_sim_recurssion_function(expt_path, domain_pddl_file, i, j, plan_helper, plan_main, task_helper, task_main, agent='both')
-
-                plans = [execution_state[i, j, 0], execution_state[i, j, 1], execution_state[i, j, 2]]
-                # print((i, j, 0), (i, j, 1), (i, j, 2), plans)
-            # plans = [validator_sim_recurssion_function(expt_path, domain_pddl_file, i, j, plan_helper, plan_main, task_helper, task_main, agent='helper'),
-            #             validator_sim_recurssion_function(expt_path, domain_pddl_file, i, j, plan_helper, plan_main, task_helper, task_main, agent='main'),
-            #             validator_sim_recurssion_function(expt_path, domain_pddl_file, i, j, plan_helper, plan_main, task_helper, task_main, agent='both')]    
-            plan_length = 1 + min(plans)
-            # print(plan_length, plans)
-            return plan_length
-        else:
-            return 1e10
-
-
-def validator_sim_recurssion_function_(expt_path, domain_pddl_file, i, j, plan_helper, plan_main, task_helper, task_main, agent='both', success=False):
-    # print(f'{i}, {j} ')
-    with open(log_file, 'a+') as f: f.write(f'{i}, {j} ')
-    val_path_helper = f"./{expt_path}/helper_val_temp.txt"
-    val_path_main = f"./{expt_path}/main_val_temp.txt"
-    plan_path_helper = f"./{expt_path}/helper_plan_temp.txt"
-    plan_path_main = f"./{expt_path}/main_plan_temp.txt"
-    task_path_helper = f"./{expt_path}/helper_task_temp.txt"
-    task_path_main = f"./{expt_path}/main_task_temp.txt"
-
-    execution_state = np.zeros((len(plan_helper)+1, len(plan_main)+1, 3)) + 1e6
-
-    while i < len(plan_helper) or j < len(plan_main):
-        agent='helper'
-        if agent=='helper':
-            # if len(plan_helper) == 0: return 1e10
-            # if i == len(plan_helper): return 0
-            # import ipdb; ipdb.set_trace()
-            with open(plan_path_helper, 'w') as f: f.write(plan_helper[i])
-            with open(task_path_helper, 'w') as f: f.write(task_helper)
-            with open(task_path_main, 'w') as f: f.write(task_main)
-            output = subprocess.run(["./downward/validate", "-v", domain_pddl_file, task_path_helper, plan_path_helper], stdout=subprocess.PIPE)
-            with open(val_path_helper, 'w') as f: f.write(output.stdout.decode('utf-8'))
-            if 'unsatisfied precondition' not in output.stdout.decode('utf-8'):
-                # print('helper',i,  plan_helper[i], f' V_hm: {V_hm}, V_mh: {V_mh}')
-                with open(log_file, 'a+') as f: f.write(f"'helper', {i},  {plan_helper[i][:-1]}\n")
-
-                get_updated_init_conditions(expt_path, args, validation_filename=val_path_helper, pddl_problem_filename=task_path_helper, env_conds_only=False)
-                get_updated_init_conditions(expt_path, args, validation_filename=val_path_helper, pddl_problem_filename=task_path_main)
-                i += 1
-                with open(task_path_main, 'r') as f: task_main = f.read()
-                with open(task_path_helper, 'r') as f: task_helper = f.read()
-
-                if i == len(plan_helper) and j == len(plan_main):
-                    return 1
-                elif i == len(plan_helper):
-                    plans = [len(plan_main)-j]
-                elif j == len(plan_main):
-                    plans = [len(plan_helper)-i]
-                else:
-                    # print('before', (i, j, 0), (i, j, 1), (i, j, 2), [execution_state[i, j, 0], execution_state[i, j, 1], execution_state[i, j, 2]])
-                    execution_state[i, j, 0] = execution_state[i, j, 0] if execution_state[i, j, 0] != 1e6 else validator_sim_recurssion_function(expt_path, domain_pddl_file, i, j, plan_helper, plan_main, task_helper, task_main, agent='helper')
-                    execution_state[i, j, 1] = execution_state[i, j, 1] if execution_state[i, j, 1] != 1e6 else validator_sim_recurssion_function(expt_path, domain_pddl_file, i, j, plan_helper, plan_main, task_helper, task_main, agent='main')
-                    execution_state[i, j, 2] = execution_state[i, j, 2] if execution_state[i, j, 2] != 1e6 else validator_sim_recurssion_function(expt_path, domain_pddl_file, i, j, plan_helper, plan_main, task_helper, task_main, agent='both')
-
-                    plans = [execution_state[i, j, 0], execution_state[i, j, 1], execution_state[i, j, 2]]
-                    # print((i, j, 0), (i, j, 1), (i, j, 2), plans)
-
-                # plans = [validator_sim_recurssion_function(expt_path, domain_pddl_file, i, j, plan_helper, plan_main, task_helper, task_main, agent='helper'),
-                #             validator_sim_recurssion_function(expt_path, domain_pddl_file, i, j, plan_helper, plan_main, task_helper, task_main, agent='main'),
-                #             validator_sim_recurssion_function(expt_path, domain_pddl_file, i, j, plan_helper, plan_main, task_helper, task_main, agent='both')]
-                # plans = plans[:1] + plans[2:] if plans[1] == len(plan_main) else plans
-                plan_length = 1 + min(plans)
-                # print(plan_length, plans)
-                return plan_length
-                # print(plan_length[i,j])
-            else:
-                return 1e10
-
-        agent='main'
-        if agent=='main':
-            # if len(plan_main) == 0: return 1e10
-            # if j == len(plan_main): return 0
-            with open(plan_path_main, 'w') as f: f.write(plan_main[j])
-            with open(task_path_main, 'w') as f: f.write(task_main)
-            with open(task_path_helper, 'w') as f: f.write(task_helper)
-            output = subprocess.run(["./downward/validate", "-v", domain_pddl_file, task_path_main, plan_path_main], stdout=subprocess.PIPE)
-            with open(val_path_main, 'w') as f: f.write(output.stdout.decode('utf-8'))
-            if 'unsatisfied precondition' not in output.stdout.decode('utf-8'):
-                # print('main', j, plan_main[j], f' V_hm: {V_hm}, V_mh: {V_mh}')
-                with open(log_file, 'a+') as f: f.write(f"'main', {j},  {plan_main[j][:-1]}\n")
-                get_updated_init_conditions(expt_path, args, validation_filename=val_path_main, pddl_problem_filename=task_path_main, env_conds_only=False)
-                get_updated_init_conditions(expt_path, args, validation_filename=val_path_main, pddl_problem_filename=task_path_helper)
-                j += 1
-                with open(task_path_main, 'r') as f: task_main = f.read()
-                with open(task_path_helper, 'r') as f: task_helper = f.read()
-
-                if i == len(plan_helper) and j == len(plan_main):
-                    return 1
-                elif i == len(plan_helper):
-                    plans = [len(plan_main)-j]
-                elif j == len(plan_main):
-                    plans = [len(plan_helper)-i]
-                else:
-                    # print('before', (i, j, 0), (i, j, 1), (i, j, 2), [execution_state[i, j, 0], execution_state[i, j, 1], execution_state[i, j, 2]])
-                    execution_state[i, j, 0] = execution_state[i, j, 0] if execution_state[i, j, 0] != 1e6 else validator_sim_recurssion_function(expt_path, domain_pddl_file, i, j, plan_helper, plan_main, task_helper, task_main, agent='helper')
-                    execution_state[i, j, 1] = execution_state[i, j, 1] if execution_state[i, j, 1] != 1e6 else validator_sim_recurssion_function(expt_path, domain_pddl_file, i, j, plan_helper, plan_main, task_helper, task_main, agent='main')
-                    execution_state[i, j, 2] = execution_state[i, j, 2] if execution_state[i, j, 2] != 1e6 else validator_sim_recurssion_function(expt_path, domain_pddl_file, i, j, plan_helper, plan_main, task_helper, task_main, agent='both')
-
-                    plans = [execution_state[i, j, 0], execution_state[i, j, 1], execution_state[i, j, 2]]
-                    # print((i, j, 0), (i, j, 1), (i, j, 2), plans)
-                # plans = [validator_sim_recurssion_function(expt_path, domain_pddl_file, i, j, plan_helper, plan_main, task_helper, task_main, agent='helper'),
-                #           validator_sim_recurssion_function(expt_path, domain_pddl_file, i, j, plan_helper, plan_main, task_helper, task_main, agent='main'),
-                #             validator_sim_recurssion_function(expt_path, domain_pddl_file, i, j, plan_helper, plan_main, task_helper, task_main, agent='both')]
-                # plans = plans[1:] if plans[0] == len(plan_helper) else plans
-                plan_length = 1 + min(plans)
-                # print(plan_length, plans)
-                return plan_length
-                # print(plan_length[i,j])
-            else:
-                return 1e10
-
-        agent='both'
-        if agent=='both':
-            # import ipdb; ipdb.set_trace()
-            # if len(plan_helper) == 0 or len(plan_main) == 0: return 1e10
-            # if i == len(plan_helper) or j == len(plan_main): return 0
-            task_path_helper_temp = f"./{expt_path}/helper_task_temp_temp.txt"
-            task_path_main_temp = f"./{expt_path}/main_task_temp_temp.txt"
-            V_mh = False; V_hm = False 
-            # helper -> main
-            with open(plan_path_helper, 'w') as f: f.write(plan_helper[i])
-            with open(task_path_helper, 'w') as f: f.write(task_helper)
-            with open(task_path_main, 'w') as f: f.write(task_main)
-            output_helper = subprocess.run(["./downward/validate", "-v", domain_pddl_file, task_path_helper, plan_path_helper], stdout=subprocess.PIPE)
-            with open(val_path_helper, 'w') as f: f.write(output_helper.stdout.decode('utf-8'))
-            if 'unsatisfied precondition' not in output_helper.stdout.decode('utf-8'):
-                get_updated_init_conditions(expt_path, args, validation_filename=val_path_helper, pddl_problem_filename=task_path_helper, pddl_problem_filename_edited=task_path_helper_temp, env_conds_only=False)
-                get_updated_init_conditions(expt_path, args, validation_filename=val_path_helper, pddl_problem_filename=task_path_main, pddl_problem_filename_edited=task_path_main_temp)
-                # for recursion
-                k = i+1  
-                # main step
-                with open(plan_path_main, 'w') as f: f.write(plan_main[j])
-                # with open(task_path_main, 'w') as f: f.write(task_main)
-                output_main = subprocess.run(["./downward/validate", "-v", domain_pddl_file, task_path_main_temp, plan_path_main], stdout=subprocess.PIPE)
-                with open(val_path_main, 'w') as f: f.write(output_main.stdout.decode('utf-8'))
-                if 'unsatisfied precondition' not in output_main.stdout.decode('utf-8'):
-                    V_hm = True
-            # main -> helper   
-            with open(plan_path_main, 'w') as f: f.write(plan_main[j])
-            with open(task_path_helper, 'w') as f: f.write(task_helper)
-            with open(task_path_main, 'w') as f: f.write(task_main)
-            output_main = subprocess.run(["./downward/validate", "-v", domain_pddl_file, task_path_main, plan_path_main], stdout=subprocess.PIPE)
-            with open(val_path_main, 'w') as f: f.write(output_main.stdout.decode('utf-8'))
-            if 'unsatisfied precondition' not in output_main.stdout.decode('utf-8'):
-                get_updated_init_conditions(expt_path, args, validation_filename=val_path_main, pddl_problem_filename=task_path_main, pddl_problem_filename_edited=task_path_main_temp, env_conds_only=False)
-                get_updated_init_conditions(expt_path, args, validation_filename=val_path_main, pddl_problem_filename=task_path_helper, pddl_problem_filename_edited=task_path_helper_temp)
-                # for recursion
-                k = j+1
-                # helper step
-                with open(plan_path_helper, 'w') as f: f.write(plan_helper[i])
-                # with open(task_path_helper, 'w') as f: f.write(task_helper)
-                output_helper = subprocess.run(["./downward/validate", "-v", domain_pddl_file, task_path_helper_temp, plan_path_helper], stdout=subprocess.PIPE)
-                with open(val_path_helper, 'w') as f: f.write(output_helper.stdout.decode('utf-8'))
-                if 'unsatisfied precondition' not in output_helper.stdout.decode('utf-8'):
-                    V_mh = True
-        
-            if V_hm and V_mh:
-                output = output_helper
-                # move plan forward for both agents
-                # print('helper', i,  plan_helper[i], ' main', j,  plan_main[j])
-                with open(log_file, 'a+') as f: f.write(f"'helper', {i},  {plan_helper[i][:-1]}, ' main', {j},  {plan_main[j][:-1]}\n")
-                get_updated_init_conditions(expt_path, args, validation_filename=val_path_main, pddl_problem_filename=task_path_main, env_conds_only=False)
-                get_updated_init_conditions(expt_path, args, validation_filename=val_path_main, pddl_problem_filename=task_path_helper)
-                get_updated_init_conditions(expt_path, args, validation_filename=val_path_helper, pddl_problem_filename=task_path_main)
-                get_updated_init_conditions(expt_path, args, validation_filename=val_path_helper, pddl_problem_filename=task_path_helper, env_conds_only=False)
-                i += 1; j += 1
-                # print(plan_length[i,j])
-                with open(task_path_main, 'r') as f: task_main = f.read()
-                with open(task_path_helper, 'r') as f: task_helper = f.read()
-                if i == len(plan_helper) and j == len(plan_main):
-                    return 1
-                elif i == len(plan_helper):
-                    plans = [len(plan_main)-j]
-                elif j == len(plan_main):
-                    plans = [len(plan_helper)-i]
-                else:
-                    # print('before', (i, j, 0), (i, j, 1), (i, j, 2), [execution_state[i, j, 0], execution_state[i, j, 1], execution_state[i, j, 2]])
-                    execution_state[i, j, 0] = execution_state[i, j, 0] if execution_state[i, j, 0] != 1e6 else validator_sim_recurssion_function(expt_path, domain_pddl_file, i, j, plan_helper, plan_main, task_helper, task_main, agent='helper')
-                    execution_state[i, j, 1] = execution_state[i, j, 1] if execution_state[i, j, 1] != 1e6 else validator_sim_recurssion_function(expt_path, domain_pddl_file, i, j, plan_helper, plan_main, task_helper, task_main, agent='main')
-                    execution_state[i, j, 2] = execution_state[i, j, 2] if execution_state[i, j, 2] != 1e6 else validator_sim_recurssion_function(expt_path, domain_pddl_file, i, j, plan_helper, plan_main, task_helper, task_main, agent='both')
-
-                    plans = [execution_state[i, j, 0], execution_state[i, j, 1], execution_state[i, j, 2]]
-                    # print((i, j, 0), (i, j, 1), (i, j, 2), plans)
-                # plans = [validator_sim_recurssion_function(expt_path, domain_pddl_file, i, j, plan_helper, plan_main, task_helper, task_main, agent='helper'),
-                #             validator_sim_recurssion_function(expt_path, domain_pddl_file, i, j, plan_helper, plan_main, task_helper, task_main, agent='main'),
-                #             validator_sim_recurssion_function(expt_path, domain_pddl_file, i, j, plan_helper, plan_main, task_helper, task_main, agent='both')]    
-                plan_length = 1 + min(plans)
-                # print(plan_length, plans)
-                return plan_length
-            else:
-                return 1e10
-
 
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="LLM-multiagent-helper")
     parser.add_argument('--domain', type=str, choices=DOMAINS, default="tyreworld")
     parser.add_argument('--time-limit', type=int, default=200)
-    parser.add_argument('--task_id', type=str, default='2')
+    parser.add_argument('--task_id', type=str)
     parser.add_argument('--experiment_folder', type=str, default='experiments_multiagent_help')
     parser.add_argument('--human_eval', type=bool, default=False)
     parser.add_argument('--run', type=int, default=1)
@@ -1502,7 +708,10 @@ if __name__ == "__main__":
     with open(log_file, 'w') as f: f.write(f"start_eval\n")
     
     human_eval_task_ids = [1, 6, 11, 16]
-    for task_id in range(1, 21): # 1, 21
+
+    task_list = [args.task_id] if args.task_id != None else range(1, 21)
+
+    for task_id in task_list: # 1, 21
         args.task_id = str(task_id)
 
         if args.human_eval: #human eval
@@ -1511,19 +720,19 @@ if __name__ == "__main__":
         args.task_id = f'0{args.task_id}' if len(args.task_id)==1 else args.task_id
         
         # normal planning and same for multi-agent planning
-        # try:
-        #     planner_total_time, planner_total_time_opt, best_cost, planner_search_time_1st_plan, first_plan_cost = planner(path, args, time_limit=10)
-        #     singleagent_planning_time.append(planner_total_time)
-        #     singleagent_planning_time_opt.append(planner_total_time_opt)
-        #     singleagent_cost.append(best_cost)
-        #     singleagent_planning_time_1st.append(planner_search_time_1st_plan)
-        #     singleagent_cost_1st.append(first_plan_cost)
-        # except:
-        #     singleagent_planning_time.append(args.time_limit)
-        #     singleagent_planning_time_opt.append(args.time_limit)
-        #     singleagent_cost.append(1e6)
-        #     singleagent_planning_time_1st.append(args.time_limit)
-        #     singleagent_cost_1st.append(1e6)
+        try:
+            planner_total_time, planner_total_time_opt, best_cost, planner_search_time_1st_plan, first_plan_cost = planner(path, args, time_limit=10)
+            singleagent_planning_time.append(planner_total_time)
+            singleagent_planning_time_opt.append(planner_total_time_opt)
+            singleagent_cost.append(best_cost)
+            singleagent_planning_time_1st.append(planner_search_time_1st_plan)
+            singleagent_cost_1st.append(first_plan_cost)
+        except:
+            singleagent_planning_time.append(args.time_limit)
+            singleagent_planning_time_opt.append(args.time_limit)
+            singleagent_cost.append(1e6)
+            singleagent_planning_time_1st.append(args.time_limit)
+            singleagent_cost_1st.append(1e6)
 
         # half split baseline
         # plan_length, success = validator_simulation(path, args, log_file, half_split=True)
@@ -1537,35 +746,35 @@ if __name__ == "__main__":
         # overall_plan_length.append(plan_length)
         # multiagent_main_success.append(success)
         
-        helper_subgoal, t1 = get_helper_subgoal_without_plan(path, args, log_file)
-        _, t2 = get_pddl_goal(path, args, helper_subgoal, log_file)
-        # try:
-        #     helper_subgoal, t1 = get_helper_subgoal_without_plan(path, args, log_file)
-        #     # # helper_subgoal = "xyz"
-        #     _, t2 = get_pddl_goal(path, args, helper_subgoal, log_file)
-        #     planner_total_time, planner_total_time_opt, best_cost, planner_search_time_1st_plan, first_plan_cost = planner(path, args, subgoal=True)
-        #     success = validator(path, args, subgoal=True)
+        # helper_subgoal, t1 = get_helper_subgoal_without_plan(path, args, log_file)
+        # _, t2 = get_pddl_goal(path, args, helper_subgoal, log_file)
+        try:
+            helper_subgoal, t1 = get_helper_subgoal_without_plan(path, args, log_file)
+            # # helper_subgoal = "xyz"
+            _, t2 = get_pddl_goal(path, args, helper_subgoal, log_file)
+            planner_total_time, planner_total_time_opt, best_cost, planner_search_time_1st_plan, first_plan_cost = planner(path, args, subgoal=True)
+            success = validator(path, args, subgoal=True)
 
-        #     LLM_text_sg_time.append(t1)
-        #     LLM_pddl_sg_time.append(t2)
-        #     multiagent_helper_planning_time.append(planner_total_time)
-        #     multiagent_helper_planning_time_opt.append(planner_total_time_opt)
-        #     multiagent_helper_cost.append(best_cost)
-        #     multiagent_helper_planning_time_1st.append(planner_search_time_1st_plan)
-        #     multiagent_helper_cost_1st.append(first_plan_cost)
-        #     multiagent_helper_success.append(success)
-        # except Exception as e:
-        #     LLM_text_sg_time.append(-1)
-        #     LLM_pddl_sg_time.append(-1)
-        #     multiagent_helper_planning_time.append(-1)
-        #     multiagent_helper_planning_time_opt.append(-1)
-        #     multiagent_helper_cost.append(-1)
-        #     multiagent_helper_planning_time_1st.append(-1)
-        #     multiagent_helper_cost_1st.append(-1)
-        #     multiagent_helper_success.append(0)
-        #     print(e)
-        #     with open(log_file, 'a+') as f:
-        #         f.write(f"\n\nError: {e}")
+            LLM_text_sg_time.append(t1)
+            LLM_pddl_sg_time.append(t2)
+            multiagent_helper_planning_time.append(planner_total_time)
+            multiagent_helper_planning_time_opt.append(planner_total_time_opt)
+            multiagent_helper_cost.append(best_cost)
+            multiagent_helper_planning_time_1st.append(planner_search_time_1st_plan)
+            multiagent_helper_cost_1st.append(first_plan_cost)
+            multiagent_helper_success.append(success)
+        except Exception as e:
+            LLM_text_sg_time.append(-1)
+            LLM_pddl_sg_time.append(-1)
+            multiagent_helper_planning_time.append(-1)
+            multiagent_helper_planning_time_opt.append(-1)
+            multiagent_helper_cost.append(-1)
+            multiagent_helper_planning_time_1st.append(-1)
+            multiagent_helper_cost_1st.append(-1)
+            multiagent_helper_success.append(0)
+            print(e)
+            with open(log_file, 'a+') as f:
+                f.write(f"\n\nError: {e}")
 
         # _, t2 = get_pddl_goal_expert(path, args, log_file)
         # try:
@@ -1598,15 +807,15 @@ if __name__ == "__main__":
 
 
         try:
-            # get_updated_init_conditions(path, args)
-            # planner_total_time, planner_total_time_opt, best_cost, planner_search_time_1st_plan, first_plan_cost = planner(path, args, edited_init=True)
+            get_updated_init_conditions(path, args)
+            planner_total_time, planner_total_time_opt, best_cost, planner_search_time_1st_plan, first_plan_cost = planner(path, args, edited_init=True)
             plan_length, success = validator_simulation_recurssive(path, args, log_file)
             with open(log_file, 'a+') as f: f.write(f"plan_length {plan_length})\n") # {singleagent_cost[-1]}\n")
-            # multiagent_main_planning_time.append(planner_total_time)
-            # multiagent_main_planning_time_opt.append(planner_total_time_opt)
-            # multiagent_main_cost.append(best_cost)
-            # multiagent_main_planning_time_1st.append(planner_search_time_1st_plan)
-            # multiagent_main_cost_1st.append(first_plan_cost)
+            multiagent_main_planning_time.append(planner_total_time)
+            multiagent_main_planning_time_opt.append(planner_total_time_opt)
+            multiagent_main_cost.append(best_cost)
+            multiagent_main_planning_time_1st.append(planner_search_time_1st_plan)
+            multiagent_main_cost_1st.append(first_plan_cost)
             multiagent_main_success.append(success)
             overall_plan_length.append(plan_length)
         except Exception as e:

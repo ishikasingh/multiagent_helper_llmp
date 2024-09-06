@@ -1,3 +1,38 @@
+# TwoStep: Multi-agent Task Planning using Classical Planners and Large Language Models
+This repo contains the source code for generating multi-agent plans based on problems decribed by natural language.
+
+## Dependency
+
+1. Install OpenAI GPT [API](https://platform.openai.com/docs/quickstart/build-your-application). Remember to put openai_keys under the ```keys``` folder.
+   - for now it exists in ```query()``` fuction in ```helper_script.py``` (don't share this key or use for anything unrelated to the project)
+
+2. Install [fast-downward](https://drive.google.com/file/d/16HlP14IN06asIXYAZ8RHR1P7-cEYwhA6/view). For more details on fast-downward, please check the official [github repo](https://github.com/aibasel/downward) and the fast-downward [website](https://www.fast-downward.org/).
+
+## Running Code
+To run a for a specific task in a specific domain:
+```
+python helper_script.py --run $run --domain $domain --time-limit $timelimit --task_id $task_id
+```
+`$run` is experiment number,
+`$task_id` is task number - between 1 to 20,
+`$timelimit` is the planner timelimit - default is `1000` seconds, and
+`$domain` is selected from
+```[barman, blocksworld, grippers, termes, tyreworld, barman-multi, blocksworld-multi, grippers-multi, termes-multi, tyreworld-multi]```
+- `floortile` and `storage` are not impletemented to run with `TwoStep`.
+
+
+Run this file to launch a full sweep of experiment:
+- don't do that yet, but check it out for how to run different variations of the experiments
+```
+bash run_all_domains.sh
+```
+
+
+---
+IGNORE THE STUFF AFTER THIS
+
+---
+
 # LLM+P: Empowering Large Language Models with Optimal Planning Proficiency
 This repo contains the source code for making plans based on problems decribed by natural language.
 
