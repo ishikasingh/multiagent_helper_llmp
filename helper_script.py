@@ -2,14 +2,17 @@ import argparse
 import glob
 import json
 import os
+from dotenv import load_dotenv
 import random
 import sys
 import time
 import re
 import subprocess
-
-import openai
 import numpy as np
+from openai import OpenAI
+
+load_dotenv()
+client = OpenAI()
 
 # import alfworld.agents
 # from alfworld.info import ALFWORLD_DATA
@@ -18,8 +21,6 @@ import numpy as np
 # from alfworld.agents.detector.mrcnn import load_pretrained_model
 # from alfworld.agents.controller import OracleAgent, OracleAStarAgent, MaskRCNNAgent, MaskRCNNAStarAgent
 # from alfworld.gen.planner.ff_planner_handler import parse_action_arg
-
-
 
 FAST_DOWNWARD_ALIAS = "lama"
 
@@ -75,33 +76,28 @@ def query(prompt_text, system_text=None, use_chatgpt=False):
     server_flag = 0
     server_cnt = 0
     # import ipdb; ipdb.set_trace()
-    openai.api_key = "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"
     while server_cnt < 10:
         try:
             if use_chatgpt: # currently, we will always use chatgpt
-                response = openai.ChatCompletion.create(
-                    model="gpt-4",
-                    temperature=0.1,
-                    top_p=1,
-                    frequency_penalty=0,
-                    presence_penalty=0,
-                    messages=[
-                        {"role": "system", "content": system_text},
-                        {"role": "user", "content": prompt_text},
-                    ],
-                )
-                result_text = response['choices'][0]['message']['content']
+                response = client.chat.completions.create(model="gpt-4",
+                temperature=0.1,
+                top_p=1,
+                frequency_penalty=0,
+                presence_penalty=0,
+                messages=[
+                    {"role": "system", "content": system_text},
+                    {"role": "user", "content": prompt_text},
+                ])
+                result_text = response.choices[0].message.content
             else:
-                response =  openai.Completion.create(
-                    model="text-davinci-003",
-                    prompt=prompt_text,
-                    temperature=0.0,
-                    max_tokens=1024,
-                    top_p=1,
-                    frequency_penalty=0,
-                    presence_penalty=0
-                )
-                result_text = response['choices'][0]['text']
+                response =  client.completions.create(model="text-davinci-003",
+                prompt=prompt_text,
+                temperature=0.0,
+                max_tokens=1024,
+                top_p=1,
+                frequency_penalty=0,
+                presence_penalty=0)
+                result_text = response.choices[0].text
             server_flag = 1
             if server_flag:
                 break
@@ -130,7 +126,7 @@ def planner(expt_path, args, subgoal=False, edited_init=False, time_limit=200):
     output_path = plan_file_name + '.out'
 
     start_time = time.time()
-    
+
     # run fastforward to plan
     os.system(f"python ./downward/fast-downward.py --alias {FAST_DOWNWARD_ALIAS} " + \
               f"--search-time-limit {args.time_limit} --plan-file {plan_file_name} " + \
@@ -146,7 +142,7 @@ def planner(expt_path, args, subgoal=False, edited_init=False, time_limit=200):
     # collect the least cost plan
     best_cost = 1e10
     best_plan = None
-    
+
     for fn in glob.glob(f"{plan_file_name}.*"):
         with open(fn, "r") as f:
             plans = f.readlines()
@@ -174,7 +170,7 @@ def validator(expt_path, args, subgoal=False, edited_init=False):
     output_file = open(output_path, "w")
 
     domain_pddl_file =  f'./domains/{args.domain}/domain.pddl'
-    
+
 
     if subgoal:
         task_pddl_file =  f"./{expt_path}/p{args.task_id}_subgoal.pddl"
@@ -188,7 +184,7 @@ def validator(expt_path, args, subgoal=False, edited_init=False):
         task_pddl_file =  f"./{expt_path}/p{args.task_id}.pddl"
         plan_path = os.path.join(f"./{expt_path}", 
                                 f"p{args.task_id}_plan.pddl" + '.*')
-    
+
     best_cost = 10e6
     for fn in glob.glob(plan_path):
         with open(fn, "r") as f:
@@ -199,6 +195,7 @@ def validator(expt_path, args, subgoal=False, edited_init=False):
                 plan_file = fn
     print(plan_file)
     result = subprocess.run(["./downward/validate", "-v", domain_pddl_file, task_pddl_file, plan_file], stdout=subprocess.PIPE)
+    #print("validated")
     output = result.stdout.decode('utf-8')
     output_file.write(output)
     if "Plan valid" in result.stdout.decode('utf-8'):
@@ -210,7 +207,7 @@ def get_updated_init_conditions(expt_path, args, validation_filename=None, pddl_
     validation_filename = f"./{expt_path}/p{args.task_id}_subgoal_validation.txt" if validation_filename==None else validation_filename
     with open(validation_filename, 'r') as f:
         validation = f.readlines()
-    
+
     pddl_problem_filename_ =  f"./domains/{args.domain}/p{args.task_id}.pddl" if pddl_problem_filename==None else pddl_problem_filename
     with open(pddl_problem_filename_, 'r') as f:
         pddl_problem = f.read()
@@ -246,15 +243,15 @@ def get_pddl_problem(expt_path, args, helper_subgoal=None):
     task_nl_filename = f"./domains/{args.domain}/p{args.task_id}.nl"
     with open(task_nl_filename, 'r') as f:
         task_nl = f.read()
-    
+
     pddl_problem_filename = f"./{expt_path}/p{args.task_id}.pddl"
     if helper_subgoal != None:
         task_nl = task_nl.split('Your goal is to ')[0] + 'Your goal is to ' + helper_subgoal
         pddl_problem_filename = f"./{expt_path}/p{args.task_id}_subgoal.pddl"
-    
+
     if os.path.exists(pddl_problem_filename):
         return pddl_problem_filename
-    
+
     system_text = f"I want you to solve planning problems. "
     prompt_text = f"An example planning problem is: \n {context_nl} \n" + \
                 f"The problem PDDL file to this problem is: \n {context_pddl} \n" + \
@@ -262,7 +259,7 @@ def get_pddl_problem(expt_path, args, helper_subgoal=None):
                 f"Provide me with the problem PDDL file that describes " + \
                 f"the new planning problem directly without further explanations? Only return the PDDL file. Do not return anything else."
     pddl_problem = query(prompt_text, system_text=system_text, use_chatgpt=True)
-    import ipdb; ipdb.set_trace()
+    #import ipdb; ipdb.set_trace()
 
     with open(pddl_problem_filename, 'w') as f:
         f.write(pddl_problem)
@@ -281,8 +278,8 @@ def get_pddl_goal(expt_path, args, helper_subgoal, log_file):
     context_pddl_goal = f'(:goal\n{context_pddl_goal.strip()[:-1]}'
 
     pddl_problem_filename = f"./{expt_path}/p{args.task_id}_subgoal.pddl"
-    
-    
+
+
     system_text = 'I want you to solve planning problems. Provide me with the PDDL goal that describes the new planning goal directly without further explanations. Make sure to provide only non-conflicting, necessary, and final goal conditions mentioned in the given goal.'
     prompt_text = f"The PDDL problem and its initial conditions are given as: \n{context_pddl_init.strip()} \n\n" + \
                 f"An example planning goal for this problem:  \n{context_nl.strip()} \n\n\n" + \
@@ -295,7 +292,7 @@ def get_pddl_goal(expt_path, args, helper_subgoal, log_file):
     pddl_goal = query(prompt_text, system_text=system_text, use_chatgpt=True)
     end = time.time()-start
     print(prompt_text)
-    import ipdb; ipdb.set_trace()
+    # import ipdb; ipdb.set_trace()
     # remove undefined goal conditions using domain predicate list
     if args.domain == 'tyreworld':
         pddl_goal = pddl_goal.replace('(empty hands)', '').replace('(empty-hand)', '').replace('(empty-hands)', '')
@@ -304,7 +301,7 @@ def get_pddl_goal(expt_path, args, helper_subgoal, log_file):
     with open(pddl_problem_filename, 'w') as f:
         f.write(context_pddl_init + pddl_goal + ')')
     return pddl_problem_filename, end
-    
+
 def get_pddl_goal_expert(expt_path, args, log_file):
     # # taken from (LLM+P), create the problem PDDL given the context
     # context_nl_filename = f"./domains/{args.domain}/p{args.task_id}.nl"
@@ -329,14 +326,14 @@ def get_pddl_goal_expert(expt_path, args, log_file):
     expert_pddl_goal = expert_pddl_goals.split("####### Please provide answer here ######")[task_idx]
     pddl_goal = '(:goal' + expert_pddl_goal.split('#')[0].strip() + ')'
     print('expert_pddl_goal task idx ', task_idx)
-    
+
     # system_text = 'I want you to solve planning problems. Provide me with the PDDL goal that describes the new planning goal directly without further explanations. Make sure to provide only non-conflicting, necessary, and final goal conditions mentioned in the given goal.'
     # prompt_text = f"The PDDL problem and its initial conditions are given as: \n{context_pddl_init.strip()} \n\n" + \
     #             f"An example planning goal for this problem:  \n{context_nl.strip()} \n\n\n" + \
     #             f"The PDDL goal for the example planning goal:  \n{context_pddl_goal.strip()} \n\n\n" + \
     #             f"New planning goal for the same problem:\n Your goal is: {helper_subgoal.strip()} \n\n" + \
     #             f'The PDDL goal for the new planning goal:\n'
-    
+
 
 
     # start=time.time()
@@ -418,10 +415,10 @@ agent1 subgoals: It can help in filling ingredient1 in a shot glass, then pour i
     current_prompt_text += 'agent0 takes the following steps to complete the above task:\n'
     current_prompt_text += f'{singleagent_plan.strip()}\n\n'
     current_prompt_text += 'agent1 subgoals: '
-    
+
     prompt_text = prompt_text + current_prompt_text
     # helper_subgoal = 'Fetch the intact tyre from the boot, inflate the intact tyre, and put on the intact tyre on the hub.'
-    import ipdb; ipdb.set_trace()
+    # import ipdb; ipdb.set_trace()
     start = time.time()
     helper_subgoal = query(prompt_text, system_text=system_text, use_chatgpt=True)
     end = time.time()-start
@@ -491,11 +488,11 @@ agent1 subgoals: It can help in filling ingredient1 in a shot glass, then pour i
         current_prompt_text = '\n\nNow we have another new problem defined in this domain for which we don\'t have access to the signle agent plan:\n'
     current_prompt_text += f'{current_scenario.strip()}\n\n'
     current_prompt_text += 'A possible agent1 subgoal looking at how the domain works based on the plan example provided for another task in this domain could be - \nagent1 subgoals: '
-    
+
     prompt_text = prompt_text + current_prompt_text
     # helper_subgoal = 'Fetch the intact tyre from the boot, inflate the intact tyre, and put on the intact tyre on the hub.'
     print(current_prompt_text)
-    import ipdb; ipdb.set_trace()
+    # import ipdb; ipdb.set_trace()
     start = time.time()
     helper_subgoal = query(prompt_text, system_text=system_text, use_chatgpt=True)
     end = time.time()-start
@@ -512,7 +509,7 @@ def validator_simulation_recurssive(expt_path, args, log_file, multi=False, half
     domain_pddl_file =  f'./domains/{args.domain}/domain.pddl'
     task_pddl_file =  f'./domains/{args.domain}/p{args.task_id}.pddl' # since we need actual init conds
     with open(task_pddl_file, 'r') as f: task = f.read()
-    
+
     if multi:
         plan_main = []
         plan_helper = []
@@ -533,7 +530,7 @@ def validator_simulation_recurssive(expt_path, args, log_file, multi=False, half
                 plan_main.append(i)
             else:
                 plan_helper.append(i)
-    
+
     elif half_split:
         # task_pddl_file_helper =  f"./{expt_path}/p{args.task_id}_subgoal.pddl"
         # with open(task_pddl_file_helper, 'r') as f: task_helper = f.read()
@@ -551,7 +548,7 @@ def validator_simulation_recurssive(expt_path, args, log_file, multi=False, half
         plan_helper = plan_all[:half_len]
         plan_main = plan_all[half_len:]
 
-        
+
     else:
         # task_pddl_file_helper =  f"./{expt_path}/p{args.task_id}_subgoal.pddl"
         # with open(task_pddl_file_helper, 'r') as f: task_helper = f.read()
@@ -618,7 +615,7 @@ def validator_simulation_recurssive(expt_path, args, log_file, multi=False, half
     with open(log_file, 'a+') as f: f.write(f"TASK: {args.domain} - {args.run} - {args.task_id}\n")
 
     print(len(plan_helper), len(plan_main), len(plan_helper) + len(plan_main))
-    
+
     global execution_state
     execution_state = np.zeros((len(plan_helper)+1, len(plan_main)+1, 3)) + 1e6
 
@@ -638,11 +635,11 @@ def validator_simulation_recurssive(expt_path, args, log_file, multi=False, half
     #     plan_length = plan_length[1:]
     # elif plan_length[1] == len(plan_main):
     #     plan_length = plan_length[:1] + plan_length[2:]
-    
+
     plan_length = min(plans)
     success=False if plan_length >= 1e10 else True
     # import ipdb; ipdb.set_trace()
-        
+
     # if "Plan valid" in output.stdout.decode('utf-8'):
     #     success =  True
     # else:
@@ -654,7 +651,184 @@ def validator_simulation_recurssive(expt_path, args, log_file, multi=False, half
     print(plan_length, success)
     return plan_length, success
 
+# v1
+def validator_sim_recurssion_function(expt_path, domain_pddl_file, i, j, plan_helper, plan_main, task_helper, task_main, agent='both', success=False):
+    # print(f'{i}, {j} ')
+    with open(log_file, 'a+') as f: f.write(f'{i}, {j} ')
+    val_path_helper = f"./{expt_path}/helper_val_temp.txt"
+    val_path_main = f"./{expt_path}/main_val_temp.txt"
+    plan_path_helper = f"./{expt_path}/helper_plan_temp.txt"
+    plan_path_main = f"./{expt_path}/main_plan_temp.txt"
+    task_path_helper = f"./{expt_path}/helper_task_temp.txt"
+    task_path_main = f"./{expt_path}/main_task_temp.txt"
 
+    if agent=='helper':
+        # if len(plan_helper) == 0: return 1e10
+        # if i == len(plan_helper): return 0
+        # import ipdb; ipdb.set_trace()
+        with open(plan_path_helper, 'w') as f: f.write(plan_helper[i])
+        with open(task_path_helper, 'w') as f: f.write(task_helper)
+        with open(task_path_main, 'w') as f: f.write(task_main)
+        output = subprocess.run(["./downward/validate", "-v", domain_pddl_file, task_path_helper, plan_path_helper], stdout=subprocess.PIPE)
+        with open(val_path_helper, 'w') as f: f.write(output.stdout.decode('utf-8'))
+        if 'unsatisfied precondition' not in output.stdout.decode('utf-8'):
+            # print('helper',i,  plan_helper[i], f' V_hm: {V_hm}, V_mh: {V_mh}')
+            with open(log_file, 'a+') as f: f.write(f"'helper', {i},  {plan_helper[i][:-1]}\n")
+
+            get_updated_init_conditions(expt_path, args, validation_filename=val_path_helper, pddl_problem_filename=task_path_helper, env_conds_only=False)
+            get_updated_init_conditions(expt_path, args, validation_filename=val_path_helper, pddl_problem_filename=task_path_main)
+            i += 1
+            with open(task_path_main, 'r') as f: task_main = f.read()
+            with open(task_path_helper, 'r') as f: task_helper = f.read()
+
+            if i == len(plan_helper) and j == len(plan_main):
+                return 1
+            elif i == len(plan_helper):
+                plans = [len(plan_main)-j]
+            elif j == len(plan_main):
+                plans = [len(plan_helper)-i]
+            else:
+                # print('before', (i, j, 0), (i, j, 1), (i, j, 2), [execution_state[i, j, 0], execution_state[i, j, 1], execution_state[i, j, 2]])
+                execution_state[i, j, 0] = execution_state[i, j, 0] if execution_state[i, j, 0] != 1e6 else validator_sim_recurssion_function(expt_path, domain_pddl_file, i, j, plan_helper, plan_main, task_helper, task_main, agent='helper')
+                execution_state[i, j, 1] = execution_state[i, j, 1] if execution_state[i, j, 1] != 1e6 else validator_sim_recurssion_function(expt_path, domain_pddl_file, i, j, plan_helper, plan_main, task_helper, task_main, agent='main')
+                execution_state[i, j, 2] = execution_state[i, j, 2] if execution_state[i, j, 2] != 1e6 else validator_sim_recurssion_function(expt_path, domain_pddl_file, i, j, plan_helper, plan_main, task_helper, task_main, agent='both')
+
+                plans = [execution_state[i, j, 0], execution_state[i, j, 1], execution_state[i, j, 2]]
+                # print((i, j, 0), (i, j, 1), (i, j, 2), plans)
+
+            # plans = [validator_sim_recurssion_function(expt_path, domain_pddl_file, i, j, plan_helper, plan_main, task_helper, task_main, agent='helper'),
+            #             validator_sim_recurssion_function(expt_path, domain_pddl_file, i, j, plan_helper, plan_main, task_helper, task_main, agent='main'),
+            #             validator_sim_recurssion_function(expt_path, domain_pddl_file, i, j, plan_helper, plan_main, task_helper, task_main, agent='both')]
+            # plans = plans[:1] + plans[2:] if plans[1] == len(plan_main) else plans
+            plan_length = 1 + min(plans)
+            # print(plan_length, plans)
+            return plan_length
+            # print(plan_length[i,j])
+        else:
+            return 1e10
+
+    elif agent=='main':
+        # if len(plan_main) == 0: return 1e10
+        # if j == len(plan_main): return 0
+        with open(plan_path_main, 'w') as f: f.write(plan_main[j])
+        with open(task_path_main, 'w') as f: f.write(task_main)
+        with open(task_path_helper, 'w') as f: f.write(task_helper)
+        output = subprocess.run(["./downward/validate", "-v", domain_pddl_file, task_path_main, plan_path_main], stdout=subprocess.PIPE)
+        with open(val_path_main, 'w') as f: f.write(output.stdout.decode('utf-8'))
+        if 'unsatisfied precondition' not in output.stdout.decode('utf-8'):
+            # print('main', j, plan_main[j], f' V_hm: {V_hm}, V_mh: {V_mh}')
+            with open(log_file, 'a+') as f: f.write(f"'main', {j},  {plan_main[j][:-1]}\n")
+            get_updated_init_conditions(expt_path, args, validation_filename=val_path_main, pddl_problem_filename=task_path_main, env_conds_only=False)
+            get_updated_init_conditions(expt_path, args, validation_filename=val_path_main, pddl_problem_filename=task_path_helper)
+            j += 1
+            with open(task_path_main, 'r') as f: task_main = f.read()
+            with open(task_path_helper, 'r') as f: task_helper = f.read()
+
+            if i == len(plan_helper) and j == len(plan_main):
+                return 1
+            elif i == len(plan_helper):
+                plans = [len(plan_main)-j]
+            elif j == len(plan_main):
+                plans = [len(plan_helper)-i]
+            else:
+                # print('before', (i, j, 0), (i, j, 1), (i, j, 2), [execution_state[i, j, 0], execution_state[i, j, 1], execution_state[i, j, 2]])
+                execution_state[i, j, 0] = execution_state[i, j, 0] if execution_state[i, j, 0] != 1e6 else validator_sim_recurssion_function(expt_path, domain_pddl_file, i, j, plan_helper, plan_main, task_helper, task_main, agent='helper')
+                execution_state[i, j, 1] = execution_state[i, j, 1] if execution_state[i, j, 1] != 1e6 else validator_sim_recurssion_function(expt_path, domain_pddl_file, i, j, plan_helper, plan_main, task_helper, task_main, agent='main')
+                execution_state[i, j, 2] = execution_state[i, j, 2] if execution_state[i, j, 2] != 1e6 else validator_sim_recurssion_function(expt_path, domain_pddl_file, i, j, plan_helper, plan_main, task_helper, task_main, agent='both')
+
+                plans = [execution_state[i, j, 0], execution_state[i, j, 1], execution_state[i, j, 2]]
+                # print((i, j, 0), (i, j, 1), (i, j, 2), plans)
+            # plans = [validator_sim_recurssion_function(expt_path, domain_pddl_file, i, j, plan_helper, plan_main, task_helper, task_main, agent='helper'),
+            #           validator_sim_recurssion_function(expt_path, domain_pddl_file, i, j, plan_helper, plan_main, task_helper, task_main, agent='main'),
+            #             validator_sim_recurssion_function(expt_path, domain_pddl_file, i, j, plan_helper, plan_main, task_helper, task_main, agent='both')]
+            # plans = plans[1:] if plans[0] == len(plan_helper) else plans
+            plan_length = 1 + min(plans)
+            # print(plan_length, plans)
+            return plan_length
+            # print(plan_length[i,j])
+        else:
+            return 1e10
+
+
+    elif agent=='both':
+        # import ipdb; ipdb.set_trace()
+        # if len(plan_helper) == 0 or len(plan_main) == 0: return 1e10
+        # if i == len(plan_helper) or j == len(plan_main): return 0
+        task_path_helper_temp = f"./{expt_path}/helper_task_temp_temp.txt"
+        task_path_main_temp = f"./{expt_path}/main_task_temp_temp.txt"
+        V_mh = False; V_hm = False 
+        # helper -> main
+        with open(plan_path_helper, 'w') as f: f.write(plan_helper[i])
+        with open(task_path_helper, 'w') as f: f.write(task_helper)
+        with open(task_path_main, 'w') as f: f.write(task_main)
+        output_helper = subprocess.run(["./downward/validate", "-v", domain_pddl_file, task_path_helper, plan_path_helper], stdout=subprocess.PIPE)
+        with open(val_path_helper, 'w') as f: f.write(output_helper.stdout.decode('utf-8'))
+        if 'unsatisfied precondition' not in output_helper.stdout.decode('utf-8'):
+            get_updated_init_conditions(expt_path, args, validation_filename=val_path_helper, pddl_problem_filename=task_path_helper, pddl_problem_filename_edited=task_path_helper_temp, env_conds_only=False)
+            get_updated_init_conditions(expt_path, args, validation_filename=val_path_helper, pddl_problem_filename=task_path_main, pddl_problem_filename_edited=task_path_main_temp)
+            # for recursion
+            k = i+1  
+            # main step
+            with open(plan_path_main, 'w') as f: f.write(plan_main[j])
+            # with open(task_path_main, 'w') as f: f.write(task_main)
+            output_main = subprocess.run(["./downward/validate", "-v", domain_pddl_file, task_path_main_temp, plan_path_main], stdout=subprocess.PIPE)
+            with open(val_path_main, 'w') as f: f.write(output_main.stdout.decode('utf-8'))
+            if 'unsatisfied precondition' not in output_main.stdout.decode('utf-8'):
+                V_hm = True
+        # main -> helper   
+        with open(plan_path_main, 'w') as f: f.write(plan_main[j])
+        with open(task_path_helper, 'w') as f: f.write(task_helper)
+        with open(task_path_main, 'w') as f: f.write(task_main)
+        output_main = subprocess.run(["./downward/validate", "-v", domain_pddl_file, task_path_main, plan_path_main], stdout=subprocess.PIPE)
+        with open(val_path_main, 'w') as f: f.write(output_main.stdout.decode('utf-8'))
+        if 'unsatisfied precondition' not in output_main.stdout.decode('utf-8'):
+            get_updated_init_conditions(expt_path, args, validation_filename=val_path_main, pddl_problem_filename=task_path_main, pddl_problem_filename_edited=task_path_main_temp, env_conds_only=False)
+            get_updated_init_conditions(expt_path, args, validation_filename=val_path_main, pddl_problem_filename=task_path_helper, pddl_problem_filename_edited=task_path_helper_temp)
+            # for recursion
+            k = j+1
+            # helper step
+            with open(plan_path_helper, 'w') as f: f.write(plan_helper[i])
+            # with open(task_path_helper, 'w') as f: f.write(task_helper)
+            output_helper = subprocess.run(["./downward/validate", "-v", domain_pddl_file, task_path_helper_temp, plan_path_helper], stdout=subprocess.PIPE)
+            with open(val_path_helper, 'w') as f: f.write(output_helper.stdout.decode('utf-8'))
+            if 'unsatisfied precondition' not in output_helper.stdout.decode('utf-8'):
+                V_mh = True
+    
+        if V_hm and V_mh:
+            output = output_helper
+            # move plan forward for both agents
+            # print('helper', i,  plan_helper[i], ' main', j,  plan_main[j])
+            with open(log_file, 'a+') as f: f.write(f"'helper', {i},  {plan_helper[i][:-1]}, ' main', {j},  {plan_main[j][:-1]}\n")
+            get_updated_init_conditions(expt_path, args, validation_filename=val_path_main, pddl_problem_filename=task_path_main, env_conds_only=False)
+            get_updated_init_conditions(expt_path, args, validation_filename=val_path_main, pddl_problem_filename=task_path_helper)
+            get_updated_init_conditions(expt_path, args, validation_filename=val_path_helper, pddl_problem_filename=task_path_main)
+            get_updated_init_conditions(expt_path, args, validation_filename=val_path_helper, pddl_problem_filename=task_path_helper, env_conds_only=False)
+            i += 1; j += 1
+            # print(plan_length[i,j])
+            with open(task_path_main, 'r') as f: task_main = f.read()
+            with open(task_path_helper, 'r') as f: task_helper = f.read()
+            if i == len(plan_helper) and j == len(plan_main):
+                return 1
+            elif i == len(plan_helper):
+                plans = [len(plan_main)-j]
+            elif j == len(plan_main):
+                plans = [len(plan_helper)-i]
+            else:
+                # print('before', (i, j, 0), (i, j, 1), (i, j, 2), [execution_state[i, j, 0], execution_state[i, j, 1], execution_state[i, j, 2]])
+                execution_state[i, j, 0] = execution_state[i, j, 0] if execution_state[i, j, 0] != 1e6 else validator_sim_recurssion_function(expt_path, domain_pddl_file, i, j, plan_helper, plan_main, task_helper, task_main, agent='helper')
+                execution_state[i, j, 1] = execution_state[i, j, 1] if execution_state[i, j, 1] != 1e6 else validator_sim_recurssion_function(expt_path, domain_pddl_file, i, j, plan_helper, plan_main, task_helper, task_main, agent='main')
+                execution_state[i, j, 2] = execution_state[i, j, 2] if execution_state[i, j, 2] != 1e6 else validator_sim_recurssion_function(expt_path, domain_pddl_file, i, j, plan_helper, plan_main, task_helper, task_main, agent='both')
+
+                plans = [execution_state[i, j, 0], execution_state[i, j, 1], execution_state[i, j, 2]]
+                # print((i, j, 0), (i, j, 1), (i, j, 2), plans)
+            # plans = [validator_sim_recurssion_function(expt_path, domain_pddl_file, i, j, plan_helper, plan_main, task_helper, task_main, agent='helper'),
+            #             validator_sim_recurssion_function(expt_path, domain_pddl_file, i, j, plan_helper, plan_main, task_helper, task_main, agent='main'),
+            #             validator_sim_recurssion_function(expt_path, domain_pddl_file, i, j, plan_helper, plan_main, task_helper, task_main, agent='both')]    
+            plan_length = 1 + min(plans)
+            # print(plan_length, plans)
+            return plan_length
+        else:
+            return 1e10
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="LLM-multiagent-helper")
@@ -706,7 +880,7 @@ if __name__ == "__main__":
         os.mkdir(path) 
     log_file = os.path.join(base_path, f'helper_logs_{args.domain}_exec_lens.log')
     with open(log_file, 'w') as f: f.write(f"start_eval\n")
-    
+
     human_eval_task_ids = [1, 6, 11, 16]
 
     task_list = [args.task_id] if args.task_id != None else range(1, 21)
@@ -718,7 +892,7 @@ if __name__ == "__main__":
             args.task_id = str(human_eval_task_ids[task_id])
 
         args.task_id = f'0{args.task_id}' if len(args.task_id)==1 else args.task_id
-        
+
         # normal planning and same for multi-agent planning
         try:
             planner_total_time, planner_total_time_opt, best_cost, planner_search_time_1st_plan, first_plan_cost = planner(path, args, time_limit=10)
@@ -745,7 +919,7 @@ if __name__ == "__main__":
         # with open(log_file, 'a+') as f: f.write(f"plan_length {plan_length}\n") # {singleagent_cost[-1]}\n")
         # overall_plan_length.append(plan_length)
         # multiagent_main_success.append(success)
-        
+
         # helper_subgoal, t1 = get_helper_subgoal_without_plan(path, args, log_file)
         # _, t2 = get_pddl_goal(path, args, helper_subgoal, log_file)
         try:
@@ -763,6 +937,14 @@ if __name__ == "__main__":
             multiagent_helper_planning_time_1st.append(planner_search_time_1st_plan)
             multiagent_helper_cost_1st.append(first_plan_cost)
             multiagent_helper_success.append(success)
+            # print(LLM_text_sg_time)
+            # print(LLM_pddl_sg_time)
+            # print(multiagent_helper_planning_time)
+            # print(multiagent_helper_planning_time_opt)
+            # print(multiagent_helper_cost)
+            # print(multiagent_helper_planning_time_1st)
+            # print(multiagent_helper_cost_1st)
+            # print(multiagent_helper_success)
         except Exception as e:
             LLM_text_sg_time.append(-1)
             LLM_pddl_sg_time.append(-1)

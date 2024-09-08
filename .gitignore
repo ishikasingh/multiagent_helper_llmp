@@ -15,3 +15,4 @@ experiments/
 experiments_multiagent_help/
 out.*
 sas*
+.env
