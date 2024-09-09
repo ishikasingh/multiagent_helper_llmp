@@ -335,8 +335,6 @@ def get_pddl_goal_expert(expt_path, args, log_file):
     #             f"New planning goal for the same problem:\n Your goal is: {helper_subgoal.strip()} \n\n" + \
     #             f'The PDDL goal for the new planning goal:\n'
 
-
-
     # start=time.time()
     # pddl_goal = query(prompt_text, system_text=system_text, use_chatgpt=True)
     # end = time.time()-start
@@ -359,8 +357,6 @@ def get_helper_subgoal(expt_path, args, log_file):
 
 # Grasp shot2 with right hand, fill shot2 with ingredient1 from dispenser1 using right and left hands, pour shot2 with ingredient1 into clean shaker1 using right hand, clean shot2 with right and left hands, fill shot2 with ingredient3 from dispenser3 using right and left hands, grasp shaker1 with left hand, pour shot2 with ingredient3 into used shaker1 using right hand, leave shot2 with right hand, shake cocktail1 with ingredient3 and ingredient1 in shaker1 using left and right hands, pour shaker1 with cocktail1 into shot1 using left hand.
 #  agent1 can use shot3 for filling ingredient1, so agent2 can continue using shot2 for other ingredients, and shot1 remains clean which needs to contain the final cocktail, so we save an additional step there.
-
-
 
     system_text = '''Main agent: agent0
 Helper agent: agent1
