@@ -232,38 +232,7 @@ def get_updated_init_conditions(expt_path, args, validation_filename=None, pddl_
     with open(pddl_problem_filename_, 'w') as f:
         f.write(pddl_problem)
 
-def get_pddl_problem(expt_path, args, helper_subgoal=None):
-    # taken from (LLM+P), create the problem PDDL given the context
-    context_nl_filename = f"./domains/{args.domain}/p_example.nl"
-    with open(context_nl_filename, 'r') as f:
-        context_nl = f.read()
-    context_pddl_filename = f"./domains/{args.domain}/p_example.pddl"
-    with open(context_pddl_filename, 'r') as f:
-        context_pddl = f.read()
-    task_nl_filename = f"./domains/{args.domain}/p{args.task_id}.nl"
-    with open(task_nl_filename, 'r') as f:
-        task_nl = f.read()
-
-    pddl_problem_filename = f"./{expt_path}/p{args.task_id}.pddl"
-    if helper_subgoal != None:
-        task_nl = task_nl.split('Your goal is to ')[0] + 'Your goal is to ' + helper_subgoal
-        pddl_problem_filename = f"./{expt_path}/p{args.task_id}_subgoal.pddl"
-
-    if os.path.exists(pddl_problem_filename):
-        return pddl_problem_filename
-
-    system_text = f"I want you to solve planning problems. "
-    prompt_text = f"An example planning problem is: \n {context_nl} \n" + \
-                f"The problem PDDL file to this problem is: \n {context_pddl} \n" + \
-                f"Now I have a new planning problem and its description is: \n {task_nl} \n" + \
-                f"Provide me with the problem PDDL file that describes " + \
-                f"the new planning problem directly without further explanations? Only return the PDDL file. Do not return anything else."
-    pddl_problem = query(prompt_text, system_text=system_text, use_chatgpt=True)
-    #import ipdb; ipdb.set_trace()
-
-    with open(pddl_problem_filename, 'w') as f:
-        f.write(pddl_problem)
-    return pddl_problem_filename
+# deleted get_pddl_problem > already generated
 
 def get_pddl_goal(expt_path, args, helper_subgoal, log_file):
     # taken from (LLM+P), create the problem PDDL given the context
@@ -289,7 +258,7 @@ def get_pddl_goal(expt_path, args, helper_subgoal, log_file):
                 f'The PDDL goal for the new planning goal:\n'
 
     # import ipdb; ipdb.set_trace()
-    print("\n natural language to pddl prompt \n", prompt_text)
+    # print("\n natural language to pddl prompt \n", prompt_text)
     start=time.time()
     pddl_goal = query(prompt_text, system_text=system_text, use_chatgpt=True)
     end = time.time()-start
@@ -303,165 +272,62 @@ def get_pddl_goal(expt_path, args, helper_subgoal, log_file):
         f.write(context_pddl_init + pddl_goal + ')')
     return pddl_problem_filename, end
 
-def get_pddl_goal_expert(expt_path, args, log_file):
-    # # taken from (LLM+P), create the problem PDDL given the context
-    # context_nl_filename = f"./domains/{args.domain}/p{args.task_id}.nl"
-    # with open(context_nl_filename, 'r') as f:
-    #     context_nl = f.read()
-    # context_nl = 'Your goal is to' + context_nl.split('Your goal is to')[-1]
-    context_pddl_filename = f"./domains/{args.domain}/p{args.task_id}.pddl"
-    with open(context_pddl_filename, 'r') as f:
-        context_pddl = f.read()
-    context_pddl_init, context_pddl_goal = context_pddl.split('(:goal')
-    # context_pddl_goal = f'(:goal\n{context_pddl_goal.strip()[:-1]}'
-
-    pddl_problem_filename = f"./{expt_path}/p{args.task_id}_subgoal.pddl"
-
-    expert_pddl_goals_filename = f"./experiments_multiagent_help/Human Topline - Bill.txt"
-    with open(expert_pddl_goals_filename, 'r') as f:
-        expert_pddl_goals = f.read()
-
-    expert_pddl_goals = ''.join(expert_pddl_goals.split(args.domain)[1:])
-    task_idx = human_eval_task_ids.index(int(args.task_id)) + 1
-
-    expert_pddl_goal = expert_pddl_goals.split("####### Please provide answer here ######")[task_idx]
-    pddl_goal = '(:goal' + expert_pddl_goal.split('#')[0].strip() + ')'
-    print('expert_pddl_goal task idx ', task_idx)
-
-    # system_text = 'I want you to solve planning problems. Provide me with the PDDL goal that describes the new planning goal directly without further explanations. Make sure to provide only non-conflicting, necessary, and final goal conditions mentioned in the given goal.'
-    # prompt_text = f"The PDDL problem and its initial conditions are given as: \n{context_pddl_init.strip()} \n\n" + \
-    #             f"An example planning goal for this problem:  \n{context_nl.strip()} \n\n\n" + \
-    #             f"The PDDL goal for the example planning goal:  \n{context_pddl_goal.strip()} \n\n\n" + \
-    #             f"New planning goal for the same problem:\n Your goal is: {helper_subgoal.strip()} \n\n" + \
-    #             f'The PDDL goal for the new planning goal:\n'
-
-    # start=time.time()
-    # pddl_goal = query(prompt_text, system_text=system_text, use_chatgpt=True)
-    # end = time.time()-start
-    with open(log_file, 'a+') as f:
-        f.write(f"\n\n{pddl_goal}")
-    with open(pddl_problem_filename, 'w') as f:
-        f.write(context_pddl_init + pddl_goal + ')')
-    return pddl_problem_filename, 0
-
-def get_helper_subgoal(expt_path, args, log_file):
-#     system_text = '''Main agent: agent0
-# Helper agent: agent1
-
-# Generate one clearly stated small independent subgoal for helper agent to help main agent complete the given task. The subgoal should not rely on any main agent actions, and should be executable by the helper agent independently without waiting for any main agent actions. The subgoal should be clearly state with unambiguous terminology. Do not use actions like assist or help. Generate actions that the helper agent can do independently, based on the given steps for completing the task. The main agent should be able to continue working on the remaining task while the helper agent is completing its small subgoal. Do not overtake the full sequence of actions. Remember, the helper agent is only assisting the main agent and acts agnostically to the main agent.
-#     '''
-# agent1 subgoals: It can help in filling ingredient1 in shot2, then pour it in shaker1, while agent0 prepares other cocktail ingredients using other objects. In this way, agent1 would not need to wait for agent0 and it can complete its goal independently. Therefore, agent1's clearly stated (with object names) complete and final goal condition is: shaker1 contains ingredient1
-
-# Generate a clearly stated independent subgoal for helper agent to help main agent complete roughly half of the given task. The subgoal should not rely on any main agent actions, and should be executable by the helper agent independently without waiting for any main agent actions. The subgoal should be clearly state with unambiguous terminology. Do not use actions like assist or help. Generate actions that the helper agent can do independently, based on the given steps for completing the task. The main agent should be able to continue working on the remaining task while the helper agent is completing its subgoal. Help main agent with half of the task but do not overtake the full sequence of actions. Remember, the helper agent is only assisting the main agent and acts agnostically to the main agent.
-# agent1 subgoals: It can help in filling ingredient1 and ingredient3 in shaker1, and agent0 can then perform the remaining steps for making the cocktail. In this way, agent1 would not need to wait for agent0 and it can complete its goal independently, while completing roughly half of the task. Therefore, agent1's clearly stated (with object names) complete and final goal condition is: shaker1 contains ingredient1 and ingredient3
-
-# Grasp shot2 with right hand, fill shot2 with ingredient1 from dispenser1 using right and left hands, pour shot2 with ingredient1 into clean shaker1 using right hand, clean shot2 with right and left hands, fill shot2 with ingredient3 from dispenser3 using right and left hands, grasp shaker1 with left hand, pour shot2 with ingredient3 into used shaker1 using right hand, leave shot2 with right hand, shake cocktail1 with ingredient3 and ingredient1 in shaker1 using left and right hands, pour shaker1 with cocktail1 into shot1 using left hand.
-#  agent1 can use shot3 for filling ingredient1, so agent2 can continue using shot2 for other ingredients, and shot1 remains clean which needs to contain the final cocktail, so we save an additional step there.
-
-    system_text = '''Main agent: agent0
-Helper agent: agent1
-
-Generate one clearly stated small independent subgoal for helper agent to help main agent complete the given task. The subgoal should not rely on any main agent actions, and should be executable by the helper agent independently without waiting for any main agent actions. The subgoal should be clearly state with unambiguous terminology. Do not use actions like assist or help. Generate actions that the helper agent can do independently, based on the given steps for completing the task. The main agent should be able to continue working on the remaining task while the helper agent is completing its small subgoal. Do not overtake the full sequence of actions. Remember, the helper agent is only assisting the main agent and acts agnostically to the main agent.
-'''
-    prompt_text = '''Example  scenario:
-You have 1 shaker with 3 levels, 3 shot glasses, 3 dispensers for 3 ingredients. 
-The shaker and shot glasses are clean, empty, and on the table. Your left and right hands are empty. 
-The first ingredient of cocktail1 is ingredient3. The second ingredient of cocktail1 is ingredient1. 
-Your goal is to make 1 cocktail. 
-shot1 contains cocktail1. 
-
-agent0 takes the following steps to complete the above task:
-grasp right shot2
-fill-shot shot2 ingredient1 right left dispenser1
-pour-shot-to-clean-shaker shot2 ingredient1 shaker1 right l0 l1
-clean-shot shot2 ingredient1 right left
-fill-shot shot2 ingredient3 right left dispenser3
-grasp left shaker1
-pour-shot-to-used-shaker shot2 ingredient3 shaker1 right l1 l2
-leave right shot2
-shake cocktail1 ingredient3 ingredient1 shaker1 left right
-pour-shaker-to-shot cocktail1 shot1 left shaker1 l2 l1
-
-agent1 subgoals: It can help in filling ingredient1 in a shot glass, then pour it in shaker1, while agent0 prepares other cocktail ingredients using other objects. In this way, agent1 would not need to wait for agent0 and it can complete its goal independently. agent1 should also release all objects that the main agent might need for its own actions. Therefore, agent1's clearly stated (with object names) complete and final goal condition is: shaker1 contains ingredient1 and all hands are empty.
-'''
-
-    scenario_filename =  f"./domains/{args.domain}/p{args.task_id}.nl"
-    with open(scenario_filename, 'r') as f:
-        current_scenario = f.read()
-
-    # singleagent_plan_filename =  f"./experiments/run1/results/llm_ic_pddl/{args.domain}/p{args.task_id}.pddl"
-    # expt_path_singleagent_plan = expt_path.split('run')[0] + 'run1' + expt_path.split('run')[1][2:]
-    expt_path_singleagent_plan = expt_path
-    plan_path = os.path.join(f"./{expt_path_singleagent_plan}", f"p{args.task_id}_plan.pddl" + '.*')
-    # import ipdb; ipdb.set_trace()
-    best_cost = 10e6
-    for fn in glob.glob(plan_path):
-        with open(fn, "r") as f:
-            plans = f.readlines()
-            cost = get_cost(plans[-1])
-            if cost < best_cost:
-                best_cost = cost
-                singleagent_plan_filename = fn
-    # singleagent_plan_filename = [plan for plan in plan_files if not plan.endswith('sas') and not plan.endswith('out')][-1]
-
-    with open(singleagent_plan_filename, 'r') as f:
-        singleagent_plan = f.read()
-    singleagent_plan = singleagent_plan.split(';')[0]
-    current_prompt_text = '\n\nCurrent Scenario:\n'
-    current_prompt_text += f'{current_scenario.strip()}\n\n'
-    current_prompt_text += 'agent0 takes the following steps to complete the above task:\n'
-    current_prompt_text += f'{singleagent_plan.strip()}\n\n'
-    current_prompt_text += 'agent1 subgoals: '
-
-    prompt_text = prompt_text + current_prompt_text
-    # helper_subgoal = 'Fetch the intact tyre from the boot, inflate the intact tyre, and put on the intact tyre on the hub.'
-    # import ipdb; ipdb.set_trace()
-    start = time.time()
-    helper_subgoal = query(prompt_text, system_text=system_text, use_chatgpt=True)
-    end = time.time()-start
-    with open(log_file, 'a+') as f: f.write(f"\n\n{current_prompt_text} {helper_subgoal}")
-    helper_subgoal = helper_subgoal.split('final goal condition is:')[-1].strip()
-    return helper_subgoal, end
-
+# deleted get_pddl_expert , may need to restore this for benchmarking
+# deleted get_helper_subgoal > asks for pddl directly from helper, instead of breaking it down
 
 def get_helper_subgoal_without_plan(expt_path, args, log_file):
 
     system_text = '''Main agent: agent0
-Helper agent: agent1
+                    Helper agent: ''' 
 
-Generate one clearly stated small independent subgoal for helper agent to help main agent complete the given task. The subgoal should not rely on any main agent actions, and should be executable by the helper agent independently without waiting for any main agent actions. The subgoal should be clearly state with unambiguous terminology. Do not use actions like assist or help. Generate actions that the helper agent can do independently, based on the given steps for completing the task. The main agent should be able to continue working on the remaining task while the helper agent is completing its small subgoal. Do not overtake the full sequence of actions. Remember, the helper agent is only assisting the main agent and acts agnostically to the main agent.
-'''
-    # defualt barman prompts
-    prompt_text = '''Example  domain scenario:
-You have 1 shaker with 3 levels, 3 shot glasses, 3 dispensers for 3 ingredients. 
-The shaker and shot glasses are clean, empty, and on the table. Your left and right hands are empty. 
-The first ingredient of cocktail1 is ingredient3. The second ingredient of cocktail1 is ingredient1. 
-Your goal is to make 1 cocktail. 
-shot1 contains cocktail1. 
+    for i in range(1,args.num_agents):
+        system_text += f' agent{i}, '
+    
+    system_text += '\n'
 
-agent0 takes the following steps to complete the above task:
-grasp right shot2
-fill-shot shot2 ingredient1 right left dispenser1
-pour-shot-to-clean-shaker shot2 ingredient1 shaker1 right l0 l1
-clean-shot shot2 ingredient1 right left
-fill-shot shot2 ingredient3 right left dispenser3
-grasp left shaker1
-pour-shot-to-used-shaker shot2 ingredient3 shaker1 right l1 l2
-leave right shot2
-shake cocktail1 ingredient3 ingredient1 shaker1 left right
-pour-shaker-to-shot cocktail1 shot1 left shaker1 l2 l1
+    system_text += ''' Generate one clearly stated small independent subgoal for each helper agent to help main agent complete the given task.
+      The subgoal should not rely on any main agent actions, and should be executable by the helper agents independently without waiting for any main agent actions.
+     The subgoal should be clearly state with unambiguous terminology. Do not use actions like assist or help. Generate actions that the helper agents can do independently, 
+     based on the given steps for completing the task. The main agent should be able to continue working on the remaining task while each of the helper agents is completing its small subgoal.
+        Do not overtake the full sequence of actions. Remember, the helper agents are only assisting the main agent and act agnostically to the main agent.'''
+    
+    # print("system_text \n", system_text, "\n")
+    
+    # default barman prompts
+    prompt_text = f'''Example  domain scenario:
+    You have 1 shaker with 3 levels, 3 shot glasses, 3 dispensers for 3 ingredients. 
+    The shaker and shot glasses are clean, empty, and on the table. Your left and right hands are empty. 
+    The first ingredient of cocktail1 is ingredient3. The second ingredient of cocktail1 is ingredient1. 
+    Your goal is to make 1 cocktail. 
+    shot1 contains cocktail1. 
 
-Now we have a new problem defined in this domain for which we don't have access to the single agent plan:
-You have 1 shaker with 3 levels, 3 shot glasses, 3 dispensers for 3 ingredients. 
-The shaker and shot glasses are clean, empty, and on the table. Your left and right hands are empty. 
-The first ingredient of cocktail1 is ingredient3. The second ingredient of cocktail1 is ingredient1. 
-The first ingredient of cocktail2 is ingredient1. The second ingredient of cocktail2 is ingredient2. 
-Your goal is to make 2 cocktails. 
-shot1 contains cocktail1. shot2 contains cocktail2. 
+    agent0 takes the following steps to complete the above task:
+    grasp right shot2
+    fill-shot shot2 ingredient1 right left dispenser1
+    pour-shot-to-clean-shaker shot2 ingredient1 shaker1 right l0 l1
+    clean-shot shot2 ingredient1 right left
+    fill-shot shot2 ingredient3 right left dispenser3
+    grasp left shaker1
+    pour-shot-to-used-shaker shot2 ingredient3 shaker1 right l1 l2
+    leave right shot2
+    shake cocktail1 ingredient3 ingredient1 shaker1 left right
+    pour-shaker-to-shot cocktail1 shot1 left shaker1 l2 l1
 
-A possible agent1 subgoal looking at how the domain works based on the plan example provided for another task in this domain could be - 
-agent1 subgoals: It can help in filling ingredient1 in a shot glass, then pour it in shaker1, while agent0 prepares other cocktail ingredients using other objects. In this way, agent1 would not need to wait for agent0 and it can complete its goal independently. agent1 should also release all objects that the main agent might need for its own actions. Therefore, agent1's clearly stated (with object names) complete and final goal condition is: shaker1 contains ingredient1 and all hands are empty.
-'''
+    Now we have a new problem defined in this domain for which we don't have access to the single agent plan:
+    You have 1 shaker with 3 levels, 3 shot glasses, 3 dispensers for 3 ingredients. 
+    The shaker and shot glasses are clean, empty, and on the table. Your left and right hands are empty. 
+    The first ingredient of cocktail1 is ingredient3. The second ingredient of cocktail1 is ingredient1. 
+    The first ingredient of cocktail2 is ingredient1. The second ingredient of cocktail2 is ingredient2. 
+    Your goal is to make 2 cocktails. 
+    shot1 contains cocktail1. shot2 contains cocktail2. 
+
+    A possible agent1 subgoal looking at how the domain works based on the plan example provided for another task in this domain could be - 
+    agent1 subgoals: It can help in filling ingredient1 in a shot glass, then pour it in shaker1, while agent0 prepares other cocktail ingredients using other objects. In this way, agent1 would not need to wait for agent0 and it can complete its goal independently. agent1 should also release all objects that the main agent might need for its own actions. Therefore, agent1's clearly stated (with object names) complete and final goal condition is: shaker1 contains ingredient1 and all hands are empty.
+    A possible agent2 subgoal looking at how the domain works based on the plan example provided for another task in this domain could be - 
+    agent2 subgoals: It can help in filling ingredient3 in a shot glass, while agent0 and agent1 prepare other cocktail ingredients using other objects. In this way, agent2 would not need to wait for agent1 and agent0 and it can complete its goal independently. agent2 should also release all objects that the main agent might need for its own actions. Therefore, agent2's clearly stated (with object names) complete and final goal condition is: shotglass3 contains ingredient3 and all hands are empty.
+    
+    This pattern continues until {args.num_agents - 1} subgoals are generated, or until it is unnecessary to generate more agents.
+    '''
     # get natural language descriptions of current domain task
     scenario_filename =  f"./domains/{args.domain}/p{args.task_id}.nl"
     with open(scenario_filename, 'r') as f:
@@ -484,20 +350,32 @@ agent1 subgoals: It can help in filling ingredient1 in a shot glass, then pour i
     else:
         current_prompt_text = '\n\nNow we have another new problem defined in this domain for which we don\'t have access to the single agent plan:\n'
     current_prompt_text += f'{current_scenario.strip()}\n\n'
-    current_prompt_text += 'A possible agent1 subgoal looking at how the domain works based on the plan example provided for another task in this domain could be - \nagent1 subgoals: '
+    current_prompt_text += f'Return only one subgoal. A possible subgoal looking at how the domain works based on the plan example provided for another task in this domain could be - \n'
 
     prompt_text = prompt_text + current_prompt_text
     # helper_subgoal = 'Fetch the intact tyre from the boot, inflate the intact tyre, and put on the intact tyre on the hub.'
-    print("\n prompt_text for helper_sg w/o plan \n",prompt_text)
+    # print("\n prompt_text for helper_sg w/o plan \n",prompt_text)
     # import ipdb; ipdb.set_trace()
+    #print("prompt text\n", prompt_text)
     start = time.time()
-    helper_subgoal = query(prompt_text, system_text=system_text, use_chatgpt=True)
+    all_subgoals = []
+    #helper_subgoal = query(prompt_text, system_text=system_text, use_chatgpt=True)
+    for i in range(1,args.num_agents):
+        prompt_text += f"\n agent{i} subgoal:"
+        print(f"querying for agent {i}")
+        helper_subgoal = query(prompt_text, system_text=system_text, use_chatgpt=True)
+        print(helper_subgoal, "\n")
+        prompt_text += helper_subgoal
+        all_subgoals.append(helper_subgoal)
     end = time.time()-start
+
+    #print(prompt_text)
+
+    #print("cumulative subgoals", all_subgoals,"\n")
 
     with open(log_file, 'a+') as f: f.write(f"\n\n{current_prompt_text} {helper_subgoal}")
     helper_subgoal = helper_subgoal.split('final goal condition is:')[-1].strip()
-    return helper_subgoal, end
-
+    return all_subgoals, end
 
 
 def validator_simulation_recurssive(expt_path, args, log_file, multi=False, half_split=False):
@@ -578,9 +456,6 @@ def validator_simulation_recurssive(expt_path, args, log_file, multi=False, half
         if '.pddl.sas' in plan_file or '.pddl.out' in plan_file:
             return 1e6, False
 
-
-
-
     # make temp val files
     # task_path = f"./{expt_path}/p{args.task_id}_task_temp.txt"
     # with open(task_path, 'w') as f: f.write(task)    
@@ -648,7 +523,6 @@ def validator_simulation_recurssive(expt_path, args, log_file, multi=False, half
     print(plan_length, success)
     return plan_length, success
 
-# v1
 def validator_sim_recurssion_function(expt_path, domain_pddl_file, i, j, plan_helper, plan_main, task_helper, task_main, agent='both', success=False):
     # print(f'{i}, {j} ')
     with open(log_file, 'a+') as f: f.write(f'{i}, {j} ')
@@ -836,6 +710,7 @@ if __name__ == "__main__":
     parser.add_argument('--experiment_folder', type=str, default='experiments_multiagent_help')
     parser.add_argument('--human_eval', type=bool, default=False)
     parser.add_argument('--run', type=int, default=1)
+    parser.add_argument('--num_agents', type=int, default=2)
     args = parser.parse_args()
 
     if not os.path.exists(args.experiment_folder):
@@ -923,11 +798,10 @@ if __name__ == "__main__":
         # helper_subgoal, t1 = get_helper_subgoal_without_plan(path, args, log_file)
         # _, t2 = get_pddl_goal(path, args, helper_subgoal, log_file)
         try:
-
-            helper_subgoal, t1 = get_helper_subgoal_without_plan(path, args, log_file)
-            print("gpt gen natural language subgoal ", helper_subgoal)
+            subgoal_array, t1 = get_helper_subgoal_without_plan(path, args, log_file)
+            print(subgoal_array)
             # # helper_subgoal = "xyz"
-            _, t2 = get_pddl_goal(path, args, helper_subgoal, log_file)
+            _, t2 = get_pddl_goal(path, args, subgoal_array[0], log_file)
             planner_total_time, planner_total_time_opt, best_cost, planner_search_time_1st_plan, first_plan_cost = planner(path, args, subgoal=True)
             success = validator(path, args, subgoal=True)
 
@@ -959,36 +833,6 @@ if __name__ == "__main__":
             print(e)
             with open(log_file, 'a+') as f:
                 f.write(f"\n\nError: {e}")
-
-        # _, t2 = get_pddl_goal_expert(path, args, log_file)
-        # try:
-        #     # helper_subgoal, t1 = get_helper_subgoal_without_plan(path, args, log_file)
-        #     # # helper_subgoal = "xyz"
-        #     _, _ = get_pddl_goal_expert(path, args, log_file)
-        #     planner_total_time, planner_total_time_opt, best_cost, planner_search_time_1st_plan, first_plan_cost = planner(path, args, subgoal=True)
-        #     success = validator(path, args, subgoal=True)
-
-        #     LLM_text_sg_time.append(-1)
-        #     LLM_pddl_sg_time.append(-1)
-        #     multiagent_helper_planning_time.append(planner_total_time)
-        #     multiagent_helper_planning_time_opt.append(planner_total_time_opt)
-        #     multiagent_helper_cost.append(best_cost)
-        #     multiagent_helper_planning_time_1st.append(planner_search_time_1st_plan)
-        #     multiagent_helper_cost_1st.append(first_plan_cost)
-        #     multiagent_helper_success.append(success)
-        # except Exception as e:
-        #     LLM_text_sg_time.append(-1)
-        #     LLM_pddl_sg_time.append(-1)
-        #     multiagent_helper_planning_time.append(-1)
-        #     multiagent_helper_planning_time_opt.append(-1)
-        #     multiagent_helper_cost.append(-1)
-        #     multiagent_helper_planning_time_1st.append(-1)
-        #     multiagent_helper_cost_1st.append(-1)
-        #     multiagent_helper_success.append(0)
-        #     print(e)
-        #     with open(log_file, 'a+') as f:
-        #         f.write(f"\n\nError: {e}")
-
 
         try:
             get_updated_init_conditions(path, args)
