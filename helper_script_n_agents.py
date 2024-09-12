@@ -107,17 +107,19 @@ def query(prompt_text, system_text=None, use_chatgpt=False):
     return result_text
 
 
-def planner(expt_path, args, subgoal=False, edited_init=False, time_limit=200):
+def planner(expt_path, args, subgoal_idx=-1, edited_init_idx=-1, time_limit=200):
     domain_pddl_file =  f'./domains/{args.domain}/domain.pddl'
-
-    if subgoal:
-        task_pddl_file_name =  f"./{expt_path}/p{args.task_id}_subgoal.pddl"
-        plan_file_name = f"./{expt_path}/p{args.task_id}_subgoal_plan.pddl"
-        info = 'subgoal'
-    elif edited_init:
-        task_pddl_file_name =  f"./{expt_path}/p{args.task_id}_edited_init.pddl"
-        plan_file_name = f"./{expt_path}/p{args.task_id}_edited_init_plan.pddl"
-        info = 'edited_init'
+    # if multiagent w single subgoal get subgoal pddl
+    if subgoal_idx > 0:
+        task_pddl_file_name =  f"./{expt_path}/p{args.task_id}_subgoal_{subgoal_idx}.pddl"
+        plan_file_name = f"./{expt_path}/p{args.task_id}_subgoal_{subgoal_idx}_plan.pddl"
+        info = f'subgoal_{subgoal_idx}'
+    # if not default conditions get edited init pddl
+    elif edited_init_idx > 0:
+        task_pddl_file_name =  f"./{expt_path}/p{args.task_id}_edited_init_{edited_init_idx}.pddl"
+        plan_file_name = f"./{expt_path}/p{args.task_id}_edited_init_{edited_init_idx}_plan.pddl"
+        info = f'edited_init_{edited_init_idx}'
+    # get default pddl > single agent
     else:
         task_pddl_file_name =  f"./domains/{args.domain}/p{args.task_id}.pddl"
         plan_file_name = f"./{expt_path}/p{args.task_id}_plan.pddl"
@@ -160,11 +162,11 @@ def planner(expt_path, args, subgoal=False, edited_init=False, time_limit=200):
         print(f"[info][{info}][{args.domain}] task {args.task_id} takes {planner_total_time} sec, no solution found")
         return -1, -1, -1, -1, -1
 
-def validator(expt_path, args, subgoal=False, edited_init=False):
-    if subgoal:
-        output_path = f"./{expt_path}/p{args.task_id}_subgoal_validation.txt"
-    elif edited_init:
-        output_path = f"./{expt_path}/p{args.task_id}_edited_init_validation.txt"
+def validator(expt_path, args, subgoal_idx=-1, edited_init_idx=-1):
+    if subgoal_idx > 0:
+        output_path = f"./{expt_path}/p{args.task_id}_subgoal_{subgoal_idx}_validation.txt"
+    elif edited_init_idx > 0:
+        output_path = f"./{expt_path}/p{args.task_id}_edited_init_{edited_init_idx}_validation.txt"
     else:
         output_path = f"./{expt_path}/p{args.task_id}_validation.txt"
     output_file = open(output_path, "w")
@@ -172,20 +174,22 @@ def validator(expt_path, args, subgoal=False, edited_init=False):
     domain_pddl_file =  f'./domains/{args.domain}/domain.pddl'
 
 
-    if subgoal:
-        task_pddl_file =  f"./{expt_path}/p{args.task_id}_subgoal.pddl"
+    if subgoal_idx > 0:
+        task_pddl_file =  f"./{expt_path}/p{args.task_id}_subgoal_{subgoal_idx}.pddl"
+        print("validating and getting plan for subgoal", subgoal_idx)
         plan_path = os.path.join(f"./{expt_path}", 
-                                f"p{args.task_id}_subgoal_plan.pddl" + '.*')
-    elif edited_init:
-        task_pddl_file =  f"./{expt_path}/p{args.task_id}_edited_init.pddl"
+                                f"p{args.task_id}_subgoal_{subgoal_idx}_plan.pddl" + '.*')
+    elif edited_init_idx > 0:
+        task_pddl_file =  f"./{expt_path}/p{args.task_id}_edited_init_{edited_init_idx}.pddl"
         plan_path = os.path.join(f"./{expt_path}", 
-                                f"p{args.task_id}_edited_init_plan.pddl" + '.*')
+                                f"p{args.task_id}_edited_init_{edited_init_idx}_plan.pddl" + '.*')
     else:
         task_pddl_file =  f"./{expt_path}/p{args.task_id}.pddl"
         plan_path = os.path.join(f"./{expt_path}", 
                                 f"p{args.task_id}_plan.pddl" + '.*')
 
     best_cost = 10e6
+    plan_file = ''
     for fn in glob.glob(plan_path):
         with open(fn, "r") as f:
             plans = f.readlines()
@@ -193,7 +197,7 @@ def validator(expt_path, args, subgoal=False, edited_init=False):
             if cost < best_cost:
                 best_cost = cost
                 plan_file = fn
-    print(plan_file)
+    print("plan_file", plan_file)
     result = subprocess.run(["./downward/validate", "-v", domain_pddl_file, task_pddl_file, plan_file], stdout=subprocess.PIPE)
     #print("validated")
     output = result.stdout.decode('utf-8')
@@ -204,6 +208,8 @@ def validator(expt_path, args, subgoal=False, edited_init=False):
         return False
 
 def get_updated_init_conditions(expt_path, args, validation_filename=None, pddl_problem_filename=None, pddl_problem_filename_edited=None, env_conds_only=True):
+    print("getting updated init conditions")
+    print("validation file", validation_filename)
     validation_filename = f"./{expt_path}/p{args.task_id}_subgoal_validation.txt" if validation_filename==None else validation_filename
     with open(validation_filename, 'r') as f:
         validation = f.readlines()
@@ -227,9 +233,10 @@ def get_updated_init_conditions(expt_path, args, validation_filename=None, pddl_
     pddl_problem[1] = list(new_init_conditions)
     pddl_problem = pddl_problem[0] + '(:init\n' + '\n'.join(pddl_problem[1]) + '\n)\n(:goal' + pddl_problem[2]
 
-    pddl_problem_filename = pddl_problem_filename if pddl_problem_filename_edited==None else pddl_problem_filename_edited
-    pddl_problem_filename_ =  f"./{expt_path}/p{args.task_id}_edited_init.pddl" if pddl_problem_filename==None else pddl_problem_filename
-    with open(pddl_problem_filename_, 'w') as f:
+    # pddl_problem_filename = pddl_problem_filename if pddl_problem_filename_edited==None else pddl_problem_filename_edited
+    # pddl_problem_filename_ =  f"./{expt_path}/p{args.task_id}_edited_init.pddl" if pddl_problem_filename==None else pddl_problem_filename
+    print("writing new edited pddl to", pddl_problem_filename_edited)
+    with open(pddl_problem_filename_edited, 'w') as f:
         f.write(pddl_problem)
 
 # deleted get_pddl_problem > already generated
@@ -241,36 +248,45 @@ def get_pddl_goal(expt_path, args, helper_subgoal, log_file):
         context_nl = f.read()
     #natural language plan
     context_nl = 'Your goal is to' + context_nl.split('Your goal is to')[-1]
+    #print("context_nl", context_nl)
     context_pddl_filename = f"./domains/{args.domain}/p{args.task_id}.pddl"
     with open(context_pddl_filename, 'r') as f:
         context_pddl = f.read()
     context_pddl_init, context_pddl_goal = context_pddl.split('(:goal')
     context_pddl_goal = f'(:goal\n{context_pddl_goal.strip()[:-1]}'
 
-    pddl_problem_filename = f"./{expt_path}/p{args.task_id}_subgoal.pddl"
-
-
+    pddl_problem_filename_arr = []
+    
+    pddl_problem_filename = f""
     system_text = 'I want you to solve planning problems. Provide me with the PDDL goal that describes the new planning goal directly without further explanations. Make sure to provide only non-conflicting, necessary, and final goal conditions mentioned in the given goal.'
-    prompt_text = f"The PDDL problem and its initial conditions are given as: \n{context_pddl_init.strip()} \n\n" + \
-                f"An example planning goal for this problem:  \n{context_nl.strip()} \n\n\n" + \
-                f"The PDDL goal for the example planning goal:  \n{context_pddl_goal.strip()} \n\n\n" + \
-                f"New planning goal for the same problem:\n Your goal is: {helper_subgoal.strip()} \n\n" + \
-                f'The PDDL goal for the new planning goal:\n'
 
-    # import ipdb; ipdb.set_trace()
-    # print("\n natural language to pddl prompt \n", prompt_text)
     start=time.time()
-    pddl_goal = query(prompt_text, system_text=system_text, use_chatgpt=True)
+
+    for i in range(1, args.num_agents):
+
+        pddl_problem_filename = f"./{expt_path}/p{args.task_id}_subgoal_{i}.pddl"
+
+        prompt_text = f"The PDDL problem and its initial conditions are given as: \n{context_pddl_init.strip()} \n\n" + \
+                    f"An example planning goal for this problem:  \n{context_nl.strip()} \n\n\n" + \
+                    f"The PDDL goal for the example planning goal:  \n{context_pddl_goal.strip()} \n\n\n" + \
+                    f"New planning goal for the same problem:\n Your goal is: {helper_subgoal[i-1].strip()} \n\n" + \
+                    f'The PDDL goal for the new planning goal:\n'
+
+        #print(f"agent {i} prompt \n", prompt_text)
+        # import ipdb; ipdb.set_trace()
+        # print("\n natural language to pddl prompt \n", prompt_text)
+        pddl_goal = query(prompt_text, system_text=system_text, use_chatgpt=True)
+        # import ipdb; ipdb.set_trace()
+        # remove undefined goal conditions using domain predicate list
+        if args.domain == 'tyreworld':
+            pddl_goal = pddl_goal.replace('(empty hands)', '').replace('(empty-hand)', '').replace('(empty-hands)', '')
+        with open(log_file, 'a+') as f:
+            f.write(f"\n\n{pddl_goal}")
+        with open(pddl_problem_filename, 'w') as f:
+            f.write(context_pddl_init + pddl_goal + ')')
+    
     end = time.time()-start
-    # import ipdb; ipdb.set_trace()
-    # remove undefined goal conditions using domain predicate list
-    if args.domain == 'tyreworld':
-        pddl_goal = pddl_goal.replace('(empty hands)', '').replace('(empty-hand)', '').replace('(empty-hands)', '')
-    with open(log_file, 'a+') as f:
-        f.write(f"\n\n{pddl_goal}")
-    with open(pddl_problem_filename, 'w') as f:
-        f.write(context_pddl_init + pddl_goal + ')')
-    return pddl_problem_filename, end
+    return pddl_problem_filename_arr, end
 
 # deleted get_pddl_expert , may need to restore this for benchmarking
 # deleted get_helper_subgoal > asks for pddl directly from helper, instead of breaking it down
@@ -325,9 +341,8 @@ def get_helper_subgoal_without_plan(expt_path, args, log_file):
     agent1 subgoals: It can help in filling ingredient1 in a shot glass, then pour it in shaker1, while agent0 prepares other cocktail ingredients using other objects. In this way, agent1 would not need to wait for agent0 and it can complete its goal independently. agent1 should also release all objects that the main agent might need for its own actions. Therefore, agent1's clearly stated (with object names) complete and final goal condition is: shaker1 contains ingredient1 and all hands are empty.
     A possible agent2 subgoal looking at how the domain works based on the plan example provided for another task in this domain could be - 
     agent2 subgoals: It can help in filling ingredient3 in a shot glass, while agent0 and agent1 prepare other cocktail ingredients using other objects. In this way, agent2 would not need to wait for agent1 and agent0 and it can complete its goal independently. agent2 should also release all objects that the main agent might need for its own actions. Therefore, agent2's clearly stated (with object names) complete and final goal condition is: shotglass3 contains ingredient3 and all hands are empty.
-    
-    This pattern continues until {args.num_agents - 1} subgoals are generated, or until it is unnecessary to generate more agents.
     '''
+    # This pattern continues until {args.num_agents - 1} subgoals are generated, or until it is unnecessary to generate more agents.
     # get natural language descriptions of current domain task
     scenario_filename =  f"./domains/{args.domain}/p{args.task_id}.nl"
     with open(scenario_filename, 'r') as f:
@@ -350,7 +365,7 @@ def get_helper_subgoal_without_plan(expt_path, args, log_file):
     else:
         current_prompt_text = '\n\nNow we have another new problem defined in this domain for which we don\'t have access to the single agent plan:\n'
     current_prompt_text += f'{current_scenario.strip()}\n\n'
-    current_prompt_text += f'Return only one subgoal. A possible subgoal looking at how the domain works based on the plan example provided for another task in this domain could be - \n'
+    current_prompt_text += f'Return only one clearly stated subgoal for one agent without explanation or steps. Do not extend to other agents. A possible subgoal looking at how the domain works based on the plan example provided for another task in this domain could be - \n'
 
     prompt_text = prompt_text + current_prompt_text
     # helper_subgoal = 'Fetch the intact tyre from the boot, inflate the intact tyre, and put on the intact tyre on the hub.'
@@ -362,15 +377,14 @@ def get_helper_subgoal_without_plan(expt_path, args, log_file):
     #helper_subgoal = query(prompt_text, system_text=system_text, use_chatgpt=True)
     for i in range(1,args.num_agents):
         prompt_text += f"\n agent{i} subgoal:"
-        print(f"querying for agent {i}")
+        #print(f"querying for agent {i}")
         helper_subgoal = query(prompt_text, system_text=system_text, use_chatgpt=True)
-        print(helper_subgoal, "\n")
+        #print(helper_subgoal, "\n")
         prompt_text += helper_subgoal
         all_subgoals.append(helper_subgoal)
     end = time.time()-start
 
     #print(prompt_text)
-
     #print("cumulative subgoals", all_subgoals,"\n")
 
     with open(log_file, 'a+') as f: f.write(f"\n\n{current_prompt_text} {helper_subgoal}")
@@ -378,13 +392,15 @@ def get_helper_subgoal_without_plan(expt_path, args, log_file):
     return all_subgoals, end
 
 
-def validator_simulation_recurssive(expt_path, args, log_file, multi=False, half_split=False):
+def validator_simulation_recursive(expt_path, args, log_file, multi=False, half_split=False):
 
     # get relevant files for validation
     domain_pddl_file =  f'./domains/{args.domain}/domain.pddl'
     task_pddl_file =  f'./domains/{args.domain}/p{args.task_id}.pddl' # since we need actual init conds
     with open(task_pddl_file, 'r') as f: task = f.read()
 
+    plan_file = ''
+    print("searching for plan file")
     if multi:
         plan_main = []
         plan_helper = []
@@ -393,12 +409,14 @@ def validator_simulation_recurssive(expt_path, args, log_file, multi=False, half
         plan_path = os.path.join(f"./{expt_path}", f"p{args.task_id}_plan.pddl" + '.*')
         best_cost = 10e6
         for fn in glob.glob(plan_path):
+            print(fn)
             with open(fn, "r") as f:
                 plans = f.readlines()
                 cost = get_cost(plans[-1])
                 if cost < best_cost:
                     best_cost = cost
                     plan_file = fn
+        print("plan_file validator sim recurse", plan_file)
         with open(plan_file, 'r') as f: plan_all = f.readlines()[:-1]
         for i in plan_all:
             if 'robot1' in i:
@@ -423,13 +441,15 @@ def validator_simulation_recurssive(expt_path, args, log_file, multi=False, half
         plan_helper = plan_all[:half_len]
         plan_main = plan_all[half_len:]
 
-
     else:
         # task_pddl_file_helper =  f"./{expt_path}/p{args.task_id}_subgoal.pddl"
         # with open(task_pddl_file_helper, 'r') as f: task_helper = f.read()
+        # finds lowest cost solved PDDL plan for subgoal. 
         plan_path = os.path.join(f"./{expt_path}", f"p{args.task_id}_subgoal_plan.pddl" + '.*')
         best_cost = 10e6
+        print(plan_path)
         for fn in glob.glob(plan_path):
+            print(fn)
             with open(fn, "r") as f:
                 plans = f.readlines()
                 cost = get_cost(plans[-1])
@@ -443,6 +463,7 @@ def validator_simulation_recurssive(expt_path, args, log_file, multi=False, half
 
         # task_pddl_file_main =  f"./{expt_path}/p{args.task_id}.pddl" # since we need actual init conds
         # with open(task_pddl_file_main, 'r') as f: task_main = f.read()
+        # find lowest cost solved PDDL plan for main task
         plan_path = os.path.join(f"./{expt_path}", f"p{args.task_id}_edited_init_plan.pddl" + '.*')
         best_cost = 10e6
         for fn in glob.glob(plan_path):
@@ -790,7 +811,7 @@ if __name__ == "__main__":
         # multiagent_main_success.append(success)
 
         # # # multiagent pddl
-        # plan_length, success = validator_simulation_recurssive(path, args, log_file, multi=True)
+        # plan_length, success = validator_simulation_recursive(path, args, log_file, multi=True)
         # with open(log_file, 'a+') as f: f.write(f"plan_length {plan_length}\n") # {singleagent_cost[-1]}\n")
         # overall_plan_length.append(plan_length)
         # multiagent_main_success.append(success)
@@ -801,43 +822,60 @@ if __name__ == "__main__":
             subgoal_array, t1 = get_helper_subgoal_without_plan(path, args, log_file)
             print(subgoal_array)
             # # helper_subgoal = "xyz"
-            _, t2 = get_pddl_goal(path, args, subgoal_array[0], log_file)
-            planner_total_time, planner_total_time_opt, best_cost, planner_search_time_1st_plan, first_plan_cost = planner(path, args, subgoal=True)
-            success = validator(path, args, subgoal=True)
+            _, t2 = get_pddl_goal(path, args, subgoal_array, log_file)
 
-            LLM_text_sg_time.append(t1)
-            LLM_pddl_sg_time.append(t2)
-            multiagent_helper_planning_time.append(planner_total_time)
-            multiagent_helper_planning_time_opt.append(planner_total_time_opt)
-            multiagent_helper_cost.append(best_cost)
-            multiagent_helper_planning_time_1st.append(planner_search_time_1st_plan)
-            multiagent_helper_cost_1st.append(first_plan_cost)
-            multiagent_helper_success.append(success)
-            # print(LLM_text_sg_time)
-            # print(LLM_pddl_sg_time)
-            # print(multiagent_helper_planning_time)
-            # print(multiagent_helper_planning_time_opt)
-            # print(multiagent_helper_cost)
-            # print(multiagent_helper_planning_time_1st)
-            # print(multiagent_helper_cost_1st)
-            # print(multiagent_helper_success)
         except Exception as e:
-            LLM_text_sg_time.append(-1)
-            LLM_pddl_sg_time.append(-1)
-            multiagent_helper_planning_time.append(-1)
-            multiagent_helper_planning_time_opt.append(-1)
-            multiagent_helper_cost.append(-1)
-            multiagent_helper_planning_time_1st.append(-1)
-            multiagent_helper_cost_1st.append(-1)
-            multiagent_helper_success.append(0)
-            print(e)
-            with open(log_file, 'a+') as f:
-                f.write(f"\n\nError: {e}")
+            print("LLM generation failed, ", e)
+        
+        # handle all subgoals and init conditions
+        # edited init starts at  0 for original, then 1 for post-first subgoal, etc ...
+        # subgoal 1 used original pddl domain, then subgoal 2 uses edited_init_1, 3 uses edited_init_2, etc ...
+        for i in range(1,args.num_agents):
+            try:
+                planner_total_time, planner_total_time_opt, best_cost, planner_search_time_1st_plan, first_plan_cost = planner(path, args, subgoal_idx=i, edited_init_idx=i-1)
+                success = validator(path, args, subgoal_idx=i)
 
+                LLM_text_sg_time.append(t1)
+                LLM_pddl_sg_time.append(t2)
+                multiagent_helper_planning_time.append(planner_total_time)
+                multiagent_helper_planning_time_opt.append(planner_total_time_opt)
+                multiagent_helper_cost.append(best_cost)
+                multiagent_helper_planning_time_1st.append(planner_search_time_1st_plan)
+                multiagent_helper_cost_1st.append(first_plan_cost)
+                multiagent_helper_success.append(success)
+                # print(LLM_text_sg_time)
+                # print(LLM_pddl_sg_time)
+                # print(multiagent_helper_planning_time)
+                # print(multiagent_helper_planning_time_opt)
+                # print(multiagent_helper_cost)
+                # print(multiagent_helper_planning_time_1st)
+                # print(multiagent_helper_cost_1st)
+                # print(multiagent_helper_success)
+            except Exception as e:
+                LLM_text_sg_time.append(-1)
+                LLM_pddl_sg_time.append(-1)
+                multiagent_helper_planning_time.append(-1)
+                multiagent_helper_planning_time_opt.append(-1)
+                multiagent_helper_cost.append(-1)
+                multiagent_helper_planning_time_1st.append(-1)
+                multiagent_helper_cost_1st.append(-1)
+                multiagent_helper_success.append(0)
+                print(e)
+                with open(log_file, 'a+') as f:
+                    f.write(f"\n\nError: {e}")
+
+            init_problem = f"./{path}/p{args.task_id}_edited_init_{i-1}.pddl"
+            init_problem_out = f"./{path}/p{args.task_id}_edited_init_{i}.pddl"
+            if(i == 1):
+                init_problem = f"./domains/{args.domain}/p{args.task_id}.pddl"      
+            get_updated_init_conditions(path, args, validation_filename=f"./{path}/p{args.task_id}_subgoal_{i}_validation.txt", pddl_problem_filename_edited=init_problem_out)
+
+        # handle main agent
         try:
-            get_updated_init_conditions(path, args)
-            planner_total_time, planner_total_time_opt, best_cost, planner_search_time_1st_plan, first_plan_cost = planner(path, args, edited_init=True)
-            plan_length, success = validator_simulation_recurssive(path, args, log_file)
+            # init conditions should be good from last iter of subgoal loop
+            planner_total_time, planner_total_time_opt, best_cost, planner_search_time_1st_plan, first_plan_cost = planner(path, args, edited_init_idx=args.num_agents-1)
+            print("running validator_sim_recurssion_function")
+            plan_length, success = validator_simulation_recursive(path, args, log_file)
             with open(log_file, 'a+') as f: f.write(f"plan_length {plan_length})\n") # {singleagent_cost[-1]}\n")
             multiagent_main_planning_time.append(planner_total_time)
             multiagent_main_planning_time_opt.append(planner_total_time_opt)
