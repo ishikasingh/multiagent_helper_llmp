@@ -104,6 +104,7 @@ def query(prompt_text, system_text=None, use_chatgpt=False):
         except Exception as e:
             server_cnt += 1
             print(e)
+    # print(result_text)
     return result_text
 
 
@@ -336,11 +337,11 @@ def get_helper_subgoal_without_plan(expt_path, args, log_file):
     
     system_text += '\n'
 
-    system_text += ''' Generate one clearly stated small independent subgoal for each helper agent to help main agent complete the given task.
+    system_text += ''' Your goal is to generate goals for agents such that they can be executed in parallel to decrease plan execution length. Generate only one clearly stated small independent subgoal for each helper agent to help main agent complete the given task.
       The subgoal should not rely on any main agent actions, and should be executable by the helper agents independently without waiting for any main agent actions.
-     The subgoal should be clearly state with unambiguous terminology. Do not use actions like assist or help. Generate actions that the helper agents can do independently, 
+     The subgoal should be clearly stated with unambiguous terminology. Do not use actions like assist or help. Generate actions that the helper agents can do independently, 
      based on the given steps for completing the task. The main agent should be able to continue working on the remaining task while each of the helper agents is completing its small subgoal.
-        Do not overtake the full sequence of actions. Remember, the helper agents are only assisting the main agent and act agnostically to the main agent.'''
+     Do not overtake the full sequence of actions. Remember, the helper agents are only assisting the main agent and act agnostically to the main agent.'''
     
     # print("system_text \n", system_text, "\n")
     
@@ -400,7 +401,7 @@ def get_helper_subgoal_without_plan(expt_path, args, log_file):
     else:
         current_prompt_text = '\n\nNow we have another new problem defined in this domain for which we don\'t have access to the single agent plan:\n'
     current_prompt_text += f'{current_scenario.strip()}\n\n'
-    current_prompt_text += f'Return only one clearly stated subgoal for one agent without explanation or steps. Do not extend to other agents. A possible subgoal looking at how the domain works based on the plan example provided for another task in this domain could be - \n'
+    current_prompt_text += f'Return only one clearly stated subgoal condition for one and only one agent without explanation or steps. A possible subgoal looking at how the domain works based on the plan example provided for another task in this domain could be - \n'
 
     prompt_text = prompt_text + current_prompt_text
     # helper_subgoal = 'Fetch the intact tyre from the boot, inflate the intact tyre, and put on the intact tyre on the hub.'
@@ -759,6 +760,27 @@ if __name__ == "__main__":
             with open(log_file, 'a+') as f:
                 f.write(f"\n\nError: {e}")
 
+
+        print(f"singleagent_planning_time = {singleagent_planning_time}")
+        print(f"singleagent_planning_time_opt = {singleagent_planning_time_opt}")
+        print(f"singleagent_cost = {singleagent_cost}")
+        print(f"singleagent_planning_time_1st = {singleagent_planning_time_1st}")
+        print(f"singleagent_cost_1st = {singleagent_cost_1st}")
+        print(f"LLM_text_sg_time = {LLM_text_sg_time}")
+        print(f"LLM_pddl_sg_time = {LLM_pddl_sg_time}")
+        print(f"multiagent_helper_planning_time = {multiagent_helper_planning_time}")
+        print(f"multiagent_helper_planning_time_opt = {multiagent_helper_planning_time_opt}")
+        print(f"multiagent_helper_cost = {multiagent_helper_cost}")
+        print(f"multiagent_helper_planning_time_1st = {multiagent_helper_planning_time_1st}")
+        print(f"multiagent_helper_cost_1st = {multiagent_helper_cost_1st}")
+        print(f"multiagent_helper_success = {multiagent_helper_success}")
+        print(f"multiagent_main_planning_time = {multiagent_main_planning_time}")
+        print(f"multiagent_main_planning_time_opt = {multiagent_main_planning_time_opt}")
+        print(f"multiagent_main_cost = {multiagent_main_cost}")
+        print(f"multiagent_main_planning_time_1st = {multiagent_main_planning_time_1st}")
+        print(f"multiagent_main_cost_1st = {multiagent_main_cost_1st}")
+        print(f"multiagent_main_success = {multiagent_main_success}")
+        print(f"overall_plan_length = {overall_plan_length}")
 
         with open(log_file, 'a+') as f:
             f.write("\n\n" +\
