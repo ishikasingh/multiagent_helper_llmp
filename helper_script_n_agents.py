@@ -164,7 +164,7 @@ def planner(expt_path, args, subgoal_idx=-1, time_limit=200):
         return -1, -1, -1, -1, -1
 
 def validator(expt_path, args, subgoal_idx=-1):
-    if subgoal_idx > 0:
+    if subgoal_idx >= 0:
         output_path = f"./{expt_path}/p{args.task_id}_{subgoal_idx}_validation.txt"
     else:
         output_path = f"./{expt_path}/p{args.task_id}_validation.txt"
@@ -172,7 +172,7 @@ def validator(expt_path, args, subgoal_idx=-1):
 
     domain_pddl_file =  f'./domains/{args.domain}/domain.pddl'
 
-    if subgoal_idx > 0:
+    if subgoal_idx >= 0:
         task_pddl_file =  f"./{expt_path}/p{args.task_id}_{subgoal_idx}.pddl"
         # print("validating and getting plan for subgoal", subgoal_idx)
         plan_path = os.path.join(f"./{expt_path}", 
