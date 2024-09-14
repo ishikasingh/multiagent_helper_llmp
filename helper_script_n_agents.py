@@ -173,7 +173,7 @@ def validator(expt_path, args, subgoal_idx=-1):
 
     if subgoal_idx > 0:
         task_pddl_file =  f"./{expt_path}/p{args.task_id}_{subgoal_idx}.pddl"
-        print("validating and getting plan for subgoal", subgoal_idx)
+        # print("validating and getting plan for subgoal", subgoal_idx)
         plan_path = os.path.join(f"./{expt_path}", 
                                 f"p{args.task_id}_{subgoal_idx}_plan.pddl" + '.*')
     else:
@@ -190,7 +190,7 @@ def validator(expt_path, args, subgoal_idx=-1):
             if cost < best_cost:
                 best_cost = cost
                 plan_file = fn
-    print("plan_file", plan_file)
+    # print("plan_file", plan_file)
     result = subprocess.run(["./downward/validate", "-v", domain_pddl_file, task_pddl_file, plan_file], stdout=subprocess.PIPE)
     #print("validated")
     output = result.stdout.decode('utf-8')
@@ -201,12 +201,12 @@ def validator(expt_path, args, subgoal_idx=-1):
         return False
 
 def get_updated_init_conditions(expt_path, args, validation_filename=None, pddl_problem_filename=None, pddl_problem_filename_edited=None, env_conds_only=True, is_main=False):
-    print("getting updated init conditions")
-    print("validation file", validation_filename)
+    # print("getting updated init conditions")
+    # print("validation file", validation_filename)
     # validation_filename = f"./{expt_path}/p{args.task_id}_subgoal_validation.txt" if validation_filename==None else validation_filename
     with open(validation_filename, 'r') as f:
         validation = f.readlines()
-    print(pddl_problem_filename)
+    # print(pddl_problem_filename)
     # pddl_problem_filename_ =  f"./domains/{args.domain}/p{args.task_id}.pddl" if pddl_problem_filename==None else pddl_problem_filename
     with open(pddl_problem_filename, 'r') as f:
         pddl_problem = f.read()
@@ -241,7 +241,7 @@ def get_updated_init_conditions(expt_path, args, validation_filename=None, pddl_
     
     pddl_problem = pddl_problem[0] + '(:init\n' + '\n'.join(pddl_problem[1]) + '\n)\n(:goal' + next_pddl_problem[2]
 
-    print("writing new edited pddl to", pddl_problem_filename_edited)
+    # print("writing new edited pddl to", pddl_problem_filename_edited)
     with open(pddl_problem_filename_edited, 'w') as f:
         f.write(pddl_problem)
 
@@ -448,14 +448,14 @@ def validator_simulation_recursive(expt_path, args, log_file, multi=False):
                     best_cost = cost
                     best_plan_file = fn
         if best_plan_file:
-            print(best_plan_file)
+            # print(best_plan_file)
             with open(best_plan_file, 'r') as f:
                 agent_plans.append(f.readlines()[:-1])
         else:
-            print(f"No valid plan found for agent {i}")
+            # print(f"No valid plan found for agent {i}")
             return float('inf'), False
 
-    print(agent_plans)
+    # print(agent_plans)
 
     print(f"TASK: {args.domain} - {args.run} - {args.task_id}")
     with open(log_file, 'a+') as f:
@@ -624,7 +624,7 @@ if __name__ == "__main__":
     overall_plan_length = []
 
     # args.domain = domain
-    print("task domain", args.domain)
+    # print("task domain", args.domain)
     path = os.path.join(base_path, args.domain)
     if not os.path.exists(path):
         os.mkdir(path) 
@@ -677,10 +677,10 @@ if __name__ == "__main__":
         try:
             subgoal_array, t1 = get_helper_subgoal_without_plan(path, args, log_file)
             # add check for validity of all goals
-            print(subgoal_array)
+            # print(subgoal_array)
             # # helper_subgoal = "xyz"
             goal_files, t2 = get_pddl_goal(path, args, subgoal_array, log_file)
-            print(goal_files)
+            # print(goal_files)
 
         except Exception as e:
             print("LLM generation failed, ", e)
@@ -737,7 +737,7 @@ if __name__ == "__main__":
             # init conditions should be good from last iter of subgoal loop
             # add goal to main agent 
             planner_total_time, planner_total_time_opt, best_cost, planner_search_time_1st_plan, first_plan_cost = planner(path, args, subgoal_idx=args.num_agents)
-            print("running validator_sim_recursion_function")
+            # print("running validator_sim_recursion_function")
             plan_length, success = validator_simulation_recursive(path, args, log_file)
             with open(log_file, 'a+') as f: f.write(f"plan_length {plan_length})\n") # {singleagent_cost[-1]}\n")
             multiagent_main_planning_time.append(planner_total_time)

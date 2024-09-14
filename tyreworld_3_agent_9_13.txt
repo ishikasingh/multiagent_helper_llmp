@@ -1,0 +1,78 @@
+❯ ./run_three_agents.sh
+[info][singleagent][tyreworld] task 01 takes 0.1 sec, found a plan with cost 13.0
+[info][subgoal_1][tyreworld] task 01 takes 0.05 sec, found a plan with cost 1.0
+[info][subgoal_2][tyreworld] task 01 takes 0.03 sec, found a plan with cost 4.0
+[info][multiagent main goal][tyreworld] task 01 takes 0.06 sec, found a plan with cost 8.0
+TASK: tyreworld - 100 - 01
+10.0 True
+[info][singleagent][tyreworld] task 02 takes 20.1 sec, found a plan with cost 101.0
+list index out of range
+Traceback (most recent call last):
+  File "/Users/david/Desktop/multiagent_helper_llmp/helper_script_n_agents.py", line 733, in <module>
+    get_updated_init_conditions(path, args, validation_filename=f"./{path}/p{args.task_id}_{i}_validation.txt", pddl_problem_filename=init_problem, pddl_problem_filename_edited=init_problem_out,is_main=main_goal)
+  File "/Users/david/Desktop/multiagent_helper_llmp/helper_script_n_agents.py", line 207, in get_updated_init_conditions
+    with open(validation_filename, 'r') as f:
+FileNotFoundError: [Errno 2] No such file or directory: './experiments_multiagent_help/run100/tyreworld/p02_1_validation.txt'
+[info][singleagent][tyreworld] task 03 takes 20.06 sec, found a plan with cost 35.0
+[info][subgoal_1][tyreworld] task 03 takes 0.06 sec, found a plan with cost 3.0
+[info][subgoal_2][tyreworld] task 03 takes 0.04 sec, found a plan with cost 3.0
+[info][multiagent main goal][tyreworld] task 03 takes 20.08 sec, found a plan with cost 29.0
+TASK: tyreworld - 100 - 03
+29.0 True
+[info][singleagent][tyreworld] task 04 takes 20.09 sec, found a plan with cost 46.0
+[info][subgoal_1][tyreworld] task 04 takes 0.07 sec, found a plan with cost 4.0
+[info][subgoal_2][tyreworld] task 04 takes 0.04 sec, found a plan with cost 4.0
+[info][multiagent main goal][tyreworld] task 04 takes 20.06 sec, found a plan with cost 38.0
+TASK: tyreworld - 100 - 04
+38.0 True
+[info][singleagent][tyreworld] task 05 takes 20.08 sec, found a plan with cost 57.0
+list index out of range
+Traceback (most recent call last):
+  File "/Users/david/Desktop/multiagent_helper_llmp/helper_script_n_agents.py", line 733, in <module>
+    get_updated_init_conditions(path, args, validation_filename=f"./{path}/p{args.task_id}_{i}_validation.txt", pddl_problem_filename=init_problem, pddl_problem_filename_edited=init_problem_out,is_main=main_goal)
+  File "/Users/david/Desktop/multiagent_helper_llmp/helper_script_n_agents.py", line 207, in get_updated_init_conditions
+    with open(validation_filename, 'r') as f:
+FileNotFoundError: [Errno 2] No such file or directory: './experiments_multiagent_help/run100/tyreworld/p05_1_validation.txt'
+[info][singleagent][tyreworld] task 06 takes 20.08 sec, found a plan with cost 68.0
+[info][subgoal_1][tyreworld] task 06 takes 0.96 sec, found a plan with cost 6.0
+[info][subgoal_2][tyreworld] task 06 takes 0.14 sec, found a plan with cost 6.0
+[info][multiagent main goal][tyreworld] task 06 takes 20.09 sec, found a plan with cost 56.0
+TASK: tyreworld - 100 - 06
+56.0 True
+[info][singleagent][tyreworld] task 07 takes 20.09 sec, found a plan with cost 79.0
+[info][subgoal_1][tyreworld] task 07 takes 8.81 sec, found a plan with cost 7.0
+list index out of range
+Traceback (most recent call last):
+  File "/Users/david/Desktop/multiagent_helper_llmp/helper_script_n_agents.py", line 733, in <module>
+    get_updated_init_conditions(path, args, validation_filename=f"./{path}/p{args.task_id}_{i}_validation.txt", pddl_problem_filename=init_problem, pddl_problem_filename_edited=init_problem_out,is_main=main_goal)
+  File "/Users/david/Desktop/multiagent_helper_llmp/helper_script_n_agents.py", line 207, in get_updated_init_conditions
+    with open(validation_filename, 'r') as f:
+FileNotFoundError: [Errno 2] No such file or directory: './experiments_multiagent_help/run100/tyreworld/p07_2_validation.txt'
+[info][singleagent][tyreworld] task 08 takes 20.09 sec, found a plan with cost 90.0
+[info][subgoal_1][tyreworld] task 08 takes 0.09 sec, found a plan with cost 8.0
+[info][subgoal_2][tyreworld] task 08 takes 2.5 sec, found a plan with cost 8.0
+[info][multiagent main goal][tyreworld] task 08 takes 20.09 sec, found a plan with cost 74.0
+TASK: tyreworld - 100 - 08
+74.0 True
+[info][singleagent][tyreworld] task 09 takes 20.11 sec, found a plan with cost 101.0
+[info][subgoal_1][tyreworld] task 09 takes 0.11 sec, found a plan with cost 9.0
+^CTraceback (most recent call last):
+  File "/Users/david/Desktop/multiagent_helper_llmp/./downward/fast-downward.py", line 5, in <module>
+    main()
+  File "/Users/david/Desktop/multiagent_helper_llmp/downward/driver/main.py", line 40, in main
+    (exitcode, continue_execution) = run_components.run_search(args)
+  File "/Users/david/Desktop/multiagent_helper_llmp/downward/driver/run_components.py", line 130, in run_search
+    call.check_call(
+  File "/Users/david/Desktop/multiagent_helper_llmp/downward/driver/call.py", line 63, in check_call
+    return subprocess.check_call(cmd, stdin=stdin_file, **kwargs)
+  File "/Users/david/anaconda3/envs/alfworld/lib/python3.9/subprocess.py", line 368, in check_call
+    retcode = call(*popenargs, **kwargs)
+  File "/Users/david/anaconda3/envs/alfworld/lib/python3.9/subprocess.py", line 351, in call
+    return p.wait(timeout=timeout)
+  File "/Users/david/anaconda3/envs/alfworld/lib/python3.9/subprocess.py", line 1189, in wait
+    return self._wait(timeout=timeout)
+  File "/Users/david/anaconda3/envs/alfworld/lib/python3.9/subprocess.py", line 1933, in _wait
+    (pid, sts) = self._try_wait(0)
+  File "/Users/david/anaconda3/envs/alfworld/lib/python3.9/subprocess.py", line 1891, in _try_wait
+    (pid, sts) = os.waitpid(self.pid, wait_flags)
+KeyboardInterrupt

@@ -1,0 +1,122 @@
+9/20 less than 
+
+[info][singleagent][barman] task 01 takes 20.08 sec, found a plan with cost 36.0
+[info][subgoal_1][barman] task 01 takes 0.11 sec, found a plan with cost 4.0
+[info][subgoal_2][barman] task 01 takes 0.08 sec, found a plan with cost 3.0
+[info][multiagent main goal][barman] task 01 takes 20.1 sec, found a plan with cost 33.0
+TASK: barman - 100 - 01
+37.0 True
+[info][singleagent][barman] task 02 takes 20.08 sec, found a plan with cost 36.0
+[info][subgoal_1][barman] task 02 takes 0.11 sec, found a plan with cost 4.0
+[info][subgoal_2][barman] task 02 takes 0.07 sec, found a plan with cost 4.0
+[info][multiagent main goal][barman] task 02 takes 20.09 sec, found a plan with cost 33.0
+TASK: barman - 100 - 02
+40.0 True
+[info][singleagent][barman] task 03 takes 20.1 sec, found a plan with cost 36.0
+[info][subgoal_1][barman] task 03 takes 0.09 sec, found a plan with cost 4.0
+[info][subgoal_2][barman] task 03 takes 0.07 sec, found a plan with cost 3.0
+[info][multiagent main goal][barman] task 03 takes 20.08 sec, found a plan with cost 33.0
+TASK: barman - 100 - 03
+37.0 True
+[info][singleagent][barman] task 04 takes 20.08 sec, found a plan with cost 36.0
+[info][subgoal_1][barman] task 04 takes 0.1 sec, found a plan with cost 4.0
+[info][subgoal_2][barman] task 04 takes 0.07 sec, found a plan with cost 4.0
+[info][multiagent main goal][barman] task 04 takes 20.08 sec, found a plan with cost 32.0
+TASK: barman - 100 - 04
+39.0 True
+[info][singleagent][barman] task 05 takes 20.09 sec, found a plan with cost 49.0
+[info][subgoal_1][barman] task 05 takes 0.12 sec, found a plan with cost 4.0
+[info][subgoal_2][barman] task 05 takes 0.09 sec, found a plan with cost 4.0
+[info][multiagent main goal][barman] task 05 takes 20.08 sec, found a plan with cost 46.0
+TASK: barman - 100 - 05
+53.0 True
+[info][singleagent][barman] task 06 takes 20.1 sec, found a plan with cost 49.0
+[info][subgoal_1][barman] task 06 takes 0.12 sec, found a plan with cost 4.0
+[info][subgoal_2][barman] task 06 takes 0.09 sec, found a plan with cost 4.0
+[info][multiagent main goal][barman] task 06 takes 20.08 sec, found a plan with cost 46.0
+TASK: barman - 100 - 06
+53.0 True
+[info][singleagent][barman] task 07 takes 20.09 sec, found a plan with cost 51.0
+[info][subgoal_1][barman] task 07 takes 0.13 sec, found a plan with cost 4.0
+[info][subgoal_2][barman] task 07 takes 0.09 sec, found a plan with cost 4.0
+[info][multiagent main goal][barman] task 07 takes 20.08 sec, found a plan with cost 46.0
+TASK: barman - 100 - 07
+50.0 True
+[info][singleagent][barman] task 08 takes 20.08 sec, found a plan with cost 50.0
+[info][subgoal_1][barman] task 08 takes 0.14 sec, found a plan with cost 4.0
+[info][subgoal_2][barman] task 08 takes 0.1 sec, found a plan with cost 4.0
+[info][multiagent main goal][barman] task 08 takes 20.09 sec, found a plan with cost 46.0
+TASK: barman - 100 - 08
+50.0 True
+[info][singleagent][barman] task 09 takes 20.1 sec, found a plan with cost 65.0
+[info][subgoal_1][barman] task 09 takes 0.15 sec, found a plan with cost 4.0
+[info][subgoal_2][barman] task 09 takes 0.11 sec, found a plan with cost 3.0
+[info][multiagent main goal][barman] task 09 takes 20.09 sec, found a plan with cost 62.0
+TASK: barman - 100 - 09
+65.0 True
+[info][singleagent][barman] task 10 takes 20.1 sec, found a plan with cost 65.0
+[info][subgoal_1][barman] task 10 takes 0.12 sec, found a plan with cost 4.0
+[info][subgoal_2][barman] task 10 takes 0.11 sec, found a plan with cost 4.0
+[info][multiagent main goal][barman] task 10 takes 20.1 sec, found a plan with cost 59.0
+TASK: barman - 100 - 10
+63.0 True
+[info][singleagent][barman] task 11 takes 20.11 sec, found a plan with cost 65.0
+[info][subgoal_1][barman] task 11 takes 0.14 sec, found a plan with cost 4.0
+[info][subgoal_2][barman] task 11 takes 0.09 sec, found a plan with cost 3.0
+[info][multiagent main goal][barman] task 11 takes 20.1 sec, found a plan with cost 62.0
+TASK: barman - 100 - 11
+66.0 True
+[info][singleagent][barman] task 12 takes 20.09 sec, found a plan with cost 65.0
+[info][subgoal_1][barman] task 12 takes 0.15 sec, found a plan with cost 4.0
+[info][subgoal_2][barman] task 12 takes 0.09 sec, found a plan with cost 3.0
+[info][multiagent main goal][barman] task 12 takes 20.09 sec, found a plan with cost 62.0
+TASK: barman - 100 - 12
+65.0 True
+[info][singleagent][barman] task 13 takes 20.11 sec, found a plan with cost 82.0
+[info][subgoal_1][barman] task 13 takes 0.17 sec, found a plan with cost 4.0
+[info][subgoal_2][barman] task 13 takes 0.14 sec, found a plan with cost 4.0
+[info][multiagent main goal][barman] task 13 takes 20.11 sec, found a plan with cost 77.0
+TASK: barman - 100 - 13
+81.0 True
+[info][singleagent][barman] task 14 takes 20.11 sec, found a plan with cost 113.0
+[info][subgoal_1][barman] task 14 takes 0.18 sec, found a plan with cost 4.0
+[info][subgoal_2][barman] task 14 takes 0.13 sec, found a plan with cost 3.0
+[info][multiagent main goal][barman] task 14 takes 20.12 sec, found a plan with cost 78.0
+TASK: barman - 100 - 14
+82.0 True
+[info][singleagent][barman] task 15 takes 20.11 sec, found a plan with cost 106.0
+[info][subgoal_1][barman] task 15 takes 0.18 sec, found a plan with cost 4.0
+[info][subgoal_2][barman] task 15 takes 0.11 sec, found a plan with cost 3.0
+[info][multiagent main goal][barman] task 15 takes 20.11 sec, found a plan with cost 81.0
+TASK: barman - 100 - 15
+85.0 True
+[info][singleagent][barman] task 16 takes 20.12 sec, found a plan with cost 115.0
+[info][subgoal_1][barman] task 16 takes 0.18 sec, found a plan with cost 4.0
+[info][subgoal_2][barman] task 16 takes 0.16 sec, found a plan with cost 4.0
+[info][multiagent main goal][barman] task 16 takes 20.13 sec, found a plan with cost 78.0
+TASK: barman - 100 - 16
+85.0 True
+[info][singleagent][barman] task 17 takes 20.13 sec, found a plan with cost 126.0
+[info][subgoal_1][barman] task 17 takes 0.2 sec, found a plan with cost 4.0
+[info][subgoal_2][barman] task 17 takes 0.15 sec, found a plan with cost 3.0
+[info][multiagent main goal][barman] task 17 takes 20.12 sec, found a plan with cost 199.0
+TASK: barman - 100 - 17
+201.0 True
+[info][singleagent][barman] task 18 takes 20.12 sec, found a plan with cost 117.0
+[info][subgoal_1][barman] task 18 takes 0.2 sec, found a plan with cost 4.0
+[info][subgoal_2][barman] task 18 takes 0.13 sec, found a plan with cost 3.0
+[info][multiagent main goal][barman] task 18 takes 20.11 sec, found a plan with cost 86.0
+TASK: barman - 100 - 18
+90.0 True
+[info][singleagent][barman] task 19 takes 20.12 sec, found a plan with cost 134.0
+[info][subgoal_1][barman] task 19 takes 0.2 sec, found a plan with cost 4.0
+[info][subgoal_2][barman] task 19 takes 0.13 sec, found a plan with cost 3.0
+[info][multiagent main goal][barman] task 19 takes 20.14 sec, found a plan with cost 91.0
+TASK: barman - 100 - 19
+95.0 True
+[info][singleagent][barman] task 20 takes 20.12 sec, found a plan with cost 145.0
+[info][subgoal_1][barman] task 20 takes 0.2 sec, found a plan with cost 4.0
+[info][subgoal_2][barman] task 20 takes 0.19 sec, found a plan with cost 4.0
+[info][multiagent main goal][barman] task 20 takes 20.12 sec, found a plan with cost 139.0
+TASK: barman - 100 - 20
+143.0 True
