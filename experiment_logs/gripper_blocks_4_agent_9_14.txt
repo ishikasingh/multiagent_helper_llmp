@@ -1,0 +1,51 @@
+Running experiments sequentially...
+Task 1 (blocksworld): Failure (7.0 >= 6.0)
+Task 2 (blocksworld): Failure (7.0 >= 6.0)
+Task 3 (blocksworld): Failure (6.0 >= 6.0)
+Task 4 (blocksworld): Failure (15.0 >= 12.0)
+Task 5 (blocksworld): Failure (11 >= 8.0)
+Task 6 (blocksworld): Failure (12.0 >= 12.0)
+Task 7 (blocksworld): Success (7 < 8.0)
+Task 8 (blocksworld): Success (12.0 < 14.0)
+Task 9 (blocksworld): Failure (28.0 >= 14.0)
+Task 10 (blocksworld): Failure (27.0 >= 18.0)
+Task 11 (blocksworld): Failure (22.0 >= 22.0)
+Task 12 (blocksworld): Success (17.0 < 20.0)
+Task 13 (blocksworld): Failure (29.0 >= 26.0)
+Task 14 (blocksworld): Failure (24.0 >= 22.0)
+Task 15 (blocksworld): Failure (28.0 >= 26.0)
+Task 16 (blocksworld): Success (27.0 < 28.0)
+Task 17 (blocksworld): Failure (34.0 >= 22.0)
+Task 18 (blocksworld): Failure (33.0 >= 30.0)
+Task 19 (blocksworld): Failure (26.0 >= 24.0)
+Task 20 (blocksworld): Failure (33.0 >= 30.0)
+Task 1 (grippers): Success (3.0 < 5.0)
+Task 2 (grippers): Success (7.0 < 9.0)
+Task 3 (grippers): Success (3.0 < 6.0)
+Task 4 (grippers): Failure (4 >= 4.0)
+Task 5 (grippers): Failure (4 >= 4.0)
+Task 6 (grippers): Failure (4 >= 4.0)
+Task 7 (grippers): Success (6.0 < 8.0)
+Task 8 (grippers): Success (4.0 < 11.0)
+Task 9 (grippers): Success (7.0 < 17.0)
+Task 10 (grippers): Success (4.0 < 10.0)
+Task 11 (grippers): Failure (3 >= 3.0)
+Task 12 (grippers): Success (4.0 < 9.0)
+Task 13 (grippers): Success (4.0 < 6.0)
+Task 14 (grippers): Success (4.0 < 6.0)
+Task 15 (grippers): Success (4.0 < 10.0)
+Task 16 (grippers): Success (12.0 < 19.0)
+Task 17 (grippers): Success (6.0 < 8.0)
+Task 18 (grippers): Success (7.0 < 9.0)
+Task 19 (grippers): Success (9.0 < 17.0)
+Task 20 (grippers): Success (4.0 < 7.0)
+
+Summary:
+--------
+blocksworld: 4 successful out of 20
+grippers: 16 successful out of 20
+
+Total number of successful experiments across all domains: 20 out of 40
+Number of agents used: 4
+Run number: 100
+Execution mode: Sequential

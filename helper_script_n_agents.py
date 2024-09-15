@@ -10,6 +10,9 @@ import re
 import subprocess
 import numpy as np
 from openai import OpenAI
+from concurrent.futures import ThreadPoolExecutor
+from functools import lru_cache
+import copy
 
 load_dotenv()
 client = OpenAI()
@@ -429,13 +432,11 @@ def get_helper_subgoal_without_plan(expt_path, args, log_file):
 
 
 def validator_simulation_recursive(expt_path, args, log_file, multi=False):
-    # get relevant files for validation
     domain_pddl_file = f'./domains/{args.domain}/domain.pddl'
     task_pddl_file = f'./domains/{args.domain}/p{args.task_id}.pddl'
     with open(task_pddl_file, 'r') as f:
         task = f.read()
 
-    # Find the best plan for each agent
     agent_plans = []
     for i in range(args.num_agents):
         plan_path = os.path.join(f"./{expt_path}", f"p{args.task_id}_{i}_plan.pddl" + '.*')
@@ -449,58 +450,47 @@ def validator_simulation_recursive(expt_path, args, log_file, multi=False):
                     best_cost = cost
                     best_plan_file = fn
         if best_plan_file:
-            # print(best_plan_file)
             with open(best_plan_file, 'r') as f:
-                agent_plans.append(f.readlines()[:-1])
+                agent_plans.append(tuple(f.readlines()[:-1]))  # Convert to tuple
         else:
-            # print(f"No valid plan found for agent {i}")
             return float('inf'), False
-
-    # print(agent_plans)
 
     print(f"TASK: {args.domain} - {args.run} - {args.task_id}")
     with open(log_file, 'a+') as f:
         f.write(f"TASK: {args.domain} - {args.run} - {args.task_id}\n")
 
-    total_actions = sum(len(plan) for plan in agent_plans)
-    
     global execution_state
     execution_state = np.full([len(plan) + 1 for plan in agent_plans] + [args.num_agents + 1], float('inf'))
 
-    plan_length = validator_sim_recursion_function(expt_path, domain_pddl_file, tuple([0] * args.num_agents), agent_plans, [task] * args.num_agents)
+    plan_length = validator_sim_recursion_function(expt_path, domain_pddl_file, tuple([0] * args.num_agents), tuple(agent_plans), tuple([task] * args.num_agents))
 
     success = plan_length < float('inf')
     print(plan_length, success)
     return plan_length, success
 
+@lru_cache(maxsize=None)
 def validator_sim_recursion_function(expt_path, domain_pddl_file, indices, agent_plans, agent_tasks, agent_to_execute=None):
     num_agents = len(agent_plans)
     
-    # Base case: all plans are exhausted
     if all(indices[i] == len(agent_plans[i]) for i in range(num_agents)):
         return 0
 
-    # Check if this state has been memoized
     state_index = indices + (agent_to_execute if agent_to_execute is not None else num_agents,)
     if execution_state[state_index] != float('inf'):
         return execution_state[state_index]
 
-    # If a specific agent is to execute
     if agent_to_execute is not None:
         result = execute_agent_action(expt_path, domain_pddl_file, indices, agent_plans, agent_tasks, agent_to_execute)
     else:
-        # Try executing each agent's action and choose the best outcome
         plans = []
         for i in range(num_agents):
             if indices[i] < len(agent_plans[i]):
                 plans.append(validator_sim_recursion_function(expt_path, domain_pddl_file, indices, agent_plans, agent_tasks, i))
         
-        # Try executing actions from all agents simultaneously
         plans.append(execute_all_agents_action(expt_path, domain_pddl_file, indices, agent_plans, agent_tasks))
 
         result = 1 + min(plans)
 
-    # Memoize the result
     execution_state[state_index] = result
     return result
 
@@ -515,15 +505,15 @@ def execute_agent_action(expt_path, domain_pddl_file, indices, agent_plans, task
         with open(task_paths[i], 'w') as f:
             f.write(task)
 
-    output = subprocess.run(["./downward/validate", "-v", domain_pddl_file, task_paths[agent_index], plan_path], stdout=subprocess.PIPE)
+    output = subprocess.run(["./downward/validate", "-v", domain_pddl_file, task_paths[agent_index], plan_path], capture_output=True, text=True)
     with open(val_path, 'w') as f:
-        f.write(output.stdout.decode('utf-8'))
+        f.write(output.stdout)
 
-    if 'unsatisfied precondition' not in output.stdout.decode('utf-8'):
+    if 'unsatisfied precondition' not in output.stdout:
         with open(log_file, 'a+') as f:
             f.write(f"Agent {agent_index}, {indices[agent_index]}, {agent_plans[agent_index][indices[agent_index]][:-1]}\n")
 
-        new_task_states = task_states.copy()
+        new_task_states = list(task_states).copy()
         for i in range(len(agent_plans)):
             new_task_path = f"./{expt_path}/agent{i}_new_task_temp.txt"
             get_updated_init_conditions_recurse(expt_path, args, validation_filename=val_path, pddl_problem_filename=task_paths[i], pddl_problem_filename_edited=new_task_path, env_conds_only=(i != agent_index))
@@ -532,7 +522,7 @@ def execute_agent_action(expt_path, domain_pddl_file, indices, agent_plans, task
 
         new_indices = list(indices)
         new_indices[agent_index] += 1
-        return validator_sim_recursion_function(expt_path, domain_pddl_file, tuple(new_indices), agent_plans, new_task_states)
+        return validator_sim_recursion_function(expt_path, domain_pddl_file, tuple(new_indices), agent_plans, tuple(new_task_states))
     else:
         return float('inf')
 
@@ -543,18 +533,23 @@ def execute_all_agents_action(expt_path, domain_pddl_file, indices, agent_plans,
     new_task_paths = [f"./{expt_path}/agent{i}_new_task_temp.txt" for i in range(len(agent_plans))]
 
     all_valid = True
-    for i in range(len(agent_plans)):
-        if indices[i] < len(agent_plans[i]):
-            with open(plan_paths[i], 'w') as f:
-                f.write(agent_plans[i][indices[i]])
-            with open(task_paths[i], 'w') as f:
-                f.write(task_states[i])
-            
-            output = subprocess.run(["./downward/validate", "-v", domain_pddl_file, task_paths[i], plan_paths[i]], stdout=subprocess.PIPE)
+    with ThreadPoolExecutor() as executor:
+        futures = []
+        for i in range(len(agent_plans)):
+            if indices[i] < len(agent_plans[i]):
+                with open(plan_paths[i], 'w') as f:
+                    f.write(agent_plans[i][indices[i]])
+                with open(task_paths[i], 'w') as f:
+                    f.write(task_states[i])
+                
+                futures.append(executor.submit(subprocess.run, ["./downward/validate", "-v", domain_pddl_file, task_paths[i], plan_paths[i]], capture_output=True, text=True))
+
+        for i, future in enumerate(futures):
+            output = future.result()
             with open(val_paths[i], 'w') as f:
-                f.write(output.stdout.decode('utf-8'))
+                f.write(output.stdout)
             
-            if 'unsatisfied precondition' in output.stdout.decode('utf-8'):
+            if 'unsatisfied precondition' in output.stdout:
                 all_valid = False
                 break
 
@@ -575,7 +570,7 @@ def execute_all_agents_action(expt_path, domain_pddl_file, indices, agent_plans,
             with open(path, 'r') as f:
                 new_task_states.append(f.read())
 
-        return validator_sim_recursion_function(expt_path, domain_pddl_file, new_indices, agent_plans, new_task_states)
+        return validator_sim_recursion_function(expt_path, domain_pddl_file, new_indices, agent_plans, tuple(new_task_states))
     else:
         return float('inf')
 
@@ -761,26 +756,26 @@ if __name__ == "__main__":
                 f.write(f"\n\nError: {e}")
 
 
-        print(f"singleagent_planning_time = {singleagent_planning_time}")
-        print(f"singleagent_planning_time_opt = {singleagent_planning_time_opt}")
-        print(f"singleagent_cost = {singleagent_cost}")
-        print(f"singleagent_planning_time_1st = {singleagent_planning_time_1st}")
-        print(f"singleagent_cost_1st = {singleagent_cost_1st}")
-        print(f"LLM_text_sg_time = {LLM_text_sg_time}")
-        print(f"LLM_pddl_sg_time = {LLM_pddl_sg_time}")
-        print(f"multiagent_helper_planning_time = {multiagent_helper_planning_time}")
-        print(f"multiagent_helper_planning_time_opt = {multiagent_helper_planning_time_opt}")
-        print(f"multiagent_helper_cost = {multiagent_helper_cost}")
-        print(f"multiagent_helper_planning_time_1st = {multiagent_helper_planning_time_1st}")
-        print(f"multiagent_helper_cost_1st = {multiagent_helper_cost_1st}")
-        print(f"multiagent_helper_success = {multiagent_helper_success}")
-        print(f"multiagent_main_planning_time = {multiagent_main_planning_time}")
-        print(f"multiagent_main_planning_time_opt = {multiagent_main_planning_time_opt}")
-        print(f"multiagent_main_cost = {multiagent_main_cost}")
-        print(f"multiagent_main_planning_time_1st = {multiagent_main_planning_time_1st}")
-        print(f"multiagent_main_cost_1st = {multiagent_main_cost_1st}")
-        print(f"multiagent_main_success = {multiagent_main_success}")
-        print(f"overall_plan_length = {overall_plan_length}")
+        # print(f"singleagent_planning_time = {singleagent_planning_time}")
+        # print(f"singleagent_planning_time_opt = {singleagent_planning_time_opt}")
+        # print(f"singleagent_cost = {singleagent_cost}")
+        # print(f"singleagent_planning_time_1st = {singleagent_planning_time_1st}")
+        # print(f"singleagent_cost_1st = {singleagent_cost_1st}")
+        # print(f"LLM_text_sg_time = {LLM_text_sg_time}")
+        # print(f"LLM_pddl_sg_time = {LLM_pddl_sg_time}")
+        # print(f"multiagent_helper_planning_time = {multiagent_helper_planning_time}")
+        # print(f"multiagent_helper_planning_time_opt = {multiagent_helper_planning_time_opt}")
+        # print(f"multiagent_helper_cost = {multiagent_helper_cost}")
+        # print(f"multiagent_helper_planning_time_1st = {multiagent_helper_planning_time_1st}")
+        # print(f"multiagent_helper_cost_1st = {multiagent_helper_cost_1st}")
+        # print(f"multiagent_helper_success = {multiagent_helper_success}")
+        # print(f"multiagent_main_planning_time = {multiagent_main_planning_time}")
+        # print(f"multiagent_main_planning_time_opt = {multiagent_main_planning_time_opt}")
+        # print(f"multiagent_main_cost = {multiagent_main_cost}")
+        # print(f"multiagent_main_planning_time_1st = {multiagent_main_planning_time_1st}")
+        # print(f"multiagent_main_cost_1st = {multiagent_main_cost_1st}")
+        # print(f"multiagent_main_success = {multiagent_main_success}")
+        # print(f"overall_plan_length = {overall_plan_length}")
 
         with open(log_file, 'a+') as f:
             f.write("\n\n" +\
