@@ -137,11 +137,22 @@ def planner(expt_path, args, subgoal_idx=-1, time_limit=200):
               f"{domain_pddl_file} {task_pddl_file_name} > {output_path}")
     with open(output_path, "r") as f:
         output = f.read()
+    
+    if(output.find('Actual search time') == -1):
+        print("reattempting planner")
+        os.system(f"python ./downward/fast-downward.py --alias {FAST_DOWNWARD_ALIAS} " + \
+              f"--search-time-limit {args.time_limit} --plan-file {plan_file_name} " + \
+              f"--sas-file {sas_file_name} " + \
+              f"{domain_pddl_file} {task_pddl_file_name} > {output_path}")
+        with open(output_path, "r") as f:
+            output = f.read()
+        
     planner_search_time_1st_plan = float(output.split('Actual search time: ')[1].split('\n')[0].strip()[:-1])
+    print("successfully listed")
     planner_total_time = float(output.split('Planner time: ')[1].split('\n')[0].strip()[:-1])
     planner_total_time_opt = float(output.split('Actual search time: ')[-1].split('\n')[0].strip()[:-1])
     first_plan_cost = int(output.split('Plan cost: ')[1].split('\n')[0].strip())
-    # import ipdb; ipdb.set_trace()
+    #import ipdb; ipdb.set_trace()
     # collect the least cost plan
     best_cost = 1e10
     best_plan = None
@@ -164,6 +175,7 @@ def planner(expt_path, args, subgoal_idx=-1, time_limit=200):
         return -1, -1, -1, -1, -1
 
 def validator(expt_path, args, subgoal_idx=-1):
+    print("validating")
     if subgoal_idx >= 0:
         output_path = f"./{expt_path}/p{args.task_id}_{subgoal_idx}_validation.txt"
     else:
@@ -678,10 +690,10 @@ if __name__ == "__main__":
         try:
             subgoal_array, t1 = get_helper_subgoal_without_plan(path, args, log_file)
             # add check for validity of all goals
-            # print(subgoal_array)
+            print(subgoal_array)
             # # helper_subgoal = "xyz"
             goal_files, t2 = get_pddl_goal(path, args, subgoal_array, log_file)
-            # print(goal_files)
+            print(goal_files)
 
         except Exception as e:
             print("LLM generation failed, ", e)
@@ -690,8 +702,10 @@ if __name__ == "__main__":
         # edited init starts at  0 for original, then 1 for post-first subgoal, etc ...
         # subgoal 1 used original pddl domain, then subgoal 2 uses edited_init_1, 3 uses edited_init_2, etc ...
         for i in range(1,args.num_agents):
+            print(f"agent{i}")
             try:
                 planner_total_time, planner_total_time_opt, best_cost, planner_search_time_1st_plan, first_plan_cost = planner(path, args, subgoal_idx=i)
+                print("planner successful")
                 success = validator(path, args, subgoal_idx=i)
 
                 LLM_text_sg_time.append(t1)
