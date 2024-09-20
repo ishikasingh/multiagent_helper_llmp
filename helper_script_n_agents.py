@@ -684,7 +684,7 @@ if __name__ == "__main__":
         try:
             subgoal_array, t1 = get_helper_subgoal_without_plan(path, args, log_file)
             # add check for validity of all goals
-            # print(subgoal_array)
+            print(subgoal_array)
             # # helper_subgoal = "xyz"
             goal_files, t2 = get_pddl_goal(path, args, subgoal_array, log_file)
             # print(goal_files)
@@ -747,7 +747,10 @@ if __name__ == "__main__":
             # add goal to main agent 
             planner_total_time, planner_total_time_opt, best_cost, planner_search_time_1st_plan, first_plan_cost = planner(path, args, subgoal_idx=args.num_agents)
             # print("running validator_sim_recursion_function")
+            dp_start = time.time()
             plan_length, success = validator_simulation_recursive(path, args, log_file)
+            dp_end = time.time()
+            print("dp planning time", dp_end - dp_start)
             with open(log_file, 'a+') as f: f.write(f"plan_length {plan_length})\n") # {singleagent_cost[-1]}\n")
             multiagent_main_planning_time.append(planner_total_time)
             multiagent_main_planning_time_opt.append(planner_total_time_opt)
