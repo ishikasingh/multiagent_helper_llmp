@@ -2,8 +2,8 @@
 
 verbose=false
 # blocksworld, barman, grippers, termes, tyreworld
-domains=("tyreworld" "barman")  # Add your domains here
-num_tasks=20
+domains=("blocksworld" "grippers" "tyreworld" "barman")  # Add your domains here
+tasks=(1 5 10 15 20)  # Subset of tasks to execute
 max_jobs=4  # Adjust this based on your system's capabilities
 num_agents=3  # Default number of agents
 run_number=100 # Default run number
@@ -15,7 +15,7 @@ print_usage() {
     echo "  -v, --verbose    Enable verbose output"
     echo "  -j, --jobs       Set maximum number of parallel jobs (default: 4)"
     echo "  -a, --agents     Set number of agents (default: 3)"
-    echo "  -r, --run        Set run number (default: 102)"
+    echo "  -r, --run        Set run number (default: 100)"
     echo "  -s, --sequential Run experiments sequentially (default: parallel)"
 }
 
@@ -52,23 +52,43 @@ done
 
 # Function to run a single experiment
 run_experiment() {
-    domain=$1
-    task_id=$2
-    output=$(python helper_script_n_agents.py --run $run_number --domain "$domain" --time-limit 30 --task_id $task_id --num_agents $num_agents)
+    local domain=$1
+    local task_id=$2
+    local verbose_flag=""
+    if $verbose; then
+        verbose_flag="--verbose"
+    fi
+
+    output=$(python helper_script_n_agents.py \
+        --run "$run_number" \
+        --domain "$domain" \
+        --time-limit 20 \
+        --task_id "$task_id" \
+        --num_agents "$num_agents" \
+        )
     
     if $verbose; then
         echo "$output"
     fi
 
-    single_agent_cost=$(echo "$output" | grep '\[singleagent\]' | grep -oP 'cost \K[0-9.]+')
+    single_agent_cost=$(echo "$output" | grep '\[singleagent\]' | sed -E 's/.*cost ([0-9.]+).*/\1/')
     final_cost=$(echo "$output" | grep 'True' | awk '{print $(NF-1)}')
     
-    if (( $(echo "$final_cost < $single_agent_cost" | bc -l) )); then
-        echo "SUCCESS:$domain:$task_id:$final_cost:$single_agent_cost"
+    if [ -n "$single_agent_cost" ] && [ -n "$final_cost" ]; then
+        if (( $(echo "$final_cost < $single_agent_cost" | bc -l) )); then
+            echo "SUCCESS: $domain: task $task_id: llm_multi $final_cost: single_agent $single_agent_cost"
+        else
+            echo "FAILURE: $domain: task $task_id: llm_multi $final_cost: single_agent $single_agent_cost"
+        fi
     else
-        echo "FAILURE:$domain:$task_id:$final_cost:$single_agent_cost"
+        echo "ERROR:$domain: task $task_id: Unable to parse costs"
     fi
 }
+
+
+# Initialize variables
+declare -a domain_counts
+total_count=0;
 
 # Function to process results
 process_result() {
@@ -77,33 +97,27 @@ process_result() {
     
     if [ "$status" == "SUCCESS" ]; then
         ((total_count++))
-        ((domain_counts[$domain]++))
+        index=$(printf '%s\n' "${domains[@]}" | grep -n "^${domain}$" | cut -d: -f1)
+        ((index--))
+        ((domain_counts[index]++))
         echo "Task $task_id ($domain): Success ($final_cost < $single_agent_cost)"
     else
         echo "Task $task_id ($domain): Failure ($final_cost >= $single_agent_cost)"
     fi
 }
 
-# Initialize variables
-declare -A domain_counts
-total_count=0
-
 # Run experiments
 if $parallel_execution; then
     echo "Running experiments in parallel..."
     export -f run_experiment
     export verbose num_agents run_number
-    results=$(parallel -j $max_jobs run_experiment {1} {2} ::: "${domains[@]}" ::: $(seq 1 $num_tasks))
-    
-    echo "$results" | while read -r line; do
-        process_result "$line"
-    done
+    parallel -j $max_jobs run_experiment {1} {2} ::: "${domains[@]}" ::: "${tasks[@]}"
 else
     echo "Running experiments sequentially..."
     for domain in "${domains[@]}"; do
-        for task_id in $(seq 1 $num_tasks); do
+        for task_id in "${tasks[@]}"; do
             result=$(run_experiment "$domain" "$task_id")
-            process_result "$result"
+            echo "$result"
         done
     done
 fi
@@ -113,10 +127,10 @@ echo -e "\nSummary:"
 echo "--------"
 for domain in "${domains[@]}"; do
     count=${domain_counts[$domain]:-0}
-    echo "$domain: $count successful out of $num_tasks"
+    echo "$domain: $count successful out of ${#tasks[@]}"
 done
 
-echo -e "\nTotal number of successful experiments across all domains: $total_count out of $((${#domains[@]} * num_tasks))"
+echo -e "\nTotal number of successful experiments across all domains: $total_count out of $((${#domains[@]} * ${#tasks[@]}))"
 echo "Number of agents used: $num_agents"
 echo "Run number: $run_number"
 echo "Execution mode: $(if $parallel_execution; then echo "Parallel"; else echo "Sequential"; fi)"
