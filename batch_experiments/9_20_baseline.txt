@@ -1,0 +1,257 @@
+[info][singleagent][blocksworld] task 01 takes 0.12 sec, found a plan with cost 6.0
+['b2 is clear and on the table.', 'b3 is clear and on the table.']
+[info][subgoal_1][blocksworld] task 01 takes 0.14 sec, found a plan with cost 2.0
+planner successful
+validating
+[info][subgoal_2][blocksworld] task 01 takes 0.13 sec, found a plan with cost 2.0
+planner successful
+validating
+[info][multiagent main goal][blocksworld] task 01 takes 0.15 sec, found a plan with cost 4.0
+TASK: blocksworld - 100 - 01
+7.0 True
+dp planning time 0.23708724975585938
+FAILURE: blocksworld: task 1: llm_multi 7.0: single_agent 6.0
+[info][singleagent][blocksworld] task 05 takes 0.12 sec, found a plan with cost 8.0
+['b1 is clear and all hands are empty.', 'b3 is clear and all hands are empty.']
+[info][subgoal_1][blocksworld] task 05 takes 0.13 sec, found a plan with cost 2.0
+planner successful
+validating
+[info][subgoal_2][blocksworld] task 05 takes 0.15 sec, found a plan with cost 4.0
+planner successful
+validating
+[info][multiagent main goal][blocksworld] task 05 takes 0.13 sec, found a plan with cost 2.0
+TASK: blocksworld - 100 - 05
+5.0 True
+dp planning time 0.5006351470947266
+SUCCESS: blocksworld: task 5: llm_multi 5.0: single_agent 8.0
+[info][singleagent][blocksworld] task 10 takes 1.31 sec, found a plan with cost 18.0
+['b1 is on top of b7 and all hands are empty.', 'b2 is on top of b5 and all hands are empty.']
+[info][subgoal_1][blocksworld] task 10 takes 0.16 sec, found a plan with cost 6.0
+planner successful
+validating
+[info][subgoal_2][blocksworld] task 10 takes 20.06 sec, no solution found
+planner successful
+validating
+[info][multiagent main goal][blocksworld] task 10 takes 0.92 sec, found a plan with cost 18.0
+TASK: blocksworld - 100 - 10
+18.0 True
+dp planning time 2.1102423667907715
+FAILURE: blocksworld: task 10: llm_multi 18.0: single_agent 18.0
+[info][singleagent][blocksworld] task 15 takes 20.14 sec, found a plan with cost 26.0
+['b1 is clear and all hands are empty.', 'b10 is clear and all hands are empty.']
+[info][subgoal_1][blocksworld] task 15 takes 0.45 sec, found a plan with cost 16.0
+planner successful
+validating
+[info][subgoal_2][blocksworld] task 15 takes 20.06 sec, no solution found
+planner successful
+validating
+[info][multiagent main goal][blocksworld] task 15 takes 20.13 sec, found a plan with cost 14.0
+TASK: blocksworld - 100 - 15
+28.0 True
+dp planning time 1.3900179862976074
+FAILURE: blocksworld: task 15: llm_multi 28.0: single_agent 26.0
+[info][singleagent][blocksworld] task 20 takes 20.13 sec, found a plan with cost 30.0
+['b1 is on top of b6 and all hands are empty.', 'b5 is on top of b3 and all hands are empty.']
+[info][subgoal_1][blocksworld] task 20 takes 2.91 sec, found a plan with cost 12.0
+planner successful
+validating
+[info][subgoal_2][blocksworld] task 20 takes 0.14 sec, found a plan with cost 2.0
+planner successful
+validating
+[info][multiagent main goal][blocksworld] task 20 takes 20.1 sec, found a plan with cost 18.0
+TASK: blocksworld - 100 - 20
+29.0 True
+dp planning time 2.166949510574341
+SUCCESS: blocksworld: task 20: llm_multi 29.0: single_agent 30.0
+[info][singleagent][grippers] task 01 takes 0.11 sec, found a plan with cost 5.0
+['ball1 is in room2 and all grippers are free.', 'ball2 is in room2 and all grippers are free.']
+[info][subgoal_1][grippers] task 01 takes 0.15 sec, found a plan with cost 3.0
+planner successful
+validating
+[info][subgoal_2][grippers] task 01 takes 0.12 sec, found a plan with cost 3.0
+planner successful
+validating
+[info][multiagent main goal][grippers] task 01 takes 20.04 sec, no solution found
+TASK: grippers - 100 - 01
+3.0 True
+dp planning time 0.4705822467803955
+SUCCESS: grippers: task 1: llm_multi 3.0: single_agent 5.0
+[info][singleagent][grippers] task 05 takes 0.1 sec, found a plan with cost 4.0
+['ball3 is in room2 and all grippers are free.', 'ball1 is in room1 and all grippers are free.']
+[info][subgoal_1][grippers] task 05 takes 0.13 sec, found a plan with cost 4.0
+planner successful
+validating
+[info][subgoal_2][grippers] task 05 takes 20.04 sec, no solution found
+planner successful
+validating
+[info][multiagent main goal][grippers] task 05 takes 20.01 sec, no solution found
+TASK: grippers - 100 - 05
+4 True
+dp planning time 0.3892381191253662
+FAILURE: grippers: task 5: llm_multi 4: single_agent 4.0
+[info][singleagent][grippers] task 10 takes 0.13 sec, found a plan with cost 10.0
+['Ball3 is in room1 and all grippers are free.', 'Ball4 is in room1 and all grippers are free.']
+[info][subgoal_1][grippers] task 10 takes 0.14 sec, found a plan with cost 4.0
+planner successful
+validating
+[info][subgoal_2][grippers] task 10 takes 0.13 sec, found a plan with cost 4.0
+planner successful
+validating
+[info][multiagent main goal][grippers] task 10 takes 0.14 sec, found a plan with cost 4.0
+TASK: grippers - 100 - 10
+4.0 True
+dp planning time 3.7603659629821777
+SUCCESS: grippers: task 10: llm_multi 4.0: single_agent 10.0
+[info][singleagent][grippers] task 15 takes 0.16 sec, found a plan with cost 10.0
+['ball1 is in room5 and all grippers are free.', 'ball2 is in room2 and all grippers are free.']
+[info][subgoal_1][grippers] task 15 takes 0.14 sec, found a plan with cost 4.0
+planner successful
+validating
+[info][subgoal_2][grippers] task 15 takes 0.14 sec, found a plan with cost 4.0
+planner successful
+validating
+[info][multiagent main goal][grippers] task 15 takes 0.15 sec, found a plan with cost 4.0
+TASK: grippers - 100 - 15
+4.0 True
+dp planning time 3.7428393363952637
+SUCCESS: grippers: task 15: llm_multi 4.0: single_agent 10.0
+[info][singleagent][grippers] task 20 takes 0.12 sec, found a plan with cost 7.0
+['ball1 is in room3 and all grippers are free.', 'ball2 is in room2 and all grippers are free.']
+[info][subgoal_1][grippers] task 20 takes 0.14 sec, found a plan with cost 4.0
+planner successful
+validating
+[info][subgoal_2][grippers] task 20 takes 0.13 sec, found a plan with cost 4.0
+planner successful
+validating
+[info][multiagent main goal][grippers] task 20 takes 20.04 sec, no solution found
+TASK: grippers - 100 - 20
+4.0 True
+dp planning time 0.6692252159118652
+SUCCESS: grippers: task 20: llm_multi 4.0: single_agent 7.0
+[info][singleagent][tyreworld] task 01 takes 0.21 sec, found a plan with cost 13.0
+['The intact tyre is inflated and all hands are empty.', 'The flat tyre is removed from the hub and all hands are empty.']
+[info][subgoal_1][tyreworld] task 01 takes 0.13 sec, found a plan with cost 1.0
+planner successful
+validating
+[info][subgoal_2][tyreworld] task 01 takes 0.15 sec, found a plan with cost 4.0
+planner successful
+validating
+[info][multiagent main goal][tyreworld] task 01 takes 0.18 sec, found a plan with cost 8.0
+TASK: tyreworld - 100 - 01
+10.0 True
+dp planning time 1.2712979316711426
+SUCCESS: tyreworld: task 1: llm_multi 10.0: single_agent 13.0
+[info][singleagent][tyreworld] task 05 takes 20.14 sec, found a plan with cost 57.0
+['The hub1 has an inflated intact tyre and the nuts are tight on the hub1. All hands are empty.', 'The hub2 has an inflated intact tyre and the nuts are tight on the hub2. All hands are empty.']
+reattempting planner
+list index out of range
+reattempting planner
+list index out of range
+[info][multiagent main goal][tyreworld] task 05 takes 20.14 sec, found a plan with cost 43.0
+TASK: tyreworld - 100 - 05
+53.0 True
+dp planning time 120.60103392601013
+SUCCESS: tyreworld: task 5: llm_multi 53.0: single_agent 57.0
+[info][singleagent][tyreworld] task 10 takes 20.2 sec, found a plan with cost 112.0
+['The hub1 has an inflated intact tyre, the nuts on hub1 are tight, and the flat tyre is in the boot.', 'The hub2 has an inflated intact tyre, the nuts on hub2 are tight, and the flat tyre is in the boot.']
+[info][subgoal_1][tyreworld] task 10 takes 20.16 sec, found a plan with cost 12.0
+planner successful
+validating
+[info][subgoal_2][tyreworld] task 10 takes 20.16 sec, found a plan with cost 11.0
+planner successful
+validating
+[info][multiagent main goal][tyreworld] task 10 takes 20.16 sec, found a plan with cost 89.0
+TASK: tyreworld - 100 - 10
+90.0 True
+dp planning time 463.5186607837677
+SUCCESS: tyreworld: task 10: llm_multi 90.0: single_agent 112.0
+[info][singleagent][tyreworld] task 15 takes 20.28 sec, found a plan with cost 167.0
+['The hub1 has an inflated intact tyre and the nuts on hub1 are tight.', 'The hub2 has an inflated intact tyre and the nuts on hub2 are tight.']
+[info][subgoal_1][tyreworld] task 15 takes 20.3 sec, found a plan with cost 11.0
+planner successful
+validating
+[info][subgoal_2][tyreworld] task 15 takes 20.27 sec, found a plan with cost 10.0
+planner successful
+validating
+[info][multiagent main goal][tyreworld] task 15 takes 20.28 sec, found a plan with cost 146.0
+TASK: tyreworld - 100 - 15
+147.0 True
+dp planning time 669.5454621315002
+SUCCESS: tyreworld: task 15: llm_multi 147.0: single_agent 167.0
+[info][singleagent][tyreworld] task 20 takes 20.42 sec, found a plan with cost 222.0
+['The hub10 has an inflated intact tyre and the nut is tight on hub10.', 'The hub20 has an inflated intact tyre and the nut is tight on hub20.']
+[info][subgoal_1][tyreworld] task 20 takes 20.41 sec, found a plan with cost 11.0
+planner successful
+validating
+[info][subgoal_2][tyreworld] task 20 takes 20.42 sec, found a plan with cost 10.0
+planner successful
+validating
+[info][multiagent main goal][tyreworld] task 20 takes 20.42 sec, found a plan with cost 201.0
+TASK: tyreworld - 100 - 20
+maximum recursion depth exceeded while calling a Python object
+ERROR:tyreworld: task 20: Unable to parse costs
+[info][singleagent][barman] task 01 takes 20.15 sec, found a plan with cost 36.0
+['shaker1 contains ingredient1 and all hands are empty.', 'shotglass4 contains ingredient2 and all hands are empty.']
+[info][subgoal_1][barman] task 01 takes 0.21 sec, found a plan with cost 4.0
+planner successful
+validating
+[info][subgoal_2][barman] task 01 takes 0.2 sec, found a plan with cost 4.0
+planner successful
+validating
+[info][multiagent main goal][barman] task 01 takes 20.13 sec, found a plan with cost 32.0
+TASK: barman - 100 - 01
+39.0 True
+dp planning time 1.7429654598236084
+FAILURE: barman: task 1: llm_multi 39.0: single_agent 36.0
+[info][singleagent][barman] task 05 takes 20.17 sec, found a plan with cost 49.0
+['shaker1 contains ingredient2 and all hands are empty.', 'shotglass5 contains ingredient3 and all hands are empty.']
+[info][subgoal_1][barman] task 05 takes 0.24 sec, found a plan with cost 4.0
+planner successful
+validating
+[info][subgoal_2][barman] task 05 takes 0.23 sec, found a plan with cost 4.0
+planner successful
+validating
+[info][multiagent main goal][barman] task 05 takes 20.18 sec, found a plan with cost 46.0
+TASK: barman - 100 - 05
+53.0 True
+dp planning time 2.1227433681488037
+FAILURE: barman: task 5: llm_multi 53.0: single_agent 49.0
+[info][singleagent][barman] task 10 takes 20.2 sec, found a plan with cost 65.0
+['shaker1 contains ingredient2 and all hands are empty.', 'shotglass6 contains ingredient3 and all hands are empty.']
+[info][subgoal_1][barman] task 10 takes 0.27 sec, found a plan with cost 4.0
+planner successful
+validating
+[info][subgoal_2][barman] task 10 takes 0.27 sec, found a plan with cost 4.0
+planner successful
+validating
+[info][multiagent main goal][barman] task 10 takes 20.2 sec, found a plan with cost 59.0
+TASK: barman - 100 - 10
+63.0 True
+dp planning time 7.227391004562378
+SUCCESS: barman: task 10: llm_multi 63.0: single_agent 65.0
+[info][singleagent][barman] task 15 takes 20.24 sec, found a plan with cost 106.0
+['shaker1 contains ingredient2 and all hands are empty.', 'shotglass4 contains ingredient1 and all hands are empty.']
+[info][subgoal_1][barman] task 15 takes 0.34 sec, found a plan with cost 4.0
+planner successful
+validating
+[info][subgoal_2][barman] task 15 takes 0.28 sec, found a plan with cost 3.0
+planner successful
+validating
+[info][multiagent main goal][barman] task 15 takes 20.23 sec, found a plan with cost 81.0
+TASK: barman - 100 - 15
+85.0 True
+dp planning time 4.321392059326172
+SUCCESS: barman: task 15: llm_multi 85.0: single_agent 106.0
+[info][singleagent][barman] task 20 takes 20.25 sec, found a plan with cost 145.0
+['shaker1 contains ingredient2 and all hands are empty.', 'shotglass9 contains ingredient1 and all hands are empty.']
+[info][subgoal_1][barman] task 20 takes 0.4 sec, found a plan with cost 4.0
+planner successful
+validating
+[info][subgoal_2][barman] task 20 takes 0.4 sec, found a plan with cost 4.0
+planner successful
+validating
+[info][multiagent main goal][barman] task 20 takes 20.26 sec, found a plan with cost 139.0
+TASK: barman - 100 - 20
+143.0 True
+dp planning time 7.305126667022705
+SUCCESS: barman: task 20: llm_multi 143.0: single_agent 145.0
