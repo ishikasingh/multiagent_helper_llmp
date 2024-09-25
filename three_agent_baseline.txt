@@ -1,0 +1,234 @@
+Processing result: FAILURE: blocksworld: task 1: llm_multi 7.0: single_agent 6.0
+FAILURE: blocksworld: task 1: llm_multi 7.0: single_agent 6.0
+Processing result: FAILURE: blocksworld: task 2: llm_multi 7.0: single_agent 6.0
+FAILURE: blocksworld: task 2: llm_multi 7.0: single_agent 6.0
+Processing result: FAILURE: blocksworld: task 3: llm_multi 6.0: single_agent 6.0
+FAILURE: blocksworld: task 3: llm_multi 6.0: single_agent 6.0
+Processing result: FAILURE: blocksworld: task 4: llm_multi 15.0: single_agent 12.0
+FAILURE: blocksworld: task 4: llm_multi 15.0: single_agent 12.0
+Processing result: SUCCESS: blocksworld: task 5: llm_multi 5.0: single_agent 8.0
+Domain: blocksworld, Index: 1
+Incrementing domain_counts[0] for domain blocksworld
+SUCCESS: blocksworld: task 5: llm_multi 5.0: single_agent 8.0
+Processing result: FAILURE: blocksworld: task 6: llm_multi 13.0: single_agent 12.0
+FAILURE: blocksworld: task 6: llm_multi 13.0: single_agent 12.0
+Processing result: ERROR:blocksworld: task 7: Unable to parse costs
+ERROR:blocksworld: task 7: Unable to parse costs
+Processing result: SUCCESS: blocksworld: task 8: llm_multi 12.0: single_agent 14.0
+Domain: blocksworld, Index: 1
+Incrementing domain_counts[0] for domain blocksworld
+SUCCESS: blocksworld: task 8: llm_multi 12.0: single_agent 14.0
+Processing result: FAILURE: blocksworld: task 9: llm_multi 22.0: single_agent 14.0
+FAILURE: blocksworld: task 9: llm_multi 22.0: single_agent 14.0
+Processing result: FAILURE: blocksworld: task 10: llm_multi 18.0: single_agent 18.0
+FAILURE: blocksworld: task 10: llm_multi 18.0: single_agent 18.0
+Processing result: FAILURE: blocksworld: task 11: llm_multi 30: single_agent 22.0
+FAILURE: blocksworld: task 11: llm_multi 30: single_agent 22.0
+Processing result: SUCCESS: blocksworld: task 12: llm_multi 18.0: single_agent 20.0
+Domain: blocksworld, Index: 1
+Incrementing domain_counts[0] for domain blocksworld
+SUCCESS: blocksworld: task 12: llm_multi 18.0: single_agent 20.0
+Processing result: FAILURE: blocksworld: task 13: llm_multi 33.0: single_agent 26.0
+FAILURE: blocksworld: task 13: llm_multi 33.0: single_agent 26.0
+Processing result: FAILURE: blocksworld: task 14: llm_multi 31.0: single_agent 22.0
+FAILURE: blocksworld: task 14: llm_multi 31.0: single_agent 22.0
+Processing result: FAILURE: blocksworld: task 15: llm_multi 28.0: single_agent 26.0
+FAILURE: blocksworld: task 15: llm_multi 28.0: single_agent 26.0
+Processing result: SUCCESS: blocksworld: task 16: llm_multi 22.0: single_agent 28.0
+Domain: blocksworld, Index: 1
+Incrementing domain_counts[0] for domain blocksworld
+SUCCESS: blocksworld: task 16: llm_multi 22.0: single_agent 28.0
+Processing result: SUCCESS: blocksworld: task 17: llm_multi 21.0: single_agent 22.0
+Domain: blocksworld, Index: 1
+Incrementing domain_counts[0] for domain blocksworld
+SUCCESS: blocksworld: task 17: llm_multi 21.0: single_agent 22.0
+Processing result: FAILURE: blocksworld: task 18: llm_multi 37.0: single_agent 30.0
+FAILURE: blocksworld: task 18: llm_multi 37.0: single_agent 30.0
+Processing result: FAILURE: blocksworld: task 19: llm_multi 26.0: single_agent 24.0
+FAILURE: blocksworld: task 19: llm_multi 26.0: single_agent 24.0
+Processing result: SUCCESS: blocksworld: task 20: llm_multi 29.0: single_agent 30.0
+Domain: blocksworld, Index: 1
+Incrementing domain_counts[0] for domain blocksworld
+SUCCESS: blocksworld: task 20: llm_multi 29.0: single_agent 30.0
+Processing result: FAILURE: barman: task 1: llm_multi 39.0: single_agent 36.0
+FAILURE: barman: task 1: llm_multi 39.0: single_agent 36.0
+Processing result: FAILURE: barman: task 2: llm_multi 41: single_agent 36.0
+FAILURE: barman: task 2: llm_multi 41: single_agent 36.0
+Processing result: FAILURE: barman: task 3: llm_multi 39.0: single_agent 36.0
+FAILURE: barman: task 3: llm_multi 39.0: single_agent 36.0
+Processing result: FAILURE: barman: task 4: llm_multi 39.0: single_agent 36.0
+FAILURE: barman: task 4: llm_multi 39.0: single_agent 36.0
+Processing result: FAILURE: barman: task 5: llm_multi 53.0: single_agent 49.0
+FAILURE: barman: task 5: llm_multi 53.0: single_agent 49.0
+Processing result: FAILURE: barman: task 6: llm_multi 53.0: single_agent 49.0
+FAILURE: barman: task 6: llm_multi 53.0: single_agent 49.0
+Processing result: SUCCESS: barman: task 7: llm_multi 50.0: single_agent 51.0
+Domain: barman, Index: 2
+Incrementing domain_counts[1] for domain barman
+SUCCESS: barman: task 7: llm_multi 50.0: single_agent 51.0
+Processing result: FAILURE: barman: task 8: llm_multi 50.0: single_agent 50.0
+FAILURE: barman: task 8: llm_multi 50.0: single_agent 50.0
+Processing result: SUCCESS: barman: task 9: llm_multi 63.0: single_agent 65.0
+Domain: barman, Index: 2
+Incrementing domain_counts[1] for domain barman
+SUCCESS: barman: task 9: llm_multi 63.0: single_agent 65.0
+Processing result: SUCCESS: barman: task 10: llm_multi 63.0: single_agent 65.0
+Domain: barman, Index: 2
+Incrementing domain_counts[1] for domain barman
+SUCCESS: barman: task 10: llm_multi 63.0: single_agent 65.0
+Processing result: SUCCESS: barman: task 11: llm_multi 64.0: single_agent 65.0
+Domain: barman, Index: 2
+Incrementing domain_counts[1] for domain barman
+SUCCESS: barman: task 11: llm_multi 64.0: single_agent 65.0
+Processing result: SUCCESS: barman: task 12: llm_multi 63.0: single_agent 65.0
+Domain: barman, Index: 2
+Incrementing domain_counts[1] for domain barman
+SUCCESS: barman: task 12: llm_multi 63.0: single_agent 65.0
+Processing result: SUCCESS: barman: task 13: llm_multi 81.0: single_agent 107.0
+Domain: barman, Index: 2
+Incrementing domain_counts[1] for domain barman
+SUCCESS: barman: task 13: llm_multi 81.0: single_agent 107.0
+Processing result: ERROR:barman: task 14: Unable to parse costs
+ERROR:barman: task 14: Unable to parse costs
+Processing result: FAILURE: barman: task 15: llm_multi 107.0: single_agent 106.0
+FAILURE: barman: task 15: llm_multi 107.0: single_agent 106.0
+Processing result: SUCCESS: barman: task 16: llm_multi 86.0: single_agent 115.0
+Domain: barman, Index: 2
+Incrementing domain_counts[1] for domain barman
+SUCCESS: barman: task 16: llm_multi 86.0: single_agent 115.0
+Processing result: ERROR:barman: task 17: Unable to parse costs
+ERROR:barman: task 17: Unable to parse costs
+Processing result: ERROR:barman: task 18: Unable to parse costs
+ERROR:barman: task 18: Unable to parse costs
+Processing result: SUCCESS: barman: task 19: llm_multi 129.0: single_agent 134.0
+Domain: barman, Index: 2
+Incrementing domain_counts[1] for domain barman
+SUCCESS: barman: task 19: llm_multi 129.0: single_agent 134.0
+Processing result: SUCCESS: barman: task 20: llm_multi 125.0: single_agent 145.0
+Domain: barman, Index: 2
+Incrementing domain_counts[1] for domain barman
+SUCCESS: barman: task 20: llm_multi 125.0: single_agent 145.0
+Processing result: SUCCESS: grippers: task 1: llm_multi 3.0: single_agent 5.0
+Domain: grippers, Index: 3
+Incrementing domain_counts[2] for domain grippers
+SUCCESS: grippers: task 1: llm_multi 3.0: single_agent 5.0
+Processing result: SUCCESS: grippers: task 2: llm_multi 7.0: single_agent 9.0
+Domain: grippers, Index: 3
+Incrementing domain_counts[2] for domain grippers
+SUCCESS: grippers: task 2: llm_multi 7.0: single_agent 9.0
+Processing result: SUCCESS: grippers: task 3: llm_multi 3.0: single_agent 6.0
+Domain: grippers, Index: 3
+Incrementing domain_counts[2] for domain grippers
+SUCCESS: grippers: task 3: llm_multi 3.0: single_agent 6.0
+Processing result: FAILURE: grippers: task 4: llm_multi 4: single_agent 4.0
+FAILURE: grippers: task 4: llm_multi 4: single_agent 4.0
+Processing result: FAILURE: grippers: task 5: llm_multi 4: single_agent 4.0
+FAILURE: grippers: task 5: llm_multi 4: single_agent 4.0
+Processing result: FAILURE: grippers: task 6: llm_multi 4: single_agent 4.0
+FAILURE: grippers: task 6: llm_multi 4: single_agent 4.0
+Processing result: SUCCESS: grippers: task 7: llm_multi 4.0: single_agent 8.0
+Domain: grippers, Index: 3
+Incrementing domain_counts[2] for domain grippers
+SUCCESS: grippers: task 7: llm_multi 4.0: single_agent 8.0
+Processing result: SUCCESS: grippers: task 8: llm_multi 5.0: single_agent 11.0
+Domain: grippers, Index: 3
+Incrementing domain_counts[2] for domain grippers
+SUCCESS: grippers: task 8: llm_multi 5.0: single_agent 11.0
+Processing result: SUCCESS: grippers: task 9: llm_multi 13.0: single_agent 17.0
+Domain: grippers, Index: 3
+Incrementing domain_counts[2] for domain grippers
+SUCCESS: grippers: task 9: llm_multi 13.0: single_agent 17.0
+Processing result: SUCCESS: grippers: task 10: llm_multi 4.0: single_agent 10.0
+Domain: grippers, Index: 3
+Incrementing domain_counts[2] for domain grippers
+SUCCESS: grippers: task 10: llm_multi 4.0: single_agent 10.0
+Processing result: FAILURE: grippers: task 11: llm_multi 3: single_agent 3.0
+FAILURE: grippers: task 11: llm_multi 3: single_agent 3.0
+Processing result: SUCCESS: grippers: task 12: llm_multi 4.0: single_agent 9.0
+Domain: grippers, Index: 3
+Incrementing domain_counts[2] for domain grippers
+SUCCESS: grippers: task 12: llm_multi 4.0: single_agent 9.0
+Processing result: SUCCESS: grippers: task 13: llm_multi 4.0: single_agent 6.0
+Domain: grippers, Index: 3
+Incrementing domain_counts[2] for domain grippers
+SUCCESS: grippers: task 13: llm_multi 4.0: single_agent 6.0
+Processing result: SUCCESS: grippers: task 14: llm_multi 4.0: single_agent 6.0
+Domain: grippers, Index: 3
+Incrementing domain_counts[2] for domain grippers
+SUCCESS: grippers: task 14: llm_multi 4.0: single_agent 6.0
+Processing result: SUCCESS: grippers: task 15: llm_multi 4.0: single_agent 10.0
+Domain: grippers, Index: 3
+Incrementing domain_counts[2] for domain grippers
+SUCCESS: grippers: task 15: llm_multi 4.0: single_agent 10.0
+Processing result: SUCCESS: grippers: task 16: llm_multi 15.0: single_agent 19.0
+Domain: grippers, Index: 3
+Incrementing domain_counts[2] for domain grippers
+SUCCESS: grippers: task 16: llm_multi 15.0: single_agent 19.0
+Processing result: SUCCESS: grippers: task 17: llm_multi 4.0: single_agent 8.0
+Domain: grippers, Index: 3
+Incrementing domain_counts[2] for domain grippers
+SUCCESS: grippers: task 17: llm_multi 4.0: single_agent 8.0
+Processing result: SUCCESS: grippers: task 18: llm_multi 4.0: single_agent 9.0
+Domain: grippers, Index: 3
+Incrementing domain_counts[2] for domain grippers
+SUCCESS: grippers: task 18: llm_multi 4.0: single_agent 9.0
+Processing result: SUCCESS: grippers: task 19: llm_multi 12.0: single_agent 17.0
+Domain: grippers, Index: 3
+Incrementing domain_counts[2] for domain grippers
+SUCCESS: grippers: task 19: llm_multi 12.0: single_agent 17.0
+Processing result: SUCCESS: grippers: task 20: llm_multi 4.0: single_agent 7.0
+Domain: grippers, Index: 3
+Incrementing domain_counts[2] for domain grippers
+SUCCESS: grippers: task 20: llm_multi 4.0: single_agent 7.0
+Processing result: SUCCESS: tyreworld: task 1: llm_multi 10.0: single_agent 13.0
+Domain: tyreworld, Index: 4
+Incrementing domain_counts[3] for domain tyreworld
+SUCCESS: tyreworld: task 1: llm_multi 10.0: single_agent 13.0
+Processing result: SUCCESS: tyreworld: task 2: llm_multi 81.0: single_agent 101.0
+Domain: tyreworld, Index: 4
+Incrementing domain_counts[3] for domain tyreworld
+SUCCESS: tyreworld: task 2: llm_multi 81.0: single_agent 101.0
+Processing result: SUCCESS: tyreworld: task 3: llm_multi 15.0: single_agent 35.0
+Domain: tyreworld, Index: 4
+Incrementing domain_counts[3] for domain tyreworld
+SUCCESS: tyreworld: task 3: llm_multi 15.0: single_agent 35.0
+Processing result: ERROR:tyreworld: task 4: Unable to parse costs
+ERROR:tyreworld: task 4: Unable to parse costs
+Processing result: SUCCESS: tyreworld: task 5: llm_multi 37.0: single_agent 57.0
+Domain: tyreworld, Index: 4
+Incrementing domain_counts[3] for domain tyreworld
+SUCCESS: tyreworld: task 5: llm_multi 37.0: single_agent 57.0
+Processing result: ERROR:tyreworld: task 6: Unable to parse costs
+ERROR:tyreworld: task 6: Unable to parse costs
+Processing result: SUCCESS: tyreworld: task 7: llm_multi 59.0: single_agent 79.0
+Domain: tyreworld, Index: 4
+Incrementing domain_counts[3] for domain tyreworld
+SUCCESS: tyreworld: task 7: llm_multi 59.0: single_agent 79.0
+Processing result: SUCCESS: tyreworld: task 8: llm_multi 68.0: single_agent 90.0
+Domain: tyreworld, Index: 4
+Incrementing domain_counts[3] for domain tyreworld
+SUCCESS: tyreworld: task 8: llm_multi 68.0: single_agent 90.0
+Processing result: ERROR:tyreworld: task 9: Unable to parse costs
+ERROR:tyreworld: task 9: Unable to parse costs
+Processing result: ERROR:tyreworld: task 10: Unable to parse costs
+ERROR:tyreworld: task 10: Unable to parse costs
+Processing result: ERROR:tyreworld: task 11: Unable to parse costs
+ERROR:tyreworld: task 11: Unable to parse costs
+Processing result: ERROR:tyreworld: task 12: Unable to parse costs
+ERROR:tyreworld: task 12: Unable to parse costs
+Processing result: ERROR:tyreworld: task 13: Unable to parse costs
+ERROR:tyreworld: task 13: Unable to parse costs
+Processing result: ERROR:tyreworld: task 14: Unable to parse costs
+ERROR:tyreworld: task 14: Unable to parse costs
+Processing result: ERROR:tyreworld: task 15: Unable to parse costs
+ERROR:tyreworld: task 15: Unable to parse costs
+Processing result: ERROR:tyreworld: task 16: Unable to parse costs
+ERROR:tyreworld: task 16: Unable to parse costs
+Processing result: ERROR:tyreworld: task 17: Unable to parse costs
+ERROR:tyreworld: task 17: Unable to parse costs
+Processing result: ERROR:tyreworld: task 18: Unable to parse costs
+ERROR:tyreworld: task 18: Unable to parse costs
+Processing result: ERROR:tyreworld: task 19: Unable to parse costs
+ERROR:tyreworld: task 19: Unable to parse costs
+Processing result: ERROR:tyreworld: task 20: Unable to parse costs
+ERROR:tyreworld: task 20: Unable to parse costs

@@ -365,7 +365,7 @@ def choose_n_agents(expt_path, args, log_file, max_agents):
     
     # limit for computational purposes
     # Be sure to reason through your thoughts and think about this in the context of a planning domain rather than natural language.
-    prompt_text += f'''The task is: \n {current_scenario.strip()}. \n Return the optimal number of agents. Be sure to clearly explain your reasoning and discuss how you consder critical paths in the main goal.\n'''
+    prompt_text += f'''The task is: \n {current_scenario.strip()}. \n Return the optimal number of agents, which is always greater than 1. Be sure to clearly explain your reasoning and discuss how you consder critical paths in the main goal.\n'''
 
     # print("prompt_text for choosing n agents \n", prompt_text)
 
@@ -377,8 +377,8 @@ def choose_n_agents(expt_path, args, log_file, max_agents):
         num_agents = query(f"Find the optimal number of agents proposed in this existing plan: {num_agents_text}. Respond with only a single number.", system_text=system_text, use_chatgpt=True)
         if num_agents.isdigit():
             num_agents = int(num_agents)
-            if num_agents > max_agents:
-                raise ValueError("Maximum number of agents exceeded")
+            if num_agents > max_agents or num_agents < 2:
+                raise ValueError("invalid number range")
         else:
             raise ValueError("Invalid output")
     except ValueError as e:

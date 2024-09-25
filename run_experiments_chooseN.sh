@@ -2,12 +2,10 @@
 
 verbose=false
 # blocksworld, barman, grippers, termes, tyreworld
-domains=("blocksworld" "barman" "grippers" "tyreworld")  # Add your domains here
-
-tasks=(1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20)  # Subset of tasks to execute
+domains=("blocksworld" "grippers" "tyreworld" "barman")  # Add your domains here
+tasks=(1 5 10 15 20)  # Subset of tasks to execute
 max_jobs=4  # Adjust this based on your system's capabilities
-num_agents=4  # Default number of agents
-run_number=100 # Default run number
+run_number=101 # Default run number
 parallel_execution=false  # Default to sequential execution
 output_file=""  # Initialize output file variable
 
@@ -16,7 +14,6 @@ print_usage() {
     echo "Usage: $0 [-v|--verbose] [-j|--jobs <num_jobs>] [-a|--agents <num_agents>] [-r|--run <run_number>] [-s|--sequential] [-o|--output <output_file>]"
     echo "  -v, --verbose    Enable verbose output"
     echo "  -j, --jobs       Set maximum number of parallel jobs (default: 4)"
-    echo "  -a, --agents     Set number of agents (default: 3)"
     echo "  -r, --run        Set run number (default: 100)"
     echo "  -s, --sequential Run experiments sequentially (default: parallel)"
     echo "  -o, --output     Specify output file (required)"
@@ -73,12 +70,11 @@ run_experiment() {
         verbose_flag="--verbose"
     fi
 
-    output=$(python helper_script_n_agents.py \
+    output=$(python helper_script_choose_n.py \
         --run "$run_number" \
         --domain "$domain" \
         --time-limit 20 \
         --task_id "$task_id" \
-        --num_agents "$num_agents" \
         )
     
     if $verbose; then
@@ -104,41 +100,21 @@ run_experiment() {
 declare -a domain_counts
 total_count=0;
 
-# Initialize domain_counts array with zeros
-domain_counts=()
-for ((i=0; i<${#domains[@]}; i++)); do
-    domain_counts[i]=0
-done
-
 # Function to process results
 process_result() {
     local line=$1
     IFS=':' read -r status domain task_id final_cost single_agent_cost <<< "$line"
-
-    # Trim leading/trailing whitespace from the domain name
-    domain=$(echo "$domain" | xargs)
-
-    # echo "Processing result: $line"  # Debug output
-
+    
     if [ "$status" == "SUCCESS" ]; then
         ((total_count++))
-        # Get the index of the domain in the domains array
         index=$(printf '%s\n' "${domains[@]}" | grep -n "^${domain}$" | cut -d: -f1)
-        # echo "Domain: $domain, Index: $index"  # Debug output
-        
-        if [ -n "$index" ]; then  # Check if index was found
-            index=$((index-1))  # Convert to 0-based index
-            # echo "Incrementing domain_counts[$index] for domain $domain"  # Debug output
-            ((domain_counts[index]++))  # Increment the correct domain count
-        else
-            # echo "Warning: Domain $domain not found in the domains array!"  # Debug output
-        fi
+        ((index--))
+        ((domain_counts[index]++))
+        echo "Task $task_id ($domain): Success ($final_cost < $single_agent_cost)"
+    else
+        echo "Task $task_id ($domain): Failure ($final_cost >= $single_agent_cost)"
     fi
-
-    echo "$line"
 }
-
-
 
 # Run experiments
 
@@ -153,7 +129,7 @@ else
         for domain in "${domains[@]}"; do
             for task_id in "${tasks[@]}"; do
                 result=$(run_experiment "$domain" "$task_id")
-                process_result "$result"
+                echo "$result"
             done
         done
     } > "$output_file"
@@ -161,7 +137,6 @@ fi
 
 echo "Results have been written to $output_file"
 
-{
 # Print summary
 echo -e "\nSummary:"
 echo "--------"
@@ -175,4 +150,4 @@ echo -e "\nTotal number of successful experiments across all domains: $total_cou
 echo "Number of agents used: $num_agents"
 echo "Run number: $run_number"
 echo "Execution mode: $(if $parallel_execution; then echo "Parallel"; else echo "Sequential"; fi)"
-} | tee -a "$output_file"
+echo "Output file: $output_file"
