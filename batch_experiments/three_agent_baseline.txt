@@ -1,0 +1,92 @@
+FAILURE: blocksworld: task 1: llm_multi 7.0: single_agent 6.0
+FAILURE: blocksworld: task 2: llm_multi 7.0: single_agent 6.0
+FAILURE: blocksworld: task 3: llm_multi 6.0: single_agent 6.0
+SUCCESS: blocksworld: task 4: llm_multi 11.0: single_agent 12.0
+SUCCESS: blocksworld: task 5: llm_multi 6.0: single_agent 8.0
+FAILURE: blocksworld: task 6: llm_multi 13.0: single_agent 12.0
+SUCCESS: blocksworld: task 7: llm_multi 7: single_agent 8.0
+FAILURE: blocksworld: task 8: llm_multi 15.0: single_agent 14.0
+FAILURE: blocksworld: task 9: llm_multi 22.0: single_agent 14.0
+FAILURE: blocksworld: task 10: llm_multi 18.0: single_agent 18.0
+SUCCESS: blocksworld: task 11: llm_multi 18.0: single_agent 22.0
+FAILURE: blocksworld: task 12: llm_multi 22.0: single_agent 20.0
+SUCCESS: blocksworld: task 13: llm_multi 25.0: single_agent 26.0
+FAILURE: blocksworld: task 14: llm_multi 31.0: single_agent 22.0
+FAILURE: blocksworld: task 15: llm_multi 28.0: single_agent 26.0
+SUCCESS: blocksworld: task 16: llm_multi 27.0: single_agent 28.0
+FAILURE: blocksworld: task 17: llm_multi 23.0: single_agent 22.0
+FAILURE: blocksworld: task 18: llm_multi 37.0: single_agent 30.0
+FAILURE: blocksworld: task 19: llm_multi 26.0: single_agent 24.0
+SUCCESS: blocksworld: task 20: llm_multi 29.0: single_agent 30.0
+FAILURE: barman: task 1: llm_multi 39.0: single_agent 36.0
+FAILURE: barman: task 2: llm_multi 41: single_agent 36.0
+FAILURE: barman: task 3: llm_multi 39.0: single_agent 36.0
+FAILURE: barman: task 4: llm_multi 39.0: single_agent 36.0
+FAILURE: barman: task 5: llm_multi 53.0: single_agent 49.0
+FAILURE: barman: task 6: llm_multi 53.0: single_agent 49.0
+SUCCESS: barman: task 7: llm_multi 50.0: single_agent 51.0
+FAILURE: barman: task 8: llm_multi 50.0: single_agent 50.0
+FAILURE: barman: task 9: llm_multi 65.0: single_agent 65.0
+SUCCESS: barman: task 10: llm_multi 63.0: single_agent 65.0
+FAILURE: barman: task 11: llm_multi 66.0: single_agent 65.0
+SUCCESS: barman: task 12: llm_multi 63.0: single_agent 65.0
+SUCCESS: barman: task 13: llm_multi 81.0: single_agent 107.0
+SUCCESS: barman: task 14: llm_multi 108.0: single_agent 113.0
+FAILURE: barman: task 15: llm_multi 107.0: single_agent 106.0
+SUCCESS: barman: task 16: llm_multi 85.0: single_agent 115.0
+ERROR:barman: task 17: Unable to parse costs
+SUCCESS: barman: task 18: llm_multi 90.0: single_agent 117.0
+SUCCESS: barman: task 19: llm_multi 128.0: single_agent 134.0
+SUCCESS: barman: task 20: llm_multi 143.0: single_agent 145.0
+SUCCESS: grippers: task 1: llm_multi 3.0: single_agent 5.0
+SUCCESS: grippers: task 2: llm_multi 7.0: single_agent 9.0
+SUCCESS: grippers: task 3: llm_multi 3.0: single_agent 6.0
+FAILURE: grippers: task 4: llm_multi 4: single_agent 4.0
+FAILURE: grippers: task 5: llm_multi 4: single_agent 4.0
+ERROR:grippers: task 6: Unable to parse costs
+SUCCESS: grippers: task 7: llm_multi 4.0: single_agent 8.0
+SUCCESS: grippers: task 8: llm_multi 5.0: single_agent 11.0
+SUCCESS: grippers: task 9: llm_multi 13.0: single_agent 17.0
+SUCCESS: grippers: task 10: llm_multi 4.0: single_agent 10.0
+FAILURE: grippers: task 11: llm_multi 3: single_agent 3.0
+SUCCESS: grippers: task 12: llm_multi 4.0: single_agent 9.0
+SUCCESS: grippers: task 13: llm_multi 4.0: single_agent 6.0
+SUCCESS: grippers: task 14: llm_multi 4.0: single_agent 6.0
+SUCCESS: grippers: task 15: llm_multi 4.0: single_agent 10.0
+SUCCESS: grippers: task 16: llm_multi 15.0: single_agent 19.0
+SUCCESS: grippers: task 17: llm_multi 4.0: single_agent 8.0
+SUCCESS: grippers: task 18: llm_multi 4.0: single_agent 9.0
+SUCCESS: grippers: task 19: llm_multi 12.0: single_agent 17.0
+SUCCESS: grippers: task 20: llm_multi 4.0: single_agent 7.0
+SUCCESS: tyreworld: task 1: llm_multi 10.0: single_agent 13.0
+SUCCESS: tyreworld: task 2: llm_multi 81.0: single_agent 101.0
+ERROR:tyreworld: task 3: Unable to parse costs
+ERROR:tyreworld: task 4: Unable to parse costs
+ERROR:tyreworld: task 5: Unable to parse costs
+ERROR:tyreworld: task 6: Unable to parse costs
+SUCCESS: tyreworld: task 7: llm_multi 57.0: single_agent 79.0
+SUCCESS: tyreworld: task 8: llm_multi 70.0: single_agent 90.0
+SUCCESS: tyreworld: task 9: llm_multi 81.0: single_agent 101.0
+ERROR:tyreworld: task 10: Unable to parse costs
+ERROR:tyreworld: task 11: Unable to parse costs
+SUCCESS: tyreworld: task 12: llm_multi 114.0: single_agent 134.0
+SUCCESS: tyreworld: task 13: llm_multi 125.0: single_agent 145.0
+SUCCESS: tyreworld: task 14: llm_multi 136.0: single_agent 156.0
+SUCCESS: tyreworld: task 15: llm_multi 147.0: single_agent 167.0
+ERROR:tyreworld: task 16: Unable to parse costs
+ERROR:tyreworld: task 17: Unable to parse costs
+ERROR:tyreworld: task 18: Unable to parse costs
+ERROR:tyreworld: task 19: Unable to parse costs
+ERROR:tyreworld: task 20: Unable to parse costs
+
+Summary:
+--------
+blocksworld: 7 successful out of 20
+barman: 9 successful out of 20
+grippers: 16 successful out of 20
+tyreworld: 9 successful out of 20
+
+Total number of successful experiments across all domains: 41 out of 80
+Number of agents used: 3
+Run number: 150
+Execution mode: Sequential

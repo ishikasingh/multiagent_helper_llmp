@@ -3,7 +3,7 @@
 verbose=false
 # blocksworld, barman, grippers, termes, tyreworld
 domains=("blocksworld" "grippers" "tyreworld" "barman")  # Add your domains here
-tasks=(1 5 10 15 20)  # Subset of tasks to execute
+tasks=(1 2 5 7 10 12 15 17 20)  # Subset of tasks to execute
 max_jobs=4  # Adjust this based on your system's capabilities
 run_number=101 # Default run number
 parallel_execution=false  # Default to sequential execution

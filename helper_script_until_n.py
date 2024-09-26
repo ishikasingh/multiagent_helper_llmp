@@ -27,7 +27,7 @@ client = OpenAI()
 
 FAST_DOWNWARD_ALIAS = "lama"
 
-DOMAINS = [ ## .nl not changed for multi excpet gripper, since planner doesnt use it
+DOMAINS = [ ## .nl not changed for multi except gripper, since planner doesnt use it
     "barman",
     "blocksworld",
     # "floortile",
@@ -141,15 +141,17 @@ def planner(expt_path, args, subgoal_idx=-1, time_limit=200):
     with open(output_path, "r") as f:
         output = f.read()
     
-    if(output.find('Actual search time') == -1):
-        print("reattempting planner")
-        os.system(f"python ./downward/fast-downward.py --alias {FAST_DOWNWARD_ALIAS} " + \
-              f"--search-time-limit {args.time_limit} --plan-file {plan_file_name} " + \
-              f"--sas-file {sas_file_name} " + \
-              f"{domain_pddl_file} {task_pddl_file_name} > {output_path}")
-        with open(output_path, "r") as f:
-            output = f.read()
+    if output.find('Actual search time') == -1 or output.find('Planner time: ') == -1 or output.find('Plan cost: ') == -1:
+        print("planner failed")
+        return -1, -1, -1, -1, -1
+        # os.system(f"python ./downward/fast-downward.py --alias {FAST_DOWNWARD_ALIAS} " + \
+        #       f"--search-time-limit {args.time_limit} --plan-file {plan_file_name} " + \
+        #       f"--sas-file {sas_file_name} " + \
+        #       f"{domain_pddl_file} {task_pddl_file_name} > {output_path}")
+        # with open(output_path, "r") as f:
+        #     output = f.read()
         
+    print("generating outputs")
     planner_search_time_1st_plan = float(output.split('Actual search time: ')[1].split('\n')[0].strip()[:-1])
     planner_total_time = float(output.split('Planner time: ')[1].split('\n')[0].strip()[:-1])
     planner_total_time_opt = float(output.split('Actual search time: ')[-1].split('\n')[0].strip()[:-1])
@@ -185,7 +187,7 @@ def validator(expt_path, args, subgoal_idx=-1):
     output_file = open(output_path, "w")
 
     domain_pddl_file =  f'./domains/{args.domain}/domain.pddl'
-
+    
     if subgoal_idx >= 0:
         task_pddl_file =  f"./{expt_path}/p{args.task_id}_{subgoal_idx}.pddl"
         # print("validating and getting plan for subgoal", subgoal_idx)
@@ -205,6 +207,11 @@ def validator(expt_path, args, subgoal_idx=-1):
             if cost < best_cost:
                 best_cost = cost
                 plan_file = fn
+    # no file found            
+    if best_cost == 10e6:
+        with open(plan_path[:-1]+"1", "w") as plan_file:
+            print("failed planner, writing empty plan")
+            plan_file.write("; cost = 0 (unit cost)")
     # print("plan_file", plan_file)
     result = subprocess.run(["./downward/validate", "-v", domain_pddl_file, task_pddl_file, plan_file], stdout=subprocess.PIPE)
     #print("validated")
@@ -327,7 +334,7 @@ def get_pddl_goal(expt_path, args, helper_subgoal, log_file):
         # import ipdb; ipdb.set_trace()
         # remove undefined goal conditions using domain predicate list
         if args.domain == 'tyreworld':
-            pddl_goal = pddl_goal.replace('(empty hands)', '').replace('(empty-hand)', '').replace('(empty-hands)', '').replace('empty hand', '')
+            pddl_goal = pddl_goal.replace('(empty hands)', '').replace('(empty-hand)', '').replace('(empty-hands)', '')
         with open(log_file, 'a+') as f:
             f.write(f"\n\n{pddl_goal}")
         with open(pddl_problem_filename, 'w') as f:
@@ -341,13 +348,10 @@ def get_pddl_goal(expt_path, args, helper_subgoal, log_file):
 # deleted get_pddl_expert , may need to restore this for benchmarking
 # deleted get_helper_subgoal > asks for pddl directly from helper, instead of breaking it down
 
-def get_helper_subgoal_without_plan(expt_path, args, log_file):
+def get_helper_subgoal_without_plan(expt_path, args, log_file,  max_goals):
 
     system_text = '''Main agent: agent0
-                    Helper agent: ''' 
-
-    for i in range(1,args.num_agents):
-        system_text += f' agent{i}, '
+                    Helper agents: agent1, agent2, up to agent n''' 
     
     system_text += '\n'
 
@@ -415,9 +419,11 @@ def get_helper_subgoal_without_plan(expt_path, args, log_file):
     else:
         current_prompt_text = '\n\nNow we have another new problem defined in this domain for which we don\'t have access to the single agent plan:\n'
     current_prompt_text += f'{current_scenario.strip()}\n\n'
-    current_prompt_text += f'Return only one clearly stated subgoal condition for one and only one agent without explanation or steps. A possible subgoal looking at how the domain works based on the plan example provided for another task in this domain could be - \n'
+    prompt_text += '''At each stage, determine if it is optimal to generate more goals— consider whether the expensive addition of another agent is inefficient and increases plan length.
+     Goals should always be parallelizable and reduce execution length. If not,respond with \"NONE\". Otherwise, return only one clearly stated subgoal condition for one and only one agent without explanation or steps.\n'''
 
     prompt_text = prompt_text + current_prompt_text
+    # print(prompt_text)
     # helper_subgoal = 'Fetch the intact tyre from the boot, inflate the intact tyre, and put on the intact tyre on the hub.'
     # print("\n prompt_text for helper_sg w/o plan \n",prompt_text)
     # import ipdb; ipdb.set_trace()
@@ -425,13 +431,17 @@ def get_helper_subgoal_without_plan(expt_path, args, log_file):
     start = time.time()
     all_subgoals = []
     #helper_subgoal = query(prompt_text, system_text=system_text, use_chatgpt=True)
-    for i in range(1,args.num_agents):
-        prompt_text += f"\n agent{i} subgoal:"
-        #print(f"querying for agent {i}")
+    goal_count = 0
+    while goal_count < max_goals:
+        prompt_text += f"\n agent{goal_count + 1} subgoal:"
         helper_subgoal = query(prompt_text, system_text=system_text, use_chatgpt=True)
-        #print(helper_subgoal, "\n")
+        print(helper_subgoal,"\n")
+        if 'NONE' in helper_subgoal:
+            break
         prompt_text += helper_subgoal
         all_subgoals.append(helper_subgoal)
+        goal_count += 1
+    print(f"breaking after {goal_count} goals")
     end = time.time()-start
 
     #print(prompt_text)
@@ -594,7 +604,7 @@ if __name__ == "__main__":
     parser.add_argument('--experiment_folder', type=str, default='experiments_multiagent_help')
     parser.add_argument('--human_eval', type=bool, default=False)
     parser.add_argument('--run', type=int, default=1)
-    parser.add_argument('--num_agents', type=int, default=2)
+    parser.add_argument('--max_agents', type=int, default=6)
     args = parser.parse_args()
 
     if not os.path.exists(args.experiment_folder):
@@ -682,7 +692,8 @@ if __name__ == "__main__":
         # helper_subgoal, t1 = get_helper_subgoal_without_plan(path, args, log_file)
         # _, t2 = get_pddl_goal(path, args, helper_subgoal, log_file)
         try:
-            subgoal_array, t1 = get_helper_subgoal_without_plan(path, args, log_file)
+            subgoal_array, t1 = get_helper_subgoal_without_plan(path, args, log_file, max_goals=args.max_agents)
+            args.num_agents = len(subgoal_array) + 1
             # add check for validity of all goals
             print(subgoal_array)
             # # helper_subgoal = "xyz"
@@ -696,7 +707,7 @@ if __name__ == "__main__":
         # edited init starts at  0 for original, then 1 for post-first subgoal, etc ...
         # subgoal 1 used original pddl domain, then subgoal 2 uses edited_init_1, 3 uses edited_init_2, etc ...
         for i in range(1,args.num_agents):
-            # print(f"agent{i}")
+            print(f"agent{i}")
             try:
                 planner_total_time, planner_total_time_opt, best_cost, planner_search_time_1st_plan, first_plan_cost = planner(path, args, subgoal_idx=i)
                 print("planner successful")

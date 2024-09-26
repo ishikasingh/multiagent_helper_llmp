@@ -327,7 +327,7 @@ def get_pddl_goal(expt_path, args, helper_subgoal, log_file):
         # import ipdb; ipdb.set_trace()
         # remove undefined goal conditions using domain predicate list
         if args.domain == 'tyreworld':
-            pddl_goal = pddl_goal.replace('(empty hands)', '').replace('(empty-hand)', '').replace('(empty-hands)', '')
+            pddl_goal = pddl_goal.replace('(empty hands)', '').replace('(empty-hand)', '').replace('(empty-hands)', '').replace('empty hand', '')
         with open(log_file, 'a+') as f:
             f.write(f"\n\n{pddl_goal}")
         with open(pddl_problem_filename, 'w') as f:
