@@ -702,7 +702,7 @@ if __name__ == "__main__":
         # normal planning and same for multi-agent planning
         try:
             # hard coded time as 10? Shouldn't this be args.time_limit, ask Ishika
-            planner_total_time, planner_total_time_opt, best_cost, planner_search_time_1st_plan, first_plan_cost = planner(path, args, time_limit=10)
+            planner_total_time, planner_total_time_opt, best_cost, planner_search_time_1st_plan, first_plan_cost = planner(path, args)
             singleagent_planning_time.append(planner_total_time)
             singleagent_planning_time_opt.append(planner_total_time_opt)
             singleagent_cost.append(best_cost)
@@ -737,6 +737,8 @@ if __name__ == "__main__":
             # print(subgoal_array)
             # # helper_subgoal = "xyz"
             goal_files, t2 = get_pddl_goal(path, args, subgoal_array, log_file)
+            LLM_text_sg_time.append(t1)
+            LLM_pddl_sg_time.append(t2)
             # print(goal_files)
 
         except Exception as e:
@@ -752,8 +754,6 @@ if __name__ == "__main__":
                 print("planner successful")
                 success = validator(path, args, subgoal_idx=i)
 
-                LLM_text_sg_time.append(t1)
-                LLM_pddl_sg_time.append(t2)
                 multiagent_helper_planning_time.append(planner_total_time)
                 multiagent_helper_planning_time_opt.append(planner_total_time_opt)
                 multiagent_helper_cost.append(best_cost)
@@ -809,6 +809,8 @@ if __name__ == "__main__":
             multiagent_main_cost_1st.append(first_plan_cost)
             multiagent_main_success.append(success)
             overall_plan_length.append(plan_length)
+            print(f"[results][single agent] | planning time: {singleagent_planning_time[0]} | cost: {singleagent_cost[0]}")
+            print(f"[results][multiagent] | planning time: {LLM_pddl_sg_time[0]+LLM_text_sg_time[0]+np.sum(multiagent_helper_planning_time)+multiagent_main_planning_time[0]} | cost: {float(overall_plan_length[0])} | agents: {args.num_agents} | optimization time {dp_end - dp_start}")
         except Exception as e:
             multiagent_main_planning_time.append(-1)
             multiagent_main_planning_time_opt.append(-1)
