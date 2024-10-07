@@ -770,8 +770,8 @@ if __name__ == "__main__":
             multiagent_main_cost_1st.append(first_plan_cost)
             multiagent_main_success.append(success)
             overall_plan_length.append(plan_length)
-            print(f"[results][single agent] | planning time: {singleagent_planning_time[0]} | cost: {singleagent_cost[0]}")
-            print(f"[results][multiagent] | planning time: {LLM_pddl_sg_time[0]+LLM_text_sg_time[0]+np.sum(multiagent_helper_planning_time)+multiagent_main_planning_time[0]} | cost: {float(overall_plan_length[0])} | agents: {args.num_agents} | optimization time {dp_end - dp_start}")
+            print(f"[results][single agent][{args.domain}] | planning time: {singleagent_planning_time[0]} | cost: {singleagent_cost[0]}")
+            print(f"[results][multiagent][{args.domain}] | planning time: {LLM_pddl_sg_time[0]+LLM_text_sg_time[0]+np.sum(multiagent_helper_planning_time)+multiagent_main_planning_time[0]} | cost: {float(overall_plan_length[0])} | agents: {args.num_agents} | optimization time {dp_end - dp_start}")
         except Exception as e:
             multiagent_main_planning_time.append(-1)
             multiagent_main_planning_time_opt.append(-1)

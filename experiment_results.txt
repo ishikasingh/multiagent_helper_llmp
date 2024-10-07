@@ -1,0 +1,34 @@
+[info][singleagent][blocksworld] task 01 takes 0.12 sec, found a plan with cost 6.0
+['b2 is clear and on the table.', 'b3 is clear and on the table.']
+[info][subgoal_1][blocksworld] task 01 takes 0.15 sec, found a plan with cost 2.0
+planner successful
+validating
+[info][subgoal_2][blocksworld] task 01 takes 0.14 sec, found a plan with cost 2.0
+planner successful
+validating
+[info][multiagent main goal][blocksworld] task 01 takes 0.13 sec, found a plan with cost 4.0
+starting dp
+TASK: blocksworld - 1000 - 01
+7.0 True
+dp planning time 0.24892258644104004
+[results][blocksworld][01]
+[single_agent][planning time: 0.12][cost: 6.0]
+[multi_agent]][planning_time: 4.289012355804443][cost: 7.0][agents: 3][optimization time 0.24892258644104004]
+----------------------------------------
+[info][singleagent][blocksworld] task 02 takes 0.12 sec, found a plan with cost 6.0
+['b1 is on the table and all hands are empty.', 'b3 is on the table and all hands are empty.']
+[info][subgoal_1][blocksworld] task 02 takes 0.14 sec, found a plan with cost 2.0
+planner successful
+validating
+[info][subgoal_2][blocksworld] task 02 takes 0.15 sec, found a plan with cost 2.0
+planner successful
+validating
+[info][multiagent main goal][blocksworld] task 02 takes 0.14 sec, found a plan with cost 4.0
+starting dp
+TASK: blocksworld - 1000 - 02
+7.0 True
+dp planning time 0.2226405143737793
+[results][blocksworld][02]
+[single_agent][planning time: 0.12][cost: 6.0]
+[multi_agent]][planning_time: 4.878755502700805][cost: 7.0][agents: 3][optimization time 0.2226405143737793]
+----------------------------------------

@@ -16,3 +16,4 @@ experiments_multiagent_help/
 out.*
 sas*
 .env
+__pycache__
