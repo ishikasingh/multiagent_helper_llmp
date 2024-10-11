@@ -1,0 +1,64 @@
+Domain: barman
+Success rate: 30.00% (3/10)
+Results:
+  [results][barman][01]
+  [single_agent][planning time: 100.14][cost: 36.0]
+  [multi_agent][planning_time: 83.14120214462281][cost: 34.0][agents: 5][optimization time 12.936705589294434]
+  Success: Yes
+
+  [results][barman][02]
+  [single_agent][planning time: 61.49][cost: 36.0]
+  [multi_agent][planning_time: 131.6596203994751][cost: 36.0][agents: 5][optimization time 45.38492012023926]
+  Success: No
+
+  [results][barman][03]
+  [single_agent][planning time: 100.21][cost: 36.0]
+  [multi_agent][planning_time: 93.68059273719788][cost: 48.0][agents: 5][optimization time 36.69712519645691]
+  Success: No
+
+  [results][barman][04]
+  [single_agent][planning time: 59.3][cost: 36.0]
+  [multi_agent][planning_time: 77.7622081375122][cost: 49.0][agents: 5][optimization time 33.770397424697876]
+  Success: No
+
+  [results][barman][05]
+  [single_agent][planning time: 100.18][cost: 49.0]
+  [multi_agent][planning_time: 127.77620800971985][cost: 47.0][agents: 5][optimization time 12.031612634658813]
+  Success: Yes
+
+  [results][barman][06]
+  [single_agent][planning time: 100.16][cost: 49.0]
+  [multi_agent][planning_time: 132.8841218852997][cost: 56.0][agents: 5][optimization time 405.3431558609009]
+  Success: No
+
+  [results][barman][07]
+  [single_agent][planning time: 100.15][cost: 51.0]
+  [multi_agent][planning_time: 121.24771906852723][cost: 51.0][agents: 5][optimization time 244.33479928970337]
+  Success: No
+
+  [results][barman][08]
+  [single_agent][planning time: 100.12][cost: 50.0]
+  [multi_agent][planning_time: 129.9714184474945][cost: 63.0][agents: 5][optimization time 356.6233456134796]
+  Success: No
+
+  [results][barman][09]
+  [single_agent][planning time: 100.21][cost: 65.0]
+  [multi_agent][planning_time: 127.58133094787597][cost: 65.0][agents: 5][optimization time 110.74414110183716]
+  Success: No
+
+  [results][barman][10]
+  [single_agent][planning time: 100.17][cost: 65.0]
+  [multi_agent][planning_time: 120.43295468330383][cost: 64.0][agents: 5][optimization time 99.00598978996277]
+  Success: Yes
+
+----------------------------------------
+
+Domain Averages:
+Domain: barman
+  Single Agent:
+    Average Cost: 47.30
+    Average Planning Time: 92.21 sec
+  Multi Agent:
+    Average Cost: 51.30
+    Average Planning Time: 114.61 sec
+

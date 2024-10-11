@@ -1,0 +1,402 @@
+[info][singleagent][barman] task 01 takes 100.16 sec, found a plan with cost 36.0
+['shaker1 contains ingredient2 and all hands are empty.']
+[info][subgoal_1][barman] task 01 takes 0.17 sec, found a plan with cost 4.0
+validating
+validator time 1.8549251556396484
+[info][multiagent main goal][barman] task 01 takes 52.93 sec, found a plan with cost 34.0
+TASK: barman - 2001 - 01
+37.0 True
+[results][barman][01]
+[single_agent][planning time: 100.16][cost: 36.0]
+[multi_agent][planning_time: 56.75114498138428][cost: 37.0][agents: 2][optimization time 1.8428375720977783]
+----------------------------------------
+[info][singleagent][barman] task 02 takes 58.08 sec, found a plan with cost 36.0
+['shaker1 contains ingredient1 and all hands are empty.']
+[info][subgoal_1][barman] task 02 takes 0.17 sec, found a plan with cost 4.0
+validating
+validator time 0.0038678646087646484
+[info][multiagent main goal][barman] task 02 takes 64.18 sec, found a plan with cost 34.0
+TASK: barman - 2001 - 02
+35.0 True
+[results][barman][02]
+[single_agent][planning time: 58.08][cost: 36.0]
+[multi_agent][planning_time: 65.59668836593629][cost: 35.0][agents: 2][optimization time 4.443813800811768]
+----------------------------------------
+[info][singleagent][barman] task 03 takes 100.13 sec, found a plan with cost 36.0
+['shaker1 contains ingredient2 and all hands are empty.']
+[info][subgoal_1][barman] task 03 takes 0.17 sec, found a plan with cost 4.0
+validating
+validator time 0.009166717529296875
+[info][multiagent main goal][barman] task 03 takes 54.53 sec, found a plan with cost 34.0
+TASK: barman - 2001 - 03
+37.0 True
+[results][barman][03]
+[single_agent][planning time: 100.13][cost: 36.0]
+[multi_agent][planning_time: 56.05610103607178][cost: 37.0][agents: 2][optimization time 2.0831687450408936]
+----------------------------------------
+[info][singleagent][barman] task 04 takes 61.61 sec, found a plan with cost 36.0
+['shaker1 contains ingredient2 and all hands are empty.']
+[info][subgoal_1][barman] task 04 takes 0.15 sec, found a plan with cost 4.0
+validating
+validator time 0.010596752166748047
+[info][multiagent main goal][barman] task 04 takes 57.72 sec, found a plan with cost 34.0
+TASK: barman - 2001 - 04
+35.0 True
+[results][barman][04]
+[single_agent][planning time: 61.61][cost: 36.0]
+[multi_agent][planning_time: 59.12080132484436][cost: 35.0][agents: 2][optimization time 3.987001419067383]
+----------------------------------------
+[info][singleagent][barman] task 05 takes 100.15 sec, found a plan with cost 49.0
+['shaker1 contains ingredient1 and all hands are empty.']
+[info][subgoal_1][barman] task 05 takes 0.18 sec, found a plan with cost 4.0
+validating
+validator time 0.009261369705200195
+[info][multiagent main goal][barman] task 05 takes 100.16 sec, found a plan with cost 47.0
+TASK: barman - 2001 - 05
+50.0 True
+[results][barman][05]
+[single_agent][planning time: 100.15][cost: 49.0]
+[multi_agent][planning_time: 101.82931241035462][cost: 50.0][agents: 2][optimization time 2.876213788986206]
+----------------------------------------
+[info][singleagent][barman] task 06 takes 100.13 sec, found a plan with cost 49.0
+['shaker1 contains ingredient2 and all hands are empty.']
+[info][subgoal_1][barman] task 06 takes 0.18 sec, found a plan with cost 4.0
+validating
+validator time 0.008492708206176758
+[info][multiagent main goal][barman] task 06 takes 100.14 sec, found a plan with cost 47.0
+TASK: barman - 2001 - 06
+50.0 True
+[results][barman][06]
+[single_agent][planning time: 100.13][cost: 49.0]
+[multi_agent][planning_time: 101.90338856697083][cost: 50.0][agents: 2][optimization time 4.306123733520508]
+----------------------------------------
+[info][singleagent][barman] task 07 takes 100.16 sec, found a plan with cost 51.0
+['shaker1 contains ingredient2 and all hands are empty.']
+[info][subgoal_1][barman] task 07 takes 0.2 sec, found a plan with cost 4.0
+validating
+validator time 0.009481191635131836
+[info][multiagent main goal][barman] task 07 takes 100.17 sec, found a plan with cost 48.0
+TASK: barman - 2001 - 07
+51.0 True
+[results][barman][07]
+[single_agent][planning time: 100.16][cost: 51.0]
+[multi_agent][planning_time: 101.68554198265076][cost: 51.0][agents: 2][optimization time 8.686343431472778]
+----------------------------------------
+[info][singleagent][barman] task 08 takes 100.21 sec, found a plan with cost 50.0
+['shaker1 contains ingredient2 and all hands are empty.']
+[info][subgoal_1][barman] task 08 takes 0.2 sec, found a plan with cost 4.0
+validating
+validator time 0.008030891418457031
+[info][multiagent main goal][barman] task 08 takes 100.14 sec, found a plan with cost 47.0
+TASK: barman - 2001 - 08
+48.0 True
+[results][barman][08]
+[single_agent][planning time: 100.21][cost: 50.0]
+[multi_agent][planning_time: 101.9117351436615][cost: 48.0][agents: 2][optimization time 4.783145189285278]
+----------------------------------------
+[info][singleagent][barman] task 09 takes 100.17 sec, found a plan with cost 65.0
+['shaker1 contains ingredient1 and all hands are empty.']
+[info][subgoal_1][barman] task 09 takes 0.2 sec, found a plan with cost 4.0
+validating
+validator time 0.008993864059448242
+[info][multiagent main goal][barman] task 09 takes 100.18 sec, found a plan with cost 62.0
+TASK: barman - 2001 - 09
+65.0 True
+[results][barman][09]
+[single_agent][planning time: 100.17][cost: 65.0]
+[multi_agent][planning_time: 101.48628676414491][cost: 65.0][agents: 2][optimization time 3.6178717613220215]
+----------------------------------------
+[info][singleagent][barman] task 10 takes 100.15 sec, found a plan with cost 65.0
+['shaker1 contains ingredient2 and all hands are empty.']
+[info][subgoal_1][barman] task 10 takes 0.24 sec, found a plan with cost 4.0
+validating
+validator time 0.010248422622680664
+[info][multiagent main goal][barman] task 10 takes 100.17 sec, found a plan with cost 67.0
+TASK: barman - 2001 - 10
+67.0 True
+[results][barman][10]
+[single_agent][planning time: 100.15][cost: 65.0]
+[multi_agent][planning_time: 101.54932704925537][cost: 67.0][agents: 2][optimization time 7.371933937072754]
+----------------------------------------
+[info][singleagent][barman] task 11 takes 100.15 sec, found a plan with cost 65.0
+['shaker1 contains ingredient3 and all hands are empty.']
+[info][subgoal_1][barman] task 11 takes 0.2 sec, found a plan with cost 4.0
+validating
+validator time 0.009908914566040039
+[info][multiagent main goal][barman] task 11 takes 100.15 sec, found a plan with cost 65.0
+TASK: barman - 2001 - 11
+68.0 True
+[results][barman][11]
+[single_agent][planning time: 100.15][cost: 65.0]
+[multi_agent][planning_time: 101.3285270690918][cost: 68.0][agents: 2][optimization time 5.9590003490448]
+----------------------------------------
+[info][singleagent][barman] task 12 takes 100.1 sec, found a plan with cost 65.0
+['shaker1 contains ingredient1 and all hands are empty.']
+[info][subgoal_1][barman] task 12 takes 0.22 sec, found a plan with cost 4.0
+validating
+validator time 0.008121252059936523
+[info][multiagent main goal][barman] task 12 takes 100.14 sec, found a plan with cost 62.0
+TASK: barman - 2001 - 12
+65.0 True
+[results][barman][12]
+[single_agent][planning time: 100.1][cost: 65.0]
+[multi_agent][planning_time: 101.67748676300049][cost: 65.0][agents: 2][optimization time 22.57991361618042]
+----------------------------------------
+[info][singleagent][barman] task 13 takes 100.24 sec, found a plan with cost 82.0
+['shaker1 contains ingredient2 and all hands are empty.']
+[info][subgoal_1][barman] task 13 takes 0.37 sec, found a plan with cost 4.0
+validating
+validator time 0.005849123001098633
+[info][multiagent main goal][barman] task 13 takes 100.2 sec, found a plan with cost 79.0
+TASK: barman - 2001 - 13
+80.0 True
+[results][barman][13]
+[single_agent][planning time: 100.24][cost: 82.0]
+[multi_agent][planning_time: 101.7016843032837][cost: 80.0][agents: 2][optimization time 5.512815952301025]
+----------------------------------------
+[info][singleagent][barman] task 14 takes 100.15 sec, found a plan with cost 84.0
+['shaker1 contains ingredient2 and all hands are empty.']
+[info][subgoal_1][barman] task 14 takes 0.26 sec, found a plan with cost 4.0
+validating
+validator time 0.009212493896484375
+[info][multiagent main goal][barman] task 14 takes 100.19 sec, found a plan with cost 77.0
+TASK: barman - 2001 - 14
+78.0 True
+[results][barman][14]
+[single_agent][planning time: 100.15][cost: 84.0]
+[multi_agent][planning_time: 101.63175220489502][cost: 78.0][agents: 2][optimization time 8.008200883865356]
+----------------------------------------
+[info][singleagent][barman] task 15 takes 100.21 sec, found a plan with cost 83.0
+['shaker1 contains ingredient2 and all hands are empty.']
+[info][subgoal_1][barman] task 15 takes 0.3 sec, found a plan with cost 4.0
+validating
+validator time 0.010551691055297852
+[info][multiagent main goal][barman] task 15 takes 100.23 sec, found a plan with cost 77.0
+TASK: barman - 2001 - 15
+78.0 True
+[results][barman][15]
+[single_agent][planning time: 100.21][cost: 83.0]
+[multi_agent][planning_time: 101.78528478622437][cost: 78.0][agents: 2][optimization time 5.9971466064453125]
+----------------------------------------
+[info][singleagent][barman] task 16 takes 100.2 sec, found a plan with cost 82.0
+['shaker1 contains ingredient2 and all hands are empty.']
+[info][subgoal_1][barman] task 16 takes 0.25 sec, found a plan with cost 4.0
+validating
+validator time 0.004328250885009766
+[info][multiagent main goal][barman] task 16 takes 100.21 sec, found a plan with cost 80.0
+TASK: barman - 2001 - 16
+81.0 True
+[results][barman][16]
+[single_agent][planning time: 100.2][cost: 82.0]
+[multi_agent][planning_time: 101.67657514572143][cost: 81.0][agents: 2][optimization time 11.670576095581055]
+----------------------------------------
+[info][singleagent][barman] task 17 takes 100.19 sec, found a plan with cost 126.0
+['shaker1 contains ingredient2 and all hands are empty.']
+[info][subgoal_1][barman] task 17 takes 0.39 sec, found a plan with cost 4.0
+validating
+validator time 0.010716438293457031
+[info][multiagent main goal][barman] task 17 takes 100.2 sec, found a plan with cost 130.0
+TASK: barman - 2001 - 17
+130.0 True
+[results][barman][17]
+[single_agent][planning time: 100.19][cost: 126.0]
+[multi_agent][planning_time: 101.89435729026795][cost: 130.0][agents: 2][optimization time 15.534238815307617]
+----------------------------------------
+[info][singleagent][barman] task 18 takes 100.23 sec, found a plan with cost 117.0
+['shaker1 contains ingredient2 and all hands are empty.']
+[info][subgoal_1][barman] task 18 takes 0.35 sec, found a plan with cost 4.0
+validating
+validator time 0.005950212478637695
+[info][multiagent main goal][barman] task 18 takes 100.18 sec, found a plan with cost 88.0
+TASK: barman - 2001 - 18
+91.0 True
+[results][barman][18]
+[single_agent][planning time: 100.23][cost: 117.0]
+[multi_agent][planning_time: 101.94908049583435][cost: 91.0][agents: 2][optimization time 5.596933603286743]
+----------------------------------------
+[info][singleagent][barman] task 19 takes 100.22 sec, found a plan with cost 134.0
+['shaker1 contains ingredient2 and all hands are empty.']
+[info][subgoal_1][barman] task 19 takes 0.36 sec, found a plan with cost 4.0
+validating
+validator time 0.007009029388427734
+[info][multiagent main goal][barman] task 19 takes 100.25 sec, found a plan with cost 92.0
+TASK: barman - 2001 - 19
+93.0 True
+[results][barman][19]
+[single_agent][planning time: 100.22][cost: 134.0]
+[multi_agent][planning_time: 102.00631676673889][cost: 93.0][agents: 2][optimization time 8.518663883209229]
+----------------------------------------
+[info][singleagent][barman] task 20 takes 100.19 sec, found a plan with cost 145.0
+['shaker1 contains ingredient2 and all hands are empty.']
+[info][subgoal_1][barman] task 20 takes 0.36 sec, found a plan with cost 4.0
+validating
+validator time 0.010601520538330078
+[info][multiagent main goal][barman] task 20 takes 100.23 sec, found a plan with cost 90.0
+TASK: barman - 2001 - 20
+91.0 True
+[results][barman][20]
+[single_agent][planning time: 100.19][cost: 145.0]
+[multi_agent][planning_time: 102.09691437721253][cost: 91.0][agents: 2][optimization time 6.541848182678223]
+----------------------------------------
+[info][singleagent][grippers] task 01 takes 0.12 sec, found a plan with cost 5.0
+['ball1 is in room2 and all grippers are free.']
+[info][subgoal_1][grippers] task 01 takes 0.13 sec, found a plan with cost 3.0
+validating
+validator time 0.005750179290771484
+[info][multiagent main goal][grippers] task 01 takes 0.11 sec, found a plan with cost 3.0
+TASK: grippers - 2001 - 01
+3.0 True
+[results][grippers][01]
+[single_agent][planning time: 0.12][cost: 5.0]
+[multi_agent][planning_time: 1.7769348526000976][cost: 3.0][agents: 2][optimization time 1.810750961303711]
+----------------------------------------
+[info][singleagent][grippers] task 02 takes 0.14 sec, found a plan with cost 9.0
+['ball3 is in room3 and all grippers are free.']
+[info][subgoal_1][grippers] task 02 takes 0.13 sec, found a plan with cost 4.0
+validating
+validator time 0.002836465835571289
+[info][multiagent main goal][grippers] task 02 takes 0.11 sec, found a plan with cost 7.0
+TASK: grippers - 2001 - 02
+7.0 True
+[results][grippers][02]
+[single_agent][planning time: 0.14][cost: 9.0]
+[multi_agent][planning_time: 1.88624285697937][cost: 7.0][agents: 2][optimization time 4.947822332382202]
+----------------------------------------
+[info][singleagent][grippers] task 03 takes 0.12 sec, found a plan with cost 6.0
+['ball2 is in room4 and all grippers are free.']
+[info][subgoal_1][grippers] task 03 takes 0.12 sec, found a plan with cost 3.0
+validating
+validator time 0.004957437515258789
+[info][multiagent main goal][grippers] task 03 takes 0.13 sec, found a plan with cost 3.0
+TASK: grippers - 2001 - 03
+3.0 True
+[results][grippers][03]
+[single_agent][planning time: 0.12][cost: 6.0]
+[multi_agent][planning_time: 1.8998637199401855][cost: 3.0][agents: 2][optimization time 1.228511095046997]
+----------------------------------------
+[info][singleagent][grippers] task 04 takes 0.13 sec, found a plan with cost 4.0
+['ball3 is in room3 and all grippers are free.']
+[info][subgoal_1][grippers] task 04 takes 0.11 sec, found a plan with cost 4.0
+validating
+validator time 0.00626373291015625
+[info][multiagent main goal][grippers] task 04 takes 99.63 sec, no solution found
+TASK: grippers - 2001 - 04
+4 True
+[results][grippers][04]
+[single_agent][planning time: 0.13][cost: 4.0]
+[multi_agent][planning_time: 0.5444475269317628][cost: 4.0][agents: 2][optimization time 1.3424911499023438]
+----------------------------------------
+b'Traceback (most recent call last):\n  File "/data/ishika/david/multiagent_helper_llmp/downward/builds/release/bin/translate/translate.py", line 747, in <module>\n    main()\n  File "/data/ishika/david/multiagent_helper_llmp/downward/builds/release/bin/translate/translate.py", line 705, in main\n    task = pddl_parser.open(\n           ^^^^^^^^^^^^^^^^^\n  File "/data/ishika/david/multiagent_helper_llmp/downward/builds/release/bin/translate/pddl_parser/pddl_file.py", line 39, in open\n    return parsing_functions.parse_task(domain_pddl, task_pddl)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/data/ishika/david/multiagent_helper_llmp/downward/builds/release/bin/translate/pddl_parser/parsing_functions.py", line 634, in parse_task\n    task_name, task_domain_name, task_requirements, objects, init, goal, \\\n  File "/data/ishika/david/multiagent_helper_llmp/downward/builds/release/bin/translate/pddl_parser/parsing_functions.py", line 790, in parse_task_pddl\n    yield parse_condition(context, goal[1], type_dict, predicate_dict)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/data/ishika/david/multiagent_helper_llmp/downward/builds/release/bin/translate/pddl_parser/parsing_functions.py", line 209, in parse_condition\n    condition = parse_condition_aux(\n                ^^^^^^^^^^^^^^^^^^^^\n  File "/data/ishika/david/multiagent_helper_llmp/downward/builds/release/bin/translate/pddl_parser/parsing_functions.py", line 242, in parse_condition_aux\n    elif tag in predicate_dict:\n         ^^^^^^^^^^^^^^^^^^^^^\nTypeError: unhashable type: \'list\'\n'
+[info][singleagent][grippers] task 05 takes 0.13 sec, found a plan with cost 4.0
+['ball3 is in room2 and all grippers are free.']
+planner broke
+INFO     planner time limit: None
+INFO     planner memory limit: None
+
+INFO     Running translator.
+INFO     translator stdin: None
+INFO     translator time limit: None
+INFO     translator memory limit: None
+INFO     translator command line string: /data/ishika/david/envs/llm_pddl/bin/python /data/ishika/david/multiagent_helper_llmp/downward/builds/release/bin/translate/translate.py domains/grippers/domain.pddl experiments_multiagent_help/run2001/grippers/p05_1.pddl --sas-file experiments_multiagent_help/run2001/grippers/p05_1_plan.pddl.sas
+Parsing...
+translate exit code: 30
+
+Driver aborting after translate
+INFO     Planner time: 0.09s
+
+list index out of range
+Traceback (most recent call last):
+  File "/data/ishika/david/multiagent_helper_llmp/helper_script_n_agents.py", line 257, in <module>
+    planner.get_updated_init_conditions(path, validation_filename=f"./{path}/p{args.task_id}_{i}_validation.txt", pddl_problem_filename=init_problem, pddl_problem_filename_edited=init_problem_out,is_main=main_goal)
+  File "/data/ishika/david/multiagent_helper_llmp/modules/planner.py", line 135, in get_updated_init_conditions
+    with open(validation_filename, 'r') as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: './experiments_multiagent_help/run2001/grippers/p05_1_validation.txt'
+----------------------------------------
+b'Traceback (most recent call last):\n  File "/data/ishika/david/multiagent_helper_llmp/downward/builds/release/bin/translate/translate.py", line 747, in <module>\n    main()\n  File "/data/ishika/david/multiagent_helper_llmp/downward/builds/release/bin/translate/translate.py", line 705, in main\n    task = pddl_parser.open(\n           ^^^^^^^^^^^^^^^^^\n  File "/data/ishika/david/multiagent_helper_llmp/downward/builds/release/bin/translate/pddl_parser/pddl_file.py", line 39, in open\n    return parsing_functions.parse_task(domain_pddl, task_pddl)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/data/ishika/david/multiagent_helper_llmp/downward/builds/release/bin/translate/pddl_parser/parsing_functions.py", line 634, in parse_task\n    task_name, task_domain_name, task_requirements, objects, init, goal, \\\n  File "/data/ishika/david/multiagent_helper_llmp/downward/builds/release/bin/translate/pddl_parser/parsing_functions.py", line 790, in parse_task_pddl\n    yield parse_condition(context, goal[1], type_dict, predicate_dict)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/data/ishika/david/multiagent_helper_llmp/downward/builds/release/bin/translate/pddl_parser/parsing_functions.py", line 209, in parse_condition\n    condition = parse_condition_aux(\n                ^^^^^^^^^^^^^^^^^^^^\n  File "/data/ishika/david/multiagent_helper_llmp/downward/builds/release/bin/translate/pddl_parser/parsing_functions.py", line 242, in parse_condition_aux\n    elif tag in predicate_dict:\n         ^^^^^^^^^^^^^^^^^^^^^\nTypeError: unhashable type: \'list\'\n'
+[info][singleagent][grippers] task 06 takes 0.12 sec, found a plan with cost 4.0
+['robot1 is in room1.']
+planner broke
+INFO     planner time limit: None
+INFO     planner memory limit: None
+
+INFO     Running translator.
+INFO     translator stdin: None
+INFO     translator time limit: None
+INFO     translator memory limit: None
+INFO     translator command line string: /data/ishika/david/envs/llm_pddl/bin/python /data/ishika/david/multiagent_helper_llmp/downward/builds/release/bin/translate/translate.py domains/grippers/domain.pddl experiments_multiagent_help/run2001/grippers/p06_1.pddl --sas-file experiments_multiagent_help/run2001/grippers/p06_1_plan.pddl.sas
+Parsing...
+translate exit code: 30
+
+Driver aborting after translate
+INFO     Planner time: 0.08s
+
+list index out of range
+Traceback (most recent call last):
+  File "/data/ishika/david/multiagent_helper_llmp/helper_script_n_agents.py", line 257, in <module>
+    planner.get_updated_init_conditions(path, validation_filename=f"./{path}/p{args.task_id}_{i}_validation.txt", pddl_problem_filename=init_problem, pddl_problem_filename_edited=init_problem_out,is_main=main_goal)
+  File "/data/ishika/david/multiagent_helper_llmp/modules/planner.py", line 135, in get_updated_init_conditions
+    with open(validation_filename, 'r') as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: './experiments_multiagent_help/run2001/grippers/p06_1_validation.txt'
+----------------------------------------
+[info][singleagent][grippers] task 07 takes 0.16 sec, found a plan with cost 8.0
+['ball3 is in room3 and all grippers are free.']
+[info][subgoal_1][grippers] task 07 takes 0.11 sec, found a plan with cost 4.0
+validating
+validator time 0.0024280548095703125
+[info][multiagent main goal][grippers] task 07 takes 0.13 sec, found a plan with cost 6.0
+TASK: grippers - 2001 - 07
+6.0 True
+[results][grippers][07]
+[single_agent][planning time: 0.16][cost: 8.0]
+[multi_agent][planning_time: 1.8558428192138674][cost: 6.0][agents: 2][optimization time 3.663053512573242]
+----------------------------------------
+[info][singleagent][grippers] task 08 takes 0.15 sec, found a plan with cost 11.0
+['ball3 is in room2 and all grippers are free.']
+[info][subgoal_1][grippers] task 08 takes 0.14 sec, found a plan with cost 4.0
+validating
+validator time 0.0056324005126953125
+[info][multiagent main goal][grippers] task 08 takes 0.14 sec, found a plan with cost 9.0
+TASK: grippers - 2001 - 08
+9.0 True
+[results][grippers][08]
+[single_agent][planning time: 0.15][cost: 11.0]
+[multi_agent][planning_time: 1.9828133869171145][cost: 9.0][agents: 2][optimization time 5.032029628753662]
+----------------------------------------
+[info][singleagent][grippers] task 09 takes 9.0 sec, found a plan with cost 17.0
+['ball2 is in room4 and all grippers are free.']
+[info][subgoal_1][grippers] task 09 takes 0.1 sec, found a plan with cost 4.0
+validating
+validator time 0.003950834274291992
+[info][multiagent main goal][grippers] task 09 takes 7.88 sec, found a plan with cost 15.0
+TASK: grippers - 2001 - 09
+15.0 True
+[results][grippers][09]
+[single_agent][planning time: 9.0][cost: 17.0]
+[multi_agent][planning_time: 9.274974327087403][cost: 15.0][agents: 2][optimization time 9.341439008712769]
+----------------------------------------
+[info][singleagent][grippers] task 10 takes 0.14 sec, found a plan with cost 10.0
+['ball3 is in room1 and all grippers are free.']
+[info][subgoal_1][grippers] task 10 takes 0.13 sec, found a plan with cost 4.0
+validating
+validator time 0.006840705871582031
+[info][multiagent main goal][grippers] task 10 takes 0.13 sec, found a plan with cost 6.0
+TASK: grippers - 2001 - 10
+6.0 True
+[results][grippers][10]
+[single_agent][planning time: 0.14][cost: 10.0]
+[multi_agent][planning_time: 2.2977306938171385][cost: 6.0][agents: 2][optimization time 2.3368561267852783]
+----------------------------------------
+[info][singleagent][grippers] task 11 takes 0.13 sec, found a plan with cost 3.0
+['ball3 is in room2 and all grippers are free.']
+[info][subgoal_1][grippers] task 11 takes 0.13 sec, found a plan with cost 3.0
+validating
+validator time 0.004519224166870117
+[info][multiagent main goal][grippers] task 11 takes 99.59 sec, no solution found
+TASK: grippers - 2001 - 11
+3 True
+[results][grippers][11]
+[single_agent][planning time: 0.13][cost: 3.0]
+[multi_agent][planning_time: 0.9197727489471434][cost: 3.0][agents: 2][optimization time 1.4685149192810059]
+----------------------------------------

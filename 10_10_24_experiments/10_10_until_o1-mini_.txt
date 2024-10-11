@@ -1,0 +1,544 @@
+b"Error: Could not read file: experiments_multiagent_help/run2010/barman/p01_0.pddl\nReason: [Errno 2] No such file or directory: 'experiments_multiagent_help/run2010/barman/p01_0.pddl'\n"
+[info][singleagent][barman] task 01 takes 100.16 sec, found a plan with cost 36.0
+NONE 
+
+breaking after 0 goals
+[]
+planner broke
+INFO     planner time limit: None
+INFO     planner memory limit: None
+
+INFO     Running translator.
+INFO     translator stdin: None
+INFO     translator time limit: None
+INFO     translator memory limit: None
+INFO     translator command line string: /data/ishika/david/envs/llm_pddl/bin/python /data/ishika/david/multiagent_helper_llmp/downward/builds/release/bin/translate/translate.py domains/barman/domain.pddl experiments_multiagent_help/run2010/barman/p01_0.pddl --sas-file experiments_multiagent_help/run2010/barman/p01_0_plan.pddl.sas
+Parsing...
+translate exit code: 30
+
+Driver aborting after translate
+INFO     Planner time: 0.08s
+
+list index out of range
+----------------------------------------
+b"Error: Could not read file: experiments_multiagent_help/run2010/barman/p02_0.pddl\nReason: [Errno 2] No such file or directory: 'experiments_multiagent_help/run2010/barman/p02_0.pddl'\n"
+[info][singleagent][barman] task 02 takes 62.89 sec, found a plan with cost 36.0
+NONE 
+
+breaking after 0 goals
+[]
+planner broke
+INFO     planner time limit: None
+INFO     planner memory limit: None
+
+INFO     Running translator.
+INFO     translator stdin: None
+INFO     translator time limit: None
+INFO     translator memory limit: None
+INFO     translator command line string: /data/ishika/david/envs/llm_pddl/bin/python /data/ishika/david/multiagent_helper_llmp/downward/builds/release/bin/translate/translate.py domains/barman/domain.pddl experiments_multiagent_help/run2010/barman/p02_0.pddl --sas-file experiments_multiagent_help/run2010/barman/p02_0_plan.pddl.sas
+Parsing...
+translate exit code: 30
+
+Driver aborting after translate
+INFO     Planner time: 0.09s
+
+list index out of range
+----------------------------------------
+[info][singleagent][barman] task 03 takes 100.1 sec, found a plan with cost 36.0
+agent1 subgoal: shaker1 contains ingredient2 and all hands are empty. 
+
+agent2 subgoal: shotglass4 contains ingredient1 and all hands are empty. 
+
+agent3 subgoal: shotglass3 contains ingredient3 and all hands are empty. 
+
+agent4 subgoal: shotglass2 contains ingredient1 and all hands are empty. 
+
+NONE 
+
+breaking after 4 goals
+['agent1 subgoal: shaker1 contains ingredient2 and all hands are empty.', 'agent2 subgoal: shotglass4 contains ingredient1 and all hands are empty.', 'agent3 subgoal: shotglass3 contains ingredient3 and all hands are empty.', 'agent4 subgoal: shotglass2 contains ingredient1 and all hands are empty.']
+agent1
+[info][subgoal_1][barman] task 03 takes 0.17 sec, found a plan with cost 4.0
+planner successful
+validating
+agent2
+[info][subgoal_2][barman] task 03 takes 0.18 sec, found a plan with cost 4.0
+planner successful
+validating
+agent3
+[info][subgoal_3][barman] task 03 takes 0.17 sec, found a plan with cost 3.0
+planner successful
+validating
+agent4
+[info][subgoal_4][barman] task 03 takes 0.21 sec, found a plan with cost 3.0
+planner successful
+validating
+[info][multiagent main goal][barman] task 03 takes 100.12 sec, found a plan with cost 32.0
+TASK: barman - 2010 - 03
+39.0 True
+dp planning time 88.220862865448
+[results][barman][03]
+[single_agent][planning time: 100.1][cost: 36.0]
+[multi_agent][planning_time: 133.96059927940368][cost: 39.0][agents: 5][optimization time 88.220862865448]
+----------------------------------------
+b"Error: Could not read file: experiments_multiagent_help/run2010/barman/p04_0.pddl\nReason: [Errno 2] No such file or directory: 'experiments_multiagent_help/run2010/barman/p04_0.pddl'\n"
+[info][singleagent][barman] task 04 takes 57.27 sec, found a plan with cost 36.0
+NONE 
+
+breaking after 0 goals
+[]
+planner broke
+INFO     planner time limit: None
+INFO     planner memory limit: None
+
+INFO     Running translator.
+INFO     translator stdin: None
+INFO     translator time limit: None
+INFO     translator memory limit: None
+INFO     translator command line string: /data/ishika/david/envs/llm_pddl/bin/python /data/ishika/david/multiagent_helper_llmp/downward/builds/release/bin/translate/translate.py domains/barman/domain.pddl experiments_multiagent_help/run2010/barman/p04_0.pddl --sas-file experiments_multiagent_help/run2010/barman/p04_0_plan.pddl.sas
+Parsing...
+translate exit code: 30
+
+Driver aborting after translate
+INFO     Planner time: 0.09s
+
+list index out of range
+----------------------------------------
+[info][singleagent][barman] task 05 takes 100.16 sec, found a plan with cost 49.0
+**agent1 subgoal:** shaker1 contains ingredient1 and all hands are empty 
+
+agent2 subgoal: shaker1 contains ingredient2 and all hands are empty 
+
+agent3 subgoal: shaker1 contains ingredient3 and all hands are empty 
+
+NONE 
+
+breaking after 3 goals
+['**agent1 subgoal:** shaker1 contains ingredient1 and all hands are empty', 'agent2 subgoal: shaker1 contains ingredient2 and all hands are empty', 'agent3 subgoal: shaker1 contains ingredient3 and all hands are empty']
+agent1
+[info][subgoal_1][barman] task 05 takes 0.19 sec, found a plan with cost 4.0
+planner successful
+validating
+agent2
+[info][subgoal_2][barman] task 05 takes 0.21 sec, found a plan with cost 4.0
+planner successful
+validating
+agent3
+[info][subgoal_3][barman] task 05 takes 2.59 sec, found a plan with cost 9.0
+planner successful
+validating
+[info][multiagent main goal][barman] task 05 takes 100.14 sec, found a plan with cost 48.0
+TASK: barman - 2010 - 05
+61.0 True
+dp planning time 27.276813745498657
+[results][barman][05]
+[single_agent][planning time: 100.16][cost: 49.0]
+[multi_agent][planning_time: 128.9412154006958][cost: 61.0][agents: 4][optimization time 27.276813745498657]
+----------------------------------------
+b"Error: Could not read file: experiments_multiagent_help/run2010/barman/p06_0.pddl\nReason: [Errno 2] No such file or directory: 'experiments_multiagent_help/run2010/barman/p06_0.pddl'\n"
+[info][singleagent][barman] task 06 takes 100.16 sec, found a plan with cost 49.0
+NONE 
+
+breaking after 0 goals
+[]
+planner broke
+INFO     planner time limit: None
+INFO     planner memory limit: None
+
+INFO     Running translator.
+INFO     translator stdin: None
+INFO     translator time limit: None
+INFO     translator memory limit: None
+INFO     translator command line string: /data/ishika/david/envs/llm_pddl/bin/python /data/ishika/david/multiagent_helper_llmp/downward/builds/release/bin/translate/translate.py domains/barman/domain.pddl experiments_multiagent_help/run2010/barman/p06_0.pddl --sas-file experiments_multiagent_help/run2010/barman/p06_0_plan.pddl.sas
+Parsing...
+translate exit code: 30
+
+Driver aborting after translate
+INFO     Planner time: 0.11s
+
+list index out of range
+----------------------------------------
+[info][singleagent][barman] task 07 takes 100.19 sec, found a plan with cost 51.0
+shaker1 contains ingredient2 and all hands are empty 
+
+agent2 subgoal: shotglass5 contains ingredient1 and all hands are empty 
+
+NONE 
+
+breaking after 2 goals
+['shaker1 contains ingredient2 and all hands are empty', 'agent2 subgoal: shotglass5 contains ingredient1 and all hands are empty']
+agent1
+[info][subgoal_1][barman] task 07 takes 0.19 sec, found a plan with cost 4.0
+planner successful
+validating
+agent2
+[info][subgoal_2][barman] task 07 takes 0.21 sec, found a plan with cost 4.0
+planner successful
+validating
+[info][multiagent main goal][barman] task 07 takes 100.17 sec, found a plan with cost 46.0
+TASK: barman - 2010 - 07
+50.0 True
+dp planning time 11.100248336791992
+[results][barman][07]
+[single_agent][planning time: 100.19][cost: 51.0]
+[multi_agent][planning_time: 129.83149821281432][cost: 50.0][agents: 3][optimization time 11.100248336791992]
+----------------------------------------
+b"Error: Could not read file: experiments_multiagent_help/run2010/barman/p08_0.pddl\nReason: [Errno 2] No such file or directory: 'experiments_multiagent_help/run2010/barman/p08_0.pddl'\n"
+[info][singleagent][barman] task 08 takes 100.14 sec, found a plan with cost 50.0
+NONE 
+
+breaking after 0 goals
+[]
+planner broke
+INFO     planner time limit: None
+INFO     planner memory limit: None
+
+INFO     Running translator.
+INFO     translator stdin: None
+INFO     translator time limit: None
+INFO     translator memory limit: None
+INFO     translator command line string: /data/ishika/david/envs/llm_pddl/bin/python /data/ishika/david/multiagent_helper_llmp/downward/builds/release/bin/translate/translate.py domains/barman/domain.pddl experiments_multiagent_help/run2010/barman/p08_0.pddl --sas-file experiments_multiagent_help/run2010/barman/p08_0_plan.pddl.sas
+Parsing...
+translate exit code: 30
+
+Driver aborting after translate
+INFO     Planner time: 0.10s
+
+list index out of range
+----------------------------------------
+[info][singleagent][barman] task 09 takes 100.18 sec, found a plan with cost 65.0
+**agent1 subgoal:**
+shaker1 contains ingredient1 and all hands are empty. 
+
+**agent2 subgoal:**
+shaker1 contains ingredient2 and all hands are empty. 
+
+agent3 subgoal: shaker1 contains ingredient3 and all hands are empty. 
+
+NONE 
+
+breaking after 3 goals
+['**agent1 subgoal:**\nshaker1 contains ingredient1 and all hands are empty.', '**agent2 subgoal:**\nshaker1 contains ingredient2 and all hands are empty.', 'agent3 subgoal: shaker1 contains ingredient3 and all hands are empty.']
+agent1
+[info][subgoal_1][barman] task 09 takes 0.25 sec, found a plan with cost 4.0
+planner successful
+validating
+agent2
+[info][subgoal_2][barman] task 09 takes 0.25 sec, found a plan with cost 4.0
+planner successful
+validating
+agent3
+[info][subgoal_3][barman] task 09 takes 5.71 sec, found a plan with cost 9.0
+planner successful
+validating
+[info][multiagent main goal][barman] task 09 takes 100.19 sec, found a plan with cost 66.0
+TASK: barman - 2010 - 09
+80.0 True
+dp planning time 30.4697425365448
+[results][barman][09]
+[single_agent][planning time: 100.18][cost: 65.0]
+[multi_agent][planning_time: 137.64919080734253][cost: 80.0][agents: 4][optimization time 30.4697425365448]
+----------------------------------------
+[info][singleagent][barman] task 10 takes 100.15 sec, found a plan with cost 65.0
+agent1 subgoal: shaker1 contains ingredient1 and all hands are empty. 
+
+agent2 subgoal: shotglass3 contains ingredient3 and all hands are empty. 
+
+agent3 subgoal: shaker1 contains ingredient2 and all hands are empty. 
+
+agent4 subgoal: shaker1 contains ingredient3 and all hands are empty. 
+
+agent5 subgoal: NONE 
+
+breaking after 4 goals
+['agent1 subgoal: shaker1 contains ingredient1 and all hands are empty.', 'agent2 subgoal: shotglass3 contains ingredient3 and all hands are empty.', 'agent3 subgoal: shaker1 contains ingredient2 and all hands are empty.', 'agent4 subgoal: shaker1 contains ingredient3 and all hands are empty.']
+agent1
+[info][subgoal_1][barman] task 10 takes 0.26 sec, found a plan with cost 4.0
+planner successful
+validating
+agent2
+[info][subgoal_2][barman] task 10 takes 0.22 sec, found a plan with cost 3.0
+planner successful
+validating
+agent3
+[info][subgoal_3][barman] task 10 takes 0.3 sec, found a plan with cost 4.0
+planner successful
+validating
+agent4
+[info][subgoal_4][barman] task 10 takes 2.07 sec, found a plan with cost 8.0
+planner successful
+validating
+[info][multiagent main goal][barman] task 10 takes 100.17 sec, found a plan with cost 67.0
+TASK: barman - 2010 - 10
+82.0 True
+dp planning time 76.19966554641724
+[results][barman][10]
+[single_agent][planning time: 100.15][cost: 65.0]
+[multi_agent][planning_time: 140.6775255393982][cost: 82.0][agents: 5][optimization time 76.19966554641724]
+----------------------------------------
+[info][singleagent][barman] task 11 takes 100.13 sec, found a plan with cost 65.0
+agent1 subgoal: shaker1 contains ingredient2 and all hands are empty. 
+
+agent2 subgoal: shaker1 contains ingredient3 and all hands are empty. 
+
+agent3 subgoal: shaker1 contains ingredient1 and all hands are empty. 
+
+NONE 
+
+breaking after 3 goals
+['agent1 subgoal: shaker1 contains ingredient2 and all hands are empty.', 'agent2 subgoal: shaker1 contains ingredient3 and all hands are empty.', 'agent3 subgoal: shaker1 contains ingredient1 and all hands are empty.']
+agent1
+[info][subgoal_1][barman] task 11 takes 0.24 sec, found a plan with cost 4.0
+planner successful
+validating
+agent2
+[info][subgoal_2][barman] task 11 takes 0.25 sec, found a plan with cost 4.0
+planner successful
+validating
+agent3
+list index out of range
+Traceback (most recent call last):
+  File "/data/ishika/david/multiagent_helper_llmp/helper_script_until_n.py", line 279, in <module>
+    planner.get_updated_init_conditions(path, validation_filename=f"./{path}/p{args.task_id}_{i}_validation.txt", pddl_problem_filename=init_problem, pddl_problem_filename_edited=init_problem_out,is_main=main_goal)
+  File "/data/ishika/david/multiagent_helper_llmp/modules/planner.py", line 135, in get_updated_init_conditions
+    with open(validation_filename, 'r') as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: './experiments_multiagent_help/run2010/barman/p11_3_validation.txt'
+----------------------------------------
+b"Error: Could not read file: experiments_multiagent_help/run2010/barman/p12_0.pddl\nReason: [Errno 2] No such file or directory: 'experiments_multiagent_help/run2010/barman/p12_0.pddl'\n"
+[info][singleagent][barman] task 12 takes 100.15 sec, found a plan with cost 65.0
+NONE 
+
+breaking after 0 goals
+[]
+planner broke
+INFO     planner time limit: None
+INFO     planner memory limit: None
+
+INFO     Running translator.
+INFO     translator stdin: None
+INFO     translator time limit: None
+INFO     translator memory limit: None
+INFO     translator command line string: /data/ishika/david/envs/llm_pddl/bin/python /data/ishika/david/multiagent_helper_llmp/downward/builds/release/bin/translate/translate.py domains/barman/domain.pddl experiments_multiagent_help/run2010/barman/p12_0.pddl --sas-file experiments_multiagent_help/run2010/barman/p12_0_plan.pddl.sas
+Parsing...
+translate exit code: 30
+
+Driver aborting after translate
+INFO     Planner time: 0.08s
+
+list index out of range
+----------------------------------------
+[info][singleagent][barman] task 13 takes 100.14 sec, found a plan with cost 82.0
+shot7 contains ingredient3 and all hands are empty. 
+
+agent2 subgoal: shot1 contains ingredient2 and ingredient1 and all hands are empty. 
+
+agent3 subgoal: shot2 contains ingredient1 and ingredient2 and all hands are empty. 
+
+agent4 subgoal: shot3 contains ingredient1 and ingredient3 and all hands are empty. 
+
+agent5 subgoal: shot4 contains ingredient2 and ingredient3 and all hands are empty. 
+
+agent6 subgoal: shot5 contains ingredient2 and ingredient1 and all hands are empty. 
+
+breaking after 6 goals
+['shot7 contains ingredient3 and all hands are empty.', 'agent2 subgoal: shot1 contains ingredient2 and ingredient1 and all hands are empty.', 'agent3 subgoal: shot2 contains ingredient1 and ingredient2 and all hands are empty.', 'agent4 subgoal: shot3 contains ingredient1 and ingredient3 and all hands are empty.', 'agent5 subgoal: shot4 contains ingredient2 and ingredient3 and all hands are empty.', 'agent6 subgoal: shot5 contains ingredient2 and ingredient1 and all hands are empty.']
+agent1
+[info][subgoal_1][barman] task 13 takes 0.2 sec, found a plan with cost 3.0
+planner successful
+validating
+agent2
+planner broke
+INFO     planner time limit: None
+INFO     planner memory limit: None
+
+INFO     Running translator.
+INFO     translator stdin: None
+INFO     translator time limit: None
+INFO     translator memory limit: None
+INFO     translator command line string: /data/ishika/david/envs/llm_pddl/bin/python /data/ishika/david/multiagent_helper_llmp/downward/builds/release/bin/translate/translate.py domains/barman/domain.pddl experiments_multiagent_help/run2010/barman/p13_2.pddl --sas-file experiments_multiagent_help/run2010/barman/p13_2_plan.pddl.sas
+Parsing...
+Parsing: [0.000s CPU, 0.005s wall-clock]
+Normalizing task... [0.000s CPU, 0.000s wall-clock]
+Instantiating...
+Generating Datalog program... [0.000s CPU, 0.001s wall-clock]
+Normalizing Datalog program...
+Normalizing Datalog program: [0.010s CPU, 0.005s wall-clock]
+Preparing model... [0.000s CPU, 0.002s wall-clock]
+Generated 115 rules.
+Computing model... [0.020s CPU, 0.021s wall-clock]
+1284 relevant atoms
+1409 auxiliary atoms
+2693 final queue length
+4520 total queue pushes
+Completing instantiation... [0.040s CPU, 0.036s wall-clock]
+Instantiating: [0.070s CPU, 0.066s wall-clock]
+Computing fact groups...
+Finding invariants...
+24 initial candidates
+Finding invariants: [0.010s CPU, 0.009s wall-clock]
+Checking invariant weight... [0.000s CPU, 0.000s wall-clock]
+Instantiating groups... [0.000s CPU, 0.000s wall-clock]
+Collecting mutex groups... [0.000s CPU, 0.000s wall-clock]
+Choosing groups...
+134 uncovered facts
+Choosing groups: [0.000s CPU, 0.000s wall-clock]
+Building translation key... [0.000s CPU, 0.000s wall-clock]
+Computing fact groups: [0.010s CPU, 0.011s wall-clock]
+Building STRIPS to SAS dictionary... [0.000s CPU, 0.000s wall-clock]
+Building dictionary for full mutex groups... [0.000s CPU, 0.000s wall-clock]
+Building mutex information...
+Building mutex information: [0.000s CPU, 0.000s wall-clock]
+Translating task...
+Processing axioms...
+Simplifying axioms... [0.000s CPU, 0.000s wall-clock]
+Translator axioms removed by simplifying: 0
+Processing axioms: [0.000s CPU, 0.002s wall-clock]
+Translating task: [0.050s CPU, 0.047s wall-clock]
+1422 effect conditions simplified
+0 implied preconditions added
+Detecting unreachable propositions...
+0 operators removed
+0 axioms removed
+3 propositions removed
+Detecting unreachable propositions: [0.020s CPU, 0.020s wall-clock]
+Reordering and filtering variables...
+137 of 137 variables necessary.
+9 of 12 mutex groups necessary.
+854 of 854 operators necessary.
+0 of 0 axiom rules necessary.
+Reordering and filtering variables: [0.000s CPU, 0.008s wall-clock]
+Translator variables: 137
+Translator derived variables: 0
+Translator facts: 291
+Translator goal facts: 4
+Translator mutex groups: 9
+Translator total mutex groups size: 27
+Translator operators: 854
+Translator axioms: 0
+Translator task size: 8179
+Translator peak memory: 37260 KB
+Writing output... [0.000s CPU, 0.006s wall-clock]
+Done! [0.160s CPU, 0.165s wall-clock]
+translate exit code: 0
+
+INFO     Running search (release).
+INFO     search stdin: experiments_multiagent_help/run2010/barman/p13_2_plan.pddl.sas
+INFO     search time limit: 100s
+INFO     search memory limit: None
+INFO     search command line string: /data/ishika/david/multiagent_helper_llmp/downward/builds/release/bin/downward --search --if-unit-cost 'let(hlm,landmark_sum(lm_reasonable_orders_hps(lm_rhw()),pref=false),let(hff,ff(),iterated([lazy_greedy([hff,hlm],preferred=[hff,hlm]),lazy_wastar([hff,hlm],preferred=[hff,hlm],w=5),lazy_wastar([hff,hlm],preferred=[hff,hlm],w=3),lazy_wastar([hff,hlm],preferred=[hff,hlm],w=2),lazy_wastar([hff,hlm],preferred=[hff,hlm],w=1)],repeat_last=true,continue_on_fail=true)))' --if-non-unit-cost 'let(hlm1,landmark_sum(lm_reasonable_orders_hps(lm_rhw()),transform=adapt_costs(one),pref=false),let(hff1,ff(transform=adapt_costs(one)),let(hlm2,landmark_sum(lm_reasonable_orders_hps(lm_rhw()),transform=adapt_costs(plusone),pref=false),let(hff2,ff(transform=adapt_costs(plusone)),iterated([lazy_greedy([hff1,hlm1],preferred=[hff1,hlm1],cost_type=one,reopen_closed=false),lazy_greedy([hff2,hlm2],preferred=[hff2,hlm2],reopen_closed=false),lazy_wastar([hff2,hlm2],preferred=[hff2,hlm2],w=5),lazy_wastar([hff2,hlm2],preferred=[hff2,hlm2],w=3),lazy_wastar([hff2,hlm2],preferred=[hff2,hlm2],w=2),lazy_wastar([hff2,hlm2],preferred=[hff2,hlm2],w=1)],repeat_last=true,continue_on_fail=true)))))' --always --internal-plan-file experiments_multiagent_help/run2010/barman/p13_2_plan.pddl < experiments_multiagent_help/run2010/barman/p13_2_plan.pddl.sas
+[t=0.000000s, 9672 KB] reading input...
+[t=0.004002s, 9952 KB] done reading input!
+[t=0.004002s, 10348 KB] Initializing landmark sum heuristic...
+[t=0.004002s, 10348 KB] Generating landmark graph...
+[t=0.004002s, 10348 KB] Building a landmark graph with reasonable orders.
+[t=0.004002s, 10348 KB] Initializing Exploration...
+[t=0.004002s, 10516 KB] Generating landmarks using the RPG/SAS+ approach
+[t=0.007995s, 10648 KB] Landmarks generation time: 0.003993s
+[t=0.007995s, 10648 KB] Discovered 9 landmarks, of which 1 are disjunctive and 0 are conjunctive.
+[t=0.007995s, 10648 KB] 8 edges
+[t=0.007995s, 10648 KB] approx. reasonable orders
+[t=0.007995s, 10648 KB] Landmarks generation time: 0.003993s
+[t=0.007995s, 10648 KB] Discovered 9 landmarks, of which 1 are disjunctive and 0 are conjunctive.
+[t=0.007995s, 10648 KB] 8 edges
+[t=0.007995s, 10648 KB] Landmark graph generation time: 0.003993s
+[t=0.007995s, 10648 KB] Landmark graph contains 9 landmarks, of which 1 are disjunctive and 0 are conjunctive.
+[t=0.007995s, 10648 KB] Landmark graph contains 8 orderings.
+[t=0.007995s, 10648 KB] Simplifying 3146 unary operators... done! [2674 unary operators]
+[t=0.007995s, 10648 KB] time to simplify: 0.000000s
+[t=0.007995s, 10784 KB] Initializing additive heuristic...
+[t=0.007995s, 10784 KB] Initializing FF heuristic...
+[t=0.007995s, 10784 KB] Building successor generator...done!
+[t=0.007995s, 10784 KB] peak memory difference for successor generator creation: 0 KB
+[t=0.007995s, 10784 KB] time for successor generation creation: 0.000000s
+[t=0.007995s, 10784 KB] Variables: 137
+[t=0.007995s, 10784 KB] FactPairs: 291
+[t=0.007995s, 10784 KB] Bytes per state: 20
+[t=0.007995s, 10784 KB] Building successor generator...done!
+[t=0.007995s, 10784 KB] peak memory difference for successor generator creation: 0 KB
+[t=0.007995s, 10784 KB] time for successor generation creation: 0.000000s
+[t=0.007995s, 10784 KB] Variables: 137
+[t=0.007995s, 10784 KB] FactPairs: 291
+[t=0.007995s, 10784 KB] Bytes per state: 20
+[t=0.007995s, 10784 KB] Starting search: lazy_greedy
+[t=0.007995s, 10784 KB] Conducting lazy best first search, (real) bound = 2147483647
+[t=0.007995s, 10784 KB] New best heuristic value for landmark_sum_heuristic: 3
+[t=0.007995s, 10784 KB] New best heuristic value for ff: 3
+[t=0.007995s, 10784 KB] g=0, 1 evaluated, 0 expanded
+[t=0.007995s, 10784 KB] Initial heuristic value for landmark_sum_heuristic: 3
+[t=0.007995s, 10784 KB] Initial heuristic value for ff: 3
+[t=0.011995s, 10784 KB] New best heuristic value for landmark_sum_heuristic: 2
+[t=0.011995s, 10784 KB] g=5, 90 evaluated, 89 expanded
+[t=0.011995s, 10784 KB] New best heuristic value for landmark_sum_heuristic: 1
+[t=0.011995s, 10784 KB] g=6, 91 evaluated, 90 expanded
+Peak memory: 778336 KB
+caught signal 24 -- exiting
+Time limit has been reached.
+search exit code: 23
+
+Driver aborting after search
+INFO     Planner time: 100.23s
+
+list index out of range
+Traceback (most recent call last):
+  File "/data/ishika/david/multiagent_helper_llmp/helper_script_until_n.py", line 279, in <module>
+    planner.get_updated_init_conditions(path, validation_filename=f"./{path}/p{args.task_id}_{i}_validation.txt", pddl_problem_filename=init_problem, pddl_problem_filename_edited=init_problem_out,is_main=main_goal)
+  File "/data/ishika/david/multiagent_helper_llmp/modules/planner.py", line 135, in get_updated_init_conditions
+    with open(validation_filename, 'r') as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: './experiments_multiagent_help/run2010/barman/p13_2_validation.txt'
+----------------------------------------
+[info][singleagent][barman] task 14 takes 100.2 sec, found a plan with cost 84.0
+shaker1 contains ingredient2 and all hands are empty 
+
+agent2 subgoal: shaker1 contains ingredient3 and all hands are empty 
+
+`shaker1 contains ingredient1 and all hands are empty` 
+
+NONE 
+
+breaking after 3 goals
+['shaker1 contains ingredient2 and all hands are empty', 'agent2 subgoal: shaker1 contains ingredient3 and all hands are empty', '`shaker1 contains ingredient1 and all hands are empty`']
+agent1
+[info][subgoal_1][barman] task 14 takes 0.3 sec, found a plan with cost 4.0
+planner successful
+validating
+agent2
+[info][subgoal_2][barman] task 14 takes 0.31 sec, found a plan with cost 4.0
+planner successful
+validating
+agent3
+[info][subgoal_3][barman] task 14 takes 12.22 sec, found a plan with cost 9.0
+planner successful
+validating
+[info][multiagent main goal][barman] task 14 takes 100.23 sec, found a plan with cost 82.0
+TASK: barman - 2010 - 14
+93.0 True
+dp planning time 42.60268211364746
+[results][barman][14]
+[single_agent][planning time: 100.2][cost: 84.0]
+[multi_agent][planning_time: 141.02132946014405][cost: 93.0][agents: 4][optimization time 42.60268211364746]
+----------------------------------------
+b"Error: Could not read file: experiments_multiagent_help/run2010/barman/p15_0.pddl\nReason: [Errno 2] No such file or directory: 'experiments_multiagent_help/run2010/barman/p15_0.pddl'\n"
+[info][singleagent][barman] task 15 takes 100.2 sec, found a plan with cost 83.0
+NONE 
+
+breaking after 0 goals
+[]
+planner broke
+INFO     planner time limit: None
+INFO     planner memory limit: None
+
+INFO     Running translator.
+INFO     translator stdin: None
+INFO     translator time limit: None
+INFO     translator memory limit: None
+INFO     translator command line string: /data/ishika/david/envs/llm_pddl/bin/python /data/ishika/david/multiagent_helper_llmp/downward/builds/release/bin/translate/translate.py domains/barman/domain.pddl experiments_multiagent_help/run2010/barman/p15_0.pddl --sas-file experiments_multiagent_help/run2010/barman/p15_0_plan.pddl.sas
+Parsing...
+translate exit code: 30
+
+Driver aborting after translate
+INFO     Planner time: 0.09s
+
+list index out of range
+----------------------------------------

@@ -1,0 +1,510 @@
+[info][singleagent][barman] task 01 takes 100.14 sec, found a plan with cost 36.0
+shaker1 contains ingredient1 and all hands are empty. 
+
+shotglass4 contains ingredient2 and all hands are empty. 
+
+shotglass3 contains ingredient3 and all hands are empty. 
+
+NONE 
+
+breaking after 3 goals
+['shaker1 contains ingredient1 and all hands are empty.', 'shotglass4 contains ingredient2 and all hands are empty.', 'shotglass3 contains ingredient3 and all hands are empty.']
+agent1
+[info][subgoal_1][barman] task 01 takes 0.17 sec, found a plan with cost 4.0
+planner successful
+validating
+agent2
+[info][subgoal_2][barman] task 01 takes 0.18 sec, found a plan with cost 4.0
+planner successful
+validating
+agent3
+[info][subgoal_3][barman] task 01 takes 0.16 sec, found a plan with cost 3.0
+planner successful
+validating
+[info][multiagent main goal][barman] task 01 takes 100.09 sec, found a plan with cost 32.0
+TASK: barman - 2009 - 01
+38.0 True
+dp planning time 39.196171283721924
+[results][barman][01]
+[single_agent][planning time: 100.14][cost: 36.0]
+[multi_agent][planning_time: 106.23476443290711][cost: 38.0][agents: 4][optimization time 39.196171283721924]
+----------------------------------------
+[info][singleagent][barman] task 02 takes 61.49 sec, found a plan with cost 36.0
+shaker1 contains ingredient3 and all hands are empty. 
+
+shotglass4 contains ingredient2 and all hands are empty. 
+
+NONE 
+
+breaking after 2 goals
+['shaker1 contains ingredient3 and all hands are empty.', 'shotglass4 contains ingredient2 and all hands are empty.']
+agent1
+[info][subgoal_1][barman] task 02 takes 0.19 sec, found a plan with cost 4.0
+planner successful
+validating
+agent2
+[info][subgoal_2][barman] task 02 takes 0.2 sec, found a plan with cost 4.0
+planner successful
+validating
+[info][multiagent main goal][barman] task 02 takes 100.13 sec, found a plan with cost 33.0
+TASK: barman - 2009 - 02
+41 True
+dp planning time 3.1657772064208984
+[results][barman][02]
+[single_agent][planning time: 61.49][cost: 36.0]
+[multi_agent][planning_time: 104.1447615814209][cost: 41.0][agents: 3][optimization time 3.1657772064208984]
+----------------------------------------
+[info][singleagent][barman] task 03 takes 100.13 sec, found a plan with cost 36.0
+shaker1 contains ingredient2 and all hands are empty. 
+
+shotglass4 contains ingredient3 and all hands are empty. 
+
+NONE 
+
+breaking after 2 goals
+['shaker1 contains ingredient2 and all hands are empty.', 'shotglass4 contains ingredient3 and all hands are empty.']
+agent1
+[info][subgoal_1][barman] task 03 takes 0.21 sec, found a plan with cost 4.0
+planner successful
+validating
+agent2
+[info][subgoal_2][barman] task 03 takes 0.21 sec, found a plan with cost 4.0
+planner successful
+validating
+[info][multiagent main goal][barman] task 03 takes 100.14 sec, found a plan with cost 32.0
+TASK: barman - 2009 - 03
+39.0 True
+dp planning time 4.044225692749023
+[results][barman][03]
+[single_agent][planning time: 100.13][cost: 36.0]
+[multi_agent][planning_time: 105.81590252876282][cost: 39.0][agents: 3][optimization time 4.044225692749023]
+----------------------------------------
+[info][singleagent][barman] task 04 takes 57.63 sec, found a plan with cost 36.0
+shaker1 contains ingredient2 and all hands are empty. 
+
+shotglass4 contains ingredient3 and all hands are empty. 
+
+NONE 
+
+breaking after 2 goals
+['shaker1 contains ingredient2 and all hands are empty.', 'shotglass4 contains ingredient3 and all hands are empty.']
+agent1
+[info][subgoal_1][barman] task 04 takes 0.22 sec, found a plan with cost 4.0
+planner successful
+validating
+agent2
+[info][subgoal_2][barman] task 04 takes 0.18 sec, found a plan with cost 4.0
+planner successful
+validating
+[info][multiagent main goal][barman] task 04 takes 100.2 sec, found a plan with cost 33.0
+TASK: barman - 2009 - 04
+41 True
+dp planning time 3.712751865386963
+[results][barman][04]
+[single_agent][planning time: 57.63][cost: 36.0]
+[multi_agent][planning_time: 104.27251229286195][cost: 41.0][agents: 3][optimization time 3.712751865386963]
+----------------------------------------
+[info][singleagent][barman] task 05 takes 100.15 sec, found a plan with cost 49.0
+shaker1 contains ingredient1 and all hands are empty. 
+
+shotglass5 contains ingredient3 and all hands are empty. 
+
+shotglass4 contains ingredient2 and all hands are empty. 
+
+NONE 
+
+breaking after 3 goals
+['shaker1 contains ingredient1 and all hands are empty.', 'shotglass5 contains ingredient3 and all hands are empty.', 'shotglass4 contains ingredient2 and all hands are empty.']
+agent1
+[info][subgoal_1][barman] task 05 takes 0.16 sec, found a plan with cost 4.0
+planner successful
+validating
+agent2
+[info][subgoal_2][barman] task 05 takes 0.18 sec, found a plan with cost 4.0
+planner successful
+validating
+agent3
+[info][subgoal_3][barman] task 05 takes 0.16 sec, found a plan with cost 3.0
+planner successful
+validating
+[info][multiagent main goal][barman] task 05 takes 100.13 sec, found a plan with cost 44.0
+TASK: barman - 2009 - 05
+51.0 True
+dp planning time 26.40350031852722
+[results][barman][05]
+[single_agent][planning time: 100.15][cost: 49.0]
+[multi_agent][planning_time: 106.72639525413513][cost: 51.0][agents: 4][optimization time 26.40350031852722]
+----------------------------------------
+[info][singleagent][barman] task 06 takes 100.18 sec, found a plan with cost 49.0
+shaker1 contains ingredient2 and all hands are empty. 
+
+shotglass5 contains ingredient3 and all hands are empty. 
+
+NONE 
+
+breaking after 2 goals
+['shaker1 contains ingredient2 and all hands are empty.', 'shotglass5 contains ingredient3 and all hands are empty.']
+agent1
+[info][subgoal_1][barman] task 06 takes 0.24 sec, found a plan with cost 4.0
+planner successful
+validating
+agent2
+[info][subgoal_2][barman] task 06 takes 0.2 sec, found a plan with cost 4.0
+planner successful
+validating
+[info][multiagent main goal][barman] task 06 takes 100.15 sec, found a plan with cost 45.0
+TASK: barman - 2009 - 06
+52.0 True
+dp planning time 6.243157863616943
+[results][barman][06]
+[single_agent][planning time: 100.18][cost: 49.0]
+[multi_agent][planning_time: 104.94812020301819][cost: 52.0][agents: 3][optimization time 6.243157863616943]
+----------------------------------------
+[info][singleagent][barman] task 07 takes 100.19 sec, found a plan with cost 51.0
+shaker1 contains ingredient2 and all hands are empty. 
+
+shotglass5 contains ingredient3 and all hands are empty. 
+
+NONE 
+
+breaking after 2 goals
+['shaker1 contains ingredient2 and all hands are empty.', 'shotglass5 contains ingredient3 and all hands are empty.']
+agent1
+[info][subgoal_1][barman] task 07 takes 0.21 sec, found a plan with cost 4.0
+planner successful
+validating
+agent2
+[info][subgoal_2][barman] task 07 takes 0.27 sec, found a plan with cost 4.0
+planner successful
+validating
+[info][multiagent main goal][barman] task 07 takes 100.18 sec, found a plan with cost 46.0
+TASK: barman - 2009 - 07
+54 True
+dp planning time 3.876102924346924
+[results][barman][07]
+[single_agent][planning time: 100.19][cost: 51.0]
+[multi_agent][planning_time: 104.30120554924012][cost: 54.0][agents: 3][optimization time 3.876102924346924]
+----------------------------------------
+[info][singleagent][barman] task 08 takes 100.13 sec, found a plan with cost 50.0
+shaker1 contains ingredient2 and all hands are empty. 
+
+shotglass5 contains ingredient3 and all hands are empty. 
+
+NONE 
+
+breaking after 2 goals
+['shaker1 contains ingredient2 and all hands are empty.', 'shotglass5 contains ingredient3 and all hands are empty.']
+agent1
+[info][subgoal_1][barman] task 08 takes 0.19 sec, found a plan with cost 4.0
+planner successful
+validating
+agent2
+[info][subgoal_2][barman] task 08 takes 0.21 sec, found a plan with cost 4.0
+planner successful
+validating
+[info][multiagent main goal][barman] task 08 takes 100.16 sec, found a plan with cost 46.0
+TASK: barman - 2009 - 08
+53.0 True
+dp planning time 5.647915601730347
+[results][barman][08]
+[single_agent][planning time: 100.13][cost: 50.0]
+[multi_agent][planning_time: 103.98992091178894][cost: 53.0][agents: 3][optimization time 5.647915601730347]
+----------------------------------------
+[info][singleagent][barman] task 09 takes 100.13 sec, found a plan with cost 65.0
+shaker1 contains ingredient1 and all hands are empty. 
+
+shotglass6 contains ingredient3 and all hands are empty. 
+
+shotglass5 contains ingredient2 and all hands are empty. 
+
+NONE 
+
+breaking after 3 goals
+['shaker1 contains ingredient1 and all hands are empty.', 'shotglass6 contains ingredient3 and all hands are empty.', 'shotglass5 contains ingredient2 and all hands are empty.']
+agent1
+[info][subgoal_1][barman] task 09 takes 0.25 sec, found a plan with cost 4.0
+planner successful
+validating
+agent2
+[info][subgoal_2][barman] task 09 takes 0.27 sec, found a plan with cost 4.0
+planner successful
+validating
+agent3
+[info][subgoal_3][barman] task 09 takes 0.22 sec, found a plan with cost 3.0
+planner successful
+validating
+[info][multiagent main goal][barman] task 09 takes 100.17 sec, found a plan with cost 58.0
+TASK: barman - 2009 - 09
+66.0 True
+dp planning time 12.5042245388031
+[results][barman][09]
+[single_agent][planning time: 100.13][cost: 65.0]
+[multi_agent][planning_time: 105.50356784820556][cost: 66.0][agents: 4][optimization time 12.5042245388031]
+----------------------------------------
+[info][singleagent][barman] task 10 takes 100.17 sec, found a plan with cost 65.0
+shaker1 contains ingredient2 and all hands are empty. 
+
+shotglass6 contains ingredient3 and all hands are empty. 
+
+shotglass5 contains ingredient1 and all hands are empty. 
+
+NONE 
+
+breaking after 3 goals
+['shaker1 contains ingredient2 and all hands are empty.', 'shotglass6 contains ingredient3 and all hands are empty.', 'shotglass5 contains ingredient1 and all hands are empty.']
+agent1
+[info][subgoal_1][barman] task 10 takes 0.26 sec, found a plan with cost 4.0
+planner successful
+validating
+agent2
+[info][subgoal_2][barman] task 10 takes 0.26 sec, found a plan with cost 4.0
+planner successful
+validating
+agent3
+[info][subgoal_3][barman] task 10 takes 0.22 sec, found a plan with cost 3.0
+planner successful
+validating
+[info][multiagent main goal][barman] task 10 takes 100.11 sec, found a plan with cost 57.0
+TASK: barman - 2009 - 10
+65.0 True
+dp planning time 78.49915027618408
+[results][barman][10]
+[single_agent][planning time: 100.17][cost: 65.0]
+[multi_agent][planning_time: 105.26716742515563][cost: 65.0][agents: 4][optimization time 78.49915027618408]
+----------------------------------------
+[info][singleagent][barman] task 11 takes 100.13 sec, found a plan with cost 65.0
+shaker1 contains ingredient1 and all hands are empty. 
+
+shotglass6 contains ingredient3 and all hands are empty. 
+
+shotglass5 contains ingredient2 and all hands are empty. 
+
+NONE 
+
+breaking after 3 goals
+['shaker1 contains ingredient1 and all hands are empty.', 'shotglass6 contains ingredient3 and all hands are empty.', 'shotglass5 contains ingredient2 and all hands are empty.']
+agent1
+[info][subgoal_1][barman] task 11 takes 0.2 sec, found a plan with cost 4.0
+planner successful
+validating
+agent2
+[info][subgoal_2][barman] task 11 takes 0.2 sec, found a plan with cost 4.0
+planner successful
+validating
+agent3
+[info][subgoal_3][barman] task 11 takes 0.22 sec, found a plan with cost 3.0
+planner successful
+validating
+[info][multiagent main goal][barman] task 11 takes 100.16 sec, found a plan with cost 61.0
+TASK: barman - 2009 - 11
+67.0 True
+dp planning time 53.44521474838257
+[results][barman][11]
+[single_agent][planning time: 100.13][cost: 65.0]
+[multi_agent][planning_time: 105.18553975105286][cost: 67.0][agents: 4][optimization time 53.44521474838257]
+----------------------------------------
+[info][singleagent][barman] task 12 takes 100.19 sec, found a plan with cost 65.0
+shaker1 contains ingredient1 and all hands are empty. 
+
+shotglass6 contains ingredient3 and all hands are empty. 
+
+shotglass5 contains ingredient2 and all hands are empty. 
+
+NONE 
+
+breaking after 3 goals
+['shaker1 contains ingredient1 and all hands are empty.', 'shotglass6 contains ingredient3 and all hands are empty.', 'shotglass5 contains ingredient2 and all hands are empty.']
+agent1
+[info][subgoal_1][barman] task 12 takes 0.26 sec, found a plan with cost 4.0
+planner successful
+validating
+agent2
+[info][subgoal_2][barman] task 12 takes 0.26 sec, found a plan with cost 4.0
+planner successful
+validating
+agent3
+[info][subgoal_3][barman] task 12 takes 0.25 sec, found a plan with cost 3.0
+planner successful
+validating
+[info][multiagent main goal][barman] task 12 takes 100.17 sec, found a plan with cost 62.0
+TASK: barman - 2009 - 12
+68.0 True
+dp planning time 33.76811623573303
+[results][barman][12]
+[single_agent][planning time: 100.19][cost: 65.0]
+[multi_agent][planning_time: 107.63030952453613][cost: 68.0][agents: 4][optimization time 33.76811623573303]
+----------------------------------------
+[info][singleagent][barman] task 13 takes 100.2 sec, found a plan with cost 82.0
+shaker1 contains ingredient2 and all hands are empty. 
+
+shotglass8 contains ingredient1 and all hands are empty. 
+
+NONE 
+
+breaking after 2 goals
+['shaker1 contains ingredient2 and all hands are empty.', 'shotglass8 contains ingredient1 and all hands are empty.']
+agent1
+[info][subgoal_1][barman] task 13 takes 0.26 sec, found a plan with cost 4.0
+planner successful
+validating
+agent2
+[info][subgoal_2][barman] task 13 takes 0.3 sec, found a plan with cost 4.0
+planner successful
+validating
+[info][multiagent main goal][barman] task 13 takes 100.18 sec, found a plan with cost 77.0
+TASK: barman - 2009 - 13
+81.0 True
+dp planning time 12.550300121307373
+[results][barman][13]
+[single_agent][planning time: 100.2][cost: 82.0]
+[multi_agent][planning_time: 104.3858535194397][cost: 81.0][agents: 3][optimization time 12.550300121307373]
+----------------------------------------
+[info][singleagent][barman] task 14 takes 100.21 sec, found a plan with cost 84.0
+shaker1 contains ingredient2 and all hands are empty. 
+
+shotglass8 contains ingredient3 and all hands are empty. 
+
+shotglass7 contains ingredient1 and all hands are empty. 
+
+NONE 
+
+breaking after 3 goals
+['shaker1 contains ingredient2 and all hands are empty.', 'shotglass8 contains ingredient3 and all hands are empty.', 'shotglass7 contains ingredient1 and all hands are empty.']
+agent1
+[info][subgoal_1][barman] task 14 takes 0.27 sec, found a plan with cost 4.0
+planner successful
+validating
+agent2
+[info][subgoal_2][barman] task 14 takes 0.33 sec, found a plan with cost 4.0
+planner successful
+validating
+agent3
+[info][subgoal_3][barman] task 14 takes 0.27 sec, found a plan with cost 3.0
+planner successful
+validating
+[info][multiagent main goal][barman] task 14 takes 100.22 sec, found a plan with cost 76.0
+TASK: barman - 2009 - 14
+83.0 True
+dp planning time 27.038921117782593
+[results][barman][14]
+[single_agent][planning time: 100.21][cost: 84.0]
+[multi_agent][planning_time: 105.81890210151673][cost: 83.0][agents: 4][optimization time 27.038921117782593]
+----------------------------------------
+[info][singleagent][barman] task 15 takes 100.2 sec, found a plan with cost 83.0
+shaker1 contains ingredient2 and all hands are empty. 
+
+shotglass8 contains ingredient1 and all hands are empty. 
+
+shotglass7 contains ingredient3 and all hands are empty. 
+
+NONE 
+
+breaking after 3 goals
+['shaker1 contains ingredient2 and all hands are empty.', 'shotglass8 contains ingredient1 and all hands are empty.', 'shotglass7 contains ingredient3 and all hands are empty.']
+agent1
+[info][subgoal_1][barman] task 15 takes 0.27 sec, found a plan with cost 4.0
+planner successful
+validating
+agent2
+[info][subgoal_2][barman] task 15 takes 0.29 sec, found a plan with cost 4.0
+planner successful
+validating
+agent3
+[info][subgoal_3][barman] task 15 takes 0.25 sec, found a plan with cost 3.0
+planner successful
+validating
+[info][multiagent main goal][barman] task 15 takes 100.19 sec, found a plan with cost 77.0
+TASK: barman - 2009 - 15
+84.0 True
+dp planning time 54.12228465080261
+[results][barman][15]
+[single_agent][planning time: 100.2][cost: 83.0]
+[multi_agent][planning_time: 106.26688361167908][cost: 84.0][agents: 4][optimization time 54.12228465080261]
+----------------------------------------
+[info][singleagent][barman] task 16 takes 100.17 sec, found a plan with cost 82.0
+shaker1 contains ingredient3 and all hands are empty. 
+
+shotglass8 contains ingredient2 and all hands are empty. 
+
+shotglass7 contains ingredient3 and all hands are empty. 
+
+NONE 
+
+breaking after 3 goals
+['shaker1 contains ingredient3 and all hands are empty.', 'shotglass8 contains ingredient2 and all hands are empty.', 'shotglass7 contains ingredient3 and all hands are empty.']
+agent1
+[info][subgoal_1][barman] task 16 takes 0.33 sec, found a plan with cost 4.0
+planner successful
+validating
+agent2
+[info][subgoal_2][barman] task 16 takes 0.33 sec, found a plan with cost 4.0
+planner successful
+validating
+agent3
+[info][subgoal_3][barman] task 16 takes 0.26 sec, found a plan with cost 3.0
+planner successful
+validating
+[info][multiagent main goal][barman] task 16 takes 100.22 sec, found a plan with cost 81.0
+TASK: barman - 2009 - 16
+87.0 True
+dp planning time 36.088945627212524
+[results][barman][16]
+[single_agent][planning time: 100.17][cost: 82.0]
+[multi_agent][planning_time: 105.98984254837036][cost: 87.0][agents: 4][optimization time 36.088945627212524]
+----------------------------------------
+[info][singleagent][barman] task 17 takes 100.26 sec, found a plan with cost 126.0
+shaker1 contains ingredient2 and all hands are empty. 
+
+shotglass9 contains ingredient3 and all hands are empty. 
+
+shotglass8 contains ingredient1 and all hands are empty. 
+
+NONE 
+
+breaking after 3 goals
+['shaker1 contains ingredient2 and all hands are empty.', 'shotglass9 contains ingredient3 and all hands are empty.', 'shotglass8 contains ingredient1 and all hands are empty.']
+agent1
+[info][subgoal_1][barman] task 17 takes 0.37 sec, found a plan with cost 4.0
+planner successful
+validating
+agent2
+[info][subgoal_2][barman] task 17 takes 0.39 sec, found a plan with cost 4.0
+planner successful
+validating
+agent3
+[info][subgoal_3][barman] task 17 takes 0.28 sec, found a plan with cost 3.0
+planner successful
+validating
+[info][multiagent main goal][barman] task 17 takes 100.27 sec, found a plan with cost 117.0
+TASK: barman - 2009 - 17
+124.0 True
+dp planning time 24.58344864845276
+[results][barman][17]
+[single_agent][planning time: 100.26][cost: 126.0]
+[multi_agent][planning_time: 106.83456665039063][cost: 124.0][agents: 4][optimization time 24.58344864845276]
+----------------------------------------
+[info][singleagent][barman] task 18 takes 100.23 sec, found a plan with cost 117.0
+shaker1 contains ingredient2 and all hands are empty. 
+
+shotglass9 contains ingredient3 and all hands are empty. 
+
+NONE 
+
+breaking after 2 goals
+['shaker1 contains ingredient2 and all hands are empty.', 'shotglass9 contains ingredient3 and all hands are empty.']
+agent1
+[info][subgoal_1][barman] task 18 takes 0.33 sec, found a plan with cost 4.0
+planner successful
+validating
+agent2
+[info][subgoal_2][barman] task 18 takes 0.36 sec, found a plan with cost 4.0
+planner successful
+validating
+[info][multiagent main goal][barman] task 18 takes 100.19 sec, found a plan with cost 86.0
+TASK: barman - 2009 - 18
+90.0 True
+dp planning time 17.48434281349182
+[results][barman][18]
+[single_agent][planning time: 100.23][cost: 117.0]
+[multi_agent][planning_time: 104.6098502922058][cost: 90.0][agents: 3][optimization time 17.48434281349182]
+----------------------------------------

@@ -24,16 +24,14 @@ env_activate_cmd="conda activate /data/ishika/david/envs/llm_pddl/"
 session="experiment_session"
 
 # Start the tmux session in detached mode
-tmux new-session -d -s $session
+tmux new-session -d -s $session -n initial_window
 
 # Iterate over the commands and create a new tmux window for each one
 for i in "${!commands[@]}"; do
     window_name="window_$i"
+    tmux new-window -t $session -n "$window_name"
     cmd="cd $base_dir && $env_activate_cmd && echo 'Running: ${commands[$i]}' && ${commands[$i]}"
-    tmux new-window -t $session -n $window_name "$cmd"
+    tmux send-keys -t $session:$window_name "$cmd" C-m
 done
-
-# Detach from the tmux session
-tmux detach -s $session
 
 echo "All tmux windows started and detached."

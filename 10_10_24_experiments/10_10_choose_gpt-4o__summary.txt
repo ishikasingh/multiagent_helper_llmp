@@ -1,0 +1,99 @@
+Domain: barman
+Success rate: 41.18% (7/17)
+Results:
+  [results][barman][01]
+  [single_agent][planning time: 100.11][cost: 36.0]
+  [multi_agent][planning_time: 105.75036169052125][cost: 39.0][agents: 3][optimization time 4.764011383056641]
+  Success: No
+
+  [results][barman][02]
+  [single_agent][planning time: 59.02][cost: 36.0]
+  [multi_agent][planning_time: 104.44995292663575][cost: 41.0][agents: 3][optimization time 2.285881280899048]
+  Success: No
+
+  [results][barman][03]
+  [single_agent][planning time: 100.13][cost: 36.0]
+  [multi_agent][planning_time: 54.63004161834717][cost: 38.0][agents: 3][optimization time 6.122676372528076]
+  Success: No
+
+  [results][barman][05]
+  [single_agent][planning time: 100.16][cost: 49.0]
+  [multi_agent][planning_time: 106.63363313674927][cost: 48.0][agents: 4][optimization time 28.891443967819214]
+  Success: Yes
+
+  [results][barman][06]
+  [single_agent][planning time: 100.17][cost: 49.0]
+  [multi_agent][planning_time: 108.83007148742675][cost: 52.0][agents: 5][optimization time 86.31113147735596]
+  Success: No
+
+  [results][barman][07]
+  [single_agent][planning time: 100.16][cost: 51.0]
+  [multi_agent][planning_time: 105.36909018516542][cost: 50.0][agents: 3][optimization time 11.559812784194946]
+  Success: Yes
+
+  [results][barman][08]
+  [single_agent][planning time: 100.14][cost: 50.0]
+  [multi_agent][planning_time: 104.66211900711059][cost: 50.0][agents: 3][optimization time 12.002114534378052]
+  Success: No
+
+  [results][barman][09]
+  [single_agent][planning time: 100.15][cost: 65.0]
+  [multi_agent][planning_time: 104.74031901359558][cost: 68.0][agents: 3][optimization time 4.6173036098480225]
+  Success: No
+
+  [results][barman][10]
+  [single_agent][planning time: 100.17][cost: 65.0]
+  [multi_agent][planning_time: 105.11917850494385][cost: 62.0][agents: 4][optimization time 123.63307404518127]
+  Success: Yes
+
+  [results][barman][11]
+  [single_agent][planning time: 100.11][cost: 65.0]
+  [multi_agent][planning_time: 101.75494469642639][cost: 68.0][agents: 2][optimization time 4.356877565383911]
+  Success: No
+
+  [results][barman][12]
+  [single_agent][planning time: 100.22][cost: 65.0]
+  [multi_agent][planning_time: 103.82103623390198][cost: 66.0][agents: 3][optimization time 7.777055263519287]
+  Success: No
+
+  [results][barman][13]
+  [single_agent][planning time: 100.2][cost: 82.0]
+  [multi_agent][planning_time: 104.65970071792603][cost: 81.0][agents: 3][optimization time 14.756124496459961]
+  Success: Yes
+
+  [results][barman][14]
+  [single_agent][planning time: 100.2][cost: 84.0]
+  [multi_agent][planning_time: 106.80897463798522][cost: 83.0][agents: 4][optimization time 26.930270195007324]
+  Success: Yes
+
+  [results][barman][15]
+  [single_agent][planning time: 100.17][cost: 83.0]
+  [multi_agent][planning_time: 106.17133513450622][cost: 82.0][agents: 4][optimization time 40.40347361564636]
+  Success: Yes
+
+  [results][barman][16]
+  [single_agent][planning time: 100.21][cost: 82.0]
+  [multi_agent][planning_time: 104.67804998397827][cost: 83.0][agents: 3][optimization time 15.560637474060059]
+  Success: No
+
+  [results][barman][17]
+  [single_agent][planning time: 100.21][cost: 126.0]
+  [multi_agent][planning_time: 104.57200886726379][cost: 126.0][agents: 3][optimization time 20.037954807281494]
+  Success: No
+
+  [results][barman][18]
+  [single_agent][planning time: 100.23][cost: 117.0]
+  [multi_agent][planning_time: 104.84263460159302][cost: 90.0][agents: 3][optimization time 14.673604965209961]
+  Success: Yes
+
+----------------------------------------
+
+Domain Averages:
+Domain: barman
+  Single Agent:
+    Average Cost: 67.12
+    Average Planning Time: 97.75 sec
+  Multi Agent:
+    Average Cost: 66.29
+    Average Planning Time: 102.21 sec
+
