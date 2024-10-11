@@ -103,7 +103,7 @@ def get_helper_subgoal_without_plan(expt_path, args, log_file,  max_goals):
     goal_count = 0
     while goal_count < max_goals:
         prompt_text += f"\n agent{goal_count + 1} subgoal:"
-        helper_subgoal = generator.query(prompt_text, system_text=system_text, use_chatgpt=True)
+        helper_subgoal = generator.query(prompt_text, system_text=system_text, model=args.model)
         print(helper_subgoal,"\n")
         if 'NONE' in helper_subgoal:
             break
@@ -130,6 +130,7 @@ if __name__ == "__main__":
     parser.add_argument('--human_eval', type=bool, default=False)
     parser.add_argument('--run', type=int, default=1)
     parser.add_argument('--max_agents', type=int, default=6)
+    parser.add_argument('--model', type=str, default='gpt-4o')
     args = parser.parse_args()
 
     if not os.path.exists(args.experiment_folder):
@@ -255,13 +256,13 @@ if __name__ == "__main__":
                 # print(multiagent_helper_cost_1st)
                 # print(multiagent_helper_success)
             except Exception as e:
-                LLM_text_sg_time.append(-1)
-                LLM_pddl_sg_time.append(-1)
-                multiagent_helper_planning_time.append(-1)
-                multiagent_helper_planning_time_opt.append(-1)
-                multiagent_helper_cost.append(-1)
-                multiagent_helper_planning_time_1st.append(-1)
-                multiagent_helper_cost_1st.append(-1)
+                LLM_text_sg_time.append(0)
+                LLM_pddl_sg_time.append(0)
+                multiagent_helper_planning_time.append(0)
+                multiagent_helper_planning_time_opt.append(0)
+                multiagent_helper_cost.append(0)
+                multiagent_helper_planning_time_1st.append(0)
+                multiagent_helper_cost_1st.append(0)
                 multiagent_helper_success.append(0)
                 print(e)
                 with open(log_file, 'a+') as f:
@@ -295,8 +296,9 @@ if __name__ == "__main__":
             multiagent_main_cost_1st.append(first_plan_cost)
             multiagent_main_success.append(success)
             overall_plan_length.append(plan_length)
-            print(f"[results][single agent][{args.domain}] | planning time: {singleagent_planning_time[0]} | cost: {singleagent_cost[0]}")
-            print(f"[results][multiagent][{args.domain}] | planning time: {LLM_pddl_sg_time[0]+LLM_text_sg_time[0]+np.sum(multiagent_helper_planning_time)+multiagent_main_planning_time[0]} | cost: {float(overall_plan_length[0])} | agents: {args.num_agents} | optimization time {dp_end - dp_start}")
+            print(f"[results][{args.domain}][{args.task_id}]")
+            print(f"[single_agent][planning time: {singleagent_planning_time[0]}][cost: {singleagent_cost[0]}]")
+            print(f"[multi_agent][planning_time: {LLM_pddl_sg_time[0]+LLM_text_sg_time[0]+np.sum(multiagent_helper_planning_time)+multiagent_main_planning_time[0]}][cost: {float(overall_plan_length[0])}][agents: {args.num_agents}][optimization time {dp_end - dp_start}]")
         except Exception as e:
             multiagent_main_planning_time.append(-1)
             multiagent_main_planning_time_opt.append(-1)

@@ -19,7 +19,7 @@ PYTHON_SCRIPT=""
 SUMMARY_FILE=""
 # termes "tyreworld" "grippers" "barman"
 DOMAINS=("barman" "grippers" "blocksworld" "tyreworld")
-TIME_LIMIT=30
+TIME_LIMIT=100
 TASK_IDS=(1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20)
 NUM_AGENTS=""
 RUN=1
@@ -81,8 +81,17 @@ run_experiment() {
           --num_agents "$num_agents" \
           --model "$MODEL" \
           >> "$OUTPUT_FILE" 2>&1
+    elif [[ "$PYTHON_SCRIPT" == "helper_script_until_n.py" ]]; then
+      echo "Running experiment: Domain=$domain, Time Limit=$time_limit, Task ID=$task_id, Run=$RUN, Model=$MODEL"
+      python "$PYTHON_SCRIPT" \
+        --domain "$domain" \
+        --time-limit "$time_limit" \
+        --task_id "$task_id" \
+        --run "$RUN" \
+        --max_agents "6" \
+        --model "$MODEL" \
+        >> "$OUTPUT_FILE" 2>&1
     else
-    # add until n
       echo "Running experiment: Domain=$domain, Time Limit=$time_limit, Task ID=$task_id"
       python "$PYTHON_SCRIPT" \
           --domain "$domain" \

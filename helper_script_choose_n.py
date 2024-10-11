@@ -43,8 +43,8 @@ def choose_n_agents(expt_path, args, log_file, max_agents):
 
     # to do, add catch if we don't shift to structured output or smthn
     try:
-        num_agents_text = generator.query(prompt_text, system_text=system_text, use_chatgpt=True)
-        num_agents = generator.query(f"Find the optimal number of agents proposed in this existing plan: {num_agents_text}. Respond with only a single number.", system_text=system_text, use_chatgpt=True)
+        num_agents_text = generator.query(prompt_text, system_text=system_text, model=args.model)
+        num_agents = generator.query(f"Find the optimal number of agents proposed in this existing plan: {num_agents_text}. Respond with only a single number.", system_text=system_text, model=args.model)
         if num_agents.isdigit():
             num_agents = int(num_agents)
             if num_agents > max_agents or num_agents < 2:
@@ -147,7 +147,7 @@ def get_helper_subgoal_without_plan(expt_path, args, log_file, n_reasoning):
     for i in range(1,args.num_agents):
         prompt_text += f"\n agent{i} subgoal:"
         #print(f"generator.querying for agent {i}")
-        helper_subgoal = generator.query(prompt_text, system_text=system_text, use_chatgpt=True)
+        helper_subgoal = generator.query(prompt_text, system_text=system_text, model=args.model)
         #print(helper_subgoal, "\n")
         prompt_text += helper_subgoal
         all_subgoals.append(helper_subgoal)
@@ -169,6 +169,7 @@ if __name__ == "__main__":
     parser.add_argument('--experiment_folder', type=str, default='experiments_multiagent_help')
     parser.add_argument('--human_eval', type=bool, default=False)
     parser.add_argument('--run', type=int, default=1)
+    parser.add_argument('--model', type=str, default='gpt-4o')
     args = parser.parse_args()
 
     if not os.path.exists(args.experiment_folder):
