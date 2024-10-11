@@ -1,0 +1,29 @@
+[info][singleagent][tyreworld] task 01 takes 0.21 sec, found a plan with cost 13.0
+['The intact tyre is inflated and all hands are empty.', 'The flat tyre is removed from the hub and all hands are empty.']
+old (:goal
+(and
+(inflated r1)
+
+)
+)
+cleaned (:goal (and (inflated r1) ) )
+old (:goal
+(and
+(not (on w1 the-hub1))
+
+)
+)
+cleaned (:goal (and (not (on w1 the-hub1)) ) )
+[info][subgoal_1][tyreworld] task 01 takes 0.16 sec, found a plan with cost 1.0
+validating
+validator time 0.008246898651123047
+[info][subgoal_2][tyreworld] task 01 takes 0.14 sec, found a plan with cost 4.0
+validating
+validator time 0.006522178649902344
+[info][multiagent main goal][tyreworld] task 01 takes 0.16 sec, found a plan with cost 8.0
+TASK: tyreworld - 1000 - 01
+10.0 True
+[results][tyreworld][01]
+[single_agent][planning time: 0.21][cost: 13.0]
+[multi_agent][planning_time: 4.856672964096069][cost: 10.0][agents: 3][optimization time 14.959839344024658]
+----------------------------------------

@@ -58,13 +58,8 @@ def planner(expt_path, args_, subgoal_idx=-1):
         output = f.read()
     
     if(output.find('Actual search time') == -1):
-        print("reattempting planner")
-        os.system(f"python ./downward/fast-downward.py --alias {FAST_DOWNWARD_ALIAS} " + \
-              f"--search-time-limit {args.time_limit} --plan-file {plan_file_name} " + \
-              f"--sas-file {sas_file_name} " + \
-              f"{domain_pddl_file} {task_pddl_file_name} > {output_path}")
-        with open(output_path, "r") as f:
-            output = f.read()
+        print("planner broke")
+        print(output)
         
     planner_search_time_1st_plan = float(output.split('Actual search time: ')[1].split('\n')[0].strip()[:-1])
     planner_total_time = float(output.split('Planner time: ')[1].split('\n')[0].strip()[:-1])
@@ -122,14 +117,16 @@ def validator(expt_path, subgoal_idx=-1):
                 best_cost = cost
                 plan_file = fn
     # print("plan_file", plan_file)
+    v_start = time.time()
     result = subprocess.run(["./downward/validate", "-v", domain_pddl_file, task_pddl_file, plan_file], stdout=subprocess.PIPE)
+    v_end = time.time()
     #print("validated")
     output = result.stdout.decode('utf-8')
     output_file.write(output)
     if "Plan valid" in result.stdout.decode('utf-8'):
-        return True
+        return True, v_end - v_start
     else:
-        return False
+        return False, v_end - v_start
 
 def get_updated_init_conditions(expt_path, validation_filename=None, pddl_problem_filename=None, pddl_problem_filename_edited=None, env_conds_only=True, is_main=False):
     # print("getting updated init conditions")

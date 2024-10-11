@@ -7,9 +7,9 @@ import sys
 import time
 import numpy as np
 import copy
-import planner
-import utils
-import generator
+import modules.planner as planner
+import modules.utils as utils
+import modules.generator as generator
 
 def choose_n_agents(expt_path, args, log_file, max_agents):
     # system prompt
@@ -242,10 +242,11 @@ if __name__ == "__main__":
             singleagent_cost_1st.append(1e6)
         try:
             n_agents_text, n_agents, t0 = choose_n_agents(path, args, log_file, max_agents=6)
+            print(n_agents_text)
             args.num_agents = int(n_agents)
             subgoal_array, t1 = get_helper_subgoal_without_plan(path, args, log_file, n_reasoning=n_agents_text)
             # add check for validity of all goals
-            # print(subgoal_array)
+            print(subgoal_array)
             # # helper_subgoal = "xyz"
             goal_files, t2 = generator.get_pddl_goal(path, args, subgoal_array, log_file)
             LLM_text_sg_time.append(t1)
@@ -280,13 +281,13 @@ if __name__ == "__main__":
                 # print(multiagent_helper_cost_1st)
                 # print(multiagent_helper_success)
             except Exception as e:
-                LLM_text_sg_time.append(-1)
-                LLM_pddl_sg_time.append(-1)
-                multiagent_helper_planning_time.append(-1)
-                multiagent_helper_planning_time_opt.append(-1)
-                multiagent_helper_cost.append(-1)
-                multiagent_helper_planning_time_1st.append(-1)
-                multiagent_helper_cost_1st.append(-1)
+                LLM_text_sg_time.append(0)
+                LLM_pddl_sg_time.append(0)
+                multiagent_helper_planning_time.append(0)
+                multiagent_helper_planning_time_opt.append(0)
+                multiagent_helper_cost.append(0)
+                multiagent_helper_planning_time_1st.append(0)
+                multiagent_helper_cost_1st.append(0)
                 multiagent_helper_success.append(0)
                 print(e)
                 with open(log_file, 'a+') as f:

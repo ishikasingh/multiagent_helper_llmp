@@ -1,6 +1,7 @@
 from dotenv import load_dotenv
 from openai import OpenAI
 import time
+import re
 
 load_dotenv()
 client = OpenAI()
@@ -38,6 +39,38 @@ def query(prompt_text, system_text=None, use_chatgpt=False):
             server_cnt += 1
             print(e)
     return result_text
+
+def clean_pddl_goal(goal_text):
+    # Remove any leading/trailing whitespace
+    goal_text = goal_text.strip()
+
+    # Remove empty parentheses
+    goal_text = re.sub(r'\(\s*\)', '', goal_text)
+
+    # Remove any consecutive whitespace
+    goal_text = re.sub(r'\s+', ' ', goal_text)
+
+    # Ensure proper formatting for 'and' operator
+    goal_text = re.sub(r'\(\s*and\s*\)', '', goal_text)  # Remove empty 'and'
+    goal_text = re.sub(r'\(\s*and\s+([^()]+)\)', r'(\1)', goal_text)  # Remove unnecessary 'and' with single predicate
+
+    # Ensure each opening parenthesis has a matching closing parenthesis
+    open_count = goal_text.count('(')
+    close_count = goal_text.count(')')
+    if open_count > close_count:
+        goal_text += ')' * (open_count - close_count)
+    elif close_count > open_count:
+        goal_text = '(' * (close_count - open_count) + goal_text
+
+    # Ensure the entire goal is wrapped in parentheses
+    if not (goal_text.startswith('(') and goal_text.endswith(')')):
+        goal_text = f'({goal_text})'
+
+    # Ensure ':goal' is present
+    if not goal_text.lstrip('(').startswith(':goal'):
+        goal_text = f'(:goal {goal_text})'
+
+    return goal_text
 
 def get_pddl_goal(expt_path, args, helper_subgoal, log_file):
     # taken from (LLM+P), create the problem PDDL given the context
@@ -78,6 +111,9 @@ def get_pddl_goal(expt_path, args, helper_subgoal, log_file):
         # remove undefined goal conditions using domain predicate list
         if args.domain == 'tyreworld':
             pddl_goal = pddl_goal.replace('(empty hands)', '').replace('(empty-hand)', '').replace('(empty-hands)', '').replace('empty hand', '')
+        print("old",pddl_goal)
+        pddl_goal = clean_pddl_goal(pddl_goal)
+        print("cleaned", pddl_goal)
         with open(log_file, 'a+') as f:
             f.write(f"\n\n{pddl_goal}")
         with open(pddl_problem_filename, 'w') as f:

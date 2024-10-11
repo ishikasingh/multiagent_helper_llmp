@@ -1,0 +1,957 @@
+[info][singleagent][blocksworld] task 01 takes 0.12 sec, found a plan with cost 6.0
+['b2 is clear and on the table.']
+[info][subgoal_1][blocksworld] task 01 takes 0.12 sec, found a plan with cost 2.0
+validating
+validator time 0.006361246109008789
+[info][multiagent main goal][blocksworld] task 01 takes 0.12 sec, found a plan with cost 4.0
+TASK: blocksworld - 1000 - 01
+5.0 True
+[results][blocksworld][01]
+[single_agent][planning time: 0.12][cost: 6.0]
+[multi_agent][planning_time: 2.78355001449585][cost: 5.0][agents: 2][optimization time 0.11459898948669434]
+----------------------------------------
+[info][singleagent][blocksworld] task 02 takes 0.11 sec, found a plan with cost 6.0
+['b3 is on the table and all hands are empty.']
+[info][subgoal_1][blocksworld] task 02 takes 0.13 sec, found a plan with cost 4.0
+validating
+validator time 0.006257057189941406
+[info][multiagent main goal][blocksworld] task 02 takes 0.12 sec, found a plan with cost 4.0
+TASK: blocksworld - 1000 - 02
+8 True
+[results][blocksworld][02]
+[single_agent][planning time: 0.11][cost: 6.0]
+[multi_agent][planning_time: 5.442829847335815][cost: 8.0][agents: 2][optimization time 0.14220523834228516]
+----------------------------------------
+[info][singleagent][blocksworld] task 03 takes 0.11 sec, found a plan with cost 6.0
+['b1 is clear and on the table.']
+[info][subgoal_1][blocksworld] task 03 takes 0.13 sec, found a plan with cost 2.0
+validating
+validator time 0.0058858394622802734
+[info][multiagent main goal][blocksworld] task 03 takes 0.12 sec, found a plan with cost 4.0
+TASK: blocksworld - 1000 - 03
+5.0 True
+[results][blocksworld][03]
+[single_agent][planning time: 0.11][cost: 6.0]
+[multi_agent][planning_time: 2.0550103187561035][cost: 5.0][agents: 2][optimization time 0.1650543212890625]
+----------------------------------------
+[info][singleagent][blocksworld] task 04 takes 0.15 sec, found a plan with cost 12.0
+['b4 is clear and all hands are empty.']
+[info][subgoal_1][blocksworld] task 04 takes 0.13 sec, found a plan with cost 4.0
+validating
+validator time 0.006036520004272461
+[info][multiagent main goal][blocksworld] task 04 takes 0.13 sec, found a plan with cost 8.0
+TASK: blocksworld - 1000 - 04
+11.0 True
+[results][blocksworld][04]
+[single_agent][planning time: 0.15][cost: 12.0]
+[multi_agent][planning_time: 2.1820931529998777][cost: 11.0][agents: 2][optimization time 0.3086385726928711]
+----------------------------------------
+[info][singleagent][blocksworld] task 05 takes 0.11 sec, found a plan with cost 8.0
+['b3 is clear and all hands are empty.']
+[info][subgoal_1][blocksworld] task 05 takes 0.13 sec, found a plan with cost 6.0
+validating
+validator time 0.006542205810546875
+[info][multiagent main goal][blocksworld] task 05 takes 0.12 sec, found a plan with cost 2.0
+TASK: blocksworld - 1000 - 05
+6.0 True
+[results][blocksworld][05]
+[single_agent][planning time: 0.11][cost: 8.0]
+[multi_agent][planning_time: 2.465345621109009][cost: 6.0][agents: 2][optimization time 0.20395731925964355]
+----------------------------------------
+[info][singleagent][blocksworld] task 06 takes 0.12 sec, found a plan with cost 12.0
+['b2 is clear and all hands are empty.']
+[info][subgoal_1][blocksworld] task 06 takes 0.13 sec, found a plan with cost 6.0
+validating
+validator time 0.0066297054290771484
+[info][multiagent main goal][blocksworld] task 06 takes 0.15 sec, found a plan with cost 8.0
+TASK: blocksworld - 1000 - 06
+13.0 True
+[results][blocksworld][06]
+[single_agent][planning time: 0.12][cost: 12.0]
+[multi_agent][planning_time: 2.1200051593780516][cost: 13.0][agents: 2][optimization time 0.3515586853027344]
+----------------------------------------
+[info][singleagent][blocksworld] task 07 takes 0.13 sec, found a plan with cost 8.0
+['b5 is clear and all hands are empty.']
+[info][subgoal_1][blocksworld] task 07 takes 99.72 sec, no solution found
+validating
+validator time 0.006075859069824219
+[info][multiagent main goal][blocksworld] task 07 takes 0.12 sec, found a plan with cost 8.0
+TASK: blocksworld - 1000 - 07
+8 True
+[results][blocksworld][07]
+[single_agent][planning time: 0.13][cost: 8.0]
+[multi_agent][planning_time: 1.1348518085479737][cost: 8.0][agents: 2][optimization time 0.9300048351287842]
+----------------------------------------
+[info][singleagent][blocksworld] task 08 takes 0.15 sec, found a plan with cost 14.0
+['b1 is clear and all hands are empty.']
+[info][subgoal_1][blocksworld] task 08 takes 0.14 sec, found a plan with cost 6.0
+validating
+validator time 0.00670170783996582
+[info][multiagent main goal][blocksworld] task 08 takes 0.14 sec, found a plan with cost 8.0
+TASK: blocksworld - 1000 - 08
+13.0 True
+[results][blocksworld][08]
+[single_agent][planning time: 0.15][cost: 14.0]
+[multi_agent][planning_time: 2.801535158157349][cost: 13.0][agents: 2][optimization time 0.30011677742004395]
+----------------------------------------
+[info][singleagent][blocksworld] task 09 takes 1.25 sec, found a plan with cost 14.0
+['b1 is on top of b2 and all hands are empty.']
+[info][subgoal_1][blocksworld] task 09 takes 0.14 sec, found a plan with cost 2.0
+validating
+validator time 0.006391286849975586
+[info][multiagent main goal][blocksworld] task 09 takes 1.68 sec, found a plan with cost 16.0
+TASK: blocksworld - 1000 - 09
+16.0 True
+[results][blocksworld][09]
+[single_agent][planning time: 1.25][cost: 14.0]
+[multi_agent][planning_time: 4.223458595275879][cost: 16.0][agents: 2][optimization time 1.3106968402862549]
+----------------------------------------
+[info][singleagent][blocksworld] task 10 takes 1.52 sec, found a plan with cost 18.0
+['b1 is on top of b7 and all hands are empty.']
+[info][subgoal_1][blocksworld] task 10 takes 0.14 sec, found a plan with cost 6.0
+validating
+validator time 0.006694793701171875
+[info][multiagent main goal][blocksworld] task 10 takes 0.92 sec, found a plan with cost 18.0
+TASK: blocksworld - 1000 - 10
+18.0 True
+[results][blocksworld][10]
+[single_agent][planning time: 1.52][cost: 18.0]
+[multi_agent][planning_time: 3.3704727268218995][cost: 18.0][agents: 2][optimization time 1.7908682823181152]
+----------------------------------------
+[info][singleagent][blocksworld] task 11 takes 11.57 sec, found a plan with cost 22.0
+['b3 is clear and all hands are empty.']
+[info][subgoal_1][blocksworld] task 11 takes 0.12 sec, found a plan with cost 2.0
+validating
+validator time 0.006346225738525391
+[info][multiagent main goal][blocksworld] task 11 takes 11.56 sec, found a plan with cost 20.0
+TASK: blocksworld - 1000 - 11
+21.0 True
+[results][blocksworld][11]
+[single_agent][planning time: 11.57][cost: 22.0]
+[multi_agent][planning_time: 13.353744678497314][cost: 21.0][agents: 2][optimization time 0.564183235168457]
+----------------------------------------
+[info][singleagent][blocksworld] task 12 takes 13.05 sec, found a plan with cost 20.0
+['b1 is clear and all hands are empty.']
+[info][subgoal_1][blocksworld] task 12 takes 0.14 sec, found a plan with cost 4.0
+validating
+validator time 0.0065975189208984375
+[info][multiagent main goal][blocksworld] task 12 takes 12.07 sec, found a plan with cost 16.0
+TASK: blocksworld - 1000 - 12
+18.0 True
+[results][blocksworld][12]
+[single_agent][planning time: 13.05][cost: 20.0]
+[multi_agent][planning_time: 14.12408395767212][cost: 18.0][agents: 2][optimization time 0.6574704647064209]
+----------------------------------------
+[info][singleagent][blocksworld] task 13 takes 100.1 sec, found a plan with cost 26.0
+['b2 is clear and all hands are empty.']
+[info][subgoal_1][blocksworld] task 13 takes 0.15 sec, found a plan with cost 8.0
+validating
+validator time 0.006214618682861328
+[info][multiagent main goal][blocksworld] task 13 takes 87.13 sec, found a plan with cost 20.0
+TASK: blocksworld - 1000 - 13
+25.0 True
+[results][blocksworld][13]
+[single_agent][planning time: 100.1][cost: 26.0]
+[multi_agent][planning_time: 89.33738997459412][cost: 25.0][agents: 2][optimization time 1.030317783355713]
+----------------------------------------
+[info][singleagent][blocksworld] task 14 takes 73.15 sec, found a plan with cost 22.0
+['b1 is on top of b2 and all hands are empty.']
+[info][subgoal_1][blocksworld] task 14 takes 0.43 sec, found a plan with cost 10.0
+validating
+validator time 0.00702977180480957
+[info][multiagent main goal][blocksworld] task 14 takes 100.11 sec, found a plan with cost 20.0
+TASK: blocksworld - 1000 - 14
+25.0 True
+[results][blocksworld][14]
+[single_agent][planning time: 73.15][cost: 22.0]
+[multi_agent][planning_time: 103.01330498695374][cost: 25.0][agents: 2][optimization time 1.4262278079986572]
+----------------------------------------
+[info][singleagent][blocksworld] task 15 takes 100.08 sec, found a plan with cost 26.0
+['b1 is clear and all hands are empty.']
+[info][subgoal_1][blocksworld] task 15 takes 0.33 sec, found a plan with cost 16.0
+validating
+validator time 0.006650209426879883
+[info][multiagent main goal][blocksworld] task 15 takes 100.1 sec, found a plan with cost 14.0
+TASK: blocksworld - 1000 - 15
+28.0 True
+[results][blocksworld][15]
+[single_agent][planning time: 100.08][cost: 26.0]
+[multi_agent][planning_time: 102.70549171447753][cost: 28.0][agents: 2][optimization time 1.0037035942077637]
+----------------------------------------
+[info][singleagent][blocksworld] task 16 takes 100.13 sec, found a plan with cost 28.0
+['b1 is clear and all hands are empty.']
+[info][subgoal_1][blocksworld] task 16 takes 0.13 sec, found a plan with cost 2.0
+validating
+validator time 0.006193399429321289
+[info][multiagent main goal][blocksworld] task 16 takes 100.15 sec, found a plan with cost 28.0
+TASK: blocksworld - 1000 - 16
+28.0 True
+[results][blocksworld][16]
+[single_agent][planning time: 100.13][cost: 28.0]
+[multi_agent][planning_time: 102.22413256645203][cost: 28.0][agents: 2][optimization time 0.9678294658660889]
+----------------------------------------
+[info][singleagent][blocksworld] task 17 takes 100.1 sec, found a plan with cost 22.0
+['b7 is clear and all hands are empty.']
+[info][subgoal_1][blocksworld] task 17 takes 0.16 sec, found a plan with cost 6.0
+validating
+validator time 0.006376743316650391
+[info][multiagent main goal][blocksworld] task 17 takes 100.14 sec, found a plan with cost 18.0
+TASK: blocksworld - 1000 - 17
+21.0 True
+[results][blocksworld][17]
+[single_agent][planning time: 100.1][cost: 22.0]
+[multi_agent][planning_time: 102.23423652648925][cost: 21.0][agents: 2][optimization time 0.9552481174468994]
+----------------------------------------
+[info][singleagent][blocksworld] task 18 takes 100.12 sec, found a plan with cost 30.0
+['b1 is on top of b4 and all hands are empty.']
+[info][subgoal_1][blocksworld] task 18 takes 0.58 sec, found a plan with cost 14.0
+validating
+validator time 0.007392168045043945
+[info][multiagent main goal][blocksworld] task 18 takes 100.15 sec, found a plan with cost 22.0
+TASK: blocksworld - 1000 - 18
+35.0 True
+[results][blocksworld][18]
+[single_agent][planning time: 100.12][cost: 30.0]
+[multi_agent][planning_time: 102.91876791000367][cost: 35.0][agents: 2][optimization time 0.9155428409576416]
+----------------------------------------
+[info][singleagent][blocksworld] task 19 takes 100.12 sec, found a plan with cost 24.0
+['b5 is on top of b10 and all hands are empty.']
+[info][subgoal_1][blocksworld] task 19 takes 0.39 sec, found a plan with cost 8.0
+validating
+validator time 0.007096767425537109
+[info][multiagent main goal][blocksworld] task 19 takes 100.14 sec, found a plan with cost 22.0
+TASK: blocksworld - 1000 - 19
+24.0 True
+[results][blocksworld][19]
+[single_agent][planning time: 100.12][cost: 24.0]
+[multi_agent][planning_time: 103.7585602092743][cost: 24.0][agents: 2][optimization time 1.3533682823181152]
+----------------------------------------
+[info][singleagent][blocksworld] task 20 takes 100.15 sec, found a plan with cost 30.0
+['b1 is clear and all hands are empty.']
+[info][subgoal_1][blocksworld] task 20 takes 0.64 sec, found a plan with cost 10.0
+validating
+validator time 0.007093906402587891
+[info][multiagent main goal][blocksworld] task 20 takes 100.16 sec, found a plan with cost 20.0
+TASK: blocksworld - 1000 - 20
+27.0 True
+[results][blocksworld][20]
+[single_agent][planning time: 100.15][cost: 30.0]
+[multi_agent][planning_time: 103.06333975791931][cost: 27.0][agents: 2][optimization time 1.0335032939910889]
+----------------------------------------
+[info][singleagent][grippers] task 01 takes 0.1 sec, found a plan with cost 5.0
+["Ball1 is in room2 and robot1's grippers are free."]
+[info][subgoal_1][grippers] task 01 takes 0.12 sec, found a plan with cost 3.0
+validating
+validator time 0.004731655120849609
+[info][multiagent main goal][grippers] task 01 takes 0.11 sec, found a plan with cost 3.0
+TASK: grippers - 1000 - 01
+3.0 True
+[results][grippers][01]
+[single_agent][planning time: 0.1][cost: 5.0]
+[multi_agent][planning_time: 3.2966568279266357][cost: 3.0][agents: 2][optimization time 0.2824516296386719]
+----------------------------------------
+[info][singleagent][grippers] task 02 takes 0.13 sec, found a plan with cost 9.0
+['The final goal condition for agent1 is: ball1 is in room2 and all grippers are free.']
+[info][subgoal_1][grippers] task 02 takes 0.13 sec, found a plan with cost 4.0
+validating
+validator time 0.006732463836669922
+[info][multiagent main goal][grippers] task 02 takes 0.11 sec, found a plan with cost 7.0
+TASK: grippers - 1000 - 02
+7.0 True
+[results][grippers][02]
+[single_agent][planning time: 0.13][cost: 9.0]
+[multi_agent][planning_time: 4.313764801025391][cost: 7.0][agents: 2][optimization time 0.8298711776733398]
+----------------------------------------
+[info][singleagent][grippers] task 03 takes 0.1 sec, found a plan with cost 6.0
+['ball1 is in room5 and all grippers are free.']
+[info][subgoal_1][grippers] task 03 takes 0.12 sec, found a plan with cost 3.0
+validating
+validator time 0.006655216217041016
+[info][multiagent main goal][grippers] task 03 takes 0.13 sec, found a plan with cost 3.0
+TASK: grippers - 1000 - 03
+3.0 True
+[results][grippers][03]
+[single_agent][planning time: 0.1][cost: 6.0]
+[multi_agent][planning_time: 2.8016650676727295][cost: 3.0][agents: 2][optimization time 0.2910337448120117]
+----------------------------------------
+[info][singleagent][grippers] task 04 takes 0.1 sec, found a plan with cost 4.0
+['ball3 is in room3 and all grippers are free.']
+[info][subgoal_1][grippers] task 04 takes 0.13 sec, found a plan with cost 4.0
+validating
+validator time 0.006754159927368164
+[info][multiagent main goal][grippers] task 04 takes 99.72 sec, no solution found
+TASK: grippers - 1000 - 04
+4 True
+[results][grippers][04]
+[single_agent][planning time: 0.1][cost: 4.0]
+[multi_agent][planning_time: 2.300136213302612][cost: 4.0][agents: 2][optimization time 0.708441972732544]
+----------------------------------------
+[info][singleagent][grippers] task 05 takes 0.1 sec, found a plan with cost 4.0
+['Ball3 is in room2 and all grippers are free.']
+[info][subgoal_1][grippers] task 05 takes 0.12 sec, found a plan with cost 4.0
+validating
+validator time 0.006513357162475586
+[info][multiagent main goal][grippers] task 05 takes 99.73 sec, no solution found
+TASK: grippers - 1000 - 05
+4 True
+[results][grippers][05]
+[single_agent][planning time: 0.1][cost: 4.0]
+[multi_agent][planning_time: 2.0164436054229737][cost: 4.0][agents: 2][optimization time 0.7536759376525879]
+----------------------------------------
+[info][singleagent][grippers] task 06 takes 0.11 sec, found a plan with cost 4.0
+['Ball1 is in the gripper of robot1.']
+reattempting planner
+list index out of range
+Traceback (most recent call last):
+  File "/data/ishika/david/multiagent_helper_llmp/helper_script_n_agents.py", line 256, in <module>
+    planner.get_updated_init_conditions(path, validation_filename=f"./{path}/p{args.task_id}_{i}_validation.txt", pddl_problem_filename=init_problem, pddl_problem_filename_edited=init_problem_out,is_main=main_goal)
+  File "/data/ishika/david/multiagent_helper_llmp/modules/planner.py", line 140, in get_updated_init_conditions
+    with open(validation_filename, 'r') as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: './experiments_multiagent_help/run1000/grippers/p06_1_validation.txt'
+----------------------------------------
+[info][singleagent][grippers] task 07 takes 0.14 sec, found a plan with cost 8.0
+['Ball1 is in room2 and all grippers are free.']
+[info][subgoal_1][grippers] task 07 takes 0.13 sec, found a plan with cost 3.0
+validating
+validator time 0.006054401397705078
+[info][multiagent main goal][grippers] task 07 takes 0.14 sec, found a plan with cost 6.0
+TASK: grippers - 1000 - 07
+6.0 True
+[results][grippers][07]
+[single_agent][planning time: 0.14][cost: 8.0]
+[multi_agent][planning_time: 2.460216302871704][cost: 6.0][agents: 2][optimization time 0.49665117263793945]
+----------------------------------------
+[info][singleagent][grippers] task 08 takes 0.13 sec, found a plan with cost 11.0
+['Ball1 is in room1 and all grippers are free.']
+[info][subgoal_1][grippers] task 08 takes 0.13 sec, found a plan with cost 3.0
+validating
+validator time 0.006545305252075195
+[info][multiagent main goal][grippers] task 08 takes 0.14 sec, found a plan with cost 8.0
+TASK: grippers - 1000 - 08
+8.0 True
+[results][grippers][08]
+[single_agent][planning time: 0.13][cost: 11.0]
+[multi_agent][planning_time: 2.5325365257263184][cost: 8.0][agents: 2][optimization time 0.7025537490844727]
+----------------------------------------
+[info][singleagent][grippers] task 09 takes 7.75 sec, found a plan with cost 17.0
+['ball1 is in room1 and all grippers are free.']
+[info][subgoal_1][grippers] task 09 takes 0.13 sec, found a plan with cost 3.0
+validating
+validator time 0.006611824035644531
+[info][multiagent main goal][grippers] task 09 takes 3.29 sec, found a plan with cost 15.0
+TASK: grippers - 1000 - 09
+15.0 True
+[results][grippers][09]
+[single_agent][planning time: 7.75][cost: 17.0]
+[multi_agent][planning_time: 5.805429382324219][cost: 15.0][agents: 2][optimization time 1.50203275680542]
+----------------------------------------
+[info][singleagent][grippers] task 10 takes 0.11 sec, found a plan with cost 10.0
+['Ball3 is in room1 and all grippers are free.']
+[info][subgoal_1][grippers] task 10 takes 0.13 sec, found a plan with cost 4.0
+validating
+validator time 0.00629425048828125
+[info][multiagent main goal][grippers] task 10 takes 0.13 sec, found a plan with cost 6.0
+TASK: grippers - 1000 - 10
+6.0 True
+[results][grippers][10]
+[single_agent][planning time: 0.11][cost: 10.0]
+[multi_agent][planning_time: 5.7811362838745115][cost: 6.0][agents: 2][optimization time 0.6523141860961914]
+----------------------------------------
+[info][singleagent][grippers] task 11 takes 0.11 sec, found a plan with cost 3.0
+['ball3 is in room2 and all grippers are free.']
+[info][subgoal_1][grippers] task 11 takes 0.12 sec, found a plan with cost 3.0
+validating
+validator time 0.005964040756225586
+[info][multiagent main goal][grippers] task 11 takes 99.75 sec, no solution found
+TASK: grippers - 1000 - 11
+3 True
+[results][grippers][11]
+[single_agent][planning time: 0.11][cost: 3.0]
+[multi_agent][planning_time: 1.4021354866027833][cost: 3.0][agents: 2][optimization time 0.7801778316497803]
+----------------------------------------
+[info][singleagent][grippers] task 12 takes 0.17 sec, found a plan with cost 9.0
+['ball2 is in room1 and all grippers are free.']
+[info][subgoal_1][grippers] task 12 takes 0.13 sec, found a plan with cost 3.0
+validating
+validator time 0.006430387496948242
+[info][multiagent main goal][grippers] task 12 takes 0.14 sec, found a plan with cost 7.0
+TASK: grippers - 1000 - 12
+7.0 True
+[results][grippers][12]
+[single_agent][planning time: 0.17][cost: 9.0]
+[multi_agent][planning_time: 2.669921417236328][cost: 7.0][agents: 2][optimization time 0.6058640480041504]
+----------------------------------------
+[info][singleagent][grippers] task 13 takes 0.12 sec, found a plan with cost 6.0
+['Ball1 is in room1 and all grippers are free.']
+[info][subgoal_1][grippers] task 13 takes 0.13 sec, found a plan with cost 4.0
+validating
+validator time 0.0065021514892578125
+[info][multiagent main goal][grippers] task 13 takes 0.12 sec, found a plan with cost 4.0
+TASK: grippers - 1000 - 13
+4.0 True
+[results][grippers][13]
+[single_agent][planning time: 0.12][cost: 6.0]
+[multi_agent][planning_time: 2.8592212200164795][cost: 4.0][agents: 2][optimization time 0.5490763187408447]
+----------------------------------------
+[info][singleagent][grippers] task 14 takes 0.12 sec, found a plan with cost 6.0
+['Ball2 is in room4 and all grippers are free.']
+[info][subgoal_1][grippers] task 14 takes 0.13 sec, found a plan with cost 4.0
+validating
+validator time 0.006594181060791016
+[info][multiagent main goal][grippers] task 14 takes 0.12 sec, found a plan with cost 4.0
+TASK: grippers - 1000 - 14
+4.0 True
+[results][grippers][14]
+[single_agent][planning time: 0.12][cost: 6.0]
+[multi_agent][planning_time: 2.863802194595337][cost: 4.0][agents: 2][optimization time 0.475907564163208]
+----------------------------------------
+[info][singleagent][grippers] task 15 takes 0.15 sec, found a plan with cost 10.0
+['ball1 is in room5 and all grippers are free.']
+[info][subgoal_1][grippers] task 15 takes 0.13 sec, found a plan with cost 4.0
+validating
+validator time 0.006537199020385742
+[info][multiagent main goal][grippers] task 15 takes 0.15 sec, found a plan with cost 8.0
+TASK: grippers - 1000 - 15
+8.0 True
+[results][grippers][15]
+[single_agent][planning time: 0.15][cost: 10.0]
+[multi_agent][planning_time: 2.942534236907959][cost: 8.0][agents: 2][optimization time 0.8500385284423828]
+----------------------------------------
+[info][singleagent][grippers] task 16 takes 17.54 sec, found a plan with cost 19.0
+['ball3 is in room1 and all grippers are free.']
+[info][subgoal_1][grippers] task 16 takes 0.13 sec, found a plan with cost 4.0
+validating
+validator time 0.006886959075927734
+[info][multiagent main goal][grippers] task 16 takes 7.71 sec, found a plan with cost 16.0
+TASK: grippers - 1000 - 16
+16.0 True
+[results][grippers][16]
+[single_agent][planning time: 17.54][cost: 19.0]
+[multi_agent][planning_time: 10.408012237548828][cost: 16.0][agents: 2][optimization time 1.6732630729675293]
+----------------------------------------
+[info][singleagent][grippers] task 17 takes 0.13 sec, found a plan with cost 8.0
+['Ball3 is in room1 and all grippers are free.']
+[info][subgoal_1][grippers] task 17 takes 0.11 sec, found a plan with cost 4.0
+validating
+validator time 0.006530046463012695
+[info][multiagent main goal][grippers] task 17 takes 0.14 sec, found a plan with cost 6.0
+TASK: grippers - 1000 - 17
+6.0 True
+[results][grippers][17]
+[single_agent][planning time: 0.13][cost: 8.0]
+[multi_agent][planning_time: 3.4592607021331787][cost: 6.0][agents: 2][optimization time 0.6850366592407227]
+----------------------------------------
+[info][singleagent][grippers] task 18 takes 0.22 sec, found a plan with cost 9.0
+['ball1 is in room1 and all grippers are free.']
+[info][subgoal_1][grippers] task 18 takes 0.14 sec, found a plan with cost 4.0
+validating
+validator time 0.0063588619232177734
+[info][multiagent main goal][grippers] task 18 takes 0.14 sec, found a plan with cost 7.0
+TASK: grippers - 1000 - 18
+7.0 True
+[results][grippers][18]
+[single_agent][planning time: 0.22][cost: 9.0]
+[multi_agent][planning_time: 4.314250736236572][cost: 7.0][agents: 2][optimization time 0.7717409133911133]
+----------------------------------------
+[info][singleagent][grippers] task 19 takes 3.54 sec, found a plan with cost 17.0
+['ball1 is in room3 and all grippers are free.']
+[info][subgoal_1][grippers] task 19 takes 0.13 sec, found a plan with cost 4.0
+validating
+validator time 0.006595134735107422
+[info][multiagent main goal][grippers] task 19 takes 6.35 sec, found a plan with cost 15.0
+TASK: grippers - 1000 - 19
+15.0 True
+[results][grippers][19]
+[single_agent][planning time: 3.54][cost: 17.0]
+[multi_agent][planning_time: 10.35097430229187][cost: 15.0][agents: 2][optimization time 1.5537006855010986]
+----------------------------------------
+[info][singleagent][grippers] task 20 takes 0.1 sec, found a plan with cost 7.0
+['ball1 is in room3 and all grippers are free.']
+[info][subgoal_1][grippers] task 20 takes 0.12 sec, found a plan with cost 4.0
+validating
+validator time 0.0063893795013427734
+[info][multiagent main goal][grippers] task 20 takes 0.12 sec, found a plan with cost 4.0
+TASK: grippers - 1000 - 20
+4.0 True
+[results][grippers][20]
+[single_agent][planning time: 0.1][cost: 7.0]
+[multi_agent][planning_time: 3.540343990325928][cost: 4.0][agents: 2][optimization time 0.4398055076599121]
+----------------------------------------
+[info][singleagent][tyreworld] task 01 takes 0.18 sec, found a plan with cost 13.0
+['The intact tyre is inflated and all hands are empty.']
+[info][subgoal_1][tyreworld] task 01 takes 0.13 sec, found a plan with cost 1.0
+validating
+validator time 0.0070002079010009766
+[info][multiagent main goal][tyreworld] task 01 takes 0.16 sec, found a plan with cost 12.0
+TASK: tyreworld - 1000 - 01
+12 True
+[results][tyreworld][01]
+[single_agent][planning time: 0.18][cost: 13.0]
+[multi_agent][planning_time: 2.419159450531006][cost: 12.0][agents: 2][optimization time 0.5068798065185547]
+----------------------------------------
+[info][singleagent][tyreworld] task 02 takes 100.15 sec, found a plan with cost 101.0
+['The hub1 has an inflated intact tyre and the nuts are tight on hub1. All hands are empty.']
+reattempting planner
+list index out of range
+Traceback (most recent call last):
+  File "/data/ishika/david/multiagent_helper_llmp/helper_script_n_agents.py", line 256, in <module>
+    planner.get_updated_init_conditions(path, validation_filename=f"./{path}/p{args.task_id}_{i}_validation.txt", pddl_problem_filename=init_problem, pddl_problem_filename_edited=init_problem_out,is_main=main_goal)
+  File "/data/ishika/david/multiagent_helper_llmp/modules/planner.py", line 140, in get_updated_init_conditions
+    with open(validation_filename, 'r') as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: './experiments_multiagent_help/run1000/tyreworld/p02_1_validation.txt'
+----------------------------------------
+[info][singleagent][tyreworld] task 03 takes 100.18 sec, found a plan with cost 35.0
+['The hub3 has an inflated intact tyre and the nut3 is tight on the hub3. All hands are empty.']
+[info][subgoal_1][tyreworld] task 03 takes 1.0 sec, found a plan with cost 11.0
+validating
+validator time 0.009168624877929688
+[info][multiagent main goal][tyreworld] task 03 takes 100.14 sec, found a plan with cost 24.0
+TASK: tyreworld - 1000 - 03
+24.0 True
+[results][tyreworld][03]
+[single_agent][planning time: 100.18][cost: 35.0]
+[multi_agent][planning_time: 105.06097330093384][cost: 24.0][agents: 2][optimization time 5.608959913253784]
+----------------------------------------
+[info][singleagent][tyreworld] task 04 takes 100.15 sec, found a plan with cost 46.0
+['The hub1 has an inflated intact tyre and the nuts on hub1 are tight.']
+[info][subgoal_1][tyreworld] task 04 takes 3.75 sec, found a plan with cost 11.0
+validating
+validator time 0.009341955184936523
+[info][multiagent main goal][tyreworld] task 04 takes 100.17 sec, found a plan with cost 35.0
+TASK: tyreworld - 1000 - 04
+35.0 True
+[results][tyreworld][04]
+[single_agent][planning time: 100.15][cost: 46.0]
+[multi_agent][planning_time: 107.1805094909668][cost: 35.0][agents: 2][optimization time 8.484802007675171]
+----------------------------------------
+[info][singleagent][tyreworld] task 05 takes 100.16 sec, found a plan with cost 57.0
+['The intact tyre1 is inflated and all hands are empty.']
+reattempting planner
+list index out of range
+Traceback (most recent call last):
+  File "/data/ishika/david/multiagent_helper_llmp/helper_script_n_agents.py", line 256, in <module>
+    planner.get_updated_init_conditions(path, validation_filename=f"./{path}/p{args.task_id}_{i}_validation.txt", pddl_problem_filename=init_problem, pddl_problem_filename_edited=init_problem_out,is_main=main_goal)
+  File "/data/ishika/david/multiagent_helper_llmp/modules/planner.py", line 140, in get_updated_init_conditions
+    with open(validation_filename, 'r') as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: './experiments_multiagent_help/run1000/tyreworld/p05_1_validation.txt'
+----------------------------------------
+[info][singleagent][tyreworld] task 06 takes 100.16 sec, found a plan with cost 68.0
+['The hub1 has an inflated intact tyre and the nuts on hub1 are tight.']
+[info][subgoal_1][tyreworld] task 06 takes 65.31 sec, found a plan with cost 11.0
+validating
+validator time 0.008913755416870117
+[info][multiagent main goal][tyreworld] task 06 takes 100.21 sec, found a plan with cost 57.0
+TASK: tyreworld - 1000 - 06
+57.0 True
+[results][tyreworld][06]
+[single_agent][planning time: 100.16][cost: 68.0]
+[multi_agent][planning_time: 170.43972255706785][cost: 57.0][agents: 2][optimization time 14.622464656829834]
+----------------------------------------
+[info][singleagent][tyreworld] task 07 takes 100.19 sec, found a plan with cost 79.0
+['The hub1 has an inflated intact tyre and the nuts on hub1 are tight.']
+[info][subgoal_1][tyreworld] task 07 takes 100.14 sec, found a plan with cost 11.0
+validating
+validator time 0.009894847869873047
+[info][multiagent main goal][tyreworld] task 07 takes 100.22 sec, found a plan with cost 68.0
+TASK: tyreworld - 1000 - 07
+68.0 True
+[results][tyreworld][07]
+[single_agent][planning time: 100.19][cost: 79.0]
+[multi_agent][planning_time: 204.9314569091797][cost: 68.0][agents: 2][optimization time 22.371840715408325]
+----------------------------------------
+[info][singleagent][tyreworld] task 08 takes 100.17 sec, found a plan with cost 90.0
+['The hub1 has an inflated intact tyre, the nuts on hub1 are tight, and the flat tyre is in the boot. All hands are empty.']
+reattempting planner
+list index out of range
+Traceback (most recent call last):
+  File "/data/ishika/david/multiagent_helper_llmp/helper_script_n_agents.py", line 256, in <module>
+    planner.get_updated_init_conditions(path, validation_filename=f"./{path}/p{args.task_id}_{i}_validation.txt", pddl_problem_filename=init_problem, pddl_problem_filename_edited=init_problem_out,is_main=main_goal)
+  File "/data/ishika/david/multiagent_helper_llmp/modules/planner.py", line 140, in get_updated_init_conditions
+    with open(validation_filename, 'r') as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: './experiments_multiagent_help/run1000/tyreworld/p08_1_validation.txt'
+----------------------------------------
+[info][singleagent][tyreworld] task 09 takes 100.22 sec, found a plan with cost 101.0
+['The hub1 has an inflated intact tyre and the nuts on hub1 are tight.']
+[info][subgoal_1][tyreworld] task 09 takes 100.17 sec, found a plan with cost 11.0
+validating
+validator time 0.010030031204223633
+[info][multiagent main goal][tyreworld] task 09 takes 100.23 sec, found a plan with cost 90.0
+TASK: tyreworld - 1000 - 09
+90.0 True
+[results][tyreworld][09]
+[single_agent][planning time: 100.22][cost: 101.0]
+[multi_agent][planning_time: 203.65133419036866][cost: 90.0][agents: 2][optimization time 25.56284475326538]
+----------------------------------------
+[info][singleagent][tyreworld] task 10 takes 100.22 sec, found a plan with cost 112.0
+['The hub5 has an inflated intact tyre and the nuts on hub5 are tight.']
+[info][subgoal_1][tyreworld] task 10 takes 100.2 sec, found a plan with cost 11.0
+validating
+validator time 0.007508039474487305
+[info][multiagent main goal][tyreworld] task 10 takes 100.21 sec, found a plan with cost 101.0
+TASK: tyreworld - 1000 - 10
+101.0 True
+[results][tyreworld][10]
+[single_agent][planning time: 100.22][cost: 112.0]
+[multi_agent][planning_time: 203.84338894844055][cost: 101.0][agents: 2][optimization time 33.562626123428345]
+----------------------------------------
+[info][singleagent][tyreworld] task 11 takes 100.23 sec, found a plan with cost 123.0
+['The hub1 has an inflated intact tyre and the nuts are tight on hub1. All hands are empty.']
+reattempting planner
+list index out of range
+Traceback (most recent call last):
+  File "/data/ishika/david/multiagent_helper_llmp/helper_script_n_agents.py", line 256, in <module>
+    planner.get_updated_init_conditions(path, validation_filename=f"./{path}/p{args.task_id}_{i}_validation.txt", pddl_problem_filename=init_problem, pddl_problem_filename_edited=init_problem_out,is_main=main_goal)
+  File "/data/ishika/david/multiagent_helper_llmp/modules/planner.py", line 140, in get_updated_init_conditions
+    with open(validation_filename, 'r') as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: './experiments_multiagent_help/run1000/tyreworld/p11_1_validation.txt'
+----------------------------------------
+[info][singleagent][tyreworld] task 12 takes 100.19 sec, found a plan with cost 134.0
+['The hub1 has an inflated intact tyre and the nuts on hub1 are tight.']
+[info][subgoal_1][tyreworld] task 12 takes 100.23 sec, found a plan with cost 11.0
+validating
+validator time 0.010703802108764648
+[info][multiagent main goal][tyreworld] task 12 takes 100.27 sec, found a plan with cost 123.0
+TASK: tyreworld - 1000 - 12
+123.0 True
+[results][tyreworld][12]
+[single_agent][planning time: 100.19][cost: 134.0]
+[multi_agent][planning_time: 204.3806130886078][cost: 123.0][agents: 2][optimization time 39.57979130744934]
+----------------------------------------
+[info][singleagent][tyreworld] task 13 takes 100.26 sec, found a plan with cost 145.0
+['The hub7 has an inflated intact tyre and the nuts are tight on hub7.']
+[info][subgoal_1][tyreworld] task 13 takes 100.27 sec, found a plan with cost 11.0
+validating
+validator time 0.0109710693359375
+[info][multiagent main goal][tyreworld] task 13 takes 100.29 sec, found a plan with cost 134.0
+TASK: tyreworld - 1000 - 13
+134.0 True
+[results][tyreworld][13]
+[single_agent][planning time: 100.26][cost: 145.0]
+[multi_agent][planning_time: 203.6593070602417][cost: 134.0][agents: 2][optimization time 41.34361171722412]
+----------------------------------------
+[info][singleagent][tyreworld] task 14 takes 100.27 sec, found a plan with cost 156.0
+['The hub7 has an inflated intact tyre and the nuts on hub7 are tight.']
+[info][subgoal_1][tyreworld] task 14 takes 100.29 sec, found a plan with cost 11.0
+validating
+validator time 0.011058568954467773
+[info][multiagent main goal][tyreworld] task 14 takes 100.3 sec, found a plan with cost 145.0
+TASK: tyreworld - 1000 - 14
+145.0 True
+[results][tyreworld][14]
+[single_agent][planning time: 100.27][cost: 156.0]
+[multi_agent][planning_time: 203.51347431182862][cost: 145.0][agents: 2][optimization time 52.51288175582886]
+----------------------------------------
+[info][singleagent][tyreworld] task 15 takes 100.31 sec, found a plan with cost 167.0
+['The hub1 has an inflated intact tyre and the nuts are tight on the hub1.']
+[info][subgoal_1][tyreworld] task 15 takes 100.33 sec, found a plan with cost 11.0
+validating
+validator time 0.03627634048461914
+[info][multiagent main goal][tyreworld] task 15 takes 100.2 sec, found a plan with cost 156.0
+TASK: tyreworld - 1000 - 15
+156.0 True
+[results][tyreworld][15]
+[single_agent][planning time: 100.31][cost: 167.0]
+[multi_agent][planning_time: 203.5064440059662][cost: 156.0][agents: 2][optimization time 53.73019099235535]
+----------------------------------------
+[info][singleagent][tyreworld] task 16 takes 100.32 sec, found a plan with cost 178.0
+['The hub1 has an inflated intact tyre and the nuts on hub1 are tight. All hands are empty.']
+reattempting planner
+list index out of range
+Traceback (most recent call last):
+  File "/data/ishika/david/multiagent_helper_llmp/helper_script_n_agents.py", line 256, in <module>
+    planner.get_updated_init_conditions(path, validation_filename=f"./{path}/p{args.task_id}_{i}_validation.txt", pddl_problem_filename=init_problem, pddl_problem_filename_edited=init_problem_out,is_main=main_goal)
+  File "/data/ishika/david/multiagent_helper_llmp/modules/planner.py", line 140, in get_updated_init_conditions
+    with open(validation_filename, 'r') as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: './experiments_multiagent_help/run1000/tyreworld/p16_1_validation.txt'
+----------------------------------------
+[info][singleagent][tyreworld] task 17 takes 100.34 sec, found a plan with cost 189.0
+['The hub1 has an inflated intact tyre, the nuts on hub1 are tight, and the flat tyre is in the boot.']
+[info][subgoal_1][tyreworld] task 17 takes 100.32 sec, found a plan with cost 12.0
+validating
+validator time 0.004560708999633789
+[info][multiagent main goal][tyreworld] task 17 takes 100.33 sec, found a plan with cost 177.0
+TASK: tyreworld - 1000 - 17
+177.0 True
+[results][tyreworld][17]
+[single_agent][planning time: 100.34][cost: 189.0]
+[multi_agent][planning_time: 204.9807304382324][cost: 177.0][agents: 2][optimization time 73.65062427520752]
+----------------------------------------
+[info][singleagent][tyreworld] task 18 takes 100.36 sec, found a plan with cost 200.0
+['The hub1 has an inflated intact tyre and the nuts are tight on the hub1. All hands are empty.']
+reattempting planner
+list index out of range
+Traceback (most recent call last):
+  File "/data/ishika/david/multiagent_helper_llmp/helper_script_n_agents.py", line 256, in <module>
+    planner.get_updated_init_conditions(path, validation_filename=f"./{path}/p{args.task_id}_{i}_validation.txt", pddl_problem_filename=init_problem, pddl_problem_filename_edited=init_problem_out,is_main=main_goal)
+  File "/data/ishika/david/multiagent_helper_llmp/modules/planner.py", line 140, in get_updated_init_conditions
+    with open(validation_filename, 'r') as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: './experiments_multiagent_help/run1000/tyreworld/p18_1_validation.txt'
+----------------------------------------
+[info][singleagent][tyreworld] task 19 takes 100.31 sec, found a plan with cost 211.0
+['The hub1 has an inflated intact tyre and the nuts are tight on hub1. All hands are empty.']
+reattempting planner
+list index out of range
+Traceback (most recent call last):
+  File "/data/ishika/david/multiagent_helper_llmp/helper_script_n_agents.py", line 256, in <module>
+    planner.get_updated_init_conditions(path, validation_filename=f"./{path}/p{args.task_id}_{i}_validation.txt", pddl_problem_filename=init_problem, pddl_problem_filename_edited=init_problem_out,is_main=main_goal)
+  File "/data/ishika/david/multiagent_helper_llmp/modules/planner.py", line 140, in get_updated_init_conditions
+    with open(validation_filename, 'r') as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: './experiments_multiagent_help/run1000/tyreworld/p19_1_validation.txt'
+----------------------------------------
+[info][singleagent][tyreworld] task 20 takes 100.44 sec, found a plan with cost 222.0
+['The hub10 has an inflated intact tyre and the nuts are tight on hub10.']
+[info][subgoal_1][tyreworld] task 20 takes 100.44 sec, found a plan with cost 11.0
+validating
+validator time 0.008036136627197266
+[info][multiagent main goal][tyreworld] task 20 takes 100.46 sec, found a plan with cost 211.0
+TASK: tyreworld - 1000 - 20
+maximum recursion depth exceeded while calling a Python object
+----------------------------------------
+[info][singleagent][barman] task 01 takes 100.16 sec, found a plan with cost 36.0
+['shaker1 contains ingredient1 and all hands are empty.']
+[info][subgoal_1][barman] task 01 takes 0.19 sec, found a plan with cost 4.0
+validating
+validator time 0.010979413986206055
+[info][multiagent main goal][barman] task 01 takes 48.1 sec, found a plan with cost 34.0
+TASK: barman - 1000 - 01
+37.0 True
+[results][barman][01]
+[single_agent][planning time: 100.16][cost: 36.0]
+[multi_agent][planning_time: 51.306995429992675][cost: 37.0][agents: 2][optimization time 0.966425895690918]
+----------------------------------------
+[info][singleagent][barman] task 02 takes 49.5 sec, found a plan with cost 36.0
+['shaker1 contains ingredient3 and all hands are empty.']
+[info][subgoal_1][barman] task 02 takes 0.18 sec, found a plan with cost 4.0
+validating
+validator time 0.010740041732788086
+[info][multiagent main goal][barman] task 02 takes 46.77 sec, found a plan with cost 34.0
+TASK: barman - 1000 - 02
+35.0 True
+[results][barman][02]
+[single_agent][planning time: 49.5][cost: 36.0]
+[multi_agent][planning_time: 49.362963151931766][cost: 35.0][agents: 2][optimization time 1.410590410232544]
+----------------------------------------
+[info][singleagent][barman] task 03 takes 100.14 sec, found a plan with cost 36.0
+['shaker1 contains ingredient1 and all hands are empty.']
+[info][subgoal_1][barman] task 03 takes 0.21 sec, found a plan with cost 4.0
+validating
+validator time 0.010840177536010742
+[info][multiagent main goal][barman] task 03 takes 45.89 sec, found a plan with cost 34.0
+TASK: barman - 1000 - 03
+37.0 True
+[results][barman][03]
+[single_agent][planning time: 100.14][cost: 36.0]
+[multi_agent][planning_time: 48.67177519798279][cost: 37.0][agents: 2][optimization time 1.006117343902588]
+----------------------------------------
+[info][singleagent][barman] task 04 takes 48.17 sec, found a plan with cost 36.0
+['shaker1 contains ingredient2 and all hands are empty.']
+[info][subgoal_1][barman] task 04 takes 0.2 sec, found a plan with cost 4.0
+validating
+validator time 0.010553598403930664
+[info][multiagent main goal][barman] task 04 takes 45.12 sec, found a plan with cost 34.0
+TASK: barman - 1000 - 04
+35.0 True
+[results][barman][04]
+[single_agent][planning time: 48.17][cost: 36.0]
+[multi_agent][planning_time: 48.58614189147949][cost: 35.0][agents: 2][optimization time 1.3813011646270752]
+----------------------------------------
+[info][singleagent][barman] task 05 takes 100.16 sec, found a plan with cost 49.0
+['shaker1 contains ingredient2 and all hands are empty.']
+[info][subgoal_1][barman] task 05 takes 0.24 sec, found a plan with cost 4.0
+validating
+validator time 0.011382341384887695
+[info][multiagent main goal][barman] task 05 takes 100.19 sec, found a plan with cost 47.0
+TASK: barman - 1000 - 05
+50.0 True
+[results][barman][05]
+[single_agent][planning time: 100.16][cost: 49.0]
+[multi_agent][planning_time: 103.39569681167602][cost: 50.0][agents: 2][optimization time 1.2897107601165771]
+----------------------------------------
+[info][singleagent][barman] task 06 takes 100.18 sec, found a plan with cost 49.0
+['shaker1 contains ingredient2 and all hands are empty.']
+[info][subgoal_1][barman] task 06 takes 0.22 sec, found a plan with cost 4.0
+validating
+validator time 0.008337259292602539
+[info][multiagent main goal][barman] task 06 takes 100.16 sec, found a plan with cost 47.0
+TASK: barman - 1000 - 06
+50.0 True
+[results][barman][06]
+[single_agent][planning time: 100.18][cost: 49.0]
+[multi_agent][planning_time: 103.21401823043823][cost: 50.0][agents: 2][optimization time 1.262514352798462]
+----------------------------------------
+[info][singleagent][barman] task 07 takes 100.16 sec, found a plan with cost 51.0
+['shaker1 contains ingredient2 and all hands are empty.']
+[info][subgoal_1][barman] task 07 takes 0.21 sec, found a plan with cost 4.0
+validating
+validator time 0.011168718338012695
+[info][multiagent main goal][barman] task 07 takes 100.17 sec, found a plan with cost 47.0
+TASK: barman - 1000 - 07
+48.0 True
+[results][barman][07]
+[single_agent][planning time: 100.16][cost: 51.0]
+[multi_agent][planning_time: 103.12780488014221][cost: 48.0][agents: 2][optimization time 1.7644755840301514]
+----------------------------------------
+[info][singleagent][barman] task 08 takes 100.14 sec, found a plan with cost 50.0
+['shaker1 contains ingredient2 and all hands are empty.']
+[info][subgoal_1][barman] task 08 takes 0.23 sec, found a plan with cost 4.0
+validating
+validator time 0.011155366897583008
+[info][multiagent main goal][barman] task 08 takes 100.18 sec, found a plan with cost 47.0
+TASK: barman - 1000 - 08
+48.0 True
+[results][barman][08]
+[single_agent][planning time: 100.14][cost: 50.0]
+[multi_agent][planning_time: 103.0464016532898][cost: 48.0][agents: 2][optimization time 1.7831692695617676]
+----------------------------------------
+[info][singleagent][barman] task 09 takes 100.18 sec, found a plan with cost 65.0
+['shaker1 contains ingredient1 and all hands are empty.']
+[info][subgoal_1][barman] task 09 takes 0.24 sec, found a plan with cost 4.0
+validating
+validator time 0.009310722351074219
+[info][multiagent main goal][barman] task 09 takes 100.19 sec, found a plan with cost 62.0
+TASK: barman - 1000 - 09
+65.0 True
+[results][barman][09]
+[single_agent][planning time: 100.18][cost: 65.0]
+[multi_agent][planning_time: 102.95579379081725][cost: 65.0][agents: 2][optimization time 1.6162488460540771]
+----------------------------------------
+[info][singleagent][barman] task 10 takes 100.14 sec, found a plan with cost 65.0
+['shaker1 contains ingredient2 and all hands are empty.']
+[info][subgoal_1][barman] task 10 takes 0.24 sec, found a plan with cost 4.0
+validating
+validator time 0.009325742721557617
+[info][multiagent main goal][barman] task 10 takes 100.2 sec, found a plan with cost 67.0
+TASK: barman - 1000 - 10
+67.0 True
+[results][barman][10]
+[single_agent][planning time: 100.14][cost: 65.0]
+[multi_agent][planning_time: 103.20879358291626][cost: 67.0][agents: 2][optimization time 2.78940749168396]
+----------------------------------------
+[info][singleagent][barman] task 11 takes 100.19 sec, found a plan with cost 65.0
+['shaker1 contains ingredient1 and all hands are empty.']
+[info][subgoal_1][barman] task 11 takes 0.24 sec, found a plan with cost 4.0
+validating
+validator time 0.008154153823852539
+[info][multiagent main goal][barman] task 11 takes 100.2 sec, found a plan with cost 62.0
+TASK: barman - 1000 - 11
+65.0 True
+[results][barman][11]
+[single_agent][planning time: 100.19][cost: 65.0]
+[multi_agent][planning_time: 103.56219190597534][cost: 65.0][agents: 2][optimization time 1.6342856884002686]
+----------------------------------------
+[info][singleagent][barman] task 12 takes 100.18 sec, found a plan with cost 65.0
+['shaker1 contains ingredient2 and all hands are empty.']
+[info][subgoal_1][barman] task 12 takes 0.26 sec, found a plan with cost 4.0
+validating
+validator time 0.008311033248901367
+[info][multiagent main goal][barman] task 12 takes 100.2 sec, found a plan with cost 61.0
+TASK: barman - 1000 - 12
+64.0 True
+[results][barman][12]
+[single_agent][planning time: 100.18][cost: 65.0]
+[multi_agent][planning_time: 103.20301052093507][cost: 64.0][agents: 2][optimization time 1.705245018005371]
+----------------------------------------
+[info][singleagent][barman] task 13 takes 100.23 sec, found a plan with cost 82.0
+['shaker1 contains ingredient2 and all hands are empty.']
+[info][subgoal_1][barman] task 13 takes 0.34 sec, found a plan with cost 4.0
+validating
+validator time 0.011272430419921875
+[info][multiagent main goal][barman] task 13 takes 100.23 sec, found a plan with cost 79.0
+TASK: barman - 1000 - 13
+80.0 True
+[results][barman][13]
+[single_agent][planning time: 100.23][cost: 82.0]
+[multi_agent][planning_time: 102.91154295921326][cost: 80.0][agents: 2][optimization time 3.1450870037078857]
+----------------------------------------
+[info][singleagent][barman] task 14 takes 100.22 sec, found a plan with cost 84.0
+['shaker1 contains ingredient2 and all hands are empty.']
+[info][subgoal_1][barman] task 14 takes 0.34 sec, found a plan with cost 4.0
+validating
+validator time 0.0063402652740478516
+[info][multiagent main goal][barman] task 14 takes 100.21 sec, found a plan with cost 77.0
+TASK: barman - 1000 - 14
+78.0 True
+[results][barman][14]
+[single_agent][planning time: 100.22][cost: 84.0]
+[multi_agent][planning_time: 102.9496558189392][cost: 78.0][agents: 2][optimization time 2.6823112964630127]
+----------------------------------------
+[info][singleagent][barman] task 15 takes 100.19 sec, found a plan with cost 83.0
+['shaker1 contains ingredient2 and all hands are empty.']
+[info][subgoal_1][barman] task 15 takes 0.34 sec, found a plan with cost 4.0
+validating
+validator time 0.010500907897949219
+[info][multiagent main goal][barman] task 15 takes 100.22 sec, found a plan with cost 77.0
+TASK: barman - 1000 - 15
+78.0 True
+[results][barman][15]
+[single_agent][planning time: 100.19][cost: 83.0]
+[multi_agent][planning_time: 104.59334641456604][cost: 78.0][agents: 2][optimization time 2.8536555767059326]
+----------------------------------------
+[info][singleagent][barman] task 16 takes 100.21 sec, found a plan with cost 82.0
+['shaker1 contains ingredient2 and all hands are empty.']
+[info][subgoal_1][barman] task 16 takes 0.32 sec, found a plan with cost 4.0
+validating
+validator time 0.012193918228149414
+[info][multiagent main goal][barman] task 16 takes 100.24 sec, found a plan with cost 80.0
+TASK: barman - 1000 - 16
+81.0 True
+[results][barman][16]
+[single_agent][planning time: 100.21][cost: 82.0]
+[multi_agent][planning_time: 104.08696776390074][cost: 81.0][agents: 2][optimization time 2.7087347507476807]
+----------------------------------------
+[info][singleagent][barman] task 17 takes 100.24 sec, found a plan with cost 126.0
+['shaker1 contains ingredient1 and all hands are empty.']
+[info][subgoal_1][barman] task 17 takes 0.36 sec, found a plan with cost 4.0
+validating
+validator time 0.011739730834960938
+[info][multiagent main goal][barman] task 17 takes 100.24 sec, found a plan with cost 193.0
+TASK: barman - 1000 - 17
+193.0 True
+[results][barman][17]
+[single_agent][planning time: 100.24][cost: 126.0]
+[multi_agent][planning_time: 103.23132572174072][cost: 193.0][agents: 2][optimization time 11.313010692596436]
+----------------------------------------
+[info][singleagent][barman] task 18 takes 100.22 sec, found a plan with cost 92.0
+['shaker1 contains ingredient1 and all hands are empty.']
+[info][subgoal_1][barman] task 18 takes 0.28 sec, found a plan with cost 4.0
+validating
+validator time 0.01170969009399414
+[info][multiagent main goal][barman] task 18 takes 100.22 sec, found a plan with cost 91.0
+TASK: barman - 1000 - 18
+94.0 True
+[results][barman][18]
+[single_agent][planning time: 100.22][cost: 92.0]
+[multi_agent][planning_time: 103.28337383270264][cost: 94.0][agents: 2][optimization time 2.735746145248413]
+----------------------------------------
+[info][singleagent][barman] task 19 takes 100.26 sec, found a plan with cost 134.0
+['shaker1 contains ingredient2 and all hands are empty.']
+[info][subgoal_1][barman] task 19 takes 0.38 sec, found a plan with cost 4.0
+validating
+validator time 0.011496782302856445
+[info][multiagent main goal][barman] task 19 takes 100.24 sec, found a plan with cost 92.0
+TASK: barman - 1000 - 19
+93.0 True
+[results][barman][19]
+[single_agent][planning time: 100.26][cost: 134.0]
+[multi_agent][planning_time: 106.49112021446227][cost: 93.0][agents: 2][optimization time 3.9975533485412598]
+----------------------------------------
+[info][singleagent][barman] task 20 takes 100.25 sec, found a plan with cost 94.0
+['shaker1 contains ingredient2 and all hands are empty.']
+[info][subgoal_1][barman] task 20 takes 0.39 sec, found a plan with cost 4.0
+validating
+validator time 0.009114742279052734
+[info][multiagent main goal][barman] task 20 takes 100.25 sec, found a plan with cost 90.0
+TASK: barman - 1000 - 20
+91.0 True
+[results][barman][20]
+[single_agent][planning time: 100.25][cost: 94.0]
+[multi_agent][planning_time: 103.61289681434631][cost: 91.0][agents: 2][optimization time 3.5159225463867188]
+----------------------------------------

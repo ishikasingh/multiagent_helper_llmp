@@ -1,34 +1,30 @@
-[info][singleagent][blocksworld] task 01 takes 0.12 sec, found a plan with cost 6.0
+[info][singleagent][blocksworld] task 01 takes 0.14 sec, found a plan with cost 6.0
 ['b2 is clear and on the table.', 'b3 is clear and on the table.']
-[info][subgoal_1][blocksworld] task 01 takes 0.15 sec, found a plan with cost 2.0
-planner successful
+[info][subgoal_1][blocksworld] task 01 takes 0.14 sec, found a plan with cost 2.0
 validating
+validator time 0.006508350372314453
 [info][subgoal_2][blocksworld] task 01 takes 0.14 sec, found a plan with cost 2.0
-planner successful
 validating
+validator time 0.006566286087036133
 [info][multiagent main goal][blocksworld] task 01 takes 0.13 sec, found a plan with cost 4.0
-starting dp
 TASK: blocksworld - 1000 - 01
 7.0 True
-dp planning time 0.24892258644104004
 [results][blocksworld][01]
-[single_agent][planning time: 0.12][cost: 6.0]
-[multi_agent]][planning_time: 4.289012355804443][cost: 7.0][agents: 3][optimization time 0.24892258644104004]
+[single_agent][planning time: 0.14][cost: 6.0]
+[multi_agent][planning_time: 6.288631114959717][cost: 7.0][agents: 3][optimization time 0.2314600944519043]
 ----------------------------------------
-[info][singleagent][blocksworld] task 02 takes 0.12 sec, found a plan with cost 6.0
-['b1 is on the table and all hands are empty.', 'b3 is on the table and all hands are empty.']
-[info][subgoal_1][blocksworld] task 02 takes 0.14 sec, found a plan with cost 2.0
-planner successful
+[info][singleagent][grippers] task 01 takes 0.11 sec, found a plan with cost 5.0
+['Ball1 is in room2 and all grippers are free.', 'Ball2 is in room2 and all grippers are free.']
+[info][subgoal_1][grippers] task 01 takes 0.14 sec, found a plan with cost 3.0
 validating
-[info][subgoal_2][blocksworld] task 02 takes 0.15 sec, found a plan with cost 2.0
-planner successful
+validator time 0.006619930267333984
+[info][subgoal_2][grippers] task 01 takes 0.14 sec, found a plan with cost 3.0
 validating
-[info][multiagent main goal][blocksworld] task 02 takes 0.14 sec, found a plan with cost 4.0
-starting dp
-TASK: blocksworld - 1000 - 02
-7.0 True
-dp planning time 0.2226405143737793
-[results][blocksworld][02]
-[single_agent][planning time: 0.12][cost: 6.0]
-[multi_agent]][planning_time: 4.878755502700805][cost: 7.0][agents: 3][optimization time 0.2226405143737793]
+validator time 0.006474971771240234
+[info][multiagent main goal][grippers] task 01 takes 20.04 sec, no solution found
+TASK: grippers - 1000 - 01
+3.0 True
+[results][grippers][01]
+[single_agent][planning time: 0.11][cost: 5.0]
+[multi_agent][planning_time: 5.515871315002442][cost: 3.0][agents: 3][optimization time 0.46278810501098633]
 ----------------------------------------
