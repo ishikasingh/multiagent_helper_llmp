@@ -98,7 +98,7 @@ def get_helper_subgoal_without_plan(expt_path, args, log_file):
     for i in range(1,args.num_agents):
         prompt_text += f"\n agent{i} subgoal:"
         #print(f"querying for agent {i}")
-        helper_subgoal = generator.query(prompt_text, system_text=system_text, use_chatgpt=True)
+        helper_subgoal = generator.query(prompt_text, system_text=system_text, model=args.model)
         #print(helper_subgoal, "\n")
         prompt_text += helper_subgoal
         all_subgoals.append(helper_subgoal)
@@ -122,6 +122,7 @@ if __name__ == "__main__":
     parser.add_argument('--human_eval', type=bool, default=False)
     parser.add_argument('--run', type=int, default=1)
     parser.add_argument('--num_agents', type=int, default=2)
+    parser.add_argument('--model', type=str, default='gpt-4o')
     args = parser.parse_args()
 
     if not os.path.exists(args.experiment_folder):

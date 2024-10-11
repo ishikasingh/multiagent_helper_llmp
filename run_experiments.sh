@@ -9,6 +9,7 @@ print_usage() {
   echo "  --python-script FILE       Specify the Python script to run"
   echo "  --num-agents N1            Specify the number of agents"
   echo "  --run NUMBER               Specify the run number"
+  echo "  --model MODEL              Specify the model to use"
   echo "  --help                     Display this help message"
 }
 
@@ -16,12 +17,13 @@ print_usage() {
 OUTPUT_FILE="experiment_results.txt"
 PYTHON_SCRIPT=""
 SUMMARY_FILE=""
-# termes "tyreman" "grippers" "barman"
-DOMAINS=("tyreworld")
+# termes "tyreworld" "grippers" "barman"
+DOMAINS=("barman" "grippers" "blocksworld" "tyreworld")
 TIME_LIMIT=30
 TASK_IDS=(1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20)
 NUM_AGENTS=""
 RUN=1
+MODEL=""
 
 # Parse command-line arguments
 while [[ $# -gt 0 ]]; do
@@ -45,6 +47,10 @@ while [[ $# -gt 0 ]]; do
             ;;
         --run)
             RUN="$2"
+            shift 2
+            ;;
+        --model) 
+            MODEL="$2"
             shift 2
             ;;
         --help)
@@ -73,6 +79,7 @@ run_experiment() {
           --task_id "$task_id" \
           --run "$RUN" \
           --num_agents "$num_agents" \
+          --model "$MODEL" \
           >> "$OUTPUT_FILE" 2>&1
     else
     # add until n
@@ -82,6 +89,7 @@ run_experiment() {
           --time-limit "$time_limit" \
           --task_id "$task_id" \
           --run "$RUN" \
+          --model "$MODEL" \
           >> "$OUTPUT_FILE" 2>&1
     fi
     echo "----------------------------------------" >> "$OUTPUT_FILE"

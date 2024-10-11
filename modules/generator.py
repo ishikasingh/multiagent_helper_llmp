@@ -6,32 +6,49 @@ import re
 load_dotenv()
 client = OpenAI()
 
-def query(prompt_text, system_text=None, use_chatgpt=False):
+def query(prompt_text, system_text=None, model="gpt-4o"):
     server_flag = 0
     server_cnt = 0
     # import ipdb; ipdb.set_trace()
-    while server_cnt < 10:
+    while server_cnt < 3:
         try:
-            if use_chatgpt: # currently, we will always use chatgpt
-                response = client.chat.completions.create(model="gpt-4",
-                temperature=0.1,
-                top_p=1,
-                frequency_penalty=0,
-                presence_penalty=0,
-                messages=[
-                    {"role": "system", "content": system_text},
-                    {"role": "user", "content": prompt_text},
-                ])
-                result_text = response.choices[0].message.content
-            else:
-                response =  client.completions.create(model="text-davinci-003",
-                prompt=prompt_text,
-                temperature=0.0,
-                max_tokens=1024,
-                top_p=1,
-                frequency_penalty=0,
-                presence_penalty=0)
-                result_text = response.choices[0].text
+            match model:
+                case "gpt-4":
+                    response = client.chat.completions.create(model="gpt-4",
+                    temperature=0.1,
+                    top_p=1,
+                    frequency_penalty=0,
+                    presence_penalty=0,
+                    messages=[
+                        {"role": "system", "content": system_text},
+                        {"role": "user", "content": prompt_text},
+                    ])
+                    result_text = response.choices[0].message.content
+                case "gpt-4o":
+                    response = client.chat.completions.create(model="gpt-4o",
+                    temperature=0.1,
+                    top_p=1,
+                    frequency_penalty=0,
+                    presence_penalty=0,
+                    messages=[
+                        {"role": "system", "content": system_text},
+                        {"role": "user", "content": prompt_text},
+                    ])
+                    result_text = response.choices[0].message.content
+                case "o1-mini":
+                    response = client.chat.completions.create(model="o1-mini",
+                    messages=[
+                        {"role": "user", "content": prompt_text},
+                    ])
+                    result_text = response.choices[0].message.content
+                case "o1-preview":
+                    response = client.chat.completions.create(model="o1-preview",
+                    messages=[
+                        {"role": "user", "content": prompt_text},
+                    ])
+                    result_text = response.choices[0].message.content
+                case _:
+                    raise ValueError(f"Unsupported model: {model}")
             server_flag = 1
             if server_flag:
                 break
@@ -39,6 +56,8 @@ def query(prompt_text, system_text=None, use_chatgpt=False):
             server_cnt += 1
             print(e)
     return result_text
+
+import re
 
 def clean_pddl_goal(goal_text):
     # Remove any leading/trailing whitespace
@@ -50,25 +69,36 @@ def clean_pddl_goal(goal_text):
     # Remove any consecutive whitespace
     goal_text = re.sub(r'\s+', ' ', goal_text)
 
+    # Remove redundant :goal tags and unnecessary parentheses
+    goal_text = re.sub(r'\(:goal\s*\(\s*:goal', '(:goal', goal_text)
+
     # Ensure proper formatting for 'and' operator
     goal_text = re.sub(r'\(\s*and\s*\)', '', goal_text)  # Remove empty 'and'
     goal_text = re.sub(r'\(\s*and\s+([^()]+)\)', r'(\1)', goal_text)  # Remove unnecessary 'and' with single predicate
 
-    # Ensure each opening parenthesis has a matching closing parenthesis
-    open_count = goal_text.count('(')
-    close_count = goal_text.count(')')
-    if open_count > close_count:
-        goal_text += ')' * (open_count - close_count)
-    elif close_count > open_count:
-        goal_text = '(' * (close_count - open_count) + goal_text
+    goal_text = goal_text.replace('lisp', '')
+    # Remove any triple backticks
+    goal_text = goal_text.replace('```', '')
 
-    # Ensure the entire goal is wrapped in parentheses
-    if not (goal_text.startswith('(') and goal_text.endswith(')')):
-        goal_text = f'({goal_text})'
-
-    # Ensure ':goal' is present
+    # Ensure ':goal' is present and properly formatted
     if not goal_text.lstrip('(').startswith(':goal'):
-        goal_text = f'(:goal {goal_text})'
+        goal_text = f'(:goal {goal_text.lstrip("(")})'
+    else:
+        # Ensure there's only one set of parentheses around the entire goal
+        goal_text = re.sub(r'^\(:goal\s*\((.*)\)\s*\)$', r'(:goal \1)', goal_text)
+
+    # Balance parentheses
+    # open_count = goal_text.count('(')
+    # close_count = goal_text.count(')')
+    # if open_count > close_count:
+    #     goal_text += ')' * (open_count - close_count)
+    #elif close_count > open_count:
+        #goal_text = goal_text.rstrip(')')  # Remove extra closing parentheses
+
+    # Final check to ensure no trailing parentheses
+    goal_text = goal_text.rstrip()
+    while goal_text.endswith(')') and goal_text.count('(') < goal_text.count(')'):
+        goal_text = goal_text[:-1].rstrip()
 
     return goal_text
 
@@ -84,7 +114,7 @@ def get_pddl_goal(expt_path, args, helper_subgoal, log_file):
     with open(context_pddl_filename, 'r') as f:
         context_pddl = f.read()
     context_pddl_init, context_pddl_goal = context_pddl.split('(:goal')
-    context_pddl_goal = f'(:goal\n{context_pddl_goal.strip()[:-1]}'
+    context_pddl_goal = f'(\n{context_pddl_goal.strip()[:-1]}'
 
     pddl_problem_filename_arr = []
     
@@ -106,14 +136,15 @@ def get_pddl_goal(expt_path, args, helper_subgoal, log_file):
         #print(f"agent {i} prompt \n", prompt_text)
         # import ipdb; ipdb.set_trace()
         # print("\n natural language to pddl prompt \n", prompt_text)
-        pddl_goal = query(prompt_text, system_text=system_text, use_chatgpt=True)
+        # keep this to 4o
+        pddl_goal = query(prompt_text, system_text=system_text, model='gpt-4o')
         # import ipdb; ipdb.set_trace()
         # remove undefined goal conditions using domain predicate list
         if args.domain == 'tyreworld':
             pddl_goal = pddl_goal.replace('(empty hands)', '').replace('(empty-hand)', '').replace('(empty-hands)', '').replace('empty hand', '')
-        print("old",pddl_goal)
+        #print("old",pddl_goal)
         pddl_goal = clean_pddl_goal(pddl_goal)
-        print("cleaned", pddl_goal)
+        #print("cleaned", pddl_goal)
         with open(log_file, 'a+') as f:
             f.write(f"\n\n{pddl_goal}")
         with open(pddl_problem_filename, 'w') as f:

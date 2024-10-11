@@ -1,29 +1,198 @@
-[info][singleagent][tyreworld] task 01 takes 0.09 sec, found a plan with cost 13.0
-['The intact tyre is inflated and all hands are empty.', 'The flat tyre is removed from the hub and all hands are empty.']
-old (:goal
+[info][singleagent][barman] task 18 takes 30.11 sec, found a plan with cost 117.0
+['agent1 subgoal: shaker1 contains ingredient2 and all hands are empty.', 'agent2 subgoal: shot2 contains ingredient2 and all hands are empty.']
+old ```
 (and
-(inflated r1)
-
+      (contains shaker1 ingredient2)
+      (handempty left)
+      (handempty right)
 )
-)
-cleaned (:goal (and (inflated r1) ) )
-old (:goal
+```
+cleaned (:goal  (and (contains shaker1 ingredient2) (handempty left) (handempty right) ) )
+old ```
 (and
-(not (on w1 the-hub1))
-
+      (contains shot2 ingredient2)
+      (handempty left)
+      (handempty right)
 )
-)
-cleaned (:goal (and (not (on w1 the-hub1)) ) )
-[info][subgoal_1][tyreworld] task 01 takes 0.07 sec, found a plan with cost 1.0
+```
+cleaned (:goal  (and (contains shot2 ingredient2) (handempty left) (handempty right) ) )
+[info][subgoal_1][barman] task 18 takes 0.19 sec, found a plan with cost 4.0
 validating
-validator time 0.012353897094726562
-[info][subgoal_2][tyreworld] task 01 takes 0.04 sec, found a plan with cost 4.0
+validator time 0.013720035552978516
+[info][subgoal_2][barman] task 18 takes 0.11 sec, found a plan with cost 3.0
 validating
-validator time 0.00544285774230957
-[info][multiagent main goal][tyreworld] task 01 takes 0.06 sec, found a plan with cost 8.0
-TASK: tyreworld - 2000 - 01
-10.0 True
-[results][tyreworld][01]
-[single_agent][planning time: 0.09][cost: 13.0]
-[multi_agent][planning_time: 4.402618808746338][cost: 10.0][agents: 3][optimization time 0.7769227027893066]
+validator time 0.006711006164550781
+[info][multiagent main goal][barman] task 18 takes 30.11 sec, found a plan with cost 108.0
+TASK: barman - 2001 - 18
+110.0 True
+[results][barman][18]
+[single_agent][planning time: 30.11][cost: 117.0]
+[multi_agent][planning_time: 45.01298156738281][cost: 110.0][agents: 3][optimization time 3.6163699626922607]
 ----------------------------------------
+[info][singleagent][barman] task 19 takes 30.11 sec, found a plan with cost 134.0
+['agent1 subgoal: shaker1 contains ingredient2 and all hands are empty.', 'agent2 subgoal: shot8 contains ingredient3 and all hands are empty.']
+old ```
+(and
+      (contains shaker1 ingredient2)
+      (handempty left)
+      (handempty right)
+)
+```
+cleaned (:goal  (and (contains shaker1 ingredient2) (handempty left) (handempty right) ) )
+old ```
+(and
+      (contains shot8 ingredient3)
+      (handempty left)
+      (handempty right)
+)
+```
+cleaned (:goal  (and (contains shot8 ingredient3) (handempty left) (handempty right) ) )
+[info][subgoal_1][barman] task 19 takes 0.18 sec, found a plan with cost 4.0
+validating
+validator time 0.013766050338745117
+[info][subgoal_2][barman] task 19 takes 0.11 sec, found a plan with cost 3.0
+validating
+validator time 0.006700038909912109
+[info][multiagent main goal][barman] task 19 takes 30.12 sec, found a plan with cost 91.0
+TASK: barman - 2001 - 19
+95.0 True
+[results][barman][19]
+[single_agent][planning time: 30.11][cost: 134.0]
+[multi_agent][planning_time: 42.010111246109005][cost: 95.0][agents: 3][optimization time 5.772992849349976]
+----------------------------------------
+[info][singleagent][barman] task 20 takes 30.1 sec, found a plan with cost 145.0
+['agent1 subgoal: shaker1 contains ingredient2 and ingredient3 and all hands are empty.', 'agent2 subgoal: shotglass1 contains ingredient1 and all hands are empty.']
+old ```
+(and
+      (contains shaker1 ingredient2)
+      (contains shaker1 ingredient3)
+      (handempty left)
+      (handempty right)
+)
+```
+cleaned (:goal  (and (contains shaker1 ingredient2) (contains shaker1 ingredient3) (handempty left) (handempty right) ) )
+old ```
+(and
+      (contains shotglass1 ingredient1)
+      (handempty left)
+      (handempty right)
+)
+```
+cleaned (:goal  (and (contains shotglass1 ingredient1) (handempty left) (handempty right) ) )
+[info][subgoal_1][barman] task 20 takes 1.56 sec, found a plan with cost 7.0
+validating
+validator time 0.013889074325561523
+list index out of range
+[info][multiagent main goal][barman] task 20 takes 30.11 sec, found a plan with cost 81.0
+TASK: barman - 2001 - 20
+maximum recursion depth exceeded while calling a Python object
+----------------------------------------
+[info][singleagent][grippers] task 18 takes 0.1 sec, found a plan with cost 9.0
+['**agent1 subgoal:**\n\nball1 is in room1 and all grippers are free.', '**agent1 subgoal:**\nball2 is in room1 and all grippers are free.']
+[info][subgoal_1][grippers] task 18 takes 0.08 sec, found a plan with cost 4.0
+validating
+validator time 0.011719942092895508
+[info][subgoal_2][grippers] task 18 takes 0.04 sec, found a plan with cost 4.0
+validating
+validator time 0.005053997039794922
+[info][multiagent main goal][grippers] task 18 takes 0.04 sec, found a plan with cost 4.0
+TASK: grippers - 2001 - 18
+4.0 True
+[results][grippers][18]
+[single_agent][planning time: 0.1][cost: 9.0]
+[multi_agent][planning_time: 18.17638412475586][cost: 4.0][agents: 3][optimization time 2.539232015609741]
+----------------------------------------
+Traceback (most recent call last):
+  File "/Users/david/Desktop/multiagent_helper_llmp/./downward/fast-downward.py", line 5, in <module>
+    main()
+  File "/Users/david/Desktop/multiagent_helper_llmp/downward/driver/main.py", line 40, in main
+    (exitcode, continue_execution) = run_components.run_search(args)
+                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/david/Desktop/multiagent_helper_llmp/downward/driver/run_components.py", line 130, in run_search
+    call.check_call(
+  File "/Users/david/Desktop/multiagent_helper_llmp/downward/driver/call.py", line 63, in check_call
+    return subprocess.check_call(cmd, stdin=stdin_file, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/david/anaconda3/lib/python3.11/subprocess.py", line 408, in check_call
+    retcode = call(*popenargs, **kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/david/anaconda3/lib/python3.11/subprocess.py", line 391, in call
+    return p.wait(timeout=timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/david/anaconda3/lib/python3.11/subprocess.py", line 1264, in wait
+    return self._wait(timeout=timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/david/anaconda3/lib/python3.11/subprocess.py", line 2046, in _wait
+    (pid, sts) = self._try_wait(0)
+                 ^^^^^^^^^^^^^^^^^
+  File "/Users/david/anaconda3/lib/python3.11/subprocess.py", line 2004, in _try_wait
+    (pid, sts) = os.waitpid(self.pid, wait_flags)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "/Users/david/Desktop/multiagent_helper_llmp/./downward/fast-downward.py", line 5, in <module>
+    main()
+  File "/Users/david/Desktop/multiagent_helper_llmp/downward/driver/main.py", line 40, in main
+    (exitcode, continue_execution) = run_components.run_search(args)
+                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/david/Desktop/multiagent_helper_llmp/downward/driver/run_components.py", line 130, in run_search
+    call.check_call(
+  File "/Users/david/Desktop/multiagent_helper_llmp/downward/driver/call.py", line 63, in check_call
+    return subprocess.check_call(cmd, stdin=stdin_file, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/david/anaconda3/lib/python3.11/subprocess.py", line 408, in check_call
+    retcode = call(*popenargs, **kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/david/anaconda3/lib/python3.11/subprocess.py", line 391, in call
+    return p.wait(timeout=timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/david/anaconda3/lib/python3.11/subprocess.py", line 1264, in wait
+    return self._wait(timeout=timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/david/anaconda3/lib/python3.11/subprocess.py", line 2046, in _wait
+    (pid, sts) = self._try_wait(0)
+                 ^^^^^^^^^^^^^^^^^
+  File "/Users/david/anaconda3/lib/python3.11/subprocess.py", line 2004, in _try_wait
+    (pid, sts) = os.waitpid(self.pid, wait_flags)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+[info][singleagent][grippers] task 19 takes 2.63 sec, found a plan with cost 17.0
+['**agent1 subgoal:**\n\nball1 is in room3 and all grippers are empty.', '**agent1 subgoal:**\nball1 is in room3 and all grippers are empty.']
+[info][subgoal_1][grippers] task 19 takes 0.08 sec, found a plan with cost 4.0
+validating
+validator time 0.011000871658325195
+list index out of range
+list index out of range
+----------------------------------------
+Traceback (most recent call last):
+  File "/Users/david/Desktop/multiagent_helper_llmp/helper_script_n_agents.py", line 12, in <module>
+    import modules.generator as generator
+  File "/Users/david/Desktop/multiagent_helper_llmp/modules/generator.py", line 2, in <module>
+    from openai import OpenAI
+  File "/Users/david/anaconda3/lib/python3.11/site-packages/openai/__init__.py", line 8, in <module>
+    from . import types
+  File "/Users/david/anaconda3/lib/python3.11/site-packages/openai/types/__init__.py", line 5, in <module>
+    from .batch import Batch as Batch
+  File "/Users/david/anaconda3/lib/python3.11/site-packages/openai/types/batch.py", line 7, in <module>
+    from .._models import BaseModel
+  File "/Users/david/anaconda3/lib/python3.11/site-packages/openai/_models.py", line 25, in <module>
+    from ._types import (
+  File "/Users/david/anaconda3/lib/python3.11/site-packages/openai/_types.py", line 21, in <module>
+    import httpx
+  File "/Users/david/anaconda3/lib/python3.11/site-packages/httpx/__init__.py", line 48, in <module>
+    from ._main import main
+  File "/Users/david/anaconda3/lib/python3.11/site-packages/httpx/_main.py", line 15, in <module>
+    import rich.syntax
+  File "/Users/david/anaconda3/lib/python3.11/site-packages/rich/syntax.py", line 215, in <module>
+    class _SyntaxHighlightRange(NamedTuple):
+  File "/Users/david/anaconda3/lib/python3.11/typing.py", line 2891, in __new__
+    nm_tpl = _make_nmtuple(typename, types.items(),
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/david/anaconda3/lib/python3.11/typing.py", line 2859, in _make_nmtuple
+    nm_tpl = collections.namedtuple(name, fields,
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/david/anaconda3/lib/python3.11/collections/__init__.py", line 436, in namedtuple
+    __new__ = eval(code, namespace)
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 0, in <module>
+KeyboardInterrupt
