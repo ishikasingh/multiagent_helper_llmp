@@ -179,6 +179,7 @@ def get_updated_init_conditions_recurse(expt_path, validation_filename=None, pdd
         validation = f.readlines()
     
     pddl_problem_filename_ =  f"./domains/{args.domain}/p{args.task_id}.pddl" if pddl_problem_filename==None else pddl_problem_filename
+    print("getting updated init for task", pddl_problem_filename)
     with open(pddl_problem_filename_, 'r') as f:
         pddl_problem = f.read()
     pddl_problem = pddl_problem.split('(:init')
@@ -276,6 +277,8 @@ def validator_sim_recursion_function(expt_path, domain_pddl_file, indices, agent
     return result
 
 def execute_subset_agents_action(expt_path, domain_pddl_file, indices, agent_plans, task_states, agents_to_execute):
+
+    print("agents to execute", agents_to_execute)
     val_paths = [f"./{expt_path}/agent{i}_val_temp.txt" for i in agents_to_execute]
     plan_paths = [f"./{expt_path}/agent{i}_plan_temp.txt" for i in agents_to_execute]
     task_paths = [f"./{expt_path}/agent{i}_task_temp.txt" for i in range(len(agent_plans))]
@@ -286,6 +289,8 @@ def execute_subset_agents_action(expt_path, domain_pddl_file, indices, agent_pla
         futures = []
         for i in agents_to_execute:
             with open(plan_paths[i], 'w') as f:
+                print("writing to ", plan_paths[i])
+                f.write(task_states[i])
                 f.write(agent_plans[i][indices[i]])
             with open(task_paths[i], 'w') as f:
                 print("writing to", task_paths[i])
