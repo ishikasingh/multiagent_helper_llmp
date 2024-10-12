@@ -28,14 +28,14 @@ def choose_n_agents(expt_path, args, log_file, max_agents):
     prompt_text += '''In this example, the optimal number of agents is 3. Anymore has no effect or increases aggregated plan length as only one agent can work on stacking the
      blocks at a time. 3 agents allows for an active agent at timesteps where 2 agents are picking up or putting down blocks. '''
     
-    prompt_text += '''Given the task, decide the number of agents required to solve the task. \n '''
+    # prompt_text += '''Given the task, decide the number of agents required to solve the task. \n '''
     scenario_filename =  f"./domains/{args.domain}/p{args.task_id}.nl"
     with open(scenario_filename, 'r') as f:
         current_scenario = f.read()
     
     # limit for computational purposes
     # Be sure to reason through your thoughts and think about this in the context of a planning domain rather than natural language.
-    prompt_text += f'''The task is: \n {current_scenario.strip()}. \n Return the optimal number of agents, which is always greater than 1. Be sure to clearly explain your reasoning and discuss how you consder critical paths in the main goal.\n'''
+    prompt_text += f'''The task is: \n {current_scenario.strip()}. \n Return the optimal number of agents, which is always greater than 1. Be sure to clearly explain your reasoning and discuss how you consder critical paths in the main goal. Remember, every agent has a SINGULAR goal. Do not propose a general role for these agents but rather a singular thing they can accomplish to reduce execution length. \n'''
 
     # print("prompt_text for choosing n agents \n", prompt_text)
 
@@ -133,7 +133,7 @@ def get_helper_subgoal_without_plan(expt_path, args, log_file, n_reasoning):
         current_prompt_text = '\n\nNow we have another new problem defined in this domain for which we don\'t have access to the single agent plan:\n'
     current_prompt_text += f'{current_scenario.strip()}\n\n'
     current_prompt_text += f'Here is some expert reasoning on how we chose the number of agents. Use this to generate subgoals for each agent:\n{n_reasoning}\n\n'
-    current_prompt_text += f'Return only one clearly stated subgoal condition for one and only one agent without explanation or steps. A possible subgoal looking at how the domain works based on the plan example provided for another task in this domain could be - \n'
+    current_prompt_text += f'If the reasoning for each agent is a role rather than a singular task, set a condition for all relevant objects. E.g if agent1 handes filling shot glasses its goal should include shot1 through shotn filled. Return only clearly stated subgoal conditions for one and only one agent without explanation or steps. A possible subgoal looking at how the domain works based on the plan example provided for another task in this domain could be - \n'
 
     prompt_text = prompt_text + current_prompt_text
     # print(prompt_text)
@@ -228,7 +228,6 @@ if __name__ == "__main__":
 
         # normal planning and same for multi-agent planning
         try:
-            # hard coded time as 10? Shouldn't this be args.time_limit, ask Ishika
             planner_total_time, planner_total_time_opt, best_cost, planner_search_time_1st_plan, first_plan_cost = planner.planner(path, args)
             singleagent_planning_time.append(planner_total_time)
             singleagent_planning_time_opt.append(planner_total_time_opt)
