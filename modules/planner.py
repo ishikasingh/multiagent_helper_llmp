@@ -208,6 +208,7 @@ def get_updated_init_conditions_recurse(expt_path, validation_filename=None, pdd
     with open(pddl_problem_filename_, 'w') as f:
         f.write(pddl_problem)
 
+# finds all PDDL files, creates DP array, and calls recursive helper
 def validator_simulation_recursive(expt_path, logfile, multi=False):
     domain_pddl_file = f'./domains/{args.domain}/domain.pddl'
     task_pddl_file = f'./domains/{args.domain}/p{args.task_id}.pddl'
@@ -251,190 +252,100 @@ def validator_simulation_recursive(expt_path, logfile, multi=False):
     global execution_state
     execution_state = np.full([len(plan) + 1 for plan in agent_plans] + [2**args.num_agents], float('inf'))
     print("EXECUTION STATE", execution_state.shape)
-    plan_length = validator_sim_recursion_function(expt_path, domain_pddl_file, tuple([0] * args.num_agents), tuple(agent_plans), tuple([task] * args.num_agents))
+    plan_length = validator_sim_recursion_function(expt_path, domain_pddl_file, tuple([0] * args.num_agents), tuple(agent_plans), tuple([task] * args.num_agents), agent_subset=None)
 
     success = plan_length < float('inf')
     print(plan_length, success)
     return plan_length, success
 
-@lru_cache(maxsize=None)
-def validator_sim_recursion_function(expt_path, domain_pddl_file, indices, agent_plans, agent_tasks, agent_subset: int = 0):
-    if not agent_plans:
-        print("Error: Empty agent_plans list")
+# take in a set of indices (agent steps in their plans), DP array, and agent subset
+# generate an agent subset if none
+# then, execute agents and get result for subset
+# base case for 
+def validator_sim_recursion_function(expt_path, domain_pddl_file, indices, agent_plans, task_states, agent_subset):
+    if agent_subset is None:
+        # generate subsets of agent_subset
+        active_agents = get_active_agents(indices, agent_plans)
+        # print("ACTIVE AGENTS", active_agents)
+        subsets = generate_agent_subsets(active_agents)
+        # Sort subsets by size in descending order
+        subsets.sort(key=len, reverse=True)
+        for subset in subsets:
+            plan_length = execute_agents_actions(expt_path, domain_pddl_file, indices, agent_plans, execution_state, task_states, subset, active_agents)
+            # add full search later
+            if plan_length < float('inf'):
+                print(f"Found plan of length {plan_length} for subset {subset}")
+                return plan_length
         return float('inf')
-
-    num_agents = len(agent_plans)
-
-    # Check each index is within bounds
-    for i, (idx, plan) in enumerate(zip(indices, agent_plans)):
-        if idx > len(plan):
-            print(f"Error: Index {idx} out of bounds for agent {i}'s plan (length {len(plan)})")
-            return float('inf')
-    
-    for i in range(num_agents):
-        if indices[i] > len(agent_plans[i]):
-            return float('inf')
-    
-    if all(indices[i] >= len(agent_plans[i]) for i in range(num_agents)):
-        return 0
-
-    # Ensure agent_subset is an integer bitmask
-    agent_subset = 0 if agent_subset is None else int(agent_subset)
-    
-    # Validate agent_subset range
-    if agent_subset < 0:
-        print(f"Error: Negative agent_subset value: {agent_subset}")
-        return float('inf')
-    if agent_subset >= 2**num_agents:
-        print(f"Error: Agent subset {agent_subset} exceeds maximum value for {num_agents} agents (max: {2**num_agents - 1})")
-        return float('inf')
-
-    state_index = indices + (agent_subset,)
-    if execution_state[state_index] != float('inf'):
-        return execution_state[state_index]
-
-    completed_agents = set(i for i in range(len(agent_plans)) if indices[i] >= len(agent_plans[i]))
-    # If all agents have completed their plans, return 0
-    if len(completed_agents) == len(agent_plans):
-        return 0
-
-    # If agent_subset is 0, generate new subsets
-    if agent_subset == 0:
-        plans = []
-        # Only consider agents that haven't completed their plans
-        active_agents = [i for i in range(len(agent_plans)) if i not in completed_agents]
-        
-        # Generate combinations of active agents
-        for r in range(len(active_agents), 0, -1):
-            for subset in itertools.combinations(active_agents, r):
-                subset_mask = sum(1 << i for i in subset)
-                plan_length = validator_sim_recursion_function(
-                    expt_path, domain_pddl_file, indices, 
-                    agent_plans, agent_tasks, subset_mask
-                )
-                plans.append(plan_length)
-        
-        result = 1 + min(plans) if plans else float('inf')
-        execution_state[state_index] = result
-        return result
     else:
-        # Convert bitmask to list of active agent indices
-        subset = [i for i in range(num_agents) if (agent_subset & (1 << i))]
-        if not subset:
-            print(f"Error: Empty agent subset created from bitmask {agent_subset}")
-            return float('inf')
-        result = execute_agents_action(expt_path, domain_pddl_file, indices, agent_plans, agent_tasks, subset)
+        plan_length = execute_agents_actions(expt_path, domain_pddl_file, indices, agent_plans, execution_state, task_states, agent_subset, active_agents)
+        if plan_length < float('inf'):
+            print(f"Found plan of length {plan_length} for subset {agent_subset}")
+        return plan_length
 
-    execution_state[state_index] = result
-    return result
+'''ADD LOGS TO EVERYTHING'''
+# take in a set of agents
+# through multithreading, run downward validate on all
+# if all succeed, then this subset of agents is valid
+# update conditions for all agents in and outside of the subset
+# increment appropriate indices for agent steps and call validator_sim_recursion_function
+def execute_agents_actions(expt_path, domain_pddl_file, indices, agent_plans, execution_state, task_states, agent_subset, agent_set):
+    '''Execute agents in agent_subset, update world state, and increment indices'''
+    is_valid = True
+    for i in agent_subset:
+        task_path = f"./{expt_path}/agent{i}_task_temp.txt"
+        with open(task_path, 'w') as f:
+            f.write(task_states[i])
 
-def execute_agents_action(expt_path, domain_pddl_file, indices, agent_plans, task_states, agent_subset):
-    # Ensure agent_subset is an integer if it's passed as a list
-    if isinstance(agent_subset, list):
-        # Convert list of indices to bitmask
-        agent_subset_mask = sum(1 << i for i in agent_subset)
-    else:
-        agent_subset_mask = agent_subset
+        plan_path = f"./{expt_path}/agent{i}_plan_temp.txt"
+        with open(plan_path, 'w') as f:
+            f.write(agent_plans[i][indices[i]])
 
-    # Now use the bitmask to get agent indices
-    agent_indices = [i for i in range(len(agent_plans)) if (agent_subset_mask & (1 << i))]
-    
-    # Add debug prints
-    print("agent_indices:", agent_indices)
-    print("indices:", indices)
-    print("agent_plans lengths:", [len(plan) for plan in agent_plans])
-    
-    # Check if any indices are out of range
-    if any(i >= len(agent_plans) for i in agent_indices):
-        print("Error: Agent index exceeds number of plans")
-        return float('inf')
-        
-    if any(i >= len(indices) for i in agent_indices):
-        print("Error: Agent index exceeds length of indices array") 
-        return float('inf')
+        val_path = f"./{expt_path}/agent{i}_val_temp.txt"
 
-    val_paths = [f"./{expt_path}/agent{i}_val_temp.txt" for i in agent_indices]
-    plan_paths = [f"./{expt_path}/agent{i}_plan_temp.txt" for i in agent_indices]
-    task_paths = [f"./{expt_path}/agent{i}_task_temp.txt" for i in agent_indices]
-    new_task_paths = [f"./{expt_path}/agent{i}_new_task_temp.txt" for i in agent_indices]
+        print("validating execution of ", agent_plans[i][indices[i]], "for agent", i, "at indices", indices)
 
-    # print("VAL PATHS", val_paths)
-    # print("PLAN PATHS", plan_paths)
-    # print("TASK PATHS", task_paths)
-    # print("NEW TASK PATHS", new_task_paths)
-
-    all_valid = True
-    with ThreadPoolExecutor() as executor:
-        futures = []
-        for idx, i in enumerate(agent_indices):
-            # Add bounds check before accessing agent_plans[i]
-            if i >= len(agent_plans):
-                print(f"Error: Agent index {i} exceeds number of plans")
-                continue
-                
-            if i >= len(indices):
-                print(f"Error: Agent index {i} exceeds length of indices array")
-                continue
-                
-            # Skip agents that have completed their plans
-            if indices[i] >= len(agent_plans[i]):
-                continue
-                
-            # Check task_states bounds
-            if i >= len(task_states):
-                print(f"Error: Agent index {i} exceeds length of task_states")
-                continue
-                
-            with open(plan_paths[idx], 'w') as f:
-                f.write(agent_plans[i][indices[i]])
-            with open(task_paths[idx], 'w') as f:
-                f.write(task_states[i])
-            
-            futures.append(executor.submit(subprocess.run, ["./downward/validate", "-v", domain_pddl_file, task_paths[idx], plan_paths[idx]], capture_output=True, text=True))
-        
-        if not futures:
-            return float('inf')
-        
-        for idx, future in enumerate(futures):
-            if idx >= len(val_paths):
-                print(f"Error: Index {idx} exceeds length of validation paths")
-                continue
-                
-            output = future.result()
-            with open(val_paths[idx], 'w') as f:
-                f.write(output.stdout)
-            
-            if 'unsatisfied precondition' in output.stdout:
-                all_valid = False
-                break
-                
-            #print("updating init conditions")
-            get_updated_init_conditions_recurse(expt_path, validation_filename=val_paths[idx], pddl_problem_filename=task_paths[idx], pddl_problem_filename_edited=new_task_paths[idx], env_conds_only=False)
-            for j in range(len(agent_plans)):
-                # Only update init conditions for agents not in the current subset
-                 if not (agent_subset_mask & (1 << j)):
-                    # print(f"accessing {j} in arrays of size {len(task_paths)} and {len(new_task_paths)}")
-                    get_updated_init_conditions_recurse(expt_path, validation_filename=val_paths[idx], pddl_problem_filename=f"./{expt_path}/agent{j}_task_temp.txt", pddl_problem_filename_edited=f"./{expt_path}/agent{j}_new_task_temp.txt")
-            #print("done updating init conditions")
-            
-    if all_valid:
-        print("all valid")
-        with open(log_file, 'a+') as f:
-            for i in agent_indices:
-                if i < len(agent_plans) and i < len(indices) and indices[i] < len(agent_plans[i]):
-                    f.write(f"Agent {i}, {indices[i]}, {agent_plans[i][indices[i]][:-1]}\n")
-
+        is_valid = is_valid and is_valid_state(domain_pddl_file, task_path, plan_path, val_path)
+    print("IS VALID for agents", agent_subset, is_valid)
+    if is_valid:
+        for i in range(len(agent_subset)):
+            update_world_state(expt_path, agent_subset[i], [j for j in agent_set if j not in agent_subset])
+        # Increment indices for agents in subset
         new_indices = list(indices)
-        for i in agent_indices:
-            if i < len(agent_plans):
-                new_indices[i] += 1
-                
+        for agent in agent_subset:
+            if indices[agent] < len(agent_plans[agent]):
+                new_indices[agent] += 1
+        print("NEW INDICES", new_indices)
         new_task_states = list(task_states)
-        for idx, i in enumerate(agent_indices):
-            if idx < len(new_task_paths) and i < len(new_task_states):
-                with open(new_task_paths[idx], 'r') as f:
-                    new_task_states[i] = f.read()
+        for i in range(len(indices)):
+            with open(f"./{expt_path}/agent{i}_new_task_temp.txt", 'r') as f:
+                new_task_states[i] = f.read()
+            with open(f"./{expt_path}/agent{i}_task_temp.txt", 'w') as f:
+                f.write(task_states[i])
+        return validator_sim_recursion_function(expt_path, domain_pddl_file, tuple(new_indices), agent_plans, new_task_states, None)
+    return float('inf')
 
-        return validator_sim_recursion_function(expt_path, domain_pddl_file, tuple(new_indices), agent_plans, tuple(new_task_states))
-    else:
-        return float('inf')
+def is_valid_state(domain_pddl_file, task_path, plan_path, val_path):
+    """Check if current state is valid by validating a single agent's plan"""
+    print("plan path", plan_path)
+    output = subprocess.run(["./downward/validate", "-v", domain_pddl_file, task_path, plan_path], capture_output=True, text=True)
+    with open(val_path, 'w') as f:
+        f.write(output.stdout)
+    return 'unsatisfied precondition' not in output.stdout
+
+def get_active_agents(indices, agent_plans):
+    """Return list of agents with remaining actions"""
+    return [i for i in range(len(indices)) if indices[i] < len(agent_plans[i])]
+
+def update_world_state(expt_path, active_agent: int, inactives: list[int]):
+    """Update world state based on validation results"""
+    get_updated_init_conditions_recurse(expt_path, validation_filename=f"./{expt_path}/agent{active_agent}_val_temp.txt", pddl_problem_filename=f"./{expt_path}/agent{active_agent}_task_temp.txt", pddl_problem_filename_edited=f"./{expt_path}/agent{active_agent}_new_task_temp.txt", env_conds_only=False)
+    for i in inactives:
+        get_updated_init_conditions_recurse(expt_path, validation_filename=f"./{expt_path}/agent{i}_val_temp.txt", pddl_problem_filename=f"./{expt_path}/agent{i}_task_temp.txt", pddl_problem_filename_edited=f"./{expt_path}/agent{i}_new_task_temp.txt", env_conds_only=False)
+
+def generate_agent_subsets(active_agents):
+    """Generate valid combinations of agents"""
+    all_subsets = []
+    for r in range(len(active_agents), 0, -1):
+        all_subsets.extend(itertools.combinations(active_agents, r))
+    return all_subsets
