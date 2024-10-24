@@ -1,0 +1,32 @@
+Traceback (most recent call last):
+  File "helper_script_n_agents.py", line 12, in <module>
+    import modules.generator as generator
+  File "/home/davidbai/multiagent_helper_llmp/modules/generator.py", line 15
+    match model:
+          ^
+SyntaxError: invalid syntax
+----------------------------------------
+Traceback (most recent call last):
+  File "helper_script_n_agents.py", line 12, in <module>
+    import modules.generator as generator
+  File "/home/davidbai/multiagent_helper_llmp/modules/generator.py", line 15
+    match model:
+          ^
+SyntaxError: invalid syntax
+----------------------------------------
+Traceback (most recent call last):
+  File "helper_script_n_agents.py", line 12, in <module>
+    import modules.generator as generator
+  File "/home/davidbai/multiagent_helper_llmp/modules/generator.py", line 15
+    match model:
+          ^
+SyntaxError: invalid syntax
+----------------------------------------
+Traceback (most recent call last):
+  File "helper_script_n_agents.py", line 12, in <module>
+    import modules.generator as generator
+  File "/home/davidbai/multiagent_helper_llmp/modules/generator.py", line 15
+    match model:
+          ^
+SyntaxError: invalid syntax
+----------------------------------------
