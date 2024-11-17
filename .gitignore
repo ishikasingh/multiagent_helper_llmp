@@ -17,3 +17,4 @@ out.*
 sas*
 .env
 __pycache__
+.history

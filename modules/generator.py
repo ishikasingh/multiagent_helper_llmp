@@ -15,7 +15,7 @@ def query(prompt_text, system_text=None, model="gpt-4o"):
             match model:
                 case "gpt-4":
                     response = client.chat.completions.create(model="gpt-4",
-                    temperature=0.1,
+                    temperature=0,
                     top_p=1,
                     frequency_penalty=0,
                     presence_penalty=0,
@@ -26,7 +26,7 @@ def query(prompt_text, system_text=None, model="gpt-4o"):
                     result_text = response.choices[0].message.content
                 case "gpt-4o":
                     response = client.chat.completions.create(model="gpt-4o",
-                    temperature=0.1,
+                    temperature=0,
                     top_p=1,
                     frequency_penalty=0,
                     presence_penalty=0,

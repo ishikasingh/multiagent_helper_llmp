@@ -1,0 +1,403 @@
+[info][singleagent][blocksworld] task 01 takes 0.04 sec, found a plan with cost 6.0
+['b3 is on the table and the arm is empty.']
+[info][subgoal_1][blocksworld] task 01 takes 0.08 sec, found a plan with cost 4.0
+validating
+validator time 0.005581855773925781
+[info][multiagent main goal][blocksworld] task 01 takes 0.04 sec, found a plan with cost 4.0
+TASK: blocksworld - 101 - 01
+8 True
+[results][blocksworld][01]
+[single_agent][planning time: 0.04][cost: 6.0]
+[multi_agent][planning_time: 1.8690956783294679][cost: 8.0][agents: 2][optimization time 0.1145470142364502]
+----------------------------------------
+[info][singleagent][blocksworld] task 03 takes 0.05 sec, found a plan with cost 6.0
+['b3 is on the table and the arm is empty.']
+[info][subgoal_1][blocksworld] task 03 takes 0.08 sec, found a plan with cost 4.0
+validating
+validator time 0.00551295280456543
+[info][multiagent main goal][blocksworld] task 03 takes 0.04 sec, found a plan with cost 4.0
+TASK: blocksworld - 101 - 03
+7.0 True
+[results][blocksworld][03]
+[single_agent][planning time: 0.05][cost: 6.0]
+[multi_agent][planning_time: 1.3599747371673585][cost: 7.0][agents: 2][optimization time 0.15436410903930664]
+----------------------------------------
+[info][singleagent][blocksworld] task 05 takes 0.04 sec, found a plan with cost 8.0
+['b4 is on the table and the arm is empty.']
+[info][subgoal_1][blocksworld] task 05 takes 0.08 sec, found a plan with cost 2.0
+validating
+validator time 0.00555109977722168
+[info][multiagent main goal][blocksworld] task 05 takes 0.04 sec, found a plan with cost 6.0
+TASK: blocksworld - 101 - 05
+7 True
+[results][blocksworld][05]
+[single_agent][planning time: 0.04][cost: 8.0]
+[multi_agent][planning_time: 1.5171238136291505][cost: 7.0][agents: 2][optimization time 0.19240713119506836]
+----------------------------------------
+[info][singleagent][blocksworld] task 07 takes 0.06 sec, found a plan with cost 8.0
+['b6 should be on top of b1 and the arm is empty.']
+[info][subgoal_1][blocksworld] task 07 takes 0.08 sec, found a plan with cost 8.0
+validating
+validator time 0.005566835403442383
+[info][multiagent main goal][blocksworld] task 07 takes 0.04 sec, found a plan with cost 4.0
+TASK: blocksworld - 101 - 07
+10.0 True
+[results][blocksworld][07]
+[single_agent][planning time: 0.06][cost: 8.0]
+[multi_agent][planning_time: 2.0173865509033204][cost: 10.0][agents: 2][optimization time 0.30470895767211914]
+----------------------------------------
+[info][singleagent][blocksworld] task 10 takes 0.96 sec, found a plan with cost 18.0
+['b4 should be on the table and the arm is empty.']
+[info][subgoal_1][blocksworld] task 10 takes 0.08 sec, found a plan with cost 2.0
+validating
+validator time 0.005479097366333008
+[info][multiagent main goal][blocksworld] task 10 takes 1.48 sec, found a plan with cost 16.0
+TASK: blocksworld - 101 - 10
+16.0 True
+[results][blocksworld][10]
+[single_agent][planning time: 0.96][cost: 18.0]
+[multi_agent][planning_time: 2.5485129928588868][cost: 16.0][agents: 2][optimization time 0.7521429061889648]
+----------------------------------------
+[info][singleagent][blocksworld] task 13 takes 30.08 sec, found a plan with cost 26.0
+['b8 should be on top of b7 and the arm is empty.']
+[info][subgoal_1][blocksworld] task 13 takes 0.09 sec, found a plan with cost 2.0
+validating
+validator time 0.005306243896484375
+[info][multiagent main goal][blocksworld] task 13 takes 30.06 sec, found a plan with cost 24.0
+TASK: blocksworld - 101 - 13
+25.0 True
+[results][blocksworld][13]
+[single_agent][planning time: 30.08][cost: 26.0]
+[multi_agent][planning_time: 31.344480895996092][cost: 25.0][agents: 2][optimization time 0.4086620807647705]
+----------------------------------------
+[info][singleagent][blocksworld] task 15 takes 30.08 sec, found a plan with cost 26.0
+['b9 should be on top of b4 and the arm is empty.']
+[info][subgoal_1][blocksworld] task 15 takes 0.09 sec, found a plan with cost 10.0
+validating
+validator time 0.006863117218017578
+[info][multiagent main goal][blocksworld] task 15 takes 30.07 sec, found a plan with cost 20.0
+TASK: blocksworld - 101 - 15
+30 True
+[results][blocksworld][15]
+[single_agent][planning time: 30.08][cost: 26.0]
+[multi_agent][planning_time: 31.4533247089386][cost: 30.0][agents: 2][optimization time 0.4016849994659424]
+----------------------------------------
+[info][singleagent][blocksworld] task 17 takes 30.08 sec, found a plan with cost 22.0
+['b6 should be on top of b10 and the arm is empty.']
+[info][subgoal_1][blocksworld] task 17 takes 0.12 sec, found a plan with cost 8.0
+validating
+validator time 0.005931854248046875
+[info][multiagent main goal][blocksworld] task 17 takes 30.07 sec, found a plan with cost 20.0
+TASK: blocksworld - 101 - 17
+24.0 True
+[results][blocksworld][17]
+[single_agent][planning time: 30.08][cost: 22.0]
+[multi_agent][planning_time: 31.492637815475465][cost: 24.0][agents: 2][optimization time 0.7760279178619385]
+----------------------------------------
+[info][singleagent][blocksworld] task 20 takes 30.09 sec, found a plan with cost 30.0
+['b11 should be on top of b12 and the arm is empty.']
+[info][subgoal_1][blocksworld] task 20 takes 12.74 sec, found a plan with cost 14.0
+validating
+validator time 0.007839202880859375
+[info][multiagent main goal][blocksworld] task 20 takes 30.08 sec, found a plan with cost 20.0
+TASK: blocksworld - 101 - 20
+34 True
+[results][blocksworld][20]
+[single_agent][planning time: 30.09][cost: 30.0]
+[multi_agent][planning_time: 44.046303815841675][cost: 34.0][agents: 2][optimization time 0.46722412109375]
+----------------------------------------
+b'Traceback (most recent call last):\n  File "/Users/david/Desktop/multiagent_helper_llmp/downward/builds/release/bin/translate/translate.py", line 747, in <module>\n    main()\n  File "/Users/david/Desktop/multiagent_helper_llmp/downward/builds/release/bin/translate/translate.py", line 705, in main\n    task = pddl_parser.open(\n           ^^^^^^^^^^^^^^^^^\n  File "/Users/david/Desktop/multiagent_helper_llmp/downward/builds/release/bin/translate/pddl_parser/pddl_file.py", line 39, in open\n    return parsing_functions.parse_task(domain_pddl, task_pddl)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/Users/david/Desktop/multiagent_helper_llmp/downward/builds/release/bin/translate/pddl_parser/parsing_functions.py", line 634, in parse_task\n    task_name, task_domain_name, task_requirements, objects, init, goal, \\\n  File "/Users/david/Desktop/multiagent_helper_llmp/downward/builds/release/bin/translate/pddl_parser/parsing_functions.py", line 790, in parse_task_pddl\n    yield parse_condition(context, goal[1], type_dict, predicate_dict)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/Users/david/Desktop/multiagent_helper_llmp/downward/builds/release/bin/translate/pddl_parser/parsing_functions.py", line 209, in parse_condition\n    condition = parse_condition_aux(\n                ^^^^^^^^^^^^^^^^^^^^\n  File "/Users/david/Desktop/multiagent_helper_llmp/downward/builds/release/bin/translate/pddl_parser/parsing_functions.py", line 242, in parse_condition_aux\n    elif tag in predicate_dict:\n         ^^^^^^^^^^^^^^^^^^^^^\nTypeError: unhashable type: \'list\'\n'
+[info][singleagent][tyreworld] task 01 takes 0.11 sec, found a plan with cost 13.0
+['inflate the intact tyre and ensure all hands are empty.']
+planner broke
+INFO     planner time limit: None
+INFO     planner memory limit: None
+
+INFO     Running translator.
+INFO     translator stdin: None
+INFO     translator time limit: None
+INFO     translator memory limit: None
+INFO     translator command line string: /Users/david/anaconda3/bin/python /Users/david/Desktop/multiagent_helper_llmp/downward/builds/release/bin/translate/translate.py domains/tyreworld/domain.pddl experiments_multiagent_help/run101/tyreworld/p01_1.pddl --sas-file experiments_multiagent_help/run101/tyreworld/p01_1_plan.pddl.sas
+Parsing...
+translate exit code: 30
+
+Driver aborting after translate
+INFO     Planner time: 0.06s
+
+list index out of range
+Traceback (most recent call last):
+  File "/Users/david/Desktop/multiagent_helper_llmp/helper_script_n_agents.py", line 255, in <module>
+    planner.get_updated_init_conditions(path, validation_filename=f"./{path}/p{args.task_id}_{i}_validation.txt", pddl_problem_filename=init_problem, pddl_problem_filename_edited=init_problem_out,is_main=main_goal)
+  File "/Users/david/Desktop/multiagent_helper_llmp/modules/planner.py", line 135, in get_updated_init_conditions
+    with open(validation_filename, 'r') as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: './experiments_multiagent_help/run101/tyreworld/p01_1_validation.txt'
+----------------------------------------
+[info][singleagent][tyreworld] task 03 takes 30.08 sec, found a plan with cost 35.0
+['inflate r3 and all hands are empty.']
+[info][subgoal_1][tyreworld] task 03 takes 0.08 sec, found a plan with cost 1.0
+validating
+validator time 0.006083011627197266
+[info][multiagent main goal][tyreworld] task 03 takes 30.08 sec, found a plan with cost 34.0
+TASK: tyreworld - 101 - 03
+34 True
+[results][tyreworld][03]
+[single_agent][planning time: 30.08][cost: 35.0]
+[multi_agent][planning_time: 31.24984303474426][cost: 34.0][agents: 2][optimization time 1.1803529262542725]
+----------------------------------------
+[info][singleagent][tyreworld] task 05 takes 30.13 sec, found a plan with cost 57.0
+['agent1 subgoal: Inflate all intact tyres and ensure all hands are empty.']
+planner broke
+INFO     planner time limit: None
+INFO     planner memory limit: None
+
+INFO     Running translator.
+INFO     translator stdin: None
+INFO     translator time limit: None
+INFO     translator memory limit: None
+INFO     translator command line string: /Users/david/anaconda3/bin/python /Users/david/Desktop/multiagent_helper_llmp/downward/builds/release/bin/translate/translate.py domains/tyreworld/domain.pddl experiments_multiagent_help/run101/tyreworld/p05_1.pddl --sas-file experiments_multiagent_help/run101/tyreworld/p05_1_plan.pddl.sas
+Parsing...
+Parsing task
+	->Parsing goal
+	->Parsing condition
+Expected logical operator or predicate name
+Got: empty
+translate exit code: 31
+
+Driver aborting after translate
+INFO     Planner time: 0.06s
+
+list index out of range
+Traceback (most recent call last):
+  File "/Users/david/Desktop/multiagent_helper_llmp/helper_script_n_agents.py", line 255, in <module>
+    planner.get_updated_init_conditions(path, validation_filename=f"./{path}/p{args.task_id}_{i}_validation.txt", pddl_problem_filename=init_problem, pddl_problem_filename_edited=init_problem_out,is_main=main_goal)
+  File "/Users/david/Desktop/multiagent_helper_llmp/modules/planner.py", line 135, in get_updated_init_conditions
+    with open(validation_filename, 'r') as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: './experiments_multiagent_help/run101/tyreworld/p05_1_validation.txt'
+----------------------------------------
+[info][singleagent][tyreworld] task 07 takes 30.11 sec, found a plan with cost 79.0
+['inflate all intact tyres and ensure all hands are empty.']
+[info][subgoal_1][tyreworld] task 07 takes 0.09 sec, found a plan with cost 7.0
+validating
+validator time 0.012953758239746094
+[info][multiagent main goal][tyreworld] task 07 takes 30.12 sec, found a plan with cost 72.0
+TASK: tyreworld - 101 - 07
+72.0 True
+[results][tyreworld][07]
+[single_agent][planning time: 30.11][cost: 79.0]
+[multi_agent][planning_time: 32.11023493766785][cost: 72.0][agents: 2][optimization time 12.446080923080444]
+----------------------------------------
+[info][singleagent][tyreworld] task 10 takes 30.11 sec, found a plan with cost 112.0
+['inflate all intact tyres and ensure all hands are empty.']
+[info][subgoal_1][tyreworld] task 10 takes 0.13 sec, found a plan with cost 10.0
+validating
+validator time 0.013488292694091797
+[info][multiagent main goal][tyreworld] task 10 takes 30.1 sec, found a plan with cost 102.0
+TASK: tyreworld - 101 - 10
+102.0 True
+[results][tyreworld][10]
+[single_agent][planning time: 30.11][cost: 112.0]
+[multi_agent][planning_time: 32.5447840499878][cost: 102.0][agents: 2][optimization time 24.726839780807495]
+----------------------------------------
+b'Traceback (most recent call last):\n  File "/Users/david/Desktop/multiagent_helper_llmp/downward/builds/release/bin/translate/translate.py", line 747, in <module>\n    main()\n  File "/Users/david/Desktop/multiagent_helper_llmp/downward/builds/release/bin/translate/translate.py", line 705, in main\n    task = pddl_parser.open(\n           ^^^^^^^^^^^^^^^^^\n  File "/Users/david/Desktop/multiagent_helper_llmp/downward/builds/release/bin/translate/pddl_parser/pddl_file.py", line 39, in open\n    return parsing_functions.parse_task(domain_pddl, task_pddl)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/Users/david/Desktop/multiagent_helper_llmp/downward/builds/release/bin/translate/pddl_parser/parsing_functions.py", line 634, in parse_task\n    task_name, task_domain_name, task_requirements, objects, init, goal, \\\n  File "/Users/david/Desktop/multiagent_helper_llmp/downward/builds/release/bin/translate/pddl_parser/parsing_functions.py", line 790, in parse_task_pddl\n    yield parse_condition(context, goal[1], type_dict, predicate_dict)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/Users/david/Desktop/multiagent_helper_llmp/downward/builds/release/bin/translate/pddl_parser/parsing_functions.py", line 209, in parse_condition\n    condition = parse_condition_aux(\n                ^^^^^^^^^^^^^^^^^^^^\n  File "/Users/david/Desktop/multiagent_helper_llmp/downward/builds/release/bin/translate/pddl_parser/parsing_functions.py", line 242, in parse_condition_aux\n    elif tag in predicate_dict:\n         ^^^^^^^^^^^^^^^^^^^^^\nTypeError: unhashable type: \'list\'\n'
+[info][singleagent][tyreworld] task 13 takes 30.13 sec, found a plan with cost 145.0
+['inflate all intact tyres and ensure all hands are empty.']
+planner broke
+INFO     planner time limit: None
+INFO     planner memory limit: None
+
+INFO     Running translator.
+INFO     translator stdin: None
+INFO     translator time limit: None
+INFO     translator memory limit: None
+INFO     translator command line string: /Users/david/anaconda3/bin/python /Users/david/Desktop/multiagent_helper_llmp/downward/builds/release/bin/translate/translate.py domains/tyreworld/domain.pddl experiments_multiagent_help/run101/tyreworld/p13_1.pddl --sas-file experiments_multiagent_help/run101/tyreworld/p13_1_plan.pddl.sas
+Parsing...
+translate exit code: 30
+
+Driver aborting after translate
+INFO     Planner time: 0.06s
+
+list index out of range
+Traceback (most recent call last):
+  File "/Users/david/Desktop/multiagent_helper_llmp/helper_script_n_agents.py", line 255, in <module>
+    planner.get_updated_init_conditions(path, validation_filename=f"./{path}/p{args.task_id}_{i}_validation.txt", pddl_problem_filename=init_problem, pddl_problem_filename_edited=init_problem_out,is_main=main_goal)
+  File "/Users/david/Desktop/multiagent_helper_llmp/modules/planner.py", line 135, in get_updated_init_conditions
+    with open(validation_filename, 'r') as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: './experiments_multiagent_help/run101/tyreworld/p13_1_validation.txt'
+----------------------------------------
+b'Traceback (most recent call last):\n  File "/Users/david/Desktop/multiagent_helper_llmp/downward/builds/release/bin/translate/translate.py", line 747, in <module>\n    main()\n  File "/Users/david/Desktop/multiagent_helper_llmp/downward/builds/release/bin/translate/translate.py", line 705, in main\n    task = pddl_parser.open(\n           ^^^^^^^^^^^^^^^^^\n  File "/Users/david/Desktop/multiagent_helper_llmp/downward/builds/release/bin/translate/pddl_parser/pddl_file.py", line 39, in open\n    return parsing_functions.parse_task(domain_pddl, task_pddl)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/Users/david/Desktop/multiagent_helper_llmp/downward/builds/release/bin/translate/pddl_parser/parsing_functions.py", line 634, in parse_task\n    task_name, task_domain_name, task_requirements, objects, init, goal, \\\n  File "/Users/david/Desktop/multiagent_helper_llmp/downward/builds/release/bin/translate/pddl_parser/parsing_functions.py", line 790, in parse_task_pddl\n    yield parse_condition(context, goal[1], type_dict, predicate_dict)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/Users/david/Desktop/multiagent_helper_llmp/downward/builds/release/bin/translate/pddl_parser/parsing_functions.py", line 209, in parse_condition\n    condition = parse_condition_aux(\n                ^^^^^^^^^^^^^^^^^^^^\n  File "/Users/david/Desktop/multiagent_helper_llmp/downward/builds/release/bin/translate/pddl_parser/parsing_functions.py", line 242, in parse_condition_aux\n    elif tag in predicate_dict:\n         ^^^^^^^^^^^^^^^^^^^^^\nTypeError: unhashable type: \'list\'\n'
+[info][singleagent][tyreworld] task 15 takes 30.14 sec, found a plan with cost 167.0
+['inflate all intact tyres and ensure all hands are empty.']
+planner broke
+INFO     planner time limit: None
+INFO     planner memory limit: None
+
+INFO     Running translator.
+INFO     translator stdin: None
+INFO     translator time limit: None
+INFO     translator memory limit: None
+INFO     translator command line string: /Users/david/anaconda3/bin/python /Users/david/Desktop/multiagent_helper_llmp/downward/builds/release/bin/translate/translate.py domains/tyreworld/domain.pddl experiments_multiagent_help/run101/tyreworld/p15_1.pddl --sas-file experiments_multiagent_help/run101/tyreworld/p15_1_plan.pddl.sas
+Parsing...
+translate exit code: 30
+
+Driver aborting after translate
+INFO     Planner time: 0.06s
+
+list index out of range
+Traceback (most recent call last):
+  File "/Users/david/Desktop/multiagent_helper_llmp/helper_script_n_agents.py", line 255, in <module>
+    planner.get_updated_init_conditions(path, validation_filename=f"./{path}/p{args.task_id}_{i}_validation.txt", pddl_problem_filename=init_problem, pddl_problem_filename_edited=init_problem_out,is_main=main_goal)
+  File "/Users/david/Desktop/multiagent_helper_llmp/modules/planner.py", line 135, in get_updated_init_conditions
+    with open(validation_filename, 'r') as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: './experiments_multiagent_help/run101/tyreworld/p15_1_validation.txt'
+----------------------------------------
+[info][singleagent][tyreworld] task 17 takes 30.18 sec, found a plan with cost 189.0
+['inflate all intact tyres and ensure all hands are empty.']
+[info][subgoal_1][tyreworld] task 17 takes 6.24 sec, found a plan with cost 17.0
+validating
+validator time 0.014550209045410156
+[info][multiagent main goal][tyreworld] task 17 takes 30.17 sec, found a plan with cost 172.0
+TASK: tyreworld - 101 - 17
+172.0 True
+[results][tyreworld][17]
+[single_agent][planning time: 30.18][cost: 189.0]
+[multi_agent][planning_time: 39.318898353576664][cost: 172.0][agents: 2][optimization time 84.27271389961243]
+----------------------------------------
+b'Traceback (most recent call last):\n  File "/Users/david/Desktop/multiagent_helper_llmp/downward/builds/release/bin/translate/translate.py", line 747, in <module>\n    main()\n  File "/Users/david/Desktop/multiagent_helper_llmp/downward/builds/release/bin/translate/translate.py", line 705, in main\n    task = pddl_parser.open(\n           ^^^^^^^^^^^^^^^^^\n  File "/Users/david/Desktop/multiagent_helper_llmp/downward/builds/release/bin/translate/pddl_parser/pddl_file.py", line 39, in open\n    return parsing_functions.parse_task(domain_pddl, task_pddl)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/Users/david/Desktop/multiagent_helper_llmp/downward/builds/release/bin/translate/pddl_parser/parsing_functions.py", line 634, in parse_task\n    task_name, task_domain_name, task_requirements, objects, init, goal, \\\n  File "/Users/david/Desktop/multiagent_helper_llmp/downward/builds/release/bin/translate/pddl_parser/parsing_functions.py", line 790, in parse_task_pddl\n    yield parse_condition(context, goal[1], type_dict, predicate_dict)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/Users/david/Desktop/multiagent_helper_llmp/downward/builds/release/bin/translate/pddl_parser/parsing_functions.py", line 209, in parse_condition\n    condition = parse_condition_aux(\n                ^^^^^^^^^^^^^^^^^^^^\n  File "/Users/david/Desktop/multiagent_helper_llmp/downward/builds/release/bin/translate/pddl_parser/parsing_functions.py", line 242, in parse_condition_aux\n    elif tag in predicate_dict:\n         ^^^^^^^^^^^^^^^^^^^^^\nTypeError: unhashable type: \'list\'\n'
+[info][singleagent][tyreworld] task 20 takes 30.21 sec, found a plan with cost 222.0
+['inflate all intact tyres and ensure all hands are empty.']
+planner broke
+INFO     planner time limit: None
+INFO     planner memory limit: None
+
+INFO     Running translator.
+INFO     translator stdin: None
+INFO     translator time limit: None
+INFO     translator memory limit: None
+INFO     translator command line string: /Users/david/anaconda3/bin/python /Users/david/Desktop/multiagent_helper_llmp/downward/builds/release/bin/translate/translate.py domains/tyreworld/domain.pddl experiments_multiagent_help/run101/tyreworld/p20_1.pddl --sas-file experiments_multiagent_help/run101/tyreworld/p20_1_plan.pddl.sas
+Parsing...
+translate exit code: 30
+
+Driver aborting after translate
+INFO     Planner time: 0.05s
+
+list index out of range
+Traceback (most recent call last):
+  File "/Users/david/Desktop/multiagent_helper_llmp/helper_script_n_agents.py", line 255, in <module>
+    planner.get_updated_init_conditions(path, validation_filename=f"./{path}/p{args.task_id}_{i}_validation.txt", pddl_problem_filename=init_problem, pddl_problem_filename_edited=init_problem_out,is_main=main_goal)
+  File "/Users/david/Desktop/multiagent_helper_llmp/modules/planner.py", line 135, in get_updated_init_conditions
+    with open(validation_filename, 'r') as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: './experiments_multiagent_help/run101/tyreworld/p20_1_validation.txt'
+----------------------------------------
+[info][singleagent][barman] task 01 takes 30.09 sec, found a plan with cost 36.0
+['shaker1 contains ingredient1 and all hands are empty.']
+[info][subgoal_1][barman] task 01 takes 0.1 sec, found a plan with cost 4.0
+validating
+validator time 0.01379084587097168
+[info][multiagent main goal][barman] task 01 takes 30.09 sec, found a plan with cost 34.0
+TASK: barman - 101 - 01
+37.0 True
+[results][barman][01]
+[single_agent][planning time: 30.09][cost: 36.0]
+[multi_agent][planning_time: 32.039692106246946][cost: 37.0][agents: 2][optimization time 0.6259751319885254]
+----------------------------------------
+[info][singleagent][barman] task 03 takes 30.08 sec, found a plan with cost 36.0
+['shaker1 contains ingredient2 and all hands are empty.']
+[info][subgoal_1][barman] task 03 takes 0.11 sec, found a plan with cost 4.0
+validating
+validator time 0.010336875915527344
+[info][multiagent main goal][barman] task 03 takes 30.09 sec, found a plan with cost 34.0
+TASK: barman - 101 - 03
+37.0 True
+[results][barman][03]
+[single_agent][planning time: 30.08][cost: 36.0]
+[multi_agent][planning_time: 31.76183099746704][cost: 37.0][agents: 2][optimization time 0.6494920253753662]
+----------------------------------------
+[info][singleagent][barman] task 05 takes 30.1 sec, found a plan with cost 49.0
+['shaker1 contains ingredient1 and all hands are empty.']
+[info][subgoal_1][barman] task 05 takes 0.12 sec, found a plan with cost 4.0
+validating
+validator time 0.007867097854614258
+[info][multiagent main goal][barman] task 05 takes 30.11 sec, found a plan with cost 48.0
+TASK: barman - 101 - 05
+51.0 True
+[results][barman][05]
+[single_agent][planning time: 30.1][cost: 49.0]
+[multi_agent][planning_time: 31.726483087539673][cost: 51.0][agents: 2][optimization time 0.8485429286956787]
+----------------------------------------
+[info][singleagent][barman] task 07 takes 30.1 sec, found a plan with cost 51.0
+['shaker1 contains ingredient2 and all hands are empty.']
+[info][subgoal_1][barman] task 07 takes 0.12 sec, found a plan with cost 4.0
+validating
+validator time 0.013991832733154297
+[info][multiagent main goal][barman] task 07 takes 30.09 sec, found a plan with cost 48.0
+TASK: barman - 101 - 07
+51.0 True
+[results][barman][07]
+[single_agent][planning time: 30.1][cost: 51.0]
+[multi_agent][planning_time: 31.902062854766847][cost: 51.0][agents: 2][optimization time 0.8111929893493652]
+----------------------------------------
+[info][singleagent][barman] task 10 takes 30.09 sec, found a plan with cost 65.0
+['shaker1 contains ingredient2 and all hands are empty.']
+[info][subgoal_1][barman] task 10 takes 0.14 sec, found a plan with cost 4.0
+validating
+validator time 0.0069119930267333984
+[info][multiagent main goal][barman] task 10 takes 30.08 sec, found a plan with cost 67.0
+TASK: barman - 101 - 10
+67.0 True
+[results][barman][10]
+[single_agent][planning time: 30.09][cost: 65.0]
+[multi_agent][planning_time: 31.511783094406127][cost: 67.0][agents: 2][optimization time 1.5057830810546875]
+----------------------------------------
+[info][singleagent][barman] task 13 takes 30.1 sec, found a plan with cost 82.0
+['shaker1 contains ingredient2 and all hands are empty.']
+[info][subgoal_1][barman] task 13 takes 0.17 sec, found a plan with cost 4.0
+validating
+validator time 0.006831169128417969
+[info][multiagent main goal][barman] task 13 takes 30.09 sec, found a plan with cost 79.0
+TASK: barman - 101 - 13
+80.0 True
+[results][barman][13]
+[single_agent][planning time: 30.1][cost: 82.0]
+[multi_agent][planning_time: 31.99353815078735][cost: 80.0][agents: 2][optimization time 1.4005329608917236]
+----------------------------------------
+[info][singleagent][barman] task 15 takes 30.1 sec, found a plan with cost 106.0
+['shaker1 contains ingredient2 and all hands are empty.']
+[info][subgoal_1][barman] task 15 takes 0.17 sec, found a plan with cost 4.0
+validating
+validator time 0.006956815719604492
+[info][multiagent main goal][barman] task 15 takes 30.11 sec, found a plan with cost 77.0
+TASK: barman - 101 - 15
+78.0 True
+[results][barman][15]
+[single_agent][planning time: 30.1][cost: 106.0]
+[multi_agent][planning_time: 31.590232400894166][cost: 78.0][agents: 2][optimization time 1.4851670265197754]
+----------------------------------------
+[info][singleagent][barman] task 17 takes 30.1 sec, found a plan with cost 126.0
+['shaker1 contains ingredient2 and all hands are empty.']
+[info][subgoal_1][barman] task 17 takes 0.19 sec, found a plan with cost 4.0
+validating
+validator time 0.0069501399993896484
+[info][multiagent main goal][barman] task 17 takes 30.1 sec, found a plan with cost 130.0
+TASK: barman - 101 - 17
+130.0 True
+[results][barman][17]
+[single_agent][planning time: 30.1][cost: 126.0]
+[multi_agent][planning_time: 32.13706401824951][cost: 130.0][agents: 2][optimization time 2.7013111114501953]
+----------------------------------------
+[info][singleagent][barman] task 20 takes 30.11 sec, found a plan with cost 145.0
+['shaker1 contains ingredient2 and all hands are empty.']
+[info][subgoal_1][barman] task 20 takes 0.19 sec, found a plan with cost 4.0
+validating
+validator time 0.006931304931640625
+[info][multiagent main goal][barman] task 20 takes 30.11 sec, found a plan with cost 119.0
+TASK: barman - 101 - 20
+119.0 True
+[results][barman][20]
+[single_agent][planning time: 30.11][cost: 145.0]
+[multi_agent][planning_time: 32.201498079299924][cost: 119.0][agents: 2][optimization time 2.5494439601898193]
+----------------------------------------

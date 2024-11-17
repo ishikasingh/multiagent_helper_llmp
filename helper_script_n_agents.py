@@ -21,11 +21,9 @@ def get_helper_subgoal_without_plan(expt_path, args, log_file):
     
     system_text += '\n'
 
-    system_text += ''' Your goal is to generate goals for agents such that they can be executed in parallel to decrease plan execution length. Generate only one clearly stated small independent subgoal for each helper agent to help main agent complete the given task.
-      The subgoal should not rely on any main agent actions, and should be executable by the helper agents independently without waiting for any main agent actions.
-     The subgoal should be clearly stated with unambiguous terminology. Do not use actions like assist or help. Generate actions that the helper agents can do independently, 
-     based on the given steps for completing the task. The main agent should be able to continue working on the remaining task while each of the helper agents is completing its small subgoal.
-     Do not overtake the full sequence of actions. Remember, the helper agents are only assisting the main agent and act agnostically to the main agent.'''
+    system_text += ''' Your goal is to generate goals for agents such that they can be executed in parallel to decrease plan execution length. Generate only one clearly stated small independent subgoal for each helper agent to help the main agent complete the given task. The subgoal must be executable by a helper agent completely independently without waiting for any main agent actions to change predicates. The subgoal SHOULD NOT be interwoven with other generated subgoals or the main task, but rather run uninterrupted from inception time in PARALLEL with other subgoals.  
+    The subgoal should be clearly stated with unambiguous terminology. Do not use actions like assist or help. The main goal will be augmented based on the generated subgoals, but will run in parallel with them. Do not overtake the full sequence of actions. Remember, the helper agents are only assisting the main agent and act agnostically to the main agent.
+    '''
     
     # print("system_text \n", system_text, "\n")
     
@@ -111,6 +109,44 @@ def get_helper_subgoal_without_plan(expt_path, args, log_file):
     helper_subgoal = helper_subgoal.split('final goal condition is:')[-1].strip()
     return all_subgoals, end
 
+def get_helper_subgoal_manual(expt_path, args, log_file):
+    all_subgoals = []
+    print(f"Entering manual subgoal generation for {args.domain} task {args.task_id}, with {args.num_agents-1} subgoals")
+    for i in range(1, args.num_agents):
+        while True:
+            subgoal = input(f"Enter subgoal for agent {i}: ")
+            if subgoal == "":
+                print(f"Subgoal for agent {i} is empty, please enter a valid subgoal")
+                continue
+            break
+        all_subgoals.append(subgoal)
+    return all_subgoals, 0
+
+def get_cached_results(args):
+    cache_file = f"./SA_cache/{args.domain}_{args.task_id}.json"
+    if os.path.exists(cache_file):
+        with open(cache_file, 'r') as f:
+            cache = json.load(f)
+            return (
+                cache['planner_total_time'],
+                cache['planner_total_time_opt'], 
+                cache['best_cost'],
+                cache['planner_search_time_1st_plan'],
+                cache['first_plan_cost']
+            )
+    return None
+
+def cache_results(args, results):
+    cache_file = f"./SA_cache/{args.domain}_{args.task_id}.json"
+    cache = {
+        'planner_total_time': results[0],
+        'planner_total_time_opt': results[1],
+        'best_cost': results[2],
+        'planner_search_time_1st_plan': results[3],
+        'first_plan_cost': results[4]
+    }
+    with open(cache_file, 'w') as f:
+        json.dump(cache, f)
 
 if __name__ == "__main__":
     # parse arguments, define domain, and create experiment folder
@@ -123,6 +159,7 @@ if __name__ == "__main__":
     parser.add_argument('--run', type=int, default=1)
     parser.add_argument('--num_agents', type=int, default=2)
     parser.add_argument('--model', type=str, default='gpt-4o')
+    parser.add_argument('--manual', type=bool, default=False)
     args = parser.parse_args()
 
     if not os.path.exists(args.experiment_folder):
@@ -180,9 +217,17 @@ if __name__ == "__main__":
         args.task_id = f'0{args.task_id}' if len(args.task_id)==1 else args.task_id
 
         # normal planning and same for multi-agent planning
+        # cache single agent results for better experiment runtime
         try:
-            # hard coded time as 10? Shouldn't this be args.time_limit, ask Ishika
-            planner_total_time, planner_total_time_opt, best_cost, planner_search_time_1st_plan, first_plan_cost = planner.planner(path, args)
+            cached_results = get_cached_results(args)
+            if cached_results:
+                print("Using cached single agent results")
+                planner_total_time, planner_total_time_opt, best_cost, planner_search_time_1st_plan, first_plan_cost = cached_results
+            else:
+                print("No cached single agent results found, running planner")
+                planner_total_time, planner_total_time_opt, best_cost, planner_search_time_1st_plan, first_plan_cost = planner.planner(path, args)
+                cache_results(args, (planner_total_time, planner_total_time_opt, best_cost, planner_search_time_1st_plan, first_plan_cost))
+            
             singleagent_planning_time.append(planner_total_time)
             singleagent_planning_time_opt.append(planner_total_time_opt)
             singleagent_cost.append(best_cost)
@@ -196,7 +241,10 @@ if __name__ == "__main__":
             singleagent_cost_1st.append(1e6)
 
         try:
-            subgoal_array, t1 = get_helper_subgoal_without_plan(path, args, log_file)
+            if args.manual == True:
+                subgoal_array, t1 = get_helper_subgoal_manual(path, args, log_file)
+            else:
+                subgoal_array, t1 = get_helper_subgoal_without_plan(path, args, log_file)
             # add check for validity of all goals
             print(subgoal_array)
             # # helper_subgoal = "xyz"

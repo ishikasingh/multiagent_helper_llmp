@@ -18,9 +18,9 @@ OUTPUT_FILE="experiment_results.txt"
 PYTHON_SCRIPT=""
 SUMMARY_FILE=""
 # termes "tyreworld" "grippers" "barman"
-DOMAINS=("barman" "grippers" "blocksworld" "tyreworld")
-TIME_LIMIT=100
-TASK_IDS=(1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20)
+DOMAINS=("blocksworld" "tyreworld" "barman")
+TIME_LIMIT=30
+TASK_IDS=(1 3 5 7 10 13 15 17 20)
 NUM_AGENTS=""
 RUN=1
 MODEL=""
@@ -118,4 +118,4 @@ echo "All experiments completed. Results are in $OUTPUT_FILE"
 
 python processor.py "$OUTPUT_FILE" "$SUMMARY_FILE"
 
-echp "Summary file created: $SUMMARY_FILE"
+echo "Summary file created: $SUMMARY_FILE"
