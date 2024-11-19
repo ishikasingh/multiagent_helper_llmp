@@ -12,6 +12,7 @@ FAST_DOWNWARD_ALIAS = "lama"
 
 AGENT_PREDICATES = {
     "barman": ['handempty', 'holding'],
+    "barman-enabled": ['handempty', 'holding'],
     "blocksworld": ['arm-empty', 'holding'],
     "grippers": ['at-robby', 'free', 'carry'],
     "termes": ['has-block', 'at'],
@@ -242,6 +243,9 @@ def validator_simulation_recursive(expt_path, logfile, multi=False):
 
     success = plan_length < float('inf')
     print(plan_length, success)
+    if success:
+        print("tracing optimal path")
+        trace_optimal_path(execution_state, agent_plans, log_file)
     return plan_length, success
 
 @lru_cache(maxsize=None)
@@ -348,3 +352,57 @@ def execute_all_agents_action(expt_path, domain_pddl_file, indices, agent_plans,
         return validator_sim_recursion_function(expt_path, domain_pddl_file, new_indices, agent_plans, tuple(new_task_states))
     else:
         return float('inf')
+    
+def trace_optimal_path(execution_state, agent_plans, log_file):
+    # Start at goal state
+    indices = [len(plan) for plan in agent_plans]
+    num_agents = len(agent_plans)
+    path = []
+    
+    while any(idx > 0 for idx in indices):
+        current_state = tuple(indices) + (num_agents,)
+        
+        # Try parallel first
+        prev_indices = [idx - 1 if idx > 0 else 0 for idx in indices]
+        prev_state = tuple(prev_indices) + (num_agents,)
+        
+        if prev_state in execution_state and execution_state[prev_state] != float('inf'):
+            # Record which agents actually moved
+            active_agents = []
+            for i in range(num_agents):
+                if indices[i] > prev_indices[i]:
+                    active_agents.append((i, agent_plans[i][prev_indices[i]]))
+            
+            if len(active_agents) > 1:
+                path.append(('parallel', active_agents))
+                indices = prev_indices
+                continue
+        
+        # If parallel didn't work, try single agent
+        for agent in range(num_agents):
+            if indices[agent] > 0:
+                test_indices = list(indices)
+                test_indices[agent] -= 1
+                prev_state = tuple(test_indices) + (agent,)
+                
+                if prev_state in execution_state and execution_state[prev_state] != float('inf'):
+                    path.append(('single', agent, agent_plans[agent][test_indices[agent]]))
+                    indices = test_indices
+                    break
+    
+    # Write the path in forward order
+    with open(log_file, 'a+') as f:
+        f.write("\nOptimal Plan Trace:\n")
+        f.write("-" * 50 + "\n")
+        
+        for action in reversed(path):
+            if action[0] == 'parallel':
+                f.write("Parallel Execution:\n")
+                for agent, plan_step in action[1]:
+                    f.write(f"  Agent {agent}: {plan_step}")
+                f.write("\n")
+            else:
+                f.write(f"Agent {action[1]}: {action[2]}")
+                f.write("\n")
+        
+        f.write("-" * 50 + "\n")

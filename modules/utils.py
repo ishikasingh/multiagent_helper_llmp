@@ -7,6 +7,7 @@ DOMAINS = [ ## .nl not changed for multi excpet gripper, since planner doesnt us
     "tyreworld",
     "grippers",
     "barman-multi",
+    "barman-enabled",
     "blocksworld-multi",
     "termes-multi",
     "tyreworld-multi",
