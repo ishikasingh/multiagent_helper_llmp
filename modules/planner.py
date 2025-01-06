@@ -335,13 +335,32 @@ def execute_all_agents_action(expt_path, domain_pddl_file, indices, agent_plans,
             get_updated_init_conditions_recurse(expt_path, validation_filename=val_paths[i], pddl_problem_filename=task_paths[i], pddl_problem_filename_edited=new_task_paths[i], env_conds_only=False)
             for j in range(len(agent_plans)):
                 if i != j:
-                    get_updated_init_conditions_recurse(expt_path, validation_filename=val_paths[i], pddl_problem_filename=task_paths[j], pddl_problem_filename_edited=new_task_paths[j])
+                    get_updated_init_conditions_recurse(expt_path, validation_filename=val_paths[i], pddl_problem_filename=task_paths[j], pddl_problem_filename_edited=new_task_paths[j], env_conds_only=True)
 
     if all_valid:
         with open(log_file, 'a+') as f:
             for i in range(len(agent_plans)):
                 if indices[i] < len(agent_plans[i]):
                     f.write(f"Agent {i}, {indices[i]}, {agent_plans[i][indices[i]][:-1]}\n")
+
+        for i in range(len(agent_plans)):
+            if indices[i] < len(agent_plans[i]):
+                get_updated_init_conditions_recurse(
+                    expt_path, 
+                    validation_filename=val_paths[i], 
+                    pddl_problem_filename=task_paths[i], 
+                    pddl_problem_filename_edited=new_task_paths[i], 
+                    env_conds_only=False
+                )
+                for j in range(len(agent_plans)):
+                    if i != j:
+                        get_updated_init_conditions_recurse(
+                            expt_path, 
+                            validation_filename=val_paths[i], 
+                            pddl_problem_filename=task_paths[j], 
+                            pddl_problem_filename_edited=new_task_paths[j], 
+                            env_conds_only=True
+                        )
 
         new_indices = tuple(idx + 1 if idx < len(plan) else idx for idx, plan in zip(indices, agent_plans))
         new_task_states = []

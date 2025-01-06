@@ -1,0 +1,114 @@
+Domain: blocksworld
+Success rate: 30.00% (6/20)
+Results:
+  [results][blocksworld][01]
+  [single_agent][planning time: 0.05][cost: 6.0]
+  [multi_agent][planning_time: 8.244546995162963][cost: 5.0][agents: 2][optimization time 0.10169315338134766]
+  Success: Yes
+
+  [results][blocksworld][02]
+  [single_agent][planning time: 0.07][cost: 6.0]
+  [multi_agent][planning_time: 7.266633863449097][cost: 5.0][agents: 2][optimization time 0.1093130111694336]
+  Success: Yes
+
+  [results][blocksworld][03]
+  [single_agent][planning time: 0.05][cost: 6.0]
+  [multi_agent][planning_time: 8.204026098251342][cost: 5.0][agents: 2][optimization time 0.129317045211792]
+  Success: Yes
+
+  [results][blocksworld][04]
+  [single_agent][planning time: 0.05][cost: 12.0]
+  [multi_agent][planning_time: 12.606092576980592][cost: 16.0][agents: 2][optimization time 0.21089816093444824]
+  Success: No
+
+  [results][blocksworld][05]
+  [single_agent][planning time: 0.04][cost: 8.0]
+  [multi_agent][planning_time: 8.420691375732423][cost: 6.0][agents: 2][optimization time 0.1717689037322998]
+  Success: Yes
+
+  [results][blocksworld][06]
+  [single_agent][planning time: 0.05][cost: 12.0]
+  [multi_agent][planning_time: 7.397738275527954][cost: 12.0][agents: 2][optimization time 1.6784429550170898]
+  Success: No
+
+  [results][blocksworld][07]
+  [single_agent][planning time: 0.05][cost: 8.0]
+  [multi_agent][planning_time: 6.829421129226684][cost: 8.0][agents: 2][optimization time 1.4159870147705078]
+  Success: No
+
+  [results][blocksworld][08]
+  [single_agent][planning time: 0.09][cost: 14.0]
+  [multi_agent][planning_time: 6.6234329986572265][cost: 14.0][agents: 2][optimization time 0.5595591068267822]
+  Success: No
+
+  [results][blocksworld][09]
+  [single_agent][planning time: 0.9][cost: 14.0]
+  [multi_agent][planning_time: 7.655800933837891][cost: 14.0][agents: 2][optimization time 1.6591918468475342]
+  Success: No
+
+  [results][blocksworld][10]
+  [single_agent][planning time: 1.03][cost: 18.0]
+  [multi_agent][planning_time: 11.768290071487426][cost: 16.0][agents: 2][optimization time 0.6463038921356201]
+  Success: Yes
+
+  [results][blocksworld][11]
+  [single_agent][planning time: 9.07][cost: 22.0]
+  [multi_agent][planning_time: 16.274423007965087][cost: 26.0][agents: 2][optimization time 0.31719279289245605]
+  Success: No
+
+  [results][blocksworld][12]
+  [single_agent][planning time: 10.08][cost: 20.0]
+  [multi_agent][planning_time: 18.93888831138611][cost: 20.0][agents: 2][optimization time 1.0717291831970215]
+  Success: No
+
+  [results][blocksworld][13]
+  [single_agent][planning time: 60.12][cost: 26.0]
+  [multi_agent][planning_time: 72.09599491119386][cost: 25.0][agents: 2][optimization time 0.43148016929626465]
+  Success: Yes
+
+  [results][blocksworld][14]
+  [single_agent][planning time: 56.73][cost: 22.0]
+  [multi_agent][planning_time: 71.7657059955597][cost: 22.0][agents: 2][optimization time 0.5719878673553467]
+  Success: No
+
+  [results][blocksworld][15]
+  [single_agent][planning time: 60.11][cost: 26.0]
+  [multi_agent][planning_time: 69.88784973144531][cost: 30.0][agents: 2][optimization time 0.4322967529296875]
+  Success: No
+
+  [results][blocksworld][16]
+  [single_agent][planning time: 60.12][cost: 28.0]
+  [multi_agent][planning_time: 71.78810424804688][cost: 30.0][agents: 2][optimization time 0.6910109519958496]
+  Success: No
+
+  [results][blocksworld][17]
+  [single_agent][planning time: 60.13][cost: 22.0]
+  [multi_agent][planning_time: 68.24987955093384][cost: 24.0][agents: 2][optimization time 0.4666409492492676]
+  Success: No
+
+  [results][blocksworld][18]
+  [single_agent][planning time: 60.14][cost: 30.0]
+  [multi_agent][planning_time: 71.22507171630859][cost: 32.0][agents: 2][optimization time 1.1221058368682861]
+  Success: No
+
+  [results][blocksworld][19]
+  [single_agent][planning time: 60.12][cost: 24.0]
+  [multi_agent][planning_time: 74.71289441108703][cost: 24.0][agents: 2][optimization time 1.37418794631958]
+  Success: No
+
+  [results][blocksworld][20]
+  [single_agent][planning time: 30.08][cost: 30.0]
+  [multi_agent][planning_time: 81.56019883155822][cost: 34.0][agents: 2][optimization time 0.469592809677124]
+  Success: No
+
+----------------------------------------
+
+Domain Averages:
+Domain: blocksworld
+  Single Agent:
+    Average Cost: 17.70
+    Average Planning Time: 23.45 sec
+  Multi Agent:
+    Average Cost: 18.40
+    Average Planning Time: 35.08 sec
+

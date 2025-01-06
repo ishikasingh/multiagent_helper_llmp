@@ -1,0 +1,970 @@
+Using cached single agent results
+llm output 1. Initial State Analysis:
+- Current state of all objects:
+  - b2 is on top of b3.
+  - b3 is on top of b1.
+  - b1 is on the table.
+  - b2 is clear.
+  - The arm is empty.
+- Key relationships between objects:
+  - b2 is the topmost block and is clear.
+  - b3 is sandwiched between b2 and b1.
+  - b1 is the bottom block on the table.
+
+2. Parallel Action Analysis:
+- Actions that could be done simultaneously:
+  - Since b2 is clear, it can be moved immediately.
+- Prerequisites for these actions:
+  - b2 can be picked up and moved without any prerequisites because it is clear.
+
+3. Dependencies Analysis:
+- What must happen before other actions:
+  - To achieve the goal state, b3 needs to be on top of b2, and b1 needs to be on top of b3.
+  - b2 must be moved first to allow b3 to be placed on top of it.
+- Which objects need to be free or clear first:
+  - b2 is already clear and can be moved immediately.
+
+4. Subgoal Selection:
+- Based on the above analysis, an effective subgoal for one agent would be to move b2 to a position where b3 can be placed on top of it.
+- This enables parallel actions with future agents by clearing the way for b3 to be moved onto b2.
+
+Final Subgoal:
+- [Move b2 to the table, making b3 clear for stacking on b2.]
+['Move b2 to the table, making b3 clear for stacking on b2.']
+[info][subgoal_1][blocksworld] task 01 takes 0.07 sec, found a plan with cost 2.0
+validating
+validator time 0.014103889465332031
+[info][multiagent main goal][blocksworld] task 01 takes 0.04 sec, found a plan with cost 4.0
+TASK: blocksworld - 100 - 01
+5.0 True
+tracing optimal path
+[results][blocksworld][01]
+[single_agent][planning time: 0.05][cost: 6.0]
+[multi_agent][planning_time: 8.244546995162963][cost: 5.0][agents: 2][optimization time 0.10169315338134766]
+----------------------------------------
+Using cached single agent results
+llm output 1. Initial State Analysis:
+   - Current state of all objects:
+     - b3 is on top of b2.
+     - b1 is on top of b3.
+     - b2 is on the table.
+     - b1 is clear.
+     - Your arm is empty.
+   - Key relationships between objects:
+     - b1 is the topmost block and is clear.
+     - b3 is between b1 and b2.
+     - b2 is the base block on the table.
+
+2. Parallel Action Analysis:
+   - Actions that could be done simultaneously:
+     - Unstacking b1 from b3 can be done independently as b1 is clear.
+   - Prerequisites for these actions:
+     - b1 must be clear to be unstacked.
+
+3. Dependencies Analysis:
+   - What must happen before other actions:
+     - b1 must be removed from b3 to access b3 for further manipulation.
+   - Which objects need to be free or clear first:
+     - b1 is already clear, so it can be moved immediately.
+
+4. Subgoal Selection:
+   - Based on the above analysis, an effective subgoal for one agent would be to handle the topmost block, b1, since it is clear and can be moved without affecting the other blocks.
+   - This will enable parallel actions with future agents by freeing up b3 for further manipulation, allowing another agent to work on rearranging b2 and b3.
+
+Final Subgoal:
+- [Unstack b1 from b3 and put it down on the table]
+['Unstack b1 from b3 and put it down on the table']
+[info][subgoal_1][blocksworld] task 02 takes 0.07 sec, found a plan with cost 2.0
+validating
+validator time 0.0059108734130859375
+[info][multiagent main goal][blocksworld] task 02 takes 0.05 sec, found a plan with cost 4.0
+TASK: blocksworld - 100 - 02
+5.0 True
+tracing optimal path
+[results][blocksworld][02]
+[single_agent][planning time: 0.07][cost: 6.0]
+[multi_agent][planning_time: 7.266633863449097][cost: 5.0][agents: 2][optimization time 0.1093130111694336]
+----------------------------------------
+No cached single agent results found, running planner
+[info][singleagent][blocksworld] task 03 takes 0.05 sec, found a plan with cost 6.0
+llm output 1. Initial State Analysis:
+   - Current state of all objects:
+     - b3 is on top of b2.
+     - b1 is on top of b3.
+     - b4 is on the table.
+     - b2 is on the table.
+     - b1 is clear.
+     - b4 is clear.
+     - The arm is empty.
+   - Key relationships between objects:
+     - b1 is on b3, which is on b2.
+     - b4 is separate and clear on the table.
+
+2. Parallel Action Analysis:
+   - Actions that could be done simultaneously:
+     - Since b1 is clear, it can be moved immediately.
+     - b4 is also clear and can be moved independently.
+   - Prerequisites for these actions:
+     - b1 can be picked up and moved without any prerequisites as it is clear.
+     - b4 can be picked up and moved without any prerequisites as it is clear.
+
+3. Dependencies Analysis:
+   - What must happen before other actions:
+     - To place b2 on b1, b1 must be on the table or another block.
+     - To place b3 on b4, b3 must be free, which requires moving b1 first.
+   - Which objects need to be free or clear first:
+     - b1 needs to be moved to free b3.
+     - b4 is already clear and can be used immediately.
+
+4. Subgoal Selection:
+   - Based on the above analysis, an effective subgoal for one agent would be to handle the movement of b1, as it is currently clear and can be moved independently.
+   - This will enable parallel actions with future agents by freeing b3, allowing another agent to handle the placement of b3 on b4.
+
+Final Subgoal:
+- [Move b1 to the table]
+['Move b1 to the table']
+[info][subgoal_1][blocksworld] task 03 takes 0.08 sec, found a plan with cost 2.0
+validating
+validator time 0.005655050277709961
+[info][multiagent main goal][blocksworld] task 03 takes 0.04 sec, found a plan with cost 4.0
+TASK: blocksworld - 100 - 03
+5.0 True
+tracing optimal path
+[results][blocksworld][03]
+[single_agent][planning time: 0.05][cost: 6.0]
+[multi_agent][planning_time: 8.204026098251342][cost: 5.0][agents: 2][optimization time 0.129317045211792]
+----------------------------------------
+No cached single agent results found, running planner
+[info][singleagent][blocksworld] task 04 takes 0.05 sec, found a plan with cost 12.0
+llm output 1. Initial State Analysis:
+   - Current state of all objects:
+     - b4 is on top of b2.
+     - b3 is on top of b1.
+     - b1 is on top of b4.
+     - b2 is on the table.
+     - b3 is clear.
+     - The arm is empty.
+   - Key relationships:
+     - b4 is part of a stack with b1 and b2.
+     - b3 is clear and on top of b1, which is on top of b4.
+
+2. Parallel Action Analysis:
+   - Actions that could be done simultaneously:
+     - Unstacking b3 from b1 can be done independently since b3 is clear.
+   - Prerequisites:
+     - b3 must be clear to be unstacked, which it already is.
+
+3. Dependencies Analysis:
+   - Before b1 can be moved to its final position on b2, b3 must be moved to its final position on b4.
+   - b3 is already clear, so it can be moved immediately without waiting for other actions.
+
+4. Subgoal Selection:
+   - An effective subgoal for one agent would be to move b3 to its final position on b4.
+   - This action can be done independently and in parallel with other actions that involve rearranging the remaining blocks.
+   - By moving b3 to b4, it clears b1 for future actions and sets up the final stack order.
+
+Based on the above analysis, the ONE subgoal for ONE agent is: [stack b3 b4].
+['stack b3 b4']
+[info][subgoal_1][blocksworld] task 04 takes 0.08 sec, found a plan with cost 6.0
+validating
+validator time 0.015205860137939453
+[info][multiagent main goal][blocksworld] task 04 takes 0.05 sec, found a plan with cost 10.0
+TASK: blocksworld - 100 - 04
+16 True
+tracing optimal path
+[results][blocksworld][04]
+[single_agent][planning time: 0.05][cost: 12.0]
+[multi_agent][planning_time: 12.606092576980592][cost: 16.0][agents: 2][optimization time 0.21089816093444824]
+----------------------------------------
+No cached single agent results found, running planner
+[info][singleagent][blocksworld] task 05 takes 0.04 sec, found a plan with cost 8.0
+llm output 1. Initial State Analysis:
+- Current state of all objects:
+  - b4 is on top of b1.
+  - b2 is on top of b3.
+  - b3 is on top of b5.
+  - b1 is on top of b2.
+  - b5 is on the table.
+  - b4 is clear.
+  - Your arm is empty.
+- Key relationships between objects:
+  - b4 is clear and can be moved immediately.
+  - b1 is under b4 and on top of b2, which is on top of b3.
+  - b3 is on top of b5 and needs to be clear to place b1 on it.
+
+2. Parallel Action Analysis:
+- Actions that could be done simultaneously:
+  - Unstacking b4 from b1 can be done immediately since b4 is clear.
+  - Unstacking b2 from b3 can also be done since b2 is clear.
+- Prerequisites for these actions:
+  - b4 must be clear to be unstacked from b1.
+  - b2 must be clear to be unstacked from b3.
+
+3. Dependencies Analysis:
+- What must happen before other actions:
+  - b4 must be removed from b1 to access b1.
+  - b2 must be removed from b3 to clear b3 for b1 to be placed on it.
+- Which objects need to be free or clear first:
+  - b4 is already clear and can be moved.
+  - b2 is clear and can be moved.
+
+4. Subgoal Selection:
+- Based on the above analysis, an effective subgoal for one agent would be to unstack b2 from b3 and put it down. This action can be done independently and in parallel with other actions, such as unstacking b4 from b1.
+- This will enable parallel actions with future agents by clearing b3, which is necessary for placing b1 on top of it.
+
+Final Subgoal:
+- [Unstack b2 from b3 and put it down]
+['Unstack b2 from b3 and put it down']
+[info][subgoal_1][blocksworld] task 05 takes 0.08 sec, found a plan with cost 6.0
+validating
+validator time 0.0057621002197265625
+[info][multiagent main goal][blocksworld] task 05 takes 0.05 sec, found a plan with cost 2.0
+TASK: blocksworld - 100 - 05
+6.0 True
+tracing optimal path
+[results][blocksworld][05]
+[single_agent][planning time: 0.04][cost: 8.0]
+[multi_agent][planning_time: 8.420691375732423][cost: 6.0][agents: 2][optimization time 0.1717689037322998]
+----------------------------------------
+No cached single agent results found, running planner
+[info][singleagent][blocksworld] task 06 takes 0.05 sec, found a plan with cost 12.0
+llm output 1. Initial State Analysis:
+   - Current state of objects:
+     - b5 is on top of b3.
+     - b4 is on top of b2.
+     - b2 is on top of b1.
+     - b3 is on top of b4.
+     - b1 is on the table.
+     - b5 is clear.
+   - Key relationships:
+     - b5 is clear and can be moved.
+     - b3 is on top of b4, which is on top of b2, which is on top of b1.
+     - b1 is the base block on the table.
+
+2. Parallel Action Analysis:
+   - Actions that could be done simultaneously:
+     - Since b5 is clear, it can be moved independently of other blocks.
+     - b3 needs to be moved to free b4, but b5 can be moved without affecting b3.
+   - Prerequisites:
+     - b5 is already clear, so it can be moved immediately.
+
+3. Dependencies Analysis:
+   - Before b4 can be moved to its final position on top of b1, b3 must be moved off b4.
+   - b1 needs to be clear to stack b4 on it, but b1 is currently the base block and is clear.
+   - b3 needs to be moved to free b4, but b5 can be moved independently.
+
+4. Subgoal Selection:
+   - An effective subgoal for one agent would be to move b5 to its final position on top of b3, as this can be done independently and in parallel with other actions.
+   - This enables parallel actions because while one agent is moving b5, another agent can work on clearing b3 from b4.
+
+Based on the above analysis, the subgoal for agent1 is to move b5 to its final position on top of b3. This action is independent and can be executed without waiting for other actions to complete.
+
+Final Subgoal for agent1: [stack b5 b3]
+['stack b5 b3']
+[info][subgoal_1][blocksworld] task 06 takes 90.99 sec, no solution found
+validating
+validator time 0.021525144577026367
+[info][multiagent main goal][blocksworld] task 06 takes 0.06 sec, found a plan with cost 12.0
+TASK: blocksworld - 100 - 06
+12 True
+tracing optimal path
+[results][blocksworld][06]
+[single_agent][planning time: 0.05][cost: 12.0]
+[multi_agent][planning_time: 7.397738275527954][cost: 12.0][agents: 2][optimization time 1.6784429550170898]
+----------------------------------------
+No cached single agent results found, running planner
+[info][singleagent][blocksworld] task 07 takes 0.05 sec, found a plan with cost 8.0
+llm output 1. Initial State Analysis:
+- Current state of all objects:
+  - b5 is on top of b2.
+  - b2 is on top of b3.
+  - b3 is on top of b1.
+  - b4 is on the table.
+  - b6 is on the table.
+  - b1 is on the table.
+  - b6 is clear.
+  - b5 is clear.
+  - b4 is clear.
+  - The arm is empty.
+- Key relationships:
+  - b5, b2, b3, and b1 form a stack.
+  - b4 and b6 are separate and clear on the table.
+
+2. Parallel Action Analysis:
+- Actions that could be done simultaneously:
+  - Since b4 and b6 are clear and on the table, they can be manipulated independently of the stack involving b5, b2, b3, and b1.
+- Prerequisites:
+  - b4 and b6 are already clear, so they can be picked up and moved without any additional actions.
+
+3. Dependencies Analysis:
+- Before b3 can be placed on top of b5, b5 must be clear, which it already is.
+- b4 needs to be placed on top of b3, but this can only happen after b3 is moved to its new position on top of b5.
+- b6 is independent of the goal and can be moved without affecting the main task.
+
+4. Subgoal Selection:
+- An effective subgoal for one agent would be to move b6 to a different location, ensuring it does not interfere with the main task of stacking b3 on b5 and b4 on b3.
+- This action can be done in parallel with other agents working on the main stack.
+
+Final Subgoal:
+- [Move b6 to a designated location on the table, ensuring it remains clear and does not interfere with the stacking of b3 on b5 and b4 on b3.]
+['Move b6 to a designated location on the table, ensuring it remains clear and does not interfere with the stacking of b3 on b5 and b4 on b3.']
+[info][subgoal_1][blocksworld] task 07 takes 0.09 sec, found a plan with cost 8.0
+validating
+validator time 0.005670785903930664
+[info][multiagent main goal][blocksworld] task 07 takes 89.99 sec, no solution found
+TASK: blocksworld - 100 - 07
+8 True
+tracing optimal path
+[results][blocksworld][07]
+[single_agent][planning time: 0.05][cost: 8.0]
+[multi_agent][planning_time: 6.829421129226684][cost: 8.0][agents: 2][optimization time 1.4159870147705078]
+----------------------------------------
+No cached single agent results found, running planner
+[info][singleagent][blocksworld] task 08 takes 0.09 sec, found a plan with cost 14.0
+llm output 1. Initial State Analysis:
+   - Current state of objects:
+     - b5 is on top of b1.
+     - b4 is on top of b5.
+     - b3 is on top of b2.
+     - b1 is on top of b3.
+     - b6 is on top of b4.
+     - b2 is on the table.
+     - b6 is clear.
+   - Key relationships:
+     - b6 is the topmost block and is clear.
+     - b2 is the base block on the table.
+     - b1 needs to be on top of b6.
+     - b3 needs to be on top of b5.
+     - b6 needs to be on top of b2.
+
+2. Parallel Action Analysis:
+   - Actions that could be done simultaneously:
+     - Unstacking b6 from b4 can be done independently as b6 is clear.
+     - Unstacking b3 from b2 can be done independently as b3 is clear.
+   - Prerequisites:
+     - For unstacking b6, it must be clear, which it is.
+     - For unstacking b3, it must be clear, which it is.
+
+3. Dependencies Analysis:
+   - Before b1 can be placed on b6, b6 must be moved to b2.
+   - Before b3 can be placed on b5, b5 must be clear.
+   - b6 needs to be moved first to allow b1 to be placed on it.
+
+4. Subgoal Selection:
+   - An effective subgoal for one agent would be to move b6 to its final position on b2. This action is independent and can be done without affecting other actions.
+   - This enables parallel actions as it clears b4, allowing other agents to work on rearranging the remaining blocks.
+
+Final Subgoal:
+- [Move b6 to be on top of b2]
+['Move b6 to be on top of b2']
+[info][subgoal_1][blocksworld] task 08 takes 0.09 sec, found a plan with cost 12.0
+validating
+validator time 0.0057299137115478516
+[info][multiagent main goal][blocksworld] task 08 takes 0.04 sec, found a plan with cost 4.0
+TASK: blocksworld - 100 - 08
+14.0 True
+tracing optimal path
+[results][blocksworld][08]
+[single_agent][planning time: 0.09][cost: 14.0]
+[multi_agent][planning_time: 6.6234329986572265][cost: 14.0][agents: 2][optimization time 0.5595591068267822]
+----------------------------------------
+No cached single agent results found, running planner
+[info][singleagent][blocksworld] task 09 takes 0.9 sec, found a plan with cost 14.0
+llm output 1. Initial State Analysis:
+- Current state of all objects:
+  - b4 is on top of b7.
+  - b3 is on top of b6.
+  - b7 is on top of b3.
+  - b2, b6, b1, and b5 are on the table.
+  - b1, b5, b2, and b4 are clear.
+- Key relationships:
+  - b4 is clear and on top of b7.
+  - b3 is on top of b6, and b7 is on top of b3, creating a stack.
+  - b2, b6, b1, and b5 are clear and on the table, meaning they can be moved immediately.
+
+2. Parallel Action Analysis:
+- Actions that could be done simultaneously:
+  - Since b1, b5, b2, and b4 are clear, they can be moved without any unstacking.
+- Prerequisites:
+  - b1 can be moved onto b2 directly.
+  - b5 can be moved onto b3 directly.
+  - b4 can be moved onto b7 directly.
+
+3. Dependencies Analysis:
+- Before b3 can be moved onto b7, b7 must be clear, which means b4 must be moved first.
+- b6 must be clear before b2 can be moved onto it, but b3 is on top of b6, so b3 must be moved first.
+- b5 can be moved onto b3 without any dependencies since b3 is already on b6.
+
+4. Subgoal Selection:
+- An effective subgoal for one agent would be to move b4 onto b7. This action does not depend on any other actions and can be done immediately since b4 is clear and b7 is already in the correct position.
+- This enables parallel actions because it clears b7, allowing another agent to focus on moving b3 onto b7 once b3 is clear.
+
+[Move b4 onto b7]
+['Move b4 onto b7']
+[info][subgoal_1][blocksworld] task 09 takes 91.08 sec, no solution found
+validating
+validator time 0.022937774658203125
+[info][multiagent main goal][blocksworld] task 09 takes 0.87 sec, found a plan with cost 14.0
+TASK: blocksworld - 100 - 09
+14 True
+tracing optimal path
+[results][blocksworld][09]
+[single_agent][planning time: 0.9][cost: 14.0]
+[multi_agent][planning_time: 7.655800933837891][cost: 14.0][agents: 2][optimization time 1.6591918468475342]
+----------------------------------------
+No cached single agent results found, running planner
+[info][singleagent][blocksworld] task 10 takes 1.03 sec, found a plan with cost 18.0
+llm output 1. Initial State Analysis:
+   - Current state of all objects:
+     - b6 is on top of b3, b2 is on top of b5, b4 is on top of b7, b7 is on top of b1.
+     - b3, b1, and b5 are on the table.
+     - b6, b2, and b4 are clear.
+     - The arm is empty.
+   - Key relationships between objects:
+     - b6 is the topmost block on b3.
+     - b2 is the topmost block on b5.
+     - b4 is the topmost block on b7, which is on b1.
+     - b3, b1, and b5 are base blocks on the table.
+
+2. Parallel Action Analysis:
+   - Actions that could be done simultaneously:
+     - Since b6, b2, and b4 are clear, they can be moved independently.
+   - Prerequisites for these actions:
+     - The arm must be empty to pick up any of the clear blocks.
+
+3. Dependencies Analysis:
+   - What must happen before other actions:
+     - To place b1 on top of b7, b7 must be clear, which means b4 must be moved first.
+     - To place b2 on top of b5, b5 must be clear, which it already is.
+     - To place b3 on top of b2, b2 must be clear, which it already is.
+     - To place b5 on top of b6, b6 must be clear, which it already is.
+   - Which objects need to be free or clear first:
+     - b4 needs to be moved to clear b7 for b1 to be placed on top of it.
+
+4. Subgoal Selection:
+   - Based on the above analysis, one effective subgoal for one agent would be to move b4 to a position that does not interfere with the final goal state. This will clear b7, allowing b1 to be placed on top of it.
+   - This enables parallel actions with future agents by allowing them to focus on other parts of the task, such as stacking b1 on b7 or b3 on b2.
+
+Final Subgoal:
+- [Move b4 to the table]
+['Move b4 to the table']
+[info][subgoal_1][blocksworld] task 10 takes 0.08 sec, found a plan with cost 2.0
+validating
+validator time 0.005494117736816406
+[info][multiagent main goal][blocksworld] task 10 takes 1.45 sec, found a plan with cost 16.0
+TASK: blocksworld - 100 - 10
+16.0 True
+tracing optimal path
+[results][blocksworld][10]
+[single_agent][planning time: 1.03][cost: 18.0]
+[multi_agent][planning_time: 11.768290071487426][cost: 16.0][agents: 2][optimization time 0.6463038921356201]
+----------------------------------------
+No cached single agent results found, running planner
+[info][singleagent][blocksworld] task 11 takes 9.07 sec, found a plan with cost 22.0
+llm output 1. Initial State Analysis:
+   - Current state of all objects:
+     - b7 is on top of b5.
+     - b4 is on top of b2.
+     - b8 is on top of b3.
+     - b3 is on top of b7.
+     - b2 is on top of b1.
+     - b6 is on top of b4.
+     - b5 is on top of b6.
+     - b1 is on the table.
+     - b8 is clear.
+   - Key relationships:
+     - b8 is clear and can be moved immediately.
+     - b1 is on the table and is the base of a stack.
+     - The goal requires rearranging multiple blocks to achieve the desired configuration.
+
+2. Parallel Action Analysis:
+   - Actions that could be done simultaneously:
+     - Since b8 is clear, it can be moved without affecting other blocks.
+     - Moving b8 to its goal position on top of b7 can be done independently.
+   - Prerequisites:
+     - b8 must remain clear to be moved directly.
+
+3. Dependencies Analysis:
+   - Before other actions, b8 should be moved to its goal position on top of b7.
+   - This action does not depend on the state of other blocks, as b8 is already clear.
+
+4. Subgoal Selection:
+   - An effective subgoal for one agent would be to move b8 to its goal position on top of b7.
+   - This action can be executed independently and in parallel with other agents working on different parts of the stack.
+
+Based on the above analysis, the subgoal for agent1 is to move b8 to its goal position. This action is independent and can be executed without waiting for other actions to complete.
+
+Final Subgoal for agent1: [stack b8 b7]
+['stack b8 b7']
+[info][subgoal_1][blocksworld] task 11 takes 0.09 sec, found a plan with cost 6.0
+validating
+validator time 0.00609898567199707
+[info][multiagent main goal][blocksworld] task 11 takes 6.79 sec, found a plan with cost 20.0
+TASK: blocksworld - 100 - 11
+26 True
+tracing optimal path
+[results][blocksworld][11]
+[single_agent][planning time: 9.07][cost: 22.0]
+[multi_agent][planning_time: 16.274423007965087][cost: 26.0][agents: 2][optimization time 0.31719279289245605]
+----------------------------------------
+No cached single agent results found, running planner
+[info][singleagent][blocksworld] task 12 takes 10.08 sec, found a plan with cost 20.0
+llm output 1. Initial State Analysis:
+- Current state of all objects:
+  - b7 is on top of b8.
+  - b8 is on top of b1.
+  - b1 is on top of b6.
+  - b6 is on top of b4.
+  - b4 is on the table.
+  - b2 is on the table.
+  - b3 is on the table.
+  - b5 is on the table.
+- Key relationships:
+  - b7 is clear and on top of a stack.
+  - b5, b2, and b3 are clear and on the table.
+  - The goal requires rearranging blocks into a specific configuration.
+
+2. Parallel Action Analysis:
+- Actions that could be done simultaneously:
+  - Since b5 is clear and on the table, it can be moved independently without affecting other stacks.
+- Prerequisites:
+  - b5 is already clear and on the table, so it can be picked up and moved without any dependencies.
+
+3. Dependencies Analysis:
+- Before b1 can be placed on b3, b3 must be clear, which it already is.
+- Before b2 can be placed on b8, b8 must be clear, which requires moving b7.
+- Before b4 can be placed on b7, b7 must be clear, which requires moving b7.
+- Before b6 can be placed on b4, b4 must be clear, which requires moving b6.
+- b5 can be moved independently as it is clear and on the table.
+
+4. Subgoal Selection:
+- An effective subgoal for one agent would be to move b5 to its final position on top of b6. This action is independent and can be executed without waiting for other actions to complete.
+- This enables parallel actions because it does not interfere with the movement of other blocks and can be done while other agents work on clearing and rearranging other stacks.
+
+Final Subgoal:
+- [Place b5 on top of b6]
+['Place b5 on top of b6']
+[info][subgoal_1][blocksworld] task 12 takes 0.11 sec, found a plan with cost 8.0
+validating
+validator time 0.0057561397552490234
+[info][multiagent main goal][blocksworld] task 12 takes 10.64 sec, found a plan with cost 18.0
+TASK: blocksworld - 100 - 12
+20.0 True
+tracing optimal path
+[results][blocksworld][12]
+[single_agent][planning time: 10.08][cost: 20.0]
+[multi_agent][planning_time: 18.93888831138611][cost: 20.0][agents: 2][optimization time 1.0717291831970215]
+----------------------------------------
+No cached single agent results found, running planner
+[info][singleagent][blocksworld] task 13 takes 60.12 sec, found a plan with cost 26.0
+llm output 1. Initial State Analysis:
+   - Current state of objects:
+     - b5 is on b2, b2 is on b3, b3 is on b1, b1 is on b4.
+     - b8 is on b6, b6 is on b9, b9 is on b5.
+     - b4 and b7 are on the table.
+     - b7 and b8 are clear.
+   - Key relationships:
+     - b5, b2, b3, b1, and b4 form a stack.
+     - b8, b6, and b9 form another stack.
+     - b7 is isolated and clear.
+
+2. Parallel Action Analysis:
+   - Actions that could be done simultaneously:
+     - Since b7 is clear and on the table, it can be used for stacking without affecting other stacks.
+     - b8 is also clear and can be moved independently.
+   - Prerequisites:
+     - b8 can be moved without any prerequisites as it is clear.
+
+3. Dependencies Analysis:
+   - Before b2 can be placed on b5, b5 must be free.
+   - Before b3 can be placed on b1, b1 must be free.
+   - Before b4 can be placed on b8, b8 must be free.
+   - b8 is already clear, so it can be moved immediately.
+
+4. Subgoal Selection:
+   - An effective subgoal for one agent would be to handle the clear block b8, as it can be moved without affecting the other stacks.
+   - This enables parallel actions because b8 can be moved to its final position on b7 while other agents work on freeing and rearranging the other blocks.
+
+Final Subgoal:
+- [Stack b8 on b7]
+['Stack b8 on b7']
+[info][subgoal_1][blocksworld] task 13 takes 0.08 sec, found a plan with cost 2.0
+validating
+validator time 0.012452125549316406
+[info][multiagent main goal][blocksworld] task 13 takes 60.13 sec, found a plan with cost 24.0
+TASK: blocksworld - 100 - 13
+25.0 True
+tracing optimal path
+[results][blocksworld][13]
+[single_agent][planning time: 60.12][cost: 26.0]
+[multi_agent][planning_time: 72.09599491119386][cost: 25.0][agents: 2][optimization time 0.43148016929626465]
+----------------------------------------
+No cached single agent results found, running planner
+[info][singleagent][blocksworld] task 14 takes 56.73 sec, found a plan with cost 22.0
+llm output 1. Initial State Analysis:
+- Current state of all objects:
+  - b7 is on top of b2.
+  - b5 is on top of b1.
+  - b9 is on top of b7.
+  - b1 is on top of b3.
+  - b8 is on top of b9.
+  - b4 is on top of b6.
+  - b2, b3, and b6 are on the table.
+  - b8, b5, and b4 are clear.
+- Key relationships:
+  - b8 is the topmost block in a stack (b8 -> b9 -> b7 -> b2).
+  - b5 is the topmost block in a stack (b5 -> b1 -> b3).
+  - b4 is the topmost block in a stack (b4 -> b6).
+
+2. Parallel Action Analysis:
+- Actions that could be done simultaneously:
+  - Since b8, b5, and b4 are clear, they can be moved independently.
+- Prerequisites:
+  - To move b8, b5, or b4, they must remain clear, which they currently are.
+
+3. Dependencies Analysis:
+- Before b1 can be placed on b2, b5 must be moved from b1.
+- Before b2 can be placed on b7, b9 and b8 must be moved.
+- Before b3 can be placed on b5, b1 must be moved from b3.
+- Before b4 can be placed on b1, b6 must be clear.
+- Before b5 can be placed on b6, b1 must be moved from b5.
+- Before b7 can be placed on b8, b9 must be moved.
+- Before b8 can be placed on b3, b9 must be moved.
+- Before b9 can be placed on b4, b8 must be moved.
+
+4. Subgoal Selection:
+- An effective subgoal for one agent would be to move b8, as it is the topmost block and can be moved without affecting other blocks immediately. This action will help clear the path for b9 to be moved, which is a prerequisite for several other actions.
+- This enables parallel actions because while one agent is moving b8, another agent can work on moving b5 or b4, as they are also clear.
+
+Final Subgoal:
+- [Move b8 to the table]
+['Move b8 to the table']
+[info][subgoal_1][blocksworld] task 14 takes 0.07 sec, found a plan with cost 2.0
+validating
+validator time 0.012598991394042969
+[info][multiagent main goal][blocksworld] task 14 takes 60.11 sec, found a plan with cost 22.0
+TASK: blocksworld - 100 - 14
+22.0 True
+tracing optimal path
+[results][blocksworld][14]
+[single_agent][planning time: 56.73][cost: 22.0]
+[multi_agent][planning_time: 71.7657059955597][cost: 22.0][agents: 2][optimization time 0.5719878673553467]
+----------------------------------------
+No cached single agent results found, running planner
+[info][singleagent][blocksworld] task 15 takes 60.11 sec, found a plan with cost 26.0
+llm output 1. Initial State Analysis:
+- Current state of all objects:
+  - b6 is on top of b3.
+  - b2 is on top of b10.
+  - b4 is on top of b8.
+  - b3 is on top of b1.
+  - b7 is on top of b4.
+  - b8 is on top of b6.
+  - b10 is on top of b7.
+  - b9 is on top of b2.
+  - b1 is on top of b5.
+  - b5 is on the table.
+  - b9 is clear.
+- Key relationships:
+  - b9 is the only clear block.
+  - b5 is the base block on the table.
+  - The goal requires rearranging blocks into a specific order.
+
+2. Parallel Action Analysis:
+- Actions that could be done simultaneously:
+  - Unstacking blocks from the top of stacks can be done in parallel if they do not interfere with each other.
+- Prerequisites:
+  - Blocks need to be clear to be unstacked.
+  - The arm must be empty to pick up a block.
+
+3. Dependencies Analysis:
+- Before b2 can be placed on b1, b9 must be moved from b2.
+- Before b3 can be placed on b10, b6 must be moved from b3.
+- Before b4 can be placed on b7, b7 must be moved from b4.
+- Before b8 can be placed on b2, b4 must be moved from b8.
+- Before b9 can be placed on b4, b9 must be moved from b2.
+- Before b10 can be placed on b9, b9 must be moved from b2.
+
+4. Subgoal Selection:
+- An effective subgoal for one agent would be to handle a sequence that does not interfere with the main agent's immediate actions.
+- Since b9 is clear and needs to be moved to achieve the final goal, agent1 can focus on moving b9 to its final position on b4, which is a necessary step for the main goal.
+
+[Agent1 subgoal: Move b9 to be on top of b4.]
+['Agent1 subgoal: Move b9 to be on top of b4.']
+[info][subgoal_1][blocksworld] task 15 takes 0.08 sec, found a plan with cost 10.0
+validating
+validator time 0.012272119522094727
+[info][multiagent main goal][blocksworld] task 15 takes 60.09 sec, found a plan with cost 20.0
+TASK: blocksworld - 100 - 15
+30 True
+tracing optimal path
+[results][blocksworld][15]
+[single_agent][planning time: 60.11][cost: 26.0]
+[multi_agent][planning_time: 69.88784973144531][cost: 30.0][agents: 2][optimization time 0.4322967529296875]
+----------------------------------------
+No cached single agent results found, running planner
+[info][singleagent][blocksworld] task 16 takes 60.12 sec, found a plan with cost 28.0
+llm output 1. Initial State Analysis:
+- Current state of all objects:
+  - b2 is on top of b3.
+  - b7 is on top of b1.
+  - b10 is on top of b8.
+  - b3 is on top of b6.
+  - b6 is on top of b9.
+  - b5 is on top of b4.
+  - b9 is on top of b10.
+  - b4 is on top of b2.
+  - b1 is on the table.
+  - b8 is on the table.
+  - b7 is clear.
+  - b5 is clear.
+  - The arm is empty.
+
+- Key relationships:
+  - b1 and b8 are on the table, serving as potential bases for stacks.
+  - b7 and b5 are clear, meaning they can be moved immediately.
+
+2. Parallel Action Analysis:
+- Actions that could be done simultaneously:
+  - Since b7 is clear, it can be moved to its target position on b4.
+  - b5 is also clear and can be moved to its target position on b3.
+
+- Prerequisites:
+  - b4 must be clear for b7 to be stacked on it.
+  - b3 must be clear for b5 to be stacked on it.
+
+3. Dependencies Analysis:
+- Before b7 can be placed on b4, b4 must be cleared of b5.
+- Before b5 can be placed on b3, b3 must be cleared of b2 and b6.
+- b2 must be moved to clear b3, and b6 must be moved to clear b9.
+
+4. Subgoal Selection:
+- An effective subgoal for one agent would be to focus on clearing b4 so that b7 can be stacked on it. This involves moving b5, which is currently on b4, to its target position on b3.
+- This subgoal allows parallel actions because while one agent is working on clearing b4 and moving b5, another agent can work on clearing b3 by moving b2 and b6.
+
+Based on the above analysis, the subgoal for agent1 is to move b5 to its target position on b3, which will clear b4 for b7 to be stacked on it. This action can be done independently and in parallel with other actions.
+
+Final Subgoal for agent1: [stack b5 b3]
+['stack b5 b3']
+[info][subgoal_1][blocksworld] task 16 takes 0.08 sec, found a plan with cost 8.0
+validating
+validator time 0.012197256088256836
+[info][multiagent main goal][blocksworld] task 16 takes 60.12 sec, found a plan with cost 24.0
+TASK: blocksworld - 100 - 16
+30.0 True
+tracing optimal path
+[results][blocksworld][16]
+[single_agent][planning time: 60.12][cost: 28.0]
+[multi_agent][planning_time: 71.78810424804688][cost: 30.0][agents: 2][optimization time 0.6910109519958496]
+----------------------------------------
+No cached single agent results found, running planner
+[info][singleagent][blocksworld] task 17 takes 60.13 sec, found a plan with cost 22.0
+llm output 1. Initial State Analysis:
+- Current state of objects:
+  - b4 is on top of b10.
+  - b1 is on top of b11.
+  - b5 is on top of b2.
+  - b7 is on top of b8.
+  - b8 is on top of b1.
+  - b10 is on top of b7.
+  - b9 is on top of b6.
+  - b3 is on top of b4.
+  - b2, b6, and b11 are on the table.
+  - b9, b5, and b3 are clear.
+- Key relationships:
+  - b2, b6, and b11 are base blocks on the table.
+  - b3, b5, and b9 are clear and can be moved immediately.
+
+2. Parallel Action Analysis:
+- Actions that could be done simultaneously:
+  - Since b3, b5, and b9 are clear, they can be moved without unstacking other blocks.
+- Prerequisites:
+  - b3, b5, and b9 need to remain clear to be moved immediately.
+
+3. Dependencies Analysis:
+- Before moving b2 on top of b7, b7 must be clear.
+- Before moving b5 on top of b4, b4 must be clear.
+- Before moving b6 on top of b10, b10 must be clear.
+- Before moving b7 on top of b3, b3 must be clear.
+- Before moving b9 on top of b5, b5 must be clear.
+- Before moving b10 on top of b9, b9 must be clear.
+- Before moving b11 on top of b1, b1 must be clear.
+
+4. Subgoal Selection:
+- An effective subgoal for one agent would be to move b9, which is already clear, to its final position on top of b5. This action does not depend on any other actions and can be executed immediately.
+- This enables parallel actions because it clears b9 from its current position, allowing other agents to focus on clearing and moving other blocks.
+
+[Move b9 on top of b5]
+['Move b9 on top of b5']
+[info][subgoal_1][blocksworld] task 17 takes 0.09 sec, found a plan with cost 2.0
+validating
+validator time 0.012128114700317383
+[info][multiagent main goal][blocksworld] task 17 takes 60.11 sec, found a plan with cost 24.0
+TASK: blocksworld - 100 - 17
+24.0 True
+tracing optimal path
+[results][blocksworld][17]
+[single_agent][planning time: 60.13][cost: 22.0]
+[multi_agent][planning_time: 68.24987955093384][cost: 24.0][agents: 2][optimization time 0.4666409492492676]
+----------------------------------------
+No cached single agent results found, running planner
+[info][singleagent][blocksworld] task 18 takes 60.14 sec, found a plan with cost 30.0
+llm output 1. Initial State Analysis:
+- Current state of all objects:
+  - b5 is on top of b3.
+  - b1 is on top of b9.
+  - b7 is on top of b1.
+  - b2 is on top of b5.
+  - b3 is on top of b6.
+  - b6 is on top of b7.
+  - b11 is on top of b8.
+  - b9 is on top of b11.
+  - b10 is on top of b2.
+  - b4 is on the table.
+  - b8 is on the table.
+  - b10 is clear.
+  - b4 is clear.
+  - The arm is empty.
+
+- Key relationships:
+  - b10 is the only clear block on top of a stack.
+  - b4 and b8 are on the table and clear.
+  - The goal involves rearranging blocks into specific configurations.
+
+2. Parallel Action Analysis:
+- Actions that could be done simultaneously:
+  - Unstacking b10 from b2, as b10 is clear.
+  - Unstacking b11 from b8, as b11 is not clear but part of a goal configuration.
+  
+- Prerequisites for these actions:
+  - For unstacking b10, no prerequisites as it is already clear.
+  - For unstacking b11, b9 must be moved first.
+
+3. Dependencies Analysis:
+- Before b11 can be placed on b8, b9 must be removed from b11.
+- b10 can be moved immediately as it is clear.
+- b4 can be used as a base for b1 once b1 is free.
+
+4. Subgoal Selection:
+- An effective subgoal for one agent would be to focus on a task that can be completed independently and contributes to the final goal.
+- Unstacking b10 from b2 and placing it on b9 aligns with the goal condition "b10 should be on top of b9" and can be done independently.
+
+- This subgoal allows other agents to work on freeing up other blocks or rearranging other parts of the stack without interference.
+
+[Agent1 subgoal: Move b10 from b2 to b9, achieving the condition "b10 should be on top of b9."]
+['Agent1 subgoal: Move b10 from b2 to b9, achieving the condition "b10 should be on top of b9."']
+[info][subgoal_1][blocksworld] task 18 takes 1.42 sec, found a plan with cost 16.0
+validating
+validator time 0.013749122619628906
+[info][multiagent main goal][blocksworld] task 18 takes 60.13 sec, found a plan with cost 22.0
+TASK: blocksworld - 100 - 18
+32.0 True
+tracing optimal path
+[results][blocksworld][18]
+[single_agent][planning time: 60.14][cost: 30.0]
+[multi_agent][planning_time: 71.22507171630859][cost: 32.0][agents: 2][optimization time 1.1221058368682861]
+----------------------------------------
+No cached single agent results found, running planner
+[info][singleagent][blocksworld] task 19 takes 60.12 sec, found a plan with cost 24.0
+llm output 1. Initial State Analysis:
+- Current state of all objects:
+  - b3 is on top of b8.
+  - b7 is on top of b10.
+  - b2 is on top of b5.
+  - b10 is on top of b11.
+  - b6 is on top of b1.
+  - b12 is on top of b9.
+  - b5 is on top of b7.
+  - b4 is on top of b12.
+  - b11, b1, b9, and b8 are on the table.
+  - b6, b3, b2, and b4 are clear.
+- Key relationships:
+  - Several blocks are stacked on top of each other, forming multiple towers.
+  - Some blocks are clear, meaning they can be moved immediately.
+
+2. Parallel Action Analysis:
+- Actions that could be done simultaneously:
+  - Since b6, b3, b2, and b4 are clear, they can be moved without unstacking other blocks.
+- Prerequisites:
+  - The arm must be empty to pick up a block.
+  - The target block must be clear to be moved.
+
+3. Dependencies Analysis:
+- Before moving b5 on top of b10, b5 must be clear, which requires moving b2.
+- Before moving b6 on top of b12, b6 must be clear, which it already is.
+- Before moving b7 on top of b4, b7 must be clear, which requires moving b5.
+- Before moving b8 on top of b3, b8 must be clear, which requires moving b3.
+- Before moving b9 on top of b2, b9 must be clear, which it already is.
+- Before moving b10 on top of b8, b10 must be clear, which requires moving b7.
+- Before moving b11 on top of b7, b11 must be clear, which it already is.
+- Before moving b12 on top of b11, b12 must be clear, which requires moving b4.
+
+4. Subgoal Selection:
+- An effective subgoal for one agent would be to move a block that is already clear and does not require any other blocks to be moved first. This will allow other agents to work on different parts of the problem simultaneously.
+- Moving b6 on top of b12 is a straightforward task since b6 is clear and b12 is already on the table.
+
+Based on the above analysis, the subgoal for agent1 is to move b6 on top of b12, as this action can be performed independently and in parallel with other tasks. 
+
+Final Subgoal: [stack b6 b12]
+['stack b6 b12']
+[info][subgoal_1][blocksworld] task 19 takes 0.1 sec, found a plan with cost 4.0
+validating
+validator time 0.012113332748413086
+[info][multiagent main goal][blocksworld] task 19 takes 60.12 sec, found a plan with cost 24.0
+TASK: blocksworld - 100 - 19
+24.0 True
+tracing optimal path
+[results][blocksworld][19]
+[single_agent][planning time: 60.12][cost: 24.0]
+[multi_agent][planning_time: 74.71289441108703][cost: 24.0][agents: 2][optimization time 1.37418794631958]
+----------------------------------------
+Using cached single agent results
+llm output 1. Initial State Analysis:
+   - Current state of all objects:
+     - b4 is on top of b10.
+     - b11 is on top of b4.
+     - b5 is on top of b8.
+     - b12 is on top of b2.
+     - b3 is on top of b9.
+     - b1 is on top of b12.
+     - b10 is on top of b3.
+     - b9 is on top of b1.
+     - b7, b2, b6, and b8 are on the table.
+     - b6, b11, b7, and b5 are clear.
+   - Key relationships:
+     - b11 is the topmost block in its stack.
+     - b5 is the topmost block in its stack.
+     - b6, b7, and b8 are clear and on the table, making them potential starting points for new stacks.
+
+2. Parallel Action Analysis:
+   - Actions that could be done simultaneously:
+     - Since b11 and b5 are clear, they can be moved independently of each other.
+     - b6, b7, and b8 being clear and on the table can be used as bases for new stacks.
+   - Prerequisites:
+     - b11 can be moved without any prerequisites as it is clear.
+     - b5 can be moved without any prerequisites as it is clear.
+
+3. Dependencies Analysis:
+   - Before b1 can be placed on b6, b1 must be freed from its current stack.
+   - Before b5 can be placed on b3, b3 must be freed from its current stack.
+   - b11 can be moved to its target position without affecting other dependencies.
+
+4. Subgoal Selection:
+   - An effective subgoal for one agent would be to move b11 to its target position on top of b12. This action is independent and does not interfere with other necessary actions for the main goal.
+   - This enables parallel actions as it clears b4 and b10 for other agents to manipulate without waiting for b11 to be moved.
+
+Based on the above analysis, the subgoal for agent1 is to move b11 to its target position. This action is independent and can be executed without waiting for other actions to complete.
+
+[Move b11 to be on top of b12]
+['Move b11 to be on top of b12']
+[info][subgoal_1][blocksworld] task 20 takes 13.41 sec, found a plan with cost 14.0
+validating
+validator time 0.014286994934082031
+[info][multiagent main goal][blocksworld] task 20 takes 60.14 sec, found a plan with cost 20.0
+TASK: blocksworld - 100 - 20
+34 True
+tracing optimal path
+[results][blocksworld][20]
+[single_agent][planning time: 30.08][cost: 30.0]
+[multi_agent][planning_time: 81.56019883155822][cost: 34.0][agents: 2][optimization time 0.469592809677124]
+----------------------------------------
