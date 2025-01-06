@@ -22,7 +22,7 @@ def get_helper_subgoal_without_plan(expt_path, args, log_file):
     system_text += '\n'
 
     system_text += ''' Your goal is to generate goals for agents such that they can be executed in parallel to decrease plan execution length. Generate only one clearly stated small independent subgoal for each helper agent to help the main agent complete the given task. The subgoal must be executable by a helper agent completely independently without waiting for any main agent actions to change predicates. The subgoal SHOULD NOT be interwoven with other generated subgoals or the main task, but rather run uninterrupted from inception time in PARALLEL with other subgoals.  
-    The subgoal should be clearly stated with unambiguous terminology. Do not use actions like assist or help. The main goal will be augmented based on the generated subgoals, but will run in parallel with them. Do not overtake the full sequence of actions. Remember, the helper agents are only assisting the main agent and act agnostically to the main agent.
+    The subgoal should be clearly stated with unambiguous terminology. Do not use actions like assist or help, only actions CLEARLY DEFINED IN THE DOMAIN. The main goal will be augmented based on the generated subgoals, but will run in parallel with them. Do not overtake the full sequence of actions. Remember, the helper agents are only assisting the main agent and act agnostically to the main agent.
     '''
     
     # print("system_text \n", system_text, "\n")
@@ -56,9 +56,9 @@ def get_helper_subgoal_without_plan(expt_path, args, log_file):
     shot1 contains cocktail1. shot2 contains cocktail2. 
 
     A possible agent1 subgoal looking at how the domain works based on the plan example provided for another task in this domain could be - 
-    agent1 subgoals: It can help in filling ingredient1 in a shot glass, then pour it in shaker1, while agent0 prepares other cocktail ingredients using other objects. In this way, agent1 would not need to wait for agent0 and it can complete its goal independently. agent1 should also release all objects that the main agent might need for its own actions. Therefore, agent1's clearly stated (with object names) complete and final goal condition is: shaker1 contains ingredient1 and all hands are empty.
+    agent1 subgoals: It can independently prepare cocktail1 using shot3 and shaker1. The agent will grasp shot3, fill it with ingredients, pour to shaker, shake the cocktail, and pour it to the target glass. All actions can be done while agent0 works with other containers. Therefore, agent1's clearly stated (with object names) complete and final goal condition is: contains shot1 cocktail1.
     A possible agent2 subgoal looking at how the domain works based on the plan example provided for another task in this domain could be - 
-    agent2 subgoals: It can help in filling ingredient3 in a shot glass, while agent0 and agent1 prepare other cocktail ingredients using other objects. In this way, agent2 would not need to wait for agent1 and agent0 and it can complete its goal independently. agent2 should also release all objects that the main agent might need for its own actions. Therefore, agent2's clearly stated (with object names) complete and final goal condition is: shotglass3 contains ingredient3 and all hands are empty.
+    agent2 subgoals: It can independently prepare cocktail2 using shot3 and shaker2. The agent will grasp shot3, fill it with ingredients, pour to shaker, shake the cocktail, and pour it to the target glass. All actions can be done while other agents work with other containers. Therefore, agent2's clearly stated (with object names) complete and final goal condition is: contains shot2 cocktail2.
     '''
     # This pattern continues until {args.num_agents - 1} subgoals are generated, or until it is unnecessary to generate more agents.
     # get natural language descriptions of current domain task

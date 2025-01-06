@@ -18,11 +18,11 @@ OUTPUT_FILE="experiment_results.txt"
 PYTHON_SCRIPT=""
 SUMMARY_FILE=""
 # termes "tyreworld" "grippers" "barman"
-DOMAINS=("blocksworld" "tyreworld" "barman")
-TIME_LIMIT=30
-TASK_IDS=(1 3 5 7 10 13 15 17 20)
+DOMAINS=("barman-enabled")
+TIME_LIMIT=60
+TASK_IDS=(1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20)
 NUM_AGENTS=""
-RUN=1
+RUN=100
 MODEL=""
 
 # Parse command-line arguments
