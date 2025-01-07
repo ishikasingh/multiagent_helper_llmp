@@ -21,6 +21,7 @@ AGENT_PREDICATES = {
     "blocksworld-multi": ['arm-empty', 'holding'],
     "termes-multi": ['has-block', 'at'],
     "tyreworld-multi": [],
+    "tyreworld-enabled": [],
     "grippers-multi": ['at-robby', 'free', 'carry'],
 }
 

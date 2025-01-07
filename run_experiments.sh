@@ -17,10 +17,10 @@ print_usage() {
 OUTPUT_FILE="experiment_results.txt"
 PYTHON_SCRIPT=""
 SUMMARY_FILE=""
-# termes "tyreworld" "grippers" "barman"
-DOMAINS=("blocksworld")
+# termes "tyreworld" "grippers" "barman" "blocksworld"
+DOMAINS=("tyreworld")
 TIME_LIMIT=60
-TASK_IDS=(1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20)
+TASK_IDS=(2 18 19 20)
 NUM_AGENTS=""
 RUN=100
 MODEL=""

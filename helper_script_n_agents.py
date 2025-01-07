@@ -83,63 +83,22 @@ def get_helper_subgoal_without_plan(expt_path, args, log_file):
     else:
         current_prompt_text = '\n\nNow we have another new problem defined in this domain for which we don\'t have access to the single agent plan:\n'
     current_prompt_text += f'{current_scenario.strip()}\n\n'
-    current_prompt_text += '''I want you to think through this step-by-step and show your reasoning to generate ONE subgoal for ONE agent. 
-IMPORTANT: Do not generate multiple subgoals - we will handle other agents separately.
-
-1. Initial State Analysis:
-- What is the current state of all objects?
-- What are the key relationships between objects?
-
-2. Parallel Action Analysis:
-- Which actions could be done simultaneously?
-- What are the prerequisites for these actions?
-
-3. Dependencies Analysis:
-- What must happen before other actions?
-- Which objects need to be free or clear first?
-
-4. Subgoal Selection:
-- Based on the above analysis, what would be ONE effective subgoal for ONE agent?
-- How will this enable parallel actions with future agents?
-
-After showing your reasoning for each step above, provide your ONE final subgoal in brackets [like this].
-STOP after providing one subgoal - do not suggest additional subgoals.
-'''
+    current_prompt_text += f'Return only one clearly stated subgoal condition for one and only one agent without explanation or steps. A possible subgoal looking at how the domain works based on the plan example provided for another task in this domain could be - \n'
 
     prompt_text = prompt_text + current_prompt_text
+    # helper_subgoal = 'Fetch the intact tyre from the boot, inflate the intact tyre, and put on the intact tyre on the hub.'
+    # print("\n prompt_text for helper_sg w/o plan \n",prompt_text)
+    # import ipdb; ipdb.set_trace()
+    #print("prompt text\n", prompt_text)
     start = time.time()
     all_subgoals = []
-    
+    #helper_subgoal = query(prompt_text, system_text=system_text, use_chatgpt=True)
     for i in range(1,args.num_agents):
-        if i == 2:
-            prompt_text += f'''
-Previously generated subgoal: {all_subgoals[0]}
-
-Please think through these steps to generate ONE additional subgoal:
-
-1. Previous Subgoal Analysis:
-- How does the previous subgoal affect the state?
-- What opportunities does it create?
-
-2. Remaining Tasks Analysis:
-- What main tasks are still needed?
-- Which of these could be parallelized?
-
-3. Coordination Analysis:
-- How can we complement the previous subgoal with ONE new subgoal?
-- What dependencies need to be considered?
-
-4. Subgoal Selection:
-- Based on this analysis, what would be ONE effective subgoal?
-- How will this maximize parallel execution?
-
-After showing your reasoning for each step above, provide your ONE final subgoal in brackets [like this].
-STOP after providing one subgoal - do not suggest additional subgoals.
-'''
+        prompt_text += f"\n agent{i} subgoal:"
+        #print(f"querying for agent {i}")
         helper_subgoal = generator.query(prompt_text, system_text=system_text, model=args.model)
-        print("llm output", helper_subgoal)
-        helper_subgoal = helper_subgoal[helper_subgoal.find('[')+1:helper_subgoal.find(']')]
-        prompt_text += f"\n agent{i} subgoal: {helper_subgoal}"
+        #print(helper_subgoal, "\n")
+        prompt_text += helper_subgoal
         all_subgoals.append(helper_subgoal)
     end = time.time()-start
 
@@ -301,10 +260,10 @@ if __name__ == "__main__":
         # edited init starts at  0 for original, then 1 for post-first subgoal, etc ...
         # subgoal 1 used original pddl domain, then subgoal 2 uses edited_init_1, 3 uses edited_init_2, etc ...
         for i in range(1,args.num_agents):
-            # print(f"agent{i}")
+            print(f"agent{i}")
             try:
                 planner_total_time, planner_total_time_opt, best_cost, planner_search_time_1st_plan, first_plan_cost = planner.planner(path, args, subgoal_idx=i)
-                #print("planner successful")
+                print("planner successful")
                 success, validator_time = planner.validator(path, subgoal_idx=i)
                 print("validator time", validator_time)
                 multiagent_helper_planning_time.append(planner_total_time)

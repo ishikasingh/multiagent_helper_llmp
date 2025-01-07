@@ -100,6 +100,9 @@ def clean_pddl_goal(goal_text):
     while goal_text.endswith(')') and goal_text.count('(') < goal_text.count(')'):
         goal_text = goal_text[:-1].rstrip()
 
+    # Fix double-wrapped and clauses
+    goal_text = re.sub(r'\(\s*\((and\s+.*?)\)\s*\)', r'(\1)', goal_text)
+
     return goal_text
 
 def get_pddl_goal(expt_path, args, helper_subgoal, log_file):
