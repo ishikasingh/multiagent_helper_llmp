@@ -831,3 +831,303 @@ tracing optimal path
 [single_agent][planning time: 60.21][cost: 189.0]
 [multi_agent][planning_time: 69.1512409210205][cost: 172.0][agents: 2][optimization time 218.07212710380554]
 ----------------------------------------
+Using cached single agent results
+['contains shot3 cocktail2.']
+agent1
+[info][subgoal_1][barman-enabled] task 01 takes 13.67 sec, found a plan with cost 10.0
+planner successful
+validating
+validator time 0.026607036590576172
+[info][multiagent main goal][barman-enabled] task 01 takes 49.25 sec, found a plan with cost 20.0
+TASK: barman-enabled - 100 - 01
+27.0 True
+tracing optimal path
+[results][barman-enabled][01]
+[single_agent][planning time: 30.1][cost: 28.0]
+[multi_agent][planning_time: 64.20363871574402][cost: 27.0][agents: 2][optimization time 1.535782814025879]
+----------------------------------------
+Using cached single agent results
+['contains shot2 cocktail3.']
+agent1
+[info][subgoal_1][barman-enabled] task 02 takes 17.63 sec, found a plan with cost 10.0
+planner successful
+validating
+validator time 0.014868974685668945
+[info][multiagent main goal][barman-enabled] task 02 takes 46.48 sec, found a plan with cost 20.0
+TASK: barman-enabled - 100 - 02
+27.0 True
+tracing optimal path
+[results][barman-enabled][02]
+[single_agent][planning time: 30.1][cost: 29.0]
+[multi_agent][planning_time: 65.27532564163208][cost: 27.0][agents: 2][optimization time 1.9273879528045654]
+----------------------------------------
+Using cached single agent results
+['contains shot2 cocktail1.']
+agent1
+[info][subgoal_1][barman-enabled] task 03 takes 9.71 sec, found a plan with cost 10.0
+planner successful
+validating
+validator time 0.01872396469116211
+[info][multiagent main goal][barman-enabled] task 03 takes 50.54 sec, found a plan with cost 20.0
+TASK: barman-enabled - 100 - 03
+27.0 True
+tracing optimal path
+[results][barman-enabled][03]
+[single_agent][planning time: 60.12][cost: 28.0]
+[multi_agent][planning_time: 61.813809871673584][cost: 27.0][agents: 2][optimization time 1.5550589561462402]
+----------------------------------------
+Using cached single agent results
+['contains shot3 cocktail2.']
+agent1
+[info][subgoal_1][barman-enabled] task 04 takes 17.77 sec, found a plan with cost 10.0
+planner successful
+validating
+validator time 0.01622605323791504
+[info][multiagent main goal][barman-enabled] task 04 takes 37.67 sec, found a plan with cost 19.0
+TASK: barman-enabled - 100 - 04
+26.0 True
+tracing optimal path
+[results][barman-enabled][04]
+[single_agent][planning time: 60.12][cost: 29.0]
+[multi_agent][planning_time: 56.921650352478025][cost: 26.0][agents: 2][optimization time 1.496089220046997]
+----------------------------------------
+Using cached single agent results
+['contains shot3 cocktail3.']
+agent1
+[info][subgoal_1][barman-enabled] task 05 takes 21.01 sec, found a plan with cost 10.0
+planner successful
+validating
+validator time 0.01625227928161621
+[info][multiagent main goal][barman-enabled] task 05 takes 60.21 sec, found a plan with cost 33.0
+TASK: barman-enabled - 100 - 05
+40.0 True
+tracing optimal path
+[results][barman-enabled][05]
+[single_agent][planning time: 60.14][cost: 42.0]
+[multi_agent][planning_time: 82.90268036842346][cost: 40.0][agents: 2][optimization time 2.42140793800354]
+----------------------------------------
+Using cached single agent results
+['contains shot3 cocktail1.']
+agent1
+[info][subgoal_1][barman-enabled] task 06 takes 21.26 sec, found a plan with cost 10.0
+planner successful
+validating
+validator time 0.00808405876159668
+[info][multiagent main goal][barman-enabled] task 06 takes 60.22 sec, found a plan with cost 33.0
+TASK: barman-enabled - 100 - 06
+40.0 True
+tracing optimal path
+[results][barman-enabled][06]
+[single_agent][planning time: 60.13][cost: 42.0]
+[multi_agent][planning_time: 82.7287313747406][cost: 40.0][agents: 2][optimization time 2.39963698387146]
+----------------------------------------
+Using cached single agent results
+['contains shot3 cocktail2.']
+agent1
+[info][subgoal_1][barman-enabled] task 07 takes 20.24 sec, found a plan with cost 10.0
+planner successful
+validating
+validator time 0.015927791595458984
+[info][multiagent main goal][barman-enabled] task 07 takes 60.17 sec, found a plan with cost 32.0
+TASK: barman-enabled - 100 - 07
+39.0 True
+tracing optimal path
+[results][barman-enabled][07]
+[single_agent][planning time: 60.14][cost: 40.0]
+[multi_agent][planning_time: 81.69048181533813][cost: 39.0][agents: 2][optimization time 2.2268078327178955]
+----------------------------------------
+Using cached single agent results
+['contains shot4 cocktail1.']
+agent1
+[info][subgoal_1][barman-enabled] task 08 takes 29.86 sec, found a plan with cost 10.0
+planner successful
+validating
+validator time 0.015635013580322266
+[info][multiagent main goal][barman-enabled] task 08 takes 60.19 sec, found a plan with cost 33.0
+TASK: barman-enabled - 100 - 08
+40.0 True
+tracing optimal path
+[results][barman-enabled][08]
+[single_agent][planning time: 60.13][cost: 42.0]
+[multi_agent][planning_time: 91.06320338249206][cost: 40.0][agents: 2][optimization time 2.580763816833496]
+----------------------------------------
+Using cached single agent results
+['contains shot4 cocktail1.']
+agent1
+[info][subgoal_1][barman-enabled] task 09 takes 42.21 sec, found a plan with cost 10.0
+planner successful
+validating
+validator time 0.016011953353881836
+[info][multiagent main goal][barman-enabled] task 09 takes 60.16 sec, found a plan with cost 45.0
+TASK: barman-enabled - 100 - 09
+52.0 True
+tracing optimal path
+[results][barman-enabled][09]
+[single_agent][planning time: 60.14][cost: 58.0]
+[multi_agent][planning_time: 106.83819281578064][cost: 52.0][agents: 2][optimization time 3.0033509731292725]
+----------------------------------------
+Using cached single agent results
+['contains shot2 cocktail3.']
+agent1
+[info][subgoal_1][barman-enabled] task 10 takes 60.18 sec, found a plan with cost 10.0
+planner successful
+validating
+validator time 0.01637101173400879
+[info][multiagent main goal][barman-enabled] task 10 takes 60.16 sec, found a plan with cost 48.0
+TASK: barman-enabled - 100 - 10
+55.0 True
+tracing optimal path
+[results][barman-enabled][10]
+[single_agent][planning time: 60.15][cost: 60.0]
+[multi_agent][planning_time: 122.5843220615387][cost: 55.0][agents: 2][optimization time 3.140181064605713]
+----------------------------------------
+Using cached single agent results
+['contains shot3 cocktail2.']
+agent1
+[info][subgoal_1][barman-enabled] task 11 takes 60.17 sec, found a plan with cost 10.0
+planner successful
+validating
+validator time 0.0216519832611084
+[info][multiagent main goal][barman-enabled] task 11 takes 60.18 sec, found a plan with cost 46.0
+TASK: barman-enabled - 100 - 11
+53.0 True
+tracing optimal path
+[results][barman-enabled][11]
+[single_agent][planning time: 60.17][cost: 56.0]
+[multi_agent][planning_time: 121.51002297401428][cost: 53.0][agents: 2][optimization time 3.0598912239074707]
+----------------------------------------
+Using cached single agent results
+['contains shot2 cocktail1.']
+agent1
+[info][subgoal_1][barman-enabled] task 12 takes 60.2 sec, found a plan with cost 10.0
+planner successful
+validating
+validator time 0.01716899871826172
+[info][multiagent main goal][barman-enabled] task 12 takes 60.16 sec, found a plan with cost 48.0
+TASK: barman-enabled - 100 - 12
+55.0 True
+tracing optimal path
+[results][barman-enabled][12]
+[single_agent][planning time: 60.14][cost: 60.0]
+[multi_agent][planning_time: 121.97553311347961][cost: 55.0][agents: 2][optimization time 3.65826678276062]
+----------------------------------------
+Using cached single agent results
+['contains shot4 cocktail1.']
+agent1
+[info][subgoal_1][barman-enabled] task 13 takes 60.22 sec, found a plan with cost 10.0
+planner successful
+validating
+validator time 0.0166628360748291
+[info][multiagent main goal][barman-enabled] task 13 takes 60.18 sec, found a plan with cost 68.0
+TASK: barman-enabled - 100 - 13
+75.0 True
+tracing optimal path
+[results][barman-enabled][13]
+[single_agent][planning time: 60.21][cost: 74.0]
+[multi_agent][planning_time: 121.53240909576417][cost: 75.0][agents: 2][optimization time 5.562877893447876]
+----------------------------------------
+Using cached single agent results
+['contains shot3 cocktail4.']
+agent1
+[info][subgoal_1][barman-enabled] task 14 takes 60.22 sec, found a plan with cost 10.0
+planner successful
+validating
+validator time 0.016768932342529297
+[info][multiagent main goal][barman-enabled] task 14 takes 60.18 sec, found a plan with cost 68.0
+TASK: barman-enabled - 100 - 14
+75.0 True
+tracing optimal path
+[results][barman-enabled][14]
+[single_agent][planning time: 60.16][cost: 84.0]
+[multi_agent][planning_time: 121.51573576927186][cost: 75.0][agents: 2][optimization time 4.630425930023193]
+----------------------------------------
+Using cached single agent results
+['contains shot2 cocktail1.']
+agent1
+[info][subgoal_1][barman-enabled] task 15 takes 60.18 sec, found a plan with cost 10.0
+planner successful
+validating
+validator time 0.01655101776123047
+[info][multiagent main goal][barman-enabled] task 15 takes 60.15 sec, found a plan with cost 69.0
+TASK: barman-enabled - 100 - 15
+76.0 True
+tracing optimal path
+[results][barman-enabled][15]
+[single_agent][planning time: 60.17][cost: 75.0]
+[multi_agent][planning_time: 121.50582011222839][cost: 76.0][agents: 2][optimization time 4.499605894088745]
+----------------------------------------
+Using cached single agent results
+['contains shot3 cocktail6.']
+agent1
+[info][subgoal_1][barman-enabled] task 16 takes 60.18 sec, found a plan with cost 10.0
+planner successful
+validating
+validator time 0.01685786247253418
+[info][multiagent main goal][barman-enabled] task 16 takes 60.15 sec, found a plan with cost 72.0
+TASK: barman-enabled - 100 - 16
+79.0 True
+tracing optimal path
+[results][barman-enabled][16]
+[single_agent][planning time: 60.16][cost: 80.0]
+[multi_agent][planning_time: 121.8758550453186][cost: 79.0][agents: 2][optimization time 4.585824012756348]
+----------------------------------------
+Using cached single agent results
+['contains shot3 cocktail2.']
+agent1
+[info][subgoal_1][barman-enabled] task 17 takes 60.23 sec, found a plan with cost 10.0
+planner successful
+validating
+validator time 0.016032934188842773
+[info][multiagent main goal][barman-enabled] task 17 takes 60.17 sec, found a plan with cost 77.0
+TASK: barman-enabled - 100 - 17
+84.0 True
+tracing optimal path
+[results][barman-enabled][17]
+[single_agent][planning time: 60.19][cost: 100.0]
+[multi_agent][planning_time: 121.60398283004761][cost: 84.0][agents: 2][optimization time 4.981904745101929]
+----------------------------------------
+Using cached single agent results
+['contains shot7 cocktail2.']
+agent1
+[info][subgoal_1][barman-enabled] task 18 takes 60.21 sec, found a plan with cost 10.0
+planner successful
+validating
+validator time 0.01564502716064453
+[info][multiagent main goal][barman-enabled] task 18 takes 60.16 sec, found a plan with cost 80.0
+TASK: barman-enabled - 100 - 18
+80.0 True
+tracing optimal path
+[results][barman-enabled][18]
+[single_agent][planning time: 60.19][cost: 105.0]
+[multi_agent][planning_time: 122.03918015480042][cost: 80.0][agents: 2][optimization time 6.7991087436676025]
+----------------------------------------
+Using cached single agent results
+['contains shot5 cocktail1.']
+agent1
+[info][subgoal_1][barman-enabled] task 19 takes 60.25 sec, found a plan with cost 10.0
+planner successful
+validating
+validator time 0.020040035247802734
+[info][multiagent main goal][barman-enabled] task 19 takes 60.16 sec, found a plan with cost 81.0
+TASK: barman-enabled - 100 - 19
+88.0 True
+tracing optimal path
+[results][barman-enabled][19]
+[single_agent][planning time: 60.19][cost: 107.0]
+[multi_agent][planning_time: 121.84993186950683][cost: 88.0][agents: 2][optimization time 5.450168132781982]
+----------------------------------------
+Using cached single agent results
+['contains shot4 cocktail4.']
+agent1
+[info][subgoal_1][barman-enabled] task 20 takes 60.22 sec, found a plan with cost 10.0
+planner successful
+validating
+validator time 0.01768803596496582
+[info][multiagent main goal][barman-enabled] task 20 takes 60.18 sec, found a plan with cost 80.0
+TASK: barman-enabled - 100 - 20
+87.0 True
+tracing optimal path
+[results][barman-enabled][20]
+[single_agent][planning time: 60.21][cost: 103.0]
+[multi_agent][planning_time: 121.63274755477906][cost: 87.0][agents: 2][optimization time 5.481379270553589]
+----------------------------------------
