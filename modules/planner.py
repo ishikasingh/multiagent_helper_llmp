@@ -7,6 +7,9 @@ import time
 import glob
 import modules.utils as utils
 import numpy as np
+import sys
+
+sys.setrecursionlimit(10000)
 
 FAST_DOWNWARD_ALIAS = "lama"
 

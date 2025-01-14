@@ -1,0 +1,433 @@
+Using cached single agent results
+['contains shot1 cocktail1.', 'contains shot2 cocktail3.', 'contains shot3 cocktail2.']
+agent1
+[info][subgoal_1][barman-enabled] task 01 takes 19.1 sec, found a plan with cost 10.0
+planner successful
+validating
+validator time 0.00843191146850586
+agent2
+[info][subgoal_2][barman-enabled] task 01 takes 1.66 sec, found a plan with cost 11.0
+planner successful
+validating
+validator time 0.0070858001708984375
+agent3
+[info][subgoal_3][barman-enabled] task 01 takes 0.2 sec, found a plan with cost 10.0
+planner successful
+validating
+validator time 0.007292747497558594
+[info][multiagent main goal][barman-enabled] task 01 takes 86.8 sec, no solution found
+TASK: barman-enabled - 100 - 01
+19.0 True
+tracing optimal path
+[results][barman-enabled][01]
+[single_agent][planning time: 30.1][cost: 28.0]
+[multi_agent][planning_time: 22.983112297058106][cost: 19.0][agents: 4][optimization time 22.951399326324463]
+----------------------------------------
+Using cached single agent results
+['contains shot1 cocktail1.', 'contains shot2 cocktail3.', 'contains shot3 cocktail2.']
+agent1
+[info][subgoal_1][barman-enabled] task 02 takes 18.56 sec, found a plan with cost 10.0
+planner successful
+validating
+validator time 0.007857799530029297
+agent2
+[info][subgoal_2][barman-enabled] task 02 takes 1.5 sec, found a plan with cost 11.0
+planner successful
+validating
+validator time 0.00718379020690918
+agent3
+[info][subgoal_3][barman-enabled] task 02 takes 0.22 sec, found a plan with cost 10.0
+planner successful
+validating
+validator time 0.007408857345581055
+[info][multiagent main goal][barman-enabled] task 02 takes 86.67 sec, no solution found
+TASK: barman-enabled - 100 - 02
+19.0 True
+tracing optimal path
+[results][barman-enabled][02]
+[single_agent][planning time: 30.1][cost: 29.0]
+[multi_agent][planning_time: 22.69735553741455][cost: 19.0][agents: 4][optimization time 18.336985111236572]
+----------------------------------------
+Using cached single agent results
+['contains shot2 cocktail1.', 'contains shot1 cocktail2.', 'contains shot3 cocktail3.']
+agent1
+[info][subgoal_1][barman-enabled] task 03 takes 9.22 sec, found a plan with cost 10.0
+planner successful
+validating
+validator time 0.0072400569915771484
+agent2
+[info][subgoal_2][barman-enabled] task 03 takes 1.48 sec, found a plan with cost 11.0
+planner successful
+validating
+validator time 0.007087230682373047
+agent3
+[info][subgoal_3][barman-enabled] task 03 takes 0.22 sec, found a plan with cost 10.0
+planner successful
+validating
+validator time 0.007033109664916992
+[info][multiagent main goal][barman-enabled] task 03 takes 87.79 sec, no solution found
+TASK: barman-enabled - 100 - 03
+19.0 True
+tracing optimal path
+[results][barman-enabled][03]
+[single_agent][planning time: 60.12][cost: 28.0]
+[multi_agent][planning_time: 13.185592575073244][cost: 19.0][agents: 4][optimization time 18.32326102256775]
+----------------------------------------
+Using cached single agent results
+['contains shot1 cocktail1.', 'contains shot2 cocktail3.', 'contains shot3 cocktail2.']
+agent1
+[info][subgoal_1][barman-enabled] task 04 takes 18.51 sec, found a plan with cost 10.0
+planner successful
+validating
+validator time 0.007460832595825195
+agent2
+[info][subgoal_2][barman-enabled] task 04 takes 1.33 sec, found a plan with cost 11.0
+planner successful
+validating
+validator time 0.008705854415893555
+agent3
+[info][subgoal_3][barman-enabled] task 04 takes 0.24 sec, found a plan with cost 10.0
+planner successful
+validating
+validator time 0.0069658756256103516
+[info][multiagent main goal][barman-enabled] task 04 takes 89.1 sec, no solution found
+TASK: barman-enabled - 100 - 04
+19.0 True
+tracing optimal path
+[results][barman-enabled][04]
+[single_agent][planning time: 60.12][cost: 29.0]
+[multi_agent][planning_time: 22.897394495010378][cost: 19.0][agents: 4][optimization time 18.941452026367188]
+----------------------------------------
+Using cached single agent results
+['contains shot1 cocktail1.', 'contains shot2 cocktail4.', 'contains shot3 cocktail3.']
+agent1
+[info][subgoal_1][barman-enabled] task 05 takes 44.47 sec, found a plan with cost 10.0
+planner successful
+validating
+validator time 0.007742166519165039
+agent2
+[info][subgoal_2][barman-enabled] task 05 takes 2.05 sec, found a plan with cost 10.0
+planner successful
+validating
+validator time 0.007639884948730469
+agent3
+[info][subgoal_3][barman-enabled] task 05 takes 0.8 sec, found a plan with cost 12.0
+planner successful
+validating
+validator time 0.007324934005737305
+list index out of range
+----------------------------------------
+Using cached single agent results
+['contains shot3 cocktail1.', 'contains shot1 cocktail2.', 'contains shot2 cocktail3.']
+agent1
+[info][subgoal_1][barman-enabled] task 06 takes 22.02 sec, found a plan with cost 10.0
+planner successful
+validating
+validator time 0.0075321197509765625
+agent2
+[info][subgoal_2][barman-enabled] task 06 takes 2.1 sec, found a plan with cost 10.0
+planner successful
+validating
+validator time 0.006994962692260742
+agent3
+[info][subgoal_3][barman-enabled] task 06 takes 0.52 sec, found a plan with cost 11.0
+planner successful
+validating
+validator time 0.0070307254791259766
+list index out of range
+----------------------------------------
+Using cached single agent results
+['contains shot2 cocktail1.', 'contains shot3 cocktail2.', 'contains shot4 cocktail3.']
+agent1
+[info][subgoal_1][barman-enabled] task 07 takes 45.45 sec, found a plan with cost 10.0
+planner successful
+validating
+validator time 0.008734941482543945
+agent2
+[info][subgoal_2][barman-enabled] task 07 takes 4.31 sec, found a plan with cost 11.0
+planner successful
+validating
+validator time 0.006814002990722656
+agent3
+[info][subgoal_3][barman-enabled] task 07 takes 0.52 sec, found a plan with cost 10.0
+planner successful
+validating
+validator time 0.006992340087890625
+list index out of range
+----------------------------------------
+Using cached single agent results
+['contains shot1 cocktail3.', 'contains shot2 cocktail2.', 'contains shot3 cocktail4.']
+agent1
+[info][subgoal_1][barman-enabled] task 08 takes 37.49 sec, found a plan with cost 10.0
+planner successful
+validating
+validator time 0.007987022399902344
+agent2
+[info][subgoal_2][barman-enabled] task 08 takes 2.15 sec, found a plan with cost 10.0
+planner successful
+validating
+validator time 0.006946086883544922
+agent3
+[info][subgoal_3][barman-enabled] task 08 takes 0.63 sec, found a plan with cost 11.0
+planner successful
+validating
+validator time 0.008033037185668945
+list index out of range
+----------------------------------------
+Using cached single agent results
+['contains shot4 cocktail1.', 'contains shot1 cocktail2.', 'contains shot2 cocktail3.']
+agent1
+[info][subgoal_1][barman-enabled] task 09 takes 48.71 sec, found a plan with cost 10.0
+planner successful
+validating
+validator time 0.010339736938476562
+agent2
+[info][subgoal_2][barman-enabled] task 09 takes 5.26 sec, found a plan with cost 10.0
+planner successful
+validating
+validator time 0.008718729019165039
+agent3
+[info][subgoal_3][barman-enabled] task 09 takes 1.32 sec, found a plan with cost 11.0
+planner successful
+validating
+validator time 0.009121894836425781
+list index out of range
+----------------------------------------
+Using cached single agent results
+['contains shot1 cocktail5.', 'contains shot2 cocktail3.', 'contains shot3 cocktail4.']
+agent1
+[info][subgoal_1][barman-enabled] task 10 takes 60.27 sec, found a plan with cost 10.0
+planner successful
+validating
+validator time 0.008098125457763672
+agent2
+[info][subgoal_2][barman-enabled] task 10 takes 9.65 sec, found a plan with cost 10.0
+planner successful
+validating
+validator time 0.01316213607788086
+agent3
+[info][subgoal_3][barman-enabled] task 10 takes 1.82 sec, found a plan with cost 10.0
+planner successful
+validating
+validator time 0.007644176483154297
+list index out of range
+----------------------------------------
+Using cached single agent results
+['contains shot1 cocktail4.', 'contains shot2 cocktail5.', 'contains shot3 cocktail2.']
+agent1
+[info][subgoal_1][barman-enabled] task 11 takes 60.19 sec, found a plan with cost 10.0
+planner successful
+validating
+validator time 0.008527278900146484
+agent2
+[info][subgoal_2][barman-enabled] task 11 takes 9.52 sec, found a plan with cost 10.0
+planner successful
+validating
+validator time 0.007745027542114258
+agent3
+[info][subgoal_3][barman-enabled] task 11 takes 1.19 sec, found a plan with cost 10.0
+planner successful
+validating
+validator time 0.0073926448822021484
+list index out of range
+----------------------------------------
+Using cached single agent results
+['contains shot2 cocktail1.', 'contains shot3 cocktail3.', 'contains shot4 cocktail2.']
+agent1
+[info][subgoal_1][barman-enabled] task 12 takes 60.19 sec, found a plan with cost 10.0
+planner successful
+validating
+validator time 0.008381843566894531
+agent2
+[info][subgoal_2][barman-enabled] task 12 takes 4.8 sec, found a plan with cost 10.0
+planner successful
+validating
+validator time 0.007098197937011719
+agent3
+[info][subgoal_3][barman-enabled] task 12 takes 1.53 sec, found a plan with cost 11.0
+planner successful
+validating
+validator time 0.008710861206054688
+list index out of range
+----------------------------------------
+Using cached single agent results
+['contains shot1 cocktail2.', 'contains shot2 cocktail4.', 'contains shot3 cocktail3.']
+agent1
+[info][subgoal_1][barman-enabled] task 13 takes 60.26 sec, found a plan with cost 10.0
+planner successful
+validating
+validator time 0.007846832275390625
+agent2
+[info][subgoal_2][barman-enabled] task 13 takes 18.32 sec, found a plan with cost 10.0
+planner successful
+validating
+validator time 0.00763702392578125
+agent3
+[info][subgoal_3][barman-enabled] task 13 takes 6.65 sec, found a plan with cost 10.0
+planner successful
+validating
+validator time 0.008643865585327148
+list index out of range
+----------------------------------------
+Using cached single agent results
+['contains shot3 cocktail4.', 'contains shot2 cocktail1.', 'contains shot5 cocktail2.']
+agent1
+[info][subgoal_1][barman-enabled] task 14 takes 60.25 sec, found a plan with cost 10.0
+planner successful
+validating
+validator time 0.010058164596557617
+agent2
+[info][subgoal_2][barman-enabled] task 14 takes 17.35 sec, found a plan with cost 10.0
+planner successful
+validating
+validator time 0.007730007171630859
+agent3
+[info][subgoal_3][barman-enabled] task 14 takes 3.16 sec, found a plan with cost 10.0
+planner successful
+validating
+validator time 0.008037090301513672
+list index out of range
+----------------------------------------
+Traceback (most recent call last):
+  File "/Users/david/Desktop/multiagent_helper_llmp/./downward/fast-downward.py", line 5, in <module>
+    main()
+  File "/Users/david/Desktop/multiagent_helper_llmp/downward/driver/main.py", line 40, in main
+    (exitcode, continue_execution) = run_components.run_search(args)
+                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/david/Desktop/multiagent_helper_llmp/downward/driver/run_components.py", line 130, in run_search
+    call.check_call(
+  File "/Users/david/Desktop/multiagent_helper_llmp/downward/driver/call.py", line 63, in check_call
+    return subprocess.check_call(cmd, stdin=stdin_file, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/david/anaconda3/lib/python3.11/subprocess.py", line 408, in check_call
+    retcode = call(*popenargs, **kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/david/anaconda3/lib/python3.11/subprocess.py", line 391, in call
+    return p.wait(timeout=timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/david/anaconda3/lib/python3.11/subprocess.py", line 1264, in wait
+    return self._wait(timeout=timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/david/anaconda3/lib/python3.11/subprocess.py", line 2046, in _wait
+    (pid, sts) = self._try_wait(0)
+                 ^^^^^^^^^^^^^^^^^
+  File "/Users/david/anaconda3/lib/python3.11/subprocess.py", line 2004, in _try_wait
+    (pid, sts) = os.waitpid(self.pid, wait_flags)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "/Users/david/Desktop/multiagent_helper_llmp/./downward/fast-downward.py", line 5, in <module>
+    main()
+  File "/Users/david/Desktop/multiagent_helper_llmp/downward/driver/main.py", line 40, in main
+    (exitcode, continue_execution) = run_components.run_search(args)
+                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/david/Desktop/multiagent_helper_llmp/downward/driver/run_components.py", line 130, in run_search
+    call.check_call(
+  File "/Users/david/Desktop/multiagent_helper_llmp/downward/driver/call.py", line 63, in check_call
+    return subprocess.check_call(cmd, stdin=stdin_file, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/david/anaconda3/lib/python3.11/subprocess.py", line 408, in check_call
+    retcode = call(*popenargs, **kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/david/anaconda3/lib/python3.11/subprocess.py", line 391, in call
+    return p.wait(timeout=timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/david/anaconda3/lib/python3.11/subprocess.py", line 1264, in wait
+    return self._wait(timeout=timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/david/anaconda3/lib/python3.11/subprocess.py", line 2046, in _wait
+    (pid, sts) = self._try_wait(0)
+                 ^^^^^^^^^^^^^^^^^
+  File "/Users/david/anaconda3/lib/python3.11/subprocess.py", line 2004, in _try_wait
+    (pid, sts) = os.waitpid(self.pid, wait_flags)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+Using cached single agent results
+['contains shot2 cocktail1.', 'contains shot3 cocktail5.', 'contains shot4 cocktail3.']
+agent1
+[info][subgoal_1][barman-enabled] task 15 takes 60.21 sec, found a plan with cost 10.0
+planner successful
+validating
+validator time 0.010763883590698242
+agent2
+list index out of range
+agent3
+list index out of range
+Traceback (most recent call last):
+  File "/Users/david/Desktop/multiagent_helper_llmp/helper_script_n_agents.py", line 305, in <module>
+    planner.get_updated_init_conditions(path, validation_filename=f"./{path}/p{args.task_id}_{i}_validation.txt", pddl_problem_filename=init_problem, pddl_problem_filename_edited=init_problem_out,is_main=main_goal)
+  File "/Users/david/Desktop/multiagent_helper_llmp/modules/planner.py", line 140, in get_updated_init_conditions
+    with open(validation_filename, 'r') as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: './experiments_multiagent_help/run100/barman-enabled/p15_3_validation.txt'
+----------------------------------------
+Using cached single agent results
+Traceback (most recent call last):
+  File "/Users/david/Desktop/multiagent_helper_llmp/helper_script_n_agents.py", line 247, in <module>
+    subgoal_array, t1 = get_helper_subgoal_without_plan(path, args, log_file)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/david/Desktop/multiagent_helper_llmp/helper_script_n_agents.py", line 99, in get_helper_subgoal_without_plan
+    helper_subgoal = generator.query(prompt_text, system_text=system_text, model=args.model)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/david/Desktop/multiagent_helper_llmp/modules/generator.py", line 28, in query
+    response = client.chat.completions.create(model="gpt-4o",
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/david/anaconda3/lib/python3.11/site-packages/openai/_utils/_utils.py", line 274, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/david/anaconda3/lib/python3.11/site-packages/openai/resources/chat/completions.py", line 668, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/Users/david/anaconda3/lib/python3.11/site-packages/openai/_base_client.py", line 1260, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/david/anaconda3/lib/python3.11/site-packages/openai/_base_client.py", line 937, in request
+    return self._request(
+           ^^^^^^^^^^^^^^
+  File "/Users/david/anaconda3/lib/python3.11/site-packages/openai/_base_client.py", line 973, in _request
+    response = self._client.send(
+               ^^^^^^^^^^^^^^^^^^
+  File "/Users/david/anaconda3/lib/python3.11/site-packages/httpx/_client.py", line 914, in send
+    response = self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/david/anaconda3/lib/python3.11/site-packages/httpx/_client.py", line 942, in _send_handling_auth
+    response = self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/david/anaconda3/lib/python3.11/site-packages/httpx/_client.py", line 979, in _send_handling_redirects
+    response = self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/david/anaconda3/lib/python3.11/site-packages/httpx/_client.py", line 1015, in _send_single_request
+    response = transport.handle_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/david/anaconda3/lib/python3.11/site-packages/httpx/_transports/default.py", line 233, in handle_request
+    resp = self._pool.handle_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/david/anaconda3/lib/python3.11/site-packages/httpcore/_sync/connection_pool.py", line 216, in handle_request
+    raise exc from None
+  File "/Users/david/anaconda3/lib/python3.11/site-packages/httpcore/_sync/connection_pool.py", line 196, in handle_request
+    response = connection.handle_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/david/anaconda3/lib/python3.11/site-packages/httpcore/_sync/connection.py", line 101, in handle_request
+    return self._connection.handle_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/david/anaconda3/lib/python3.11/site-packages/httpcore/_sync/http11.py", line 143, in handle_request
+    raise exc
+  File "/Users/david/anaconda3/lib/python3.11/site-packages/httpcore/_sync/http11.py", line 113, in handle_request
+    ) = self._receive_response_headers(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/david/anaconda3/lib/python3.11/site-packages/httpcore/_sync/http11.py", line 186, in _receive_response_headers
+    event = self._receive_event(timeout=timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/david/anaconda3/lib/python3.11/site-packages/httpcore/_sync/http11.py", line 224, in _receive_event
+    data = self._network_stream.read(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/david/anaconda3/lib/python3.11/site-packages/httpcore/_backends/sync.py", line 126, in read
+    return self._sock.recv(max_bytes)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/david/anaconda3/lib/python3.11/ssl.py", line 1296, in recv
+    return self.read(buflen)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/david/anaconda3/lib/python3.11/ssl.py", line 1169, in read
+    return self._sslobj.read(len)
+           ^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
