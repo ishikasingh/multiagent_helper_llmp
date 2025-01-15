@@ -18,9 +18,9 @@ OUTPUT_FILE="experiment_results.txt"
 PYTHON_SCRIPT=""
 SUMMARY_FILE=""
 # termes "tyreworld" "grippers" "barman" "blocksworld"
-DOMAINS=("blocksworld")
+DOMAINS=("grippers")
 TIME_LIMIT=1000
-TASK_IDS=(10 11 12 13 14 15 16 17 18 19 20)
+TASK_IDS=(4 5 6 11)
 NUM_AGENTS=""
 RUN=100
 MODEL=""

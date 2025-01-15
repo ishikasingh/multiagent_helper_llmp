@@ -1,0 +1,98 @@
+----------------------------------------
+----------------------------------------
+No cached single agent results found, running planner
+[info][singleagent][blocksworld] task 12 takes 12.21 sec, found a plan with cost 20.0
+['b5 should be on top of b6.']
+agent1
+[info][subgoal_1][blocksworld] task 12 takes 0.11 sec, found a plan with cost 8.0
+planner successful
+validating
+validator time 0.12107324600219727
+[info][multiagent main goal][blocksworld] task 12 takes 13.2 sec, found a plan with cost 18.0
+TASK: blocksworld - 2002 - 12
+20.0 True
+tracing optimal path
+[results][blocksworld][12]
+[single_agent][planning time: 12.21][cost: 20.0]
+[multi_agent][planning_time: 15.723951396942137][cost: 20.0][agents: 2][optimization time 3.867793083190918]
+----------------------------------------
+No cached single agent results found, running planner
+[info][singleagent][blocksworld] task 13 takes 146.4 sec, found a plan with cost 26.0
+['b8 should be on top of b7.']
+agent1
+[info][subgoal_1][blocksworld] task 13 takes 0.09 sec, found a plan with cost 2.0
+planner successful
+validating
+validator time 0.0031502246856689453
+[info][multiagent main goal][blocksworld] task 13 takes 121.1 sec, found a plan with cost 24.0
+TASK: blocksworld - 2002 - 13
+25.0 True
+tracing optimal path
+[results][blocksworld][13]
+[single_agent][planning time: 146.4][cost: 26.0]
+[multi_agent][planning_time: 124.2331170463562][cost: 25.0][agents: 2][optimization time 1.7937018871307373]
+----------------------------------------
+No cached single agent results found, running planner
+[info][singleagent][blocksworld] task 14 takes 71.57 sec, found a plan with cost 22.0
+['b3 should be on top of b5.']
+agent1
+[info][subgoal_1][blocksworld] task 14 takes 0.1 sec, found a plan with cost 6.0
+planner successful
+validating
+validator time 0.0019958019256591797
+[info][multiagent main goal][blocksworld] task 14 takes 86.33 sec, found a plan with cost 22.0
+TASK: blocksworld - 2002 - 14
+26.0 True
+tracing optimal path
+[results][blocksworld][14]
+[single_agent][planning time: 71.57][cost: 22.0]
+[multi_agent][planning_time: 89.52168052673339][cost: 26.0][agents: 2][optimization time 2.046780824661255]
+----------------------------------------
+No cached single agent results found, running planner
+[info][singleagent][blocksworld] task 15 takes 222.96 sec, found a plan with cost 26.0
+['b4 should be on top of b7.']
+agent1
+[info][subgoal_1][blocksworld] task 15 takes 0.1 sec, found a plan with cost 10.0
+planner successful
+validating
+validator time 0.00323486328125
+[info][multiagent main goal][blocksworld] task 15 takes 68.35 sec, found a plan with cost 16.0
+TASK: blocksworld - 2002 - 15
+24.0 True
+tracing optimal path
+[results][blocksworld][15]
+[single_agent][planning time: 222.96][cost: 26.0]
+[multi_agent][planning_time: 71.99084372520446][cost: 24.0][agents: 2][optimization time 2.15382981300354]
+----------------------------------------
+No cached single agent results found, running planner
+[info][singleagent][blocksworld] task 16 takes 983.49 sec, found a plan with cost 28.0
+['b1 should be on top of b5.']
+agent1
+[info][subgoal_1][blocksworld] task 16 takes 0.09 sec, found a plan with cost 4.0
+planner successful
+validating
+validator time 0.0028154850006103516
+[info][multiagent main goal][blocksworld] task 16 takes 1000.26 sec, found a plan with cost 30.0
+TASK: blocksworld - 2002 - 16
+34 True
+tracing optimal path
+[results][blocksworld][16]
+[single_agent][planning time: 983.49][cost: 28.0]
+[multi_agent][planning_time: 1004.4660638332367][cost: 34.0][agents: 2][optimization time 1.4160761833190918]
+----------------------------------------
+No cached single agent results found, running planner
+[info][singleagent][blocksworld] task 17 takes 1000.34 sec, found a plan with cost 22.0
+['b5 should be on top of b4.']
+agent1
+[info][subgoal_1][blocksworld] task 17 takes 0.1 sec, found a plan with cost 4.0
+planner successful
+validating
+validator time 0.008476018905639648
+[info][multiagent main goal][blocksworld] task 17 takes 1000.62 sec, found a plan with cost 22.0
+TASK: blocksworld - 2002 - 17
+26 True
+tracing optimal path
+[results][blocksworld][17]
+[single_agent][planning time: 1000.34][cost: 22.0]
+[multi_agent][planning_time: 1006.0299212646485][cost: 26.0][agents: 2][optimization time 1.1410362720489502]
+----------------------------------------

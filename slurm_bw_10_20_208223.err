@@ -1,0 +1,4 @@
+/home/davidbai/multiagent_helper_llmp/./run_experiments.sh: line 69: 495516 Killed                  python "$PYTHON_SCRIPT" --domain "$domain" --time-limit "$time_limit" --task_id "$task_id" --run "$RUN" --num_agents "$num_agents" --model "$MODEL" >> "$OUTPUT_FILE" 2>&1
+/home/davidbai/multiagent_helper_llmp/./run_experiments.sh: line 69: 495805 Killed                  python "$PYTHON_SCRIPT" --domain "$domain" --time-limit "$time_limit" --task_id "$task_id" --run "$RUN" --num_agents "$num_agents" --model "$MODEL" >> "$OUTPUT_FILE" 2>&1
+slurmstepd: error: *** STEP 208223.0 ON ink-noah CANCELLED AT 2025-01-14T20:57:21 ***
+slurmstepd: error: Detected 2 oom-kill event(s) in step 208223.0 cgroup. Some of your processes may have been killed by the cgroup out-of-memory handler.
