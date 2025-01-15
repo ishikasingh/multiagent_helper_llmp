@@ -10,6 +10,7 @@ print_usage() {
   echo "  --num-agents N1            Specify the number of agents"
   echo "  --run NUMBER               Specify the run number"
   echo "  --model MODEL              Specify the model to use"
+  echo "  --domains DOMAIN1,DOMAIN2  Specify domains (comma-separated, default: grippers)"
   echo "  --help                     Display this help message"
 }
 
@@ -51,6 +52,10 @@ while [[ $# -gt 0 ]]; do
             ;;
         --model) 
             MODEL="$2"
+            shift 2
+            ;;
+        --domains)
+            IFS=',' read -ra DOMAINS <<< "$2"
             shift 2
             ;;
         --help)
