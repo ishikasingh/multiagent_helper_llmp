@@ -1,0 +1,195 @@
+Using cached single agent results
+['contains pos-1-1 block-height-2']
+agent1
+[info][subgoal_1][termes] task 01 takes 0.14 sec, found a plan with cost 9.0
+planner successful
+validating
+validator time 0.12704133987426758
+[info][multiagent main goal][termes] task 01 takes 13.75 sec, found a plan with cost 28.0
+TASK: termes - 2001 - 01
+32.0 True
+tracing optimal path
+[results][termes][01]
+[single_agent][planning time: 28.84][cost: 36.0]
+[multi_agent][planning_time: 15.871523513793946][cost: 32.0][agents: 2][optimization time 4.671915292739868]
+----------------------------------------
+Using cached single agent results
+['height pos-3-2 4']
+agent1
+[info][subgoal_1][termes] task 03 takes 914.11 sec, found a plan with cost 78.0
+planner successful
+validating
+validator time 0.0047991275787353516
+[info][multiagent main goal][termes] task 03 takes 708.73 sec, found a plan with cost 70.0
+TASK: termes - 2001 - 03
+140.0 True
+tracing optimal path
+[results][termes][03]
+[single_agent][planning time: 1000.06][cost: 68.0]
+[multi_agent][planning_time: 1626.9419361019136][cost: 140.0][agents: 2][optimization time 64.7899603843689]
+----------------------------------------
+Using cached single agent results
+['The height at pos-3-2 is 4.']
+agent1
+[info][subgoal_1][termes] task 04 takes 206.92 sec, found a plan with cost 53.0
+planner successful
+validating
+validator time 0.007396221160888672
+[info][multiagent main goal][termes] task 04 takes 66.92 sec, found a plan with cost 34.0
+TASK: termes - 2001 - 04
+82.0 True
+tracing optimal path
+[results][termes][04]
+[single_agent][planning time: 955.4][cost: 80.0]
+[multi_agent][planning_time: 275.56814965248105][cost: 82.0][agents: 2][optimization time 31.418198585510254]
+----------------------------------------
+Using cached single agent results
+['contains pos-1-1 block-height-2']
+agent1
+[info][subgoal_1][termes] task 05 takes 0.16 sec, found a plan with cost 9.0
+planner successful
+validating
+validator time 0.0031871795654296875
+[info][multiagent main goal][termes] task 05 takes 1000.21 sec, found a plan with cost 130.0
+TASK: termes - 2001 - 05
+133.0 True
+tracing optimal path
+[results][termes][05]
+[single_agent][planning time: 1000.17][cost: 136.0]
+[multi_agent][planning_time: 1001.9142397594452][cost: 133.0][agents: 2][optimization time 16.421273946762085]
+----------------------------------------
+Using cached single agent results
+['height pos-3-2 5']
+agent1
+[info][subgoal_1][termes] task 06 takes 1000.27 sec, found a plan with cost 82.0
+planner successful
+validating
+validator time 0.01131749153137207
+[info][multiagent main goal][termes] task 06 takes 1000.23 sec, found a plan with cost 98.0
+TASK: termes - 2001 - 06
+144.0 True
+tracing optimal path
+[results][termes][06]
+[single_agent][planning time: 1000.16][cost: 172.0]
+[multi_agent][planning_time: 2002.1067295074463][cost: 144.0][agents: 2][optimization time 218.3473060131073]
+----------------------------------------
+Using cached single agent results
+['contains pos-1-1 block-height-2']
+agent1
+[info][subgoal_1][termes] task 07 takes 0.2 sec, found a plan with cost 9.0
+planner successful
+validating
+validator time 0.0031473636627197266
+[info][multiagent main goal][termes] task 07 takes 1000.27 sec, found a plan with cost 46.0
+TASK: termes - 2001 - 07
+46.0 True
+tracing optimal path
+[results][termes][07]
+[single_agent][planning time: 1000.18][cost: 56.0]
+[multi_agent][planning_time: 1002.0154139709473][cost: 46.0][agents: 2][optimization time 6.561251163482666]
+----------------------------------------
+Using cached single agent results
+['contains pos-1-1 block3']
+agent1
+[info][subgoal_1][termes] task 08 takes 20.34 sec, found a plan with cost 23.0
+planner successful
+validating
+validator time 0.0033795833587646484
+[info][multiagent main goal][termes] task 08 takes 1000.34 sec, found a plan with cost 50.0
+TASK: termes - 2001 - 08
+63.0 True
+tracing optimal path
+[results][termes][08]
+[single_agent][planning time: 1000.25][cost: 64.0]
+[multi_agent][planning_time: 1023.2508074569703][cost: 63.0][agents: 2][optimization time 93.26838946342468]
+----------------------------------------
+Using cached single agent results
+['contains pos-1-3 block-height-2']
+agent1
+[info][subgoal_1][termes] task 09 takes 0.81 sec, found a plan with cost 15.0
+planner successful
+validating
+validator time 0.003001689910888672
+[info][multiagent main goal][termes] task 09 takes 1000.26 sec, found a plan with cost 88.0
+TASK: termes - 2001 - 09
+99.0 True
+tracing optimal path
+[results][termes][09]
+[single_agent][planning time: 1000.2][cost: 100.0]
+[multi_agent][planning_time: 1002.9602742862701][cost: 99.0][agents: 2][optimization time 9.324099779129028]
+----------------------------------------
+Using cached single agent results
+['height pos-3-0 2']
+agent1
+[info][subgoal_1][termes] task 10 takes 0.31 sec, found a plan with cost 10.0
+planner successful
+validating
+validator time 0.002863168716430664
+[info][multiagent main goal][termes] task 10 takes 1000.23 sec, found a plan with cost 68.0
+TASK: termes - 2001 - 10
+68.0 True
+tracing optimal path
+[results][termes][10]
+[single_agent][planning time: 1000.3][cost: 76.0]
+[multi_agent][planning_time: 1003.9568701171875][cost: 68.0][agents: 2][optimization time 30.475865125656128]
+----------------------------------------
+Using cached single agent results
+['height pos-2-0 3']
+agent1
+[info][subgoal_1][termes] task 11 takes 1.84 sec, found a plan with cost 22.0
+planner successful
+validating
+validator time 0.003095865249633789
+[info][multiagent main goal][termes] task 11 takes 783.52 sec, found a plan with cost 58.0
+TASK: termes - 2001 - 11
+72.0 True
+tracing optimal path
+[results][termes][11]
+[single_agent][planning time: 522.23][cost: 66.0]
+[multi_agent][planning_time: 787.0771444892883][cost: 72.0][agents: 2][optimization time 7.268860340118408]
+----------------------------------------
+Using cached single agent results
+['height pos-0-0 2']
+agent1
+[info][subgoal_1][termes] task 12 takes 0.16 sec, found a plan with cost 10.0
+planner successful
+validating
+validator time 0.002894163131713867
+[info][multiagent main goal][termes] task 12 takes 48.99 sec, found a plan with cost 36.0
+TASK: termes - 2001 - 12
+36.0 True
+tracing optimal path
+[results][termes][12]
+[single_agent][planning time: 73.53][cost: 46.0]
+[multi_agent][planning_time: 50.87082185745239][cost: 36.0][agents: 2][optimization time 16.576650857925415]
+----------------------------------------
+Using cached single agent results
+['height pos-3-0 3']
+agent1
+[info][subgoal_1][termes] task 13 takes 1.5 sec, found a plan with cost 22.0
+planner successful
+validating
+validator time 0.0033326148986816406
+[info][multiagent main goal][termes] task 13 takes 1000.21 sec, found a plan with cost 68.0
+TASK: termes - 2001 - 13
+81.0 True
+tracing optimal path
+[results][termes][13]
+[single_agent][planning time: 1000.21][cost: 92.0]
+[multi_agent][planning_time: 1003.4106657123566][cost: 81.0][agents: 2][optimization time 35.347246170043945]
+----------------------------------------
+Using cached single agent results
+['height pos-3-0 3']
+agent1
+[info][subgoal_1][termes] task 14 takes 3.87 sec, found a plan with cost 25.0
+planner successful
+validating
+validator time 0.0030472278594970703
+[info][multiagent main goal][termes] task 14 takes 1000.23 sec, found a plan with cost 78.0
+TASK: termes - 2001 - 14
+89.0 True
+tracing optimal path
+[results][termes][14]
+[single_agent][planning time: 1000.21][cost: 104.0]
+[multi_agent][planning_time: 1005.8439680099488][cost: 89.0][agents: 2][optimization time 83.96755933761597]
+----------------------------------------

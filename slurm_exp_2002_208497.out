@@ -1,0 +1,6 @@
+Running experiment: Domain=termes, Time Limit=1000, Task ID=1, Agents=3
+Running experiment: Domain=termes, Time Limit=1000, Task ID=19, Agents=3
+Running experiment: Domain=termes, Time Limit=1000, Task ID=20, Agents=3
+All experiments completed. Results are in 1_15_3_agent_gpt-4o_termes.txt
+Analysis complete. Results written to 1_15_3_agent_gpt-4o_termes_summary.txt
+Summary file created: 1_15_3_agent_gpt-4o_termes_summary.txt

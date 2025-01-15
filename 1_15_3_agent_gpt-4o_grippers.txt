@@ -1,0 +1,26 @@
+----------------------------------------
+----------------------------------------
+----------------------------------------
+----------------------------------------
+----------------------------------------
+----------------------------------------
+Using cached single agent results
+['ball4 is in room2.', 'ball2 is in room1.']
+agent1
+[info][subgoal_1][grippers] task 12 takes 0.07 sec, found a plan with cost 4.0
+planner successful
+validating
+validator time 0.0018575191497802734
+agent2
+[info][subgoal_2][grippers] task 12 takes 0.08 sec, found a plan with cost 3.0
+planner successful
+validating
+validator time 0.001809835433959961
+[info][multiagent main goal][grippers] task 12 takes 0.07 sec, found a plan with cost 3.0
+TASK: grippers - 2006 - 12
+4.0 True
+tracing optimal path
+[results][grippers][12]
+[single_agent][planning time: 0.09][cost: 9.0]
+[multi_agent][planning_time: 3.197206230163574][cost: 4.0][agents: 3][optimization time 6.682880401611328]
+----------------------------------------

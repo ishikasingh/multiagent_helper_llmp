@@ -1,0 +1,23 @@
+Running experiment: Domain=blocksworld, Time Limit=1000, Task ID=1, Agents=3
+Running experiment: Domain=blocksworld, Time Limit=1000, Task ID=2, Agents=3
+Running experiment: Domain=blocksworld, Time Limit=1000, Task ID=3, Agents=3
+Running experiment: Domain=blocksworld, Time Limit=1000, Task ID=4, Agents=3
+Running experiment: Domain=blocksworld, Time Limit=1000, Task ID=5, Agents=3
+Running experiment: Domain=blocksworld, Time Limit=1000, Task ID=6, Agents=3
+Running experiment: Domain=blocksworld, Time Limit=1000, Task ID=7, Agents=3
+Running experiment: Domain=blocksworld, Time Limit=1000, Task ID=8, Agents=3
+Running experiment: Domain=blocksworld, Time Limit=1000, Task ID=9, Agents=3
+Running experiment: Domain=blocksworld, Time Limit=1000, Task ID=10, Agents=3
+Running experiment: Domain=blocksworld, Time Limit=1000, Task ID=11, Agents=3
+Running experiment: Domain=blocksworld, Time Limit=1000, Task ID=12, Agents=3
+Running experiment: Domain=blocksworld, Time Limit=1000, Task ID=13, Agents=3
+Running experiment: Domain=blocksworld, Time Limit=1000, Task ID=14, Agents=3
+Running experiment: Domain=blocksworld, Time Limit=1000, Task ID=15, Agents=3
+Running experiment: Domain=blocksworld, Time Limit=1000, Task ID=16, Agents=3
+Running experiment: Domain=blocksworld, Time Limit=1000, Task ID=17, Agents=3
+Running experiment: Domain=blocksworld, Time Limit=1000, Task ID=18, Agents=3
+Running experiment: Domain=blocksworld, Time Limit=1000, Task ID=19, Agents=3
+Running experiment: Domain=blocksworld, Time Limit=1000, Task ID=20, Agents=3
+All experiments completed. Results are in 1_15_3_agent_gpt-4o_blocks.txt
+Analysis complete. Results written to 1_15_3_agent_gpt-4o_blocks_summary.txt
+Summary file created: 1_15_3_agent_gpt-4o_blocks_summary.txt
