@@ -11,6 +11,7 @@ print_usage() {
   echo "  --run NUMBER               Specify the run number"
   echo "  --model MODEL              Specify the model to use"
   echo "  --domains DOMAIN1,DOMAIN2  Specify domains (comma-separated, default: grippers)"
+  echo "  --tasks ID1,ID2,...        Specify task IDs (comma-separated, default: 1-20)"
   echo "  --help                     Display this help message"
 }
 
@@ -56,6 +57,10 @@ while [[ $# -gt 0 ]]; do
             ;;
         --domains)
             IFS=',' read -ra DOMAINS <<< "$2"
+            shift 2
+            ;;
+        --tasks)
+            IFS=',' read -ra TASK_IDS <<< "$2"
             shift 2
             ;;
         --help)
