@@ -21,7 +21,7 @@ SUMMARY_FILE=""
 # termes "tyreworld" "grippers" "barman" "blocksworld"
 DOMAINS=("grippers")
 TIME_LIMIT=1000
-TASK_IDS=(4 5 6 11)
+TASK_IDS=(1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20)
 NUM_AGENTS=""
 RUN=100
 MODEL=""
