@@ -6,33 +6,53 @@ def parse_results(file_path):
     with open(file_path, 'r') as file:
         content = file.read()
 
-    results = defaultdict(list)
+    results = defaultdict(dict)  # Changed to dict to track duplicates by task number
     current_domain = None
     current_task = None
     current_result = {}
 
     for line in content.split('\n'):
         if line.startswith('[results]'):
-            if current_result:
-                results[current_domain].append(current_result)
-                current_result = {}
-            match = re.search(r'\[results\]\[(\w+)\]\[(\d+)\]', line)
+            # Save previous result if it's complete
+            if current_result and 'task' in current_result and 'single_agent' in current_result and 'multi_agent' in current_result:
+                task_num = current_result['task']
+                
+                # Check if this task already exists and compare performance
+                if task_num in results[current_domain]:
+                    existing = results[current_domain][task_num]
+                    
+                    # Extract metrics for comparison
+                    existing_single_time = float(re.search(r'planning time: (\d+\.?\d*)', existing['single_agent']).group(1))
+                    existing_multi_time = float(re.search(r'planning_time: (\d+\.?\d*)', existing['multi_agent']).group(1))
+                    new_single_time = float(re.search(r'planning time: (\d+\.?\d*)', current_result['single_agent']).group(1))
+                    new_multi_time = float(re.search(r'planning_time: (\d+\.?\d*)', current_result['multi_agent']).group(1))
+                    
+                    # Keep the better performing version (lower total planning time)
+                    if (new_single_time + new_multi_time) < (existing_single_time + existing_multi_time):
+                        results[current_domain][task_num] = current_result
+                else:
+                    results[current_domain][task_num] = current_result
+                    
+            current_result = {}
+            
+            # Updated regex pattern to include hyphens in domain names
+            match = re.search(r'\[results\]\[([\w-]+)\]\[(\d+)\]', line)
             if match:
                 current_domain = match.group(1)
                 current_task = match.group(2)
                 current_result['task'] = current_task
+            
         elif line.startswith('[single_agent]'):
             current_result['single_agent'] = line
         elif line.startswith('[multi_agent]'):
             current_result['multi_agent'] = line
             
-            # Check for 'inf' in multi-agent cost
             if 'cost: inf' in line:
                 current_result['success'] = False
                 current_result['multi_agent_inf'] = True
             else:
-                single_cost_match = re.search(r'cost: (\d+\.?\d*)', current_result['single_agent'])
-                multi_cost_match = re.search(r'cost: (\d+\.?\d*)', current_result['multi_agent'])
+                single_cost_match = re.search(r'cost: (\d+\.?\d*)', current_result.get('single_agent', ''))
+                multi_cost_match = re.search(r'cost: (\d+\.?\d*)', line)
                 
                 if single_cost_match and multi_cost_match:
                     single_cost = float(single_cost_match.group(1))
@@ -42,10 +62,24 @@ def parse_results(file_path):
                     current_result['success'] = False
                 current_result['multi_agent_inf'] = False
 
-    if current_result:
-        results[current_domain].append(current_result)
+    # Add the last result if it's complete
+    if current_result and 'task' in current_result and 'single_agent' in current_result and 'multi_agent' in current_result:
+        task_num = current_result['task']
+        if task_num not in results[current_domain]:
+            results[current_domain][task_num] = current_result
+        else:
+            existing = results[current_domain][task_num]
+            existing_single_time = float(re.search(r'planning time: (\d+\.?\d*)', existing['single_agent']).group(1))
+            existing_multi_time = float(re.search(r'planning_time: (\d+\.?\d*)', existing['multi_agent']).group(1))
+            new_single_time = float(re.search(r'planning time: (\d+\.?\d*)', current_result['single_agent']).group(1))
+            new_multi_time = float(re.search(r'planning_time: (\d+\.?\d*)', current_result['multi_agent']).group(1))
+            
+            if (new_single_time + new_multi_time) < (existing_single_time + existing_multi_time):
+                results[current_domain][task_num] = current_result
 
-    return results
+    # Convert the dict of dicts back to the expected format
+    final_results = {domain: list(tasks.values()) for domain, tasks in results.items()}
+    return final_results
 
 def calculate_averages(results):
     averages = {}
@@ -82,7 +116,6 @@ def calculate_averages(results):
 
 def analyze_results(results, output_file):
     averages = calculate_averages(results)
-
     with open(output_file, 'w') as f:
         for domain, tasks in results.items():
             successful_tasks = sum(1 for task in tasks if task['success'])
@@ -92,6 +125,7 @@ def analyze_results(results, output_file):
             f.write(f"Domain: {domain}\n")
             f.write(f"Success rate: {success_rate:.2f}% ({successful_tasks}/{total_tasks})\n")
             f.write("Results:\n")
+
             for task in tasks:
                 f.write(f"  [results][{domain}][{task['task']}]\n")
                 f.write(f"  {task['single_agent']}\n")

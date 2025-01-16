@@ -1,4 +1,0 @@
-./run_experiments.sh: line 79: 602894 Killed                  python "$PYTHON_SCRIPT" --domain "$domain" --time-limit "$time_limit" --task_id "$task_id" --run "$RUN" --num_agents "$num_agents" --model "$MODEL" >> "$OUTPUT_FILE" 2>&1
-./run_experiments.sh: line 79: 709755 Killed                  python "$PYTHON_SCRIPT" --domain "$domain" --time-limit "$time_limit" --task_id "$task_id" --run "$RUN" --num_agents "$num_agents" --model "$MODEL" >> "$OUTPUT_FILE" 2>&1
-./run_experiments.sh: line 79: 776470 Killed                  python "$PYTHON_SCRIPT" --domain "$domain" --time-limit "$time_limit" --task_id "$task_id" --run "$RUN" --num_agents "$num_agents" --model "$MODEL" >> "$OUTPUT_FILE" 2>&1
-slurmstepd: error: Detected 5 oom-kill event(s) in step 208495.batch cgroup. Some of your processes may have been killed by the cgroup out-of-memory handler.

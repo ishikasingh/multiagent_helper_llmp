@@ -1,0 +1,7 @@
+{
+  "planner_total_time": 365.28,
+  "planner_total_time_opt": 0.324339,
+  "best_cost": 123.0,
+  "planner_search_time_1st_plan": 0.324339,
+  "first_plan_cost": 123
+}

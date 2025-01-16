@@ -29,8 +29,8 @@ def evaluate_domain(domain_path, time_limit=300):
         args.task_id = f"{task_id:02d}"  # Update task_id for current problem
         print(f"\nEvaluating {domain_name} problem {args.task_id}")
         
-        # Run planner using experiments_multiagent_help/run_10000 as cache
-        cache_path = "experiments_multiagent_help/run_10000"
+        # Create domain-specific cache directory
+        cache_path = os.path.join("experiments_multiagent_help/run_10000", domain_name)
         os.makedirs(cache_path, exist_ok=True)
         
         stats = planner(cache_path, args)
