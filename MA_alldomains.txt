@@ -1,0 +1,79 @@
+
+Results:
+--------------------------------------------------
+
+Domain: termes-multi
+Average Planning Time: 966.27 seconds
+Average Solution Cost: 138.20
+
+Domain: termes-multi-3
+Average Planning Time: 1000.37 seconds
+Average Solution Cost: 59.00
+
+Domain: termes-multi-4
+Average Planning Time: 1000.47 seconds
+Average Solution Cost: 148.25
+
+Domain: blocksworld-multi
+Average Planning Time: 293.18 seconds
+Average Solution Cost: 15.55
+
+Domain: blocksworld-multi-3
+Average Planning Time: 316.77 seconds
+Average Solution Cost: 14.35
+
+Domain: blocksworld-multi-4
+Average Planning Time: 375.80 seconds
+Average Solution Cost: 13.80
+
+Domain: blocksworld-multi-5
+Average Planning Time: 383.52 seconds
+Average Solution Cost: 13.55
+
+Domain: tyreworld-multi-3
+Average Planning Time: 503.67 seconds
+Average Solution Cost: 121.35
+
+Domain: tyreworld-multi
+Average Planning Time: 524.65 seconds
+Average Solution Cost: 121.35
+
+Domain: tyreworld-multi-4
+Average Planning Time: 407.79 seconds
+Average Solution Cost: 121.35
+
+Domain: grippers-multi
+Average Planning Time: 85.56 seconds
+Average Solution Cost: 8.50
+
+Domain: tyreworld-multi-5
+Average Planning Time: 412.96 seconds
+Average Solution Cost: 121.35
+
+Domain: grippers-multi-3
+Average Planning Time: 88.15 seconds
+Average Solution Cost: 7.45
+
+Domain: grippers-multi-5
+Average Planning Time: 73.88 seconds
+Average Solution Cost: 7.35
+
+Domain: grippers-multi-4
+Average Planning Time: 61.08 seconds
+Average Solution Cost: 7.35
+
+Domain: barman-multi
+Average Planning Time: 1000.36 seconds
+Average Solution Cost: 49.15
+
+Domain: barman-multi-3
+Average Planning Time: 1000.35 seconds
+Average Solution Cost: 49.15
+
+Domain: barman-multi-4
+Average Planning Time: 1000.44 seconds
+Average Solution Cost: 50.55
+
+Domain: barman-multi-5
+Average Planning Time: 1000.55 seconds
+Average Solution Cost: 50.50

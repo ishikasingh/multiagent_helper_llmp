@@ -15,6 +15,36 @@ tracing optimal path
 [multi_agent][planning_time: 95.53217406272888][cost: 27.0][agents: 2][optimization time 3.3326961994171143]
 ----------------------------------------
 Using cached single agent results
+['b2 should be on top of b5.']
+agent1
+[info][subgoal_1][blocksworld] task 10 takes 996.63 sec, no solution found
+planner successful
+validating
+validator time 0.004543304443359375
+[info][multiagent main goal][blocksworld] task 10 takes 1.14 sec, found a plan with cost 18.0
+TASK: blocksworld - 2003 - 10
+18 True
+tracing optimal path
+[results][blocksworld][10]
+[single_agent][planning time: 0.99][cost: 18.0]
+[multi_agent][planning_time: 2.098247900009155][cost: 18.0][agents: 2][optimization time 9.466590404510498]
+----------------------------------------
+Using cached single agent results
+['b4 should be on top of b2.']
+agent1
+[info][subgoal_1][blocksworld] task 11 takes 996.84 sec, no solution found
+planner successful
+validating
+validator time 0.009021997451782227
+[info][multiagent main goal][blocksworld] task 11 takes 11.56 sec, found a plan with cost 22.0
+TASK: blocksworld - 2003 - 11
+22 True
+tracing optimal path
+[results][blocksworld][11]
+[single_agent][planning time: 9.69][cost: 22.0]
+[multi_agent][planning_time: 11.739540395736695][cost: 22.0][agents: 2][optimization time 9.968750715255737]
+----------------------------------------
+Using cached single agent results
 ['b3 should be on the table.']
 agent1
 [info][subgoal_1][blocksworld] task 01 takes 0.07 sec, found a plan with cost 4.0
@@ -148,6 +178,66 @@ tracing optimal path
 [results][blocksworld][09]
 [single_agent][planning time: 0.9][cost: 14.0]
 [multi_agent][planning_time: 3.070457811355591][cost: 20.0][agents: 2][optimization time 0.3657999038696289]
+----------------------------------------
+Using cached single agent results
+['agent1 subgoal: ball3 should be in room3.']
+agent1
+[info][subgoal_1][grippers] task 04 takes 0.07 sec, found a plan with cost 4.0
+planner successful
+validating
+validator time 0.007024288177490234
+[info][multiagent main goal][grippers] task 04 takes 996.55 sec, no solution found
+TASK: grippers - 2000 - 04
+4 True
+tracing optimal path
+[results][grippers][04]
+[single_agent][planning time: 0.05][cost: 4.0]
+[multi_agent][planning_time: 0.442485637664795][cost: 4.0][agents: 2][optimization time 21.79418110847473]
+----------------------------------------
+Using cached single agent results
+['ball3 should be in room2.']
+agent1
+[info][subgoal_1][grippers] task 05 takes 0.08 sec, found a plan with cost 4.0
+planner successful
+validating
+validator time 0.0024819374084472656
+[info][multiagent main goal][grippers] task 05 takes 996.85 sec, no solution found
+TASK: grippers - 2000 - 05
+4 True
+tracing optimal path
+[results][grippers][05]
+[single_agent][planning time: 0.05][cost: 4.0]
+[multi_agent][planning_time: 0.5377586650848389][cost: 4.0][agents: 2][optimization time 20.51220989227295]
+----------------------------------------
+Using cached single agent results
+['ball1 should be in room3.']
+agent1
+[info][subgoal_1][grippers] task 06 takes 0.07 sec, found a plan with cost 4.0
+planner successful
+validating
+validator time 0.0019600391387939453
+[info][multiagent main goal][grippers] task 06 takes 997.77 sec, no solution found
+TASK: grippers - 2000 - 06
+4 True
+tracing optimal path
+[results][grippers][06]
+[single_agent][planning time: 0.06][cost: 4.0]
+[multi_agent][planning_time: 1.0168979835510252][cost: 4.0][agents: 2][optimization time 12.076051235198975]
+----------------------------------------
+Using cached single agent results
+['ball3 should be in room2.']
+agent1
+[info][subgoal_1][grippers] task 11 takes 0.07 sec, found a plan with cost 3.0
+planner successful
+validating
+validator time 0.0022835731506347656
+[info][multiagent main goal][grippers] task 11 takes 997.52 sec, no solution found
+TASK: grippers - 2000 - 11
+3 True
+tracing optimal path
+[results][grippers][11]
+[single_agent][planning time: 0.04][cost: 3.0]
+[multi_agent][planning_time: 0.5200484466552735][cost: 3.0][agents: 2][optimization time 22.115164756774902]
 ----------------------------------------
 Using cached single agent results
 ['ball1 is in room2.']
