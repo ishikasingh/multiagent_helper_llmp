@@ -1,0 +1,10 @@
+
+Processing domain: domains/tyreworld-multi
+
+Evaluating tyreworld-multi problem 01
+2 agents for domain tyreworld-multi
+[info][singleagent][tyreworld-multi] task 01 takes 0.14 sec, found a plan with cost 13.0
+Results for task 01: {'planner_total_time': 0.14, 'planner_total_time_opt': 0.073537, 'best_cost': 13.0, 'planner_search_time_1st_plan': 0.000996, 'first_plan_cost': 13}
+
+Evaluating tyreworld-multi problem 02
+2 agents for domain tyreworld-multi

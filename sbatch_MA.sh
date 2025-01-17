@@ -37,8 +37,7 @@ BASE_DIR="/home/davidbai/multiagent_helper_llmp"
 # )
 
 declare -a experiments=(
-    "python solve_pddl_MA.py --time-limit 1000 --domain termes-multi-4"
-    "python solve_pddl_MA.py --time-limit 1000 --domain termes-multi-5"
+    "python solve_pddl_MA.py --time-limit 1000 --domain tyreworld-multi-3"
 )
 
 # Launch each experiment as a separate sbatch job

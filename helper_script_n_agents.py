@@ -22,7 +22,7 @@ def get_helper_subgoal_without_plan(expt_path, args, log_file):
     system_text += '\n'
 
     system_text += ''' Your goal is to generate goals for agents such that they can be executed in parallel to decrease plan execution length. Generate only one clearly stated small independent subgoal for each helper agent to help the main agent complete the given task. The subgoal must be executable by a helper agent completely independently without waiting for any main agent actions to change predicates. The subgoal SHOULD NOT be interwoven with other generated subgoals or the main task, but rather run uninterrupted from inception time in PARALLEL with other subgoals.  
-    The subgoal should be clearly stated with unambiguous terminology. Do not use actions like assist or help, only actions CLEARLY DEFINED IN THE DOMAIN. The main goal will be augmented based on the generated subgoals, but will run in parallel with them. Do not overtake the full sequence of actions. Remember, the helper agents are only assisting the main agent and act agnostically to the main agent. If there are no subgoals needed, return THE SAME subgoal as the previous agent.
+    The subgoal should be clearly stated with unambiguous terminology. Do not use actions like assist or help, only actions CLEARLY DEFINED IN THE DOMAIN. The main goal will be augmented based on the generated subgoals, but will run in parallel with them. Do not overtake the full sequence of actions. Remember, the helper agents are only assisting the main agent and act agnostically to the main agent. If there are no subgoals needed, return "none".
     '''
     
     # print("system_text \n", system_text, "\n")
@@ -56,9 +56,9 @@ def get_helper_subgoal_without_plan(expt_path, args, log_file):
     shot1 contains cocktail1. shot2 contains cocktail2. 
 
     A possible agent1 subgoal looking at how the domain works based on the plan example provided for another task in this domain could be - 
-    agent1 subgoals: It can independently prepare cocktail1 using shot3 and shaker1. The agent will grasp shot3, fill it with ingredients, pour to shaker, shake the cocktail, and pour it to the target glass. All actions can be done while agent0 works with other containers. Therefore, agent1's clearly stated (with object names) complete and final goal condition is: contains shot1 cocktail1.
+    agent1 subgoals: It can independently prepare cocktail1 using shot3 and shaker1. The agent will grasp shot3, fill it with ingredients, pour to shaker, shake the cocktail, and pour it to the target glass. All actions can be done while agent0 works with other containers. Therefore, agent1's clearly stated (with object names) complete and final goal condition is: contains shot1 cocktail1 and all hands are empty.
     A possible agent2 subgoal looking at how the domain works based on the plan example provided for another task in this domain could be - 
-    agent2 subgoals: It can independently prepare cocktail2 using shot3 and shaker2. The agent will grasp shot3, fill it with ingredients, pour to shaker, shake the cocktail, and pour it to the target glass. All actions can be done while other agents work with other containers. Therefore, agent2's clearly stated (with object names) complete and final goal condition is: contains shot2 cocktail2.
+    agent2 subgoals: It can independently prepare cocktail2 using shot3 and shaker2. The agent will grasp shot3, fill it with ingredients, pour to shaker, shake the cocktail, and pour it to the target glass. All actions can be done while other agents work with other containers. Therefore, agent2's clearly stated (with object names) complete and final goal condition is: contains shot2 cocktail2 and all hands are empty.
     '''
     # This pattern continues until {args.num_agents - 1} subgoals are generated, or until it is unnecessary to generate more agents.
     # get natural language descriptions of current domain task
@@ -92,20 +92,27 @@ def get_helper_subgoal_without_plan(expt_path, args, log_file):
     #print("prompt text\n", prompt_text)
     start = time.time()
     all_subgoals = []
-    #helper_subgoal = query(prompt_text, system_text=system_text, use_chatgpt=True)
-    for i in range(1,args.num_agents):
+    valid_subgoals = 0
+    
+    for i in range(1, args.num_agents):
         prompt_text += f"\n agent{i} subgoal:"
-        #print(f"querying for agent {i}")
         helper_subgoal = generator.query(prompt_text, system_text=system_text, model=args.model)
-        #print(helper_subgoal, "\n")
         prompt_text += helper_subgoal
+        
+        if helper_subgoal == "none":
+            print(f"LLM generated no subgoal for agent {i}, reducing number of agents")
+            args.num_agents = i+1
+            break
+            
         all_subgoals.append(helper_subgoal)
+        valid_subgoals += 1
+
     end = time.time()-start
 
-    #print(prompt_text)
-    #print("cumulative subgoals", all_subgoals,"\n")
-
-    with open(log_file, 'a+') as f: f.write(f"\n\n{current_prompt_text} {helper_subgoal}")
+    with open(log_file, 'a+') as f: 
+        f.write(f"\n\n{current_prompt_text} {helper_subgoal}")
+        f.write(f"\nReduced to {valid_subgoals + 1} agents")
+        
     helper_subgoal = helper_subgoal.split('final goal condition is:')[-1].strip()
     return all_subgoals, end
 

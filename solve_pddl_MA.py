@@ -27,12 +27,14 @@ def evaluate_domain(domain_path, time_limit=300):
     for problem_file in sorted(problem_files):
         task_id = int(problem_file[1:-5])  # Extract number from pXX.pddl
         args.task_id = f"{task_id:02d}"  # Update task_id for current problem
-        print(f"\nEvaluating {domain_name} problem {args.task_id}")
+        print(f"\nEvaluating {domain_name} problem {args.task_id}", flush=True)
         
         # Create domain-specific cache directory
-        cache_path = os.path.join("experiments_multiagent_help/run_10000", domain_name)
+        cache_path = os.path.join("experiments_multiagent_help/run_10000", domain_name, )
         os.makedirs(cache_path, exist_ok=True)
         
+        args.num_agents = 2 if domain_name.count("-") == 1 else int(domain_name.split("-")[-1])
+        print(f"{args.num_agents} agents for domain {domain_name}", flush=True)
         stats = planner(cache_path, args)
         results = {
             "planner_total_time": stats[0],
@@ -41,7 +43,7 @@ def evaluate_domain(domain_path, time_limit=300):
             "planner_search_time_1st_plan": stats[3],
             "first_plan_cost": stats[4]
         }
-        print(f"Results for task {args.task_id}:", results)
+        print(f"Results for task {args.task_id}:", results, flush=True)
         
         # Save result file in domain-specific folder
         result_filename = f"p{args.task_id}.json"
@@ -62,10 +64,10 @@ def main():
     domain_path = os.path.join('domains', args.domain)
     
     if not os.path.isdir(domain_path):
-        print(f"Error: {domain_path} is not a directory")
+        print(f"Error: {domain_path} is not a directory", flush=True)
         return
     
-    print(f"\nProcessing domain: {domain_path}")
+    print(f"\nProcessing domain: {domain_path}", flush=True)
     evaluate_domain(domain_path, args.time_limit)
 
 if __name__ == "__main__":

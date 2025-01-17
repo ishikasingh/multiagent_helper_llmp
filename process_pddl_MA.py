@@ -4,7 +4,7 @@ from collections import defaultdict
 
 def analyze_ma_cache(root_dir="MA_cache", output_file=None):
     # Dictionary to store results for each domain
-    results = defaultdict(lambda: {"times": [], "costs": []})
+    results = defaultdict(lambda: {"times": [], "costs": [], "tasks": {}})
     
     # Walk through MA_cache directory
     for domain in os.listdir(root_dir):
@@ -26,26 +26,49 @@ def analyze_ma_cache(root_dir="MA_cache", output_file=None):
                     # Extract planning time and best cost
                     planning_time = data.get('planner_total_time', 0)
                     best_cost = data.get('best_cost', 0)
+                    task_id = filename.split('.')[0]  # Get task ID from filename
                     
                     # Store values
                     results[domain]['times'].append(planning_time)
                     results[domain]['costs'].append(best_cost)
+                    results[domain]['tasks'][task_id] = {
+                        'time': planning_time,
+                        'cost': best_cost
+                    }
                     
                 except (json.JSONDecodeError, IOError) as e:
                     print(f"Error reading {file_path}: {e}")
     
     # Write results to file if specified, otherwise print to console
     output = []
-    output.append("\nResults:")
+    output.append("\nSummary Results:")
     output.append("-" * 50)
     
+    # First print summary statistics
     for domain, data in results.items():
         avg_time = sum(data['times']) / len(data['times']) if data['times'] else 0
         avg_cost = sum(data['costs']) / len(data['costs']) if data['costs'] else 0
         
         output.append(f"\nDomain: {domain}")
+        output.append(f"Number of Tasks: {len(data['tasks'])}")
         output.append(f"Average Planning Time: {avg_time:.2f} seconds")
         output.append(f"Average Solution Cost: {avg_cost:.2f}")
+
+    # Then print individual task statistics
+    output.append("\n\nDetailed Task Results:")
+    output.append("-" * 50)
+    
+    for domain, data in results.items():
+        output.append(f"\nDomain: {domain}")
+        output.append("Task ID\t\tPlanning Time (s)\tSolution Cost")
+        output.append("-" * 50)
+        
+        # Sort tasks by ID number
+        sorted_tasks = sorted(data['tasks'].items(), 
+                            key=lambda x: int(''.join(filter(str.isdigit, x[0]))))
+        
+        for task_id, task_data in sorted_tasks:
+            output.append(f"{task_id}\t\t{task_data['time']:.2f}\t\t{task_data['cost']:.2f}")
 
     output_text = "\n".join(output)
     
