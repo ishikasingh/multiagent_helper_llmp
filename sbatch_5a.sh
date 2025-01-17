@@ -3,7 +3,7 @@
 # Base directory where your code is located
 BASE_DIR="/home/davidbai/multiagent_helper_llmp"
 
-# Array of experiment configurations with domains - only missing 5-agent tasks
+#Array of experiment configurations with domains - only missing 5-agent tasks
 declare -a experiments=(
     # Grippers missing tasks (split into two runs)
     "--output-file 1_17_5a_grippers_1.txt --summary-file 1_17_5a_grippers_1_summary.txt --python-script helper_script_n_agents.py --num-agents 5 --model 'gpt-4o' --run 2025 --domains grippers --tasks 7,11,12,15,16"
@@ -15,6 +15,9 @@ declare -a experiments=(
 
     "--output-file 1_17_5a_barman.txt --summary-file 1_17_5a_barman_summary.txt --python-script helper_script_n_agents.py --num-agents 5 --model 'gpt-4o' --run 2029 --domains barman-enabled --tasks 3,5,6,7,8,9,10,11,12"
     "--output-file 1_17_5a_barman_2.txt --summary-file 1_17_5a_barman_2_summary.txt --python-script helper_script_n_agents.py --num-agents 5 --model 'gpt-4o' --run 2030 --domains barman-enabled --tasks 13,14,15,16,17,18,19,20"
+
+     "--output-file 1_17_5a_termes.txt --summary-file 1_17_5a_termes_summary.txt --python-script helper_script_n_agents.py --num-agents 5 --model 'gpt-4o' --run 2031 --domains termes --tasks 1,2,3,4,5,6,7,8,9,10"
+    "--output-file 1_17_5a_termes_2.txt --summary-file 1_17_5a_termes_2_summary.txt --python-script helper_script_n_agents.py --num-agents 5 --model 'gpt-4o' --run 2032 --domains termes --tasks 11,12,13,14,15,16,17,18,19,20"
 )
 
 # Launch each experiment as a separate sbatch job

@@ -3,10 +3,12 @@
 # Base directory where your code is located
 BASE_DIR="/home/davidbai/multiagent_helper_llmp"
 
-# Array of experiment configurations with domains - only missing 4-agent tasks
+#Array of experiment configurations with domains - only missing 4-agent tasks
 declare -a experiments=(
     # Termes missing tasks
     "--output-file 1_17_4a_termes.txt --summary-file 1_17_4a_termes_summary.txt --python-script helper_script_n_agents.py --num-agents 4 --model 'gpt-4o' --run 2022 --domains termes --tasks 3,5"
+     # Termes missing tasks
+    "--output-file 1_17_4a_termes_2.txt --summary-file 1_17_4a_termes_2_summary.txt --python-script helper_script_n_agents.py --num-agents 4 --model 'gpt-4o' --run 2027 --domains termes --tasks 13,14,15,16,17,18,19,20"
     
     # Tyreworld missing tasks (split into two runs due to large number)
     "--output-file 1_17_4a_tyreworld_1.txt --summary-file 1_17_4a_tyreworld_1_summary.txt --python-script helper_script_n_agents.py --num-agents 4 --model 'gpt-4o' --run 2023 --domains tyreworld --tasks 9,10,11,12,13,14"

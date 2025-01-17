@@ -1,0 +1,74 @@
+Using cached single agent results
+['inflate all intact tyres and ensure all hands are empty.', 'remove all flat tyres from hubs1 and hubs2 and ensure all hands are empty.', 'remove all flat tyres from hubs3 and hubs4 and ensure all hands are empty.', 'put-away all flat tyres in the boot and ensure all hands are empty.']
+['./experiments_multiagent_help/run2027/tyreworld/p04_1.pddl', './experiments_multiagent_help/run2027/tyreworld/p04_2.pddl', './experiments_multiagent_help/run2027/tyreworld/p04_3.pddl', './experiments_multiagent_help/run2027/tyreworld/p04_4.pddl']
+agent1
+[info][subgoal_1][tyreworld] task 04 takes 0.07 sec, found a plan with cost 4.0
+planner successful
+validating
+validator time 0.0026748180389404297
+agent2
+planner broke
+INFO     planner time limit: None
+INFO     planner memory limit: None
+
+INFO     Running translator.
+INFO     translator stdin: None
+INFO     translator time limit: None
+INFO     translator memory limit: None
+INFO     translator command line string: /home/davidbai/.conda/envs/llm_pddl/bin/python /home/davidbai/multiagent_helper_llmp/downward/builds/release/bin/translate/translate.py domains/tyreworld/domain.pddl experiments_multiagent_help/run2027/tyreworld/p04_2.pddl --sas-file experiments_multiagent_help/run2027/tyreworld/p04_2_plan.pddl.sas
+Parsing...
+Parsing task
+	->Parsing goal
+	->Parsing condition
+'not' expects exactly one argument.
+Syntax: (not CONDITION)
+translate exit code: 31
+
+Driver aborting after translate
+INFO     Planner time: 0.05s
+
+list index out of range
+Traceback (most recent call last):
+  File "/home/davidbai/multiagent_helper_llmp/helper_script_n_agents.py", line 313, in <module>
+    planner.get_updated_init_conditions(path, validation_filename=f"./{path}/p{args.task_id}_{i}_validation.txt", pddl_problem_filename=init_problem, pddl_problem_filename_edited=init_problem_out,is_main=main_goal)
+  File "/home/davidbai/multiagent_helper_llmp/modules/planner.py", line 140, in get_updated_init_conditions
+    with open(validation_filename, 'r') as f:
+FileNotFoundError: [Errno 2] No such file or directory: './experiments_multiagent_help/run2027/tyreworld/p04_2_validation.txt'
+----------------------------------------
+Using cached single agent results
+['inflate all intact tyres and ensure all hands are empty.', 'remove all flat tyres from hubs 1, 2, and 3 and ensure all hands are empty.', 'put-on all intact tyres on hubs 1, 2, and 3 and ensure all hands are empty.', 'put-away all flat tyres from hubs 1, 2, and 3 into the boot and ensure all hands are empty.']
+['./experiments_multiagent_help/run2027/tyreworld/p06_1.pddl', './experiments_multiagent_help/run2027/tyreworld/p06_2.pddl', './experiments_multiagent_help/run2027/tyreworld/p06_3.pddl', './experiments_multiagent_help/run2027/tyreworld/p06_4.pddl']
+agent1
+[info][subgoal_1][tyreworld] task 06 takes 0.1 sec, found a plan with cost 6.0
+planner successful
+validating
+validator time 0.002417325973510742
+agent2
+planner broke
+INFO     planner time limit: None
+INFO     planner memory limit: None
+
+INFO     Running translator.
+INFO     translator stdin: None
+INFO     translator time limit: None
+INFO     translator memory limit: None
+INFO     translator command line string: /home/davidbai/.conda/envs/llm_pddl/bin/python /home/davidbai/multiagent_helper_llmp/downward/builds/release/bin/translate/translate.py domains/tyreworld/domain.pddl experiments_multiagent_help/run2027/tyreworld/p06_2.pddl --sas-file experiments_multiagent_help/run2027/tyreworld/p06_2_plan.pddl.sas
+Parsing...
+Parsing task
+	->Parsing goal
+	->Parsing condition
+'not' expects exactly one argument.
+Syntax: (not CONDITION)
+translate exit code: 31
+
+Driver aborting after translate
+INFO     Planner time: 0.06s
+
+list index out of range
+Traceback (most recent call last):
+  File "/home/davidbai/multiagent_helper_llmp/helper_script_n_agents.py", line 313, in <module>
+    planner.get_updated_init_conditions(path, validation_filename=f"./{path}/p{args.task_id}_{i}_validation.txt", pddl_problem_filename=init_problem, pddl_problem_filename_edited=init_problem_out,is_main=main_goal)
+  File "/home/davidbai/multiagent_helper_llmp/modules/planner.py", line 140, in get_updated_init_conditions
+    with open(validation_filename, 'r') as f:
+FileNotFoundError: [Errno 2] No such file or directory: './experiments_multiagent_help/run2027/tyreworld/p06_2_validation.txt'
+----------------------------------------

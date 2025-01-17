@@ -1,2 +1,0 @@
-slurmstepd: error: *** JOB 209260 ON ink-mia CANCELLED AT 2025-01-17T13:07:06 ***
-slurmstepd: error: Detected 2 oom-kill event(s) in step 209260.batch cgroup. Some of your processes may have been killed by the cgroup out-of-memory handler.

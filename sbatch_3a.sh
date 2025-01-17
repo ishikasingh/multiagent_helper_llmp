@@ -6,10 +6,9 @@ BASE_DIR="/home/davidbai/multiagent_helper_llmp"
 # Array of experiment configurations with domains - only missing 3-agent tasks
 declare -a experiments=(
     # Termes missing task
-    "--output-file 1_17_3a_termes.txt --summary-file 1_17_3a_termes_summary.txt --python-script helper_script_n_agents.py --num-agents 3 --model 'gpt-4o' --run 2020 --domains termes --tasks 3"
-    
+    "--output-file 1_17_3a_termes.txt --summary-file 1_17_3a_termes_summary.txt --python-script helper_script_n_agents.py --num-agents 3 --model 'gpt-4o' --run 2020 --domains termes --tasks 1"
     # Tyreworld missing tasks
-    "--output-file 1_17_3a_tyreworld.txt --summary-file 1_17_3a_tyreworld_summary.txt --python-script helper_script_n_agents.py --num-agents 3 --model 'gpt-4o' --run 2021 --domains tyreworld --tasks 17,18,19,20"
+    "--output-file 1_17_3a_tyreworld.txt --summary-file 1_17_3a_tyreworld_summary.txt --python-script helper_script_n_agents.py --num-agents 3 --model 'gpt-4o' --run 2021 --domains tyreworld --tasks 18,19,20"
 )
 
 # Launch each experiment as a separate sbatch job

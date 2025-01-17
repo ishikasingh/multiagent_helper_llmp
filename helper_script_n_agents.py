@@ -101,7 +101,8 @@ def get_helper_subgoal_without_plan(expt_path, args, log_file):
         
         if helper_subgoal == "none":
             print(f"LLM generated no subgoal for agent {i}, reducing number of agents")
-            args.num_agents = i+1
+            args.num_agents = i
+            print(f"args.num_agents: {args.num_agents}")
             break
             
         all_subgoals.append(helper_subgoal)
@@ -256,7 +257,7 @@ if __name__ == "__main__":
             print(subgoal_array)
             # # helper_subgoal = "xyz"
             goal_files, t2 = generator.get_pddl_goal(path, args, subgoal_array, log_file)
-            # print(goal_files)
+            print(goal_files)
             LLM_text_sg_time.append(t1)
             LLM_pddl_sg_time.append(t2)
 
