@@ -37,7 +37,10 @@ BASE_DIR="/home/davidbai/multiagent_helper_llmp"
 # )
 
 declare -a experiments=(
-    "python solve_pddl_MA.py --time-limit 1000 --domain tyreworld-multi-3"
+    "python solve_pddl_MA.py --time-limit 1000 --domain termes-multi-3"
+    "python solve_pddl_MA.py --time-limit 1000 --domain termes-multi-4"
+    "python solve_pddl_MA.py --time-limit 1000 --domain termes-multi-5"
+
 )
 
 # Launch each experiment as a separate sbatch job
@@ -54,7 +57,7 @@ for exp in "${experiments[@]}"; do
            --error=${BASE_DIR}/slurm_${job_name}_%j.err \
            --cpus-per-task=2 \
            --mem=16G \
-           --time=6:00:00 \
+           --time=16:00:00 \
            --qos=general \
            --exclude ink-gary \
            --wrap="cd ${BASE_DIR} && $exp"

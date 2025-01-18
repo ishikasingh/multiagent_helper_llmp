@@ -1916,6 +1916,27 @@ tracing optimal path
 [multi_agent][planning_time: 3.197206230163574][cost: 4.0][agents: 3][optimization time 6.682880401611328]
 ----------------------------------------
 Using cached single agent results
+['height-at pos-0-2 is 2 and all blocks are placed.', 'height-at pos-3-1 is 2 and all blocks are placed.']
+['./experiments_multiagent_help/run2020/termes/p01_1.pddl', './experiments_multiagent_help/run2020/termes/p01_2.pddl']
+agent1
+[info][subgoal_1][termes] task 01 takes 0.29 sec, found a plan with cost 15.0
+planner successful
+validating
+validator time 0.0064814090728759766
+agent2
+[info][subgoal_2][termes] task 01 takes 0.17 sec, found a plan with cost 9.0
+planner successful
+validating
+validator time 0.002843618392944336
+[info][multiagent main goal][termes] task 01 takes 57.51 sec, found a plan with cost 34.0
+TASK: termes - 2020 - 01
+52.0 True
+tracing optimal path
+[results][termes][01]
+[single_agent][planning time: 28.84][cost: 36.0]
+[multi_agent][planning_time: 62.060365171432494][cost: 52.0][agents: 3][optimization time 56.089720487594604]
+----------------------------------------
+Using cached single agent results
 ['height pos-2-0 3', 'height pos-3-2 4']
 agent1
 [info][subgoal_1][termes] task 04 takes 2.08 sec, found a plan with cost 22.0

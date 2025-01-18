@@ -1,0 +1,544 @@
+
+Processing domain: domains/termes-multi-3
+
+Evaluating termes-multi-3 problem 01
+3 agents for domain termes-multi-3
+[info][singleagent][termes-multi-3] task 01 takes 1000.34 sec, found a plan with cost 30.0
+Results for task 01: {'planner_total_time': 1000.34, 'planner_total_time_opt': 14.767454, 'best_cost': 30.0, 'planner_search_time_1st_plan': 2.673774, 'first_plan_cost': 91}
+
+Evaluating termes-multi-3 problem 02
+3 agents for domain termes-multi-3
+[info][singleagent][termes-multi-3] task 02 takes 1000.23 sec, found a plan with cost 48.0
+Results for task 02: {'planner_total_time': 1000.23, 'planner_total_time_opt': 643.011863, 'best_cost': 48.0, 'planner_search_time_1st_plan': 3.724649, 'first_plan_cost': 128}
+
+Evaluating termes-multi-3 problem 03
+3 agents for domain termes-multi-3
+[info][singleagent][termes-multi-3] task 03 takes 1000.36 sec, found a plan with cost 70.0
+Results for task 03: {'planner_total_time': 1000.36, 'planner_total_time_opt': 745.388991, 'best_cost': 70.0, 'planner_search_time_1st_plan': 96.745469, 'first_plan_cost': 150}
+
+Evaluating termes-multi-3 problem 04
+3 agents for domain termes-multi-3
+[info][singleagent][termes-multi-3] task 04 takes 1000.31 sec, found a plan with cost 88.0
+Results for task 04: {'planner_total_time': 1000.31, 'planner_total_time_opt': 462.45515, 'best_cost': 88.0, 'planner_search_time_1st_plan': 47.692321, 'first_plan_cost': 246}
+
+Evaluating termes-multi-3 problem 05
+3 agents for domain termes-multi-3
+planner broke
+INFO     planner time limit: None
+INFO     planner memory limit: None
+
+INFO     Running translator.
+INFO     translator stdin: None
+INFO     translator time limit: None
+INFO     translator memory limit: None
+INFO     translator command line string: /home/davidbai/.conda/envs/llm_pddl/bin/python /home/davidbai/multiagent_helper_llmp/downward/builds/release/bin/translate/translate.py domains/termes-multi-3/domain.pddl domains/termes-multi-3/p05.pddl --sas-file experiments_multiagent_help/run_10000/termes-multi-3/p05_plan.pddl.sas
+Parsing...
+Parsing: [0.000s CPU, 0.034s wall-clock]
+Normalizing task... [0.000s CPU, 0.000s wall-clock]
+Instantiating...
+Generating Datalog program... [0.000s CPU, 0.000s wall-clock]
+Normalizing Datalog program...
+Normalizing Datalog program: [0.000s CPU, 0.002s wall-clock]
+Preparing model... [0.000s CPU, 0.001s wall-clock]
+Generated 59 rules.
+Computing model... [0.030s CPU, 0.031s wall-clock]
+2873 relevant atoms
+5000 auxiliary atoms
+7873 final queue length
+11128 total queue pushes
+Completing instantiation... [0.050s CPU, 0.048s wall-clock]
+Instantiating: [0.080s CPU, 0.083s wall-clock]
+Computing fact groups...
+Finding invariants...
+8 initial candidates
+Finding invariants: [0.000s CPU, 0.002s wall-clock]
+Checking invariant weight... [0.000s CPU, 0.000s wall-clock]
+Instantiating groups... [0.000s CPU, 0.000s wall-clock]
+Collecting mutex groups... [0.000s CPU, 0.000s wall-clock]
+Choosing groups...
+3 uncovered facts
+Choosing groups: [0.000s CPU, 0.000s wall-clock]
+Building translation key... [0.000s CPU, 0.000s wall-clock]
+Computing fact groups: [0.000s CPU, 0.003s wall-clock]
+Building STRIPS to SAS dictionary... [0.000s CPU, 0.000s wall-clock]
+Building dictionary for full mutex groups... [0.000s CPU, 0.000s wall-clock]
+Building mutex information...
+Building mutex information: [0.000s CPU, 0.000s wall-clock]
+Translating task...
+Processing axioms...
+Simplifying axioms... [0.000s CPU, 0.000s wall-clock]
+Translator axioms removed by simplifying: 0
+Processing axioms: [0.000s CPU, 0.003s wall-clock]
+Translating task: [0.050s CPU, 0.048s wall-clock]
+468 effect conditions simplified
+0 implied preconditions added
+Detecting unreachable propositions...
+369 operators removed
+0 axioms removed
+21 propositions removed
+Detecting unreachable propositions: [0.030s CPU, 0.020s wall-clock]
+Reordering and filtering variables...
+17 of 17 variables necessary.
+0 of 14 mutex groups necessary.
+2244 of 2244 operators necessary.
+0 of 0 axiom rules necessary.
+Reordering and filtering variables: [0.000s CPU, 0.006s wall-clock]
+Translator variables: 17
+Translator derived variables: 0
+Translator facts: 108
+Translator goal facts: 14
+Translator mutex groups: 0
+Translator total mutex groups size: 0
+Translator operators: 2244
+Translator axioms: 0
+Translator task size: 13015
+Translator peak memory: 260976 KB
+Writing output... [0.010s CPU, 0.044s wall-clock]
+Done! [0.170s CPU, 0.239s wall-clock]
+translate exit code: 0
+
+INFO     Running search (release).
+INFO     search stdin: experiments_multiagent_help/run_10000/termes-multi-3/p05_plan.pddl.sas
+INFO     search time limit: 1000s
+INFO     search memory limit: None
+INFO     search command line string: /home/davidbai/multiagent_helper_llmp/downward/builds/release/bin/downward --search --if-unit-cost 'let(hlm,landmark_sum(lm_reasonable_orders_hps(lm_rhw()),pref=false),let(hff,ff(),iterated([lazy_greedy([hff,hlm],preferred=[hff,hlm]),lazy_wastar([hff,hlm],preferred=[hff,hlm],w=5),lazy_wastar([hff,hlm],preferred=[hff,hlm],w=3),lazy_wastar([hff,hlm],preferred=[hff,hlm],w=2),lazy_wastar([hff,hlm],preferred=[hff,hlm],w=1)],repeat_last=true,continue_on_fail=true)))' --if-non-unit-cost 'let(hlm1,landmark_sum(lm_reasonable_orders_hps(lm_rhw()),transform=adapt_costs(one),pref=false),let(hff1,ff(transform=adapt_costs(one)),let(hlm2,landmark_sum(lm_reasonable_orders_hps(lm_rhw()),transform=adapt_costs(plusone),pref=false),let(hff2,ff(transform=adapt_costs(plusone)),iterated([lazy_greedy([hff1,hlm1],preferred=[hff1,hlm1],cost_type=one,reopen_closed=false),lazy_greedy([hff2,hlm2],preferred=[hff2,hlm2],reopen_closed=false),lazy_wastar([hff2,hlm2],preferred=[hff2,hlm2],w=5),lazy_wastar([hff2,hlm2],preferred=[hff2,hlm2],w=3),lazy_wastar([hff2,hlm2],preferred=[hff2,hlm2],w=2),lazy_wastar([hff2,hlm2],preferred=[hff2,hlm2],w=1)],repeat_last=true,continue_on_fail=true)))))' --always --internal-plan-file experiments_multiagent_help/run_10000/termes-multi-3/p05_plan.pddl < experiments_multiagent_help/run_10000/termes-multi-3/p05_plan.pddl.sas
+[t=0.000728s, 18228 KB] reading input...
+[t=0.007329s, 18836 KB] done reading input!
+[t=0.008328s, 19232 KB] Initializing landmark sum heuristic...
+[t=0.008328s, 19232 KB] Generating landmark graph...
+[t=0.008328s, 19232 KB] Building a landmark graph with reasonable orders.
+[t=0.008328s, 19232 KB] Initializing Exploration...
+[t=0.009321s, 19232 KB] Generating landmarks using the RPG/SAS+ approach
+[t=0.012290s, 19364 KB] Landmarks generation time: 0.003962s
+[t=0.012290s, 19364 KB] Discovered 24 landmarks, of which 5 are disjunctive and 0 are conjunctive.
+[t=0.012290s, 19364 KB] 34 edges
+[t=0.012290s, 19364 KB] approx. reasonable orders
+[t=0.012290s, 19364 KB] Landmarks generation time: 0.003962s
+[t=0.012290s, 19364 KB] Discovered 24 landmarks, of which 5 are disjunctive and 0 are conjunctive.
+[t=0.012290s, 19364 KB] 34 edges
+[t=0.012290s, 19364 KB] Landmark graph generation time: 0.003962s
+[t=0.012290s, 19364 KB] Landmark graph contains 24 landmarks, of which 5 are disjunctive and 0 are conjunctive.
+[t=0.012290s, 19364 KB] Landmark graph contains 34 orderings.
+[t=0.012290s, 19508 KB] Simplifying 3102 unary operators... done! [3084 unary operators]
+[t=0.014280s, 19508 KB] time to simplify: 0.001989s
+[t=0.014280s, 19688 KB] Initializing additive heuristic...
+[t=0.014280s, 19688 KB] Initializing FF heuristic...
+[t=0.014280s, 19688 KB] Building successor generator...done!
+[t=0.015279s, 19688 KB] peak memory difference for successor generator creation: 0 KB
+[t=0.015279s, 19688 KB] time for successor generation creation: 0.000999s
+[t=0.015279s, 19688 KB] Variables: 17
+[t=0.015279s, 19688 KB] FactPairs: 108
+[t=0.015279s, 19688 KB] Bytes per state: 8
+[t=0.015279s, 19688 KB] Building successor generator...done!
+[t=0.015279s, 19688 KB] peak memory difference for successor generator creation: 0 KB
+[t=0.015279s, 19688 KB] time for successor generation creation: 0.000000s
+[t=0.015279s, 19688 KB] Variables: 17
+[t=0.015279s, 19688 KB] FactPairs: 108
+[t=0.015279s, 19688 KB] Bytes per state: 8
+[t=0.015279s, 19688 KB] Starting search: lazy_greedy
+[t=0.015279s, 19688 KB] Conducting lazy best first search, (real) bound = 2147483647
+[t=0.015279s, 19688 KB] New best heuristic value for landmark_sum_heuristic: 10
+[t=0.015279s, 19688 KB] New best heuristic value for ff: 18
+[t=0.015279s, 19688 KB] g=0, 1 evaluated, 0 expanded
+[t=0.015279s, 19688 KB] Initial heuristic value for landmark_sum_heuristic: 10
+[t=0.015279s, 19688 KB] Initial heuristic value for ff: 18
+[t=0.015279s, 19688 KB] New best heuristic value for ff: 17
+[t=0.015279s, 19688 KB] g=1, 3 evaluated, 2 expanded
+[t=0.016274s, 19688 KB] New best heuristic value for ff: 16
+[t=0.016274s, 19688 KB] g=2, 8 evaluated, 7 expanded
+[t=0.016274s, 19688 KB] New best heuristic value for ff: 11
+[t=0.016274s, 19688 KB] g=3, 13 evaluated, 12 expanded
+[t=0.016274s, 19688 KB] New best heuristic value for landmark_sum_heuristic: 9
+[t=0.017266s, 19688 KB] g=6, 26 evaluated, 25 expanded
+[t=0.017266s, 19688 KB] New best heuristic value for ff: 9
+[t=0.017266s, 19688 KB] g=10, 41 evaluated, 40 expanded
+[t=0.018261s, 19688 KB] New best heuristic value for landmark_sum_heuristic: 8
+[t=0.018261s, 19688 KB] g=12, 48 evaluated, 47 expanded
+[t=0.018261s, 19688 KB] New best heuristic value for landmark_sum_heuristic: 7
+[t=0.018261s, 19688 KB] g=13, 49 evaluated, 48 expanded
+[t=0.667676s, 23136 KB] New best heuristic value for ff: 8
+[t=0.667676s, 23136 KB] g=40, 14937 evaluated, 14936 expanded
+[t=9.325942s, 74608 KB] New best heuristic value for landmark_sum_heuristic: 6
+[t=9.325942s, 74608 KB] g=86, 217733 evaluated, 217732 expanded
+[t=9.328866s, 74608 KB] New best heuristic value for landmark_sum_heuristic: 5
+[t=9.328866s, 74608 KB] g=92, 217805 evaluated, 217804 expanded
+[t=233.561175s, 1326784 KB] New best heuristic value for landmark_sum_heuristic: 4
+[t=233.561175s, 1326784 KB] g=226, 5355921 evaluated, 5355920 expanded
+[t=233.728751s, 1327840 KB] New best heuristic value for landmark_sum_heuristic: 3
+[t=233.728751s, 1327840 KB] g=249, 5360348 evaluated, 5360347 expanded
+Peak memory: 5346396 KB
+caught signal 24 -- exiting
+Time limit has been reached.
+search exit code: 23
+
+Driver aborting after search
+INFO     Planner time: 1000.36s
+
+Time limit reached or error occurred for task 05
+Results for task 05: {'planner_total_time': 1000, 'planner_total_time_opt': 1000, 'best_cost': None, 'planner_search_time_1st_plan': 1000, 'first_plan_cost': None}
+
+Evaluating termes-multi-3 problem 06
+3 agents for domain termes-multi-3
+planner broke
+INFO     planner time limit: None
+INFO     planner memory limit: None
+
+INFO     Running translator.
+INFO     translator stdin: None
+INFO     translator time limit: None
+INFO     translator memory limit: None
+INFO     translator command line string: /home/davidbai/.conda/envs/llm_pddl/bin/python /home/davidbai/multiagent_helper_llmp/downward/builds/release/bin/translate/translate.py domains/termes-multi-3/domain.pddl domains/termes-multi-3/p06.pddl --sas-file experiments_multiagent_help/run_10000/termes-multi-3/p06_plan.pddl.sas
+Parsing...
+Parsing: [0.000s CPU, 0.026s wall-clock]
+Normalizing task... [0.010s CPU, 0.000s wall-clock]
+Instantiating...
+Generating Datalog program... [0.000s CPU, 0.000s wall-clock]
+Normalizing Datalog program...
+Normalizing Datalog program: [0.000s CPU, 0.002s wall-clock]
+Preparing model... [0.000s CPU, 0.001s wall-clock]
+Generated 59 rules.
+Computing model... [0.030s CPU, 0.031s wall-clock]
+2873 relevant atoms
+5000 auxiliary atoms
+7873 final queue length
+11128 total queue pushes
+Completing instantiation... [0.050s CPU, 0.048s wall-clock]
+Instantiating: [0.080s CPU, 0.084s wall-clock]
+Computing fact groups...
+Finding invariants...
+8 initial candidates
+Finding invariants: [0.000s CPU, 0.002s wall-clock]
+Checking invariant weight... [0.000s CPU, 0.000s wall-clock]
+Instantiating groups... [0.000s CPU, 0.000s wall-clock]
+Collecting mutex groups... [0.000s CPU, 0.000s wall-clock]
+Choosing groups...
+3 uncovered facts
+Choosing groups: [0.000s CPU, 0.000s wall-clock]
+Building translation key... [0.000s CPU, 0.000s wall-clock]
+Computing fact groups: [0.000s CPU, 0.003s wall-clock]
+Building STRIPS to SAS dictionary... [0.000s CPU, 0.000s wall-clock]
+Building dictionary for full mutex groups... [0.000s CPU, 0.000s wall-clock]
+Building mutex information...
+Building mutex information: [0.000s CPU, 0.000s wall-clock]
+Translating task...
+Processing axioms...
+Simplifying axioms... [0.000s CPU, 0.000s wall-clock]
+Translator axioms removed by simplifying: 0
+Processing axioms: [0.000s CPU, 0.003s wall-clock]
+Translating task: [0.060s CPU, 0.048s wall-clock]
+468 effect conditions simplified
+0 implied preconditions added
+Detecting unreachable propositions...
+369 operators removed
+0 axioms removed
+21 propositions removed
+Detecting unreachable propositions: [0.020s CPU, 0.020s wall-clock]
+Reordering and filtering variables...
+17 of 17 variables necessary.
+0 of 14 mutex groups necessary.
+2244 of 2244 operators necessary.
+0 of 0 axiom rules necessary.
+Reordering and filtering variables: [0.000s CPU, 0.006s wall-clock]
+Translator variables: 17
+Translator derived variables: 0
+Translator facts: 108
+Translator goal facts: 14
+Translator mutex groups: 0
+Translator total mutex groups size: 0
+Translator operators: 2244
+Translator axioms: 0
+Translator task size: 13015
+Translator peak memory: 260972 KB
+Writing output... [0.010s CPU, 0.022s wall-clock]
+Done! [0.180s CPU, 0.211s wall-clock]
+translate exit code: 0
+
+INFO     Running search (release).
+INFO     search stdin: experiments_multiagent_help/run_10000/termes-multi-3/p06_plan.pddl.sas
+INFO     search time limit: 1000s
+INFO     search memory limit: None
+INFO     search command line string: /home/davidbai/multiagent_helper_llmp/downward/builds/release/bin/downward --search --if-unit-cost 'let(hlm,landmark_sum(lm_reasonable_orders_hps(lm_rhw()),pref=false),let(hff,ff(),iterated([lazy_greedy([hff,hlm],preferred=[hff,hlm]),lazy_wastar([hff,hlm],preferred=[hff,hlm],w=5),lazy_wastar([hff,hlm],preferred=[hff,hlm],w=3),lazy_wastar([hff,hlm],preferred=[hff,hlm],w=2),lazy_wastar([hff,hlm],preferred=[hff,hlm],w=1)],repeat_last=true,continue_on_fail=true)))' --if-non-unit-cost 'let(hlm1,landmark_sum(lm_reasonable_orders_hps(lm_rhw()),transform=adapt_costs(one),pref=false),let(hff1,ff(transform=adapt_costs(one)),let(hlm2,landmark_sum(lm_reasonable_orders_hps(lm_rhw()),transform=adapt_costs(plusone),pref=false),let(hff2,ff(transform=adapt_costs(plusone)),iterated([lazy_greedy([hff1,hlm1],preferred=[hff1,hlm1],cost_type=one,reopen_closed=false),lazy_greedy([hff2,hlm2],preferred=[hff2,hlm2],reopen_closed=false),lazy_wastar([hff2,hlm2],preferred=[hff2,hlm2],w=5),lazy_wastar([hff2,hlm2],preferred=[hff2,hlm2],w=3),lazy_wastar([hff2,hlm2],preferred=[hff2,hlm2],w=2),lazy_wastar([hff2,hlm2],preferred=[hff2,hlm2],w=1)],repeat_last=true,continue_on_fail=true)))))' --always --internal-plan-file experiments_multiagent_help/run_10000/termes-multi-3/p06_plan.pddl < experiments_multiagent_help/run_10000/termes-multi-3/p06_plan.pddl.sas
+[t=0.000419s, 18228 KB] reading input...
+[t=0.006929s, 18836 KB] done reading input!
+[t=0.007930s, 19232 KB] Initializing landmark sum heuristic...
+[t=0.007930s, 19232 KB] Generating landmark graph...
+[t=0.007930s, 19232 KB] Building a landmark graph with reasonable orders.
+[t=0.007930s, 19232 KB] Initializing Exploration...
+[t=0.008917s, 19232 KB] Generating landmarks using the RPG/SAS+ approach
+[t=0.011900s, 19364 KB] Landmarks generation time: 0.003970s
+[t=0.011900s, 19364 KB] Discovered 29 landmarks, of which 5 are disjunctive and 0 are conjunctive.
+[t=0.011900s, 19364 KB] 54 edges
+[t=0.011900s, 19364 KB] approx. reasonable orders
+[t=0.011900s, 19364 KB] Landmarks generation time: 0.003970s
+[t=0.011900s, 19364 KB] Discovered 29 landmarks, of which 5 are disjunctive and 0 are conjunctive.
+[t=0.011900s, 19364 KB] 54 edges
+[t=0.011900s, 19364 KB] Landmark graph generation time: 0.003970s
+[t=0.011900s, 19364 KB] Landmark graph contains 29 landmarks, of which 5 are disjunctive and 0 are conjunctive.
+[t=0.011900s, 19364 KB] Landmark graph contains 54 orderings.
+[t=0.012899s, 19508 KB] Simplifying 3102 unary operators... done! [3084 unary operators]
+[t=0.014888s, 19508 KB] time to simplify: 0.001989s
+[t=0.014888s, 19692 KB] Initializing additive heuristic...
+[t=0.014888s, 19692 KB] Initializing FF heuristic...
+[t=0.014888s, 19692 KB] Building successor generator...done!
+[t=0.014888s, 19692 KB] peak memory difference for successor generator creation: 0 KB
+[t=0.015881s, 19692 KB] time for successor generation creation: 0.000000s
+[t=0.015881s, 19692 KB] Variables: 17
+[t=0.015881s, 19692 KB] FactPairs: 108
+[t=0.015881s, 19692 KB] Bytes per state: 8
+[t=0.015881s, 19692 KB] Building successor generator...done!
+[t=0.015881s, 19692 KB] peak memory difference for successor generator creation: 0 KB
+[t=0.015881s, 19692 KB] time for successor generation creation: 0.000000s
+[t=0.015881s, 19692 KB] Variables: 17
+[t=0.015881s, 19692 KB] FactPairs: 108
+[t=0.015881s, 19692 KB] Bytes per state: 8
+[t=0.015881s, 19692 KB] Starting search: lazy_greedy
+[t=0.015881s, 19692 KB] Conducting lazy best first search, (real) bound = 2147483647
+[t=0.015881s, 19692 KB] New best heuristic value for landmark_sum_heuristic: 15
+[t=0.015881s, 19692 KB] New best heuristic value for ff: 34
+[t=0.015881s, 19692 KB] g=0, 1 evaluated, 0 expanded
+[t=0.015881s, 19692 KB] Initial heuristic value for landmark_sum_heuristic: 15
+[t=0.015881s, 19692 KB] Initial heuristic value for ff: 34
+[t=0.015881s, 19692 KB] New best heuristic value for ff: 32
+[t=0.015881s, 19692 KB] g=1, 5 evaluated, 4 expanded
+[t=0.015881s, 19692 KB] New best heuristic value for ff: 25
+[t=0.015881s, 19692 KB] g=2, 9 evaluated, 8 expanded
+[t=0.015881s, 19692 KB] New best heuristic value for ff: 24
+[t=0.015881s, 19692 KB] g=3, 11 evaluated, 10 expanded
+[t=0.015881s, 19692 KB] New best heuristic value for ff: 16
+[t=0.015881s, 19692 KB] g=4, 12 evaluated, 11 expanded
+[t=0.016875s, 19692 KB] New best heuristic value for landmark_sum_heuristic: 14
+[t=0.016875s, 19692 KB] g=6, 20 evaluated, 19 expanded
+[t=0.021838s, 19692 KB] New best heuristic value for landmark_sum_heuristic: 13
+[t=0.021838s, 19692 KB] g=10, 144 evaluated, 143 expanded
+[t=0.021838s, 19692 KB] New best heuristic value for ff: 15
+[t=0.021838s, 19692 KB] g=11, 150 evaluated, 149 expanded
+[t=0.029799s, 19692 KB] New best heuristic value for ff: 14
+[t=0.029799s, 19692 KB] g=17, 337 evaluated, 336 expanded
+[t=0.030795s, 19692 KB] New best heuristic value for landmark_sum_heuristic: 12
+[t=0.030795s, 19692 KB] g=21, 373 evaluated, 372 expanded
+[t=0.031792s, 19692 KB] New best heuristic value for landmark_sum_heuristic: 11
+[t=0.031792s, 19692 KB] g=23, 390 evaluated, 389 expanded
+[t=0.058711s, 19956 KB] New best heuristic value for ff: 13
+[t=0.058711s, 19956 KB] g=33, 1064 evaluated, 1063 expanded
+[t=0.863386s, 25324 KB] New best heuristic value for ff: 12
+[t=0.863386s, 25324 KB] g=44, 20125 evaluated, 20124 expanded
+[t=0.869369s, 25456 KB] New best heuristic value for landmark_sum_heuristic: 10
+[t=0.869369s, 25456 KB] g=48, 20263 evaluated, 20262 expanded
+[t=1.400983s, 28784 KB] New best heuristic value for landmark_sum_heuristic: 9
+[t=1.400983s, 28784 KB] g=73, 32763 evaluated, 32762 expanded
+[t=1.401980s, 28784 KB] New best heuristic value for landmark_sum_heuristic: 8
+[t=1.401980s, 28784 KB] g=74, 32767 evaluated, 32766 expanded
+[t=1.409960s, 28784 KB] New best heuristic value for ff: 11
+[t=1.409960s, 28784 KB] g=75, 32977 evaluated, 32976 expanded
+[t=4.296317s, 45624 KB] New best heuristic value for ff: 10
+[t=4.296317s, 45624 KB] g=135, 100702 evaluated, 100701 expanded
+[t=4.297316s, 45624 KB] New best heuristic value for landmark_sum_heuristic: 7
+[t=4.297316s, 45624 KB] g=138, 100720 evaluated, 100719 expanded
+[t=4.608511s, 47504 KB] New best heuristic value for ff: 9
+[t=4.608511s, 47504 KB] g=169, 108589 evaluated, 108588 expanded
+[t=4.872686s, 48964 KB] New best heuristic value for landmark_sum_heuristic: 6
+[t=4.872686s, 48964 KB] g=164, 114936 evaluated, 114935 expanded
+[t=9.001228s, 71800 KB] New best heuristic value for landmark_sum_heuristic: 5
+[t=9.001228s, 71800 KB] g=152, 206518 evaluated, 206517 expanded
+[t=238.482553s, 1313004 KB] New best heuristic value for landmark_sum_heuristic: 4
+[t=238.482553s, 1313004 KB] g=259, 5283234 evaluated, 5283233 expanded
+[t=251.372609s, 1382292 KB] New best heuristic value for ff: 8
+[t=251.372609s, 1382292 KB] g=298, 5579127 evaluated, 5579126 expanded
+[t=251.411390s, 1382556 KB] New best heuristic value for landmark_sum_heuristic: 3
+[t=251.411390s, 1382556 KB] g=330, 5580106 evaluated, 5580105 expanded
+[t=312.970326s, 1833832 KB] New best heuristic value for landmark_sum_heuristic: 2
+[t=312.970326s, 1833832 KB] g=308, 7131869 evaluated, 7131868 expanded
+Peak memory: 5555536 KB
+caught signal 24 -- exiting
+Time limit has been reached.
+search exit code: 23
+
+Driver aborting after search
+INFO     Planner time: 1000.42s
+
+Time limit reached or error occurred for task 06
+Results for task 06: {'planner_total_time': 1000, 'planner_total_time_opt': 1000, 'best_cost': None, 'planner_search_time_1st_plan': 1000, 'first_plan_cost': None}
+
+Evaluating termes-multi-3 problem 07
+3 agents for domain termes-multi-3
+[info][singleagent][termes-multi-3] task 07 takes 1000.34 sec, found a plan with cost 52.0
+Results for task 07: {'planner_total_time': 1000.34, 'planner_total_time_opt': 350.211527, 'best_cost': 52.0, 'planner_search_time_1st_plan': 19.181838, 'first_plan_cost': 142}
+
+Evaluating termes-multi-3 problem 08
+3 agents for domain termes-multi-3
+[info][singleagent][termes-multi-3] task 08 takes 1000.37 sec, found a plan with cost 60.0
+Results for task 08: {'planner_total_time': 1000.37, 'planner_total_time_opt': 382.081673, 'best_cost': 60.0, 'planner_search_time_1st_plan': 14.856085, 'first_plan_cost': 120}
+
+Evaluating termes-multi-3 problem 09
+3 agents for domain termes-multi-3
+planner broke
+INFO     planner time limit: None
+INFO     planner memory limit: None
+
+INFO     Running translator.
+INFO     translator stdin: None
+INFO     translator time limit: None
+INFO     translator memory limit: None
+INFO     translator command line string: /home/davidbai/.conda/envs/llm_pddl/bin/python /home/davidbai/multiagent_helper_llmp/downward/builds/release/bin/translate/translate.py domains/termes-multi-3/domain.pddl domains/termes-multi-3/p09.pddl --sas-file experiments_multiagent_help/run_10000/termes-multi-3/p09_plan.pddl.sas
+Parsing...
+Parsing: [0.000s CPU, 0.033s wall-clock]
+Normalizing task... [0.000s CPU, 0.000s wall-clock]
+Instantiating...
+Generating Datalog program... [0.000s CPU, 0.000s wall-clock]
+Normalizing Datalog program...
+Normalizing Datalog program: [0.000s CPU, 0.004s wall-clock]
+Preparing model... [0.000s CPU, 0.001s wall-clock]
+Generated 59 rules.
+Computing model... [0.050s CPU, 0.048s wall-clock]
+4227 relevant atoms
+8356 auxiliary atoms
+12583 final queue length
+17402 total queue pushes
+Completing instantiation... [0.070s CPU, 0.068s wall-clock]
+Instantiating: [0.130s CPU, 0.123s wall-clock]
+Computing fact groups...
+Finding invariants...
+8 initial candidates
+Finding invariants: [0.000s CPU, 0.002s wall-clock]
+Checking invariant weight... [0.000s CPU, 0.000s wall-clock]
+Instantiating groups... [0.000s CPU, 0.000s wall-clock]
+Collecting mutex groups... [0.000s CPU, 0.000s wall-clock]
+Choosing groups...
+3 uncovered facts
+Choosing groups: [0.000s CPU, 0.000s wall-clock]
+Building translation key... [0.000s CPU, 0.000s wall-clock]
+Computing fact groups: [0.000s CPU, 0.004s wall-clock]
+Building STRIPS to SAS dictionary... [0.000s CPU, 0.000s wall-clock]
+Building dictionary for full mutex groups... [0.000s CPU, 0.000s wall-clock]
+Building mutex information...
+Building mutex information: [0.000s CPU, 0.000s wall-clock]
+Translating task...
+Processing axioms...
+Simplifying axioms... [0.000s CPU, 0.000s wall-clock]
+Translator axioms removed by simplifying: 0
+Processing axioms: [0.000s CPU, 0.005s wall-clock]
+Translating task: [0.070s CPU, 0.072s wall-clock]
+711 effect conditions simplified
+0 implied preconditions added
+Detecting unreachable propositions...
+288 operators removed
+0 axioms removed
+28 propositions removed
+Detecting unreachable propositions: [0.040s CPU, 0.042s wall-clock]
+Reordering and filtering variables...
+25 of 25 variables necessary.
+0 of 22 mutex groups necessary.
+3588 of 3588 operators necessary.
+0 of 0 axiom rules necessary.
+Reordering and filtering variables: [0.010s CPU, 0.010s wall-clock]
+Translator variables: 25
+Translator derived variables: 0
+Translator facts: 161
+Translator goal facts: 22
+Translator mutex groups: 0
+Translator total mutex groups size: 0
+Translator operators: 3588
+Translator axioms: 0
+Translator task size: 20812
+Translator peak memory: 265072 KB
+Writing output... [0.020s CPU, 0.033s wall-clock]
+Done! [0.270s CPU, 0.319s wall-clock]
+translate exit code: 0
+
+INFO     Running search (release).
+INFO     search stdin: experiments_multiagent_help/run_10000/termes-multi-3/p09_plan.pddl.sas
+INFO     search time limit: 1000s
+INFO     search memory limit: None
+INFO     search command line string: /home/davidbai/multiagent_helper_llmp/downward/builds/release/bin/downward --search --if-unit-cost 'let(hlm,landmark_sum(lm_reasonable_orders_hps(lm_rhw()),pref=false),let(hff,ff(),iterated([lazy_greedy([hff,hlm],preferred=[hff,hlm]),lazy_wastar([hff,hlm],preferred=[hff,hlm],w=5),lazy_wastar([hff,hlm],preferred=[hff,hlm],w=3),lazy_wastar([hff,hlm],preferred=[hff,hlm],w=2),lazy_wastar([hff,hlm],preferred=[hff,hlm],w=1)],repeat_last=true,continue_on_fail=true)))' --if-non-unit-cost 'let(hlm1,landmark_sum(lm_reasonable_orders_hps(lm_rhw()),transform=adapt_costs(one),pref=false),let(hff1,ff(transform=adapt_costs(one)),let(hlm2,landmark_sum(lm_reasonable_orders_hps(lm_rhw()),transform=adapt_costs(plusone),pref=false),let(hff2,ff(transform=adapt_costs(plusone)),iterated([lazy_greedy([hff1,hlm1],preferred=[hff1,hlm1],cost_type=one,reopen_closed=false),lazy_greedy([hff2,hlm2],preferred=[hff2,hlm2],reopen_closed=false),lazy_wastar([hff2,hlm2],preferred=[hff2,hlm2],w=5),lazy_wastar([hff2,hlm2],preferred=[hff2,hlm2],w=3),lazy_wastar([hff2,hlm2],preferred=[hff2,hlm2],w=2),lazy_wastar([hff2,hlm2],preferred=[hff2,hlm2],w=1)],repeat_last=true,continue_on_fail=true)))))' --always --internal-plan-file experiments_multiagent_help/run_10000/termes-multi-3/p09_plan.pddl < experiments_multiagent_help/run_10000/termes-multi-3/p09_plan.pddl.sas
+[t=0.000587s, 18228 KB] reading input...
+[t=0.011183s, 19228 KB] done reading input!
+[t=0.012183s, 19632 KB] Initializing landmark sum heuristic...
+[t=0.012183s, 19632 KB] Generating landmark graph...
+[t=0.013176s, 19632 KB] Building a landmark graph with reasonable orders.
+[t=0.013176s, 19632 KB] Initializing Exploration...
+[t=0.013176s, 19756 KB] Generating landmarks using the RPG/SAS+ approach
+[t=0.018146s, 19888 KB] Landmarks generation time: 0.004971s
+[t=0.018146s, 19888 KB] Discovered 30 landmarks, of which 4 are disjunctive and 0 are conjunctive.
+[t=0.018146s, 19888 KB] 23 edges
+[t=0.018146s, 19888 KB] approx. reasonable orders
+[t=0.018146s, 19888 KB] Landmarks generation time: 0.005963s
+[t=0.018146s, 19888 KB] Discovered 30 landmarks, of which 4 are disjunctive and 0 are conjunctive.
+[t=0.018146s, 19888 KB] 23 edges
+[t=0.018146s, 19888 KB] Landmark graph generation time: 0.005963s
+[t=0.018146s, 19888 KB] Landmark graph contains 30 landmarks, of which 4 are disjunctive and 0 are conjunctive.
+[t=0.018146s, 19888 KB] Landmark graph contains 23 orderings.
+[t=0.019144s, 20228 KB] Simplifying 4950 unary operators... done! [4932 unary operators]
+[t=0.022110s, 20228 KB] time to simplify: 0.002966s
+[t=0.022110s, 20228 KB] Initializing additive heuristic...
+[t=0.022110s, 20228 KB] Initializing FF heuristic...
+[t=0.022110s, 20228 KB] Building successor generator...done!
+[t=0.023110s, 20436 KB] peak memory difference for successor generator creation: 208 KB
+[t=0.023110s, 20436 KB] time for successor generation creation: 0.001000s
+[t=0.023110s, 20436 KB] Variables: 25
+[t=0.023110s, 20436 KB] FactPairs: 161
+[t=0.023110s, 20436 KB] Bytes per state: 12
+[t=0.023110s, 20436 KB] Building successor generator...done!
+[t=0.023110s, 20436 KB] peak memory difference for successor generator creation: 0 KB
+[t=0.023110s, 20436 KB] time for successor generation creation: 0.000000s
+[t=0.023110s, 20436 KB] Variables: 25
+[t=0.023110s, 20436 KB] FactPairs: 161
+[t=0.023110s, 20436 KB] Bytes per state: 12
+[t=0.023110s, 20436 KB] Starting search: lazy_greedy
+[t=0.023110s, 20436 KB] Conducting lazy best first search, (real) bound = 2147483647
+[t=0.023110s, 20436 KB] New best heuristic value for landmark_sum_heuristic: 8
+[t=0.023110s, 20436 KB] New best heuristic value for ff: 25
+[t=0.023110s, 20436 KB] g=0, 1 evaluated, 0 expanded
+[t=0.023110s, 20436 KB] Initial heuristic value for landmark_sum_heuristic: 8
+[t=0.023110s, 20436 KB] Initial heuristic value for ff: 25
+[t=0.024106s, 20436 KB] New best heuristic value for ff: 23
+[t=0.024106s, 20436 KB] g=1, 2 evaluated, 1 expanded
+[t=0.024106s, 20436 KB] New best heuristic value for ff: 22
+[t=0.024106s, 20436 KB] g=2, 3 evaluated, 2 expanded
+[t=0.024106s, 20436 KB] New best heuristic value for ff: 18
+[t=0.024106s, 20436 KB] g=1, 7 evaluated, 6 expanded
+[t=0.024106s, 20436 KB] New best heuristic value for ff: 16
+[t=0.024106s, 20436 KB] g=2, 8 evaluated, 7 expanded
+[t=0.024106s, 20436 KB] New best heuristic value for ff: 13
+[t=0.024106s, 20436 KB] g=3, 10 evaluated, 9 expanded
+[t=0.024106s, 20436 KB] New best heuristic value for ff: 11
+[t=0.024106s, 20436 KB] g=5, 18 evaluated, 17 expanded
+[t=0.025099s, 20436 KB] New best heuristic value for landmark_sum_heuristic: 7
+[t=0.025099s, 20436 KB] New best heuristic value for ff: 9
+[t=0.025099s, 20436 KB] g=6, 20 evaluated, 19 expanded
+[t=0.072812s, 20568 KB] New best heuristic value for ff: 8
+[t=0.072812s, 20568 KB] g=22, 927 evaluated, 926 expanded
+[t=2.486880s, 33156 KB] New best heuristic value for landmark_sum_heuristic: 6
+[t=2.486880s, 33156 KB] g=28, 46668 evaluated, 46667 expanded
+[t=2.486880s, 33156 KB] New best heuristic value for landmark_sum_heuristic: 5
+[t=2.486880s, 33156 KB] g=30, 46672 evaluated, 46671 expanded
+[t=2.487878s, 33156 KB] New best heuristic value for ff: 7
+[t=2.487878s, 33156 KB] g=30, 46675 evaluated, 46674 expanded
+[t=6.069278s, 50588 KB] New best heuristic value for ff: 6
+[t=6.069278s, 50588 KB] g=48, 114259 evaluated, 114258 expanded
+[t=61.843712s, 328824 KB] New best heuristic value for landmark_sum_heuristic: 4
+[t=61.843712s, 328824 KB] g=108, 1125840 evaluated, 1125839 expanded
+[t=73.374599s, 389716 KB] New best heuristic value for landmark_sum_heuristic: 3
+[t=73.374599s, 389716 KB] g=128, 1354330 evaluated, 1354329 expanded
+Peak memory: 5027556 KB
+caught signal 24 -- exiting
+Time limit has been reached.
+search exit code: 23
+
+Driver aborting after search
+INFO     Planner time: 1000.49s
+
+Time limit reached or error occurred for task 09
+Results for task 09: {'planner_total_time': 1000, 'planner_total_time_opt': 1000, 'best_cost': None, 'planner_search_time_1st_plan': 1000, 'first_plan_cost': None}
+
+Evaluating termes-multi-3 problem 10
+3 agents for domain termes-multi-3
+[info][singleagent][termes-multi-3] task 10 takes 1000.36 sec, found a plan with cost 212.0
+Results for task 10: {'planner_total_time': 1000.36, 'planner_total_time_opt': 589.166206, 'best_cost': 212.0, 'planner_search_time_1st_plan': 589.166206, 'first_plan_cost': 212}
+
+Evaluating termes-multi-3 problem 11
+3 agents for domain termes-multi-3
+[info][singleagent][termes-multi-3] task 11 takes 1000.33 sec, found a plan with cost 57.0
+Results for task 11: {'planner_total_time': 1000.33, 'planner_total_time_opt': 136.415075, 'best_cost': 57.0, 'planner_search_time_1st_plan': 2.129641, 'first_plan_cost': 140}
+
+Evaluating termes-multi-3 problem 12
+3 agents for domain termes-multi-3

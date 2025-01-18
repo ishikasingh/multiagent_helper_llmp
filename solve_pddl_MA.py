@@ -35,14 +35,26 @@ def evaluate_domain(domain_path, time_limit=300):
         
         args.num_agents = 2 if domain_name.count("-") == 1 else int(domain_name.split("-")[-1])
         print(f"{args.num_agents} agents for domain {domain_name}", flush=True)
-        stats = planner(cache_path, args)
-        results = {
-            "planner_total_time": stats[0],
-            "planner_total_time_opt": stats[1],
-            "best_cost": stats[2],
-            "planner_search_time_1st_plan": stats[3],
-            "first_plan_cost": stats[4]
-        }
+        
+        try:
+            stats = planner(cache_path, args)
+            results = {
+                "planner_total_time": stats[0],
+                "planner_total_time_opt": stats[1],
+                "best_cost": stats[2],
+                "planner_search_time_1st_plan": stats[3],
+                "first_plan_cost": stats[4]
+            }
+        except (IndexError, ValueError):
+            print(f"Time limit reached or error occurred for task {args.task_id}", flush=True)
+            results = {
+                "planner_total_time": args.time_limit,
+                "planner_total_time_opt": args.time_limit,
+                "best_cost": None,
+                "planner_search_time_1st_plan": args.time_limit,
+                "first_plan_cost": None
+            }
+            
         print(f"Results for task {args.task_id}:", results, flush=True)
         
         # Save result file in domain-specific folder

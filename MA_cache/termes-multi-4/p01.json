@@ -1,7 +1,7 @@
 {
-  "planner_total_time": 1000.5,
-  "planner_total_time_opt": 137.211661,
+  "planner_total_time": 1000.42,
+  "planner_total_time_opt": 138.978338,
   "best_cost": 28.0,
-  "planner_search_time_1st_plan": 56.520099,
+  "planner_search_time_1st_plan": 58.43137,
   "first_plan_cost": 102
 }

@@ -1,0 +1,74 @@
+Using cached single agent results
+['ball3 is in room1 and ball4 is in room1 and all grippers are free.', 'ball1 is in room2 and all grippers are free.', 'ball5 is in room1 and all grippers are free.', 'none.']
+['./experiments_multiagent_help/run2026/grippers/p17_1.pddl', './experiments_multiagent_help/run2026/grippers/p17_2.pddl', './experiments_multiagent_help/run2026/grippers/p17_3.pddl', './experiments_multiagent_help/run2026/grippers/p17_4.pddl']
+agent1
+[info][subgoal_1][grippers] task 17 takes 0.07 sec, found a plan with cost 6.0
+planner successful
+validating
+validator time 0.0024297237396240234
+agent2
+[info][subgoal_2][grippers] task 17 takes 0.07 sec, found a plan with cost 3.0
+planner successful
+validating
+validator time 0.002320528030395508
+agent3
+[info][subgoal_3][grippers] task 17 takes 997.5 sec, no solution found
+planner successful
+validating
+validator time 0.004585981369018555
+agent4
+planner broke
+INFO     planner time limit: None
+INFO     planner memory limit: None
+
+INFO     Running translator.
+INFO     translator stdin: None
+INFO     translator time limit: None
+INFO     translator memory limit: None
+INFO     translator command line string: /home/davidbai/.conda/envs/llm_pddl/bin/python /home/davidbai/multiagent_helper_llmp/downward/builds/release/bin/translate/translate.py domains/grippers/domain.pddl experiments_multiagent_help/run2026/grippers/p17_4.pddl --sas-file experiments_multiagent_help/run2026/grippers/p17_4_plan.pddl.sas
+Parsing...
+Parsing task
+	->Parsing goal
+Expected non-empty goal.
+Syntax: (:goal GOAL)
+translate exit code: 31
+
+Driver aborting after translate
+INFO     Planner time: 0.06s
+
+list index out of range
+Traceback (most recent call last):
+  File "/home/davidbai/multiagent_helper_llmp/helper_script_n_agents.py", line 313, in <module>
+    planner.get_updated_init_conditions(path, validation_filename=f"./{path}/p{args.task_id}_{i}_validation.txt", pddl_problem_filename=init_problem, pddl_problem_filename_edited=init_problem_out,is_main=main_goal)
+  File "/home/davidbai/multiagent_helper_llmp/modules/planner.py", line 140, in get_updated_init_conditions
+    with open(validation_filename, 'r') as f:
+FileNotFoundError: [Errno 2] No such file or directory: './experiments_multiagent_help/run2026/grippers/p17_4_validation.txt'
+
+b'Traceback (most recent call last):\n  File "/home/davidbai/multiagent_helper_llmp/downward/builds/release/bin/translate/translate.py", line 747, in <module>\n    main()\n  File "/home/davidbai/multiagent_helper_llmp/downward/builds/release/bin/translate/translate.py", line 705, in main\n    task = pddl_parser.open(\n  File "/home/davidbai/multiagent_helper_llmp/downward/builds/release/bin/translate/pddl_parser/pddl_file.py", line 39, in open\n    return parsing_functions.parse_task(domain_pddl, task_pddl)\n  File "/home/davidbai/multiagent_helper_llmp/downward/builds/release/bin/translate/pddl_parser/parsing_functions.py", line 634, in parse_task\n    task_name, task_domain_name, task_requirements, objects, init, goal, \\\n  File "/home/davidbai/multiagent_helper_llmp/downward/builds/release/bin/translate/pddl_parser/parsing_functions.py", line 790, in parse_task_pddl\n    yield parse_condition(context, goal[1], type_dict, predicate_dict)\n  File "/home/davidbai/multiagent_helper_llmp/downward/builds/release/bin/translate/pddl_parser/parsing_functions.py", line 209, in parse_condition\n    condition = parse_condition_aux(\n  File "/home/davidbai/multiagent_helper_llmp/downward/builds/release/bin/translate/pddl_parser/parsing_functions.py", line 242, in parse_condition_aux\n    elif tag in predicate_dict:\nTypeError: unhashable type: \'list\'\n'
+Using cached single agent results
+['ball3 is in room1.', 'ball4 is in room2.', 'ball1 is in room3.', 'ball6 is in room2.']
+['./experiments_multiagent_help/run2026/grippers/p19_1.pddl', './experiments_multiagent_help/run2026/grippers/p19_2.pddl', './experiments_multiagent_help/run2026/grippers/p19_3.pddl', './experiments_multiagent_help/run2026/grippers/p19_4.pddl']
+agent1
+planner broke
+INFO     planner time limit: None
+INFO     planner memory limit: None
+
+INFO     Running translator.
+INFO     translator stdin: None
+INFO     translator time limit: None
+INFO     translator memory limit: None
+INFO     translator command line string: /home/davidbai/.conda/envs/llm_pddl/bin/python /home/davidbai/multiagent_helper_llmp/downward/builds/release/bin/translate/translate.py domains/grippers/domain.pddl experiments_multiagent_help/run2026/grippers/p19_1.pddl --sas-file experiments_multiagent_help/run2026/grippers/p19_1_plan.pddl.sas
+Parsing...
+translate exit code: 30
+
+Driver aborting after translate
+INFO     Planner time: 0.05s
+
+list index out of range
+Traceback (most recent call last):
+  File "/home/davidbai/multiagent_helper_llmp/helper_script_n_agents.py", line 313, in <module>
+    planner.get_updated_init_conditions(path, validation_filename=f"./{path}/p{args.task_id}_{i}_validation.txt", pddl_problem_filename=init_problem, pddl_problem_filename_edited=init_problem_out,is_main=main_goal)
+  File "/home/davidbai/multiagent_helper_llmp/modules/planner.py", line 140, in get_updated_init_conditions
+    with open(validation_filename, 'r') as f:
+FileNotFoundError: [Errno 2] No such file or directory: './experiments_multiagent_help/run2026/grippers/p19_1_validation.txt'
+----------------------------------------
