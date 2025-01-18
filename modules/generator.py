@@ -2,8 +2,11 @@ from dotenv import load_dotenv
 from openai import OpenAI
 import time
 import re
+import os
+import certifi
 
 load_dotenv()
+os.environ['SSL_CERT_FILE'] = certifi.where()
 client = OpenAI()
 
 def query(prompt_text, system_text=None, model="gpt-4o"):

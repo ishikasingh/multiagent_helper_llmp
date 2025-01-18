@@ -4,98 +4,143 @@ Summary Results:
 
 Domain: termes-multi
 Number of Tasks: 20
-Average Planning Time: 966.27 seconds
-Average Solution Cost: 138.20
+Number of Timeouts: 0
+Success Rate: 100.0%
+Average Planning Time (successful only): 966.27 seconds
+Average Solution Cost (successful only): 138.20
 
 Domain: termes-multi-3
-Number of Tasks: 4
-Average Planning Time: 1000.37 seconds
-Average Solution Cost: 59.00
+Number of Tasks: 20
+Number of Timeouts: 3
+Success Rate: 85.0%
+Average Planning Time (successful only): 1000.34 seconds
+Average Solution Cost (successful only): 153.71
 
 Domain: termes-multi-4
-Number of Tasks: 4
-Average Planning Time: 1000.47 seconds
-Average Solution Cost: 148.25
+Number of Tasks: 20
+Number of Timeouts: 5
+Success Rate: 75.0%
+Average Planning Time (successful only): 1000.47 seconds
+Average Solution Cost (successful only): 194.07
+
+Domain: termes-multi-5
+Number of Tasks: 20
+Number of Timeouts: 16
+Success Rate: 20.0%
+Average Planning Time (successful only): 1000.55 seconds
+Average Solution Cost (successful only): 164.00
 
 Domain: blocksworld-multi
 Number of Tasks: 20
-Average Planning Time: 293.18 seconds
-Average Solution Cost: 15.55
+Number of Timeouts: 0
+Success Rate: 100.0%
+Average Planning Time (successful only): 293.18 seconds
+Average Solution Cost (successful only): 15.55
 
 Domain: blocksworld-multi-3
 Number of Tasks: 20
-Average Planning Time: 316.77 seconds
-Average Solution Cost: 14.35
+Number of Timeouts: 0
+Success Rate: 100.0%
+Average Planning Time (successful only): 316.77 seconds
+Average Solution Cost (successful only): 14.35
 
 Domain: blocksworld-multi-4
 Number of Tasks: 20
-Average Planning Time: 375.80 seconds
-Average Solution Cost: 13.80
+Number of Timeouts: 0
+Success Rate: 100.0%
+Average Planning Time (successful only): 375.80 seconds
+Average Solution Cost (successful only): 13.80
 
 Domain: blocksworld-multi-5
 Number of Tasks: 20
-Average Planning Time: 383.52 seconds
-Average Solution Cost: 13.55
+Number of Timeouts: 0
+Success Rate: 100.0%
+Average Planning Time (successful only): 383.52 seconds
+Average Solution Cost (successful only): 13.55
 
 Domain: tyreworld-multi-3
 Number of Tasks: 20
-Average Planning Time: 503.67 seconds
-Average Solution Cost: 121.35
+Number of Timeouts: 0
+Success Rate: 100.0%
+Average Planning Time (successful only): 563.37 seconds
+Average Solution Cost (successful only): 121.35
 
 Domain: tyreworld-multi
 Number of Tasks: 20
-Average Planning Time: 524.65 seconds
-Average Solution Cost: 121.35
+Number of Timeouts: 0
+Success Rate: 100.0%
+Average Planning Time (successful only): 603.58 seconds
+Average Solution Cost (successful only): 121.35
 
 Domain: tyreworld-multi-4
 Number of Tasks: 20
-Average Planning Time: 407.79 seconds
-Average Solution Cost: 121.35
+Number of Timeouts: 0
+Success Rate: 100.0%
+Average Planning Time (successful only): 407.79 seconds
+Average Solution Cost (successful only): 121.35
 
 Domain: grippers-multi
 Number of Tasks: 20
-Average Planning Time: 85.56 seconds
-Average Solution Cost: 8.50
+Number of Timeouts: 0
+Success Rate: 100.0%
+Average Planning Time (successful only): 85.56 seconds
+Average Solution Cost (successful only): 8.50
 
 Domain: tyreworld-multi-5
 Number of Tasks: 20
-Average Planning Time: 412.96 seconds
-Average Solution Cost: 121.35
+Number of Timeouts: 0
+Success Rate: 100.0%
+Average Planning Time (successful only): 412.96 seconds
+Average Solution Cost (successful only): 121.35
 
 Domain: grippers-multi-3
 Number of Tasks: 20
-Average Planning Time: 88.15 seconds
-Average Solution Cost: 7.45
+Number of Timeouts: 0
+Success Rate: 100.0%
+Average Planning Time (successful only): 88.15 seconds
+Average Solution Cost (successful only): 7.45
 
 Domain: grippers-multi-5
 Number of Tasks: 20
-Average Planning Time: 73.88 seconds
-Average Solution Cost: 7.35
+Number of Timeouts: 0
+Success Rate: 100.0%
+Average Planning Time (successful only): 73.88 seconds
+Average Solution Cost (successful only): 7.35
 
 Domain: grippers-multi-4
 Number of Tasks: 20
-Average Planning Time: 61.08 seconds
-Average Solution Cost: 7.35
+Number of Timeouts: 0
+Success Rate: 100.0%
+Average Planning Time (successful only): 61.08 seconds
+Average Solution Cost (successful only): 7.35
 
 Domain: barman-multi
 Number of Tasks: 20
-Average Planning Time: 1000.36 seconds
-Average Solution Cost: 49.15
+Number of Timeouts: 0
+Success Rate: 100.0%
+Average Planning Time (successful only): 1000.36 seconds
+Average Solution Cost (successful only): 49.15
 
 Domain: barman-multi-3
 Number of Tasks: 20
-Average Planning Time: 1000.35 seconds
-Average Solution Cost: 49.15
+Number of Timeouts: 0
+Success Rate: 100.0%
+Average Planning Time (successful only): 1000.35 seconds
+Average Solution Cost (successful only): 49.15
 
 Domain: barman-multi-4
 Number of Tasks: 20
-Average Planning Time: 1000.44 seconds
-Average Solution Cost: 50.55
+Number of Timeouts: 0
+Success Rate: 100.0%
+Average Planning Time (successful only): 1000.44 seconds
+Average Solution Cost (successful only): 50.55
 
 Domain: barman-multi-5
 Number of Tasks: 20
-Average Planning Time: 1000.55 seconds
-Average Solution Cost: 50.50
+Number of Timeouts: 0
+Success Rate: 100.0%
+Average Planning Time (successful only): 1000.55 seconds
+Average Solution Cost (successful only): 50.50
 
 
 Detailed Task Results:
@@ -128,18 +173,50 @@ p20		1000.56		120.00
 Domain: termes-multi-3
 Task ID		Planning Time (s)	Solution Cost
 --------------------------------------------------
-p01		1000.42		30.00
-p02		1000.29		48.00
-p03		1000.42		70.00
-p04		1000.36		88.00
+p01		1000.34		30.00
+p02		1000.23		48.00
+p03		1000.36		70.00
+p04		1000.31		88.00
+p07		1000.34		52.00
+p08		1000.37		60.00
+p10		1000.36		212.00
+p11		1000.33		57.00
+p12		1000.30		37.00
+p13		1000.30		89.00
+p14		1000.42		331.00
+p15		1000.38		454.00
+p16		1000.41		540.00
+p17		1000.32		105.00
+p18		1000.35		68.00
+p19		1000.28		86.00
+p20		1000.39		286.00
 
 Domain: termes-multi-4
 Task ID		Planning Time (s)	Solution Cost
 --------------------------------------------------
-p01		1000.50		28.00
-p02		1000.44		60.00
-p03		1000.46		152.00
-p04		1000.47		353.00
+p01		1000.42		28.00
+p02		1000.41		60.00
+p03		1000.47		152.00
+p04		1000.44		353.00
+p07		1000.47		102.00
+p08		1000.47		98.00
+p11		1000.53		64.00
+p12		1000.39		35.00
+p13		1000.45		310.00
+p14		1000.41		343.00
+p16		1000.43		522.00
+p17		1000.56		283.00
+p18		1000.62		81.00
+p19		1000.56		241.00
+p20		1000.46		239.00
+
+Domain: termes-multi-5
+Task ID		Planning Time (s)	Solution Cost
+--------------------------------------------------
+p11		1000.59		112.00
+p12		1000.50		34.00
+p17		1000.61		237.00
+p18		1000.51		273.00
 
 Domain: blocksworld-multi
 Task ID		Planning Time (s)	Solution Cost
@@ -240,10 +317,10 @@ p20		703.42		22.00
 Domain: tyreworld-multi-3
 Task ID		Planning Time (s)	Solution Cost
 --------------------------------------------------
-p01		0.17		13.00
-p02		407.85		101.00
-p03		380.56		35.00
-p04		426.76		46.00
+p01		0.16		13.00
+p02		906.41		101.00
+p03		733.70		35.00
+p04		769.18		46.00
 p05		303.42		57.00
 p06		282.85		68.00
 p07		425.80		79.00
@@ -264,10 +341,10 @@ p20		1000.19		222.00
 Domain: tyreworld-multi
 Task ID		Planning Time (s)	Solution Cost
 --------------------------------------------------
-p01		0.16		13.00
-p02		410.46		101.00
-p03		456.90		35.00
-p04		309.88		46.00
+p01		0.14		13.00
+p02		800.13		101.00
+p03		1001.73		35.00
+p04		954.04		46.00
 p05		358.29		57.00
 p06		414.45		68.00
 p07		481.10		79.00

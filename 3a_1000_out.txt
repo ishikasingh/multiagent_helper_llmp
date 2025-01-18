@@ -311,8 +311,23 @@ Results:
 
 ----------------------------------------
 Domain: tyreworld
-Success rate: 100.00% (17/17)
+Success rate: 100.00% (20/20)
 Results:
+  [results][tyreworld][18]
+  [single_agent][planning time: 1002.99][cost: 200.0]
+  [multi_agent][planning_time: 2017.4546443557738][cost: 164.0][agents: 3][optimization time 10605.876889944077]
+  Success: Yes
+
+  [results][tyreworld][19]
+  [single_agent][planning time: 1003.0][cost: 211.0]
+  [multi_agent][planning_time: 1027.4556293010712][cost: 192.0][agents: 2][optimization time 689.2741973400116]
+  Success: Yes
+
+  [results][tyreworld][20]
+  [single_agent][planning time: 1003.02][cost: 222.0]
+  [multi_agent][planning_time: 1053.7583378124236][cost: 202.0][agents: 2][optimization time 2375.5168755054474]
+  Success: Yes
+
   [results][tyreworld][17]
   [single_agent][planning time: 1003.33][cost: 189.0]
   [multi_agent][planning_time: 1010.302672176361][cost: 172.0][agents: 2][optimization time 235.00029969215393]
@@ -531,11 +546,11 @@ Domain: termes
 
 Domain: tyreworld
   Single Agent:
-    Average Cost: 105.53
-    Average Planning Time: 944.59 sec
+    Average Cost: 121.35
+    Average Planning Time: 953.35 sec
   Multi Agent:
-    Average Cost: 82.00
-    Average Planning Time: 1428.33 sec
+    Average Cost: 97.60
+    Average Planning Time: 1419.01 sec
 
 Domain: blocksworld
   Single Agent:

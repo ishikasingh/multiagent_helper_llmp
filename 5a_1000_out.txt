@@ -1,6 +1,41 @@
 Domain: barman-enabled
-Success rate: 80.00% (8/10)
+Success rate: 82.35% (14/17)
 Results:
+  [results][barman-enabled][16]
+  [single_agent][planning time: 1000.41][cost: 80.0]
+  [multi_agent][planning_time: 2736.5478155326846][cost: 55.0][agents: 5][optimization time 8010.615213632584]
+  Success: Yes
+
+  [results][barman-enabled][17]
+  [single_agent][planning time: 1000.39][cost: 83.0]
+  [multi_agent][planning_time: 4492.8285246086125][cost: 70.0][agents: 5][optimization time 32696.352831840515]
+  Success: Yes
+
+  [results][barman-enabled][10]
+  [single_agent][planning time: 1001.53][cost: 53.0]
+  [multi_agent][planning_time: 466.69549537658696][cost: 45.0][agents: 5][optimization time 11920.36566734314]
+  Success: Yes
+
+  [results][barman-enabled][11]
+  [single_agent][planning time: 1000.36][cost: 56.0]
+  [multi_agent][planning_time: 405.33759101867673][cost: 45.0][agents: 5][optimization time 9346.555567979813]
+  Success: Yes
+
+  [results][barman-enabled][12]
+  [single_agent][planning time: 1000.34][cost: 53.0]
+  [multi_agent][planning_time: 389.00254950523373][cost: 53.0][agents: 5][optimization time 1450.0983061790466]
+  Success: No
+
+  [results][barman-enabled][14]
+  [single_agent][planning time: 1000.4][cost: 74.0]
+  [multi_agent][planning_time: 3209.1183760070803][cost: 68.0][agents: 5][optimization time 2258.632420539856]
+  Success: Yes
+
+  [results][barman-enabled][15]
+  [single_agent][planning time: 1000.41][cost: 75.0]
+  [multi_agent][planning_time: 3381.748003759384][cost: 67.0][agents: 5][optimization time 2168.8382041454315]
+  Success: Yes
+
   [results][barman-enabled][13]
   [single_agent][planning time: 1000.41][cost: 74.0]
   [multi_agent][planning_time: 3104.181914167404][cost: 65.0][agents: 5][optimization time 7425.91130900383]
@@ -157,8 +192,13 @@ Results:
 
 ----------------------------------------
 Domain: grippers
-Success rate: 77.78% (14/18)
+Success rate: 78.95% (15/19)
 Results:
+  [results][grippers][19]
+  [single_agent][planning time: 2.55][cost: 17.0]
+  [multi_agent][planning_time: 7.429326677322388][cost: 7.0][agents: 5][optimization time 1736.3434641361237]
+  Success: Yes
+
   [results][grippers][20]
   [single_agent][planning time: 0.04][cost: 7.0]
   [multi_agent][planning_time: 2.6322893047332765][cost: 4.0][agents: 3][optimization time 15.141791105270386]
@@ -251,8 +291,28 @@ Results:
 
 ----------------------------------------
 Domain: tyreworld
-Success rate: 100.00% (12/12)
+Success rate: 100.00% (16/16)
 Results:
+  [results][tyreworld][04]
+  [single_agent][planning time: 1004.44][cost: 46.0]
+  [multi_agent][planning_time: 1006.6892007827759][cost: 36.0][agents: 5][optimization time 641.4403018951416]
+  Success: Yes
+
+  [results][tyreworld][06]
+  [single_agent][planning time: 1003.51][cost: 68.0]
+  [multi_agent][planning_time: 1005.0539550209046][cost: 64.0][agents: 5][optimization time 468.79653334617615]
+  Success: Yes
+
+  [results][tyreworld][18]
+  [single_agent][planning time: 1002.99][cost: 200.0]
+  [multi_agent][planning_time: 1006.4031905841828][cost: 196.0][agents: 5][optimization time 1322.138337135315]
+  Success: Yes
+
+  [results][tyreworld][19]
+  [single_agent][planning time: 1003.0][cost: 211.0]
+  [multi_agent][planning_time: 1006.4482885360718][cost: 207.0][agents: 5][optimization time 1843.1040434837341]
+  Success: Yes
+
   [results][tyreworld][16]
   [single_agent][planning time: 1003.11][cost: 178.0]
   [multi_agent][planning_time: 1010.6369653606415][cost: 170.0][agents: 5][optimization time 10161.14778804779]
@@ -315,8 +375,18 @@ Results:
 
 ----------------------------------------
 Domain: termes
-Success rate: 33.33% (1/3)
+Success rate: 20.00% (1/5)
 Results:
+  [results][termes][03]
+  [single_agent][planning time: 1000.06][cost: 68.0]
+  [multi_agent][planning_time: 832.0205949020386][cost: 83.0][agents: 5][optimization time 33028.31651997566]
+  Success: No
+
+  [results][termes][04]
+  [single_agent][planning time: 955.4][cost: 80.0]
+  [multi_agent][planning_time: 207.62162621498106][cost: 90.0][agents: 3][optimization time 1117.8493955135345]
+  Success: No
+
   [results][termes][11]
   [single_agent][planning time: 522.23][cost: 66.0]
   [multi_agent][planning_time: 61.516389856338506][cost: 71.0][agents: 4][optimization time 2250.562950372696]
@@ -337,11 +407,11 @@ Results:
 Domain Averages:
 Domain: barman-enabled
   Single Agent:
-    Average Cost: 39.10
-    Average Planning Time: 1002.31 sec
+    Average Cost: 50.88
+    Average Planning Time: 1001.59 sec
   Multi Agent:
-    Average Cost: 33.90
-    Average Planning Time: 444.17 sec
+    Average Cost: 43.65
+    Average Planning Time: 1148.41 sec
 
 Domain: blocksworld
   Single Agent:
@@ -353,25 +423,25 @@ Domain: blocksworld
 
 Domain: grippers
   Single Agent:
-    Average Cost: 8.17
-    Average Planning Time: 1.16 sec
+    Average Cost: 8.63
+    Average Planning Time: 1.24 sec
   Multi Agent:
-    Average Cost: 4.39
-    Average Planning Time: 3.35 sec
+    Average Cost: 4.53
+    Average Planning Time: 3.57 sec
 
 Domain: tyreworld
   Single Agent:
-    Average Cost: 99.17
-    Average Planning Time: 920.12 sec
+    Average Cost: 107.19
+    Average Planning Time: 940.96 sec
   Multi Agent:
-    Average Cost: 93.92
-    Average Planning Time: 923.82 sec
+    Average Cost: 101.88
+    Average Planning Time: 944.40 sec
 
 Domain: termes
   Single Agent:
-    Average Cost: 52.00
-    Average Planning Time: 248.65 sec
+    Average Cost: 60.80
+    Average Planning Time: 540.28 sec
   Multi Agent:
-    Average Cost: 59.00
-    Average Planning Time: 82.79 sec
+    Average Cost: 70.00
+    Average Planning Time: 257.60 sec
 

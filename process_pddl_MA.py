@@ -4,7 +4,12 @@ from collections import defaultdict
 
 def analyze_ma_cache(root_dir="MA_cache", output_file=None):
     # Dictionary to store results for each domain
-    results = defaultdict(lambda: {"times": [], "costs": [], "tasks": {}})
+    results = defaultdict(lambda: {
+        "times": [], 
+        "costs": [], 
+        "tasks": {},
+        "timeouts": 0  # Add timeout counter
+    })
     
     # Walk through MA_cache directory
     for domain in os.listdir(root_dir):
@@ -25,10 +30,15 @@ def analyze_ma_cache(root_dir="MA_cache", output_file=None):
                         
                     # Extract planning time and best cost
                     planning_time = data.get('planner_total_time', 0)
-                    best_cost = data.get('best_cost', 0)
+                    best_cost = data.get('best_cost')
                     task_id = filename.split('.')[0]  # Get task ID from filename
                     
-                    # Store values
+                    # Check for timeout (best_cost is null)
+                    if best_cost is None:
+                        results[domain]['timeouts'] += 1
+                        continue  # Skip adding this to times and costs lists
+                    
+                    # Store values only for non-timeout cases
                     results[domain]['times'].append(planning_time)
                     results[domain]['costs'].append(best_cost)
                     results[domain]['tasks'][task_id] = {
@@ -48,11 +58,14 @@ def analyze_ma_cache(root_dir="MA_cache", output_file=None):
     for domain, data in results.items():
         avg_time = sum(data['times']) / len(data['times']) if data['times'] else 0
         avg_cost = sum(data['costs']) / len(data['costs']) if data['costs'] else 0
+        total_tasks = len(data['tasks']) + data['timeouts']  # Total including timeouts
         
         output.append(f"\nDomain: {domain}")
-        output.append(f"Number of Tasks: {len(data['tasks'])}")
-        output.append(f"Average Planning Time: {avg_time:.2f} seconds")
-        output.append(f"Average Solution Cost: {avg_cost:.2f}")
+        output.append(f"Number of Tasks: {total_tasks}")
+        output.append(f"Number of Timeouts: {data['timeouts']}")
+        output.append(f"Success Rate: {(total_tasks - data['timeouts']) / total_tasks * 100:.1f}%")
+        output.append(f"Average Planning Time (successful only): {avg_time:.2f} seconds")
+        output.append(f"Average Solution Cost (successful only): {avg_cost:.2f}")
 
     # Then print individual task statistics
     output.append("\n\nDetailed Task Results:")
