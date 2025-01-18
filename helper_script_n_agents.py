@@ -54,12 +54,22 @@ def get_helper_subgoal_without_plan(expt_path, args, log_file):
     The first ingredient of cocktail2 is ingredient1. The second ingredient of cocktail2 is ingredient2. 
     Your goal is to make 2 cocktails. 
     shot1 contains cocktail1. shot2 contains cocktail2. 
-
-    A possible agent1 subgoal looking at how the domain works based on the plan example provided for another task in this domain could be - 
-    agent1 subgoals: It can independently prepare cocktail1 using shot3 and shaker1. The agent will grasp shot3, fill it with ingredients, pour to shaker, shake the cocktail, and pour it to the target glass. All actions can be done while agent0 works with other containers. Therefore, agent1's clearly stated (with object names) complete and final goal condition is: contains shot1 cocktail1 and all hands are empty.
-    A possible agent2 subgoal looking at how the domain works based on the plan example provided for another task in this domain could be - 
-    agent2 subgoals: It can independently prepare cocktail2 using shot3 and shaker2. The agent will grasp shot3, fill it with ingredients, pour to shaker, shake the cocktail, and pour it to the target glass. All actions can be done while other agents work with other containers. Therefore, agent2's clearly stated (with object names) complete and final goal condition is: contains shot2 cocktail2 and all hands are empty.
     '''
+    
+    if args.domain == 'tyreworld' or args.domain == 'grippers':
+        prompt_text += '''
+        A possible agent1 subgoal looking at how the domain works based on the plan example provided for another task in this domain could be - 
+        agent1 subgoals: It can independently prepare cocktail1 using shot3 and shaker1. The agent will grasp shot3, fill it with ingredients, pour to shaker, shake the cocktail, and pour it to the target glass. All actions can be done while agent0 works with other containers. Therefore, agent1's clearly stated (with object names) complete and final goal condition is: contains shot1 cocktail1.
+        A possible agent2 subgoal looking at how the domain works based on the plan example provided for another task in this domain could be - 
+        agent2 subgoals: It can independently prepare cocktail2 using shot3 and shaker2. The agent will grasp shot3, fill it with ingredients, pour to shaker, shake the cocktail, and pour it to the target glass. All actions can be done while other agents work with other containers. Therefore, agent2's clearly stated (with object names) complete and final goal condition is: contains shot2 cocktail2.
+        '''
+    else:
+        prompt_text += '''
+        A possible agent1 subgoal looking at how the domain works based on the plan example provided for another task in this domain could be - 
+        agent1 subgoals: It can independently prepare cocktail1 using shot3 and shaker1. The agent will grasp shot3, fill it with ingredients, pour to shaker, shake the cocktail, and pour it to the target glass. All actions can be done while agent0 works with other containers. Therefore, agent1's clearly stated (with object names) complete and final goal condition is: contains shot1 cocktail1 and all hands are empty.
+        A possible agent2 subgoal looking at how the domain works based on the plan example provided for another task in this domain could be - 
+        agent2 subgoals: It can independently prepare cocktail2 using shot3 and shaker2. The agent will grasp shot3, fill it with ingredients, pour to shaker, shake the cocktail, and pour it to the target glass. All actions can be done while other agents work with other containers. Therefore, agent2's clearly stated (with object names) complete and final goal condition is: contains shot2 cocktail2 and all hands are empty.
+        '''
     # This pattern continues until {args.num_agents - 1} subgoals are generated, or until it is unnecessary to generate more agents.
     # get natural language descriptions of current domain task
     scenario_filename =  f"./domains/{args.domain}/p{args.task_id}.nl"
