@@ -3,12 +3,12 @@ Success rate: 100.00% (20/20)
 Results:
   [results][barman-enabled][19]
   [single_agent][planning time: 1000.44][cost: 87.0]
-  [multi_agent][planning_time: 3512.919571065903][cost: 76.0][agents: 4][optimization time 1718.0938758850098]
+  [multi_agent][planning_time: 3499.986739282608][cost: 76.0][agents: 4][optimization time 2211.2110753059387]
   Success: Yes
 
   [results][barman-enabled][20]
   [single_agent][planning time: 1000.4][cost: 86.0]
-  [multi_agent][planning_time: 3405.8673720073702][cost: 74.0][agents: 4][optimization time 923.5239794254303]
+  [multi_agent][planning_time: 3194.959423894882][cost: 71.0][agents: 4][optimization time 943.6005840301514]
   Success: Yes
 
   [results][barman-enabled][13]
@@ -313,19 +313,19 @@ Results:
 Domain: termes
 Success rate: 15.38% (2/13)
 Results:
+  [results][termes][13]
+  [single_agent][planning time: 1000.21][cost: 92.0]
+  [multi_agent][planning_time: 126.07752800941466][cost: 92.0][agents: 4][optimization time 1933.0692660808563]
+  Success: No
+
   [results][termes][03]
   [single_agent][planning time: 1000.06][cost: 68.0]
-  [multi_agent][planning_time: 1018.845109834671][cost: 83.0][agents: 4][optimization time 6099.2313578128815]
+  [multi_agent][planning_time: 1013.8846797180175][cost: 81.0][agents: 4][optimization time 11028.6982421875]
   Success: No
 
   [results][termes][05]
   [single_agent][planning time: 1000.17][cost: 136.0]
   [multi_agent][planning_time: 1022.1168752384185][cost: 185.0][agents: 3][optimization time 946.187869310379]
-  Success: No
-
-  [results][termes][13]
-  [single_agent][planning time: 1000.21][cost: 92.0]
-  [multi_agent][planning_time: 126.07752800941466][cost: 92.0][agents: 4][optimization time 1933.0692660808563]
   Success: No
 
   [results][termes][01]
@@ -455,8 +455,8 @@ Domain: barman-enabled
     Average Cost: 56.20
     Average Planning Time: 1001.41 sec
   Multi Agent:
-    Average Cost: 47.00
-    Average Planning Time: 1522.43 sec
+    Average Cost: 46.85
+    Average Planning Time: 1511.24 sec
 
 Domain: blocksworld
   Single Agent:
@@ -479,8 +479,8 @@ Domain: termes
     Average Cost: 80.46
     Average Planning Time: 752.03 sec
   Multi Agent:
-    Average Cost: 91.46
-    Average Planning Time: 706.86 sec
+    Average Cost: 91.31
+    Average Planning Time: 706.47 sec
 
 Domain: tyreworld
   Single Agent:

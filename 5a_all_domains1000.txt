@@ -1,4 +1,97 @@
 Using cached single agent results
+['contains shot7 cocktail2 and all hands are empty.', 'contains shot3 cocktail3 and all hands are empty.', 'contains shot6 cocktail4 and all hands are empty.', 'contains shot8 cocktail5 and all hands are empty.']
+['./experiments_multiagent_help/run2030/barman-enabled/p18_1.pddl', './experiments_multiagent_help/run2030/barman-enabled/p18_2.pddl', './experiments_multiagent_help/run2030/barman-enabled/p18_3.pddl', './experiments_multiagent_help/run2030/barman-enabled/p18_4.pddl']
+agent1
+[info][subgoal_1][barman-enabled] task 18 takes 1000.66 sec, found a plan with cost 11.0
+planner successful
+validating
+validator time 0.01785588264465332
+agent2
+[info][subgoal_2][barman-enabled] task 18 takes 824.28 sec, found a plan with cost 11.0
+planner successful
+validating
+validator time 0.01739668846130371
+agent3
+[info][subgoal_3][barman-enabled] task 18 takes 736.93 sec, found a plan with cost 11.0
+planner successful
+validating
+validator time 0.017653703689575195
+agent4
+[info][subgoal_4][barman-enabled] task 18 takes 1000.63 sec, found a plan with cost 16.0
+planner successful
+validating
+validator time 0.01786327362060547
+[info][multiagent main goal][barman-enabled] task 18 takes 1000.64 sec, found a plan with cost 40.0
+TASK: barman-enabled - 2030 - 18
+77.0 True
+tracing optimal path
+[results][barman-enabled][18]
+[single_agent][planning time: 1000.44][cost: 86.0]
+[multi_agent][planning_time: 4569.465113296509][cost: 77.0][agents: 5][optimization time 6772.103679895401]
+----------------------------------------
+Using cached single agent results
+['contains shot5 cocktail1 and all hands are empty.', 'contains shot2 cocktail2 and all hands are empty.', 'contains shot3 cocktail5 and all hands are empty.', 'contains shot6 cocktail3 and all hands are empty.']
+['./experiments_multiagent_help/run2030/barman-enabled/p19_1.pddl', './experiments_multiagent_help/run2030/barman-enabled/p19_2.pddl', './experiments_multiagent_help/run2030/barman-enabled/p19_3.pddl', './experiments_multiagent_help/run2030/barman-enabled/p19_4.pddl']
+agent1
+[info][subgoal_1][barman-enabled] task 19 takes 1000.71 sec, found a plan with cost 11.0
+planner successful
+validating
+validator time 0.017394542694091797
+agent2
+[info][subgoal_2][barman-enabled] task 19 takes 1000.64 sec, found a plan with cost 11.0
+planner successful
+validating
+validator time 0.013006448745727539
+agent3
+[info][subgoal_3][barman-enabled] task 19 takes 980.99 sec, found a plan with cost 11.0
+planner successful
+validating
+validator time 0.023108959197998047
+agent4
+[info][subgoal_4][barman-enabled] task 19 takes 1000.65 sec, found a plan with cost 15.0
+planner successful
+validating
+validator time 0.01760077476501465
+[info][multiagent main goal][barman-enabled] task 19 takes 1000.62 sec, found a plan with cost 42.0
+TASK: barman-enabled - 2030 - 19
+76.0 True
+tracing optimal path
+[results][barman-enabled][19]
+[single_agent][planning time: 1000.44][cost: 87.0]
+[multi_agent][planning_time: 4988.910139904022][cost: 76.0][agents: 5][optimization time 3594.557192802429]
+----------------------------------------
+Using cached single agent results
+['contains shot3 cocktail1 and all hands are empty.', 'contains shot5 cocktail2 and all hands are empty.', 'contains shot4 cocktail4 and all hands are empty.', 'contains shot6 cocktail5 and all hands are empty.']
+['./experiments_multiagent_help/run2030/barman-enabled/p20_1.pddl', './experiments_multiagent_help/run2030/barman-enabled/p20_2.pddl', './experiments_multiagent_help/run2030/barman-enabled/p20_3.pddl', './experiments_multiagent_help/run2030/barman-enabled/p20_4.pddl']
+agent1
+[info][subgoal_1][barman-enabled] task 20 takes 1000.72 sec, found a plan with cost 11.0
+planner successful
+validating
+validator time 0.020399808883666992
+agent2
+[info][subgoal_2][barman-enabled] task 20 takes 1000.67 sec, found a plan with cost 11.0
+planner successful
+validating
+validator time 0.01819300651550293
+agent3
+[info][subgoal_3][barman-enabled] task 20 takes 705.47 sec, found a plan with cost 11.0
+planner successful
+validating
+validator time 0.014053821563720703
+agent4
+[info][subgoal_4][barman-enabled] task 20 takes 1000.68 sec, found a plan with cost 15.0
+planner successful
+validating
+validator time 0.01941227912902832
+[info][multiagent main goal][barman-enabled] task 20 takes 1000.64 sec, found a plan with cost 41.0
+TASK: barman-enabled - 2030 - 20
+75.0 True
+tracing optimal path
+[results][barman-enabled][20]
+[single_agent][planning time: 1000.4][cost: 86.0]
+[multi_agent][planning_time: 4714.086290531159][cost: 75.0][agents: 5][optimization time 3830.430688858032]
+----------------------------------------
+Using cached single agent results
 ['contains shot3 cocktail6 and all hands are empty.', 'contains shot5 cocktail2 and all hands are empty.', 'contains shot6 cocktail3 and all hands are empty.', 'contains shot4 cocktail4 and all hands are empty.']
 ['./experiments_multiagent_help/run2030/barman-enabled/p16_1.pddl', './experiments_multiagent_help/run2030/barman-enabled/p16_2.pddl', './experiments_multiagent_help/run2030/barman-enabled/p16_3.pddl', './experiments_multiagent_help/run2030/barman-enabled/p16_4.pddl']
 agent1
@@ -1120,6 +1213,34 @@ tracing optimal path
 [multi_agent][planning_time: 1029.2732211589814][cost: 33.0][agents: 5][optimization time 211.15080308914185]
 ----------------------------------------
 Using cached single agent results
+LLM generated no subgoal for agent 4, reducing number of agents
+args.num_agents: 4
+['ball3 should be in room1.', 'ball4 should be in room1.', 'ball1 should be in room2.']
+['./experiments_multiagent_help/run2027/grippers/p17_1.pddl', './experiments_multiagent_help/run2027/grippers/p17_2.pddl', './experiments_multiagent_help/run2027/grippers/p17_3.pddl']
+agent1
+[info][subgoal_1][grippers] task 17 takes 0.4 sec, found a plan with cost 4.0
+planner successful
+validating
+validator time 0.006753444671630859
+agent2
+[info][subgoal_2][grippers] task 17 takes 0.36 sec, found a plan with cost 4.0
+planner successful
+validating
+validator time 0.008237361907958984
+agent3
+[info][subgoal_3][grippers] task 17 takes 0.37 sec, found a plan with cost 3.0
+planner successful
+validating
+validator time 0.008043766021728516
+[info][multiagent main goal][grippers] task 17 takes 992.37 sec, no solution found
+TASK: grippers - 2027 - 17
+4.0 True
+tracing optimal path
+[results][grippers][17]
+[single_agent][planning time: 0.04][cost: 8.0]
+[multi_agent][planning_time: 3.4559174823760985][cost: 4.0][agents: 4][optimization time 25.61698579788208]
+----------------------------------------
+Using cached single agent results
 ['ball3 should be in room1.', 'ball4 should be in room2.', 'ball1 should be in room3.', 'ball5 should be in room1.']
 ['./experiments_multiagent_help/run2026/grippers/p19_1.pddl', './experiments_multiagent_help/run2026/grippers/p19_2.pddl', './experiments_multiagent_help/run2026/grippers/p19_3.pddl', './experiments_multiagent_help/run2026/grippers/p19_4.pddl']
 agent1
@@ -2157,6 +2278,121 @@ tracing optimal path
 [results][tyreworld][14]
 [single_agent][planning time: 1002.43][cost: 156.0]
 [multi_agent][planning_time: 1008.198595495224][cost: 152.0][agents: 5][optimization time 728.8479161262512]
+----------------------------------------
+Using cached single agent results
+['height pos-0-0 2 and all blocks placed', 'height pos-0-1 2 and all blocks placed', 'height pos-2-0 2 and all blocks placed', 'height pos-2-1 3 and all blocks placed']
+['./experiments_multiagent_help/run2032/termes/p12_1.pddl', './experiments_multiagent_help/run2032/termes/p12_2.pddl', './experiments_multiagent_help/run2032/termes/p12_3.pddl', './experiments_multiagent_help/run2032/termes/p12_4.pddl']
+agent1
+[info][subgoal_1][termes] task 12 takes 0.67 sec, found a plan with cost 14.0
+planner successful
+validating
+validator time 0.011202573776245117
+agent2
+[info][subgoal_2][termes] task 12 takes 0.46 sec, found a plan with cost 7.0
+planner successful
+validating
+validator time 0.011811017990112305
+agent3
+[info][subgoal_3][termes] task 12 takes 0.55 sec, found a plan with cost 10.0
+planner successful
+validating
+validator time 0.007649660110473633
+agent4
+[info][subgoal_4][termes] task 12 takes 0.79 sec, found a plan with cost 11.0
+planner successful
+validating
+validator time 0.012706279754638672
+[info][multiagent main goal][termes] task 12 takes 0.78 sec, found a plan with cost 18.0
+TASK: termes - 2032 - 12
+44.0 True
+tracing optimal path
+[results][termes][12]
+[single_agent][planning time: 73.53][cost: 46.0]
+[multi_agent][planning_time: 12.455992698669434][cost: 44.0][agents: 5][optimization time 1096.9973978996277]
+----------------------------------------
+Using cached single agent results
+LLM generated no subgoal for agent 4, reducing number of agents
+args.num_agents: 4
+['height pos-3-0 3', 'height pos-2-2 4', 'height pos-0-1 3']
+['./experiments_multiagent_help/run2032/termes/p13_1.pddl', './experiments_multiagent_help/run2032/termes/p13_2.pddl', './experiments_multiagent_help/run2032/termes/p13_3.pddl']
+agent1
+[info][subgoal_1][termes] task 13 takes 2.18 sec, found a plan with cost 22.0
+planner successful
+validating
+validator time 0.013776779174804688
+agent2
+[info][subgoal_2][termes] task 13 takes 143.06 sec, found a plan with cost 35.0
+planner successful
+validating
+validator time 0.01627063751220703
+agent3
+[info][subgoal_3][termes] task 13 takes 1.63 sec, found a plan with cost 22.0
+planner successful
+validating
+validator time 0.014030218124389648
+[info][multiagent main goal][termes] task 13 takes 5.49 sec, found a plan with cost 24.0
+TASK: termes - 2032 - 13
+92.0 True
+tracing optimal path
+[results][termes][13]
+[single_agent][planning time: 1000.21][cost: 92.0]
+[multi_agent][planning_time: 156.1044875240326][cost: 92.0][agents: 4][optimization time 1766.3139717578888]
+----------------------------------------
+Using cached single agent results
+LLM generated no subgoal for agent 4, reducing number of agents
+args.num_agents: 4
+['height pos-3-0 3 and no unplaced blocks', 'height pos-3-1 3 and no unplaced blocks', 'height pos-3-2 4 and no unplaced blocks']
+['./experiments_multiagent_help/run2032/termes/p14_1.pddl', './experiments_multiagent_help/run2032/termes/p14_2.pddl', './experiments_multiagent_help/run2032/termes/p14_3.pddl']
+agent1
+[info][subgoal_1][termes] task 14 takes 3.85 sec, found a plan with cost 25.0
+planner successful
+validating
+validator time 0.012702703475952148
+agent2
+[info][subgoal_2][termes] task 14 takes 0.8 sec, found a plan with cost 14.0
+planner successful
+validating
+validator time 0.009783029556274414
+agent3
+[info][subgoal_3][termes] task 14 takes 54.38 sec, found a plan with cost 31.0
+planner successful
+validating
+validator time 0.012813329696655273
+[info][multiagent main goal][termes] task 14 takes 598.28 sec, found a plan with cost 48.0
+TASK: termes - 2032 - 14
+101.0 True
+tracing optimal path
+[results][termes][14]
+[single_agent][planning time: 1000.21][cost: 104.0]
+[multi_agent][planning_time: 661.4974816417694][cost: 101.0][agents: 4][optimization time 18252.01144218445]
+----------------------------------------
+Using cached single agent results
+LLM generated no subgoal for agent 4, reducing number of agents
+args.num_agents: 4
+['height pos-3-0 3', 'height pos-3-2 2', 'height pos-0-2 5']
+['./experiments_multiagent_help/run2032/termes/p15_1.pddl', './experiments_multiagent_help/run2032/termes/p15_2.pddl', './experiments_multiagent_help/run2032/termes/p15_3.pddl']
+agent1
+[info][subgoal_1][termes] task 15 takes 2.44 sec, found a plan with cost 22.0
+planner successful
+validating
+validator time 0.014482498168945312
+agent2
+[info][subgoal_2][termes] task 15 takes 0.49 sec, found a plan with cost 8.0
+planner successful
+validating
+validator time 0.009135961532592773
+agent3
+[info][subgoal_3][termes] task 15 takes 1000.57 sec, found a plan with cost 77.0
+planner successful
+validating
+validator time 0.02084636688232422
+[info][multiagent main goal][termes] task 15 takes 1000.41 sec, found a plan with cost 48.0
+TASK: termes - 2032 - 15
+148.0 True
+tracing optimal path
+[results][termes][15]
+[single_agent][planning time: 1000.16][cost: 146.0]
+[multi_agent][planning_time: 2011.190954837799][cost: 148.0][agents: 4][optimization time 3390.509532213211]
 ----------------------------------------
 Using cached single agent results
 ['The height at pos-2-2 is 2 and all blocks are placed.', 'The height at pos-1-2 is 2 and all blocks are placed.', 'The height at pos-0-1 is 2 and all blocks are placed.', 'The height at pos-1-0 is 2 and all blocks are placed.']
