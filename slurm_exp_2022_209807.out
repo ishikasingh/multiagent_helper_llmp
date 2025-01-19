@@ -1,0 +1,10 @@
+Running experiment: Domain=termes, Time Limit=1000, Task ID=14, Agents=4
+Running experiment: Domain=termes, Time Limit=1000, Task ID=15, Agents=4
+Running experiment: Domain=termes, Time Limit=1000, Task ID=16, Agents=4
+Running experiment: Domain=termes, Time Limit=1000, Task ID=17, Agents=4
+Running experiment: Domain=termes, Time Limit=1000, Task ID=18, Agents=4
+Running experiment: Domain=termes, Time Limit=1000, Task ID=19, Agents=4
+Running experiment: Domain=termes, Time Limit=1000, Task ID=20, Agents=4
+All experiments completed. Results are in 1_17_4a_termes.txt
+Analysis complete. Results written to 1_17_4a_termes_summary.txt
+Summary file created: 1_17_4a_termes_summary.txt
