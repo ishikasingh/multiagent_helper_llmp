@@ -10,6 +10,7 @@ import copy
 import modules.planner as planner
 import modules.utils as utils
 import modules.generator as generator
+import re
 
 def get_helper_subgoal_without_plan(expt_path, args, log_file, agent_text):
 
@@ -93,7 +94,7 @@ def get_helper_subgoal_without_plan(expt_path, args, log_file, agent_text):
     else:
         current_prompt_text = '\n\nNow we have another new problem defined in this domain for which we don\'t have access to the single agent plan:\n'
     current_prompt_text += f'{current_scenario.strip()}\n\n'
-    current_prompt_text += f'Here is the number of, and reasoning for, agents: {agent_text}\n\n'
+    current_prompt_text += f'Here is the number of, and reasoning for, agents: {agent_text}\n'
     current_prompt_text += f'Return only one clearly stated subgoal condition for one and only one agent without explanation or steps. A possible subgoal looking at how the domain works based on the plan example provided for another task in this domain could be - \n'
 
     prompt_text = prompt_text + current_prompt_text
@@ -175,31 +176,33 @@ def choose_n_agents(expt_path, args, log_file, max_agents):
     Each agent will be assigned a single clear goal that they can work towards independently. The planner will generate individual PDDL plans for each agent's goal.
 
     Consider that while multiple agents can work in parallel, they may interfere with and wait for each other if their goals are not truly independent. All agents will start at the same time.
+
+    Important: Include your final number recommendation in square brackets at the end, like this: [3]
     '''
     
     prompt_text = '''Example domain scenario: You have 3 blocks. b2 is on top of b3. b3 is on top of b1. b1 is on the table. b2 is clear. Your arm is empty. 
     Your goal is to move the blocks. b3 should be on top of b2. b1 should be on top of b3.  \n'''
 
     prompt_text += '''In this example, the optimal number of agents is 3. Anymore has no effect or increases aggregated plan length as only one agent can work on stacking the
-     blocks at a time. 3 agents allows for an active agent at timesteps where 2 agents are picking up or putting down blocks. '''
+     blocks at a time. 3 agents allows for an active agent at timesteps where 2 agents are picking up or putting down blocks. [3]'''
     
     scenario_filename =  f"./domains/{args.domain}/p{args.task_id}.nl"
     with open(scenario_filename, 'r') as f:
         current_scenario = f.read()
     
-    prompt_text += f'''The task is: \n {current_scenario.strip()}. \n Return the optimal number of agents, greater than or equal to 1. Be sure to clearly explain your reasoning and discuss how you consder critical paths in the main goal. Remember, every agent has a SINGULAR goal. Do not propose a general role for these agents but rather a singular thing they can accomplish to reduce execution length. \n'''
+    prompt_text += f'''The task is: \n {current_scenario.strip()}. \n Return the optimal number of agents, greater than or equal to 1. Be sure to clearly explain your reasoning and discuss how you consider critical paths in the main goal. Remember, every agent has a SINGULAR goal. Do not propose a general role for these agents but rather a singular thing they can accomplish to reduce execution length. End your response with the number in square brackets, like [3]. \n'''
 
     start = time.time()
 
     try:
         num_agents_text = generator.query(prompt_text, system_text=system_text, model=args.model)
-        num_agents = generator.query(f"Find the optimal number of agents proposed in this existing plan: {num_agents_text}. Respond with only a single number.", system_text=system_text, model=args.model)
-        if num_agents.isdigit():
-            num_agents = int(num_agents)
+        match = re.search(r'\[(\d+)\]', num_agents_text)
+        if match:
+            num_agents = int(match.group(1))
             if num_agents > max_agents or num_agents < 1:
                 raise ValueError("invalid number range")
         else:
-            raise ValueError("Invalid output")
+            raise ValueError("No bracketed number found")
     except ValueError as e:
         print(f"Error: {e}")
         num_agents = max_agents
@@ -278,6 +281,8 @@ if __name__ == "__main__":
         if not args.manual:
             max_agents = 5  # Set a reasonable maximum number of agents
             num_agents_text, optimal_agents, choose_time = choose_n_agents(path, args, log_file, max_agents)
+            if optimal_agents == 0:
+                optimal_agents = 1
             args.num_agents = optimal_agents
             with open(log_file, 'a+') as f:
                 f.write(f"\nAgent Selection Analysis:\n{num_agents_text}\nChosen number of agents: {optimal_agents}\nSelection time: {choose_time}s\n")
