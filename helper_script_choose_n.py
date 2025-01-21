@@ -94,7 +94,7 @@ def get_helper_subgoal_without_plan(expt_path, args, log_file, agent_text):
     else:
         current_prompt_text = '\n\nNow we have another new problem defined in this domain for which we don\'t have access to the single agent plan:\n'
     current_prompt_text += f'{current_scenario.strip()}\n\n'
-    current_prompt_text += f'Here is the number of, and reasoning for, agents: {agent_text}\n'
+    current_prompt_text += f'Here is the number of, and reasoning for, agents: {agent_text}. THESE MAY CONTAIN SUBGOALS, BUT WILL NOT BE CONSIDERED. You must either restate them or generate a new subgoal based off the reasoning.\n'
     current_prompt_text += f'Return only one clearly stated subgoal condition for one and only one agent without explanation or steps. A possible subgoal looking at how the domain works based on the plan example provided for another task in this domain could be - \n'
 
     prompt_text = prompt_text + current_prompt_text
@@ -108,6 +108,7 @@ def get_helper_subgoal_without_plan(expt_path, args, log_file, agent_text):
     
     for i in range(1, args.num_agents):
         prompt_text += f"\n agent{i} subgoal:"
+        # print(f"querying for subgoal {i}")
         helper_subgoal = generator.query(prompt_text, system_text=system_text, model=args.model)
         prompt_text += helper_subgoal
         
@@ -199,6 +200,7 @@ def choose_n_agents(expt_path, args, log_file, max_agents):
         match = re.search(r'\[(\d+)\]', num_agents_text)
         if match:
             num_agents = int(match.group(1))
+            print(f"num_agents extracted from regex: {num_agents}")
             if num_agents > max_agents or num_agents < 1:
                 raise ValueError("invalid number range")
         else:
@@ -284,6 +286,7 @@ if __name__ == "__main__":
             if optimal_agents == 0:
                 optimal_agents = 1
             args.num_agents = optimal_agents
+            print(f"args.num_agents: {args.num_agents}")
             with open(log_file, 'a+') as f:
                 f.write(f"\nAgent Selection Analysis:\n{num_agents_text}\nChosen number of agents: {optimal_agents}\nSelection time: {choose_time}s\n")
 
