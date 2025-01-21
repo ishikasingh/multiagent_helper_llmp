@@ -106,6 +106,7 @@ def get_helper_subgoal_without_plan(expt_path, args, log_file, agent_text):
     all_subgoals = []
     valid_subgoals = 0
     
+    helper_subgoal = "none"
     for i in range(1, args.num_agents):
         prompt_text += f"\n agent{i} subgoal:"
         # print(f"querying for subgoal {i}")
@@ -329,7 +330,20 @@ if __name__ == "__main__":
 
         except Exception as e:
             print("LLM generation failed, ", e)
-        
+            
+        # If num_agents was reduced to 1, print single agent results and skip remaining processing
+        if args.num_agents == 1:
+            print("Number of agents reduced to 1, using single agent results")
+            
+            # Print results including LLM generation time overhead
+            print(f"[results][{args.domain}][{args.task_id}]")
+            print(f"[single_agent][planning time: {singleagent_planning_time[0]}][cost: {singleagent_cost[0]}]")
+            print(f"[multi_agent][planning_time: {singleagent_planning_time[0] + t1 + t2}][cost: {singleagent_cost[0]}][agents: 1][optimization time 0]")
+            
+            with open(log_file, 'a+') as f:
+                f.write("\nReduced to single agent, using cached results")
+            continue
+            
         # handle all subgoals and init conditions
         # edited init starts at  0 for original, then 1 for post-first subgoal, etc ...
         # subgoal 1 used original pddl domain, then subgoal 2 uses edited_init_1, 3 uses edited_init_2, etc ...
