@@ -94,7 +94,7 @@ def get_helper_subgoal_without_plan(expt_path, args, log_file, agent_text):
     else:
         current_prompt_text = '\n\nNow we have another new problem defined in this domain for which we don\'t have access to the single agent plan:\n'
     current_prompt_text += f'{current_scenario.strip()}\n\n'
-    current_prompt_text += f'Here is the number of, and reasoning for, agents: {agent_text}. THESE MAY CONTAIN SUBGOALS, BUT WILL NOT BE CONSIDERED. You must either restate them or generate a new subgoal based off the reasoning.\n'
+    current_prompt_text += f'Here is the number of, and REASONING for, agents: {agent_text}. THIS REASONING MAY CONTAIN SUBGOALS, BUT THESE WILL NOT BE CONSIDERED. Your task is to either restate them or generate a new subgoal based off the reasoning so we can generate PDDL plans based off these goals.\n'
     current_prompt_text += f'Return only one clearly stated subgoal condition for one and only one agent without explanation or steps. A possible subgoal looking at how the domain works based on the plan example provided for another task in this domain could be - \n'
 
     prompt_text = prompt_text + current_prompt_text
@@ -177,16 +177,18 @@ def choose_n_agents(expt_path, args, log_file, max_agents):
 
     Each agent will be assigned a single clear goal that they can work towards independently. The planner will generate individual PDDL plans for each agent's goal.
 
-    Consider that while multiple agents can work in parallel, they may interfere with and wait for each other if their goals are not truly independent. All agents will start at the same time.
+    Consider that while multiple agents can work in parallel, they may interfere with and wait for each other if their goals are not truly independent. This behavior will be punished as the overall plan length will increase. We want to minimize plan length, as well as planning length. In most cases, planning length increases with more agents when the subgoals are not atomic.
+    
+    All agents will start at the same time. Do NOT pay attention to whether there is one robot in the domain. We are capable of scaling to multiple robots or agents, so do not let this constrain your decisions.
 
-    Important: Include your final number recommendation in square brackets at the end, like this: [3]
+    Important: Include your final number recommendation in square brackets at the end, like this: [2]
     '''
     
     prompt_text = '''Example domain scenario: You have 3 blocks. b2 is on top of b3. b3 is on top of b1. b1 is on the table. b2 is clear. Your arm is empty. 
     Your goal is to move the blocks. b3 should be on top of b2. b1 should be on top of b3.  \n'''
 
-    prompt_text += '''In this example, the optimal number of agents is 3. Anymore has no effect or increases aggregated plan length as only one agent can work on stacking the
-     blocks at a time. 3 agents allows for an active agent at timesteps where 2 agents are picking up or putting down blocks. [3]'''
+    prompt_text += '''In this example, the optimal number of agents is 2. Anymore has no effect or increases aggregated plan length as only one agent can work on stacking the
+     blocks at a time. The characteristics of blocksworlds domain mean that only one block can be stacked at a time to achieve a final goal. More agents will only wait for actions to finish, increasing the overall plan length. [2]'''
     
     scenario_filename =  f"./domains/{args.domain}/p{args.task_id}.nl"
     with open(scenario_filename, 'r') as f:

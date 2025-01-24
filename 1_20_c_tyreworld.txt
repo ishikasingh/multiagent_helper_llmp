@@ -1,0 +1,18 @@
+num_agents extracted from regex: 2
+args.num_agents: 2
+Using cached single agent results
+['inflate the intact tyre.']
+['./experiments_multiagent_help/run3002/tyreworld/p01_1.pddl']
+agent1
+[info][subgoal_1][tyreworld] task 01 takes 0.08 sec, found a plan with cost 1.0
+planner successful
+validating
+validator time 0.005019426345825195
+[info][multiagent main goal][tyreworld] task 01 takes 0.09 sec, found a plan with cost 12.0
+TASK: tyreworld - 3002 - 01
+12 True
+tracing optimal path
+[results][tyreworld][01]
+[single_agent][planning time: 0.11][cost: 13.0]
+[multi_agent][planning_time: 1.642021818161011][cost: 12.0][agents: 2][optimization time 6.972559452056885]
+----------------------------------------

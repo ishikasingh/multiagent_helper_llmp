@@ -125,7 +125,7 @@ def get_pddl_goal(expt_path, args, helper_subgoal, log_file):
     pddl_problem_filename_arr = []
     
     pddl_problem_filename = f""
-    system_text = 'I want you to solve planning problems. Provide me with the PDDL goal that describes the new planning goal directly without further explanations. Make sure to provide only non-conflicting, necessary, and final goal conditions mentioned in the given goal.'
+    system_text = 'I want you to solve planning problems. Provide me with the PDDL goal that describes the new planning goal directly without further explanations— using only the terminology or predicates defined in the domain, or logical operators appropriate to PDDL. Make sure to provide only non-conflicting, necessary, and final goal conditions mentioned in the given goal.'
 
     start=time.time()
 

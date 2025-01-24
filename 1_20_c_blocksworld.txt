@@ -1,0 +1,455 @@
+num_agents extracted from regex: 1
+args.num_agents: 1
+Using cached single agent results
+[]
+[]
+Number of agents reduced to 1, using single agent results
+[results][blocksworld][01]
+[single_agent][planning time: 0.06][cost: 6.0]
+[multi_agent][planning_time: 0.06000143051147461][cost: 6.0][agents: 1][optimization time 0]
+----------------------------------------
+num_agents extracted from regex: 1
+args.num_agents: 1
+Using cached single agent results
+[]
+[]
+Number of agents reduced to 1, using single agent results
+[results][blocksworld][02]
+[single_agent][planning time: 0.07][cost: 6.0]
+[multi_agent][planning_time: 0.07000190734863282][cost: 6.0][agents: 1][optimization time 0]
+----------------------------------------
+num_agents extracted from regex: 2
+args.num_agents: 2
+Using cached single agent results
+['b2 is on top of b1']
+['./experiments_multiagent_help/run3001/blocksworld/p03_1.pddl']
+agent1
+[info][subgoal_1][blocksworld] task 03 takes 0.07 sec, found a plan with cost 6.0
+planner successful
+validating
+validator time 0.0018846988677978516
+[info][multiagent main goal][blocksworld] task 03 takes 0.07 sec, found a plan with cost 2.0
+TASK: blocksworld - 3001 - 03
+6.0 True
+tracing optimal path
+[results][blocksworld][03]
+[single_agent][planning time: 0.06][cost: 6.0]
+[multi_agent][planning_time: 3.3261655712127682][cost: 6.0][agents: 2][optimization time 2.188835620880127]
+----------------------------------------
+num_agents extracted from regex: 3
+args.num_agents: 3
+Using cached single agent results
+['b1 is on the table.', 'b4 is on the table.']
+['./experiments_multiagent_help/run3001/blocksworld/p04_1.pddl', './experiments_multiagent_help/run3001/blocksworld/p04_2.pddl']
+agent1
+[info][subgoal_1][blocksworld] task 04 takes 0.08 sec, found a plan with cost 4.0
+planner successful
+validating
+validator time 0.0036695003509521484
+agent2
+[info][subgoal_2][blocksworld] task 04 takes 0.07 sec, found a plan with cost 2.0
+planner successful
+validating
+validator time 0.0025033950805664062
+[info][multiagent main goal][blocksworld] task 04 takes 0.08 sec, found a plan with cost 6.0
+TASK: blocksworld - 3001 - 04
+10.0 True
+tracing optimal path
+[results][blocksworld][04]
+[single_agent][planning time: 0.06][cost: 12.0]
+[multi_agent][planning_time: 2.2815196323394775][cost: 10.0][agents: 3][optimization time 7.66739296913147]
+----------------------------------------
+num_agents extracted from regex: 3
+args.num_agents: 3
+Using cached single agent results
+['b4 is on the table.', 'b2 is on the table.']
+['./experiments_multiagent_help/run3001/blocksworld/p05_1.pddl', './experiments_multiagent_help/run3001/blocksworld/p05_2.pddl']
+agent1
+[info][subgoal_1][blocksworld] task 05 takes 0.07 sec, found a plan with cost 2.0
+planner successful
+validating
+validator time 0.0027146339416503906
+agent2
+[info][subgoal_2][blocksworld] task 05 takes 0.07 sec, found a plan with cost 4.0
+planner successful
+validating
+validator time 0.0023665428161621094
+[info][multiagent main goal][blocksworld] task 05 takes 0.09 sec, found a plan with cost 2.0
+TASK: blocksworld - 3001 - 05
+5.0 True
+tracing optimal path
+[results][blocksworld][05]
+[single_agent][planning time: 0.06][cost: 8.0]
+[multi_agent][planning_time: 3.2701647090911865][cost: 5.0][agents: 3][optimization time 9.527135133743286]
+----------------------------------------
+num_agents extracted from regex: 3
+args.num_agents: 3
+Using cached single agent results
+['b4 is on the table.', 'b3 is on the table.']
+['./experiments_multiagent_help/run3001/blocksworld/p06_1.pddl', './experiments_multiagent_help/run3001/blocksworld/p06_2.pddl']
+agent1
+[info][subgoal_1][blocksworld] task 06 takes 0.07 sec, found a plan with cost 6.0
+planner successful
+validating
+validator time 0.009267091751098633
+agent2
+[info][subgoal_2][blocksworld] task 06 takes 999.83 sec, no solution found
+planner successful
+validating
+validator time 0.005591630935668945
+[info][multiagent main goal][blocksworld] task 06 takes 0.1 sec, found a plan with cost 8.0
+TASK: blocksworld - 3001 - 06
+13.0 True
+tracing optimal path
+[results][blocksworld][06]
+[single_agent][planning time: 0.08][cost: 12.0]
+[multi_agent][planning_time: 2.4093705844879154][cost: 13.0][agents: 3][optimization time 11.306064367294312]
+----------------------------------------
+num_agents extracted from regex: 3
+args.num_agents: 3
+Using cached single agent results
+['b5 is on the table and b2 is on the table.', 'b3 is on top of b5.']
+['./experiments_multiagent_help/run3001/blocksworld/p07_1.pddl', './experiments_multiagent_help/run3001/blocksworld/p07_2.pddl']
+agent1
+[info][subgoal_1][blocksworld] task 07 takes 0.08 sec, found a plan with cost 4.0
+planner successful
+validating
+validator time 0.002142190933227539
+agent2
+[info][subgoal_2][blocksworld] task 07 takes 0.08 sec, found a plan with cost 2.0
+planner successful
+validating
+validator time 0.0018391609191894531
+[info][multiagent main goal][blocksworld] task 07 takes 0.07 sec, found a plan with cost 2.0
+TASK: blocksworld - 3001 - 07
+6 True
+tracing optimal path
+[results][blocksworld][07]
+[single_agent][planning time: 0.08][cost: 8.0]
+[multi_agent][planning_time: 2.9412159729003906][cost: 6.0][agents: 3][optimization time 4.005162000656128]
+----------------------------------------
+num_agents extracted from regex: 3
+args.num_agents: 3
+Using cached single agent results
+['b6 is on top of b2 and the arm is empty.', 'b1 is on top of b6 and the arm is empty.']
+['./experiments_multiagent_help/run3001/blocksworld/p08_1.pddl', './experiments_multiagent_help/run3001/blocksworld/p08_2.pddl']
+agent1
+[info][subgoal_1][blocksworld] task 08 takes 0.09 sec, found a plan with cost 12.0
+planner successful
+validating
+validator time 0.0026254653930664062
+agent2
+[info][subgoal_2][blocksworld] task 08 takes 0.08 sec, found a plan with cost 2.0
+planner successful
+validating
+validator time 0.0018832683563232422
+[info][multiagent main goal][blocksworld] task 08 takes 0.07 sec, found a plan with cost 2.0
+TASK: blocksworld - 3001 - 08
+13.0 True
+tracing optimal path
+[results][blocksworld][08]
+[single_agent][planning time: 0.1][cost: 14.0]
+[multi_agent][planning_time: 5.964780797958374][cost: 13.0][agents: 3][optimization time 6.731936454772949]
+----------------------------------------
+num_agents extracted from regex: 3
+args.num_agents: 3
+Using cached single agent results
+['b1 on top of b2 and b2 on top of b6', 'b7 on top of b4']
+['./experiments_multiagent_help/run3001/blocksworld/p09_1.pddl', './experiments_multiagent_help/run3001/blocksworld/p09_2.pddl']
+agent1
+[info][subgoal_1][blocksworld] task 09 takes 0.21 sec, found a plan with cost 10.0
+planner successful
+validating
+validator time 0.0021758079528808594
+agent2
+[info][subgoal_2][blocksworld] task 09 takes 0.08 sec, found a plan with cost 2.0
+planner successful
+validating
+validator time 0.0020694732666015625
+[info][multiagent main goal][blocksworld] task 09 takes 1.43 sec, found a plan with cost 14.0
+TASK: blocksworld - 3001 - 09
+21.0 True
+tracing optimal path
+[results][blocksworld][09]
+[single_agent][planning time: 0.97][cost: 14.0]
+[multi_agent][planning_time: 3.8532087516784665][cost: 21.0][agents: 3][optimization time 20.148967266082764]
+----------------------------------------
+num_agents extracted from regex: 2
+args.num_agents: 2
+Using cached single agent results
+['b5 on b6']
+['./experiments_multiagent_help/run3001/blocksworld/p10_1.pddl']
+agent1
+[info][subgoal_1][blocksworld] task 10 takes 0.08 sec, found a plan with cost 4.0
+planner successful
+validating
+validator time 0.002094745635986328
+[info][multiagent main goal][blocksworld] task 10 takes 1.63 sec, found a plan with cost 18.0
+TASK: blocksworld - 3001 - 10
+22 True
+tracing optimal path
+[results][blocksworld][10]
+[single_agent][planning time: 0.99][cost: 18.0]
+[multi_agent][planning_time: 2.996463499069214][cost: 22.0][agents: 2][optimization time 2.025749921798706]
+----------------------------------------
+num_agents extracted from regex: 3
+args.num_agents: 3
+Using cached single agent results
+['b8 should be on top of b7 and b1 should be on top of b8.', 'b3 should be on top of b5.']
+['./experiments_multiagent_help/run3001/blocksworld/p11_1.pddl', './experiments_multiagent_help/run3001/blocksworld/p11_2.pddl']
+agent1
+[info][subgoal_1][blocksworld] task 11 takes 1.24 sec, found a plan with cost 18.0
+planner successful
+validating
+validator time 0.002655029296875
+agent2
+[info][subgoal_2][blocksworld] task 11 takes 0.08 sec, found a plan with cost 2.0
+planner successful
+validating
+validator time 0.002126932144165039
+[info][multiagent main goal][blocksworld] task 11 takes 0.09 sec, found a plan with cost 4.0
+TASK: blocksworld - 3001 - 11
+19.0 True
+tracing optimal path
+[results][blocksworld][11]
+[single_agent][planning time: 9.69][cost: 22.0]
+[multi_agent][planning_time: 8.618061456680298][cost: 19.0][agents: 3][optimization time 17.919376373291016]
+----------------------------------------
+num_agents extracted from regex: 3
+args.num_agents: 3
+Using cached single agent results
+['b1 is on top of b3 and b7 is on top of b1.', 'b2 is on top of b8 and b3 is on top of b2.']
+['./experiments_multiagent_help/run3001/blocksworld/p12_1.pddl', './experiments_multiagent_help/run3001/blocksworld/p12_2.pddl']
+agent1
+[info][subgoal_1][blocksworld] task 12 takes 0.11 sec, found a plan with cost 8.0
+planner successful
+validating
+validator time 0.014061212539672852
+agent2
+[info][subgoal_2][blocksworld] task 12 takes 0.25 sec, found a plan with cost 8.0
+planner successful
+validating
+validator time 0.01238870620727539
+[info][multiagent main goal][blocksworld] task 12 takes 3.14 sec, found a plan with cost 12.0
+TASK: blocksworld - 3001 - 12
+27.0 True
+tracing optimal path
+[results][blocksworld][12]
+[single_agent][planning time: 12.21][cost: 20.0]
+[multi_agent][planning_time: 7.037874221801758][cost: 27.0][agents: 3][optimization time 25.77147078514099]
+----------------------------------------
+num_agents extracted from regex: 4
+args.num_agents: 4
+Using cached single agent results
+['b9 should be on top of b2 and all hands are empty.', 'b5 should be on top of b3 and all hands are empty.', 'b6 should be on top of b4 and all hands are empty.']
+['./experiments_multiagent_help/run3001/blocksworld/p13_1.pddl', './experiments_multiagent_help/run3001/blocksworld/p13_2.pddl', './experiments_multiagent_help/run3001/blocksworld/p13_3.pddl']
+agent1
+[info][subgoal_1][blocksworld] task 13 takes 0.18 sec, found a plan with cost 10.0
+planner successful
+validating
+validator time 0.002378702163696289
+agent2
+[info][subgoal_2][blocksworld] task 13 takes 0.1 sec, found a plan with cost 6.0
+planner successful
+validating
+validator time 0.0024340152740478516
+agent3
+[info][subgoal_3][blocksworld] task 13 takes 0.43 sec, found a plan with cost 8.0
+planner successful
+validating
+validator time 0.0020437240600585938
+[info][multiagent main goal][blocksworld] task 13 takes 79.73 sec, found a plan with cost 16.0
+TASK: blocksworld - 3001 - 13
+37.0 True
+tracing optimal path
+[results][blocksworld][13]
+[single_agent][planning time: 146.4][cost: 26.0]
+[multi_agent][planning_time: 85.23530787467956][cost: 37.0][agents: 4][optimization time 11.850653648376465]
+----------------------------------------
+num_agents extracted from regex: 3
+args.num_agents: 3
+Using cached single agent results
+['b3 is on top of b5 and b5 is on top of b6.', 'b1 is on top of b2 and b2 is on top of b7 and b7 is on top of b8 and b8 is on top of b3.']
+['./experiments_multiagent_help/run3001/blocksworld/p14_1.pddl', './experiments_multiagent_help/run3001/blocksworld/p14_2.pddl']
+agent1
+[info][subgoal_1][blocksworld] task 14 takes 0.13 sec, found a plan with cost 8.0
+planner successful
+validating
+validator time 0.002053976058959961
+agent2
+[info][subgoal_2][blocksworld] task 14 takes 0.62 sec, found a plan with cost 10.0
+planner successful
+validating
+validator time 0.0024945735931396484
+[info][multiagent main goal][blocksworld] task 14 takes 0.08 sec, found a plan with cost 4.0
+TASK: blocksworld - 3001 - 14
+20.0 True
+tracing optimal path
+[results][blocksworld][14]
+[single_agent][planning time: 71.57][cost: 22.0]
+[multi_agent][planning_time: 4.799034194946289][cost: 20.0][agents: 3][optimization time 91.85229420661926]
+----------------------------------------
+num_agents extracted from regex: 4
+args.num_agents: 4
+Using cached single agent results
+['b2 on b1 and b8 on b2', 'b3 on b10 and b10 on b9', 'b4 on b7 and b9 on b4']
+['./experiments_multiagent_help/run3001/blocksworld/p15_1.pddl', './experiments_multiagent_help/run3001/blocksworld/p15_2.pddl', './experiments_multiagent_help/run3001/blocksworld/p15_3.pddl']
+agent1
+[info][subgoal_1][blocksworld] task 15 takes 7.71 sec, found a plan with cost 20.0
+planner successful
+validating
+validator time 0.0026907920837402344
+agent2
+[info][subgoal_2][blocksworld] task 15 takes 0.1 sec, found a plan with cost 4.0
+planner successful
+validating
+validator time 0.0023839473724365234
+agent3
+[info][subgoal_3][blocksworld] task 15 takes 0.36 sec, found a plan with cost 8.0
+planner successful
+validating
+validator time 0.002185344696044922
+[info][multiagent main goal][blocksworld] task 15 takes 0.13 sec, found a plan with cost 6.0
+TASK: blocksworld - 3001 - 15
+32.0 True
+tracing optimal path
+[results][blocksworld][15]
+[single_agent][planning time: 222.96][cost: 26.0]
+[multi_agent][planning_time: 14.49539213180542][cost: 32.0][agents: 4][optimization time 613.2354967594147]
+----------------------------------------
+num_agents extracted from regex: 5
+args.num_agents: 5
+Using cached single agent results
+['b1 is on top of b5 and the arm is empty.', 'b2 is on top of b10 and the arm is empty.', 'b5 is on top of b3 and the arm is empty.', 'b7 is on top of b4 and the arm is empty.']
+['./experiments_multiagent_help/run3001/blocksworld/p16_1.pddl', './experiments_multiagent_help/run3001/blocksworld/p16_2.pddl', './experiments_multiagent_help/run3001/blocksworld/p16_3.pddl', './experiments_multiagent_help/run3001/blocksworld/p16_4.pddl']
+agent1
+[info][subgoal_1][blocksworld] task 16 takes 0.09 sec, found a plan with cost 4.0
+planner successful
+validating
+validator time 0.0025327205657958984
+agent2
+[info][subgoal_2][blocksworld] task 16 takes 1.58 sec, found a plan with cost 16.0
+planner successful
+validating
+validator time 0.002622365951538086
+agent3
+[info][subgoal_3][blocksworld] task 16 takes 0.08 sec, found a plan with cost 2.0
+planner successful
+validating
+validator time 0.002102375030517578
+agent4
+[info][subgoal_4][blocksworld] task 16 takes 0.18 sec, found a plan with cost 2.0
+planner successful
+validating
+validator time 0.0020444393157958984
+[info][multiagent main goal][blocksworld] task 16 takes 127.05 sec, found a plan with cost 14.0
+TASK: blocksworld - 3001 - 16
+33.0 True
+tracing optimal path
+[results][blocksworld][16]
+[single_agent][planning time: 983.49][cost: 28.0]
+[multi_agent][planning_time: 133.5519745159149][cost: 33.0][agents: 5][optimization time 387.8890552520752]
+----------------------------------------
+num_agents extracted from regex: 6
+Error: invalid number range
+args.num_agents: 5
+Using cached single agent results
+['b2 is on top of b7 and the arm is empty.', 'b5 is on top of b4 and the arm is empty.', 'b7 is on top of b3 and the arm is empty.', 'b9 is on top of b5 and the arm is empty.']
+['./experiments_multiagent_help/run3001/blocksworld/p17_1.pddl', './experiments_multiagent_help/run3001/blocksworld/p17_2.pddl', './experiments_multiagent_help/run3001/blocksworld/p17_3.pddl', './experiments_multiagent_help/run3001/blocksworld/p17_4.pddl']
+agent1
+[info][subgoal_1][blocksworld] task 17 takes 0.29 sec, found a plan with cost 10.0
+planner successful
+validating
+validator time 0.002227306365966797
+agent2
+[info][subgoal_2][blocksworld] task 17 takes 0.09 sec, found a plan with cost 2.0
+planner successful
+validating
+validator time 0.0025784969329833984
+agent3
+[info][subgoal_3][blocksworld] task 17 takes 0.09 sec, found a plan with cost 4.0
+planner successful
+validating
+validator time 0.0023488998413085938
+agent4
+[info][subgoal_4][blocksworld] task 17 takes 0.09 sec, found a plan with cost 2.0
+planner successful
+validating
+validator time 0.002135038375854492
+[info][multiagent main goal][blocksworld] task 17 takes 94.84 sec, found a plan with cost 12.0
+TASK: blocksworld - 3001 - 17
+26.0 True
+tracing optimal path
+[results][blocksworld][17]
+[single_agent][planning time: 1000.34][cost: 22.0]
+[multi_agent][planning_time: 100.80935802459717][cost: 26.0][agents: 5][optimization time 64.0035936832428]
+----------------------------------------
+num_agents extracted from regex: 3
+args.num_agents: 3
+Using cached single agent results
+['b1 is on top of b4 and all hands are empty.', 'b3 is on top of b7 and all hands are empty.']
+['./experiments_multiagent_help/run3001/blocksworld/p18_1.pddl', './experiments_multiagent_help/run3001/blocksworld/p18_2.pddl']
+agent1
+[info][subgoal_1][blocksworld] task 18 takes 0.57 sec, found a plan with cost 14.0
+planner successful
+validating
+validator time 0.0025146007537841797
+agent2
+[info][subgoal_2][blocksworld] task 18 takes 0.09 sec, found a plan with cost 2.0
+planner successful
+validating
+validator time 0.0021300315856933594
+[info][multiagent main goal][blocksworld] task 18 takes 1000.55 sec, found a plan with cost 24.0
+TASK: blocksworld - 3001 - 18
+37.0 True
+tracing optimal path
+[results][blocksworld][18]
+[single_agent][planning time: 969.95][cost: 30.0]
+[multi_agent][planning_time: 1004.1858265018462][cost: 37.0][agents: 3][optimization time 28.264004468917847]
+----------------------------------------
+num_agents extracted from regex: 3
+args.num_agents: 3
+Using cached single agent results
+['b5 on b10 and b10 on b8', 'b12 on b11 and b11 on b7']
+['./experiments_multiagent_help/run3001/blocksworld/p19_1.pddl', './experiments_multiagent_help/run3001/blocksworld/p19_2.pddl']
+agent1
+[info][subgoal_1][blocksworld] task 19 takes 14.12 sec, found a plan with cost 12.0
+planner successful
+validating
+validator time 0.011531591415405273
+agent2
+[info][subgoal_2][blocksworld] task 19 takes 0.33 sec, found a plan with cost 6.0
+planner successful
+validating
+validator time 0.018484115600585938
+[info][multiagent main goal][blocksworld] task 19 takes 1000.52 sec, found a plan with cost 24.0
+TASK: blocksworld - 3001 - 19
+38.0 True
+tracing optimal path
+[results][blocksworld][19]
+[single_agent][planning time: 958.85][cost: 24.0]
+[multi_agent][planning_time: 1020.3261420440674][cost: 38.0][agents: 3][optimization time 58.24801230430603]
+----------------------------------------
+num_agents extracted from regex: 3
+args.num_agents: 3
+Using cached single agent results
+['b1 is on top of b6.', 'b6 is on top of b2.']
+['./experiments_multiagent_help/run3001/blocksworld/p20_1.pddl', './experiments_multiagent_help/run3001/blocksworld/p20_2.pddl']
+agent1
+[info][subgoal_1][blocksworld] task 20 takes 2.66 sec, found a plan with cost 12.0
+planner successful
+validating
+validator time 0.002826690673828125
+agent2
+[info][subgoal_2][blocksworld] task 20 takes 0.85 sec, found a plan with cost 6.0
+planner successful
+validating
+validator time 0.002127408981323242
+[info][multiagent main goal][blocksworld] task 20 takes 1000.4 sec, found a plan with cost 14.0
+TASK: blocksworld - 3001 - 20
+31.0 True
+tracing optimal path
+[results][blocksworld][20]
+[single_agent][planning time: 1001.37][cost: 30.0]
+[multi_agent][planning_time: 1006.4189778900146][cost: 31.0][agents: 3][optimization time 23.80387306213379]
+----------------------------------------
