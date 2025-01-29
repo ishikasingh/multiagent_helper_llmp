@@ -240,16 +240,28 @@ def validator_simulation_recursive(expt_path, logfile, multi=False):
     with open(log_file, 'a+') as f:
         f.write(f"TASK: {args.domain} - {args.run} - {args.task_id}\n")
 
-    global execution_state
-    execution_state = np.full([len(plan) + 1 for plan in agent_plans] + [args.num_agents + 1], float('inf'))
+    initial_plan = agent_plans[0]
 
-    plan_length = validator_sim_recursion_function(expt_path, domain_pddl_file, tuple([0] * args.num_agents), tuple(agent_plans), tuple([task] * args.num_agents))
+    # convert initial plan to plan object
+    # initial_plan = [('single', 0, initial_plan[i]) for i in range(len(initial_plan))]
 
-    success = plan_length < float('inf')
-    print(plan_length, success)
-    if success:
-        print("tracing optimal path")
-        trace_optimal_path(execution_state, agent_plans, log_file)
+    print("initial_plan", initial_plan)
+
+    for i in range(1,args.num_agents):
+        print(f"merging plan {i} into initial_plan")
+        print(f"plan {i}", agent_plans[i])
+        print("initial_plan", initial_plan)
+        global execution_state
+        execution_state = np.full([len(initial_plan) + 1, len(agent_plans[i]) + 1, 3], float('inf'))
+
+        plan_length = validator_sim_recursion_function(expt_path, domain_pddl_file, tuple([0] * 2), tuple([initial_plan,agent_plans[i]]), tuple([task] * 2))
+
+        success = plan_length < float('inf')
+        print(plan_length, success)
+        if success:
+            print("tracing optimal path, building plan object")
+            initial_plan = trace_optimal_path(execution_state, agent_plans, log_file)
+
     return plan_length, success
 
 @lru_cache(maxsize=None)
@@ -413,12 +425,14 @@ def trace_optimal_path(execution_state, agent_plans, log_file):
                     indices = test_indices
                     break
     
+    path = reversed(path)
+    #print([action for action in path])
     # Write the path in forward order
     with open(log_file, 'a+') as f:
         f.write("\nOptimal Plan Trace:\n")
         f.write("-" * 50 + "\n")
         
-        for action in reversed(path):
+        for action in path:
             if action[0] == 'parallel':
                 f.write("Parallel Execution:\n")
                 for agent, plan_step in action[1]:
@@ -427,5 +441,5 @@ def trace_optimal_path(execution_state, agent_plans, log_file):
             else:
                 f.write(f"Agent {action[1]}: {action[2]}")
                 f.write("\n")
-        
         f.write("-" * 50 + "\n")
+    return path
