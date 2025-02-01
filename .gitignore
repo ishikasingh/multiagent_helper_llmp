@@ -18,3 +18,4 @@ sas*
 .env
 __pycache__
 .history
+.DS_Store

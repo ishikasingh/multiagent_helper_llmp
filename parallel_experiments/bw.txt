@@ -1,0 +1,572 @@
+Using cached single agent results
+LLM generated no subgoal for agent 2, reducing number of agents
+args.num_agents: 2
+['b1 is on top of b3.']
+['./experiments_multiagent_help/run100/blocksworld/p01_1.pddl']
+agent1
+[info][subgoal_1][blocksworld] task 01 takes 0.07 sec, found a plan with cost 6.0
+planner successful
+validating
+validator time 0.011540889739990234
+[info][multiagent main goal][blocksworld] task 01 takes 0.25 sec, found a plan with cost 6.0
+TASK: blocksworld - 100 - 01
+merging main agent's plan into combined plan
+agent_0_plan [('single', 0, '(unstack b1 b3)\n'), ('single', 0, '(putdown b1)\n'), ('single', 0, '(pickup b3)\n'), ('single', 0, '(stack b3 b2)\n'), ('single', 0, '(pickup b1)\n'), ('single', 0, '(stack b1 b3)\n')]
+initial_plan [('single', 1, '(unstack b2 b3)\n'), ('single', 1, '(putdown b2)\n'), ('single', 1, '(unstack b3 b1)\n'), ('single', 1, '(putdown b3)\n'), ('single', 1, '(pickup b1)\n'), ('single', 1, '(stack b1 b3)\n')]
+10.0 True
+tracing optimal path, building final plan
+indices [6, 6]
+[results][blocksworld][01]
+[single_agent][planning time: 0.06][cost: 6.0]
+[multi_agent][planning_time: 5.685354299545288][cost: 10.0][agents: 2][optimization time 0.1895761489868164]
+----------------------------------------
+Using cached single agent results
+LLM generated no subgoal for agent 2, reducing number of agents
+args.num_agents: 2
+['b1 should be on the table.']
+['./experiments_multiagent_help/run100/blocksworld/p02_1.pddl']
+agent1
+[info][subgoal_1][blocksworld] task 02 takes 0.08 sec, found a plan with cost 2.0
+planner successful
+validating
+validator time 0.005555868148803711
+[info][multiagent main goal][blocksworld] task 02 takes 0.04 sec, found a plan with cost 4.0
+TASK: blocksworld - 100 - 02
+merging main agent's plan into combined plan
+agent_0_plan [('single', 0, '(unstack b3 b2)\n'), ('single', 0, '(stack b3 b1)\n'), ('single', 0, '(pickup b2)\n'), ('single', 0, '(stack b2 b3)\n')]
+initial_plan [('single', 1, '(unstack b1 b3)\n'), ('single', 1, '(putdown b1)\n')]
+3.0 True
+tracing optimal path, building final plan
+indices [2, 4]
+[results][blocksworld][02]
+[single_agent][planning time: 0.07][cost: 6.0]
+[multi_agent][planning_time: 2.350299711227417][cost: 3.0][agents: 2][optimization time 0.10897421836853027]
+----------------------------------------
+Using cached single agent results
+['b3 should be on top of b4.', 'b2 should be on top of b1.']
+['./experiments_multiagent_help/run100/blocksworld/p03_1.pddl', './experiments_multiagent_help/run100/blocksworld/p03_2.pddl']
+agent1
+[info][subgoal_1][blocksworld] task 03 takes 0.08 sec, found a plan with cost 4.0
+planner successful
+validating
+validator time 0.0056078433990478516
+agent2
+[info][subgoal_2][blocksworld] task 03 takes 0.04 sec, found a plan with cost 2.0
+planner successful
+validating
+validator time 0.0051479339599609375
+[info][multiagent main goal][blocksworld] task 03 takes 96.68 sec, no solution found
+TASK: blocksworld - 100 - 03
+merging plan 2 into initial_plan
+initial_plan [('single', 1, '(unstack b1 b3)\n'), ('single', 1, '(putdown b1)\n'), ('single', 1, '(unstack b3 b2)\n'), ('single', 1, '(stack b3 b4)\n')]
+agent_plans[2] [('single', 2, '(pickup b2)\n'), ('single', 2, '(stack b2 b1)\n')]
+3.0 True
+tracing optimal path, building plan object
+indices [4, 2]
+merging main agent's plan into combined plan
+agent_0_plan []
+initial_plan [('single', 0, '(unstack b1 b3)\n'), ('single', 0, '(putdown b1)\n'), ('parallel', [(0, '(unstack b3 b2)\n'), (1, '(pickup b2)\n')]), ('parallel', [(0, '(stack b3 b4)\n'), (1, '(stack b2 b1)\n')])]
+inf False
+[results][blocksworld][03]
+[single_agent][planning time: 0.06][cost: 6.0]
+[multi_agent][planning_time: 10.213227863311767][cost: inf][agents: 3][optimization time 1.7650318145751953]
+----------------------------------------
+Using cached single agent results
+['b1 is on the table and the arm is empty.', 'b4 is on the table and the arm is empty.']
+['./experiments_multiagent_help/run100/blocksworld/p04_1.pddl', './experiments_multiagent_help/run100/blocksworld/p04_2.pddl']
+agent1
+[info][subgoal_1][blocksworld] task 04 takes 0.08 sec, found a plan with cost 4.0
+planner successful
+validating
+validator time 0.0055408477783203125
+agent2
+[info][subgoal_2][blocksworld] task 04 takes 0.04 sec, found a plan with cost 2.0
+planner successful
+validating
+validator time 0.0051422119140625
+[info][multiagent main goal][blocksworld] task 04 takes 0.04 sec, found a plan with cost 6.0
+TASK: blocksworld - 100 - 04
+merging plan 2 into initial_plan
+initial_plan [('single', 1, '(unstack b3 b1)\n'), ('single', 1, '(putdown b3)\n'), ('single', 1, '(unstack b1 b4)\n'), ('single', 1, '(putdown b1)\n')]
+agent_plans[2] [('single', 2, '(unstack b4 b2)\n'), ('single', 2, '(putdown b4)\n')]
+3.0 True
+tracing optimal path, building plan object
+indices [4, 2]
+merging main agent's plan into combined plan
+agent_0_plan [('single', 0, '(pickup b3)\n'), ('single', 0, '(stack b3 b4)\n'), ('single', 0, '(pickup b2)\n'), ('single', 0, '(stack b2 b3)\n'), ('single', 0, '(pickup b1)\n'), ('single', 0, '(stack b1 b2)\n')]
+initial_plan [('single', 0, '(unstack b3 b1)\n'), ('single', 0, '(putdown b3)\n'), ('parallel', [(0, '(unstack b1 b4)\n'), (1, '(unstack b4 b2)\n')]), ('parallel', [(0, '(putdown b1)\n'), (1, '(putdown b4)\n')])]
+inf False
+[results][blocksworld][04]
+[single_agent][planning time: 0.06][cost: 12.0]
+[multi_agent][planning_time: 3.6236993408203126][cost: inf][agents: 3][optimization time 0.3370170593261719]
+----------------------------------------
+Using cached single agent results
+['b4 should be on the table.', 'b2 should be on the table.']
+['./experiments_multiagent_help/run100/blocksworld/p05_1.pddl', './experiments_multiagent_help/run100/blocksworld/p05_2.pddl']
+agent1
+[info][subgoal_1][blocksworld] task 05 takes 0.08 sec, found a plan with cost 2.0
+planner successful
+validating
+validator time 0.005578041076660156
+agent2
+[info][subgoal_2][blocksworld] task 05 takes 0.04 sec, found a plan with cost 4.0
+planner successful
+validating
+validator time 0.005392789840698242
+[info][multiagent main goal][blocksworld] task 05 takes 0.04 sec, found a plan with cost 2.0
+TASK: blocksworld - 100 - 05
+merging plan 2 into initial_plan
+initial_plan [('single', 1, '(unstack b4 b1)\n'), ('single', 1, '(putdown b4)\n')]
+agent_plans[2] [('single', 2, '(unstack b1 b2)\n'), ('single', 2, '(putdown b1)\n'), ('single', 2, '(unstack b2 b3)\n'), ('single', 2, '(putdown b2)\n')]
+3.0 True
+tracing optimal path, building plan object
+indices [2, 4]
+merging main agent's plan into combined plan
+agent_0_plan [('single', 0, '(pickup b1)\n'), ('single', 0, '(stack b1 b3)\n')]
+initial_plan [('parallel', [(0, '(unstack b4 b1)\n'), (1, '(unstack b1 b2)\n')]), ('single', 1, '(putdown b1)\n'), ('single', 1, '(unstack b2 b3)\n'), ('parallel', [(0, '(putdown b4)\n'), (1, '(putdown b2)\n')])]
+inf False
+[results][blocksworld][05]
+[single_agent][planning time: 0.06][cost: 8.0]
+[multi_agent][planning_time: 3.401041898727417][cost: inf][agents: 3][optimization time 0.2054898738861084]
+----------------------------------------
+Using cached single agent results
+['b3 is on top of b5 and the arm is empty.', 'b4 is on top of b1 and the arm is empty.']
+['./experiments_multiagent_help/run100/blocksworld/p06_1.pddl', './experiments_multiagent_help/run100/blocksworld/p06_2.pddl']
+agent1
+[info][subgoal_1][blocksworld] task 06 takes 0.07 sec, found a plan with cost 4.0
+planner successful
+validating
+validator time 0.00627899169921875
+agent2
+[info][subgoal_2][blocksworld] task 06 takes 0.1 sec, found a plan with cost 6.0
+planner successful
+validating
+validator time 0.006497859954833984
+[info][multiagent main goal][blocksworld] task 06 takes 0.07 sec, found a plan with cost 6.0
+TASK: blocksworld - 100 - 06
+merging plan 2 into initial_plan
+initial_plan [('single', 1, '(unstack b5 b3)\n'), ('single', 1, '(putdown b5)\n'), ('single', 1, '(unstack b3 b4)\n'), ('single', 1, '(stack b3 b5)\n')]
+agent_plans[2] [('single', 2, '(unstack b4 b2)\n'), ('single', 2, '(putdown b4)\n'), ('single', 2, '(unstack b2 b1)\n'), ('single', 2, '(putdown b2)\n'), ('single', 2, '(pickup b4)\n'), ('single', 2, '(stack b4 b1)\n')]
+7.0 True
+tracing optimal path, building plan object
+indices [4, 6]
+merging main agent's plan into combined plan
+agent_0_plan [('single', 0, '(unstack b4 b1)\n'), ('single', 0, '(putdown b4)\n'), ('single', 0, '(pickup b1)\n'), ('single', 0, '(stack b1 b2)\n'), ('single', 0, '(pickup b4)\n'), ('single', 0, '(stack b4 b1)\n')]
+initial_plan [('single', 0, '(unstack b5 b3)\n'), ('single', 0, '(putdown b5)\n'), ('parallel', [(0, '(unstack b3 b4)\n'), (1, '(unstack b4 b2)\n')]), ('single', 1, '(putdown b4)\n'), ('single', 1, '(unstack b2 b1)\n'), ('single', 1, '(putdown b2)\n'), ('single', 1, '(pickup b4)\n'), ('parallel', [(0, '(stack b3 b5)\n'), (1, '(stack b4 b1)\n')])]
+inf False
+[results][blocksworld][06]
+[single_agent][planning time: 0.08][cost: 12.0]
+[multi_agent][planning_time: 3.5344188117980955][cost: inf][agents: 3][optimization time 0.36895203590393066]
+----------------------------------------
+Using cached single agent results
+['b3 is on top of b5 and the arm is empty.', 'b4 is on top of b3 and the arm is empty.']
+['./experiments_multiagent_help/run100/blocksworld/p07_1.pddl', './experiments_multiagent_help/run100/blocksworld/p07_2.pddl']
+agent1
+[info][subgoal_1][blocksworld] task 07 takes 0.06 sec, found a plan with cost 6.0
+planner successful
+validating
+validator time 0.0062749385833740234
+agent2
+[info][subgoal_2][blocksworld] task 07 takes 0.05 sec, found a plan with cost 2.0
+planner successful
+validating
+validator time 0.0055239200592041016
+[info][multiagent main goal][blocksworld] task 07 takes 99.13 sec, no solution found
+TASK: blocksworld - 100 - 07
+merging plan 2 into initial_plan
+initial_plan [('single', 1, '(unstack b5 b2)\n'), ('single', 1, '(putdown b5)\n'), ('single', 1, '(unstack b2 b3)\n'), ('single', 1, '(putdown b2)\n'), ('single', 1, '(unstack b3 b1)\n'), ('single', 1, '(stack b3 b5)\n')]
+agent_plans[2] [('single', 2, '(pickup b4)\n'), ('single', 2, '(stack b4 b3)\n')]
+5.0 True
+tracing optimal path, building plan object
+indices [6, 2]
+merging main agent's plan into combined plan
+agent_0_plan []
+initial_plan [('single', 0, '(unstack b5 b2)\n'), ('single', 0, '(putdown b5)\n'), ('single', 0, '(unstack b2 b3)\n'), ('single', 0, '(putdown b2)\n'), ('parallel', [(0, '(unstack b3 b1)\n'), (1, '(pickup b4)\n')]), ('parallel', [(0, '(stack b3 b5)\n'), (1, '(stack b4 b3)\n')])]
+inf False
+[results][blocksworld][07]
+[single_agent][planning time: 0.08][cost: 8.0]
+[multi_agent][planning_time: 3.0095089530944827][cost: inf][agents: 3][optimization time 2.2914178371429443]
+----------------------------------------
+Using cached single agent results
+['b3 is on top of b5 and the arm is empty.', 'b6 is on top of b2 and the arm is empty.']
+['./experiments_multiagent_help/run100/blocksworld/p08_1.pddl', './experiments_multiagent_help/run100/blocksworld/p08_2.pddl']
+agent1
+[info][subgoal_1][blocksworld] task 08 takes 0.08 sec, found a plan with cost 10.0
+planner successful
+validating
+validator time 0.005864858627319336
+agent2
+[info][subgoal_2][blocksworld] task 08 takes 0.04 sec, found a plan with cost 2.0
+planner successful
+validating
+validator time 0.005536079406738281
+[info][multiagent main goal][blocksworld] task 08 takes 0.05 sec, found a plan with cost 2.0
+TASK: blocksworld - 100 - 08
+merging plan 2 into initial_plan
+initial_plan [('single', 1, '(unstack b6 b4)\n'), ('single', 1, '(putdown b6)\n'), ('single', 1, '(unstack b4 b5)\n'), ('single', 1, '(putdown b4)\n'), ('single', 1, '(unstack b5 b1)\n'), ('single', 1, '(putdown b5)\n'), ('single', 1, '(unstack b1 b3)\n'), ('single', 1, '(putdown b1)\n'), ('single', 1, '(unstack b3 b2)\n'), ('single', 1, '(stack b3 b5)\n')]
+agent_plans[2] [('single', 2, '(pickup b6)\n'), ('single', 2, '(stack b6 b2)\n')]
+9.0 True
+tracing optimal path, building plan object
+indices [10, 2]
+merging main agent's plan into combined plan
+agent_0_plan [('single', 0, '(pickup b1)\n'), ('single', 0, '(stack b1 b6)\n')]
+initial_plan [('single', 0, '(unstack b6 b4)\n'), ('single', 0, '(putdown b6)\n'), ('single', 0, '(unstack b4 b5)\n'), ('single', 0, '(putdown b4)\n'), ('single', 0, '(unstack b5 b1)\n'), ('single', 0, '(putdown b5)\n'), ('single', 0, '(unstack b1 b3)\n'), ('single', 0, '(putdown b1)\n'), ('parallel', [(0, '(unstack b3 b2)\n'), (1, '(pickup b6)\n')]), ('parallel', [(0, '(stack b3 b5)\n'), (1, '(stack b6 b2)\n')])]
+inf False
+[results][blocksworld][08]
+[single_agent][planning time: 0.1][cost: 14.0]
+[multi_agent][planning_time: 5.439251823425293][cost: inf][agents: 3][optimization time 0.8054640293121338]
+----------------------------------------
+Using cached single agent results
+['b3 is on top of b7 and all hands are empty.', 'b1 is on top of b2 and all hands are empty.']
+['./experiments_multiagent_help/run100/blocksworld/p09_1.pddl', './experiments_multiagent_help/run100/blocksworld/p09_2.pddl']
+agent1
+[info][subgoal_1][blocksworld] task 09 takes 0.09 sec, found a plan with cost 6.0
+planner successful
+validating
+validator time 0.006237030029296875
+agent2
+[info][subgoal_2][blocksworld] task 09 takes 0.05 sec, found a plan with cost 2.0
+planner successful
+validating
+validator time 0.0056269168853759766
+[info][multiagent main goal][blocksworld] task 09 takes 0.5 sec, found a plan with cost 16.0
+TASK: blocksworld - 100 - 09
+merging plan 2 into initial_plan
+initial_plan [('single', 1, '(unstack b4 b7)\n'), ('single', 1, '(putdown b4)\n'), ('single', 1, '(unstack b7 b3)\n'), ('single', 1, '(putdown b7)\n'), ('single', 1, '(unstack b3 b6)\n'), ('single', 1, '(stack b3 b7)\n')]
+agent_plans[2] [('single', 2, '(pickup b1)\n'), ('single', 2, '(stack b1 b2)\n')]
+5.0 True
+tracing optimal path, building plan object
+indices [6, 2]
+merging main agent's plan into combined plan
+agent_0_plan [('single', 0, '(unstack b3 b7)\n'), ('single', 0, '(putdown b3)\n'), ('single', 0, '(pickup b7)\n'), ('single', 0, '(stack b7 b4)\n'), ('single', 0, '(pickup b3)\n'), ('single', 0, '(stack b3 b7)\n'), ('single', 0, '(pickup b5)\n'), ('single', 0, '(stack b5 b3)\n'), ('single', 0, '(pickup b6)\n'), ('single', 0, '(stack b6 b5)\n'), ('single', 0, '(unstack b1 b2)\n'), ('single', 0, '(putdown b1)\n'), ('single', 0, '(pickup b2)\n'), ('single', 0, '(stack b2 b6)\n'), ('single', 0, '(pickup b1)\n'), ('single', 0, '(stack b1 b2)\n')]
+initial_plan [('single', 0, '(unstack b4 b7)\n'), ('single', 0, '(putdown b4)\n'), ('single', 0, '(unstack b7 b3)\n'), ('single', 0, '(putdown b7)\n'), ('parallel', [(0, '(unstack b3 b6)\n'), (1, '(pickup b1)\n')]), ('parallel', [(0, '(stack b3 b7)\n'), (1, '(stack b1 b2)\n')])]
+inf False
+[results][blocksworld][09]
+[single_agent][planning time: 0.97][cost: 14.0]
+[multi_agent][planning_time: 4.8255909824371335][cost: inf][agents: 3][optimization time 0.4944610595703125]
+----------------------------------------
+Using cached single agent results
+['b2 should be on top of b5.', 'b4 should be on top of b1.']
+['./experiments_multiagent_help/run100/blocksworld/p10_1.pddl', './experiments_multiagent_help/run100/blocksworld/p10_2.pddl']
+agent1
+[info][subgoal_1][blocksworld] task 10 takes 99.23 sec, no solution found
+planner successful
+validating
+validator time 0.022727012634277344
+agent2
+[info][subgoal_2][blocksworld] task 10 takes 0.08 sec, found a plan with cost 6.0
+planner successful
+validating
+validator time 0.006228923797607422
+[info][multiagent main goal][blocksworld] task 10 takes 0.53 sec, found a plan with cost 18.0
+TASK: blocksworld - 100 - 10
+merging plan 2 into initial_plan
+initial_plan []
+agent_plans[2] [('single', 2, '(unstack b4 b7)\n'), ('single', 2, '(putdown b4)\n'), ('single', 2, '(unstack b7 b1)\n'), ('single', 2, '(putdown b7)\n'), ('single', 2, '(pickup b4)\n'), ('single', 2, '(stack b4 b1)\n')]
+5 True
+tracing optimal path, building plan object
+indices [0, 6]
+merging main agent's plan into combined plan
+agent_0_plan [('single', 0, '(unstack b6 b3)\n'), ('single', 0, '(putdown b6)\n'), ('single', 0, '(unstack b2 b5)\n'), ('single', 0, '(putdown b2)\n'), ('single', 0, '(pickup b5)\n'), ('single', 0, '(stack b5 b6)\n'), ('single', 0, '(pickup b2)\n'), ('single', 0, '(stack b2 b5)\n'), ('single', 0, '(pickup b3)\n'), ('single', 0, '(stack b3 b2)\n'), ('single', 0, '(pickup b7)\n'), ('single', 0, '(stack b7 b3)\n'), ('single', 0, '(unstack b4 b1)\n'), ('single', 0, '(putdown b4)\n'), ('single', 0, '(pickup b1)\n'), ('single', 0, '(stack b1 b7)\n'), ('single', 0, '(pickup b4)\n'), ('single', 0, '(stack b4 b1)\n')]
+initial_plan [('single', 1, '(unstack b4 b7)\n'), ('single', 1, '(putdown b4)\n'), ('single', 1, '(unstack b7 b1)\n'), ('single', 1, '(putdown b7)\n'), ('single', 1, '(pickup b4)\n'), ('single', 1, '(stack b4 b1)\n')]
+17.0 True
+tracing optimal path, building final plan
+indices [6, 18]
+[results][blocksworld][10]
+[single_agent][planning time: 0.99][cost: 18.0]
+[multi_agent][planning_time: 3.3005117034912113][cost: 17.0][agents: 3][optimization time 3.489966869354248]
+----------------------------------------
+Using cached single agent results
+['b4 should be on top of b2 and the arm is empty.', 'b1 should be on top of b8 and the arm is empty.']
+['./experiments_multiagent_help/run100/blocksworld/p11_1.pddl', './experiments_multiagent_help/run100/blocksworld/p11_2.pddl']
+agent1
+[info][subgoal_1][blocksworld] task 11 takes 98.82 sec, no solution found
+planner successful
+validating
+validator time 0.02004098892211914
+agent2
+[info][subgoal_2][blocksworld] task 11 takes 0.26 sec, found a plan with cost 16.0
+planner successful
+validating
+validator time 0.005975008010864258
+[info][multiagent main goal][blocksworld] task 11 takes 7.64 sec, found a plan with cost 12.0
+TASK: blocksworld - 100 - 11
+merging plan 2 into initial_plan
+initial_plan []
+agent_plans[2] [('single', 2, '(unstack b8 b3)\n'), ('single', 2, '(putdown b8)\n'), ('single', 2, '(unstack b3 b7)\n'), ('single', 2, '(putdown b3)\n'), ('single', 2, '(unstack b7 b5)\n'), ('single', 2, '(putdown b7)\n'), ('single', 2, '(unstack b5 b6)\n'), ('single', 2, '(putdown b5)\n'), ('single', 2, '(unstack b6 b4)\n'), ('single', 2, '(putdown b6)\n'), ('single', 2, '(unstack b4 b2)\n'), ('single', 2, '(putdown b4)\n'), ('single', 2, '(unstack b2 b1)\n'), ('single', 2, '(putdown b2)\n'), ('single', 2, '(pickup b1)\n'), ('single', 2, '(stack b1 b8)\n')]
+15 True
+tracing optimal path, building plan object
+indices [0, 16]
+merging main agent's plan into combined plan
+agent_0_plan [('single', 0, '(pickup b3)\n'), ('single', 0, '(stack b3 b5)\n'), ('single', 0, '(pickup b2)\n'), ('single', 0, '(stack b2 b3)\n'), ('single', 0, '(pickup b4)\n'), ('single', 0, '(stack b4 b2)\n'), ('single', 0, '(unstack b1 b8)\n'), ('single', 0, '(putdown b1)\n'), ('single', 0, '(pickup b8)\n'), ('single', 0, '(stack b8 b7)\n'), ('single', 0, '(pickup b1)\n'), ('single', 0, '(stack b1 b8)\n')]
+initial_plan [('single', 1, '(unstack b8 b3)\n'), ('single', 1, '(putdown b8)\n'), ('single', 1, '(unstack b3 b7)\n'), ('single', 1, '(putdown b3)\n'), ('single', 1, '(unstack b7 b5)\n'), ('single', 1, '(putdown b7)\n'), ('single', 1, '(unstack b5 b6)\n'), ('single', 1, '(putdown b5)\n'), ('single', 1, '(unstack b6 b4)\n'), ('single', 1, '(putdown b6)\n'), ('single', 1, '(unstack b4 b2)\n'), ('single', 1, '(putdown b4)\n'), ('single', 1, '(unstack b2 b1)\n'), ('single', 1, '(putdown b2)\n'), ('single', 1, '(pickup b1)\n'), ('single', 1, '(stack b1 b8)\n')]
+22.0 True
+tracing optimal path, building final plan
+indices [16, 12]
+[results][blocksworld][11]
+[single_agent][planning time: 9.69][cost: 22.0]
+[multi_agent][planning_time: 10.100078964233397][cost: 22.0][agents: 3][optimization time 3.0284430980682373]
+----------------------------------------
+Using cached single agent results
+['b5 should be on top of b6.', 'b2 should be on top of b8.']
+['./experiments_multiagent_help/run100/blocksworld/p12_1.pddl', './experiments_multiagent_help/run100/blocksworld/p12_2.pddl']
+agent1
+[info][subgoal_1][blocksworld] task 12 takes 0.09 sec, found a plan with cost 8.0
+planner successful
+validating
+validator time 0.00600886344909668
+agent2
+[info][subgoal_2][blocksworld] task 12 takes 0.05 sec, found a plan with cost 2.0
+planner successful
+validating
+validator time 0.006007194519042969
+[info][multiagent main goal][blocksworld] task 12 takes 15.95 sec, found a plan with cost 16.0
+TASK: blocksworld - 100 - 12
+merging plan 2 into initial_plan
+initial_plan [('single', 1, '(unstack b7 b8)\n'), ('single', 1, '(putdown b7)\n'), ('single', 1, '(unstack b8 b1)\n'), ('single', 1, '(putdown b8)\n'), ('single', 1, '(unstack b1 b6)\n'), ('single', 1, '(putdown b1)\n'), ('single', 1, '(pickup b5)\n'), ('single', 1, '(stack b5 b6)\n')]
+agent_plans[2] [('single', 2, '(pickup b2)\n'), ('single', 2, '(stack b2 b8)\n')]
+7.0 True
+tracing optimal path, building plan object
+indices [8, 2]
+merging main agent's plan into combined plan
+agent_0_plan [('single', 0, '(pickup b3)\n'), ('single', 0, '(stack b3 b2)\n'), ('single', 0, '(pickup b1)\n'), ('single', 0, '(stack b1 b3)\n'), ('single', 0, '(pickup b7)\n'), ('single', 0, '(stack b7 b1)\n'), ('single', 0, '(unstack b5 b6)\n'), ('single', 0, '(putdown b5)\n'), ('single', 0, '(unstack b6 b4)\n'), ('single', 0, '(putdown b6)\n'), ('single', 0, '(pickup b4)\n'), ('single', 0, '(stack b4 b7)\n'), ('single', 0, '(pickup b6)\n'), ('single', 0, '(stack b6 b4)\n'), ('single', 0, '(pickup b5)\n'), ('single', 0, '(stack b5 b6)\n')]
+initial_plan [('single', 0, '(unstack b7 b8)\n'), ('single', 0, '(putdown b7)\n'), ('single', 0, '(unstack b8 b1)\n'), ('single', 0, '(putdown b8)\n'), ('single', 0, '(unstack b1 b6)\n'), ('single', 0, '(putdown b1)\n'), ('parallel', [(0, '(pickup b5)\n'), (1, '(pickup b2)\n')]), ('parallel', [(0, '(stack b5 b6)\n'), (1, '(stack b2 b8)\n')])]
+inf False
+[results][blocksworld][12]
+[single_agent][planning time: 12.21][cost: 20.0]
+[multi_agent][planning_time: 19.01224407196045][cost: inf][agents: 3][optimization time 8.897755861282349]
+----------------------------------------
+Using cached single agent results
+['b8 should be on top of b7.', 'b4 should be on top of b8.']
+['./experiments_multiagent_help/run100/blocksworld/p13_1.pddl', './experiments_multiagent_help/run100/blocksworld/p13_2.pddl']
+agent1
+[info][subgoal_1][blocksworld] task 13 takes 0.09 sec, found a plan with cost 2.0
+planner successful
+validating
+validator time 0.0056400299072265625
+agent2
+[info][subgoal_2][blocksworld] task 13 takes 0.51 sec, found a plan with cost 14.0
+planner successful
+validating
+validator time 0.0060918331146240234
+[info][multiagent main goal][blocksworld] task 13 takes 4.89 sec, found a plan with cost 10.0
+TASK: blocksworld - 100 - 13
+merging plan 2 into initial_plan
+initial_plan [('single', 1, '(unstack b8 b6)\n'), ('single', 1, '(stack b8 b7)\n')]
+agent_plans[2] [('single', 2, '(unstack b6 b9)\n'), ('single', 2, '(putdown b6)\n'), ('single', 2, '(unstack b9 b5)\n'), ('single', 2, '(putdown b9)\n'), ('single', 2, '(unstack b5 b2)\n'), ('single', 2, '(putdown b5)\n'), ('single', 2, '(unstack b2 b3)\n'), ('single', 2, '(putdown b2)\n'), ('single', 2, '(unstack b3 b1)\n'), ('single', 2, '(putdown b3)\n'), ('single', 2, '(unstack b1 b4)\n'), ('single', 2, '(putdown b1)\n'), ('single', 2, '(pickup b4)\n'), ('single', 2, '(stack b4 b8)\n')]
+13.0 True
+tracing optimal path, building plan object
+indices [2, 14]
+merging main agent's plan into combined plan
+agent_0_plan [('single', 0, '(pickup b6)\n'), ('single', 0, '(stack b6 b4)\n'), ('single', 0, '(pickup b3)\n'), ('single', 0, '(stack b3 b1)\n'), ('single', 0, '(pickup b5)\n'), ('single', 0, '(stack b5 b3)\n'), ('single', 0, '(pickup b2)\n'), ('single', 0, '(stack b2 b5)\n'), ('single', 0, '(pickup b9)\n'), ('single', 0, '(stack b9 b2)\n')]
+initial_plan [('parallel', [(0, '(unstack b8 b6)\n'), (1, '(unstack b6 b9)\n')]), ('single', 1, '(putdown b6)\n'), ('single', 1, '(unstack b9 b5)\n'), ('single', 1, '(putdown b9)\n'), ('single', 1, '(unstack b5 b2)\n'), ('single', 1, '(putdown b5)\n'), ('single', 1, '(unstack b2 b3)\n'), ('single', 1, '(putdown b2)\n'), ('single', 1, '(unstack b3 b1)\n'), ('single', 1, '(putdown b3)\n'), ('single', 1, '(unstack b1 b4)\n'), ('single', 1, '(putdown b1)\n'), ('single', 1, '(pickup b4)\n'), ('parallel', [(0, '(stack b8 b7)\n'), (1, '(stack b4 b8)\n')])]
+inf False
+[results][blocksworld][13]
+[single_agent][planning time: 146.4][cost: 26.0]
+[multi_agent][planning_time: 7.812940587997437][cost: inf][agents: 3][optimization time 0.5250208377838135]
+----------------------------------------
+Using cached single agent results
+['b3 is on top of b5.', 'b4 is on top of b1.']
+['./experiments_multiagent_help/run100/blocksworld/p14_1.pddl', './experiments_multiagent_help/run100/blocksworld/p14_2.pddl']
+agent1
+[info][subgoal_1][blocksworld] task 14 takes 0.08 sec, found a plan with cost 6.0
+planner successful
+validating
+validator time 0.0060651302337646484
+agent2
+[info][subgoal_2][blocksworld] task 14 takes 0.06 sec, found a plan with cost 2.0
+planner successful
+validating
+validator time 0.00544285774230957
+[info][multiagent main goal][blocksworld] task 14 takes 60.1 sec, found a plan with cost 22.0
+TASK: blocksworld - 100 - 14
+merging plan 2 into initial_plan
+initial_plan [('single', 1, '(unstack b5 b1)\n'), ('single', 1, '(putdown b5)\n'), ('single', 1, '(unstack b1 b3)\n'), ('single', 1, '(putdown b1)\n'), ('single', 1, '(pickup b3)\n'), ('single', 1, '(stack b3 b5)\n')]
+agent_plans[2] [('single', 2, '(unstack b4 b6)\n'), ('single', 2, '(stack b4 b1)\n')]
+5.0 True
+tracing optimal path, building plan object
+indices [6, 2]
+merging main agent's plan into combined plan
+agent_0_plan [('single', 0, '(unstack b3 b5)\n'), ('single', 0, '(putdown b3)\n'), ('single', 0, '(pickup b5)\n'), ('single', 0, '(stack b5 b6)\n'), ('single', 0, '(pickup b3)\n'), ('single', 0, '(stack b3 b5)\n'), ('single', 0, '(unstack b8 b9)\n'), ('single', 0, '(stack b8 b3)\n'), ('single', 0, '(unstack b9 b7)\n'), ('single', 0, '(putdown b9)\n'), ('single', 0, '(unstack b7 b2)\n'), ('single', 0, '(stack b7 b8)\n'), ('single', 0, '(pickup b2)\n'), ('single', 0, '(stack b2 b7)\n'), ('single', 0, '(unstack b4 b1)\n'), ('single', 0, '(stack b4 b9)\n'), ('single', 0, '(pickup b1)\n'), ('single', 0, '(stack b1 b2)\n'), ('single', 0, '(unstack b4 b9)\n'), ('single', 0, '(stack b4 b1)\n'), ('single', 0, '(pickup b9)\n'), ('single', 0, '(stack b9 b4)\n')]
+initial_plan [('single', 0, '(unstack b5 b1)\n'), ('single', 0, '(putdown b5)\n'), ('single', 0, '(unstack b1 b3)\n'), ('single', 0, '(putdown b1)\n'), ('parallel', [(0, '(pickup b3)\n'), (1, '(unstack b4 b6)\n')]), ('parallel', [(0, '(stack b3 b5)\n'), (1, '(stack b4 b1)\n')])]
+inf False
+[results][blocksworld][14]
+[single_agent][planning time: 71.57][cost: 22.0]
+[multi_agent][planning_time: 63.019619932174685][cost: inf][agents: 3][optimization time 0.5910861492156982]
+----------------------------------------
+Using cached single agent results
+['b4 should be on top of b7.', 'b3 should be on top of b10.']
+['./experiments_multiagent_help/run100/blocksworld/p15_1.pddl', './experiments_multiagent_help/run100/blocksworld/p15_2.pddl']
+agent1
+[info][subgoal_1][blocksworld] task 15 takes 0.09 sec, found a plan with cost 10.0
+planner successful
+validating
+validator time 0.006062746047973633
+agent2
+[info][subgoal_2][blocksworld] task 15 takes 0.07 sec, found a plan with cost 6.0
+planner successful
+validating
+validator time 0.00572514533996582
+[info][multiagent main goal][blocksworld] task 15 takes 60.13 sec, found a plan with cost 14.0
+TASK: blocksworld - 100 - 15
+merging plan 2 into initial_plan
+initial_plan [('single', 1, '(unstack b9 b2)\n'), ('single', 1, '(putdown b9)\n'), ('single', 1, '(unstack b2 b10)\n'), ('single', 1, '(putdown b2)\n'), ('single', 1, '(unstack b10 b7)\n'), ('single', 1, '(putdown b10)\n'), ('single', 1, '(unstack b7 b4)\n'), ('single', 1, '(putdown b7)\n'), ('single', 1, '(unstack b4 b8)\n'), ('single', 1, '(stack b4 b7)\n')]
+agent_plans[2] [('single', 2, '(unstack b8 b6)\n'), ('single', 2, '(putdown b8)\n'), ('single', 2, '(unstack b6 b3)\n'), ('single', 2, '(putdown b6)\n'), ('single', 2, '(unstack b3 b1)\n'), ('single', 2, '(stack b3 b10)\n')]
+13.0 True
+tracing optimal path, building plan object
+indices [10, 6]
+merging main agent's plan into combined plan
+agent_0_plan [('single', 0, '(pickup b2)\n'), ('single', 0, '(stack b2 b1)\n'), ('single', 0, '(pickup b8)\n'), ('single', 0, '(stack b8 b2)\n'), ('single', 0, '(pickup b6)\n'), ('single', 0, '(stack b6 b8)\n'), ('single', 0, '(pickup b9)\n'), ('single', 0, '(stack b9 b4)\n'), ('single', 0, '(unstack b3 b10)\n'), ('single', 0, '(stack b3 b6)\n'), ('single', 0, '(pickup b10)\n'), ('single', 0, '(stack b10 b9)\n'), ('single', 0, '(unstack b3 b6)\n'), ('single', 0, '(stack b3 b10)\n')]
+initial_plan [('single', 0, '(unstack b9 b2)\n'), ('single', 0, '(putdown b9)\n'), ('single', 0, '(unstack b2 b10)\n'), ('single', 0, '(putdown b2)\n'), ('single', 0, '(unstack b10 b7)\n'), ('single', 0, '(putdown b10)\n'), ('single', 0, '(unstack b7 b4)\n'), ('single', 0, '(putdown b7)\n'), ('parallel', [(0, '(unstack b4 b8)\n'), (1, '(unstack b8 b6)\n')]), ('single', 1, '(putdown b8)\n'), ('single', 1, '(unstack b6 b3)\n'), ('single', 1, '(putdown b6)\n'), ('single', 1, '(unstack b3 b1)\n'), ('parallel', [(0, '(stack b4 b7)\n'), (1, '(stack b3 b10)\n')])]
+inf False
+[results][blocksworld][15]
+[single_agent][planning time: 222.96][cost: 26.0]
+[multi_agent][planning_time: 64.84356907844544][cost: inf][agents: 3][optimization time 1.2026638984680176]
+----------------------------------------
+Using cached single agent results
+['b1 is on top of b5 and all hands are empty.', 'b2 is on top of b10 and all hands are empty.']
+['./experiments_multiagent_help/run100/blocksworld/p16_1.pddl', './experiments_multiagent_help/run100/blocksworld/p16_2.pddl']
+agent1
+[info][subgoal_1][blocksworld] task 16 takes 0.09 sec, found a plan with cost 4.0
+planner successful
+validating
+validator time 0.005829811096191406
+agent2
+[info][subgoal_2][blocksworld] task 16 takes 1.33 sec, found a plan with cost 16.0
+planner successful
+validating
+validator time 0.006248950958251953
+[info][multiagent main goal][blocksworld] task 16 takes 60.12 sec, found a plan with cost 18.0
+TASK: blocksworld - 100 - 16
+merging plan 2 into initial_plan
+initial_plan [('single', 1, '(unstack b7 b1)\n'), ('single', 1, '(putdown b7)\n'), ('single', 1, '(pickup b1)\n'), ('single', 1, '(stack b1 b5)\n')]
+agent_plans[2] [('single', 2, '(unstack b1 b5)\n'), ('single', 2, '(putdown b1)\n'), ('single', 2, '(unstack b5 b4)\n'), ('single', 2, '(putdown b5)\n'), ('single', 2, '(unstack b4 b2)\n'), ('single', 2, '(putdown b4)\n'), ('single', 2, '(unstack b2 b3)\n'), ('single', 2, '(putdown b2)\n'), ('single', 2, '(unstack b3 b6)\n'), ('single', 2, '(putdown b3)\n'), ('single', 2, '(unstack b6 b9)\n'), ('single', 2, '(putdown b6)\n'), ('single', 2, '(unstack b9 b10)\n'), ('single', 2, '(putdown b9)\n'), ('single', 2, '(pickup b2)\n'), ('single', 2, '(stack b2 b10)\n')]
+18.0 True
+tracing optimal path, building plan object
+indices [4, 16]
+merging main agent's plan into combined plan
+agent_0_plan [('single', 0, '(pickup b7)\n'), ('single', 0, '(stack b7 b4)\n'), ('single', 0, '(pickup b5)\n'), ('single', 0, '(stack b5 b3)\n'), ('single', 0, '(pickup b1)\n'), ('single', 0, '(stack b1 b5)\n'), ('single', 0, '(unstack b2 b10)\n'), ('single', 0, '(stack b2 b9)\n'), ('single', 0, '(unstack b10 b8)\n'), ('single', 0, '(putdown b10)\n'), ('single', 0, '(pickup b8)\n'), ('single', 0, '(stack b8 b7)\n'), ('single', 0, '(pickup b10)\n'), ('single', 0, '(stack b10 b8)\n'), ('single', 0, '(unstack b2 b9)\n'), ('single', 0, '(stack b2 b10)\n'), ('single', 0, '(pickup b9)\n'), ('single', 0, '(stack b9 b2)\n')]
+initial_plan [('single', 0, '(unstack b7 b1)\n'), ('single', 0, '(putdown b7)\n'), ('single', 0, '(pickup b1)\n'), ('parallel', [(0, '(stack b1 b5)\n'), (1, '(unstack b1 b5)\n')]), ('single', 1, '(putdown b1)\n'), ('single', 1, '(unstack b5 b4)\n'), ('single', 1, '(putdown b5)\n'), ('single', 1, '(unstack b4 b2)\n'), ('single', 1, '(putdown b4)\n'), ('single', 1, '(unstack b2 b3)\n'), ('single', 1, '(putdown b2)\n'), ('single', 1, '(unstack b3 b6)\n'), ('single', 1, '(putdown b3)\n'), ('single', 1, '(unstack b6 b9)\n'), ('single', 1, '(putdown b6)\n'), ('single', 1, '(unstack b9 b10)\n'), ('single', 1, '(putdown b9)\n'), ('single', 1, '(pickup b2)\n'), ('single', 1, '(stack b2 b10)\n')]
+inf False
+[results][blocksworld][16]
+[single_agent][planning time: 983.49][cost: 28.0]
+[multi_agent][planning_time: 65.5315850162506][cost: inf][agents: 3][optimization time 0.4896812438964844]
+----------------------------------------
+Using cached single agent results
+['b11 should be on top of b1.', 'b6 should be on top of b10.']
+['./experiments_multiagent_help/run100/blocksworld/p17_1.pddl', './experiments_multiagent_help/run100/blocksworld/p17_2.pddl']
+agent1
+[info][subgoal_1][blocksworld] task 17 takes 5.15 sec, found a plan with cost 14.0
+planner successful
+validating
+validator time 0.0063169002532958984
+agent2
+[info][subgoal_2][blocksworld] task 17 takes 0.06 sec, found a plan with cost 4.0
+planner successful
+validating
+validator time 0.005438804626464844
+[info][multiagent main goal][blocksworld] task 17 takes 60.11 sec, found a plan with cost 14.0
+TASK: blocksworld - 100 - 17
+merging plan 2 into initial_plan
+initial_plan [('single', 1, '(unstack b3 b4)\n'), ('single', 1, '(putdown b3)\n'), ('single', 1, '(unstack b4 b10)\n'), ('single', 1, '(putdown b4)\n'), ('single', 1, '(unstack b10 b7)\n'), ('single', 1, '(putdown b10)\n'), ('single', 1, '(unstack b7 b8)\n'), ('single', 1, '(putdown b7)\n'), ('single', 1, '(unstack b8 b1)\n'), ('single', 1, '(putdown b8)\n'), ('single', 1, '(unstack b1 b11)\n'), ('single', 1, '(putdown b1)\n'), ('single', 1, '(pickup b11)\n'), ('single', 1, '(stack b11 b1)\n')]
+agent_plans[2] [('single', 2, '(unstack b9 b6)\n'), ('single', 2, '(putdown b9)\n'), ('single', 2, '(pickup b6)\n'), ('single', 2, '(stack b6 b10)\n')]
+13.0 True
+tracing optimal path, building plan object
+indices [14, 4]
+merging main agent's plan into combined plan
+agent_0_plan [('single', 0, '(unstack b5 b2)\n'), ('single', 0, '(stack b5 b4)\n'), ('single', 0, '(pickup b7)\n'), ('single', 0, '(stack b7 b3)\n'), ('single', 0, '(pickup b2)\n'), ('single', 0, '(stack b2 b7)\n'), ('single', 0, '(pickup b9)\n'), ('single', 0, '(stack b9 b5)\n'), ('single', 0, '(unstack b6 b10)\n'), ('single', 0, '(putdown b6)\n'), ('single', 0, '(pickup b10)\n'), ('single', 0, '(stack b10 b9)\n'), ('single', 0, '(pickup b6)\n'), ('single', 0, '(stack b6 b10)\n')]
+initial_plan [('single', 0, '(unstack b3 b4)\n'), ('single', 0, '(putdown b3)\n'), ('single', 0, '(unstack b4 b10)\n'), ('single', 0, '(putdown b4)\n'), ('single', 0, '(unstack b10 b7)\n'), ('single', 0, '(putdown b10)\n'), ('single', 0, '(unstack b7 b8)\n'), ('single', 0, '(putdown b7)\n'), ('single', 0, '(unstack b8 b1)\n'), ('single', 0, '(putdown b8)\n'), ('parallel', [(0, '(unstack b1 b11)\n'), (1, '(unstack b9 b6)\n')]), ('parallel', [(0, '(putdown b1)\n'), (1, '(putdown b9)\n')]), ('parallel', [(0, '(pickup b11)\n'), (1, '(pickup b6)\n')]), ('parallel', [(0, '(stack b11 b1)\n'), (1, '(stack b6 b10)\n')])]
+inf False
+[results][blocksworld][17]
+[single_agent][planning time: 1000.34][cost: 22.0]
+[multi_agent][planning_time: 68.75091011047363][cost: inf][agents: 3][optimization time 161.1697919368744]
+----------------------------------------
+Using cached single agent results
+['b10 should be on top of b9.', 'b8 should be on top of b3.']
+['./experiments_multiagent_help/run100/blocksworld/p18_1.pddl', './experiments_multiagent_help/run100/blocksworld/p18_2.pddl']
+agent1
+[info][subgoal_1][blocksworld] task 18 takes 1.43 sec, found a plan with cost 16.0
+planner successful
+validating
+validator time 0.006537914276123047
+agent2
+[info][subgoal_2][blocksworld] task 18 takes 2.67 sec, found a plan with cost 8.0
+planner successful
+validating
+validator time 0.005881786346435547
+[info][multiagent main goal][blocksworld] task 18 takes 60.13 sec, found a plan with cost 18.0
+TASK: blocksworld - 100 - 18
+merging plan 2 into initial_plan
+initial_plan [('single', 1, '(unstack b10 b2)\n'), ('single', 1, '(putdown b10)\n'), ('single', 1, '(unstack b2 b5)\n'), ('single', 1, '(putdown b2)\n'), ('single', 1, '(unstack b5 b3)\n'), ('single', 1, '(putdown b5)\n'), ('single', 1, '(unstack b3 b6)\n'), ('single', 1, '(putdown b3)\n'), ('single', 1, '(unstack b6 b7)\n'), ('single', 1, '(putdown b6)\n'), ('single', 1, '(unstack b7 b1)\n'), ('single', 1, '(putdown b7)\n'), ('single', 1, '(unstack b1 b9)\n'), ('single', 1, '(putdown b1)\n'), ('single', 1, '(pickup b10)\n'), ('single', 1, '(stack b10 b9)\n')]
+agent_plans[2] [('single', 2, '(unstack b10 b9)\n'), ('single', 2, '(putdown b10)\n'), ('single', 2, '(unstack b9 b11)\n'), ('single', 2, '(putdown b9)\n'), ('single', 2, '(unstack b11 b8)\n'), ('single', 2, '(putdown b11)\n'), ('single', 2, '(pickup b8)\n'), ('single', 2, '(stack b8 b3)\n')]
+22.0 True
+tracing optimal path, building plan object
+indices [16, 8]
+merging main agent's plan into combined plan
+agent_0_plan [('single', 0, '(pickup b10)\n'), ('single', 0, '(stack b10 b9)\n'), ('single', 0, '(pickup b6)\n'), ('single', 0, '(stack b6 b5)\n'), ('single', 0, '(pickup b7)\n'), ('single', 0, '(stack b7 b2)\n'), ('single', 0, '(unstack b8 b3)\n'), ('single', 0, '(putdown b8)\n'), ('single', 0, '(pickup b3)\n'), ('single', 0, '(stack b3 b7)\n'), ('single', 0, '(pickup b8)\n'), ('single', 0, '(stack b8 b3)\n'), ('single', 0, '(pickup b11)\n'), ('single', 0, '(stack b11 b8)\n'), ('single', 0, '(pickup b4)\n'), ('single', 0, '(stack b4 b11)\n'), ('single', 0, '(pickup b1)\n'), ('single', 0, '(stack b1 b4)\n')]
+initial_plan [('single', 0, '(unstack b10 b2)\n'), ('single', 0, '(putdown b10)\n'), ('single', 0, '(unstack b2 b5)\n'), ('single', 0, '(putdown b2)\n'), ('single', 0, '(unstack b5 b3)\n'), ('single', 0, '(putdown b5)\n'), ('single', 0, '(unstack b3 b6)\n'), ('single', 0, '(putdown b3)\n'), ('single', 0, '(unstack b6 b7)\n'), ('single', 0, '(putdown b6)\n'), ('single', 0, '(unstack b7 b1)\n'), ('single', 0, '(putdown b7)\n'), ('single', 0, '(unstack b1 b9)\n'), ('single', 0, '(putdown b1)\n'), ('single', 0, '(pickup b10)\n'), ('parallel', [(0, '(stack b10 b9)\n'), (1, '(unstack b10 b9)\n')]), ('single', 1, '(putdown b10)\n'), ('single', 1, '(unstack b9 b11)\n'), ('single', 1, '(putdown b9)\n'), ('single', 1, '(unstack b11 b8)\n'), ('single', 1, '(putdown b11)\n'), ('single', 1, '(pickup b8)\n'), ('single', 1, '(stack b8 b3)\n')]
+inf False
+[results][blocksworld][18]
+[single_agent][planning time: 969.95][cost: 30.0]
+[multi_agent][planning_time: 66.71615074157715][cost: inf][agents: 3][optimization time 9.057029962539673]
+----------------------------------------
+Using cached single agent results
+['b6 should be on top of b12.', 'b9 should be on top of b2.']
+['./experiments_multiagent_help/run100/blocksworld/p19_1.pddl', './experiments_multiagent_help/run100/blocksworld/p19_2.pddl']
+agent1
+[info][subgoal_1][blocksworld] task 19 takes 0.09 sec, found a plan with cost 4.0
+planner successful
+validating
+validator time 0.00621795654296875
+agent2
+[info][subgoal_2][blocksworld] task 19 takes 0.09 sec, found a plan with cost 6.0
+planner successful
+validating
+validator time 0.005593299865722656
+[info][multiagent main goal][blocksworld] task 19 takes 60.11 sec, found a plan with cost 24.0
+TASK: blocksworld - 100 - 19
+merging plan 2 into initial_plan
+initial_plan [('single', 1, '(unstack b4 b12)\n'), ('single', 1, '(putdown b4)\n'), ('single', 1, '(unstack b6 b1)\n'), ('single', 1, '(stack b6 b12)\n')]
+agent_plans[2] [('single', 2, '(unstack b6 b12)\n'), ('single', 2, '(putdown b6)\n'), ('single', 2, '(unstack b12 b9)\n'), ('single', 2, '(putdown b12)\n'), ('single', 2, '(pickup b9)\n'), ('single', 2, '(stack b9 b2)\n')]
+8.0 True
+tracing optimal path, building plan object
+indices [4, 6]
+merging main agent's plan into combined plan
+agent_0_plan [('single', 0, '(unstack b9 b2)\n'), ('single', 0, '(putdown b9)\n'), ('single', 0, '(unstack b2 b5)\n'), ('single', 0, '(putdown b2)\n'), ('single', 0, '(unstack b3 b8)\n'), ('single', 0, '(putdown b3)\n'), ('single', 0, '(pickup b9)\n'), ('single', 0, '(stack b9 b2)\n'), ('single', 0, '(pickup b8)\n'), ('single', 0, '(stack b8 b3)\n'), ('single', 0, '(unstack b5 b7)\n'), ('single', 0, '(stack b5 b12)\n'), ('single', 0, '(unstack b7 b10)\n'), ('single', 0, '(stack b7 b4)\n'), ('single', 0, '(unstack b10 b11)\n'), ('single', 0, '(stack b10 b8)\n'), ('single', 0, '(unstack b5 b12)\n'), ('single', 0, '(stack b5 b10)\n'), ('single', 0, '(pickup b11)\n'), ('single', 0, '(stack b11 b7)\n'), ('single', 0, '(pickup b12)\n'), ('single', 0, '(stack b12 b11)\n'), ('single', 0, '(pickup b6)\n'), ('single', 0, '(stack b6 b12)\n')]
+initial_plan [('single', 0, '(unstack b4 b12)\n'), ('single', 0, '(putdown b4)\n'), ('single', 0, '(unstack b6 b1)\n'), ('parallel', [(0, '(stack b6 b12)\n'), (1, '(unstack b6 b12)\n')]), ('single', 1, '(putdown b6)\n'), ('single', 1, '(unstack b12 b9)\n'), ('single', 1, '(putdown b12)\n'), ('single', 1, '(pickup b9)\n'), ('single', 1, '(stack b9 b2)\n')]
+inf False
+[results][blocksworld][19]
+[single_agent][planning time: 958.85][cost: 24.0]
+[multi_agent][planning_time: 63.294727125167846][cost: inf][agents: 3][optimization time 0.2717571258544922]
+----------------------------------------
+Using cached single agent results
+['b5 should be on top of b3 and all hands are empty.', 'b11 should be on top of b12 and all hands are empty.']
+['./experiments_multiagent_help/run100/blocksworld/p20_1.pddl', './experiments_multiagent_help/run100/blocksworld/p20_2.pddl']
+agent1
+[info][subgoal_1][blocksworld] task 20 takes 0.14 sec, found a plan with cost 8.0
+planner successful
+validating
+validator time 0.006251096725463867
+agent2
+[info][subgoal_2][blocksworld] task 20 takes 8.44 sec, found a plan with cost 10.0
+planner successful
+validating
+validator time 0.0060307979583740234
+[info][multiagent main goal][blocksworld] task 20 takes 60.12 sec, found a plan with cost 20.0
+TASK: blocksworld - 100 - 20
+merging plan 2 into initial_plan
+initial_plan [('single', 1, '(unstack b11 b4)\n'), ('single', 1, '(putdown b11)\n'), ('single', 1, '(unstack b4 b10)\n'), ('single', 1, '(putdown b4)\n'), ('single', 1, '(unstack b10 b3)\n'), ('single', 1, '(putdown b10)\n'), ('single', 1, '(unstack b5 b8)\n'), ('single', 1, '(stack b5 b3)\n')]
+agent_plans[2] [('single', 2, '(unstack b5 b3)\n'), ('single', 2, '(putdown b5)\n'), ('single', 2, '(unstack b3 b9)\n'), ('single', 2, '(putdown b3)\n'), ('single', 2, '(unstack b9 b1)\n'), ('single', 2, '(putdown b9)\n'), ('single', 2, '(unstack b1 b12)\n'), ('single', 2, '(putdown b1)\n'), ('single', 2, '(pickup b11)\n'), ('single', 2, '(stack b11 b12)\n')]
+16.0 True
+tracing optimal path, building plan object
+indices [8, 10]
+Traceback (most recent call last):
+  File "/Users/david/Desktop/multiagent_helper_llmp/helper_script_n_agents.py", line 327, in <module>
+    plan_length, success = planner.validator_simulation_recursive(path, log_file)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/david/Desktop/multiagent_helper_llmp/modules/planner.py", line 265, in validator_simulation_recursive
+    initial_plan = trace_optimal_path(execution_state, (initial_plan, next_agent_plan), log_file)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/david/Desktop/multiagent_helper_llmp/modules/planner.py", line 545, in trace_optimal_path
+    
+KeyboardInterrupt
