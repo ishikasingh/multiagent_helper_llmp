@@ -245,7 +245,9 @@ def validator_simulation_recursive(expt_path, logfile, multi=False):
 
     # Start with agent 1's plan
     initial_plan = [('single', 1, agent_plans[1][i]) for i in range(len(agent_plans[1]))]
-    print("initial_plan", initial_plan)
+    print("Initial Plan (Agent 1):")
+    print(plan_tostring(initial_plan))
+    print()
 
     # First merge plans 2 through n
     for i in range(2, args.num_agents):
@@ -258,12 +260,13 @@ def validator_simulation_recursive(expt_path, logfile, multi=False):
                                 tuple([0] * 2), (tuple(initial_plan), tuple(next_agent_plan)),
                                 tuple([task] * 2))
         success = cost < float('inf')
+
         print(cost, success)
         
         if not success:
+            print("Merge failed - no valid solution found")
             return float('inf'), False
             
-        print("constructed optimal plan from merge")
         initial_plan = merged_plan
 
         # Validate the entire plan as before.
@@ -279,16 +282,22 @@ def validator_simulation_recursive(expt_path, logfile, multi=False):
                     f.write(action[2])
         output = subprocess.run(["./downward/validate", "-v", domain_pddl_file, task_pddl_file, plan_path],
                                   capture_output=True, text=True)
-        print(output)
         with open(val_path, 'w') as f:
             f.write(output.stdout)
-        print("plan validated?")
+        if 'unsatisfied precondition' in output.stdout:
+            print("unsatisfied precondition encountered in merged plan, stopping process.")
+            print(output.stdout)
+            return float('inf'), False
 
     # Finally merge with agent 0's plan
     print("merging main agent's plan into combined plan")
     agent_0_plan = [('single', 0, agent_plans[0][j]) for j in range(len(agent_plans[0]))]
-    print("agent_0_plan", agent_0_plan)
-    print("initial_plan", initial_plan)
+    print("\nMain Agent's Plan:")
+    print(plan_tostring(agent_0_plan))
+    print("\nCurrent Combined Plan:")
+    print(plan_tostring(initial_plan))
+    print()
+    
     dp_cache = {}
     cost, merged_plan = validator_sim_recursion_function(expt_path, domain_pddl_file,
                                 tuple([0] * 2), (tuple(initial_plan), tuple(agent_0_plan)),
@@ -297,8 +306,12 @@ def validator_simulation_recursive(expt_path, logfile, multi=False):
     print(cost, success)
     
     if success:
-        print("constructed final optimal plan")
+        print("\nFinal Merged Plan:")
+        print(plan_tostring(merged_plan))
+        print(f"\nTotal Cost: {cost}")
         initial_plan = merged_plan
+    else:
+        print("Final merge failed - no valid solution found")
     
     return cost, success
 
@@ -315,7 +328,7 @@ def validator_sim_recursion_function(expt_path, domain_pddl_file, indices, agent
     if all(indices[i] == len(agent_plans[i]) for i in range(num_agents)):
         return (0, [])
     if agent_to_execute is not None:
-        print("executing agent", agent_to_execute)
+        # print("executing agent", agent_to_execute)
         result = execute_agent_action(expt_path, domain_pddl_file, indices, agent_plans, agent_tasks, agent_to_execute)
         dp_cache[state_key] = result
         return result
@@ -347,15 +360,15 @@ def execute_agent_action(expt_path, domain_pddl_file, indices, agent_plans, agen
     # Handle plan flattening
     with open(plan_path, 'w') as f:
         if isinstance(current_action, tuple) and current_action[0] == 'parallel':
-            print("unwrapping parallel action")
+            # print("unwrapping parallel action")
             current_action_str = flatten_plan(current_action[1])
             f.write(current_action_str)
         elif current_action[0] == 'single':
-            print("writing single agent plan", current_action[2])
+            # print("writing single agent plan", current_action[2])
             current_action_str = current_action[2]
             f.write(current_action_str)
         else:
-            print("invalid action", current_action)
+            # print("invalid action", current_action)
             return (float('inf'), [])
 
     # Validate action
@@ -391,7 +404,7 @@ def execute_agent_action(expt_path, domain_pddl_file, indices, agent_plans, agen
                                                 agent_to_execute=None)
         return (child_cost + 1, [('single', agent_to_execute, current_action_str)] + child_plan)
     else:
-        print("unsatisfied precondition encountered for action", current_action)
+        # print("unsatisfied precondition encountered for action", current_action)
         return (float('inf'), [])
 
 def execute_all_agents_action(expt_path, domain_pddl_file, indices, agent_plans, agent_tasks):
@@ -425,7 +438,7 @@ def execute_all_agents_action(expt_path, domain_pddl_file, indices, agent_plans,
                 with open(val_paths[i], 'w') as f:
                     f.write(output.stdout)
                 if 'unsatisfied precondition' in output.stdout:
-                    print("unsatisfied precondition encountered for action", current_action)
+                    # print("unsatisfied precondition encountered for action", current_action)
                     temp_all_valid = False
                     break
                 parallel_actions.append((i, current_action_str))
@@ -471,6 +484,37 @@ def flatten_plan(plan):
     out = ""
     for i in range(len(plan)):
         out += str(plan[i][1])
-    print("flattened plan")
-    print(out)
+    # print("flattened plan")
+    # print(out)
     return out
+
+def plan_tostring(plan):
+    lines = []
+    step_number = 1
+
+    for action in plan:
+        action_type = action[0]
+
+        if action_type == 'single':
+            # action also holds an agent index and an action string.
+            agent_index = action[1]
+            action_str = action[2].strip()
+            # Check if the action string contains multiple steps (separated by newlines)
+            subactions = [line.strip() for line in action_str.split('\n') if line.strip()]
+            if len(subactions) > 1:
+                lines.append(f"{step_number} (Parallel, derived from single action with multiple steps):")
+                for subaction in subactions:
+                    lines.append(f"  Agent {agent_index}: {subaction}")
+            else:
+                lines.append(f"{step_number} (Single): Agent {agent_index}: {subactions[0]}")
+        elif action_type == 'parallel':
+            # action[1] is expected to be a list of (agent_index, action_string) tuples.
+            lines.append(f"{step_number} (Parallel):")
+            for agent_index, action_str in action[1]:
+                lines.append(f"  Agent {agent_index}: {action_str.strip()}")
+        else:
+            lines.append(f"{step_number}: Unknown action format: {action}")
+
+        step_number += 1
+
+    return "\n".join(lines)
