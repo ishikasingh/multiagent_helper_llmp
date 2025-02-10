@@ -28,6 +28,9 @@ AGENT_PREDICATES = {
     "grippers-multi": ['at-robby', 'free', 'carry'],
 }
 
+# Global cache to store (cost, plan) for every state.
+dp_cache = {}
+
 def planner(expt_path, args_, subgoal_idx=-1):
 
     global args
@@ -248,83 +251,85 @@ def validator_simulation_recursive(expt_path, logfile, multi=False):
     for i in range(2, args.num_agents):
         print(f"merging plan {i} into initial_plan")
         next_agent_plan = [('single', i, agent_plans[i][j]) for j in range(len(agent_plans[i]))]
-        print("initial_plan", initial_plan)
-        print(f"agent_plans[{i}]", next_agent_plan)
-        global execution_state
-        execution_state = np.full([len(initial_plan) + 1, len(next_agent_plan) + 1, 3], float('inf'))
-        plan_length = validator_sim_recursion_function(expt_path, domain_pddl_file, tuple([0] * 2), tuple([tuple(initial_plan), tuple(next_agent_plan)]), tuple([task] * 2))
-
-        success = plan_length < float('inf')
-        plan_length = plan_length - 1 if success else float('inf')
-        print(plan_length, success)
+        # Clear the dp cache for each merge stage
+        global dp_cache
+        dp_cache = {}
+        cost, merged_plan = validator_sim_recursion_function(expt_path, domain_pddl_file,
+                                tuple([0] * 2), (tuple(initial_plan), tuple(next_agent_plan)),
+                                tuple([task] * 2))
+        success = cost < float('inf')
+        print(cost, success)
         
         if not success:
             return float('inf'), False
             
-        print("tracing optimal path, building plan object")
-        initial_plan = trace_optimal_path(execution_state, (initial_plan, next_agent_plan), log_file)
-    #TODO: need to pass in the updated init condition / task variable
+        print("constructed optimal plan from merge")
+        initial_plan = merged_plan
+
+        # Validate the entire plan as before.
+        val_path = f"./{expt_path}/agent{i}_val_final_temp.txt"
+        plan_path = f"./{expt_path}/agent{i}_plan_final_temp.txt"
+        
+        print("verifying entire plan.")
+        with open(plan_path, 'w') as f:
+            for action in initial_plan:
+                if action[0] == 'parallel':
+                    f.write(flatten_plan(action[1]))
+                else:
+                    f.write(action[2])
+        output = subprocess.run(["./downward/validate", "-v", domain_pddl_file, task_pddl_file, plan_path],
+                                  capture_output=True, text=True)
+        print(output)
+        with open(val_path, 'w') as f:
+            f.write(output.stdout)
+        print("plan validated?")
+
     # Finally merge with agent 0's plan
     print("merging main agent's plan into combined plan")
     agent_0_plan = [('single', 0, agent_plans[0][j]) for j in range(len(agent_plans[0]))]
     print("agent_0_plan", agent_0_plan)
     print("initial_plan", initial_plan)
-    execution_state = np.full([len(initial_plan) + 1, len(agent_0_plan) + 1, 3], float('inf'))
-    plan_length = validator_sim_recursion_function(expt_path, domain_pddl_file, tuple([0] * 2), tuple([tuple(initial_plan), tuple(agent_0_plan)]), tuple([task] * 2))
-    
-    # Add debugging info before visualization
-    print("Final execution state shape:", execution_state.shape)
-    print("Number of infinite values:", np.sum(execution_state == float('inf')))
-    print("Number of finite values:", np.sum(execution_state != float('inf')))
-    
-    # visualize_search_tree(execution_state, (initial_plan, agent_0_plan), f"./{expt_path}/search_tree")
-    
-    success = plan_length < float('inf')
-    plan_length = plan_length - 1 if success else float('inf')
-    print(plan_length, success)
+    dp_cache = {}
+    cost, merged_plan = validator_sim_recursion_function(expt_path, domain_pddl_file,
+                                tuple([0] * 2), (tuple(initial_plan), tuple(agent_0_plan)),
+                                tuple([task] * 2))
+    success = cost < float('inf')
+    print(cost, success)
     
     if success:
-        print("tracing optimal path, building final plan")
-        initial_plan = trace_optimal_path(execution_state, (initial_plan, agent_0_plan), log_file)
+        print("constructed final optimal plan")
+        initial_plan = merged_plan
     
-    return plan_length, success
+    return cost, success
 
 #@lru_cache(maxsize=None)
-def validator_sim_recursion_function(expt_path,domain_pddl_file, indices, agent_plans, agent_tasks, agent_to_execute=None):
-    num_agents = 2
+def validator_sim_recursion_function(expt_path, domain_pddl_file, indices, agent_plans, agent_tasks, agent_to_execute=None):
+    """
+    Recursively computes the optimal plan (as a tuple (cost, plan)) starting from the given state.
+    Each action taken (single or parallel) gets recorded in the returned plan.
+    """
+    num_agents = 2  # used in merging two plans
+    state_key = indices + (agent_to_execute if agent_to_execute is not None else num_agents,)
+    if state_key in dp_cache:
+        return dp_cache[state_key]
     if all(indices[i] == len(agent_plans[i]) for i in range(num_agents)):
-        return 0
-
-    state_index = indices + (agent_to_execute if agent_to_execute is not None else num_agents,)
-    if execution_state[state_index] != float('inf'):
-        return execution_state[state_index]
-
-    print("state_index", state_index)
+        return (0, [])
     if agent_to_execute is not None:
         print("executing agent", agent_to_execute)
         result = execute_agent_action(expt_path, domain_pddl_file, indices, agent_plans, agent_tasks, agent_to_execute)
+        dp_cache[state_key] = result
+        return result
     else:
-        plans = []
+        options = []
         for i in range(num_agents):
-            print("executing agent", i)
             if indices[i] < len(agent_plans[i]):
-                plans.append(validator_sim_recursion_function(expt_path, domain_pddl_file, indices, agent_plans, agent_tasks, i))
-        
-        print("executing all agents")
-        plans.append(execute_all_agents_action(expt_path, domain_pddl_file, indices, agent_plans, agent_tasks))
-
-        result = 1 + min(plans)
-
-    execution_state[state_index] = result
-    return result
-
-def flatten_plan(plan):
-    out = ""
-    for i in range(len(plan)):
-        out += str(plan[i][1])
-    print("flattened plan")
-    print(out)
-    return out
+                res = validator_sim_recursion_function(expt_path, domain_pddl_file, indices, agent_plans, agent_tasks, i)
+                options.append(res)
+        res_all = execute_all_agents_action(expt_path, domain_pddl_file, indices, agent_plans, agent_tasks)
+        options.append(res_all)
+        best = min(options, key=lambda x: x[0])
+        dp_cache[state_key] = best
+        return best
 
 def execute_agent_action(expt_path, domain_pddl_file, indices, agent_plans, agent_tasks, agent_to_execute):
     current_action = agent_plans[agent_to_execute][indices[agent_to_execute]]
@@ -343,25 +348,26 @@ def execute_agent_action(expt_path, domain_pddl_file, indices, agent_plans, agen
     with open(plan_path, 'w') as f:
         if isinstance(current_action, tuple) and current_action[0] == 'parallel':
             print("unwrapping parallel action")
-            current_action = flatten_plan(current_action[1])
-            f.write(current_action)
+            current_action_str = flatten_plan(current_action[1])
+            f.write(current_action_str)
         elif current_action[0] == 'single':
             print("writing single agent plan", current_action[2])
-            f.write(current_action[2])
+            current_action_str = current_action[2]
+            f.write(current_action_str)
         else:
             print("invalid action", current_action)
-            return float('inf')
+            return (float('inf'), [])
 
     # Validate action
-    output = subprocess.run(["./downward/validate", "-v", domain_pddl_file, task_paths[agent_to_execute], plan_path], capture_output=True, text=True)
+    output = subprocess.run(["./downward/validate", "-v", domain_pddl_file, task_paths[agent_to_execute], plan_path],
+                            capture_output=True, text=True)
     with open(val_path, 'w') as f:
         f.write(output.stdout)
 
     if 'unsatisfied precondition' not in output.stdout:
         # Log successful action
         with open(log_file, 'a+') as f:
-            action_str = current_action if isinstance(current_action, tuple) and current_action[0] == 'parallel' else current_action[2]
-            f.write(f"Agent {agent_to_execute}, {indices[agent_to_execute]}, {action_str}\n")
+            f.write(f"Agent {agent_to_execute}, {indices[agent_to_execute]}, {current_action_str}\n")
 
         # Update task states for all agents
         new_task_states = list(agent_tasks).copy()
@@ -372,7 +378,7 @@ def execute_agent_action(expt_path, domain_pddl_file, indices, agent_plans, agen
                 validation_filename=val_path,
                 pddl_problem_filename=task_paths[i],
                 pddl_problem_filename_edited=new_task_path,
-                env_conds_only=(i != agent_to_execute)
+                env_conds_only=False
             )
             with open(new_task_path, 'r') as f:
                 new_task_states[i] = f.read()
@@ -380,10 +386,13 @@ def execute_agent_action(expt_path, domain_pddl_file, indices, agent_plans, agen
         # Progress to next state
         new_indices = list(indices)
         new_indices[agent_to_execute] += 1
-        return validator_sim_recursion_function(expt_path, domain_pddl_file, tuple(new_indices), agent_plans, tuple(new_task_states))
+        child_cost, child_plan = validator_sim_recursion_function(expt_path, domain_pddl_file,
+                                                tuple(new_indices), agent_plans, tuple(new_task_states),
+                                                agent_to_execute=None)
+        return (child_cost + 1, [('single', agent_to_execute, current_action_str)] + child_plan)
     else:
         print("unsatisfied precondition encountered for action", current_action)
-        return float('inf')
+        return (float('inf'), [])
 
 def execute_all_agents_action(expt_path, domain_pddl_file, indices, agent_plans, agent_tasks):
     val_paths = [f"./{expt_path}/agent{i}_val_temp.txt" for i in range(len(agent_plans))]
@@ -391,48 +400,40 @@ def execute_all_agents_action(expt_path, domain_pddl_file, indices, agent_plans,
     task_paths = [f"./{expt_path}/agent{i}_task_temp.txt" for i in range(len(agent_plans))]
     new_task_paths = [f"./{expt_path}/agent{i}_new_task_temp.txt" for i in range(len(agent_plans))]
     
-    all_valid = True
-    # Write current tasks
-    for i, task in enumerate(agent_tasks):
-        with open(task_paths[i], 'w') as f:
-            f.write(task)
-    
     orders = [[0,1], [1,0]]
-
+    best_option = (float('inf'), [])
     for order in orders:
-        print("order", order)
-        # For each agent that has a next action
+        temp_all_valid = True
+        parallel_actions = []
+        # Write current tasks
+        for i, task in enumerate(agent_tasks):
+            with open(task_paths[i], 'w') as f:
+                f.write(task)
         for i in order:
             if indices[i] < len(agent_plans[i]):
                 current_action = agent_plans[i][indices[i]]
-                
                 if isinstance(current_action, tuple) and current_action[0] == 'parallel':
-                    current_action = flatten_plan(current_action[1])
+                    current_action_str = flatten_plan(current_action[1])
                     with open(plan_paths[i], 'w') as f:
-                        f.write(current_action)
-                    
+                        f.write(current_action_str)
                 else:
                     with open(plan_paths[i], 'w') as f:
-                        f.write(current_action[2])
-                    
-                output = subprocess.run(["./downward/validate", "-v", domain_pddl_file, task_paths[i], plan_paths[i]], capture_output=True, text=True)
+                        current_action_str = current_action[2]
+                        f.write(current_action_str)
+                output = subprocess.run(["./downward/validate", "-v", domain_pddl_file, task_paths[i], plan_paths[i]],
+                                         capture_output=True, text=True)
                 with open(val_paths[i], 'w') as f:
                     f.write(output.stdout)
-                
                 if 'unsatisfied precondition' in output.stdout:
                     print("unsatisfied precondition encountered for action", current_action)
-                    all_valid = False
+                    temp_all_valid = False
                     break
-                
-                # Update environment conditions after each parallel component
+                parallel_actions.append((i, current_action_str))
                 get_updated_init_conditions_recurse(expt_path,
                     validation_filename=val_paths[i],
                     pddl_problem_filename=task_paths[i],
                     pddl_problem_filename_edited=new_task_paths[i],
                     env_conds_only=True)
-                    
-                # Update other agents' task states
-                print("updating other agents' task states")
                 for k in range(len(agent_plans)):
                     if k != i:
                         get_updated_init_conditions_recurse(expt_path,
@@ -440,193 +441,36 @@ def execute_all_agents_action(expt_path, domain_pddl_file, indices, agent_plans,
                             pddl_problem_filename=task_paths[k],
                             pddl_problem_filename_edited=new_task_paths[k],
                             env_conds_only=True)
-                        
-    if all_valid:
-        for i in range(len(agent_plans)):
-            if indices[i] < len(agent_plans[i]):
-                get_updated_init_conditions_recurse(expt_path,
-                    validation_filename=val_paths[i],
-                    pddl_problem_filename=task_paths[i],
-                    pddl_problem_filename_edited=new_task_paths[i],
-                    env_conds_only=False)
-                for j in range(len(agent_plans)):
-                    if i != j:
-                        get_updated_init_conditions_recurse(expt_path,
-                            validation_filename=val_paths[i],
-                            pddl_problem_filename=task_paths[j],
-                            pddl_problem_filename_edited=new_task_paths[j],
-                            env_conds_only=True)
-                
-        
-        new_indices = tuple(idx + 1 if idx < len(plan) else idx for idx, plan in zip(indices, agent_plans))
-        print("merging plans, all valid")
-        new_task_states = []
-        for path in task_paths:
-            with open(path, 'r') as f:
-                new_task_states.append(f.read())
-        
-        return validator_sim_recursion_function(expt_path, domain_pddl_file, new_indices, agent_plans, tuple(new_task_states))
-    else:
-        return float('inf')
-    
-def trace_optimal_path(execution_state, agent_plans, log_file):
-    # Start at goal state
-    indices = [len(plan) for plan in agent_plans]
-    print("indices", indices)
-    num_agents = 2
-    path = []
-    
-    while any(idx > 0 for idx in indices):
-        current_state = tuple(indices) + (num_agents,)
-        
-        # Try parallel first
-        prev_indices = [idx - 1 if idx > 0 else 0 for idx in indices]
-        prev_state = tuple(prev_indices) + (num_agents,)
-        
-        if prev_state in execution_state and execution_state[prev_state] != float('inf'):
-            # Record which agents actually moved
-            active_agents = []
-            for i in range(num_agents):
-                if indices[i] > prev_indices[i]:
-                    active_agents.append((i, agent_plans[i][prev_indices[i]][2]))
+        if temp_all_valid:
+            for i in range(len(agent_plans)):
+                if indices[i] < len(agent_plans[i]):
+                    get_updated_init_conditions_recurse(expt_path,
+                        validation_filename=val_paths[i],
+                        pddl_problem_filename=task_paths[i],
+                        pddl_problem_filename_edited=new_task_paths[i],
+                        env_conds_only=False)
+                    for j in range(len(agent_plans)):
+                        if i != j:
+                            get_updated_init_conditions_recurse(expt_path,
+                                validation_filename=val_paths[i],
+                                pddl_problem_filename=task_paths[j],
+                                pddl_problem_filename_edited=new_task_paths[j],
+                                env_conds_only=True)
+            new_task_states = []
+            for path in task_paths:
+                with open(path, 'r') as f:
+                    new_task_states.append(f.read())
             
-            if len(active_agents) > 1:
-                path.append(('parallel', active_agents))
-                indices = prev_indices
-                continue
-        
-        # If parallel didn't work, try single agent
-        for agent in range(num_agents):
-            if indices[agent] > 0:
-                test_indices = list(indices)
-                test_indices[agent] -= 1
-                prev_state = tuple(test_indices) + (agent,)
-                
-                if prev_state in execution_state and execution_state[prev_state] != float('inf'):
-                    path.append(('single', agent, agent_plans[agent][test_indices[agent]][2]))
-                    indices = test_indices
-                    break
-    
-    path = list(reversed(path))
-    print([action for action in path])
-    # Write the path in forward order
-    with open(log_file, 'a+') as f:
-        f.write("\nOptimal Plan Trace:\n")
-        f.write("-" * 50 + "\n")
-        
-        for action in path:
-            if action[0] == 'parallel':
-                f.write("Parallel Execution:\n")
-                for agent, plan_step in action[1]:
-                    f.write(f"  Agent {agent}: {plan_step}")
-                f.write("\n")
-            else:
-                f.write(f"Agent {action[1]}: {action[2]}")
-                f.write("\n")
-        f.write("-" * 50 + "\n")
+            new_indices = tuple(idx + 1 if idx < len(plan) else idx for idx, plan in zip(indices, agent_plans))
+            child_cost, child_plan = validator_sim_recursion_function(expt_path, domain_pddl_file, new_indices, agent_plans, tuple(new_task_states), agent_to_execute=None)
+            best_option = (child_cost + 1, [('parallel', parallel_actions)] + child_plan)
+            break  # choose the first valid order
+    return best_option
 
-    return path
-
-def visualize_search_tree(execution_state, agent_plans, output_path):
-    """
-    Visualizes the search tree including failed states to show exploration process.
-    """
-    try:
-        import graphviz
-    except ImportError:
-        print("Please install graphviz: pip install graphviz")
-        return
-
-    print(f"Visualizing search tree with shape {execution_state.shape}")
-    print(f"Agent plans lengths: {[len(plan) for plan in agent_plans]}")
-
-    dot = graphviz.Digraph(comment='Plan Merge Search Tree')
-    dot.attr(rankdir='TB')
-
-    visited = set()
-    
-    def state_to_str(indices, agent=None):
-        """Convert state indices to string representation"""
-        base = f"({indices[0]},{indices[1]})"
-        if agent is not None:
-            base += f"\nAgent:{agent}"
-        
-        # Add plan steps for better debugging
-        if indices[0] < len(agent_plans[0]):
-            base += f"\nA0: {agent_plans[0][indices[0]][2].strip()}"
-        if indices[1] < len(agent_plans[1]):
-            base += f"\nA1: {agent_plans[1][indices[1]][2].strip()}"
-        return base
-
-    def add_node(indices, agent=None):
-        """Add node to graph if not exists"""
-        node_id = f"{indices}_{agent}"
-        if node_id not in visited:
-            visited.add(node_id)
-            
-            state_value = execution_state[indices + (agent if agent is not None else 2,)]
-            
-            # Color coding based on state type
-            if all(idx >= len(plan) for idx, plan in zip(indices, agent_plans)):
-                color = 'lightgreen'  # Goal state
-            elif state_value == float('inf'):
-                color = 'lightpink'  # Failed state
-            else:
-                color = 'lightblue'  # Valid state
-            
-            label = f"{state_to_str(indices, agent)}\nCost: {state_value:.1f}"
-            dot.node(node_id, label, style='filled', fillcolor=color)
-        return node_id
-
-    # Add all possible states and transitions
-    for i in range(execution_state.shape[0]):
-        for j in range(execution_state.shape[1]):
-            current_indices = (i, j)
-            current_node = add_node(current_indices, 2)  # Add parallel state
-            
-            # Add possible next states for parallel execution
-            if i < len(agent_plans[0]) or j < len(agent_plans[1]):
-                next_indices = (
-                    min(i + 1, len(agent_plans[0])),
-                    min(j + 1, len(agent_plans[1]))
-                )
-                next_node = add_node(next_indices, 2)
-                cost = execution_state[i, j, 2]
-                dot.edge(current_node, next_node, 
-                        f'parallel\ncost: {cost:.1f}',
-                        color='red' if cost == float('inf') else 'black')
-
-            # Add possible next states for individual agents
-            for agent in range(2):
-                current_node = add_node(current_indices, agent)
-                if (agent == 0 and i < len(agent_plans[0])) or \
-                   (agent == 1 and j < len(agent_plans[1])):
-                    next_indices = list(current_indices)
-                    next_indices[agent] += 1
-                    next_node = add_node(tuple(next_indices), agent)
-                    cost = execution_state[i, j, agent]
-                    
-                    # Safely get action string
-                    try:
-                        action = agent_plans[agent][current_indices[agent]]
-                        action_str = action[2].strip() if isinstance(action, tuple) and len(action) >= 3 else str(action)
-                    except Exception as e:
-                        action_str = "ERROR"
-                        print(f"Error getting action string: {e}")
-                    
-                    dot.edge(current_node, next_node,
-                            f'A{agent}:{action_str}\ncost: {cost:.1f}',
-                            color='red' if cost == float('inf') else 'black')
-
-    # Save the visualization
-    try:
-        dot.render(output_path, view=True, format='pdf', cleanup=True)
-        print(f"Successfully rendered graph to {output_path}.pdf")
-    except Exception as e:
-        print(f"Error rendering graph: {e}")
-
-    # Print some debugging info about the graph
-    print(f"Total nodes created: {len(visited)}")
-    print("Sample of agent plans:")
-    print(f"Agent 0 first action: {agent_plans[0][0] if len(agent_plans[0]) > 0 else 'None'}")
-    print(f"Agent 1 first action: {agent_plans[1][0] if len(agent_plans[1]) > 0 else 'None'}")
+def flatten_plan(plan):
+    out = ""
+    for i in range(len(plan)):
+        out += str(plan[i][1])
+    print("flattened plan")
+    print(out)
+    return out

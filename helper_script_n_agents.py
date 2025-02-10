@@ -56,7 +56,7 @@ def get_helper_subgoal_without_plan(expt_path, args, log_file):
     shot1 contains cocktail1. shot2 contains cocktail2. 
     '''
     
-    if args.domain == 'tyreworld' or args.domain == 'grippers':
+    if args.domain == 'tyreworld' or args.domain == 'grippers' or args.domain == 'blocksworld':
         prompt_text += '''
         A possible agent1 subgoal looking at how the domain works based on the plan example provided for another task in this domain could be - 
         agent1 subgoals: It can independently prepare cocktail1 using shot3 and shaker1. The agent will grasp shot3, fill it with ingredients, pour to shaker, shake the cocktail, and pour it to the target glass. All actions can be done while agent0 works with other containers. Therefore, agent1's clearly stated (with object names) complete and final goal condition is: contains shot1 cocktail1.
