@@ -1,0 +1,114 @@
+Domain: termes
+Success rate: 0.00% (0/20)
+Results:
+  [results][termes][01]
+  [single_agent][planning time: 28.84][cost: 36.0]
+  [multi_agent][planning_time: 43.44528474807739][cost: inf][agents: 4][optimization time 14.222046136856079]
+  Success: No (Inf cost)
+
+  [results][termes][02]
+  [single_agent][planning time: 194.87][cost: 54.0]
+  [multi_agent][planning_time: 277.6879108428955][cost: 119.0][agents: 3][optimization time 117.32841777801514]
+  Success: No
+
+  [results][termes][03]
+  [single_agent][planning time: 1000.06][cost: 68.0]
+  [multi_agent][planning_time: 262.4367534160614][cost: 104.0][agents: 4][optimization time 112.83067440986633]
+  Success: No
+
+  [results][termes][04]
+  [single_agent][planning time: 955.4][cost: 80.0]
+  [multi_agent][planning_time: 271.12692013740536][cost: inf][agents: 3][optimization time 46.47040605545044]
+  Success: No (Inf cost)
+
+  [results][termes][05]
+  [single_agent][planning time: 1000.17][cost: 136.0]
+  [multi_agent][planning_time: 313.5202781867981][cost: inf][agents: 4][optimization time 42.351645946502686]
+  Success: No (Inf cost)
+
+  [results][termes][06]
+  [single_agent][planning time: 1000.16][cost: 172.0]
+  [multi_agent][planning_time: 756.4216041469574][cost: inf][agents: 3][optimization time 55.93531107902527]
+  Success: No (Inf cost)
+
+  [results][termes][07]
+  [single_agent][planning time: 1000.18][cost: 56.0]
+  [multi_agent][planning_time: 285.25712188720706][cost: 113.0][agents: 4][optimization time 33.5209858417511]
+  Success: No
+
+  [results][termes][08]
+  [single_agent][planning time: 1000.25][cost: 64.0]
+  [multi_agent][planning_time: 534.8578966236115][cost: inf][agents: 3][optimization time 8.575933933258057]
+  Success: No (Inf cost)
+
+  [results][termes][09]
+  [single_agent][planning time: 1000.2][cost: 100.0]
+  [multi_agent][planning_time: 271.2109217357635][cost: 156.0][agents: 4][optimization time 27.164361000061035]
+  Success: No
+
+  [results][termes][10]
+  [single_agent][planning time: 1000.3][cost: 76.0]
+  [multi_agent][planning_time: 376.4443367862701][cost: inf][agents: 3][optimization time 195.6469156742096]
+  Success: No (Inf cost)
+
+  [results][termes][11]
+  [single_agent][planning time: 522.23][cost: 66.0]
+  [multi_agent][planning_time: 63.92765007972717][cost: inf][agents: 4][optimization time 31.952125310897827]
+  Success: No (Inf cost)
+
+  [results][termes][12]
+  [single_agent][planning time: 73.53][cost: 46.0]
+  [multi_agent][planning_time: 59.99534998893738][cost: 78.0][agents: 4][optimization time 21.44072699546814]
+  Success: No
+
+  [results][termes][13]
+  [single_agent][planning time: 1000.21][cost: 92.0]
+  [multi_agent][planning_time: 150.0714519119263][cost: inf][agents: 4][optimization time 5.037602424621582]
+  Success: No (Inf cost)
+
+  [results][termes][14]
+  [single_agent][planning time: 1000.21][cost: 104.0]
+  [multi_agent][planning_time: 356.44216604232787][cost: inf][agents: 4][optimization time 7.519637584686279]
+  Success: No (Inf cost)
+
+  [results][termes][15]
+  [single_agent][planning time: 1000.16][cost: 146.0]
+  [multi_agent][planning_time: 507.4874897289276][cost: inf][agents: 4][optimization time 3.6218998432159424]
+  Success: No (Inf cost)
+
+  [results][termes][16]
+  [single_agent][planning time: 1000.2][cost: 154.0]
+  [multi_agent][planning_time: 527.5947175979613][cost: inf][agents: 4][optimization time 10.62650442123413]
+  Success: No (Inf cost)
+
+  [results][termes][17]
+  [single_agent][planning time: 1000.16][cost: 116.0]
+  [multi_agent][planning_time: 265.9086339664459][cost: inf][agents: 4][optimization time 4.985450267791748]
+  Success: No (Inf cost)
+
+  [results][termes][18]
+  [single_agent][planning time: 490.77][cost: 76.0]
+  [multi_agent][planning_time: 258.2059753131866][cost: inf][agents: 4][optimization time 2.701637029647827]
+  Success: No (Inf cost)
+
+  [results][termes][19]
+  [single_agent][planning time: 1000.24][cost: 94.0]
+  [multi_agent][planning_time: 258.9623386955261][cost: inf][agents: 4][optimization time 2.9687840938568115]
+  Success: No (Inf cost)
+
+  [results][termes][20]
+  [single_agent][planning time: 1000.26][cost: 106.0]
+  [multi_agent][planning_time: 257.79074907302856][cost: inf][agents: 4][optimization time 9.026488304138184]
+  Success: No (Inf cost)
+
+----------------------------------------
+
+Domain Averages:
+Domain: termes
+  Single Agent:
+    Average Cost: 92.10
+    Average Planning Time: 813.42 sec
+  Multi Agent:
+    Average Cost: 114.00
+    Average Planning Time: 304.94 sec
+

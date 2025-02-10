@@ -1,0 +1,4614 @@
+Using cached single agent results
+LLM generated no subgoal for agent 2, reducing number of agents
+args.num_agents: 2
+['inflate r1']
+['./experiments_multiagent_help/run4033/tyreworld/p01_1.pddl']
+agent1
+[info][subgoal_1][tyreworld] task 01 takes 0.22 sec, found a plan with cost 1.0
+planner successful
+validating
+validator time 0.031172513961791992
+[info][multiagent main goal][tyreworld] task 01 takes 0.26 sec, found a plan with cost 12.0
+TASK: tyreworld - 4033 - 01
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (inflate r1)
+
+merging main agent's plan into combined plan
+
+Main Agent's Plan:
+1 (Single): Agent 0: (loosen nuts1 the-hub1)
+2 (Single): Agent 0: (jack-up the-hub1)
+3 (Single): Agent 0: (undo nuts1 the-hub1)
+4 (Single): Agent 0: (remove-wheel w1 the-hub1)
+5 (Single): Agent 0: (open boot)
+6 (Single): Agent 0: (fetch r1 boot)
+7 (Single): Agent 0: (put-on-wheel r1 the-hub1)
+8 (Single): Agent 0: (do-up nuts1 the-hub1)
+9 (Single): Agent 0: (jack-down the-hub1)
+10 (Single): Agent 0: (tighten nuts1 the-hub1)
+11 (Single): Agent 0: (put-away w1 boot)
+12 (Single): Agent 0: (close boot)
+
+Current Combined Plan:
+1 (Single): Agent 1: (inflate r1)
+
+12 True
+
+Final Merged Plan:
+1 (Single): Agent 1: (loosen nuts1 the-hub1)
+2 (Single): Agent 1: (jack-up the-hub1)
+3 (Single): Agent 1: (undo nuts1 the-hub1)
+4 (Single): Agent 1: (remove-wheel w1 the-hub1)
+5 (Single): Agent 1: (open boot)
+6 (Single): Agent 1: (fetch r1 boot)
+7 (Single): Agent 1: (put-on-wheel r1 the-hub1)
+8 (Single): Agent 1: (do-up nuts1 the-hub1)
+9 (Single): Agent 1: (jack-down the-hub1)
+10 (Single): Agent 1: (tighten nuts1 the-hub1)
+11 (Single): Agent 1: (put-away w1 boot)
+12 (Parallel):
+  Agent 0: (inflate r1)
+  Agent 1: (close boot)
+
+Total Cost: 12
+[results][tyreworld][01]
+[single_agent][planning time: 0.11][cost: 13.0]
+[multi_agent][planning_time: 2.0598966884613037][cost: 12.0][agents: 2][optimization time 22.33235788345337]
+----------------------------------------
+Using cached single agent results
+LLM generated no subgoal for agent 3, reducing number of agents
+args.num_agents: 3
+['inflate all intact tyres', 'put-away all flat tyres in the boot']
+['./experiments_multiagent_help/run4033/tyreworld/p02_1.pddl', './experiments_multiagent_help/run4033/tyreworld/p02_2.pddl']
+agent1
+[info][subgoal_1][tyreworld] task 02 takes 0.32 sec, found a plan with cost 9.0
+planner successful
+validating
+validator time 0.04973864555358887
+agent2
+[info][subgoal_2][tyreworld] task 02 takes 200.38 sec, found a plan with cost 46.0
+planner successful
+validating
+validator time 0.01788949966430664
+[info][multiagent main goal][tyreworld] task 02 takes 200.21 sec, found a plan with cost 46.0
+TASK: tyreworld - 4033 - 02
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (inflate r9)
+2 (Single): Agent 1: (inflate r8)
+3 (Single): Agent 1: (inflate r7)
+4 (Single): Agent 1: (inflate r6)
+5 (Single): Agent 1: (inflate r5)
+6 (Single): Agent 1: (inflate r4)
+7 (Single): Agent 1: (inflate r3)
+8 (Single): Agent 1: (inflate r2)
+9 (Single): Agent 1: (inflate r1)
+
+merging plan 2 into initial_plan
+46 True
+verifying entire plan.
+merging main agent's plan into combined plan
+
+Main Agent's Plan:
+1 (Single): Agent 0: (fetch r1 boot)
+2 (Single): Agent 0: (put-on-wheel r1 the-hub1)
+3 (Single): Agent 0: (do-up nuts1 the-hub1)
+4 (Single): Agent 0: (jack-down the-hub1)
+5 (Single): Agent 0: (tighten nuts1 the-hub1)
+6 (Single): Agent 0: (fetch r2 boot)
+7 (Single): Agent 0: (put-on-wheel r2 the-hub2)
+8 (Single): Agent 0: (do-up nuts2 the-hub2)
+9 (Single): Agent 0: (jack-down the-hub2)
+10 (Single): Agent 0: (tighten nuts2 the-hub2)
+11 (Single): Agent 0: (fetch r3 boot)
+12 (Single): Agent 0: (put-on-wheel r3 the-hub3)
+13 (Single): Agent 0: (do-up nuts3 the-hub3)
+14 (Single): Agent 0: (jack-down the-hub3)
+15 (Single): Agent 0: (tighten nuts3 the-hub3)
+16 (Single): Agent 0: (fetch r4 boot)
+17 (Single): Agent 0: (put-on-wheel r4 the-hub4)
+18 (Single): Agent 0: (do-up nuts4 the-hub4)
+19 (Single): Agent 0: (jack-down the-hub4)
+20 (Single): Agent 0: (tighten nuts4 the-hub4)
+21 (Single): Agent 0: (fetch r5 boot)
+22 (Single): Agent 0: (put-on-wheel r5 the-hub5)
+23 (Single): Agent 0: (do-up nuts5 the-hub5)
+24 (Single): Agent 0: (jack-down the-hub5)
+25 (Single): Agent 0: (tighten nuts5 the-hub5)
+26 (Single): Agent 0: (fetch r6 boot)
+27 (Single): Agent 0: (put-on-wheel r6 the-hub6)
+28 (Single): Agent 0: (do-up nuts6 the-hub6)
+29 (Single): Agent 0: (jack-down the-hub6)
+30 (Single): Agent 0: (tighten nuts6 the-hub6)
+31 (Single): Agent 0: (fetch r7 boot)
+32 (Single): Agent 0: (put-on-wheel r7 the-hub7)
+33 (Single): Agent 0: (do-up nuts7 the-hub7)
+34 (Single): Agent 0: (jack-down the-hub7)
+35 (Single): Agent 0: (tighten nuts7 the-hub7)
+36 (Single): Agent 0: (fetch r8 boot)
+37 (Single): Agent 0: (put-on-wheel r8 the-hub8)
+38 (Single): Agent 0: (do-up nuts8 the-hub8)
+39 (Single): Agent 0: (jack-down the-hub8)
+40 (Single): Agent 0: (tighten nuts8 the-hub8)
+41 (Single): Agent 0: (fetch r9 boot)
+42 (Single): Agent 0: (put-on-wheel r9 the-hub9)
+43 (Single): Agent 0: (do-up nuts9 the-hub9)
+44 (Single): Agent 0: (jack-down the-hub9)
+45 (Single): Agent 0: (tighten nuts9 the-hub9)
+46 (Single): Agent 0: (close boot)
+
+Current Combined Plan:
+1 (Single): Agent 1: (loosen nuts9 the-hub9)
+2 (Single): Agent 1: (jack-up the-hub9)
+3 (Single): Agent 1: (undo nuts9 the-hub9)
+4 (Single): Agent 1: (remove-wheel w9 the-hub9)
+5 (Single): Agent 1: (loosen nuts8 the-hub8)
+6 (Single): Agent 1: (jack-up the-hub8)
+7 (Single): Agent 1: (undo nuts8 the-hub8)
+8 (Single): Agent 1: (remove-wheel w8 the-hub8)
+9 (Single): Agent 1: (loosen nuts7 the-hub7)
+10 (Single): Agent 1: (jack-up the-hub7)
+11 (Single): Agent 1: (undo nuts7 the-hub7)
+12 (Single): Agent 1: (remove-wheel w7 the-hub7)
+13 (Single): Agent 1: (loosen nuts6 the-hub6)
+14 (Single): Agent 1: (jack-up the-hub6)
+15 (Single): Agent 1: (undo nuts6 the-hub6)
+16 (Single): Agent 1: (remove-wheel w6 the-hub6)
+17 (Single): Agent 1: (loosen nuts5 the-hub5)
+18 (Single): Agent 1: (jack-up the-hub5)
+19 (Single): Agent 1: (undo nuts5 the-hub5)
+20 (Single): Agent 1: (remove-wheel w5 the-hub5)
+21 (Single): Agent 1: (loosen nuts4 the-hub4)
+22 (Single): Agent 1: (jack-up the-hub4)
+23 (Single): Agent 1: (undo nuts4 the-hub4)
+24 (Single): Agent 1: (remove-wheel w4 the-hub4)
+25 (Single): Agent 1: (loosen nuts3 the-hub3)
+26 (Single): Agent 1: (jack-up the-hub3)
+27 (Single): Agent 1: (undo nuts3 the-hub3)
+28 (Single): Agent 1: (remove-wheel w3 the-hub3)
+29 (Single): Agent 1: (loosen nuts2 the-hub2)
+30 (Single): Agent 1: (jack-up the-hub2)
+31 (Single): Agent 1: (undo nuts2 the-hub2)
+32 (Single): Agent 1: (remove-wheel w2 the-hub2)
+33 (Single): Agent 1: (loosen nuts1 the-hub1)
+34 (Single): Agent 1: (jack-up the-hub1)
+35 (Single): Agent 1: (undo nuts1 the-hub1)
+36 (Single): Agent 1: (remove-wheel w1 the-hub1)
+37 (Single): Agent 1: (open boot)
+38 (Parallel):
+  Agent 0: (inflate r9)
+  Agent 1: (put-away w1 boot)
+39 (Parallel):
+  Agent 0: (inflate r8)
+  Agent 1: (put-away w2 boot)
+40 (Parallel):
+  Agent 0: (inflate r7)
+  Agent 1: (put-away w3 boot)
+41 (Parallel):
+  Agent 0: (inflate r6)
+  Agent 1: (put-away w4 boot)
+42 (Parallel):
+  Agent 0: (inflate r5)
+  Agent 1: (put-away w5 boot)
+43 (Parallel):
+  Agent 0: (inflate r4)
+  Agent 1: (put-away w6 boot)
+44 (Parallel):
+  Agent 0: (inflate r3)
+  Agent 1: (put-away w7 boot)
+45 (Parallel):
+  Agent 0: (inflate r2)
+  Agent 1: (put-away w8 boot)
+46 (Parallel):
+  Agent 0: (inflate r1)
+  Agent 1: (put-away w9 boot)
+
+83 True
+
+Final Merged Plan:
+1 (Single): Agent 0: (loosen nuts9 the-hub9)
+2 (Single): Agent 0: (jack-up the-hub9)
+3 (Single): Agent 0: (undo nuts9 the-hub9)
+4 (Single): Agent 0: (remove-wheel w9 the-hub9)
+5 (Single): Agent 0: (loosen nuts8 the-hub8)
+6 (Single): Agent 0: (jack-up the-hub8)
+7 (Single): Agent 0: (undo nuts8 the-hub8)
+8 (Single): Agent 0: (remove-wheel w8 the-hub8)
+9 (Single): Agent 0: (loosen nuts7 the-hub7)
+10 (Single): Agent 0: (jack-up the-hub7)
+11 (Single): Agent 0: (undo nuts7 the-hub7)
+12 (Single): Agent 0: (remove-wheel w7 the-hub7)
+13 (Single): Agent 0: (loosen nuts6 the-hub6)
+14 (Single): Agent 0: (jack-up the-hub6)
+15 (Single): Agent 0: (undo nuts6 the-hub6)
+16 (Single): Agent 0: (remove-wheel w6 the-hub6)
+17 (Single): Agent 0: (loosen nuts5 the-hub5)
+18 (Single): Agent 0: (jack-up the-hub5)
+19 (Single): Agent 0: (undo nuts5 the-hub5)
+20 (Single): Agent 0: (remove-wheel w5 the-hub5)
+21 (Single): Agent 0: (loosen nuts4 the-hub4)
+22 (Single): Agent 0: (jack-up the-hub4)
+23 (Single): Agent 0: (undo nuts4 the-hub4)
+24 (Single): Agent 0: (remove-wheel w4 the-hub4)
+25 (Single): Agent 0: (loosen nuts3 the-hub3)
+26 (Single): Agent 0: (jack-up the-hub3)
+27 (Single): Agent 0: (undo nuts3 the-hub3)
+28 (Single): Agent 0: (remove-wheel w3 the-hub3)
+29 (Single): Agent 0: (loosen nuts2 the-hub2)
+30 (Single): Agent 0: (jack-up the-hub2)
+31 (Single): Agent 0: (undo nuts2 the-hub2)
+32 (Single): Agent 0: (remove-wheel w2 the-hub2)
+33 (Single): Agent 0: (loosen nuts1 the-hub1)
+34 (Single): Agent 0: (jack-up the-hub1)
+35 (Single): Agent 0: (undo nuts1 the-hub1)
+36 (Single): Agent 0: (remove-wheel w1 the-hub1)
+37 (Single): Agent 0: (open boot)
+38 (Single): Agent 1: (fetch r1 boot)
+39 (Single): Agent 1: (put-on-wheel r1 the-hub1)
+40 (Single): Agent 1: (do-up nuts1 the-hub1)
+41 (Single): Agent 1: (jack-down the-hub1)
+42 (Single): Agent 1: (tighten nuts1 the-hub1)
+43 (Single): Agent 1: (fetch r2 boot)
+44 (Single): Agent 1: (put-on-wheel r2 the-hub2)
+45 (Single): Agent 1: (do-up nuts2 the-hub2)
+46 (Single): Agent 1: (jack-down the-hub2)
+47 (Single): Agent 1: (tighten nuts2 the-hub2)
+48 (Single): Agent 1: (fetch r3 boot)
+49 (Single): Agent 1: (put-on-wheel r3 the-hub3)
+50 (Single): Agent 1: (do-up nuts3 the-hub3)
+51 (Single): Agent 1: (jack-down the-hub3)
+52 (Single): Agent 1: (tighten nuts3 the-hub3)
+53 (Single): Agent 1: (fetch r4 boot)
+54 (Single): Agent 1: (put-on-wheel r4 the-hub4)
+55 (Single): Agent 1: (do-up nuts4 the-hub4)
+56 (Single): Agent 1: (jack-down the-hub4)
+57 (Single): Agent 1: (tighten nuts4 the-hub4)
+58 (Single): Agent 1: (fetch r5 boot)
+59 (Single): Agent 1: (put-on-wheel r5 the-hub5)
+60 (Single): Agent 1: (do-up nuts5 the-hub5)
+61 (Single): Agent 1: (jack-down the-hub5)
+62 (Single): Agent 1: (tighten nuts5 the-hub5)
+63 (Single): Agent 1: (fetch r6 boot)
+64 (Single): Agent 1: (put-on-wheel r6 the-hub6)
+65 (Single): Agent 1: (do-up nuts6 the-hub6)
+66 (Single): Agent 1: (jack-down the-hub6)
+67 (Single): Agent 1: (tighten nuts6 the-hub6)
+68 (Single): Agent 1: (fetch r7 boot)
+69 (Single): Agent 1: (put-on-wheel r7 the-hub7)
+70 (Single): Agent 1: (do-up nuts7 the-hub7)
+71 (Single): Agent 1: (jack-down the-hub7)
+72 (Single): Agent 1: (tighten nuts7 the-hub7)
+73 (Single): Agent 1: (fetch r8 boot)
+74 (Single): Agent 1: (put-on-wheel r8 the-hub8)
+75 (Parallel):
+  Agent 0: (inflate r9)
+(put-away w1 boot)
+  Agent 1: (do-up nuts8 the-hub8)
+76 (Parallel):
+  Agent 0: (inflate r8)
+(put-away w2 boot)
+  Agent 1: (jack-down the-hub8)
+77 (Parallel):
+  Agent 0: (inflate r7)
+(put-away w3 boot)
+  Agent 1: (tighten nuts8 the-hub8)
+78 (Parallel):
+  Agent 0: (inflate r6)
+(put-away w4 boot)
+  Agent 1: (fetch r9 boot)
+79 (Parallel):
+  Agent 0: (inflate r5)
+(put-away w5 boot)
+  Agent 1: (put-on-wheel r9 the-hub9)
+80 (Parallel):
+  Agent 0: (inflate r4)
+(put-away w6 boot)
+  Agent 1: (do-up nuts9 the-hub9)
+81 (Parallel):
+  Agent 0: (inflate r3)
+(put-away w7 boot)
+  Agent 1: (jack-down the-hub9)
+82 (Parallel):
+  Agent 0: (inflate r2)
+(put-away w8 boot)
+  Agent 1: (tighten nuts9 the-hub9)
+83 (Parallel):
+  Agent 0: (inflate r1)
+(put-away w9 boot)
+  Agent 1: (close boot)
+
+Total Cost: 83
+[results][tyreworld][02]
+[single_agent][planning time: 1007.04][cost: 101.0]
+[multi_agent][planning_time: 405.26850238800046][cost: 83.0][agents: 3][optimization time 242.41553592681885]
+----------------------------------------
+Using cached single agent results
+['inflate r1', 'inflate r2', 'inflate r3', 'inflate r3']
+['./experiments_multiagent_help/run4033/tyreworld/p03_1.pddl', './experiments_multiagent_help/run4033/tyreworld/p03_2.pddl', './experiments_multiagent_help/run4033/tyreworld/p03_3.pddl', './experiments_multiagent_help/run4033/tyreworld/p03_4.pddl']
+agent1
+[info][subgoal_1][tyreworld] task 03 takes 0.16 sec, found a plan with cost 1.0
+planner successful
+validating
+validator time 0.005872964859008789
+agent2
+[info][subgoal_2][tyreworld] task 03 takes 0.16 sec, found a plan with cost 1.0
+planner successful
+validating
+validator time 0.005853891372680664
+agent3
+[info][subgoal_3][tyreworld] task 03 takes 0.16 sec, found a plan with cost 1.0
+planner successful
+validating
+validator time 0.007836341857910156
+agent4
+[info][subgoal_4][tyreworld] task 03 takes 199.44 sec, no solution found
+planner successful
+validating
+validator time 0.09852480888366699
+[info][multiagent main goal][tyreworld] task 03 takes 200.28 sec, found a plan with cost 32.0
+TASK: tyreworld - 4033 - 03
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (inflate r1)
+
+merging plan 2 into initial_plan
+1 True
+verifying entire plan.
+merging plan 3 into initial_plan
+1 True
+verifying entire plan.
+merging plan 4 into initial_plan
+1 True
+verifying entire plan.
+merging main agent's plan into combined plan
+
+Main Agent's Plan:
+1 (Single): Agent 0: (loosen nuts3 the-hub3)
+2 (Single): Agent 0: (jack-up the-hub3)
+3 (Single): Agent 0: (undo nuts3 the-hub3)
+4 (Single): Agent 0: (remove-wheel w3 the-hub3)
+5 (Single): Agent 0: (loosen nuts2 the-hub2)
+6 (Single): Agent 0: (jack-up the-hub2)
+7 (Single): Agent 0: (undo nuts2 the-hub2)
+8 (Single): Agent 0: (remove-wheel w2 the-hub2)
+9 (Single): Agent 0: (loosen nuts1 the-hub1)
+10 (Single): Agent 0: (jack-up the-hub1)
+11 (Single): Agent 0: (undo nuts1 the-hub1)
+12 (Single): Agent 0: (remove-wheel w1 the-hub1)
+13 (Single): Agent 0: (open boot)
+14 (Single): Agent 0: (fetch r1 boot)
+15 (Single): Agent 0: (put-on-wheel r1 the-hub1)
+16 (Single): Agent 0: (fetch r2 boot)
+17 (Single): Agent 0: (put-on-wheel r2 the-hub2)
+18 (Single): Agent 0: (fetch r3 boot)
+19 (Single): Agent 0: (put-on-wheel r3 the-hub3)
+20 (Single): Agent 0: (do-up nuts3 the-hub3)
+21 (Single): Agent 0: (jack-down the-hub3)
+22 (Single): Agent 0: (tighten nuts3 the-hub3)
+23 (Single): Agent 0: (do-up nuts2 the-hub2)
+24 (Single): Agent 0: (jack-down the-hub2)
+25 (Single): Agent 0: (tighten nuts2 the-hub2)
+26 (Single): Agent 0: (do-up nuts1 the-hub1)
+27 (Single): Agent 0: (jack-down the-hub1)
+28 (Single): Agent 0: (tighten nuts1 the-hub1)
+29 (Single): Agent 0: (put-away w1 boot)
+30 (Single): Agent 0: (put-away w2 boot)
+31 (Single): Agent 0: (put-away w3 boot)
+32 (Single): Agent 0: (close boot)
+
+Current Combined Plan:
+1 (Parallel, derived from single action with multiple steps):
+  Agent 0: (inflate r1)
+  Agent 0: (inflate r2)
+  Agent 0: (inflate r3)
+
+32 True
+
+Final Merged Plan:
+1 (Single): Agent 1: (loosen nuts3 the-hub3)
+2 (Single): Agent 1: (jack-up the-hub3)
+3 (Single): Agent 1: (undo nuts3 the-hub3)
+4 (Single): Agent 1: (remove-wheel w3 the-hub3)
+5 (Single): Agent 1: (loosen nuts2 the-hub2)
+6 (Single): Agent 1: (jack-up the-hub2)
+7 (Single): Agent 1: (undo nuts2 the-hub2)
+8 (Single): Agent 1: (remove-wheel w2 the-hub2)
+9 (Single): Agent 1: (loosen nuts1 the-hub1)
+10 (Single): Agent 1: (jack-up the-hub1)
+11 (Single): Agent 1: (undo nuts1 the-hub1)
+12 (Single): Agent 1: (remove-wheel w1 the-hub1)
+13 (Single): Agent 1: (open boot)
+14 (Single): Agent 1: (fetch r1 boot)
+15 (Single): Agent 1: (put-on-wheel r1 the-hub1)
+16 (Single): Agent 1: (fetch r2 boot)
+17 (Single): Agent 1: (put-on-wheel r2 the-hub2)
+18 (Single): Agent 1: (fetch r3 boot)
+19 (Single): Agent 1: (put-on-wheel r3 the-hub3)
+20 (Single): Agent 1: (do-up nuts3 the-hub3)
+21 (Single): Agent 1: (jack-down the-hub3)
+22 (Single): Agent 1: (tighten nuts3 the-hub3)
+23 (Single): Agent 1: (do-up nuts2 the-hub2)
+24 (Single): Agent 1: (jack-down the-hub2)
+25 (Single): Agent 1: (tighten nuts2 the-hub2)
+26 (Single): Agent 1: (do-up nuts1 the-hub1)
+27 (Single): Agent 1: (jack-down the-hub1)
+28 (Single): Agent 1: (tighten nuts1 the-hub1)
+29 (Single): Agent 1: (put-away w1 boot)
+30 (Single): Agent 1: (put-away w2 boot)
+31 (Single): Agent 1: (put-away w3 boot)
+32 (Parallel):
+  Agent 0: (inflate r1)
+(inflate r2)
+(inflate r3)
+  Agent 1: (close boot)
+
+Total Cost: 32
+[results][tyreworld][03]
+[single_agent][planning time: 1006.17][cost: 35.0]
+[multi_agent][planning_time: 204.16691900253295][cost: 32.0][agents: 5][optimization time 10.449441909790039]
+----------------------------------------
+Using cached single agent results
+['inflate r1', 'inflate r2', 'inflate r3', 'inflate r4']
+['./experiments_multiagent_help/run4033/tyreworld/p04_1.pddl', './experiments_multiagent_help/run4033/tyreworld/p04_2.pddl', './experiments_multiagent_help/run4033/tyreworld/p04_3.pddl', './experiments_multiagent_help/run4033/tyreworld/p04_4.pddl']
+agent1
+[info][subgoal_1][tyreworld] task 04 takes 0.16 sec, found a plan with cost 1.0
+planner successful
+validating
+validator time 0.008150577545166016
+agent2
+[info][subgoal_2][tyreworld] task 04 takes 0.15 sec, found a plan with cost 1.0
+planner successful
+validating
+validator time 0.007859468460083008
+agent3
+[info][subgoal_3][tyreworld] task 04 takes 0.16 sec, found a plan with cost 1.0
+planner successful
+validating
+validator time 0.00824427604675293
+agent4
+[info][subgoal_4][tyreworld] task 04 takes 0.16 sec, found a plan with cost 1.0
+planner successful
+validating
+validator time 0.008149862289428711
+[info][multiagent main goal][tyreworld] task 04 takes 200.23 sec, found a plan with cost 42.0
+TASK: tyreworld - 4033 - 04
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (inflate r1)
+
+merging plan 2 into initial_plan
+1 True
+verifying entire plan.
+merging plan 3 into initial_plan
+1 True
+verifying entire plan.
+merging plan 4 into initial_plan
+1 True
+verifying entire plan.
+merging main agent's plan into combined plan
+
+Main Agent's Plan:
+1 (Single): Agent 0: (loosen nuts4 the-hub4)
+2 (Single): Agent 0: (jack-up the-hub4)
+3 (Single): Agent 0: (undo nuts4 the-hub4)
+4 (Single): Agent 0: (remove-wheel w4 the-hub4)
+5 (Single): Agent 0: (loosen nuts3 the-hub3)
+6 (Single): Agent 0: (jack-up the-hub3)
+7 (Single): Agent 0: (undo nuts3 the-hub3)
+8 (Single): Agent 0: (remove-wheel w3 the-hub3)
+9 (Single): Agent 0: (loosen nuts2 the-hub2)
+10 (Single): Agent 0: (jack-up the-hub2)
+11 (Single): Agent 0: (undo nuts2 the-hub2)
+12 (Single): Agent 0: (remove-wheel w2 the-hub2)
+13 (Single): Agent 0: (loosen nuts1 the-hub1)
+14 (Single): Agent 0: (jack-up the-hub1)
+15 (Single): Agent 0: (undo nuts1 the-hub1)
+16 (Single): Agent 0: (remove-wheel w1 the-hub1)
+17 (Single): Agent 0: (open boot)
+18 (Single): Agent 0: (fetch r1 boot)
+19 (Single): Agent 0: (put-on-wheel r1 the-hub1)
+20 (Single): Agent 0: (fetch r2 boot)
+21 (Single): Agent 0: (put-on-wheel r2 the-hub2)
+22 (Single): Agent 0: (fetch r3 boot)
+23 (Single): Agent 0: (put-on-wheel r3 the-hub3)
+24 (Single): Agent 0: (do-up nuts3 the-hub3)
+25 (Single): Agent 0: (jack-down the-hub3)
+26 (Single): Agent 0: (tighten nuts3 the-hub3)
+27 (Single): Agent 0: (do-up nuts2 the-hub2)
+28 (Single): Agent 0: (jack-down the-hub2)
+29 (Single): Agent 0: (tighten nuts2 the-hub2)
+30 (Single): Agent 0: (do-up nuts1 the-hub1)
+31 (Single): Agent 0: (jack-down the-hub1)
+32 (Single): Agent 0: (tighten nuts1 the-hub1)
+33 (Single): Agent 0: (fetch r4 boot)
+34 (Single): Agent 0: (put-on-wheel r4 the-hub4)
+35 (Single): Agent 0: (do-up nuts4 the-hub4)
+36 (Single): Agent 0: (jack-down the-hub4)
+37 (Single): Agent 0: (tighten nuts4 the-hub4)
+38 (Single): Agent 0: (put-away w1 boot)
+39 (Single): Agent 0: (put-away w2 boot)
+40 (Single): Agent 0: (put-away w3 boot)
+41 (Single): Agent 0: (put-away w4 boot)
+42 (Single): Agent 0: (close boot)
+
+Current Combined Plan:
+1 (Parallel):
+  Agent 0: (inflate r1)
+(inflate r2)
+(inflate r3)
+  Agent 1: (inflate r4)
+
+42 True
+
+Final Merged Plan:
+1 (Single): Agent 1: (loosen nuts4 the-hub4)
+2 (Single): Agent 1: (jack-up the-hub4)
+3 (Single): Agent 1: (undo nuts4 the-hub4)
+4 (Single): Agent 1: (remove-wheel w4 the-hub4)
+5 (Single): Agent 1: (loosen nuts3 the-hub3)
+6 (Single): Agent 1: (jack-up the-hub3)
+7 (Single): Agent 1: (undo nuts3 the-hub3)
+8 (Single): Agent 1: (remove-wheel w3 the-hub3)
+9 (Single): Agent 1: (loosen nuts2 the-hub2)
+10 (Single): Agent 1: (jack-up the-hub2)
+11 (Single): Agent 1: (undo nuts2 the-hub2)
+12 (Single): Agent 1: (remove-wheel w2 the-hub2)
+13 (Single): Agent 1: (loosen nuts1 the-hub1)
+14 (Single): Agent 1: (jack-up the-hub1)
+15 (Single): Agent 1: (undo nuts1 the-hub1)
+16 (Single): Agent 1: (remove-wheel w1 the-hub1)
+17 (Single): Agent 1: (open boot)
+18 (Single): Agent 1: (fetch r1 boot)
+19 (Single): Agent 1: (put-on-wheel r1 the-hub1)
+20 (Single): Agent 1: (fetch r2 boot)
+21 (Single): Agent 1: (put-on-wheel r2 the-hub2)
+22 (Single): Agent 1: (fetch r3 boot)
+23 (Single): Agent 1: (put-on-wheel r3 the-hub3)
+24 (Single): Agent 1: (do-up nuts3 the-hub3)
+25 (Single): Agent 1: (jack-down the-hub3)
+26 (Single): Agent 1: (tighten nuts3 the-hub3)
+27 (Single): Agent 1: (do-up nuts2 the-hub2)
+28 (Single): Agent 1: (jack-down the-hub2)
+29 (Single): Agent 1: (tighten nuts2 the-hub2)
+30 (Single): Agent 1: (do-up nuts1 the-hub1)
+31 (Single): Agent 1: (jack-down the-hub1)
+32 (Single): Agent 1: (tighten nuts1 the-hub1)
+33 (Single): Agent 1: (fetch r4 boot)
+34 (Single): Agent 1: (put-on-wheel r4 the-hub4)
+35 (Single): Agent 1: (do-up nuts4 the-hub4)
+36 (Single): Agent 1: (jack-down the-hub4)
+37 (Single): Agent 1: (tighten nuts4 the-hub4)
+38 (Single): Agent 1: (put-away w1 boot)
+39 (Single): Agent 1: (put-away w2 boot)
+40 (Single): Agent 1: (put-away w3 boot)
+41 (Single): Agent 1: (put-away w4 boot)
+42 (Parallel):
+  Agent 0: (inflate r1)
+(inflate r2)
+(inflate r3)
+(inflate r4)
+  Agent 1: (close boot)
+
+Total Cost: 42
+[results][tyreworld][04]
+[single_agent][planning time: 1004.44][cost: 46.0]
+[multi_agent][planning_time: 205.30137835502623][cost: 42.0][agents: 5][optimization time 10.395097494125366]
+----------------------------------------
+Using cached single agent results
+['inflate r1', 'inflate r2', 'inflate r3', 'inflate r4']
+['./experiments_multiagent_help/run4033/tyreworld/p05_1.pddl', './experiments_multiagent_help/run4033/tyreworld/p05_2.pddl', './experiments_multiagent_help/run4033/tyreworld/p05_3.pddl', './experiments_multiagent_help/run4033/tyreworld/p05_4.pddl']
+agent1
+[info][subgoal_1][tyreworld] task 05 takes 0.17 sec, found a plan with cost 1.0
+planner successful
+validating
+validator time 0.008116483688354492
+agent2
+[info][subgoal_2][tyreworld] task 05 takes 0.17 sec, found a plan with cost 1.0
+planner successful
+validating
+validator time 0.008205890655517578
+agent3
+[info][subgoal_3][tyreworld] task 05 takes 0.16 sec, found a plan with cost 1.0
+planner successful
+validating
+validator time 0.007929563522338867
+agent4
+[info][subgoal_4][tyreworld] task 05 takes 0.18 sec, found a plan with cost 1.0
+planner successful
+validating
+validator time 0.008088350296020508
+[info][multiagent main goal][tyreworld] task 05 takes 200.27 sec, found a plan with cost 53.0
+TASK: tyreworld - 4033 - 05
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (inflate r1)
+
+merging plan 2 into initial_plan
+1 True
+verifying entire plan.
+merging plan 3 into initial_plan
+1 True
+verifying entire plan.
+merging plan 4 into initial_plan
+1 True
+verifying entire plan.
+merging main agent's plan into combined plan
+
+Main Agent's Plan:
+1 (Single): Agent 0: (loosen nuts5 the-hub5)
+2 (Single): Agent 0: (jack-up the-hub5)
+3 (Single): Agent 0: (undo nuts5 the-hub5)
+4 (Single): Agent 0: (remove-wheel w5 the-hub5)
+5 (Single): Agent 0: (loosen nuts4 the-hub4)
+6 (Single): Agent 0: (jack-up the-hub4)
+7 (Single): Agent 0: (undo nuts4 the-hub4)
+8 (Single): Agent 0: (remove-wheel w4 the-hub4)
+9 (Single): Agent 0: (loosen nuts3 the-hub3)
+10 (Single): Agent 0: (jack-up the-hub3)
+11 (Single): Agent 0: (undo nuts3 the-hub3)
+12 (Single): Agent 0: (remove-wheel w3 the-hub3)
+13 (Single): Agent 0: (loosen nuts2 the-hub2)
+14 (Single): Agent 0: (jack-up the-hub2)
+15 (Single): Agent 0: (undo nuts2 the-hub2)
+16 (Single): Agent 0: (remove-wheel w2 the-hub2)
+17 (Single): Agent 0: (loosen nuts1 the-hub1)
+18 (Single): Agent 0: (jack-up the-hub1)
+19 (Single): Agent 0: (undo nuts1 the-hub1)
+20 (Single): Agent 0: (remove-wheel w1 the-hub1)
+21 (Single): Agent 0: (inflate r5)
+22 (Single): Agent 0: (open boot)
+23 (Single): Agent 0: (fetch r1 boot)
+24 (Single): Agent 0: (put-on-wheel r1 the-hub1)
+25 (Single): Agent 0: (fetch r2 boot)
+26 (Single): Agent 0: (put-on-wheel r2 the-hub2)
+27 (Single): Agent 0: (fetch r3 boot)
+28 (Single): Agent 0: (put-on-wheel r3 the-hub3)
+29 (Single): Agent 0: (do-up nuts3 the-hub3)
+30 (Single): Agent 0: (jack-down the-hub3)
+31 (Single): Agent 0: (tighten nuts3 the-hub3)
+32 (Single): Agent 0: (do-up nuts2 the-hub2)
+33 (Single): Agent 0: (jack-down the-hub2)
+34 (Single): Agent 0: (tighten nuts2 the-hub2)
+35 (Single): Agent 0: (do-up nuts1 the-hub1)
+36 (Single): Agent 0: (jack-down the-hub1)
+37 (Single): Agent 0: (tighten nuts1 the-hub1)
+38 (Single): Agent 0: (fetch r4 boot)
+39 (Single): Agent 0: (put-on-wheel r4 the-hub4)
+40 (Single): Agent 0: (do-up nuts4 the-hub4)
+41 (Single): Agent 0: (jack-down the-hub4)
+42 (Single): Agent 0: (tighten nuts4 the-hub4)
+43 (Single): Agent 0: (fetch r5 boot)
+44 (Single): Agent 0: (put-on-wheel r5 the-hub5)
+45 (Single): Agent 0: (do-up nuts5 the-hub5)
+46 (Single): Agent 0: (jack-down the-hub5)
+47 (Single): Agent 0: (tighten nuts5 the-hub5)
+48 (Single): Agent 0: (put-away w1 boot)
+49 (Single): Agent 0: (put-away w2 boot)
+50 (Single): Agent 0: (put-away w3 boot)
+51 (Single): Agent 0: (put-away w4 boot)
+52 (Single): Agent 0: (put-away w5 boot)
+53 (Single): Agent 0: (close boot)
+
+Current Combined Plan:
+1 (Parallel):
+  Agent 0: (inflate r1)
+(inflate r2)
+(inflate r3)
+  Agent 1: (inflate r4)
+
+53 True
+
+Final Merged Plan:
+1 (Single): Agent 1: (loosen nuts5 the-hub5)
+2 (Single): Agent 1: (jack-up the-hub5)
+3 (Single): Agent 1: (undo nuts5 the-hub5)
+4 (Single): Agent 1: (remove-wheel w5 the-hub5)
+5 (Single): Agent 1: (loosen nuts4 the-hub4)
+6 (Single): Agent 1: (jack-up the-hub4)
+7 (Single): Agent 1: (undo nuts4 the-hub4)
+8 (Single): Agent 1: (remove-wheel w4 the-hub4)
+9 (Single): Agent 1: (loosen nuts3 the-hub3)
+10 (Single): Agent 1: (jack-up the-hub3)
+11 (Single): Agent 1: (undo nuts3 the-hub3)
+12 (Single): Agent 1: (remove-wheel w3 the-hub3)
+13 (Single): Agent 1: (loosen nuts2 the-hub2)
+14 (Single): Agent 1: (jack-up the-hub2)
+15 (Single): Agent 1: (undo nuts2 the-hub2)
+16 (Single): Agent 1: (remove-wheel w2 the-hub2)
+17 (Single): Agent 1: (loosen nuts1 the-hub1)
+18 (Single): Agent 1: (jack-up the-hub1)
+19 (Single): Agent 1: (undo nuts1 the-hub1)
+20 (Single): Agent 1: (remove-wheel w1 the-hub1)
+21 (Single): Agent 1: (inflate r5)
+22 (Single): Agent 1: (open boot)
+23 (Single): Agent 1: (fetch r1 boot)
+24 (Single): Agent 1: (put-on-wheel r1 the-hub1)
+25 (Single): Agent 1: (fetch r2 boot)
+26 (Single): Agent 1: (put-on-wheel r2 the-hub2)
+27 (Single): Agent 1: (fetch r3 boot)
+28 (Single): Agent 1: (put-on-wheel r3 the-hub3)
+29 (Single): Agent 1: (do-up nuts3 the-hub3)
+30 (Single): Agent 1: (jack-down the-hub3)
+31 (Single): Agent 1: (tighten nuts3 the-hub3)
+32 (Single): Agent 1: (do-up nuts2 the-hub2)
+33 (Single): Agent 1: (jack-down the-hub2)
+34 (Single): Agent 1: (tighten nuts2 the-hub2)
+35 (Single): Agent 1: (do-up nuts1 the-hub1)
+36 (Single): Agent 1: (jack-down the-hub1)
+37 (Single): Agent 1: (tighten nuts1 the-hub1)
+38 (Single): Agent 1: (fetch r4 boot)
+39 (Single): Agent 1: (put-on-wheel r4 the-hub4)
+40 (Single): Agent 1: (do-up nuts4 the-hub4)
+41 (Single): Agent 1: (jack-down the-hub4)
+42 (Single): Agent 1: (tighten nuts4 the-hub4)
+43 (Single): Agent 1: (fetch r5 boot)
+44 (Single): Agent 1: (put-on-wheel r5 the-hub5)
+45 (Single): Agent 1: (do-up nuts5 the-hub5)
+46 (Single): Agent 1: (jack-down the-hub5)
+47 (Single): Agent 1: (tighten nuts5 the-hub5)
+48 (Single): Agent 1: (put-away w1 boot)
+49 (Single): Agent 1: (put-away w2 boot)
+50 (Single): Agent 1: (put-away w3 boot)
+51 (Single): Agent 1: (put-away w4 boot)
+52 (Single): Agent 1: (put-away w5 boot)
+53 (Parallel):
+  Agent 0: (inflate r1)
+(inflate r2)
+(inflate r3)
+(inflate r4)
+  Agent 1: (close boot)
+
+Total Cost: 53
+[results][tyreworld][05]
+[single_agent][planning time: 1003.45][cost: 57.0]
+[multi_agent][planning_time: 205.01249594688417][cost: 53.0][agents: 5][optimization time 14.934717416763306]
+----------------------------------------
+Using cached single agent results
+['inflate r1', 'inflate r2', 'inflate r3', 'inflate r4']
+['./experiments_multiagent_help/run4033/tyreworld/p06_1.pddl', './experiments_multiagent_help/run4033/tyreworld/p06_2.pddl', './experiments_multiagent_help/run4033/tyreworld/p06_3.pddl', './experiments_multiagent_help/run4033/tyreworld/p06_4.pddl']
+agent1
+[info][subgoal_1][tyreworld] task 06 takes 0.18 sec, found a plan with cost 1.0
+planner successful
+validating
+validator time 0.008659124374389648
+agent2
+[info][subgoal_2][tyreworld] task 06 takes 0.17 sec, found a plan with cost 1.0
+planner successful
+validating
+validator time 0.008301019668579102
+agent3
+[info][subgoal_3][tyreworld] task 06 takes 0.19 sec, found a plan with cost 1.0
+planner successful
+validating
+validator time 0.008597612380981445
+agent4
+[info][subgoal_4][tyreworld] task 06 takes 0.18 sec, found a plan with cost 1.0
+planner successful
+validating
+validator time 0.008559942245483398
+[info][multiagent main goal][tyreworld] task 06 takes 200.25 sec, found a plan with cost 64.0
+TASK: tyreworld - 4033 - 06
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (inflate r1)
+
+merging plan 2 into initial_plan
+1 True
+verifying entire plan.
+merging plan 3 into initial_plan
+1 True
+verifying entire plan.
+merging plan 4 into initial_plan
+1 True
+verifying entire plan.
+merging main agent's plan into combined plan
+
+Main Agent's Plan:
+1 (Single): Agent 0: (loosen nuts6 the-hub6)
+2 (Single): Agent 0: (jack-up the-hub6)
+3 (Single): Agent 0: (undo nuts6 the-hub6)
+4 (Single): Agent 0: (remove-wheel w6 the-hub6)
+5 (Single): Agent 0: (loosen nuts5 the-hub5)
+6 (Single): Agent 0: (jack-up the-hub5)
+7 (Single): Agent 0: (undo nuts5 the-hub5)
+8 (Single): Agent 0: (remove-wheel w5 the-hub5)
+9 (Single): Agent 0: (loosen nuts4 the-hub4)
+10 (Single): Agent 0: (jack-up the-hub4)
+11 (Single): Agent 0: (undo nuts4 the-hub4)
+12 (Single): Agent 0: (remove-wheel w4 the-hub4)
+13 (Single): Agent 0: (loosen nuts3 the-hub3)
+14 (Single): Agent 0: (jack-up the-hub3)
+15 (Single): Agent 0: (undo nuts3 the-hub3)
+16 (Single): Agent 0: (remove-wheel w3 the-hub3)
+17 (Single): Agent 0: (loosen nuts2 the-hub2)
+18 (Single): Agent 0: (jack-up the-hub2)
+19 (Single): Agent 0: (undo nuts2 the-hub2)
+20 (Single): Agent 0: (remove-wheel w2 the-hub2)
+21 (Single): Agent 0: (loosen nuts1 the-hub1)
+22 (Single): Agent 0: (jack-up the-hub1)
+23 (Single): Agent 0: (undo nuts1 the-hub1)
+24 (Single): Agent 0: (remove-wheel w1 the-hub1)
+25 (Single): Agent 0: (inflate r6)
+26 (Single): Agent 0: (inflate r5)
+27 (Single): Agent 0: (open boot)
+28 (Single): Agent 0: (fetch r1 boot)
+29 (Single): Agent 0: (put-on-wheel r1 the-hub1)
+30 (Single): Agent 0: (fetch r2 boot)
+31 (Single): Agent 0: (put-on-wheel r2 the-hub2)
+32 (Single): Agent 0: (fetch r3 boot)
+33 (Single): Agent 0: (put-on-wheel r3 the-hub3)
+34 (Single): Agent 0: (do-up nuts3 the-hub3)
+35 (Single): Agent 0: (jack-down the-hub3)
+36 (Single): Agent 0: (tighten nuts3 the-hub3)
+37 (Single): Agent 0: (do-up nuts2 the-hub2)
+38 (Single): Agent 0: (jack-down the-hub2)
+39 (Single): Agent 0: (tighten nuts2 the-hub2)
+40 (Single): Agent 0: (do-up nuts1 the-hub1)
+41 (Single): Agent 0: (jack-down the-hub1)
+42 (Single): Agent 0: (tighten nuts1 the-hub1)
+43 (Single): Agent 0: (fetch r4 boot)
+44 (Single): Agent 0: (put-on-wheel r4 the-hub4)
+45 (Single): Agent 0: (do-up nuts4 the-hub4)
+46 (Single): Agent 0: (jack-down the-hub4)
+47 (Single): Agent 0: (tighten nuts4 the-hub4)
+48 (Single): Agent 0: (fetch r5 boot)
+49 (Single): Agent 0: (put-on-wheel r5 the-hub5)
+50 (Single): Agent 0: (do-up nuts5 the-hub5)
+51 (Single): Agent 0: (jack-down the-hub5)
+52 (Single): Agent 0: (tighten nuts5 the-hub5)
+53 (Single): Agent 0: (fetch r6 boot)
+54 (Single): Agent 0: (put-on-wheel r6 the-hub6)
+55 (Single): Agent 0: (do-up nuts6 the-hub6)
+56 (Single): Agent 0: (jack-down the-hub6)
+57 (Single): Agent 0: (tighten nuts6 the-hub6)
+58 (Single): Agent 0: (put-away w1 boot)
+59 (Single): Agent 0: (put-away w2 boot)
+60 (Single): Agent 0: (put-away w3 boot)
+61 (Single): Agent 0: (put-away w4 boot)
+62 (Single): Agent 0: (put-away w5 boot)
+63 (Single): Agent 0: (put-away w6 boot)
+64 (Single): Agent 0: (close boot)
+
+Current Combined Plan:
+1 (Parallel):
+  Agent 0: (inflate r1)
+(inflate r2)
+(inflate r3)
+  Agent 1: (inflate r4)
+
+64 True
+
+Final Merged Plan:
+1 (Single): Agent 1: (loosen nuts6 the-hub6)
+2 (Single): Agent 1: (jack-up the-hub6)
+3 (Single): Agent 1: (undo nuts6 the-hub6)
+4 (Single): Agent 1: (remove-wheel w6 the-hub6)
+5 (Single): Agent 1: (loosen nuts5 the-hub5)
+6 (Single): Agent 1: (jack-up the-hub5)
+7 (Single): Agent 1: (undo nuts5 the-hub5)
+8 (Single): Agent 1: (remove-wheel w5 the-hub5)
+9 (Single): Agent 1: (loosen nuts4 the-hub4)
+10 (Single): Agent 1: (jack-up the-hub4)
+11 (Single): Agent 1: (undo nuts4 the-hub4)
+12 (Single): Agent 1: (remove-wheel w4 the-hub4)
+13 (Single): Agent 1: (loosen nuts3 the-hub3)
+14 (Single): Agent 1: (jack-up the-hub3)
+15 (Single): Agent 1: (undo nuts3 the-hub3)
+16 (Single): Agent 1: (remove-wheel w3 the-hub3)
+17 (Single): Agent 1: (loosen nuts2 the-hub2)
+18 (Single): Agent 1: (jack-up the-hub2)
+19 (Single): Agent 1: (undo nuts2 the-hub2)
+20 (Single): Agent 1: (remove-wheel w2 the-hub2)
+21 (Single): Agent 1: (loosen nuts1 the-hub1)
+22 (Single): Agent 1: (jack-up the-hub1)
+23 (Single): Agent 1: (undo nuts1 the-hub1)
+24 (Single): Agent 1: (remove-wheel w1 the-hub1)
+25 (Single): Agent 1: (inflate r6)
+26 (Single): Agent 1: (inflate r5)
+27 (Single): Agent 1: (open boot)
+28 (Single): Agent 1: (fetch r1 boot)
+29 (Single): Agent 1: (put-on-wheel r1 the-hub1)
+30 (Single): Agent 1: (fetch r2 boot)
+31 (Single): Agent 1: (put-on-wheel r2 the-hub2)
+32 (Single): Agent 1: (fetch r3 boot)
+33 (Single): Agent 1: (put-on-wheel r3 the-hub3)
+34 (Single): Agent 1: (do-up nuts3 the-hub3)
+35 (Single): Agent 1: (jack-down the-hub3)
+36 (Single): Agent 1: (tighten nuts3 the-hub3)
+37 (Single): Agent 1: (do-up nuts2 the-hub2)
+38 (Single): Agent 1: (jack-down the-hub2)
+39 (Single): Agent 1: (tighten nuts2 the-hub2)
+40 (Single): Agent 1: (do-up nuts1 the-hub1)
+41 (Single): Agent 1: (jack-down the-hub1)
+42 (Single): Agent 1: (tighten nuts1 the-hub1)
+43 (Single): Agent 1: (fetch r4 boot)
+44 (Single): Agent 1: (put-on-wheel r4 the-hub4)
+45 (Single): Agent 1: (do-up nuts4 the-hub4)
+46 (Single): Agent 1: (jack-down the-hub4)
+47 (Single): Agent 1: (tighten nuts4 the-hub4)
+48 (Single): Agent 1: (fetch r5 boot)
+49 (Single): Agent 1: (put-on-wheel r5 the-hub5)
+50 (Single): Agent 1: (do-up nuts5 the-hub5)
+51 (Single): Agent 1: (jack-down the-hub5)
+52 (Single): Agent 1: (tighten nuts5 the-hub5)
+53 (Single): Agent 1: (fetch r6 boot)
+54 (Single): Agent 1: (put-on-wheel r6 the-hub6)
+55 (Single): Agent 1: (do-up nuts6 the-hub6)
+56 (Single): Agent 1: (jack-down the-hub6)
+57 (Single): Agent 1: (tighten nuts6 the-hub6)
+58 (Single): Agent 1: (put-away w1 boot)
+59 (Single): Agent 1: (put-away w2 boot)
+60 (Single): Agent 1: (put-away w3 boot)
+61 (Single): Agent 1: (put-away w4 boot)
+62 (Single): Agent 1: (put-away w5 boot)
+63 (Single): Agent 1: (put-away w6 boot)
+64 (Parallel):
+  Agent 0: (inflate r1)
+(inflate r2)
+(inflate r3)
+(inflate r4)
+  Agent 1: (close boot)
+
+Total Cost: 64
+[results][tyreworld][06]
+[single_agent][planning time: 1003.51][cost: 68.0]
+[multi_agent][planning_time: 210.88992092132568][cost: 64.0][agents: 5][optimization time 15.748159646987915]
+----------------------------------------
+Using cached single agent results
+['inflate r1', 'inflate r2', 'inflate r3', 'inflate r4']
+['./experiments_multiagent_help/run4033/tyreworld/p07_1.pddl', './experiments_multiagent_help/run4033/tyreworld/p07_2.pddl', './experiments_multiagent_help/run4033/tyreworld/p07_3.pddl', './experiments_multiagent_help/run4033/tyreworld/p07_4.pddl']
+agent1
+[info][subgoal_1][tyreworld] task 07 takes 0.2 sec, found a plan with cost 1.0
+planner successful
+validating
+validator time 0.008452892303466797
+agent2
+[info][subgoal_2][tyreworld] task 07 takes 0.2 sec, found a plan with cost 1.0
+planner successful
+validating
+validator time 0.0071070194244384766
+agent3
+[info][subgoal_3][tyreworld] task 07 takes 0.2 sec, found a plan with cost 1.0
+planner successful
+validating
+validator time 0.008425235748291016
+agent4
+[info][subgoal_4][tyreworld] task 07 takes 0.19 sec, found a plan with cost 1.0
+planner successful
+validating
+validator time 0.008675575256347656
+[info][multiagent main goal][tyreworld] task 07 takes 200.29 sec, found a plan with cost 75.0
+TASK: tyreworld - 4033 - 07
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (inflate r1)
+
+merging plan 2 into initial_plan
+1 True
+verifying entire plan.
+merging plan 3 into initial_plan
+1 True
+verifying entire plan.
+merging plan 4 into initial_plan
+1 True
+verifying entire plan.
+merging main agent's plan into combined plan
+
+Main Agent's Plan:
+1 (Single): Agent 0: (loosen nuts7 the-hub7)
+2 (Single): Agent 0: (jack-up the-hub7)
+3 (Single): Agent 0: (undo nuts7 the-hub7)
+4 (Single): Agent 0: (remove-wheel w7 the-hub7)
+5 (Single): Agent 0: (loosen nuts6 the-hub6)
+6 (Single): Agent 0: (jack-up the-hub6)
+7 (Single): Agent 0: (undo nuts6 the-hub6)
+8 (Single): Agent 0: (remove-wheel w6 the-hub6)
+9 (Single): Agent 0: (loosen nuts5 the-hub5)
+10 (Single): Agent 0: (jack-up the-hub5)
+11 (Single): Agent 0: (undo nuts5 the-hub5)
+12 (Single): Agent 0: (remove-wheel w5 the-hub5)
+13 (Single): Agent 0: (loosen nuts4 the-hub4)
+14 (Single): Agent 0: (jack-up the-hub4)
+15 (Single): Agent 0: (undo nuts4 the-hub4)
+16 (Single): Agent 0: (remove-wheel w4 the-hub4)
+17 (Single): Agent 0: (loosen nuts3 the-hub3)
+18 (Single): Agent 0: (jack-up the-hub3)
+19 (Single): Agent 0: (undo nuts3 the-hub3)
+20 (Single): Agent 0: (remove-wheel w3 the-hub3)
+21 (Single): Agent 0: (loosen nuts2 the-hub2)
+22 (Single): Agent 0: (jack-up the-hub2)
+23 (Single): Agent 0: (undo nuts2 the-hub2)
+24 (Single): Agent 0: (remove-wheel w2 the-hub2)
+25 (Single): Agent 0: (loosen nuts1 the-hub1)
+26 (Single): Agent 0: (jack-up the-hub1)
+27 (Single): Agent 0: (undo nuts1 the-hub1)
+28 (Single): Agent 0: (remove-wheel w1 the-hub1)
+29 (Single): Agent 0: (inflate r7)
+30 (Single): Agent 0: (inflate r6)
+31 (Single): Agent 0: (inflate r5)
+32 (Single): Agent 0: (open boot)
+33 (Single): Agent 0: (fetch r1 boot)
+34 (Single): Agent 0: (put-on-wheel r1 the-hub1)
+35 (Single): Agent 0: (fetch r2 boot)
+36 (Single): Agent 0: (put-on-wheel r2 the-hub2)
+37 (Single): Agent 0: (fetch r3 boot)
+38 (Single): Agent 0: (put-on-wheel r3 the-hub3)
+39 (Single): Agent 0: (do-up nuts3 the-hub3)
+40 (Single): Agent 0: (jack-down the-hub3)
+41 (Single): Agent 0: (tighten nuts3 the-hub3)
+42 (Single): Agent 0: (do-up nuts2 the-hub2)
+43 (Single): Agent 0: (jack-down the-hub2)
+44 (Single): Agent 0: (tighten nuts2 the-hub2)
+45 (Single): Agent 0: (do-up nuts1 the-hub1)
+46 (Single): Agent 0: (jack-down the-hub1)
+47 (Single): Agent 0: (tighten nuts1 the-hub1)
+48 (Single): Agent 0: (fetch r4 boot)
+49 (Single): Agent 0: (put-on-wheel r4 the-hub4)
+50 (Single): Agent 0: (do-up nuts4 the-hub4)
+51 (Single): Agent 0: (jack-down the-hub4)
+52 (Single): Agent 0: (tighten nuts4 the-hub4)
+53 (Single): Agent 0: (fetch r5 boot)
+54 (Single): Agent 0: (put-on-wheel r5 the-hub5)
+55 (Single): Agent 0: (do-up nuts5 the-hub5)
+56 (Single): Agent 0: (jack-down the-hub5)
+57 (Single): Agent 0: (tighten nuts5 the-hub5)
+58 (Single): Agent 0: (fetch r6 boot)
+59 (Single): Agent 0: (put-on-wheel r6 the-hub6)
+60 (Single): Agent 0: (do-up nuts6 the-hub6)
+61 (Single): Agent 0: (jack-down the-hub6)
+62 (Single): Agent 0: (tighten nuts6 the-hub6)
+63 (Single): Agent 0: (fetch r7 boot)
+64 (Single): Agent 0: (put-on-wheel r7 the-hub7)
+65 (Single): Agent 0: (do-up nuts7 the-hub7)
+66 (Single): Agent 0: (jack-down the-hub7)
+67 (Single): Agent 0: (tighten nuts7 the-hub7)
+68 (Single): Agent 0: (put-away w1 boot)
+69 (Single): Agent 0: (put-away w2 boot)
+70 (Single): Agent 0: (put-away w3 boot)
+71 (Single): Agent 0: (put-away w4 boot)
+72 (Single): Agent 0: (put-away w5 boot)
+73 (Single): Agent 0: (put-away w6 boot)
+74 (Single): Agent 0: (put-away w7 boot)
+75 (Single): Agent 0: (close boot)
+
+Current Combined Plan:
+1 (Parallel):
+  Agent 0: (inflate r1)
+(inflate r2)
+(inflate r3)
+  Agent 1: (inflate r4)
+
+75 True
+
+Final Merged Plan:
+1 (Single): Agent 1: (loosen nuts7 the-hub7)
+2 (Single): Agent 1: (jack-up the-hub7)
+3 (Single): Agent 1: (undo nuts7 the-hub7)
+4 (Single): Agent 1: (remove-wheel w7 the-hub7)
+5 (Single): Agent 1: (loosen nuts6 the-hub6)
+6 (Single): Agent 1: (jack-up the-hub6)
+7 (Single): Agent 1: (undo nuts6 the-hub6)
+8 (Single): Agent 1: (remove-wheel w6 the-hub6)
+9 (Single): Agent 1: (loosen nuts5 the-hub5)
+10 (Single): Agent 1: (jack-up the-hub5)
+11 (Single): Agent 1: (undo nuts5 the-hub5)
+12 (Single): Agent 1: (remove-wheel w5 the-hub5)
+13 (Single): Agent 1: (loosen nuts4 the-hub4)
+14 (Single): Agent 1: (jack-up the-hub4)
+15 (Single): Agent 1: (undo nuts4 the-hub4)
+16 (Single): Agent 1: (remove-wheel w4 the-hub4)
+17 (Single): Agent 1: (loosen nuts3 the-hub3)
+18 (Single): Agent 1: (jack-up the-hub3)
+19 (Single): Agent 1: (undo nuts3 the-hub3)
+20 (Single): Agent 1: (remove-wheel w3 the-hub3)
+21 (Single): Agent 1: (loosen nuts2 the-hub2)
+22 (Single): Agent 1: (jack-up the-hub2)
+23 (Single): Agent 1: (undo nuts2 the-hub2)
+24 (Single): Agent 1: (remove-wheel w2 the-hub2)
+25 (Single): Agent 1: (loosen nuts1 the-hub1)
+26 (Single): Agent 1: (jack-up the-hub1)
+27 (Single): Agent 1: (undo nuts1 the-hub1)
+28 (Single): Agent 1: (remove-wheel w1 the-hub1)
+29 (Single): Agent 1: (inflate r7)
+30 (Single): Agent 1: (inflate r6)
+31 (Single): Agent 1: (inflate r5)
+32 (Single): Agent 1: (open boot)
+33 (Single): Agent 1: (fetch r1 boot)
+34 (Single): Agent 1: (put-on-wheel r1 the-hub1)
+35 (Single): Agent 1: (fetch r2 boot)
+36 (Single): Agent 1: (put-on-wheel r2 the-hub2)
+37 (Single): Agent 1: (fetch r3 boot)
+38 (Single): Agent 1: (put-on-wheel r3 the-hub3)
+39 (Single): Agent 1: (do-up nuts3 the-hub3)
+40 (Single): Agent 1: (jack-down the-hub3)
+41 (Single): Agent 1: (tighten nuts3 the-hub3)
+42 (Single): Agent 1: (do-up nuts2 the-hub2)
+43 (Single): Agent 1: (jack-down the-hub2)
+44 (Single): Agent 1: (tighten nuts2 the-hub2)
+45 (Single): Agent 1: (do-up nuts1 the-hub1)
+46 (Single): Agent 1: (jack-down the-hub1)
+47 (Single): Agent 1: (tighten nuts1 the-hub1)
+48 (Single): Agent 1: (fetch r4 boot)
+49 (Single): Agent 1: (put-on-wheel r4 the-hub4)
+50 (Single): Agent 1: (do-up nuts4 the-hub4)
+51 (Single): Agent 1: (jack-down the-hub4)
+52 (Single): Agent 1: (tighten nuts4 the-hub4)
+53 (Single): Agent 1: (fetch r5 boot)
+54 (Single): Agent 1: (put-on-wheel r5 the-hub5)
+55 (Single): Agent 1: (do-up nuts5 the-hub5)
+56 (Single): Agent 1: (jack-down the-hub5)
+57 (Single): Agent 1: (tighten nuts5 the-hub5)
+58 (Single): Agent 1: (fetch r6 boot)
+59 (Single): Agent 1: (put-on-wheel r6 the-hub6)
+60 (Single): Agent 1: (do-up nuts6 the-hub6)
+61 (Single): Agent 1: (jack-down the-hub6)
+62 (Single): Agent 1: (tighten nuts6 the-hub6)
+63 (Single): Agent 1: (fetch r7 boot)
+64 (Single): Agent 1: (put-on-wheel r7 the-hub7)
+65 (Single): Agent 1: (do-up nuts7 the-hub7)
+66 (Single): Agent 1: (jack-down the-hub7)
+67 (Single): Agent 1: (tighten nuts7 the-hub7)
+68 (Single): Agent 1: (put-away w1 boot)
+69 (Single): Agent 1: (put-away w2 boot)
+70 (Single): Agent 1: (put-away w3 boot)
+71 (Single): Agent 1: (put-away w4 boot)
+72 (Single): Agent 1: (put-away w5 boot)
+73 (Single): Agent 1: (put-away w6 boot)
+74 (Single): Agent 1: (put-away w7 boot)
+75 (Parallel):
+  Agent 0: (inflate r1)
+(inflate r2)
+(inflate r3)
+(inflate r4)
+  Agent 1: (close boot)
+
+Total Cost: 75
+[results][tyreworld][07]
+[single_agent][planning time: 1003.07][cost: 79.0]
+[multi_agent][planning_time: 206.57659824371336][cost: 75.0][agents: 5][optimization time 15.401788711547852]
+----------------------------------------
+Using cached single agent results
+LLM generated no subgoal for agent 4, reducing number of agents
+args.num_agents: 4
+['inflate all intact tyres.', 'remove all flat tyres from the hubs.', 'put-away all flat tyres in the boot.']
+['./experiments_multiagent_help/run4033/tyreworld/p08_1.pddl', './experiments_multiagent_help/run4033/tyreworld/p08_2.pddl', './experiments_multiagent_help/run4033/tyreworld/p08_3.pddl']
+agent1
+[info][subgoal_1][tyreworld] task 08 takes 0.22 sec, found a plan with cost 8.0
+planner successful
+validating
+validator time 0.009292840957641602
+agent2
+planner broke
+INFO     planner time limit: None
+INFO     planner memory limit: None
+
+INFO     Running translator.
+INFO     translator stdin: None
+INFO     translator time limit: None
+INFO     translator memory limit: None
+INFO     translator command line string: /home/davidbai/.conda/envs/llm_pddl/bin/python /home/davidbai/multiagent_helper_llmp/downward/builds/release/bin/translate/translate.py domains/tyreworld/domain.pddl experiments_multiagent_help/run4033/tyreworld/p08_2.pddl --sas-file experiments_multiagent_help/run4033/tyreworld/p08_2_plan.pddl.sas
+Parsing...
+Parsing task
+	->Parsing goal
+	->Parsing condition
+'not' expects exactly one argument.
+Syntax: (not CONDITION)
+translate exit code: 31
+
+Driver aborting after translate
+INFO     Planner time: 0.12s
+
+list index out of range
+Traceback (most recent call last):
+  File "/home/davidbai/multiagent_helper_llmp/helper_script_n_agents.py", line 315, in <module>
+    planner.get_updated_init_conditions(path, validation_filename=f"./{path}/p{args.task_id}_{i}_validation.txt", pddl_problem_filename=init_problem, pddl_problem_filename_edited=init_problem_out,is_main=main_goal)
+  File "/home/davidbai/multiagent_helper_llmp/modules/planner.py", line 143, in get_updated_init_conditions
+    with open(validation_filename, 'r') as f:
+FileNotFoundError: [Errno 2] No such file or directory: './experiments_multiagent_help/run4033/tyreworld/p08_2_validation.txt'
+----------------------------------------
+Using cached single agent results
+['inflate r1', 'inflate r2', 'inflate r3', 'inflate r4']
+['./experiments_multiagent_help/run4033/tyreworld/p09_1.pddl', './experiments_multiagent_help/run4033/tyreworld/p09_2.pddl', './experiments_multiagent_help/run4033/tyreworld/p09_3.pddl', './experiments_multiagent_help/run4033/tyreworld/p09_4.pddl']
+agent1
+[info][subgoal_1][tyreworld] task 09 takes 0.23 sec, found a plan with cost 1.0
+planner successful
+validating
+validator time 0.008798837661743164
+agent2
+[info][subgoal_2][tyreworld] task 09 takes 0.23 sec, found a plan with cost 1.0
+planner successful
+validating
+validator time 0.008675098419189453
+agent3
+[info][subgoal_3][tyreworld] task 09 takes 0.23 sec, found a plan with cost 1.0
+planner successful
+validating
+validator time 0.008684635162353516
+agent4
+[info][subgoal_4][tyreworld] task 09 takes 0.23 sec, found a plan with cost 1.0
+planner successful
+validating
+validator time 0.008627891540527344
+[info][multiagent main goal][tyreworld] task 09 takes 200.29 sec, found a plan with cost 97.0
+TASK: tyreworld - 4033 - 09
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (inflate r1)
+
+merging plan 2 into initial_plan
+1 True
+verifying entire plan.
+merging plan 3 into initial_plan
+1 True
+verifying entire plan.
+merging plan 4 into initial_plan
+1 True
+verifying entire plan.
+merging main agent's plan into combined plan
+
+Main Agent's Plan:
+1 (Single): Agent 0: (loosen nuts9 the-hub9)
+2 (Single): Agent 0: (jack-up the-hub9)
+3 (Single): Agent 0: (undo nuts9 the-hub9)
+4 (Single): Agent 0: (remove-wheel w9 the-hub9)
+5 (Single): Agent 0: (loosen nuts8 the-hub8)
+6 (Single): Agent 0: (jack-up the-hub8)
+7 (Single): Agent 0: (undo nuts8 the-hub8)
+8 (Single): Agent 0: (remove-wheel w8 the-hub8)
+9 (Single): Agent 0: (loosen nuts7 the-hub7)
+10 (Single): Agent 0: (jack-up the-hub7)
+11 (Single): Agent 0: (undo nuts7 the-hub7)
+12 (Single): Agent 0: (remove-wheel w7 the-hub7)
+13 (Single): Agent 0: (loosen nuts6 the-hub6)
+14 (Single): Agent 0: (jack-up the-hub6)
+15 (Single): Agent 0: (undo nuts6 the-hub6)
+16 (Single): Agent 0: (remove-wheel w6 the-hub6)
+17 (Single): Agent 0: (loosen nuts5 the-hub5)
+18 (Single): Agent 0: (jack-up the-hub5)
+19 (Single): Agent 0: (undo nuts5 the-hub5)
+20 (Single): Agent 0: (remove-wheel w5 the-hub5)
+21 (Single): Agent 0: (loosen nuts4 the-hub4)
+22 (Single): Agent 0: (jack-up the-hub4)
+23 (Single): Agent 0: (undo nuts4 the-hub4)
+24 (Single): Agent 0: (remove-wheel w4 the-hub4)
+25 (Single): Agent 0: (loosen nuts3 the-hub3)
+26 (Single): Agent 0: (jack-up the-hub3)
+27 (Single): Agent 0: (undo nuts3 the-hub3)
+28 (Single): Agent 0: (remove-wheel w3 the-hub3)
+29 (Single): Agent 0: (loosen nuts2 the-hub2)
+30 (Single): Agent 0: (jack-up the-hub2)
+31 (Single): Agent 0: (undo nuts2 the-hub2)
+32 (Single): Agent 0: (remove-wheel w2 the-hub2)
+33 (Single): Agent 0: (loosen nuts1 the-hub1)
+34 (Single): Agent 0: (jack-up the-hub1)
+35 (Single): Agent 0: (undo nuts1 the-hub1)
+36 (Single): Agent 0: (remove-wheel w1 the-hub1)
+37 (Single): Agent 0: (inflate r9)
+38 (Single): Agent 0: (inflate r8)
+39 (Single): Agent 0: (inflate r7)
+40 (Single): Agent 0: (inflate r6)
+41 (Single): Agent 0: (inflate r5)
+42 (Single): Agent 0: (open boot)
+43 (Single): Agent 0: (fetch r1 boot)
+44 (Single): Agent 0: (put-on-wheel r1 the-hub1)
+45 (Single): Agent 0: (fetch r2 boot)
+46 (Single): Agent 0: (put-on-wheel r2 the-hub2)
+47 (Single): Agent 0: (fetch r3 boot)
+48 (Single): Agent 0: (put-on-wheel r3 the-hub3)
+49 (Single): Agent 0: (do-up nuts3 the-hub3)
+50 (Single): Agent 0: (jack-down the-hub3)
+51 (Single): Agent 0: (tighten nuts3 the-hub3)
+52 (Single): Agent 0: (do-up nuts2 the-hub2)
+53 (Single): Agent 0: (jack-down the-hub2)
+54 (Single): Agent 0: (tighten nuts2 the-hub2)
+55 (Single): Agent 0: (do-up nuts1 the-hub1)
+56 (Single): Agent 0: (jack-down the-hub1)
+57 (Single): Agent 0: (tighten nuts1 the-hub1)
+58 (Single): Agent 0: (fetch r4 boot)
+59 (Single): Agent 0: (put-on-wheel r4 the-hub4)
+60 (Single): Agent 0: (do-up nuts4 the-hub4)
+61 (Single): Agent 0: (jack-down the-hub4)
+62 (Single): Agent 0: (tighten nuts4 the-hub4)
+63 (Single): Agent 0: (fetch r5 boot)
+64 (Single): Agent 0: (put-on-wheel r5 the-hub5)
+65 (Single): Agent 0: (do-up nuts5 the-hub5)
+66 (Single): Agent 0: (jack-down the-hub5)
+67 (Single): Agent 0: (tighten nuts5 the-hub5)
+68 (Single): Agent 0: (fetch r6 boot)
+69 (Single): Agent 0: (put-on-wheel r6 the-hub6)
+70 (Single): Agent 0: (do-up nuts6 the-hub6)
+71 (Single): Agent 0: (jack-down the-hub6)
+72 (Single): Agent 0: (tighten nuts6 the-hub6)
+73 (Single): Agent 0: (fetch r7 boot)
+74 (Single): Agent 0: (put-on-wheel r7 the-hub7)
+75 (Single): Agent 0: (do-up nuts7 the-hub7)
+76 (Single): Agent 0: (jack-down the-hub7)
+77 (Single): Agent 0: (tighten nuts7 the-hub7)
+78 (Single): Agent 0: (fetch r8 boot)
+79 (Single): Agent 0: (put-on-wheel r8 the-hub8)
+80 (Single): Agent 0: (do-up nuts8 the-hub8)
+81 (Single): Agent 0: (jack-down the-hub8)
+82 (Single): Agent 0: (tighten nuts8 the-hub8)
+83 (Single): Agent 0: (fetch r9 boot)
+84 (Single): Agent 0: (put-on-wheel r9 the-hub9)
+85 (Single): Agent 0: (do-up nuts9 the-hub9)
+86 (Single): Agent 0: (jack-down the-hub9)
+87 (Single): Agent 0: (tighten nuts9 the-hub9)
+88 (Single): Agent 0: (put-away w1 boot)
+89 (Single): Agent 0: (put-away w2 boot)
+90 (Single): Agent 0: (put-away w3 boot)
+91 (Single): Agent 0: (put-away w4 boot)
+92 (Single): Agent 0: (put-away w5 boot)
+93 (Single): Agent 0: (put-away w6 boot)
+94 (Single): Agent 0: (put-away w7 boot)
+95 (Single): Agent 0: (put-away w8 boot)
+96 (Single): Agent 0: (put-away w9 boot)
+97 (Single): Agent 0: (close boot)
+
+Current Combined Plan:
+1 (Parallel):
+  Agent 0: (inflate r1)
+(inflate r2)
+(inflate r3)
+  Agent 1: (inflate r4)
+
+97 True
+
+Final Merged Plan:
+1 (Single): Agent 1: (loosen nuts9 the-hub9)
+2 (Single): Agent 1: (jack-up the-hub9)
+3 (Single): Agent 1: (undo nuts9 the-hub9)
+4 (Single): Agent 1: (remove-wheel w9 the-hub9)
+5 (Single): Agent 1: (loosen nuts8 the-hub8)
+6 (Single): Agent 1: (jack-up the-hub8)
+7 (Single): Agent 1: (undo nuts8 the-hub8)
+8 (Single): Agent 1: (remove-wheel w8 the-hub8)
+9 (Single): Agent 1: (loosen nuts7 the-hub7)
+10 (Single): Agent 1: (jack-up the-hub7)
+11 (Single): Agent 1: (undo nuts7 the-hub7)
+12 (Single): Agent 1: (remove-wheel w7 the-hub7)
+13 (Single): Agent 1: (loosen nuts6 the-hub6)
+14 (Single): Agent 1: (jack-up the-hub6)
+15 (Single): Agent 1: (undo nuts6 the-hub6)
+16 (Single): Agent 1: (remove-wheel w6 the-hub6)
+17 (Single): Agent 1: (loosen nuts5 the-hub5)
+18 (Single): Agent 1: (jack-up the-hub5)
+19 (Single): Agent 1: (undo nuts5 the-hub5)
+20 (Single): Agent 1: (remove-wheel w5 the-hub5)
+21 (Single): Agent 1: (loosen nuts4 the-hub4)
+22 (Single): Agent 1: (jack-up the-hub4)
+23 (Single): Agent 1: (undo nuts4 the-hub4)
+24 (Single): Agent 1: (remove-wheel w4 the-hub4)
+25 (Single): Agent 1: (loosen nuts3 the-hub3)
+26 (Single): Agent 1: (jack-up the-hub3)
+27 (Single): Agent 1: (undo nuts3 the-hub3)
+28 (Single): Agent 1: (remove-wheel w3 the-hub3)
+29 (Single): Agent 1: (loosen nuts2 the-hub2)
+30 (Single): Agent 1: (jack-up the-hub2)
+31 (Single): Agent 1: (undo nuts2 the-hub2)
+32 (Single): Agent 1: (remove-wheel w2 the-hub2)
+33 (Single): Agent 1: (loosen nuts1 the-hub1)
+34 (Single): Agent 1: (jack-up the-hub1)
+35 (Single): Agent 1: (undo nuts1 the-hub1)
+36 (Single): Agent 1: (remove-wheel w1 the-hub1)
+37 (Single): Agent 1: (inflate r9)
+38 (Single): Agent 1: (inflate r8)
+39 (Single): Agent 1: (inflate r7)
+40 (Single): Agent 1: (inflate r6)
+41 (Single): Agent 1: (inflate r5)
+42 (Single): Agent 1: (open boot)
+43 (Single): Agent 1: (fetch r1 boot)
+44 (Single): Agent 1: (put-on-wheel r1 the-hub1)
+45 (Single): Agent 1: (fetch r2 boot)
+46 (Single): Agent 1: (put-on-wheel r2 the-hub2)
+47 (Single): Agent 1: (fetch r3 boot)
+48 (Single): Agent 1: (put-on-wheel r3 the-hub3)
+49 (Single): Agent 1: (do-up nuts3 the-hub3)
+50 (Single): Agent 1: (jack-down the-hub3)
+51 (Single): Agent 1: (tighten nuts3 the-hub3)
+52 (Single): Agent 1: (do-up nuts2 the-hub2)
+53 (Single): Agent 1: (jack-down the-hub2)
+54 (Single): Agent 1: (tighten nuts2 the-hub2)
+55 (Single): Agent 1: (do-up nuts1 the-hub1)
+56 (Single): Agent 1: (jack-down the-hub1)
+57 (Single): Agent 1: (tighten nuts1 the-hub1)
+58 (Single): Agent 1: (fetch r4 boot)
+59 (Single): Agent 1: (put-on-wheel r4 the-hub4)
+60 (Single): Agent 1: (do-up nuts4 the-hub4)
+61 (Single): Agent 1: (jack-down the-hub4)
+62 (Single): Agent 1: (tighten nuts4 the-hub4)
+63 (Single): Agent 1: (fetch r5 boot)
+64 (Single): Agent 1: (put-on-wheel r5 the-hub5)
+65 (Single): Agent 1: (do-up nuts5 the-hub5)
+66 (Single): Agent 1: (jack-down the-hub5)
+67 (Single): Agent 1: (tighten nuts5 the-hub5)
+68 (Single): Agent 1: (fetch r6 boot)
+69 (Single): Agent 1: (put-on-wheel r6 the-hub6)
+70 (Single): Agent 1: (do-up nuts6 the-hub6)
+71 (Single): Agent 1: (jack-down the-hub6)
+72 (Single): Agent 1: (tighten nuts6 the-hub6)
+73 (Single): Agent 1: (fetch r7 boot)
+74 (Single): Agent 1: (put-on-wheel r7 the-hub7)
+75 (Single): Agent 1: (do-up nuts7 the-hub7)
+76 (Single): Agent 1: (jack-down the-hub7)
+77 (Single): Agent 1: (tighten nuts7 the-hub7)
+78 (Single): Agent 1: (fetch r8 boot)
+79 (Single): Agent 1: (put-on-wheel r8 the-hub8)
+80 (Single): Agent 1: (do-up nuts8 the-hub8)
+81 (Single): Agent 1: (jack-down the-hub8)
+82 (Single): Agent 1: (tighten nuts8 the-hub8)
+83 (Single): Agent 1: (fetch r9 boot)
+84 (Single): Agent 1: (put-on-wheel r9 the-hub9)
+85 (Single): Agent 1: (do-up nuts9 the-hub9)
+86 (Single): Agent 1: (jack-down the-hub9)
+87 (Single): Agent 1: (tighten nuts9 the-hub9)
+88 (Single): Agent 1: (put-away w1 boot)
+89 (Single): Agent 1: (put-away w2 boot)
+90 (Single): Agent 1: (put-away w3 boot)
+91 (Single): Agent 1: (put-away w4 boot)
+92 (Single): Agent 1: (put-away w5 boot)
+93 (Single): Agent 1: (put-away w6 boot)
+94 (Single): Agent 1: (put-away w7 boot)
+95 (Single): Agent 1: (put-away w8 boot)
+96 (Single): Agent 1: (put-away w9 boot)
+97 (Parallel):
+  Agent 0: (inflate r1)
+(inflate r2)
+(inflate r3)
+(inflate r4)
+  Agent 1: (close boot)
+
+Total Cost: 97
+[results][tyreworld][09]
+[single_agent][planning time: 1002.95][cost: 101.0]
+[multi_agent][planning_time: 206.6876711463928][cost: 97.0][agents: 5][optimization time 23.59825587272644]
+----------------------------------------
+Using cached single agent results
+LLM generated no subgoal for agent 4, reducing number of agents
+args.num_agents: 4
+['inflate all intact tyres', 'put-away all flat tyres in the boot', 'fetch all intact tyres from the boot']
+['./experiments_multiagent_help/run4033/tyreworld/p10_1.pddl', './experiments_multiagent_help/run4033/tyreworld/p10_2.pddl', './experiments_multiagent_help/run4033/tyreworld/p10_3.pddl']
+agent1
+[info][subgoal_1][tyreworld] task 10 takes 0.29 sec, found a plan with cost 10.0
+planner successful
+validating
+validator time 0.010003805160522461
+agent2
+[info][subgoal_2][tyreworld] task 10 takes 200.42 sec, found a plan with cost 51.0
+planner successful
+validating
+validator time 0.01418924331665039
+agent3
+planner broke
+INFO     planner time limit: None
+INFO     planner memory limit: None
+
+INFO     Running translator.
+INFO     translator stdin: None
+INFO     translator time limit: None
+INFO     translator memory limit: None
+INFO     translator command line string: /home/davidbai/.conda/envs/llm_pddl/bin/python /home/davidbai/multiagent_helper_llmp/downward/builds/release/bin/translate/translate.py domains/tyreworld/domain.pddl experiments_multiagent_help/run4033/tyreworld/p10_3.pddl --sas-file experiments_multiagent_help/run4033/tyreworld/p10_3_plan.pddl.sas
+Parsing...
+Parsing: [0.000s CPU, 0.006s wall-clock]
+Normalizing task... [0.000s CPU, 0.000s wall-clock]
+Instantiating...
+Generating Datalog program... [0.000s CPU, 0.001s wall-clock]
+Normalizing Datalog program...
+Trivial rules: Converted to facts.
+Normalizing Datalog program: [0.000s CPU, 0.002s wall-clock]
+Preparing model... [0.000s CPU, 0.002s wall-clock]
+Generated 52 rules.
+Computing model... [0.020s CPU, 0.014s wall-clock]
+1593 relevant atoms
+709 auxiliary atoms
+2302 final queue length
+3136 total queue pushes
+Completing instantiation... [0.020s CPU, 0.022s wall-clock]
+Instantiating: [0.040s CPU, 0.041s wall-clock]
+Computing fact groups...
+Finding invariants...
+32 initial candidates
+Finding invariants: [0.000s CPU, 0.005s wall-clock]
+Checking invariant weight... [0.010s CPU, 0.001s wall-clock]
+Instantiating groups... [0.000s CPU, 0.008s wall-clock]
+Collecting mutex groups... [0.010s CPU, 0.000s wall-clock]
+Choosing groups...
+30 uncovered facts
+Choosing groups: [0.000s CPU, 0.002s wall-clock]
+Building translation key... [0.000s CPU, 0.001s wall-clock]
+Computing fact groups: [0.020s CPU, 0.019s wall-clock]
+Building STRIPS to SAS dictionary... [0.000s CPU, 0.000s wall-clock]
+Building dictionary for full mutex groups... [0.000s CPU, 0.001s wall-clock]
+Building mutex information...
+Building mutex information: [0.000s CPU, 0.000s wall-clock]
+Translating task...
+Processing axioms...
+Simplifying axioms... [0.000s CPU, 0.000s wall-clock]
+Translator axioms removed by simplifying: 0
+Processing axioms: [0.000s CPU, 0.002s wall-clock]
+translate exit code: -9
+
+Driver aborting after translate
+INFO     Planner time: 730.96s
+
+list index out of range
+Traceback (most recent call last):
+  File "/home/davidbai/multiagent_helper_llmp/helper_script_n_agents.py", line 315, in <module>
+    planner.get_updated_init_conditions(path, validation_filename=f"./{path}/p{args.task_id}_{i}_validation.txt", pddl_problem_filename=init_problem, pddl_problem_filename_edited=init_problem_out,is_main=main_goal)
+  File "/home/davidbai/multiagent_helper_llmp/modules/planner.py", line 143, in get_updated_init_conditions
+    with open(validation_filename, 'r') as f:
+FileNotFoundError: [Errno 2] No such file or directory: './experiments_multiagent_help/run4033/tyreworld/p10_3_validation.txt'
+----------------------------------------
+Using cached single agent results
+LLM generated no subgoal for agent 4, reducing number of agents
+args.num_agents: 4
+['inflate all intact tyres', 'put-away all flat tyres in the boot', 'fetch all intact tyres from the boot']
+['./experiments_multiagent_help/run4033/tyreworld/p11_1.pddl', './experiments_multiagent_help/run4033/tyreworld/p11_2.pddl', './experiments_multiagent_help/run4033/tyreworld/p11_3.pddl']
+agent1
+[info][subgoal_1][tyreworld] task 11 takes 0.37 sec, found a plan with cost 11.0
+planner successful
+validating
+validator time 0.010612010955810547
+agent2
+[info][subgoal_2][tyreworld] task 11 takes 200.39 sec, found a plan with cost 56.0
+planner successful
+validating
+validator time 0.05368208885192871
+agent3
+planner broke
+INFO     planner time limit: None
+INFO     planner memory limit: None
+
+INFO     Running translator.
+INFO     translator stdin: None
+INFO     translator time limit: None
+INFO     translator memory limit: None
+INFO     translator command line string: /home/davidbai/.conda/envs/llm_pddl/bin/python /home/davidbai/multiagent_helper_llmp/downward/builds/release/bin/translate/translate.py domains/tyreworld/domain.pddl experiments_multiagent_help/run4033/tyreworld/p11_3.pddl --sas-file experiments_multiagent_help/run4033/tyreworld/p11_3_plan.pddl.sas
+Parsing...
+Parsing: [0.010s CPU, 0.055s wall-clock]
+Normalizing task... [0.000s CPU, 0.000s wall-clock]
+Instantiating...
+Generating Datalog program... [0.000s CPU, 0.001s wall-clock]
+Normalizing Datalog program...
+Trivial rules: Converted to facts.
+Normalizing Datalog program: [0.000s CPU, 0.003s wall-clock]
+Preparing model... [0.010s CPU, 0.002s wall-clock]
+Generated 52 rules.
+Computing model... [0.010s CPU, 0.017s wall-clock]
+1881 relevant atoms
+834 auxiliary atoms
+2715 final queue length
+3720 total queue pushes
+Completing instantiation... [0.030s CPU, 0.026s wall-clock]
+Instantiating: [0.050s CPU, 0.051s wall-clock]
+Computing fact groups...
+Finding invariants...
+32 initial candidates
+Finding invariants: [0.000s CPU, 0.005s wall-clock]
+Checking invariant weight... [0.000s CPU, 0.001s wall-clock]
+Instantiating groups... [0.010s CPU, 0.009s wall-clock]
+Collecting mutex groups... [0.000s CPU, 0.000s wall-clock]
+Choosing groups...
+33 uncovered facts
+Choosing groups: [0.010s CPU, 0.002s wall-clock]
+Building translation key... [0.000s CPU, 0.001s wall-clock]
+Computing fact groups: [0.020s CPU, 0.021s wall-clock]
+Building STRIPS to SAS dictionary... [0.000s CPU, 0.000s wall-clock]
+Building dictionary for full mutex groups... [0.000s CPU, 0.001s wall-clock]
+Building mutex information...
+Building mutex information: [0.000s CPU, 0.001s wall-clock]
+Translating task...
+Processing axioms...
+Simplifying axioms... [0.000s CPU, 0.000s wall-clock]
+Translator axioms removed by simplifying: 0
+Processing axioms: [0.010s CPU, 0.002s wall-clock]
+translate exit code: -9
+
+Driver aborting after translate
+INFO     Planner time: 713.36s
+
+list index out of range
+Traceback (most recent call last):
+  File "/home/davidbai/multiagent_helper_llmp/helper_script_n_agents.py", line 315, in <module>
+    planner.get_updated_init_conditions(path, validation_filename=f"./{path}/p{args.task_id}_{i}_validation.txt", pddl_problem_filename=init_problem, pddl_problem_filename_edited=init_problem_out,is_main=main_goal)
+  File "/home/davidbai/multiagent_helper_llmp/modules/planner.py", line 143, in get_updated_init_conditions
+    with open(validation_filename, 'r') as f:
+FileNotFoundError: [Errno 2] No such file or directory: './experiments_multiagent_help/run4033/tyreworld/p11_3_validation.txt'
+----------------------------------------
+Using cached single agent results
+LLM generated no subgoal for agent 4, reducing number of agents
+args.num_agents: 4
+['inflate all intact tyres', 'put-away all flat tyres in the boot', 'fetch all intact tyres from the boot']
+['./experiments_multiagent_help/run4033/tyreworld/p12_1.pddl', './experiments_multiagent_help/run4033/tyreworld/p12_2.pddl', './experiments_multiagent_help/run4033/tyreworld/p12_3.pddl']
+agent1
+[info][subgoal_1][tyreworld] task 12 takes 0.49 sec, found a plan with cost 12.0
+planner successful
+validating
+validator time 0.007591962814331055
+agent2
+[info][subgoal_2][tyreworld] task 12 takes 200.35 sec, found a plan with cost 61.0
+planner successful
+validating
+validator time 0.014565467834472656
+agent3
+[info][subgoal_3][tyreworld] task 12 takes 200.39 sec, found a plan with cost 24.0
+planner successful
+validating
+validator time 0.01137542724609375
+[info][multiagent main goal][tyreworld] task 12 takes 200.36 sec, found a plan with cost 37.0
+TASK: tyreworld - 4033 - 12
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (inflate r9)
+2 (Single): Agent 1: (inflate r8)
+3 (Single): Agent 1: (inflate r7)
+4 (Single): Agent 1: (inflate r6)
+5 (Single): Agent 1: (inflate r5)
+6 (Single): Agent 1: (inflate r4)
+7 (Single): Agent 1: (inflate r3)
+8 (Single): Agent 1: (inflate r2)
+9 (Single): Agent 1: (inflate r12)
+10 (Single): Agent 1: (inflate r11)
+11 (Single): Agent 1: (inflate r10)
+12 (Single): Agent 1: (inflate r1)
+
+merging plan 2 into initial_plan
+61 True
+verifying entire plan.
+merging plan 3 into initial_plan
+73 True
+verifying entire plan.
+merging main agent's plan into combined plan
+
+Main Agent's Plan:
+1 (Single): Agent 0: (do-up nuts9 the-hub9)
+2 (Single): Agent 0: (jack-down the-hub9)
+3 (Single): Agent 0: (tighten nuts9 the-hub9)
+4 (Single): Agent 0: (do-up nuts8 the-hub8)
+5 (Single): Agent 0: (jack-down the-hub8)
+6 (Single): Agent 0: (tighten nuts8 the-hub8)
+7 (Single): Agent 0: (do-up nuts7 the-hub7)
+8 (Single): Agent 0: (jack-down the-hub7)
+9 (Single): Agent 0: (tighten nuts7 the-hub7)
+10 (Single): Agent 0: (do-up nuts6 the-hub6)
+11 (Single): Agent 0: (jack-down the-hub6)
+12 (Single): Agent 0: (tighten nuts6 the-hub6)
+13 (Single): Agent 0: (do-up nuts5 the-hub5)
+14 (Single): Agent 0: (jack-down the-hub5)
+15 (Single): Agent 0: (tighten nuts5 the-hub5)
+16 (Single): Agent 0: (do-up nuts4 the-hub4)
+17 (Single): Agent 0: (jack-down the-hub4)
+18 (Single): Agent 0: (tighten nuts4 the-hub4)
+19 (Single): Agent 0: (do-up nuts3 the-hub3)
+20 (Single): Agent 0: (jack-down the-hub3)
+21 (Single): Agent 0: (tighten nuts3 the-hub3)
+22 (Single): Agent 0: (do-up nuts2 the-hub2)
+23 (Single): Agent 0: (jack-down the-hub2)
+24 (Single): Agent 0: (tighten nuts2 the-hub2)
+25 (Single): Agent 0: (do-up nuts12 the-hub12)
+26 (Single): Agent 0: (jack-down the-hub12)
+27 (Single): Agent 0: (tighten nuts12 the-hub12)
+28 (Single): Agent 0: (do-up nuts11 the-hub11)
+29 (Single): Agent 0: (jack-down the-hub11)
+30 (Single): Agent 0: (tighten nuts11 the-hub11)
+31 (Single): Agent 0: (do-up nuts10 the-hub10)
+32 (Single): Agent 0: (jack-down the-hub10)
+33 (Single): Agent 0: (tighten nuts10 the-hub10)
+34 (Single): Agent 0: (do-up nuts1 the-hub1)
+35 (Single): Agent 0: (jack-down the-hub1)
+36 (Single): Agent 0: (tighten nuts1 the-hub1)
+37 (Single): Agent 0: (close boot)
+
+Current Combined Plan:
+1 (Single): Agent 0: (loosen nuts9 the-hub9)
+2 (Single): Agent 0: (jack-up the-hub9)
+3 (Single): Agent 0: (undo nuts9 the-hub9)
+4 (Single): Agent 0: (remove-wheel w9 the-hub9)
+5 (Single): Agent 0: (loosen nuts8 the-hub8)
+6 (Single): Agent 0: (jack-up the-hub8)
+7 (Single): Agent 0: (undo nuts8 the-hub8)
+8 (Single): Agent 0: (remove-wheel w8 the-hub8)
+9 (Single): Agent 0: (loosen nuts7 the-hub7)
+10 (Single): Agent 0: (jack-up the-hub7)
+11 (Single): Agent 0: (undo nuts7 the-hub7)
+12 (Single): Agent 0: (remove-wheel w7 the-hub7)
+13 (Single): Agent 0: (loosen nuts6 the-hub6)
+14 (Single): Agent 0: (jack-up the-hub6)
+15 (Single): Agent 0: (undo nuts6 the-hub6)
+16 (Single): Agent 0: (remove-wheel w6 the-hub6)
+17 (Single): Agent 0: (loosen nuts5 the-hub5)
+18 (Single): Agent 0: (jack-up the-hub5)
+19 (Single): Agent 0: (undo nuts5 the-hub5)
+20 (Single): Agent 0: (remove-wheel w5 the-hub5)
+21 (Single): Agent 0: (loosen nuts4 the-hub4)
+22 (Single): Agent 0: (jack-up the-hub4)
+23 (Single): Agent 0: (undo nuts4 the-hub4)
+24 (Single): Agent 0: (remove-wheel w4 the-hub4)
+25 (Single): Agent 0: (loosen nuts3 the-hub3)
+26 (Single): Agent 0: (jack-up the-hub3)
+27 (Single): Agent 0: (undo nuts3 the-hub3)
+28 (Single): Agent 0: (remove-wheel w3 the-hub3)
+29 (Single): Agent 0: (loosen nuts2 the-hub2)
+30 (Single): Agent 0: (jack-up the-hub2)
+31 (Single): Agent 0: (undo nuts2 the-hub2)
+32 (Single): Agent 0: (remove-wheel w2 the-hub2)
+33 (Single): Agent 0: (loosen nuts12 the-hub12)
+34 (Single): Agent 0: (jack-up the-hub12)
+35 (Single): Agent 0: (undo nuts12 the-hub12)
+36 (Single): Agent 0: (remove-wheel w12 the-hub12)
+37 (Single): Agent 0: (loosen nuts11 the-hub11)
+38 (Single): Agent 0: (jack-up the-hub11)
+39 (Single): Agent 0: (undo nuts11 the-hub11)
+40 (Single): Agent 0: (remove-wheel w11 the-hub11)
+41 (Single): Agent 0: (loosen nuts10 the-hub10)
+42 (Single): Agent 0: (jack-up the-hub10)
+43 (Single): Agent 0: (undo nuts10 the-hub10)
+44 (Single): Agent 0: (remove-wheel w10 the-hub10)
+45 (Single): Agent 0: (loosen nuts1 the-hub1)
+46 (Single): Agent 0: (jack-up the-hub1)
+47 (Single): Agent 0: (undo nuts1 the-hub1)
+48 (Single): Agent 0: (remove-wheel w1 the-hub1)
+49 (Single): Agent 0: (open boot)
+50 (Single): Agent 1: (fetch r1 boot)
+51 (Single): Agent 1: (put-on-wheel r1 the-hub1)
+52 (Single): Agent 1: (fetch r10 boot)
+53 (Single): Agent 1: (put-on-wheel r10 the-hub10)
+54 (Single): Agent 1: (fetch r11 boot)
+55 (Single): Agent 1: (put-on-wheel r11 the-hub11)
+56 (Single): Agent 1: (fetch r12 boot)
+57 (Single): Agent 1: (put-on-wheel r12 the-hub12)
+58 (Single): Agent 1: (fetch r2 boot)
+59 (Single): Agent 1: (put-on-wheel r2 the-hub2)
+60 (Single): Agent 1: (fetch r3 boot)
+61 (Single): Agent 1: (put-on-wheel r3 the-hub3)
+62 (Parallel):
+  Agent 0: (inflate r9)
+(put-away w1 boot)
+  Agent 1: (fetch r4 boot)
+63 (Parallel):
+  Agent 0: (inflate r8)
+(put-away w10 boot)
+  Agent 1: (put-on-wheel r4 the-hub4)
+64 (Parallel):
+  Agent 0: (inflate r7)
+(put-away w11 boot)
+  Agent 1: (fetch r5 boot)
+65 (Parallel):
+  Agent 0: (inflate r6)
+(put-away w12 boot)
+  Agent 1: (put-on-wheel r5 the-hub5)
+66 (Parallel):
+  Agent 0: (inflate r5)
+(put-away w2 boot)
+  Agent 1: (fetch r6 boot)
+67 (Parallel):
+  Agent 0: (inflate r4)
+(put-away w3 boot)
+  Agent 1: (put-on-wheel r6 the-hub6)
+68 (Parallel):
+  Agent 0: (inflate r3)
+(put-away w4 boot)
+  Agent 1: (fetch r7 boot)
+69 (Parallel):
+  Agent 0: (inflate r2)
+(put-away w5 boot)
+  Agent 1: (put-on-wheel r7 the-hub7)
+70 (Parallel):
+  Agent 0: (inflate r12)
+(put-away w6 boot)
+  Agent 1: (fetch r8 boot)
+71 (Parallel):
+  Agent 0: (inflate r11)
+(put-away w7 boot)
+  Agent 1: (put-on-wheel r8 the-hub8)
+72 (Parallel):
+  Agent 0: (inflate r10)
+(put-away w8 boot)
+  Agent 1: (fetch r9 boot)
+73 (Parallel):
+  Agent 0: (inflate r1)
+(put-away w9 boot)
+  Agent 1: (put-on-wheel r9 the-hub9)
+
+109 True
+
+Final Merged Plan:
+1 (Single): Agent 0: (loosen nuts9 the-hub9)
+2 (Single): Agent 0: (jack-up the-hub9)
+3 (Single): Agent 0: (undo nuts9 the-hub9)
+4 (Single): Agent 0: (remove-wheel w9 the-hub9)
+5 (Single): Agent 0: (loosen nuts8 the-hub8)
+6 (Single): Agent 0: (jack-up the-hub8)
+7 (Single): Agent 0: (undo nuts8 the-hub8)
+8 (Single): Agent 0: (remove-wheel w8 the-hub8)
+9 (Single): Agent 0: (loosen nuts7 the-hub7)
+10 (Single): Agent 0: (jack-up the-hub7)
+11 (Single): Agent 0: (undo nuts7 the-hub7)
+12 (Single): Agent 0: (remove-wheel w7 the-hub7)
+13 (Single): Agent 0: (loosen nuts6 the-hub6)
+14 (Single): Agent 0: (jack-up the-hub6)
+15 (Single): Agent 0: (undo nuts6 the-hub6)
+16 (Single): Agent 0: (remove-wheel w6 the-hub6)
+17 (Single): Agent 0: (loosen nuts5 the-hub5)
+18 (Single): Agent 0: (jack-up the-hub5)
+19 (Single): Agent 0: (undo nuts5 the-hub5)
+20 (Single): Agent 0: (remove-wheel w5 the-hub5)
+21 (Single): Agent 0: (loosen nuts4 the-hub4)
+22 (Single): Agent 0: (jack-up the-hub4)
+23 (Single): Agent 0: (undo nuts4 the-hub4)
+24 (Single): Agent 0: (remove-wheel w4 the-hub4)
+25 (Single): Agent 0: (loosen nuts3 the-hub3)
+26 (Single): Agent 0: (jack-up the-hub3)
+27 (Single): Agent 0: (undo nuts3 the-hub3)
+28 (Single): Agent 0: (remove-wheel w3 the-hub3)
+29 (Single): Agent 0: (loosen nuts2 the-hub2)
+30 (Single): Agent 0: (jack-up the-hub2)
+31 (Single): Agent 0: (undo nuts2 the-hub2)
+32 (Single): Agent 0: (remove-wheel w2 the-hub2)
+33 (Single): Agent 0: (loosen nuts12 the-hub12)
+34 (Single): Agent 0: (jack-up the-hub12)
+35 (Single): Agent 0: (undo nuts12 the-hub12)
+36 (Single): Agent 0: (remove-wheel w12 the-hub12)
+37 (Single): Agent 0: (loosen nuts11 the-hub11)
+38 (Single): Agent 0: (jack-up the-hub11)
+39 (Single): Agent 0: (undo nuts11 the-hub11)
+40 (Single): Agent 0: (remove-wheel w11 the-hub11)
+41 (Single): Agent 0: (loosen nuts10 the-hub10)
+42 (Single): Agent 0: (jack-up the-hub10)
+43 (Single): Agent 0: (undo nuts10 the-hub10)
+44 (Single): Agent 0: (remove-wheel w10 the-hub10)
+45 (Single): Agent 0: (loosen nuts1 the-hub1)
+46 (Single): Agent 0: (jack-up the-hub1)
+47 (Single): Agent 0: (undo nuts1 the-hub1)
+48 (Single): Agent 0: (remove-wheel w1 the-hub1)
+49 (Single): Agent 0: (open boot)
+50 (Single): Agent 0: (fetch r1 boot)
+51 (Single): Agent 0: (put-on-wheel r1 the-hub1)
+52 (Single): Agent 0: (fetch r10 boot)
+53 (Single): Agent 0: (put-on-wheel r10 the-hub10)
+54 (Single): Agent 0: (fetch r11 boot)
+55 (Single): Agent 0: (put-on-wheel r11 the-hub11)
+56 (Single): Agent 0: (fetch r12 boot)
+57 (Single): Agent 0: (put-on-wheel r12 the-hub12)
+58 (Single): Agent 0: (fetch r2 boot)
+59 (Single): Agent 0: (put-on-wheel r2 the-hub2)
+60 (Single): Agent 0: (fetch r3 boot)
+61 (Single): Agent 0: (put-on-wheel r3 the-hub3)
+62 (Parallel, derived from single action with multiple steps):
+  Agent 0: (inflate r9)
+  Agent 0: (put-away w1 boot)
+  Agent 0: (fetch r4 boot)
+63 (Parallel, derived from single action with multiple steps):
+  Agent 0: (inflate r8)
+  Agent 0: (put-away w10 boot)
+  Agent 0: (put-on-wheel r4 the-hub4)
+64 (Parallel, derived from single action with multiple steps):
+  Agent 0: (inflate r7)
+  Agent 0: (put-away w11 boot)
+  Agent 0: (fetch r5 boot)
+65 (Parallel, derived from single action with multiple steps):
+  Agent 0: (inflate r6)
+  Agent 0: (put-away w12 boot)
+  Agent 0: (put-on-wheel r5 the-hub5)
+66 (Parallel, derived from single action with multiple steps):
+  Agent 0: (inflate r5)
+  Agent 0: (put-away w2 boot)
+  Agent 0: (fetch r6 boot)
+67 (Parallel, derived from single action with multiple steps):
+  Agent 0: (inflate r4)
+  Agent 0: (put-away w3 boot)
+  Agent 0: (put-on-wheel r6 the-hub6)
+68 (Parallel, derived from single action with multiple steps):
+  Agent 0: (inflate r3)
+  Agent 0: (put-away w4 boot)
+  Agent 0: (fetch r7 boot)
+69 (Parallel, derived from single action with multiple steps):
+  Agent 0: (inflate r2)
+  Agent 0: (put-away w5 boot)
+  Agent 0: (put-on-wheel r7 the-hub7)
+70 (Parallel, derived from single action with multiple steps):
+  Agent 0: (inflate r12)
+  Agent 0: (put-away w6 boot)
+  Agent 0: (fetch r8 boot)
+71 (Parallel, derived from single action with multiple steps):
+  Agent 0: (inflate r11)
+  Agent 0: (put-away w7 boot)
+  Agent 0: (put-on-wheel r8 the-hub8)
+72 (Parallel, derived from single action with multiple steps):
+  Agent 0: (inflate r10)
+  Agent 0: (put-away w8 boot)
+  Agent 0: (fetch r9 boot)
+73 (Parallel):
+  Agent 0: (inflate r1)
+(put-away w9 boot)
+(put-on-wheel r9 the-hub9)
+  Agent 1: (do-up nuts9 the-hub9)
+74 (Single): Agent 1: (jack-down the-hub9)
+75 (Single): Agent 1: (tighten nuts9 the-hub9)
+76 (Single): Agent 1: (do-up nuts8 the-hub8)
+77 (Single): Agent 1: (jack-down the-hub8)
+78 (Single): Agent 1: (tighten nuts8 the-hub8)
+79 (Single): Agent 1: (do-up nuts7 the-hub7)
+80 (Single): Agent 1: (jack-down the-hub7)
+81 (Single): Agent 1: (tighten nuts7 the-hub7)
+82 (Single): Agent 1: (do-up nuts6 the-hub6)
+83 (Single): Agent 1: (jack-down the-hub6)
+84 (Single): Agent 1: (tighten nuts6 the-hub6)
+85 (Single): Agent 1: (do-up nuts5 the-hub5)
+86 (Single): Agent 1: (jack-down the-hub5)
+87 (Single): Agent 1: (tighten nuts5 the-hub5)
+88 (Single): Agent 1: (do-up nuts4 the-hub4)
+89 (Single): Agent 1: (jack-down the-hub4)
+90 (Single): Agent 1: (tighten nuts4 the-hub4)
+91 (Single): Agent 1: (do-up nuts3 the-hub3)
+92 (Single): Agent 1: (jack-down the-hub3)
+93 (Single): Agent 1: (tighten nuts3 the-hub3)
+94 (Single): Agent 1: (do-up nuts2 the-hub2)
+95 (Single): Agent 1: (jack-down the-hub2)
+96 (Single): Agent 1: (tighten nuts2 the-hub2)
+97 (Single): Agent 1: (do-up nuts12 the-hub12)
+98 (Single): Agent 1: (jack-down the-hub12)
+99 (Single): Agent 1: (tighten nuts12 the-hub12)
+100 (Single): Agent 1: (do-up nuts11 the-hub11)
+101 (Single): Agent 1: (jack-down the-hub11)
+102 (Single): Agent 1: (tighten nuts11 the-hub11)
+103 (Single): Agent 1: (do-up nuts10 the-hub10)
+104 (Single): Agent 1: (jack-down the-hub10)
+105 (Single): Agent 1: (tighten nuts10 the-hub10)
+106 (Single): Agent 1: (do-up nuts1 the-hub1)
+107 (Single): Agent 1: (jack-down the-hub1)
+108 (Single): Agent 1: (tighten nuts1 the-hub1)
+109 (Single): Agent 1: (close boot)
+
+Total Cost: 109
+[results][tyreworld][12]
+[single_agent][planning time: 1002.76][cost: 134.0]
+[multi_agent][planning_time: 611.2664442920685][cost: 109.0][agents: 4][optimization time 449.8715081214905]
+----------------------------------------
+Using cached single agent results
+['inflate all intact tyres', 'put-away all flat tyres in the boot', 'loosen all nuts on the hubs', 'open the boot']
+['./experiments_multiagent_help/run4033/tyreworld/p13_1.pddl', './experiments_multiagent_help/run4033/tyreworld/p13_2.pddl', './experiments_multiagent_help/run4033/tyreworld/p13_3.pddl', './experiments_multiagent_help/run4033/tyreworld/p13_4.pddl']
+agent1
+[info][subgoal_1][tyreworld] task 13 takes 0.75 sec, found a plan with cost 13.0
+planner successful
+validating
+validator time 0.01061558723449707
+agent2
+[info][subgoal_2][tyreworld] task 13 takes 200.39 sec, found a plan with cost 66.0
+planner successful
+validating
+validator time 0.016613245010375977
+agent3
+[info][subgoal_3][tyreworld] task 13 takes 200.38 sec, found a plan with cost 13.0
+planner successful
+validating
+validator time 0.01234292984008789
+agent4
+planner broke
+INFO     planner time limit: None
+INFO     planner memory limit: None
+
+INFO     Running translator.
+INFO     translator stdin: None
+INFO     translator time limit: None
+INFO     translator memory limit: None
+INFO     translator command line string: /home/davidbai/.conda/envs/llm_pddl/bin/python /home/davidbai/multiagent_helper_llmp/downward/builds/release/bin/translate/translate.py domains/tyreworld/domain.pddl experiments_multiagent_help/run4033/tyreworld/p13_4.pddl --sas-file experiments_multiagent_help/run4033/tyreworld/p13_4_plan.pddl.sas
+Parsing...
+Parsing task
+	->Parsing goal
+	->Parsing condition
+Expected logical operator or predicate name
+Got: opened
+translate exit code: 31
+
+Driver aborting after translate
+INFO     Planner time: 0.12s
+
+list index out of range
+Traceback (most recent call last):
+  File "/home/davidbai/multiagent_helper_llmp/helper_script_n_agents.py", line 315, in <module>
+    planner.get_updated_init_conditions(path, validation_filename=f"./{path}/p{args.task_id}_{i}_validation.txt", pddl_problem_filename=init_problem, pddl_problem_filename_edited=init_problem_out,is_main=main_goal)
+  File "/home/davidbai/multiagent_helper_llmp/modules/planner.py", line 143, in get_updated_init_conditions
+    with open(validation_filename, 'r') as f:
+FileNotFoundError: [Errno 2] No such file or directory: './experiments_multiagent_help/run4033/tyreworld/p13_4_validation.txt'
+----------------------------------------
+Using cached single agent results
+LLM generated no subgoal for agent 4, reducing number of agents
+args.num_agents: 4
+['inflate all intact tyres', 'put-away all flat tyres in the boot', 'fetch all intact tyres from the boot']
+['./experiments_multiagent_help/run4033/tyreworld/p14_1.pddl', './experiments_multiagent_help/run4033/tyreworld/p14_2.pddl', './experiments_multiagent_help/run4033/tyreworld/p14_3.pddl']
+agent1
+[info][subgoal_1][tyreworld] task 14 takes 1.25 sec, found a plan with cost 14.0
+planner successful
+validating
+validator time 0.011294841766357422
+agent2
+[info][subgoal_2][tyreworld] task 14 takes 200.43 sec, found a plan with cost 71.0
+planner successful
+validating
+validator time 0.01510167121887207
+agent3
+planner broke
+INFO     planner time limit: None
+INFO     planner memory limit: None
+
+INFO     Running translator.
+INFO     translator stdin: None
+INFO     translator time limit: None
+INFO     translator memory limit: None
+INFO     translator command line string: /home/davidbai/.conda/envs/llm_pddl/bin/python /home/davidbai/multiagent_helper_llmp/downward/builds/release/bin/translate/translate.py domains/tyreworld/domain.pddl experiments_multiagent_help/run4033/tyreworld/p14_3.pddl --sas-file experiments_multiagent_help/run4033/tyreworld/p14_3_plan.pddl.sas
+Parsing...
+Parsing: [0.010s CPU, 0.006s wall-clock]
+Normalizing task... [0.000s CPU, 0.000s wall-clock]
+Instantiating...
+Generating Datalog program... [0.000s CPU, 0.001s wall-clock]
+Normalizing Datalog program...
+Trivial rules: Converted to facts.
+Normalizing Datalog program: [0.000s CPU, 0.002s wall-clock]
+Preparing model... [0.000s CPU, 0.002s wall-clock]
+Generated 52 rules.
+Computing model... [0.030s CPU, 0.024s wall-clock]
+2889 relevant atoms
+1269 auxiliary atoms
+4158 final queue length
+5772 total queue pushes
+Completing instantiation... [0.050s CPU, 0.040s wall-clock]
+Instantiating: [0.080s CPU, 0.071s wall-clock]
+Computing fact groups...
+Finding invariants...
+32 initial candidates
+Finding invariants: [0.000s CPU, 0.005s wall-clock]
+Checking invariant weight... [0.000s CPU, 0.001s wall-clock]
+Instantiating groups... [0.020s CPU, 0.014s wall-clock]
+Collecting mutex groups... [0.000s CPU, 0.001s wall-clock]
+Choosing groups...
+42 uncovered facts
+Choosing groups: [0.000s CPU, 0.004s wall-clock]
+Building translation key... [0.000s CPU, 0.001s wall-clock]
+Computing fact groups: [0.030s CPU, 0.031s wall-clock]
+Building STRIPS to SAS dictionary... [0.000s CPU, 0.001s wall-clock]
+Building dictionary for full mutex groups... [0.000s CPU, 0.001s wall-clock]
+Building mutex information...
+Building mutex information: [0.000s CPU, 0.001s wall-clock]
+Translating task...
+Processing axioms...
+Simplifying axioms... [0.000s CPU, 0.000s wall-clock]
+Translator axioms removed by simplifying: 0
+Processing axioms: [0.000s CPU, 0.003s wall-clock]
+translate exit code: -9
+
+Driver aborting after translate
+INFO     Planner time: 634.72s
+
+list index out of range
+Traceback (most recent call last):
+  File "/home/davidbai/multiagent_helper_llmp/helper_script_n_agents.py", line 315, in <module>
+    planner.get_updated_init_conditions(path, validation_filename=f"./{path}/p{args.task_id}_{i}_validation.txt", pddl_problem_filename=init_problem, pddl_problem_filename_edited=init_problem_out,is_main=main_goal)
+  File "/home/davidbai/multiagent_helper_llmp/modules/planner.py", line 143, in get_updated_init_conditions
+    with open(validation_filename, 'r') as f:
+FileNotFoundError: [Errno 2] No such file or directory: './experiments_multiagent_help/run4033/tyreworld/p14_3_validation.txt'
+----------------------------------------
+Using cached single agent results
+['inflate r1', 'inflate r2', 'inflate r3', 'inflate r4']
+['./experiments_multiagent_help/run4033/tyreworld/p15_1.pddl', './experiments_multiagent_help/run4033/tyreworld/p15_2.pddl', './experiments_multiagent_help/run4033/tyreworld/p15_3.pddl', './experiments_multiagent_help/run4033/tyreworld/p15_4.pddl']
+agent1
+[info][subgoal_1][tyreworld] task 15 takes 0.36 sec, found a plan with cost 1.0
+planner successful
+validating
+validator time 0.010273933410644531
+agent2
+[info][subgoal_2][tyreworld] task 15 takes 0.36 sec, found a plan with cost 1.0
+planner successful
+validating
+validator time 0.009404182434082031
+agent3
+[info][subgoal_3][tyreworld] task 15 takes 0.37 sec, found a plan with cost 1.0
+planner successful
+validating
+validator time 0.009708881378173828
+agent4
+[info][subgoal_4][tyreworld] task 15 takes 0.37 sec, found a plan with cost 1.0
+planner successful
+validating
+validator time 0.009834051132202148
+[info][multiagent main goal][tyreworld] task 15 takes 200.43 sec, found a plan with cost 163.0
+TASK: tyreworld - 4033 - 15
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (inflate r1)
+
+merging plan 2 into initial_plan
+1 True
+verifying entire plan.
+merging plan 3 into initial_plan
+1 True
+verifying entire plan.
+merging plan 4 into initial_plan
+1 True
+verifying entire plan.
+merging main agent's plan into combined plan
+
+Main Agent's Plan:
+1 (Single): Agent 0: (loosen nuts9 the-hub9)
+2 (Single): Agent 0: (jack-up the-hub9)
+3 (Single): Agent 0: (undo nuts9 the-hub9)
+4 (Single): Agent 0: (remove-wheel w9 the-hub9)
+5 (Single): Agent 0: (loosen nuts8 the-hub8)
+6 (Single): Agent 0: (jack-up the-hub8)
+7 (Single): Agent 0: (undo nuts8 the-hub8)
+8 (Single): Agent 0: (remove-wheel w8 the-hub8)
+9 (Single): Agent 0: (loosen nuts7 the-hub7)
+10 (Single): Agent 0: (jack-up the-hub7)
+11 (Single): Agent 0: (undo nuts7 the-hub7)
+12 (Single): Agent 0: (remove-wheel w7 the-hub7)
+13 (Single): Agent 0: (loosen nuts6 the-hub6)
+14 (Single): Agent 0: (jack-up the-hub6)
+15 (Single): Agent 0: (undo nuts6 the-hub6)
+16 (Single): Agent 0: (remove-wheel w6 the-hub6)
+17 (Single): Agent 0: (loosen nuts5 the-hub5)
+18 (Single): Agent 0: (jack-up the-hub5)
+19 (Single): Agent 0: (undo nuts5 the-hub5)
+20 (Single): Agent 0: (remove-wheel w5 the-hub5)
+21 (Single): Agent 0: (loosen nuts4 the-hub4)
+22 (Single): Agent 0: (jack-up the-hub4)
+23 (Single): Agent 0: (undo nuts4 the-hub4)
+24 (Single): Agent 0: (remove-wheel w4 the-hub4)
+25 (Single): Agent 0: (loosen nuts3 the-hub3)
+26 (Single): Agent 0: (jack-up the-hub3)
+27 (Single): Agent 0: (undo nuts3 the-hub3)
+28 (Single): Agent 0: (remove-wheel w3 the-hub3)
+29 (Single): Agent 0: (loosen nuts2 the-hub2)
+30 (Single): Agent 0: (jack-up the-hub2)
+31 (Single): Agent 0: (undo nuts2 the-hub2)
+32 (Single): Agent 0: (remove-wheel w2 the-hub2)
+33 (Single): Agent 0: (loosen nuts15 the-hub15)
+34 (Single): Agent 0: (jack-up the-hub15)
+35 (Single): Agent 0: (undo nuts15 the-hub15)
+36 (Single): Agent 0: (remove-wheel w15 the-hub15)
+37 (Single): Agent 0: (loosen nuts14 the-hub14)
+38 (Single): Agent 0: (jack-up the-hub14)
+39 (Single): Agent 0: (undo nuts14 the-hub14)
+40 (Single): Agent 0: (remove-wheel w14 the-hub14)
+41 (Single): Agent 0: (loosen nuts13 the-hub13)
+42 (Single): Agent 0: (jack-up the-hub13)
+43 (Single): Agent 0: (undo nuts13 the-hub13)
+44 (Single): Agent 0: (remove-wheel w13 the-hub13)
+45 (Single): Agent 0: (loosen nuts12 the-hub12)
+46 (Single): Agent 0: (jack-up the-hub12)
+47 (Single): Agent 0: (undo nuts12 the-hub12)
+48 (Single): Agent 0: (remove-wheel w12 the-hub12)
+49 (Single): Agent 0: (loosen nuts11 the-hub11)
+50 (Single): Agent 0: (jack-up the-hub11)
+51 (Single): Agent 0: (undo nuts11 the-hub11)
+52 (Single): Agent 0: (remove-wheel w11 the-hub11)
+53 (Single): Agent 0: (loosen nuts10 the-hub10)
+54 (Single): Agent 0: (jack-up the-hub10)
+55 (Single): Agent 0: (undo nuts10 the-hub10)
+56 (Single): Agent 0: (remove-wheel w10 the-hub10)
+57 (Single): Agent 0: (loosen nuts1 the-hub1)
+58 (Single): Agent 0: (jack-up the-hub1)
+59 (Single): Agent 0: (undo nuts1 the-hub1)
+60 (Single): Agent 0: (remove-wheel w1 the-hub1)
+61 (Single): Agent 0: (inflate r9)
+62 (Single): Agent 0: (inflate r8)
+63 (Single): Agent 0: (inflate r7)
+64 (Single): Agent 0: (inflate r6)
+65 (Single): Agent 0: (inflate r5)
+66 (Single): Agent 0: (inflate r15)
+67 (Single): Agent 0: (inflate r14)
+68 (Single): Agent 0: (inflate r13)
+69 (Single): Agent 0: (inflate r12)
+70 (Single): Agent 0: (inflate r11)
+71 (Single): Agent 0: (inflate r10)
+72 (Single): Agent 0: (open boot)
+73 (Single): Agent 0: (fetch r1 boot)
+74 (Single): Agent 0: (put-on-wheel r1 the-hub1)
+75 (Single): Agent 0: (fetch r10 boot)
+76 (Single): Agent 0: (put-on-wheel r10 the-hub10)
+77 (Single): Agent 0: (fetch r11 boot)
+78 (Single): Agent 0: (put-on-wheel r11 the-hub11)
+79 (Single): Agent 0: (fetch r12 boot)
+80 (Single): Agent 0: (put-on-wheel r12 the-hub12)
+81 (Single): Agent 0: (fetch r13 boot)
+82 (Single): Agent 0: (put-on-wheel r13 the-hub13)
+83 (Single): Agent 0: (fetch r14 boot)
+84 (Single): Agent 0: (put-on-wheel r14 the-hub14)
+85 (Single): Agent 0: (fetch r15 boot)
+86 (Single): Agent 0: (put-on-wheel r15 the-hub15)
+87 (Single): Agent 0: (fetch r2 boot)
+88 (Single): Agent 0: (put-on-wheel r2 the-hub2)
+89 (Single): Agent 0: (fetch r3 boot)
+90 (Single): Agent 0: (put-on-wheel r3 the-hub3)
+91 (Single): Agent 0: (fetch r4 boot)
+92 (Single): Agent 0: (put-on-wheel r4 the-hub4)
+93 (Single): Agent 0: (do-up nuts4 the-hub4)
+94 (Single): Agent 0: (jack-down the-hub4)
+95 (Single): Agent 0: (tighten nuts4 the-hub4)
+96 (Single): Agent 0: (do-up nuts3 the-hub3)
+97 (Single): Agent 0: (jack-down the-hub3)
+98 (Single): Agent 0: (tighten nuts3 the-hub3)
+99 (Single): Agent 0: (do-up nuts2 the-hub2)
+100 (Single): Agent 0: (jack-down the-hub2)
+101 (Single): Agent 0: (tighten nuts2 the-hub2)
+102 (Single): Agent 0: (do-up nuts15 the-hub15)
+103 (Single): Agent 0: (jack-down the-hub15)
+104 (Single): Agent 0: (tighten nuts15 the-hub15)
+105 (Single): Agent 0: (do-up nuts14 the-hub14)
+106 (Single): Agent 0: (jack-down the-hub14)
+107 (Single): Agent 0: (tighten nuts14 the-hub14)
+108 (Single): Agent 0: (do-up nuts13 the-hub13)
+109 (Single): Agent 0: (jack-down the-hub13)
+110 (Single): Agent 0: (tighten nuts13 the-hub13)
+111 (Single): Agent 0: (do-up nuts12 the-hub12)
+112 (Single): Agent 0: (jack-down the-hub12)
+113 (Single): Agent 0: (tighten nuts12 the-hub12)
+114 (Single): Agent 0: (do-up nuts11 the-hub11)
+115 (Single): Agent 0: (jack-down the-hub11)
+116 (Single): Agent 0: (tighten nuts11 the-hub11)
+117 (Single): Agent 0: (do-up nuts10 the-hub10)
+118 (Single): Agent 0: (jack-down the-hub10)
+119 (Single): Agent 0: (tighten nuts10 the-hub10)
+120 (Single): Agent 0: (do-up nuts1 the-hub1)
+121 (Single): Agent 0: (jack-down the-hub1)
+122 (Single): Agent 0: (tighten nuts1 the-hub1)
+123 (Single): Agent 0: (fetch r5 boot)
+124 (Single): Agent 0: (put-on-wheel r5 the-hub5)
+125 (Single): Agent 0: (do-up nuts5 the-hub5)
+126 (Single): Agent 0: (jack-down the-hub5)
+127 (Single): Agent 0: (tighten nuts5 the-hub5)
+128 (Single): Agent 0: (fetch r6 boot)
+129 (Single): Agent 0: (put-on-wheel r6 the-hub6)
+130 (Single): Agent 0: (do-up nuts6 the-hub6)
+131 (Single): Agent 0: (jack-down the-hub6)
+132 (Single): Agent 0: (tighten nuts6 the-hub6)
+133 (Single): Agent 0: (fetch r7 boot)
+134 (Single): Agent 0: (put-on-wheel r7 the-hub7)
+135 (Single): Agent 0: (fetch r8 boot)
+136 (Single): Agent 0: (put-on-wheel r8 the-hub8)
+137 (Single): Agent 0: (fetch r9 boot)
+138 (Single): Agent 0: (put-on-wheel r9 the-hub9)
+139 (Single): Agent 0: (do-up nuts9 the-hub9)
+140 (Single): Agent 0: (jack-down the-hub9)
+141 (Single): Agent 0: (tighten nuts9 the-hub9)
+142 (Single): Agent 0: (do-up nuts8 the-hub8)
+143 (Single): Agent 0: (jack-down the-hub8)
+144 (Single): Agent 0: (tighten nuts8 the-hub8)
+145 (Single): Agent 0: (do-up nuts7 the-hub7)
+146 (Single): Agent 0: (jack-down the-hub7)
+147 (Single): Agent 0: (tighten nuts7 the-hub7)
+148 (Single): Agent 0: (put-away w1 boot)
+149 (Single): Agent 0: (put-away w10 boot)
+150 (Single): Agent 0: (put-away w11 boot)
+151 (Single): Agent 0: (put-away w12 boot)
+152 (Single): Agent 0: (put-away w13 boot)
+153 (Single): Agent 0: (put-away w14 boot)
+154 (Single): Agent 0: (put-away w15 boot)
+155 (Single): Agent 0: (put-away w2 boot)
+156 (Single): Agent 0: (put-away w3 boot)
+157 (Single): Agent 0: (put-away w4 boot)
+158 (Single): Agent 0: (put-away w5 boot)
+159 (Single): Agent 0: (put-away w6 boot)
+160 (Single): Agent 0: (put-away w7 boot)
+161 (Single): Agent 0: (put-away w8 boot)
+162 (Single): Agent 0: (put-away w9 boot)
+163 (Single): Agent 0: (close boot)
+
+Current Combined Plan:
+1 (Parallel):
+  Agent 0: (inflate r1)
+(inflate r2)
+(inflate r3)
+  Agent 1: (inflate r4)
+
+163 True
+
+Final Merged Plan:
+1 (Single): Agent 1: (loosen nuts9 the-hub9)
+2 (Single): Agent 1: (jack-up the-hub9)
+3 (Single): Agent 1: (undo nuts9 the-hub9)
+4 (Single): Agent 1: (remove-wheel w9 the-hub9)
+5 (Single): Agent 1: (loosen nuts8 the-hub8)
+6 (Single): Agent 1: (jack-up the-hub8)
+7 (Single): Agent 1: (undo nuts8 the-hub8)
+8 (Single): Agent 1: (remove-wheel w8 the-hub8)
+9 (Single): Agent 1: (loosen nuts7 the-hub7)
+10 (Single): Agent 1: (jack-up the-hub7)
+11 (Single): Agent 1: (undo nuts7 the-hub7)
+12 (Single): Agent 1: (remove-wheel w7 the-hub7)
+13 (Single): Agent 1: (loosen nuts6 the-hub6)
+14 (Single): Agent 1: (jack-up the-hub6)
+15 (Single): Agent 1: (undo nuts6 the-hub6)
+16 (Single): Agent 1: (remove-wheel w6 the-hub6)
+17 (Single): Agent 1: (loosen nuts5 the-hub5)
+18 (Single): Agent 1: (jack-up the-hub5)
+19 (Single): Agent 1: (undo nuts5 the-hub5)
+20 (Single): Agent 1: (remove-wheel w5 the-hub5)
+21 (Single): Agent 1: (loosen nuts4 the-hub4)
+22 (Single): Agent 1: (jack-up the-hub4)
+23 (Single): Agent 1: (undo nuts4 the-hub4)
+24 (Single): Agent 1: (remove-wheel w4 the-hub4)
+25 (Single): Agent 1: (loosen nuts3 the-hub3)
+26 (Single): Agent 1: (jack-up the-hub3)
+27 (Single): Agent 1: (undo nuts3 the-hub3)
+28 (Single): Agent 1: (remove-wheel w3 the-hub3)
+29 (Single): Agent 1: (loosen nuts2 the-hub2)
+30 (Single): Agent 1: (jack-up the-hub2)
+31 (Single): Agent 1: (undo nuts2 the-hub2)
+32 (Single): Agent 1: (remove-wheel w2 the-hub2)
+33 (Single): Agent 1: (loosen nuts15 the-hub15)
+34 (Single): Agent 1: (jack-up the-hub15)
+35 (Single): Agent 1: (undo nuts15 the-hub15)
+36 (Single): Agent 1: (remove-wheel w15 the-hub15)
+37 (Single): Agent 1: (loosen nuts14 the-hub14)
+38 (Single): Agent 1: (jack-up the-hub14)
+39 (Single): Agent 1: (undo nuts14 the-hub14)
+40 (Single): Agent 1: (remove-wheel w14 the-hub14)
+41 (Single): Agent 1: (loosen nuts13 the-hub13)
+42 (Single): Agent 1: (jack-up the-hub13)
+43 (Single): Agent 1: (undo nuts13 the-hub13)
+44 (Single): Agent 1: (remove-wheel w13 the-hub13)
+45 (Single): Agent 1: (loosen nuts12 the-hub12)
+46 (Single): Agent 1: (jack-up the-hub12)
+47 (Single): Agent 1: (undo nuts12 the-hub12)
+48 (Single): Agent 1: (remove-wheel w12 the-hub12)
+49 (Single): Agent 1: (loosen nuts11 the-hub11)
+50 (Single): Agent 1: (jack-up the-hub11)
+51 (Single): Agent 1: (undo nuts11 the-hub11)
+52 (Single): Agent 1: (remove-wheel w11 the-hub11)
+53 (Single): Agent 1: (loosen nuts10 the-hub10)
+54 (Single): Agent 1: (jack-up the-hub10)
+55 (Single): Agent 1: (undo nuts10 the-hub10)
+56 (Single): Agent 1: (remove-wheel w10 the-hub10)
+57 (Single): Agent 1: (loosen nuts1 the-hub1)
+58 (Single): Agent 1: (jack-up the-hub1)
+59 (Single): Agent 1: (undo nuts1 the-hub1)
+60 (Single): Agent 1: (remove-wheel w1 the-hub1)
+61 (Single): Agent 1: (inflate r9)
+62 (Single): Agent 1: (inflate r8)
+63 (Single): Agent 1: (inflate r7)
+64 (Single): Agent 1: (inflate r6)
+65 (Single): Agent 1: (inflate r5)
+66 (Single): Agent 1: (inflate r15)
+67 (Single): Agent 1: (inflate r14)
+68 (Single): Agent 1: (inflate r13)
+69 (Single): Agent 1: (inflate r12)
+70 (Single): Agent 1: (inflate r11)
+71 (Single): Agent 1: (inflate r10)
+72 (Single): Agent 1: (open boot)
+73 (Single): Agent 1: (fetch r1 boot)
+74 (Single): Agent 1: (put-on-wheel r1 the-hub1)
+75 (Single): Agent 1: (fetch r10 boot)
+76 (Single): Agent 1: (put-on-wheel r10 the-hub10)
+77 (Single): Agent 1: (fetch r11 boot)
+78 (Single): Agent 1: (put-on-wheel r11 the-hub11)
+79 (Single): Agent 1: (fetch r12 boot)
+80 (Single): Agent 1: (put-on-wheel r12 the-hub12)
+81 (Single): Agent 1: (fetch r13 boot)
+82 (Single): Agent 1: (put-on-wheel r13 the-hub13)
+83 (Single): Agent 1: (fetch r14 boot)
+84 (Single): Agent 1: (put-on-wheel r14 the-hub14)
+85 (Single): Agent 1: (fetch r15 boot)
+86 (Single): Agent 1: (put-on-wheel r15 the-hub15)
+87 (Single): Agent 1: (fetch r2 boot)
+88 (Single): Agent 1: (put-on-wheel r2 the-hub2)
+89 (Single): Agent 1: (fetch r3 boot)
+90 (Single): Agent 1: (put-on-wheel r3 the-hub3)
+91 (Single): Agent 1: (fetch r4 boot)
+92 (Single): Agent 1: (put-on-wheel r4 the-hub4)
+93 (Single): Agent 1: (do-up nuts4 the-hub4)
+94 (Single): Agent 1: (jack-down the-hub4)
+95 (Single): Agent 1: (tighten nuts4 the-hub4)
+96 (Single): Agent 1: (do-up nuts3 the-hub3)
+97 (Single): Agent 1: (jack-down the-hub3)
+98 (Single): Agent 1: (tighten nuts3 the-hub3)
+99 (Single): Agent 1: (do-up nuts2 the-hub2)
+100 (Single): Agent 1: (jack-down the-hub2)
+101 (Single): Agent 1: (tighten nuts2 the-hub2)
+102 (Single): Agent 1: (do-up nuts15 the-hub15)
+103 (Single): Agent 1: (jack-down the-hub15)
+104 (Single): Agent 1: (tighten nuts15 the-hub15)
+105 (Single): Agent 1: (do-up nuts14 the-hub14)
+106 (Single): Agent 1: (jack-down the-hub14)
+107 (Single): Agent 1: (tighten nuts14 the-hub14)
+108 (Single): Agent 1: (do-up nuts13 the-hub13)
+109 (Single): Agent 1: (jack-down the-hub13)
+110 (Single): Agent 1: (tighten nuts13 the-hub13)
+111 (Single): Agent 1: (do-up nuts12 the-hub12)
+112 (Single): Agent 1: (jack-down the-hub12)
+113 (Single): Agent 1: (tighten nuts12 the-hub12)
+114 (Single): Agent 1: (do-up nuts11 the-hub11)
+115 (Single): Agent 1: (jack-down the-hub11)
+116 (Single): Agent 1: (tighten nuts11 the-hub11)
+117 (Single): Agent 1: (do-up nuts10 the-hub10)
+118 (Single): Agent 1: (jack-down the-hub10)
+119 (Single): Agent 1: (tighten nuts10 the-hub10)
+120 (Single): Agent 1: (do-up nuts1 the-hub1)
+121 (Single): Agent 1: (jack-down the-hub1)
+122 (Single): Agent 1: (tighten nuts1 the-hub1)
+123 (Single): Agent 1: (fetch r5 boot)
+124 (Single): Agent 1: (put-on-wheel r5 the-hub5)
+125 (Single): Agent 1: (do-up nuts5 the-hub5)
+126 (Single): Agent 1: (jack-down the-hub5)
+127 (Single): Agent 1: (tighten nuts5 the-hub5)
+128 (Single): Agent 1: (fetch r6 boot)
+129 (Single): Agent 1: (put-on-wheel r6 the-hub6)
+130 (Single): Agent 1: (do-up nuts6 the-hub6)
+131 (Single): Agent 1: (jack-down the-hub6)
+132 (Single): Agent 1: (tighten nuts6 the-hub6)
+133 (Single): Agent 1: (fetch r7 boot)
+134 (Single): Agent 1: (put-on-wheel r7 the-hub7)
+135 (Single): Agent 1: (fetch r8 boot)
+136 (Single): Agent 1: (put-on-wheel r8 the-hub8)
+137 (Single): Agent 1: (fetch r9 boot)
+138 (Single): Agent 1: (put-on-wheel r9 the-hub9)
+139 (Single): Agent 1: (do-up nuts9 the-hub9)
+140 (Single): Agent 1: (jack-down the-hub9)
+141 (Single): Agent 1: (tighten nuts9 the-hub9)
+142 (Single): Agent 1: (do-up nuts8 the-hub8)
+143 (Single): Agent 1: (jack-down the-hub8)
+144 (Single): Agent 1: (tighten nuts8 the-hub8)
+145 (Single): Agent 1: (do-up nuts7 the-hub7)
+146 (Single): Agent 1: (jack-down the-hub7)
+147 (Single): Agent 1: (tighten nuts7 the-hub7)
+148 (Single): Agent 1: (put-away w1 boot)
+149 (Single): Agent 1: (put-away w10 boot)
+150 (Single): Agent 1: (put-away w11 boot)
+151 (Single): Agent 1: (put-away w12 boot)
+152 (Single): Agent 1: (put-away w13 boot)
+153 (Single): Agent 1: (put-away w14 boot)
+154 (Single): Agent 1: (put-away w15 boot)
+155 (Single): Agent 1: (put-away w2 boot)
+156 (Single): Agent 1: (put-away w3 boot)
+157 (Single): Agent 1: (put-away w4 boot)
+158 (Single): Agent 1: (put-away w5 boot)
+159 (Single): Agent 1: (put-away w6 boot)
+160 (Single): Agent 1: (put-away w7 boot)
+161 (Single): Agent 1: (put-away w8 boot)
+162 (Single): Agent 1: (put-away w9 boot)
+163 (Parallel):
+  Agent 0: (inflate r1)
+(inflate r2)
+(inflate r3)
+(inflate r4)
+  Agent 1: (close boot)
+
+Total Cost: 163
+[results][tyreworld][15]
+[single_agent][planning time: 1002.54][cost: 167.0]
+[multi_agent][planning_time: 207.27227438926698][cost: 163.0][agents: 5][optimization time 38.25972509384155]
+----------------------------------------
+Using cached single agent results
+['inflate all intact tyres', 'put-away all flat tyres in the boot', 'loosen all nuts on hubs 9 to 16', 'tighten all nuts on hubs 9 to 16']
+['./experiments_multiagent_help/run4033/tyreworld/p16_1.pddl', './experiments_multiagent_help/run4033/tyreworld/p16_2.pddl', './experiments_multiagent_help/run4033/tyreworld/p16_3.pddl', './experiments_multiagent_help/run4033/tyreworld/p16_4.pddl']
+agent1
+[info][subgoal_1][tyreworld] task 16 takes 3.38 sec, found a plan with cost 16.0
+planner successful
+validating
+validator time 0.011701345443725586
+agent2
+[info][subgoal_2][tyreworld] task 16 takes 200.5 sec, found a plan with cost 81.0
+planner successful
+validating
+validator time 0.015373706817626953
+agent3
+[info][subgoal_3][tyreworld] task 16 takes 200.41 sec, found a plan with cost 8.0
+planner successful
+validating
+validator time 0.011785030364990234
+agent4
+[info][subgoal_4][tyreworld] task 16 takes 200.38 sec, found a plan with cost 16.0
+planner successful
+validating
+validator time 0.012795448303222656
+[info][multiagent main goal][tyreworld] task 16 takes 200.43 sec, found a plan with cost 105.0
+TASK: tyreworld - 4033 - 16
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (inflate r9)
+2 (Single): Agent 1: (inflate r8)
+3 (Single): Agent 1: (inflate r7)
+4 (Single): Agent 1: (inflate r6)
+5 (Single): Agent 1: (inflate r5)
+6 (Single): Agent 1: (inflate r4)
+7 (Single): Agent 1: (inflate r3)
+8 (Single): Agent 1: (inflate r2)
+9 (Single): Agent 1: (inflate r16)
+10 (Single): Agent 1: (inflate r15)
+11 (Single): Agent 1: (inflate r14)
+12 (Single): Agent 1: (inflate r13)
+13 (Single): Agent 1: (inflate r12)
+14 (Single): Agent 1: (inflate r11)
+15 (Single): Agent 1: (inflate r10)
+16 (Single): Agent 1: (inflate r1)
+
+merging plan 2 into initial_plan
+81 True
+verifying entire plan.
+merging plan 3 into initial_plan
+81 True
+verifying entire plan.
+merging plan 4 into initial_plan
+89 True
+verifying entire plan.
+merging main agent's plan into combined plan
+
+Main Agent's Plan:
+1 (Single): Agent 0: (fetch r1 boot)
+2 (Single): Agent 0: (put-on-wheel r1 the-hub1)
+3 (Single): Agent 0: (do-up nuts1 the-hub1)
+4 (Single): Agent 0: (jack-down the-hub1)
+5 (Single): Agent 0: (tighten nuts1 the-hub1)
+6 (Single): Agent 0: (fetch r10 boot)
+7 (Single): Agent 0: (fetch r11 boot)
+8 (Single): Agent 0: (fetch r12 boot)
+9 (Single): Agent 0: (fetch r13 boot)
+10 (Single): Agent 0: (fetch r14 boot)
+11 (Single): Agent 0: (fetch r15 boot)
+12 (Single): Agent 0: (fetch r16 boot)
+13 (Single): Agent 0: (fetch r2 boot)
+14 (Single): Agent 0: (put-on-wheel r2 the-hub2)
+15 (Single): Agent 0: (do-up nuts2 the-hub2)
+16 (Single): Agent 0: (jack-down the-hub2)
+17 (Single): Agent 0: (tighten nuts2 the-hub2)
+18 (Single): Agent 0: (fetch r3 boot)
+19 (Single): Agent 0: (put-on-wheel r3 the-hub3)
+20 (Single): Agent 0: (do-up nuts3 the-hub3)
+21 (Single): Agent 0: (jack-down the-hub3)
+22 (Single): Agent 0: (tighten nuts3 the-hub3)
+23 (Single): Agent 0: (fetch r4 boot)
+24 (Single): Agent 0: (put-on-wheel r4 the-hub4)
+25 (Single): Agent 0: (do-up nuts4 the-hub4)
+26 (Single): Agent 0: (jack-down the-hub4)
+27 (Single): Agent 0: (tighten nuts4 the-hub4)
+28 (Single): Agent 0: (fetch r5 boot)
+29 (Single): Agent 0: (put-on-wheel r5 the-hub5)
+30 (Single): Agent 0: (do-up nuts5 the-hub5)
+31 (Single): Agent 0: (jack-down the-hub5)
+32 (Single): Agent 0: (tighten nuts5 the-hub5)
+33 (Single): Agent 0: (fetch r6 boot)
+34 (Single): Agent 0: (put-on-wheel r6 the-hub6)
+35 (Single): Agent 0: (do-up nuts6 the-hub6)
+36 (Single): Agent 0: (jack-down the-hub6)
+37 (Single): Agent 0: (tighten nuts6 the-hub6)
+38 (Single): Agent 0: (fetch r7 boot)
+39 (Single): Agent 0: (put-on-wheel r7 the-hub7)
+40 (Single): Agent 0: (do-up nuts7 the-hub7)
+41 (Single): Agent 0: (jack-down the-hub7)
+42 (Single): Agent 0: (tighten nuts7 the-hub7)
+43 (Single): Agent 0: (fetch r8 boot)
+44 (Single): Agent 0: (put-on-wheel r8 the-hub8)
+45 (Single): Agent 0: (do-up nuts8 the-hub8)
+46 (Single): Agent 0: (loosen nuts9 the-hub9)
+47 (Single): Agent 0: (jack-up the-hub9)
+48 (Single): Agent 0: (undo nuts9 the-hub9)
+49 (Single): Agent 0: (jack-down the-hub8)
+50 (Single): Agent 0: (tighten nuts8 the-hub8)
+51 (Single): Agent 0: (loosen nuts16 the-hub16)
+52 (Single): Agent 0: (jack-up the-hub16)
+53 (Single): Agent 0: (undo nuts16 the-hub16)
+54 (Single): Agent 0: (put-on-wheel r16 the-hub16)
+55 (Single): Agent 0: (loosen nuts15 the-hub15)
+56 (Single): Agent 0: (jack-up the-hub15)
+57 (Single): Agent 0: (undo nuts15 the-hub15)
+58 (Single): Agent 0: (put-on-wheel r15 the-hub15)
+59 (Single): Agent 0: (loosen nuts14 the-hub14)
+60 (Single): Agent 0: (jack-up the-hub14)
+61 (Single): Agent 0: (undo nuts14 the-hub14)
+62 (Single): Agent 0: (put-on-wheel r14 the-hub14)
+63 (Single): Agent 0: (loosen nuts13 the-hub13)
+64 (Single): Agent 0: (jack-up the-hub13)
+65 (Single): Agent 0: (undo nuts13 the-hub13)
+66 (Single): Agent 0: (put-on-wheel r13 the-hub13)
+67 (Single): Agent 0: (loosen nuts12 the-hub12)
+68 (Single): Agent 0: (jack-up the-hub12)
+69 (Single): Agent 0: (undo nuts12 the-hub12)
+70 (Single): Agent 0: (put-on-wheel r12 the-hub12)
+71 (Single): Agent 0: (loosen nuts11 the-hub11)
+72 (Single): Agent 0: (jack-up the-hub11)
+73 (Single): Agent 0: (undo nuts11 the-hub11)
+74 (Single): Agent 0: (put-on-wheel r11 the-hub11)
+75 (Single): Agent 0: (loosen nuts10 the-hub10)
+76 (Single): Agent 0: (jack-up the-hub10)
+77 (Single): Agent 0: (undo nuts10 the-hub10)
+78 (Single): Agent 0: (put-on-wheel r10 the-hub10)
+79 (Single): Agent 0: (fetch r9 boot)
+80 (Single): Agent 0: (put-on-wheel r9 the-hub9)
+81 (Single): Agent 0: (close boot)
+82 (Single): Agent 0: (do-up nuts9 the-hub9)
+83 (Single): Agent 0: (jack-down the-hub9)
+84 (Single): Agent 0: (tighten nuts9 the-hub9)
+85 (Single): Agent 0: (do-up nuts16 the-hub16)
+86 (Single): Agent 0: (jack-down the-hub16)
+87 (Single): Agent 0: (tighten nuts16 the-hub16)
+88 (Single): Agent 0: (do-up nuts15 the-hub15)
+89 (Single): Agent 0: (jack-down the-hub15)
+90 (Single): Agent 0: (tighten nuts15 the-hub15)
+91 (Single): Agent 0: (do-up nuts14 the-hub14)
+92 (Single): Agent 0: (jack-down the-hub14)
+93 (Single): Agent 0: (tighten nuts14 the-hub14)
+94 (Single): Agent 0: (do-up nuts13 the-hub13)
+95 (Single): Agent 0: (jack-down the-hub13)
+96 (Single): Agent 0: (tighten nuts13 the-hub13)
+97 (Single): Agent 0: (do-up nuts12 the-hub12)
+98 (Single): Agent 0: (jack-down the-hub12)
+99 (Single): Agent 0: (tighten nuts12 the-hub12)
+100 (Single): Agent 0: (do-up nuts11 the-hub11)
+101 (Single): Agent 0: (jack-down the-hub11)
+102 (Single): Agent 0: (tighten nuts11 the-hub11)
+103 (Single): Agent 0: (do-up nuts10 the-hub10)
+104 (Single): Agent 0: (jack-down the-hub10)
+105 (Single): Agent 0: (tighten nuts10 the-hub10)
+
+Current Combined Plan:
+1 (Single): Agent 0: (loosen nuts9 the-hub9)
+2 (Single): Agent 0: (jack-up the-hub9)
+3 (Single): Agent 0: (undo nuts9 the-hub9)
+4 (Single): Agent 0: (remove-wheel w9 the-hub9)
+5 (Single): Agent 0: (loosen nuts8 the-hub8)
+6 (Single): Agent 0: (jack-up the-hub8)
+7 (Single): Agent 0: (undo nuts8 the-hub8)
+8 (Single): Agent 0: (remove-wheel w8 the-hub8)
+9 (Single): Agent 0: (loosen nuts7 the-hub7)
+10 (Single): Agent 0: (jack-up the-hub7)
+11 (Single): Agent 0: (undo nuts7 the-hub7)
+12 (Single): Agent 0: (remove-wheel w7 the-hub7)
+13 (Single): Agent 0: (loosen nuts6 the-hub6)
+14 (Single): Agent 0: (jack-up the-hub6)
+15 (Single): Agent 0: (undo nuts6 the-hub6)
+16 (Single): Agent 0: (remove-wheel w6 the-hub6)
+17 (Single): Agent 0: (loosen nuts5 the-hub5)
+18 (Single): Agent 0: (jack-up the-hub5)
+19 (Single): Agent 0: (undo nuts5 the-hub5)
+20 (Single): Agent 0: (remove-wheel w5 the-hub5)
+21 (Single): Agent 0: (loosen nuts4 the-hub4)
+22 (Single): Agent 0: (jack-up the-hub4)
+23 (Single): Agent 0: (undo nuts4 the-hub4)
+24 (Single): Agent 0: (remove-wheel w4 the-hub4)
+25 (Single): Agent 0: (loosen nuts3 the-hub3)
+26 (Single): Agent 0: (jack-up the-hub3)
+27 (Single): Agent 0: (undo nuts3 the-hub3)
+28 (Single): Agent 0: (remove-wheel w3 the-hub3)
+29 (Single): Agent 0: (loosen nuts2 the-hub2)
+30 (Single): Agent 0: (jack-up the-hub2)
+31 (Single): Agent 0: (undo nuts2 the-hub2)
+32 (Single): Agent 0: (remove-wheel w2 the-hub2)
+33 (Single): Agent 0: (loosen nuts16 the-hub16)
+34 (Single): Agent 0: (jack-up the-hub16)
+35 (Single): Agent 0: (undo nuts16 the-hub16)
+36 (Single): Agent 0: (remove-wheel w16 the-hub16)
+37 (Single): Agent 0: (loosen nuts15 the-hub15)
+38 (Single): Agent 0: (jack-up the-hub15)
+39 (Single): Agent 0: (undo nuts15 the-hub15)
+40 (Single): Agent 0: (remove-wheel w15 the-hub15)
+41 (Single): Agent 0: (loosen nuts14 the-hub14)
+42 (Single): Agent 0: (jack-up the-hub14)
+43 (Single): Agent 0: (undo nuts14 the-hub14)
+44 (Single): Agent 0: (remove-wheel w14 the-hub14)
+45 (Single): Agent 0: (loosen nuts13 the-hub13)
+46 (Single): Agent 0: (jack-up the-hub13)
+47 (Single): Agent 0: (undo nuts13 the-hub13)
+48 (Single): Agent 0: (remove-wheel w13 the-hub13)
+49 (Single): Agent 0: (loosen nuts12 the-hub12)
+50 (Single): Agent 0: (jack-up the-hub12)
+51 (Single): Agent 0: (undo nuts12 the-hub12)
+52 (Single): Agent 0: (remove-wheel w12 the-hub12)
+53 (Single): Agent 0: (loosen nuts11 the-hub11)
+54 (Single): Agent 0: (jack-up the-hub11)
+55 (Single): Agent 0: (undo nuts11 the-hub11)
+56 (Single): Agent 0: (remove-wheel w11 the-hub11)
+57 (Single): Agent 0: (loosen nuts10 the-hub10)
+58 (Single): Agent 0: (jack-up the-hub10)
+59 (Single): Agent 0: (undo nuts10 the-hub10)
+60 (Single): Agent 0: (remove-wheel w10 the-hub10)
+61 (Single): Agent 0: (loosen nuts1 the-hub1)
+62 (Single): Agent 0: (jack-up the-hub1)
+63 (Single): Agent 0: (undo nuts1 the-hub1)
+64 (Single): Agent 0: (remove-wheel w1 the-hub1)
+65 (Single): Agent 0: (open boot)
+66 (Parallel, derived from single action with multiple steps):
+  Agent 0: (inflate r9)
+  Agent 0: (put-away w1 boot)
+67 (Parallel, derived from single action with multiple steps):
+  Agent 0: (inflate r8)
+  Agent 0: (put-away w10 boot)
+68 (Parallel, derived from single action with multiple steps):
+  Agent 0: (inflate r7)
+  Agent 0: (put-away w11 boot)
+69 (Parallel, derived from single action with multiple steps):
+  Agent 0: (inflate r6)
+  Agent 0: (put-away w12 boot)
+70 (Parallel, derived from single action with multiple steps):
+  Agent 0: (inflate r5)
+  Agent 0: (put-away w13 boot)
+71 (Parallel, derived from single action with multiple steps):
+  Agent 0: (inflate r4)
+  Agent 0: (put-away w14 boot)
+72 (Parallel, derived from single action with multiple steps):
+  Agent 0: (inflate r3)
+  Agent 0: (put-away w15 boot)
+73 (Parallel, derived from single action with multiple steps):
+  Agent 0: (inflate r2)
+  Agent 0: (put-away w16 boot)
+74 (Parallel):
+  Agent 0: (inflate r16)
+(put-away w2 boot)
+(do-up nuts9 the-hub9)
+  Agent 1: (jack-down the-hub9)
+75 (Single): Agent 1: (tighten nuts9 the-hub9)
+76 (Parallel):
+  Agent 0: (inflate r15)
+(put-away w3 boot)
+(do-up nuts16 the-hub16)
+  Agent 1: (jack-down the-hub16)
+77 (Single): Agent 1: (tighten nuts16 the-hub16)
+78 (Parallel):
+  Agent 0: (inflate r14)
+(put-away w4 boot)
+(do-up nuts15 the-hub15)
+  Agent 1: (jack-down the-hub15)
+79 (Single): Agent 1: (tighten nuts15 the-hub15)
+80 (Parallel):
+  Agent 0: (inflate r13)
+(put-away w5 boot)
+(do-up nuts14 the-hub14)
+  Agent 1: (jack-down the-hub14)
+81 (Single): Agent 1: (tighten nuts14 the-hub14)
+82 (Parallel):
+  Agent 0: (inflate r12)
+(put-away w6 boot)
+(do-up nuts13 the-hub13)
+  Agent 1: (jack-down the-hub13)
+83 (Single): Agent 1: (tighten nuts13 the-hub13)
+84 (Parallel):
+  Agent 0: (inflate r11)
+(put-away w7 boot)
+(do-up nuts12 the-hub12)
+  Agent 1: (jack-down the-hub12)
+85 (Single): Agent 1: (tighten nuts12 the-hub12)
+86 (Parallel):
+  Agent 0: (inflate r10)
+(put-away w8 boot)
+(do-up nuts11 the-hub11)
+  Agent 1: (jack-down the-hub11)
+87 (Single): Agent 1: (tighten nuts11 the-hub11)
+88 (Parallel):
+  Agent 0: (inflate r1)
+(put-away w9 boot)
+(do-up nuts10 the-hub10)
+  Agent 1: (jack-down the-hub10)
+89 (Single): Agent 1: (tighten nuts10 the-hub10)
+
+170 True
+
+Final Merged Plan:
+1 (Single): Agent 0: (loosen nuts9 the-hub9)
+2 (Single): Agent 0: (jack-up the-hub9)
+3 (Single): Agent 0: (undo nuts9 the-hub9)
+4 (Single): Agent 0: (remove-wheel w9 the-hub9)
+5 (Single): Agent 0: (loosen nuts8 the-hub8)
+6 (Single): Agent 0: (jack-up the-hub8)
+7 (Single): Agent 0: (undo nuts8 the-hub8)
+8 (Single): Agent 0: (remove-wheel w8 the-hub8)
+9 (Single): Agent 0: (loosen nuts7 the-hub7)
+10 (Single): Agent 0: (jack-up the-hub7)
+11 (Single): Agent 0: (undo nuts7 the-hub7)
+12 (Single): Agent 0: (remove-wheel w7 the-hub7)
+13 (Single): Agent 0: (loosen nuts6 the-hub6)
+14 (Single): Agent 0: (jack-up the-hub6)
+15 (Single): Agent 0: (undo nuts6 the-hub6)
+16 (Single): Agent 0: (remove-wheel w6 the-hub6)
+17 (Single): Agent 0: (loosen nuts5 the-hub5)
+18 (Single): Agent 0: (jack-up the-hub5)
+19 (Single): Agent 0: (undo nuts5 the-hub5)
+20 (Single): Agent 0: (remove-wheel w5 the-hub5)
+21 (Single): Agent 0: (loosen nuts4 the-hub4)
+22 (Single): Agent 0: (jack-up the-hub4)
+23 (Single): Agent 0: (undo nuts4 the-hub4)
+24 (Single): Agent 0: (remove-wheel w4 the-hub4)
+25 (Single): Agent 0: (loosen nuts3 the-hub3)
+26 (Single): Agent 0: (jack-up the-hub3)
+27 (Single): Agent 0: (undo nuts3 the-hub3)
+28 (Single): Agent 0: (remove-wheel w3 the-hub3)
+29 (Single): Agent 0: (loosen nuts2 the-hub2)
+30 (Single): Agent 0: (jack-up the-hub2)
+31 (Single): Agent 0: (undo nuts2 the-hub2)
+32 (Single): Agent 0: (remove-wheel w2 the-hub2)
+33 (Single): Agent 0: (loosen nuts16 the-hub16)
+34 (Single): Agent 0: (jack-up the-hub16)
+35 (Single): Agent 0: (undo nuts16 the-hub16)
+36 (Single): Agent 0: (remove-wheel w16 the-hub16)
+37 (Single): Agent 0: (loosen nuts15 the-hub15)
+38 (Single): Agent 0: (jack-up the-hub15)
+39 (Single): Agent 0: (undo nuts15 the-hub15)
+40 (Single): Agent 0: (remove-wheel w15 the-hub15)
+41 (Single): Agent 0: (loosen nuts14 the-hub14)
+42 (Single): Agent 0: (jack-up the-hub14)
+43 (Single): Agent 0: (undo nuts14 the-hub14)
+44 (Single): Agent 0: (remove-wheel w14 the-hub14)
+45 (Single): Agent 0: (loosen nuts13 the-hub13)
+46 (Single): Agent 0: (jack-up the-hub13)
+47 (Single): Agent 0: (undo nuts13 the-hub13)
+48 (Single): Agent 0: (remove-wheel w13 the-hub13)
+49 (Single): Agent 0: (loosen nuts12 the-hub12)
+50 (Single): Agent 0: (jack-up the-hub12)
+51 (Single): Agent 0: (undo nuts12 the-hub12)
+52 (Single): Agent 0: (remove-wheel w12 the-hub12)
+53 (Single): Agent 0: (loosen nuts11 the-hub11)
+54 (Single): Agent 0: (jack-up the-hub11)
+55 (Single): Agent 0: (undo nuts11 the-hub11)
+56 (Single): Agent 0: (remove-wheel w11 the-hub11)
+57 (Single): Agent 0: (loosen nuts10 the-hub10)
+58 (Single): Agent 0: (jack-up the-hub10)
+59 (Single): Agent 0: (undo nuts10 the-hub10)
+60 (Single): Agent 0: (remove-wheel w10 the-hub10)
+61 (Single): Agent 0: (loosen nuts1 the-hub1)
+62 (Single): Agent 0: (jack-up the-hub1)
+63 (Single): Agent 0: (undo nuts1 the-hub1)
+64 (Single): Agent 0: (remove-wheel w1 the-hub1)
+65 (Single): Agent 0: (open boot)
+66 (Single): Agent 1: (fetch r1 boot)
+67 (Single): Agent 1: (put-on-wheel r1 the-hub1)
+68 (Single): Agent 1: (do-up nuts1 the-hub1)
+69 (Single): Agent 1: (jack-down the-hub1)
+70 (Single): Agent 1: (tighten nuts1 the-hub1)
+71 (Single): Agent 1: (fetch r10 boot)
+72 (Single): Agent 1: (fetch r11 boot)
+73 (Single): Agent 1: (fetch r12 boot)
+74 (Single): Agent 1: (fetch r13 boot)
+75 (Single): Agent 1: (fetch r14 boot)
+76 (Single): Agent 1: (fetch r15 boot)
+77 (Single): Agent 1: (fetch r16 boot)
+78 (Single): Agent 1: (fetch r2 boot)
+79 (Single): Agent 1: (put-on-wheel r2 the-hub2)
+80 (Single): Agent 1: (do-up nuts2 the-hub2)
+81 (Single): Agent 1: (jack-down the-hub2)
+82 (Single): Agent 1: (tighten nuts2 the-hub2)
+83 (Single): Agent 1: (fetch r3 boot)
+84 (Single): Agent 1: (put-on-wheel r3 the-hub3)
+85 (Single): Agent 1: (do-up nuts3 the-hub3)
+86 (Single): Agent 1: (jack-down the-hub3)
+87 (Single): Agent 1: (tighten nuts3 the-hub3)
+88 (Single): Agent 1: (fetch r4 boot)
+89 (Single): Agent 1: (put-on-wheel r4 the-hub4)
+90 (Single): Agent 1: (do-up nuts4 the-hub4)
+91 (Single): Agent 1: (jack-down the-hub4)
+92 (Single): Agent 1: (tighten nuts4 the-hub4)
+93 (Single): Agent 1: (fetch r5 boot)
+94 (Single): Agent 1: (put-on-wheel r5 the-hub5)
+95 (Single): Agent 1: (do-up nuts5 the-hub5)
+96 (Single): Agent 1: (jack-down the-hub5)
+97 (Single): Agent 1: (tighten nuts5 the-hub5)
+98 (Single): Agent 1: (fetch r6 boot)
+99 (Single): Agent 1: (put-on-wheel r6 the-hub6)
+100 (Single): Agent 1: (do-up nuts6 the-hub6)
+101 (Parallel):
+  Agent 0: (inflate r9)
+(put-away w1 boot)
+  Agent 1: (jack-down the-hub6)
+102 (Parallel):
+  Agent 0: (inflate r8)
+(put-away w10 boot)
+  Agent 1: (tighten nuts6 the-hub6)
+103 (Parallel):
+  Agent 0: (inflate r7)
+(put-away w11 boot)
+  Agent 1: (fetch r7 boot)
+104 (Parallel):
+  Agent 0: (inflate r6)
+(put-away w12 boot)
+  Agent 1: (put-on-wheel r7 the-hub7)
+105 (Parallel):
+  Agent 0: (inflate r5)
+(put-away w13 boot)
+  Agent 1: (do-up nuts7 the-hub7)
+106 (Parallel):
+  Agent 0: (inflate r4)
+(put-away w14 boot)
+  Agent 1: (jack-down the-hub7)
+107 (Parallel):
+  Agent 0: (inflate r3)
+(put-away w15 boot)
+  Agent 1: (tighten nuts7 the-hub7)
+108 (Parallel):
+  Agent 0: (inflate r2)
+(put-away w16 boot)
+  Agent 1: (fetch r8 boot)
+109 (Parallel):
+  Agent 0: (inflate r16)
+(put-away w2 boot)
+(do-up nuts9 the-hub9)
+(jack-down the-hub9)
+  Agent 1: (put-on-wheel r8 the-hub8)
+110 (Parallel):
+  Agent 0: (tighten nuts9 the-hub9)
+  Agent 1: (do-up nuts8 the-hub8)
+111 (Single): Agent 1: (loosen nuts9 the-hub9)
+112 (Single): Agent 1: (jack-up the-hub9)
+113 (Single): Agent 1: (undo nuts9 the-hub9)
+114 (Parallel):
+  Agent 0: (inflate r15)
+(put-away w3 boot)
+(do-up nuts16 the-hub16)
+(jack-down the-hub16)
+  Agent 1: (jack-down the-hub8)
+115 (Parallel):
+  Agent 0: (tighten nuts16 the-hub16)
+  Agent 1: (tighten nuts8 the-hub8)
+116 (Single): Agent 1: (loosen nuts16 the-hub16)
+117 (Single): Agent 1: (jack-up the-hub16)
+118 (Parallel):
+  Agent 0: (inflate r14)
+(put-away w4 boot)
+(do-up nuts15 the-hub15)
+(jack-down the-hub15)
+  Agent 1: (undo nuts16 the-hub16)
+119 (Parallel):
+  Agent 0: (tighten nuts15 the-hub15)
+  Agent 1: (put-on-wheel r16 the-hub16)
+120 (Single): Agent 1: (loosen nuts15 the-hub15)
+121 (Single): Agent 1: (jack-up the-hub15)
+122 (Parallel):
+  Agent 0: (inflate r13)
+(put-away w5 boot)
+(do-up nuts14 the-hub14)
+(jack-down the-hub14)
+  Agent 1: (undo nuts15 the-hub15)
+123 (Parallel):
+  Agent 0: (tighten nuts14 the-hub14)
+  Agent 1: (put-on-wheel r15 the-hub15)
+124 (Single): Agent 1: (loosen nuts14 the-hub14)
+125 (Single): Agent 1: (jack-up the-hub14)
+126 (Parallel):
+  Agent 0: (inflate r12)
+(put-away w6 boot)
+(do-up nuts13 the-hub13)
+(jack-down the-hub13)
+  Agent 1: (undo nuts14 the-hub14)
+127 (Parallel):
+  Agent 0: (tighten nuts13 the-hub13)
+  Agent 1: (put-on-wheel r14 the-hub14)
+128 (Single): Agent 1: (loosen nuts13 the-hub13)
+129 (Single): Agent 1: (jack-up the-hub13)
+130 (Parallel):
+  Agent 0: (inflate r11)
+(put-away w7 boot)
+(do-up nuts12 the-hub12)
+(jack-down the-hub12)
+  Agent 1: (undo nuts13 the-hub13)
+131 (Parallel):
+  Agent 0: (tighten nuts12 the-hub12)
+  Agent 1: (put-on-wheel r13 the-hub13)
+132 (Single): Agent 1: (loosen nuts12 the-hub12)
+133 (Single): Agent 1: (jack-up the-hub12)
+134 (Parallel):
+  Agent 0: (inflate r10)
+(put-away w8 boot)
+(do-up nuts11 the-hub11)
+(jack-down the-hub11)
+  Agent 1: (undo nuts12 the-hub12)
+135 (Parallel):
+  Agent 0: (tighten nuts11 the-hub11)
+  Agent 1: (put-on-wheel r12 the-hub12)
+136 (Single): Agent 1: (loosen nuts11 the-hub11)
+137 (Single): Agent 1: (jack-up the-hub11)
+138 (Parallel):
+  Agent 0: (inflate r1)
+(put-away w9 boot)
+(do-up nuts10 the-hub10)
+(jack-down the-hub10)
+  Agent 1: (undo nuts11 the-hub11)
+139 (Parallel):
+  Agent 0: (tighten nuts10 the-hub10)
+  Agent 1: (put-on-wheel r11 the-hub11)
+140 (Single): Agent 1: (loosen nuts10 the-hub10)
+141 (Single): Agent 1: (jack-up the-hub10)
+142 (Single): Agent 1: (undo nuts10 the-hub10)
+143 (Single): Agent 1: (put-on-wheel r10 the-hub10)
+144 (Single): Agent 1: (fetch r9 boot)
+145 (Single): Agent 1: (put-on-wheel r9 the-hub9)
+146 (Single): Agent 1: (close boot)
+147 (Single): Agent 1: (do-up nuts9 the-hub9)
+148 (Single): Agent 1: (jack-down the-hub9)
+149 (Single): Agent 1: (tighten nuts9 the-hub9)
+150 (Single): Agent 1: (do-up nuts16 the-hub16)
+151 (Single): Agent 1: (jack-down the-hub16)
+152 (Single): Agent 1: (tighten nuts16 the-hub16)
+153 (Single): Agent 1: (do-up nuts15 the-hub15)
+154 (Single): Agent 1: (jack-down the-hub15)
+155 (Single): Agent 1: (tighten nuts15 the-hub15)
+156 (Single): Agent 1: (do-up nuts14 the-hub14)
+157 (Single): Agent 1: (jack-down the-hub14)
+158 (Single): Agent 1: (tighten nuts14 the-hub14)
+159 (Single): Agent 1: (do-up nuts13 the-hub13)
+160 (Single): Agent 1: (jack-down the-hub13)
+161 (Single): Agent 1: (tighten nuts13 the-hub13)
+162 (Single): Agent 1: (do-up nuts12 the-hub12)
+163 (Single): Agent 1: (jack-down the-hub12)
+164 (Single): Agent 1: (tighten nuts12 the-hub12)
+165 (Single): Agent 1: (do-up nuts11 the-hub11)
+166 (Single): Agent 1: (jack-down the-hub11)
+167 (Single): Agent 1: (tighten nuts11 the-hub11)
+168 (Single): Agent 1: (do-up nuts10 the-hub10)
+169 (Single): Agent 1: (jack-down the-hub10)
+170 (Single): Agent 1: (tighten nuts10 the-hub10)
+
+Total Cost: 170
+[results][tyreworld][16]
+[single_agent][planning time: 1003.11][cost: 178.0]
+[multi_agent][planning_time: 814.7512722969054][cost: 170.0][agents: 5][optimization time 466.9353437423706]
+----------------------------------------
+Using cached single agent results
+['inflate r1', 'inflate r2', 'inflate r3', 'inflate r4']
+['./experiments_multiagent_help/run4033/tyreworld/p17_1.pddl', './experiments_multiagent_help/run4033/tyreworld/p17_2.pddl', './experiments_multiagent_help/run4033/tyreworld/p17_3.pddl', './experiments_multiagent_help/run4033/tyreworld/p17_4.pddl']
+agent1
+[info][subgoal_1][tyreworld] task 17 takes 0.43 sec, found a plan with cost 1.0
+planner successful
+validating
+validator time 0.010288238525390625
+agent2
+[info][subgoal_2][tyreworld] task 17 takes 0.41 sec, found a plan with cost 1.0
+planner successful
+validating
+validator time 0.008577823638916016
+agent3
+[info][subgoal_3][tyreworld] task 17 takes 0.42 sec, found a plan with cost 1.0
+planner successful
+validating
+validator time 0.010346412658691406
+agent4
+[info][subgoal_4][tyreworld] task 17 takes 0.41 sec, found a plan with cost 1.0
+planner successful
+validating
+validator time 0.010224342346191406
+[info][multiagent main goal][tyreworld] task 17 takes 200.46 sec, found a plan with cost 185.0
+TASK: tyreworld - 4033 - 17
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (inflate r1)
+
+merging plan 2 into initial_plan
+1 True
+verifying entire plan.
+merging plan 3 into initial_plan
+1 True
+verifying entire plan.
+merging plan 4 into initial_plan
+1 True
+verifying entire plan.
+merging main agent's plan into combined plan
+
+Main Agent's Plan:
+1 (Single): Agent 0: (loosen nuts9 the-hub9)
+2 (Single): Agent 0: (jack-up the-hub9)
+3 (Single): Agent 0: (undo nuts9 the-hub9)
+4 (Single): Agent 0: (remove-wheel w9 the-hub9)
+5 (Single): Agent 0: (loosen nuts8 the-hub8)
+6 (Single): Agent 0: (jack-up the-hub8)
+7 (Single): Agent 0: (undo nuts8 the-hub8)
+8 (Single): Agent 0: (remove-wheel w8 the-hub8)
+9 (Single): Agent 0: (loosen nuts7 the-hub7)
+10 (Single): Agent 0: (jack-up the-hub7)
+11 (Single): Agent 0: (undo nuts7 the-hub7)
+12 (Single): Agent 0: (remove-wheel w7 the-hub7)
+13 (Single): Agent 0: (loosen nuts6 the-hub6)
+14 (Single): Agent 0: (jack-up the-hub6)
+15 (Single): Agent 0: (undo nuts6 the-hub6)
+16 (Single): Agent 0: (remove-wheel w6 the-hub6)
+17 (Single): Agent 0: (loosen nuts5 the-hub5)
+18 (Single): Agent 0: (jack-up the-hub5)
+19 (Single): Agent 0: (undo nuts5 the-hub5)
+20 (Single): Agent 0: (remove-wheel w5 the-hub5)
+21 (Single): Agent 0: (loosen nuts4 the-hub4)
+22 (Single): Agent 0: (jack-up the-hub4)
+23 (Single): Agent 0: (undo nuts4 the-hub4)
+24 (Single): Agent 0: (remove-wheel w4 the-hub4)
+25 (Single): Agent 0: (loosen nuts3 the-hub3)
+26 (Single): Agent 0: (jack-up the-hub3)
+27 (Single): Agent 0: (undo nuts3 the-hub3)
+28 (Single): Agent 0: (remove-wheel w3 the-hub3)
+29 (Single): Agent 0: (loosen nuts2 the-hub2)
+30 (Single): Agent 0: (jack-up the-hub2)
+31 (Single): Agent 0: (undo nuts2 the-hub2)
+32 (Single): Agent 0: (remove-wheel w2 the-hub2)
+33 (Single): Agent 0: (loosen nuts17 the-hub17)
+34 (Single): Agent 0: (jack-up the-hub17)
+35 (Single): Agent 0: (undo nuts17 the-hub17)
+36 (Single): Agent 0: (remove-wheel w17 the-hub17)
+37 (Single): Agent 0: (loosen nuts16 the-hub16)
+38 (Single): Agent 0: (jack-up the-hub16)
+39 (Single): Agent 0: (undo nuts16 the-hub16)
+40 (Single): Agent 0: (remove-wheel w16 the-hub16)
+41 (Single): Agent 0: (loosen nuts15 the-hub15)
+42 (Single): Agent 0: (jack-up the-hub15)
+43 (Single): Agent 0: (undo nuts15 the-hub15)
+44 (Single): Agent 0: (remove-wheel w15 the-hub15)
+45 (Single): Agent 0: (loosen nuts14 the-hub14)
+46 (Single): Agent 0: (jack-up the-hub14)
+47 (Single): Agent 0: (undo nuts14 the-hub14)
+48 (Single): Agent 0: (remove-wheel w14 the-hub14)
+49 (Single): Agent 0: (loosen nuts13 the-hub13)
+50 (Single): Agent 0: (jack-up the-hub13)
+51 (Single): Agent 0: (undo nuts13 the-hub13)
+52 (Single): Agent 0: (remove-wheel w13 the-hub13)
+53 (Single): Agent 0: (loosen nuts12 the-hub12)
+54 (Single): Agent 0: (jack-up the-hub12)
+55 (Single): Agent 0: (undo nuts12 the-hub12)
+56 (Single): Agent 0: (remove-wheel w12 the-hub12)
+57 (Single): Agent 0: (loosen nuts11 the-hub11)
+58 (Single): Agent 0: (jack-up the-hub11)
+59 (Single): Agent 0: (undo nuts11 the-hub11)
+60 (Single): Agent 0: (remove-wheel w11 the-hub11)
+61 (Single): Agent 0: (loosen nuts10 the-hub10)
+62 (Single): Agent 0: (jack-up the-hub10)
+63 (Single): Agent 0: (undo nuts10 the-hub10)
+64 (Single): Agent 0: (remove-wheel w10 the-hub10)
+65 (Single): Agent 0: (loosen nuts1 the-hub1)
+66 (Single): Agent 0: (jack-up the-hub1)
+67 (Single): Agent 0: (undo nuts1 the-hub1)
+68 (Single): Agent 0: (remove-wheel w1 the-hub1)
+69 (Single): Agent 0: (inflate r9)
+70 (Single): Agent 0: (inflate r8)
+71 (Single): Agent 0: (inflate r7)
+72 (Single): Agent 0: (inflate r6)
+73 (Single): Agent 0: (inflate r5)
+74 (Single): Agent 0: (inflate r17)
+75 (Single): Agent 0: (inflate r16)
+76 (Single): Agent 0: (inflate r15)
+77 (Single): Agent 0: (inflate r14)
+78 (Single): Agent 0: (inflate r13)
+79 (Single): Agent 0: (inflate r12)
+80 (Single): Agent 0: (inflate r11)
+81 (Single): Agent 0: (inflate r10)
+82 (Single): Agent 0: (open boot)
+83 (Single): Agent 0: (fetch r1 boot)
+84 (Single): Agent 0: (put-on-wheel r1 the-hub1)
+85 (Single): Agent 0: (fetch r10 boot)
+86 (Single): Agent 0: (put-on-wheel r10 the-hub10)
+87 (Single): Agent 0: (fetch r11 boot)
+88 (Single): Agent 0: (put-on-wheel r11 the-hub11)
+89 (Single): Agent 0: (fetch r12 boot)
+90 (Single): Agent 0: (put-on-wheel r12 the-hub12)
+91 (Single): Agent 0: (fetch r13 boot)
+92 (Single): Agent 0: (put-on-wheel r13 the-hub13)
+93 (Single): Agent 0: (fetch r14 boot)
+94 (Single): Agent 0: (put-on-wheel r14 the-hub14)
+95 (Single): Agent 0: (fetch r15 boot)
+96 (Single): Agent 0: (put-on-wheel r15 the-hub15)
+97 (Single): Agent 0: (fetch r16 boot)
+98 (Single): Agent 0: (put-on-wheel r16 the-hub16)
+99 (Single): Agent 0: (fetch r17 boot)
+100 (Single): Agent 0: (put-on-wheel r17 the-hub17)
+101 (Single): Agent 0: (fetch r2 boot)
+102 (Single): Agent 0: (put-on-wheel r2 the-hub2)
+103 (Single): Agent 0: (do-up nuts2 the-hub2)
+104 (Single): Agent 0: (jack-down the-hub2)
+105 (Single): Agent 0: (tighten nuts2 the-hub2)
+106 (Single): Agent 0: (do-up nuts17 the-hub17)
+107 (Single): Agent 0: (jack-down the-hub17)
+108 (Single): Agent 0: (tighten nuts17 the-hub17)
+109 (Single): Agent 0: (do-up nuts16 the-hub16)
+110 (Single): Agent 0: (jack-down the-hub16)
+111 (Single): Agent 0: (tighten nuts16 the-hub16)
+112 (Single): Agent 0: (do-up nuts15 the-hub15)
+113 (Single): Agent 0: (jack-down the-hub15)
+114 (Single): Agent 0: (tighten nuts15 the-hub15)
+115 (Single): Agent 0: (do-up nuts14 the-hub14)
+116 (Single): Agent 0: (jack-down the-hub14)
+117 (Single): Agent 0: (tighten nuts14 the-hub14)
+118 (Single): Agent 0: (do-up nuts13 the-hub13)
+119 (Single): Agent 0: (jack-down the-hub13)
+120 (Single): Agent 0: (tighten nuts13 the-hub13)
+121 (Single): Agent 0: (do-up nuts12 the-hub12)
+122 (Single): Agent 0: (jack-down the-hub12)
+123 (Single): Agent 0: (tighten nuts12 the-hub12)
+124 (Single): Agent 0: (do-up nuts11 the-hub11)
+125 (Single): Agent 0: (jack-down the-hub11)
+126 (Single): Agent 0: (tighten nuts11 the-hub11)
+127 (Single): Agent 0: (do-up nuts10 the-hub10)
+128 (Single): Agent 0: (jack-down the-hub10)
+129 (Single): Agent 0: (tighten nuts10 the-hub10)
+130 (Single): Agent 0: (do-up nuts1 the-hub1)
+131 (Single): Agent 0: (jack-down the-hub1)
+132 (Single): Agent 0: (tighten nuts1 the-hub1)
+133 (Single): Agent 0: (fetch r3 boot)
+134 (Single): Agent 0: (put-on-wheel r3 the-hub3)
+135 (Single): Agent 0: (do-up nuts3 the-hub3)
+136 (Single): Agent 0: (jack-down the-hub3)
+137 (Single): Agent 0: (tighten nuts3 the-hub3)
+138 (Single): Agent 0: (fetch r4 boot)
+139 (Single): Agent 0: (put-on-wheel r4 the-hub4)
+140 (Single): Agent 0: (do-up nuts4 the-hub4)
+141 (Single): Agent 0: (jack-down the-hub4)
+142 (Single): Agent 0: (tighten nuts4 the-hub4)
+143 (Single): Agent 0: (fetch r5 boot)
+144 (Single): Agent 0: (put-on-wheel r5 the-hub5)
+145 (Single): Agent 0: (do-up nuts5 the-hub5)
+146 (Single): Agent 0: (jack-down the-hub5)
+147 (Single): Agent 0: (tighten nuts5 the-hub5)
+148 (Single): Agent 0: (fetch r6 boot)
+149 (Single): Agent 0: (put-on-wheel r6 the-hub6)
+150 (Single): Agent 0: (do-up nuts6 the-hub6)
+151 (Single): Agent 0: (jack-down the-hub6)
+152 (Single): Agent 0: (tighten nuts6 the-hub6)
+153 (Single): Agent 0: (fetch r7 boot)
+154 (Single): Agent 0: (put-on-wheel r7 the-hub7)
+155 (Single): Agent 0: (do-up nuts7 the-hub7)
+156 (Single): Agent 0: (jack-down the-hub7)
+157 (Single): Agent 0: (tighten nuts7 the-hub7)
+158 (Single): Agent 0: (fetch r8 boot)
+159 (Single): Agent 0: (put-on-wheel r8 the-hub8)
+160 (Single): Agent 0: (do-up nuts8 the-hub8)
+161 (Single): Agent 0: (jack-down the-hub8)
+162 (Single): Agent 0: (tighten nuts8 the-hub8)
+163 (Single): Agent 0: (fetch r9 boot)
+164 (Single): Agent 0: (put-on-wheel r9 the-hub9)
+165 (Single): Agent 0: (do-up nuts9 the-hub9)
+166 (Single): Agent 0: (jack-down the-hub9)
+167 (Single): Agent 0: (tighten nuts9 the-hub9)
+168 (Single): Agent 0: (put-away w1 boot)
+169 (Single): Agent 0: (put-away w10 boot)
+170 (Single): Agent 0: (put-away w11 boot)
+171 (Single): Agent 0: (put-away w12 boot)
+172 (Single): Agent 0: (put-away w13 boot)
+173 (Single): Agent 0: (put-away w14 boot)
+174 (Single): Agent 0: (put-away w15 boot)
+175 (Single): Agent 0: (put-away w16 boot)
+176 (Single): Agent 0: (put-away w17 boot)
+177 (Single): Agent 0: (put-away w2 boot)
+178 (Single): Agent 0: (put-away w3 boot)
+179 (Single): Agent 0: (put-away w4 boot)
+180 (Single): Agent 0: (put-away w5 boot)
+181 (Single): Agent 0: (put-away w6 boot)
+182 (Single): Agent 0: (put-away w7 boot)
+183 (Single): Agent 0: (put-away w8 boot)
+184 (Single): Agent 0: (put-away w9 boot)
+185 (Single): Agent 0: (close boot)
+
+Current Combined Plan:
+1 (Parallel):
+  Agent 0: (inflate r1)
+(inflate r2)
+(inflate r3)
+  Agent 1: (inflate r4)
+
+185 True
+
+Final Merged Plan:
+1 (Single): Agent 1: (loosen nuts9 the-hub9)
+2 (Single): Agent 1: (jack-up the-hub9)
+3 (Single): Agent 1: (undo nuts9 the-hub9)
+4 (Single): Agent 1: (remove-wheel w9 the-hub9)
+5 (Single): Agent 1: (loosen nuts8 the-hub8)
+6 (Single): Agent 1: (jack-up the-hub8)
+7 (Single): Agent 1: (undo nuts8 the-hub8)
+8 (Single): Agent 1: (remove-wheel w8 the-hub8)
+9 (Single): Agent 1: (loosen nuts7 the-hub7)
+10 (Single): Agent 1: (jack-up the-hub7)
+11 (Single): Agent 1: (undo nuts7 the-hub7)
+12 (Single): Agent 1: (remove-wheel w7 the-hub7)
+13 (Single): Agent 1: (loosen nuts6 the-hub6)
+14 (Single): Agent 1: (jack-up the-hub6)
+15 (Single): Agent 1: (undo nuts6 the-hub6)
+16 (Single): Agent 1: (remove-wheel w6 the-hub6)
+17 (Single): Agent 1: (loosen nuts5 the-hub5)
+18 (Single): Agent 1: (jack-up the-hub5)
+19 (Single): Agent 1: (undo nuts5 the-hub5)
+20 (Single): Agent 1: (remove-wheel w5 the-hub5)
+21 (Single): Agent 1: (loosen nuts4 the-hub4)
+22 (Single): Agent 1: (jack-up the-hub4)
+23 (Single): Agent 1: (undo nuts4 the-hub4)
+24 (Single): Agent 1: (remove-wheel w4 the-hub4)
+25 (Single): Agent 1: (loosen nuts3 the-hub3)
+26 (Single): Agent 1: (jack-up the-hub3)
+27 (Single): Agent 1: (undo nuts3 the-hub3)
+28 (Single): Agent 1: (remove-wheel w3 the-hub3)
+29 (Single): Agent 1: (loosen nuts2 the-hub2)
+30 (Single): Agent 1: (jack-up the-hub2)
+31 (Single): Agent 1: (undo nuts2 the-hub2)
+32 (Single): Agent 1: (remove-wheel w2 the-hub2)
+33 (Single): Agent 1: (loosen nuts17 the-hub17)
+34 (Single): Agent 1: (jack-up the-hub17)
+35 (Single): Agent 1: (undo nuts17 the-hub17)
+36 (Single): Agent 1: (remove-wheel w17 the-hub17)
+37 (Single): Agent 1: (loosen nuts16 the-hub16)
+38 (Single): Agent 1: (jack-up the-hub16)
+39 (Single): Agent 1: (undo nuts16 the-hub16)
+40 (Single): Agent 1: (remove-wheel w16 the-hub16)
+41 (Single): Agent 1: (loosen nuts15 the-hub15)
+42 (Single): Agent 1: (jack-up the-hub15)
+43 (Single): Agent 1: (undo nuts15 the-hub15)
+44 (Single): Agent 1: (remove-wheel w15 the-hub15)
+45 (Single): Agent 1: (loosen nuts14 the-hub14)
+46 (Single): Agent 1: (jack-up the-hub14)
+47 (Single): Agent 1: (undo nuts14 the-hub14)
+48 (Single): Agent 1: (remove-wheel w14 the-hub14)
+49 (Single): Agent 1: (loosen nuts13 the-hub13)
+50 (Single): Agent 1: (jack-up the-hub13)
+51 (Single): Agent 1: (undo nuts13 the-hub13)
+52 (Single): Agent 1: (remove-wheel w13 the-hub13)
+53 (Single): Agent 1: (loosen nuts12 the-hub12)
+54 (Single): Agent 1: (jack-up the-hub12)
+55 (Single): Agent 1: (undo nuts12 the-hub12)
+56 (Single): Agent 1: (remove-wheel w12 the-hub12)
+57 (Single): Agent 1: (loosen nuts11 the-hub11)
+58 (Single): Agent 1: (jack-up the-hub11)
+59 (Single): Agent 1: (undo nuts11 the-hub11)
+60 (Single): Agent 1: (remove-wheel w11 the-hub11)
+61 (Single): Agent 1: (loosen nuts10 the-hub10)
+62 (Single): Agent 1: (jack-up the-hub10)
+63 (Single): Agent 1: (undo nuts10 the-hub10)
+64 (Single): Agent 1: (remove-wheel w10 the-hub10)
+65 (Single): Agent 1: (loosen nuts1 the-hub1)
+66 (Single): Agent 1: (jack-up the-hub1)
+67 (Single): Agent 1: (undo nuts1 the-hub1)
+68 (Single): Agent 1: (remove-wheel w1 the-hub1)
+69 (Single): Agent 1: (inflate r9)
+70 (Single): Agent 1: (inflate r8)
+71 (Single): Agent 1: (inflate r7)
+72 (Single): Agent 1: (inflate r6)
+73 (Single): Agent 1: (inflate r5)
+74 (Single): Agent 1: (inflate r17)
+75 (Single): Agent 1: (inflate r16)
+76 (Single): Agent 1: (inflate r15)
+77 (Single): Agent 1: (inflate r14)
+78 (Single): Agent 1: (inflate r13)
+79 (Single): Agent 1: (inflate r12)
+80 (Single): Agent 1: (inflate r11)
+81 (Single): Agent 1: (inflate r10)
+82 (Single): Agent 1: (open boot)
+83 (Single): Agent 1: (fetch r1 boot)
+84 (Single): Agent 1: (put-on-wheel r1 the-hub1)
+85 (Single): Agent 1: (fetch r10 boot)
+86 (Single): Agent 1: (put-on-wheel r10 the-hub10)
+87 (Single): Agent 1: (fetch r11 boot)
+88 (Single): Agent 1: (put-on-wheel r11 the-hub11)
+89 (Single): Agent 1: (fetch r12 boot)
+90 (Single): Agent 1: (put-on-wheel r12 the-hub12)
+91 (Single): Agent 1: (fetch r13 boot)
+92 (Single): Agent 1: (put-on-wheel r13 the-hub13)
+93 (Single): Agent 1: (fetch r14 boot)
+94 (Single): Agent 1: (put-on-wheel r14 the-hub14)
+95 (Single): Agent 1: (fetch r15 boot)
+96 (Single): Agent 1: (put-on-wheel r15 the-hub15)
+97 (Single): Agent 1: (fetch r16 boot)
+98 (Single): Agent 1: (put-on-wheel r16 the-hub16)
+99 (Single): Agent 1: (fetch r17 boot)
+100 (Single): Agent 1: (put-on-wheel r17 the-hub17)
+101 (Single): Agent 1: (fetch r2 boot)
+102 (Single): Agent 1: (put-on-wheel r2 the-hub2)
+103 (Single): Agent 1: (do-up nuts2 the-hub2)
+104 (Single): Agent 1: (jack-down the-hub2)
+105 (Single): Agent 1: (tighten nuts2 the-hub2)
+106 (Single): Agent 1: (do-up nuts17 the-hub17)
+107 (Single): Agent 1: (jack-down the-hub17)
+108 (Single): Agent 1: (tighten nuts17 the-hub17)
+109 (Single): Agent 1: (do-up nuts16 the-hub16)
+110 (Single): Agent 1: (jack-down the-hub16)
+111 (Single): Agent 1: (tighten nuts16 the-hub16)
+112 (Single): Agent 1: (do-up nuts15 the-hub15)
+113 (Single): Agent 1: (jack-down the-hub15)
+114 (Single): Agent 1: (tighten nuts15 the-hub15)
+115 (Single): Agent 1: (do-up nuts14 the-hub14)
+116 (Single): Agent 1: (jack-down the-hub14)
+117 (Single): Agent 1: (tighten nuts14 the-hub14)
+118 (Single): Agent 1: (do-up nuts13 the-hub13)
+119 (Single): Agent 1: (jack-down the-hub13)
+120 (Single): Agent 1: (tighten nuts13 the-hub13)
+121 (Single): Agent 1: (do-up nuts12 the-hub12)
+122 (Single): Agent 1: (jack-down the-hub12)
+123 (Single): Agent 1: (tighten nuts12 the-hub12)
+124 (Single): Agent 1: (do-up nuts11 the-hub11)
+125 (Single): Agent 1: (jack-down the-hub11)
+126 (Single): Agent 1: (tighten nuts11 the-hub11)
+127 (Single): Agent 1: (do-up nuts10 the-hub10)
+128 (Single): Agent 1: (jack-down the-hub10)
+129 (Single): Agent 1: (tighten nuts10 the-hub10)
+130 (Single): Agent 1: (do-up nuts1 the-hub1)
+131 (Single): Agent 1: (jack-down the-hub1)
+132 (Single): Agent 1: (tighten nuts1 the-hub1)
+133 (Single): Agent 1: (fetch r3 boot)
+134 (Single): Agent 1: (put-on-wheel r3 the-hub3)
+135 (Single): Agent 1: (do-up nuts3 the-hub3)
+136 (Single): Agent 1: (jack-down the-hub3)
+137 (Single): Agent 1: (tighten nuts3 the-hub3)
+138 (Single): Agent 1: (fetch r4 boot)
+139 (Single): Agent 1: (put-on-wheel r4 the-hub4)
+140 (Single): Agent 1: (do-up nuts4 the-hub4)
+141 (Single): Agent 1: (jack-down the-hub4)
+142 (Single): Agent 1: (tighten nuts4 the-hub4)
+143 (Single): Agent 1: (fetch r5 boot)
+144 (Single): Agent 1: (put-on-wheel r5 the-hub5)
+145 (Single): Agent 1: (do-up nuts5 the-hub5)
+146 (Single): Agent 1: (jack-down the-hub5)
+147 (Single): Agent 1: (tighten nuts5 the-hub5)
+148 (Single): Agent 1: (fetch r6 boot)
+149 (Single): Agent 1: (put-on-wheel r6 the-hub6)
+150 (Single): Agent 1: (do-up nuts6 the-hub6)
+151 (Single): Agent 1: (jack-down the-hub6)
+152 (Single): Agent 1: (tighten nuts6 the-hub6)
+153 (Single): Agent 1: (fetch r7 boot)
+154 (Single): Agent 1: (put-on-wheel r7 the-hub7)
+155 (Single): Agent 1: (do-up nuts7 the-hub7)
+156 (Single): Agent 1: (jack-down the-hub7)
+157 (Single): Agent 1: (tighten nuts7 the-hub7)
+158 (Single): Agent 1: (fetch r8 boot)
+159 (Single): Agent 1: (put-on-wheel r8 the-hub8)
+160 (Single): Agent 1: (do-up nuts8 the-hub8)
+161 (Single): Agent 1: (jack-down the-hub8)
+162 (Single): Agent 1: (tighten nuts8 the-hub8)
+163 (Single): Agent 1: (fetch r9 boot)
+164 (Single): Agent 1: (put-on-wheel r9 the-hub9)
+165 (Single): Agent 1: (do-up nuts9 the-hub9)
+166 (Single): Agent 1: (jack-down the-hub9)
+167 (Single): Agent 1: (tighten nuts9 the-hub9)
+168 (Single): Agent 1: (put-away w1 boot)
+169 (Single): Agent 1: (put-away w10 boot)
+170 (Single): Agent 1: (put-away w11 boot)
+171 (Single): Agent 1: (put-away w12 boot)
+172 (Single): Agent 1: (put-away w13 boot)
+173 (Single): Agent 1: (put-away w14 boot)
+174 (Single): Agent 1: (put-away w15 boot)
+175 (Single): Agent 1: (put-away w16 boot)
+176 (Single): Agent 1: (put-away w17 boot)
+177 (Single): Agent 1: (put-away w2 boot)
+178 (Single): Agent 1: (put-away w3 boot)
+179 (Single): Agent 1: (put-away w4 boot)
+180 (Single): Agent 1: (put-away w5 boot)
+181 (Single): Agent 1: (put-away w6 boot)
+182 (Single): Agent 1: (put-away w7 boot)
+183 (Single): Agent 1: (put-away w8 boot)
+184 (Single): Agent 1: (put-away w9 boot)
+185 (Parallel):
+  Agent 0: (inflate r1)
+(inflate r2)
+(inflate r3)
+(inflate r4)
+  Agent 1: (close boot)
+
+Total Cost: 185
+[results][tyreworld][17]
+[single_agent][planning time: 1003.33][cost: 189.0]
+[multi_agent][planning_time: 209.84003913879394][cost: 185.0][agents: 5][optimization time 80.4067931175232]
+----------------------------------------
+Using cached single agent results
+['inflate all intact tyres', 'put-away all flat tyres in the boot', 'fetch all intact tyres from the boot', 'close the boot']
+['./experiments_multiagent_help/run4033/tyreworld/p18_1.pddl', './experiments_multiagent_help/run4033/tyreworld/p18_2.pddl', './experiments_multiagent_help/run4033/tyreworld/p18_3.pddl', './experiments_multiagent_help/run4033/tyreworld/p18_4.pddl']
+agent1
+[info][subgoal_1][tyreworld] task 18 takes 12.35 sec, found a plan with cost 18.0
+planner successful
+validating
+validator time 0.011848688125610352
+agent2
+[info][subgoal_2][tyreworld] task 18 takes 200.56 sec, found a plan with cost 91.0
+planner successful
+validating
+validator time 0.01585531234741211
+agent3
+planner broke
+INFO     planner time limit: None
+INFO     planner memory limit: None
+
+INFO     Running translator.
+INFO     translator stdin: None
+INFO     translator time limit: None
+INFO     translator memory limit: None
+INFO     translator command line string: /home/davidbai/.conda/envs/llm_pddl/bin/python /home/davidbai/multiagent_helper_llmp/downward/builds/release/bin/translate/translate.py domains/tyreworld/domain.pddl experiments_multiagent_help/run4033/tyreworld/p18_3.pddl --sas-file experiments_multiagent_help/run4033/tyreworld/p18_3_plan.pddl.sas
+Parsing...
+Parsing: [0.020s CPU, 0.006s wall-clock]
+Normalizing task... [0.000s CPU, 0.000s wall-clock]
+Instantiating...
+Generating Datalog program... [0.000s CPU, 0.001s wall-clock]
+Normalizing Datalog program...
+Trivial rules: Converted to facts.
+Normalizing Datalog program: [0.000s CPU, 0.002s wall-clock]
+Preparing model... [0.000s CPU, 0.002s wall-clock]
+Generated 52 rules.
+Computing model... [0.040s CPU, 0.038s wall-clock]
+4569 relevant atoms
+1989 auxiliary atoms
+6558 final queue length
+9208 total queue pushes
+Completing instantiation... [0.070s CPU, 0.072s wall-clock]
+Instantiating: [0.110s CPU, 0.116s wall-clock]
+Computing fact groups...
+Finding invariants...
+32 initial candidates
+Finding invariants: [0.000s CPU, 0.005s wall-clock]
+Checking invariant weight... [0.010s CPU, 0.002s wall-clock]
+Instantiating groups... [0.020s CPU, 0.023s wall-clock]
+Collecting mutex groups... [0.000s CPU, 0.001s wall-clock]
+Choosing groups...
+54 uncovered facts
+Choosing groups: [0.010s CPU, 0.006s wall-clock]
+Building translation key... [0.010s CPU, 0.002s wall-clock]
+Computing fact groups: [0.050s CPU, 0.046s wall-clock]
+Building STRIPS to SAS dictionary... [0.000s CPU, 0.001s wall-clock]
+Building dictionary for full mutex groups... [0.000s CPU, 0.002s wall-clock]
+Building mutex information...
+Building mutex information: [0.000s CPU, 0.001s wall-clock]
+Translating task...
+Processing axioms...
+Simplifying axioms... [0.000s CPU, 0.000s wall-clock]
+Translator axioms removed by simplifying: 0
+Processing axioms: [0.000s CPU, 0.005s wall-clock]
+translate exit code: -9
+
+Driver aborting after translate
+INFO     Planner time: 608.45s
+
+list index out of range
+Traceback (most recent call last):
+  File "/home/davidbai/multiagent_helper_llmp/helper_script_n_agents.py", line 315, in <module>
+    planner.get_updated_init_conditions(path, validation_filename=f"./{path}/p{args.task_id}_{i}_validation.txt", pddl_problem_filename=init_problem, pddl_problem_filename_edited=init_problem_out,is_main=main_goal)
+  File "/home/davidbai/multiagent_helper_llmp/modules/planner.py", line 143, in get_updated_init_conditions
+    with open(validation_filename, 'r') as f:
+FileNotFoundError: [Errno 2] No such file or directory: './experiments_multiagent_help/run4033/tyreworld/p18_3_validation.txt'
+----------------------------------------
+Using cached single agent results
+['inflate all intact tyres', 'put-away all flat tyres in the boot', 'fetch all intact tyres from the boot', 'close the boot']
+['./experiments_multiagent_help/run4033/tyreworld/p19_1.pddl', './experiments_multiagent_help/run4033/tyreworld/p19_2.pddl', './experiments_multiagent_help/run4033/tyreworld/p19_3.pddl', './experiments_multiagent_help/run4033/tyreworld/p19_4.pddl']
+agent1
+[info][subgoal_1][tyreworld] task 19 takes 25.19 sec, found a plan with cost 19.0
+planner successful
+validating
+validator time 0.012553930282592773
+agent2
+[info][subgoal_2][tyreworld] task 19 takes 200.63 sec, found a plan with cost 96.0
+planner successful
+validating
+validator time 0.016200542449951172
+agent3
+[info][subgoal_3][tyreworld] task 19 takes 200.64 sec, found a plan with cost 38.0
+planner successful
+validating
+validator time 0.014194965362548828
+agent4
+[info][subgoal_4][tyreworld] task 19 takes 0.5 sec, found a plan with cost 1.0
+planner successful
+validating
+validator time 0.010419607162475586
+[info][multiagent main goal][tyreworld] task 19 takes 200.52 sec, found a plan with cost 57.0
+TASK: tyreworld - 4033 - 19
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (inflate r9)
+2 (Single): Agent 1: (inflate r8)
+3 (Single): Agent 1: (inflate r7)
+4 (Single): Agent 1: (inflate r6)
+5 (Single): Agent 1: (inflate r5)
+6 (Single): Agent 1: (inflate r4)
+7 (Single): Agent 1: (inflate r3)
+8 (Single): Agent 1: (inflate r2)
+9 (Single): Agent 1: (inflate r19)
+10 (Single): Agent 1: (inflate r18)
+11 (Single): Agent 1: (inflate r17)
+12 (Single): Agent 1: (inflate r16)
+13 (Single): Agent 1: (inflate r15)
+14 (Single): Agent 1: (inflate r14)
+15 (Single): Agent 1: (inflate r13)
+16 (Single): Agent 1: (inflate r12)
+17 (Single): Agent 1: (inflate r11)
+18 (Single): Agent 1: (inflate r10)
+19 (Single): Agent 1: (inflate r1)
+
+merging plan 2 into initial_plan
+96 True
+verifying entire plan.
+merging plan 3 into initial_plan
+115 True
+verifying entire plan.
+merging plan 4 into initial_plan
+115 True
+verifying entire plan.
+merging main agent's plan into combined plan
+
+Main Agent's Plan:
+1 (Single): Agent 0: (do-up nuts9 the-hub9)
+2 (Single): Agent 0: (jack-down the-hub9)
+3 (Single): Agent 0: (tighten nuts9 the-hub9)
+4 (Single): Agent 0: (do-up nuts8 the-hub8)
+5 (Single): Agent 0: (jack-down the-hub8)
+6 (Single): Agent 0: (tighten nuts8 the-hub8)
+7 (Single): Agent 0: (do-up nuts7 the-hub7)
+8 (Single): Agent 0: (jack-down the-hub7)
+9 (Single): Agent 0: (tighten nuts7 the-hub7)
+10 (Single): Agent 0: (do-up nuts6 the-hub6)
+11 (Single): Agent 0: (jack-down the-hub6)
+12 (Single): Agent 0: (tighten nuts6 the-hub6)
+13 (Single): Agent 0: (do-up nuts5 the-hub5)
+14 (Single): Agent 0: (jack-down the-hub5)
+15 (Single): Agent 0: (tighten nuts5 the-hub5)
+16 (Single): Agent 0: (do-up nuts4 the-hub4)
+17 (Single): Agent 0: (jack-down the-hub4)
+18 (Single): Agent 0: (tighten nuts4 the-hub4)
+19 (Single): Agent 0: (do-up nuts3 the-hub3)
+20 (Single): Agent 0: (jack-down the-hub3)
+21 (Single): Agent 0: (tighten nuts3 the-hub3)
+22 (Single): Agent 0: (do-up nuts2 the-hub2)
+23 (Single): Agent 0: (jack-down the-hub2)
+24 (Single): Agent 0: (tighten nuts2 the-hub2)
+25 (Single): Agent 0: (do-up nuts19 the-hub19)
+26 (Single): Agent 0: (jack-down the-hub19)
+27 (Single): Agent 0: (tighten nuts19 the-hub19)
+28 (Single): Agent 0: (do-up nuts18 the-hub18)
+29 (Single): Agent 0: (jack-down the-hub18)
+30 (Single): Agent 0: (tighten nuts18 the-hub18)
+31 (Single): Agent 0: (do-up nuts17 the-hub17)
+32 (Single): Agent 0: (jack-down the-hub17)
+33 (Single): Agent 0: (tighten nuts17 the-hub17)
+34 (Single): Agent 0: (do-up nuts16 the-hub16)
+35 (Single): Agent 0: (jack-down the-hub16)
+36 (Single): Agent 0: (tighten nuts16 the-hub16)
+37 (Single): Agent 0: (do-up nuts15 the-hub15)
+38 (Single): Agent 0: (jack-down the-hub15)
+39 (Single): Agent 0: (tighten nuts15 the-hub15)
+40 (Single): Agent 0: (do-up nuts14 the-hub14)
+41 (Single): Agent 0: (jack-down the-hub14)
+42 (Single): Agent 0: (tighten nuts14 the-hub14)
+43 (Single): Agent 0: (do-up nuts13 the-hub13)
+44 (Single): Agent 0: (jack-down the-hub13)
+45 (Single): Agent 0: (tighten nuts13 the-hub13)
+46 (Single): Agent 0: (do-up nuts12 the-hub12)
+47 (Single): Agent 0: (jack-down the-hub12)
+48 (Single): Agent 0: (tighten nuts12 the-hub12)
+49 (Single): Agent 0: (do-up nuts11 the-hub11)
+50 (Single): Agent 0: (jack-down the-hub11)
+51 (Single): Agent 0: (tighten nuts11 the-hub11)
+52 (Single): Agent 0: (do-up nuts10 the-hub10)
+53 (Single): Agent 0: (jack-down the-hub10)
+54 (Single): Agent 0: (tighten nuts10 the-hub10)
+55 (Single): Agent 0: (do-up nuts1 the-hub1)
+56 (Single): Agent 0: (jack-down the-hub1)
+57 (Single): Agent 0: (tighten nuts1 the-hub1)
+
+Current Combined Plan:
+1 (Single): Agent 0: (loosen nuts9 the-hub9)
+2 (Single): Agent 0: (jack-up the-hub9)
+3 (Single): Agent 0: (undo nuts9 the-hub9)
+4 (Single): Agent 0: (remove-wheel w9 the-hub9)
+5 (Single): Agent 0: (loosen nuts8 the-hub8)
+6 (Single): Agent 0: (jack-up the-hub8)
+7 (Single): Agent 0: (undo nuts8 the-hub8)
+8 (Single): Agent 0: (remove-wheel w8 the-hub8)
+9 (Single): Agent 0: (loosen nuts7 the-hub7)
+10 (Single): Agent 0: (jack-up the-hub7)
+11 (Single): Agent 0: (undo nuts7 the-hub7)
+12 (Single): Agent 0: (remove-wheel w7 the-hub7)
+13 (Single): Agent 0: (loosen nuts6 the-hub6)
+14 (Single): Agent 0: (jack-up the-hub6)
+15 (Single): Agent 0: (undo nuts6 the-hub6)
+16 (Single): Agent 0: (remove-wheel w6 the-hub6)
+17 (Single): Agent 0: (loosen nuts5 the-hub5)
+18 (Single): Agent 0: (jack-up the-hub5)
+19 (Single): Agent 0: (undo nuts5 the-hub5)
+20 (Single): Agent 0: (remove-wheel w5 the-hub5)
+21 (Single): Agent 0: (loosen nuts4 the-hub4)
+22 (Single): Agent 0: (jack-up the-hub4)
+23 (Single): Agent 0: (undo nuts4 the-hub4)
+24 (Single): Agent 0: (remove-wheel w4 the-hub4)
+25 (Single): Agent 0: (loosen nuts3 the-hub3)
+26 (Single): Agent 0: (jack-up the-hub3)
+27 (Single): Agent 0: (undo nuts3 the-hub3)
+28 (Single): Agent 0: (remove-wheel w3 the-hub3)
+29 (Single): Agent 0: (loosen nuts2 the-hub2)
+30 (Single): Agent 0: (jack-up the-hub2)
+31 (Single): Agent 0: (undo nuts2 the-hub2)
+32 (Single): Agent 0: (remove-wheel w2 the-hub2)
+33 (Single): Agent 0: (loosen nuts19 the-hub19)
+34 (Single): Agent 0: (jack-up the-hub19)
+35 (Single): Agent 0: (undo nuts19 the-hub19)
+36 (Single): Agent 0: (remove-wheel w19 the-hub19)
+37 (Single): Agent 0: (loosen nuts18 the-hub18)
+38 (Single): Agent 0: (jack-up the-hub18)
+39 (Single): Agent 0: (undo nuts18 the-hub18)
+40 (Single): Agent 0: (remove-wheel w18 the-hub18)
+41 (Single): Agent 0: (loosen nuts17 the-hub17)
+42 (Single): Agent 0: (jack-up the-hub17)
+43 (Single): Agent 0: (undo nuts17 the-hub17)
+44 (Single): Agent 0: (remove-wheel w17 the-hub17)
+45 (Single): Agent 0: (loosen nuts16 the-hub16)
+46 (Single): Agent 0: (jack-up the-hub16)
+47 (Single): Agent 0: (undo nuts16 the-hub16)
+48 (Single): Agent 0: (remove-wheel w16 the-hub16)
+49 (Single): Agent 0: (loosen nuts15 the-hub15)
+50 (Single): Agent 0: (jack-up the-hub15)
+51 (Single): Agent 0: (undo nuts15 the-hub15)
+52 (Single): Agent 0: (remove-wheel w15 the-hub15)
+53 (Single): Agent 0: (loosen nuts14 the-hub14)
+54 (Single): Agent 0: (jack-up the-hub14)
+55 (Single): Agent 0: (undo nuts14 the-hub14)
+56 (Single): Agent 0: (remove-wheel w14 the-hub14)
+57 (Single): Agent 0: (loosen nuts13 the-hub13)
+58 (Single): Agent 0: (jack-up the-hub13)
+59 (Single): Agent 0: (undo nuts13 the-hub13)
+60 (Single): Agent 0: (remove-wheel w13 the-hub13)
+61 (Single): Agent 0: (loosen nuts12 the-hub12)
+62 (Single): Agent 0: (jack-up the-hub12)
+63 (Single): Agent 0: (undo nuts12 the-hub12)
+64 (Single): Agent 0: (remove-wheel w12 the-hub12)
+65 (Single): Agent 0: (loosen nuts11 the-hub11)
+66 (Single): Agent 0: (jack-up the-hub11)
+67 (Single): Agent 0: (undo nuts11 the-hub11)
+68 (Single): Agent 0: (remove-wheel w11 the-hub11)
+69 (Single): Agent 0: (loosen nuts10 the-hub10)
+70 (Single): Agent 0: (jack-up the-hub10)
+71 (Single): Agent 0: (undo nuts10 the-hub10)
+72 (Single): Agent 0: (remove-wheel w10 the-hub10)
+73 (Single): Agent 0: (loosen nuts1 the-hub1)
+74 (Single): Agent 0: (jack-up the-hub1)
+75 (Single): Agent 0: (undo nuts1 the-hub1)
+76 (Single): Agent 0: (remove-wheel w1 the-hub1)
+77 (Single): Agent 0: (open boot)
+78 (Single): Agent 0: (fetch r1 boot)
+79 (Single): Agent 0: (put-on-wheel r1 the-hub1)
+80 (Single): Agent 0: (fetch r10 boot)
+81 (Single): Agent 0: (put-on-wheel r10 the-hub10)
+82 (Single): Agent 0: (fetch r11 boot)
+83 (Single): Agent 0: (put-on-wheel r11 the-hub11)
+84 (Single): Agent 0: (fetch r12 boot)
+85 (Single): Agent 0: (put-on-wheel r12 the-hub12)
+86 (Single): Agent 0: (fetch r13 boot)
+87 (Single): Agent 0: (put-on-wheel r13 the-hub13)
+88 (Single): Agent 0: (fetch r14 boot)
+89 (Single): Agent 0: (put-on-wheel r14 the-hub14)
+90 (Single): Agent 0: (fetch r15 boot)
+91 (Single): Agent 0: (put-on-wheel r15 the-hub15)
+92 (Single): Agent 0: (fetch r16 boot)
+93 (Single): Agent 0: (put-on-wheel r16 the-hub16)
+94 (Single): Agent 0: (fetch r17 boot)
+95 (Single): Agent 0: (put-on-wheel r17 the-hub17)
+96 (Single): Agent 0: (fetch r18 boot)
+97 (Parallel, derived from single action with multiple steps):
+  Agent 0: (inflate r9)
+  Agent 0: (put-away w1 boot)
+  Agent 0: (put-on-wheel r18 the-hub18)
+98 (Parallel, derived from single action with multiple steps):
+  Agent 0: (inflate r8)
+  Agent 0: (put-away w10 boot)
+  Agent 0: (fetch r19 boot)
+99 (Parallel, derived from single action with multiple steps):
+  Agent 0: (inflate r7)
+  Agent 0: (put-away w11 boot)
+  Agent 0: (put-on-wheel r19 the-hub19)
+100 (Parallel, derived from single action with multiple steps):
+  Agent 0: (inflate r6)
+  Agent 0: (put-away w12 boot)
+  Agent 0: (fetch r2 boot)
+101 (Parallel, derived from single action with multiple steps):
+  Agent 0: (inflate r5)
+  Agent 0: (put-away w13 boot)
+  Agent 0: (put-on-wheel r2 the-hub2)
+102 (Parallel, derived from single action with multiple steps):
+  Agent 0: (inflate r4)
+  Agent 0: (put-away w14 boot)
+  Agent 0: (fetch r3 boot)
+103 (Parallel, derived from single action with multiple steps):
+  Agent 0: (inflate r3)
+  Agent 0: (put-away w15 boot)
+  Agent 0: (put-on-wheel r3 the-hub3)
+104 (Parallel, derived from single action with multiple steps):
+  Agent 0: (inflate r2)
+  Agent 0: (put-away w16 boot)
+  Agent 0: (fetch r4 boot)
+105 (Parallel, derived from single action with multiple steps):
+  Agent 0: (inflate r19)
+  Agent 0: (put-away w17 boot)
+  Agent 0: (put-on-wheel r4 the-hub4)
+106 (Parallel, derived from single action with multiple steps):
+  Agent 0: (inflate r18)
+  Agent 0: (put-away w18 boot)
+  Agent 0: (fetch r5 boot)
+107 (Parallel, derived from single action with multiple steps):
+  Agent 0: (inflate r17)
+  Agent 0: (put-away w19 boot)
+  Agent 0: (put-on-wheel r5 the-hub5)
+108 (Parallel, derived from single action with multiple steps):
+  Agent 0: (inflate r16)
+  Agent 0: (put-away w2 boot)
+  Agent 0: (fetch r6 boot)
+109 (Parallel, derived from single action with multiple steps):
+  Agent 0: (inflate r15)
+  Agent 0: (put-away w3 boot)
+  Agent 0: (put-on-wheel r6 the-hub6)
+110 (Parallel, derived from single action with multiple steps):
+  Agent 0: (inflate r14)
+  Agent 0: (put-away w4 boot)
+  Agent 0: (fetch r7 boot)
+111 (Parallel, derived from single action with multiple steps):
+  Agent 0: (inflate r13)
+  Agent 0: (put-away w5 boot)
+  Agent 0: (put-on-wheel r7 the-hub7)
+112 (Parallel, derived from single action with multiple steps):
+  Agent 0: (inflate r12)
+  Agent 0: (put-away w6 boot)
+  Agent 0: (fetch r8 boot)
+113 (Parallel, derived from single action with multiple steps):
+  Agent 0: (inflate r11)
+  Agent 0: (put-away w7 boot)
+  Agent 0: (put-on-wheel r8 the-hub8)
+114 (Parallel, derived from single action with multiple steps):
+  Agent 0: (inflate r10)
+  Agent 0: (put-away w8 boot)
+  Agent 0: (fetch r9 boot)
+115 (Parallel):
+  Agent 0: (inflate r1)
+(put-away w9 boot)
+(put-on-wheel r9 the-hub9)
+  Agent 1: (close boot)
+
+171 True
+
+Final Merged Plan:
+1 (Single): Agent 0: (loosen nuts9 the-hub9)
+2 (Single): Agent 0: (jack-up the-hub9)
+3 (Single): Agent 0: (undo nuts9 the-hub9)
+4 (Single): Agent 0: (remove-wheel w9 the-hub9)
+5 (Single): Agent 0: (loosen nuts8 the-hub8)
+6 (Single): Agent 0: (jack-up the-hub8)
+7 (Single): Agent 0: (undo nuts8 the-hub8)
+8 (Single): Agent 0: (remove-wheel w8 the-hub8)
+9 (Single): Agent 0: (loosen nuts7 the-hub7)
+10 (Single): Agent 0: (jack-up the-hub7)
+11 (Single): Agent 0: (undo nuts7 the-hub7)
+12 (Single): Agent 0: (remove-wheel w7 the-hub7)
+13 (Single): Agent 0: (loosen nuts6 the-hub6)
+14 (Single): Agent 0: (jack-up the-hub6)
+15 (Single): Agent 0: (undo nuts6 the-hub6)
+16 (Single): Agent 0: (remove-wheel w6 the-hub6)
+17 (Single): Agent 0: (loosen nuts5 the-hub5)
+18 (Single): Agent 0: (jack-up the-hub5)
+19 (Single): Agent 0: (undo nuts5 the-hub5)
+20 (Single): Agent 0: (remove-wheel w5 the-hub5)
+21 (Single): Agent 0: (loosen nuts4 the-hub4)
+22 (Single): Agent 0: (jack-up the-hub4)
+23 (Single): Agent 0: (undo nuts4 the-hub4)
+24 (Single): Agent 0: (remove-wheel w4 the-hub4)
+25 (Single): Agent 0: (loosen nuts3 the-hub3)
+26 (Single): Agent 0: (jack-up the-hub3)
+27 (Single): Agent 0: (undo nuts3 the-hub3)
+28 (Single): Agent 0: (remove-wheel w3 the-hub3)
+29 (Single): Agent 0: (loosen nuts2 the-hub2)
+30 (Single): Agent 0: (jack-up the-hub2)
+31 (Single): Agent 0: (undo nuts2 the-hub2)
+32 (Single): Agent 0: (remove-wheel w2 the-hub2)
+33 (Single): Agent 0: (loosen nuts19 the-hub19)
+34 (Single): Agent 0: (jack-up the-hub19)
+35 (Single): Agent 0: (undo nuts19 the-hub19)
+36 (Single): Agent 0: (remove-wheel w19 the-hub19)
+37 (Single): Agent 0: (loosen nuts18 the-hub18)
+38 (Single): Agent 0: (jack-up the-hub18)
+39 (Single): Agent 0: (undo nuts18 the-hub18)
+40 (Single): Agent 0: (remove-wheel w18 the-hub18)
+41 (Single): Agent 0: (loosen nuts17 the-hub17)
+42 (Single): Agent 0: (jack-up the-hub17)
+43 (Single): Agent 0: (undo nuts17 the-hub17)
+44 (Single): Agent 0: (remove-wheel w17 the-hub17)
+45 (Single): Agent 0: (loosen nuts16 the-hub16)
+46 (Single): Agent 0: (jack-up the-hub16)
+47 (Single): Agent 0: (undo nuts16 the-hub16)
+48 (Single): Agent 0: (remove-wheel w16 the-hub16)
+49 (Single): Agent 0: (loosen nuts15 the-hub15)
+50 (Single): Agent 0: (jack-up the-hub15)
+51 (Single): Agent 0: (undo nuts15 the-hub15)
+52 (Single): Agent 0: (remove-wheel w15 the-hub15)
+53 (Single): Agent 0: (loosen nuts14 the-hub14)
+54 (Single): Agent 0: (jack-up the-hub14)
+55 (Single): Agent 0: (undo nuts14 the-hub14)
+56 (Single): Agent 0: (remove-wheel w14 the-hub14)
+57 (Single): Agent 0: (loosen nuts13 the-hub13)
+58 (Single): Agent 0: (jack-up the-hub13)
+59 (Single): Agent 0: (undo nuts13 the-hub13)
+60 (Single): Agent 0: (remove-wheel w13 the-hub13)
+61 (Single): Agent 0: (loosen nuts12 the-hub12)
+62 (Single): Agent 0: (jack-up the-hub12)
+63 (Single): Agent 0: (undo nuts12 the-hub12)
+64 (Single): Agent 0: (remove-wheel w12 the-hub12)
+65 (Single): Agent 0: (loosen nuts11 the-hub11)
+66 (Single): Agent 0: (jack-up the-hub11)
+67 (Single): Agent 0: (undo nuts11 the-hub11)
+68 (Single): Agent 0: (remove-wheel w11 the-hub11)
+69 (Single): Agent 0: (loosen nuts10 the-hub10)
+70 (Single): Agent 0: (jack-up the-hub10)
+71 (Single): Agent 0: (undo nuts10 the-hub10)
+72 (Single): Agent 0: (remove-wheel w10 the-hub10)
+73 (Single): Agent 0: (loosen nuts1 the-hub1)
+74 (Single): Agent 0: (jack-up the-hub1)
+75 (Single): Agent 0: (undo nuts1 the-hub1)
+76 (Single): Agent 0: (remove-wheel w1 the-hub1)
+77 (Single): Agent 0: (open boot)
+78 (Single): Agent 0: (fetch r1 boot)
+79 (Single): Agent 0: (put-on-wheel r1 the-hub1)
+80 (Single): Agent 0: (fetch r10 boot)
+81 (Single): Agent 0: (put-on-wheel r10 the-hub10)
+82 (Single): Agent 0: (fetch r11 boot)
+83 (Single): Agent 0: (put-on-wheel r11 the-hub11)
+84 (Single): Agent 0: (fetch r12 boot)
+85 (Single): Agent 0: (put-on-wheel r12 the-hub12)
+86 (Single): Agent 0: (fetch r13 boot)
+87 (Single): Agent 0: (put-on-wheel r13 the-hub13)
+88 (Single): Agent 0: (fetch r14 boot)
+89 (Single): Agent 0: (put-on-wheel r14 the-hub14)
+90 (Single): Agent 0: (fetch r15 boot)
+91 (Single): Agent 0: (put-on-wheel r15 the-hub15)
+92 (Single): Agent 0: (fetch r16 boot)
+93 (Single): Agent 0: (put-on-wheel r16 the-hub16)
+94 (Single): Agent 0: (fetch r17 boot)
+95 (Single): Agent 0: (put-on-wheel r17 the-hub17)
+96 (Single): Agent 0: (fetch r18 boot)
+97 (Parallel, derived from single action with multiple steps):
+  Agent 0: (inflate r9)
+  Agent 0: (put-away w1 boot)
+  Agent 0: (put-on-wheel r18 the-hub18)
+98 (Parallel, derived from single action with multiple steps):
+  Agent 0: (inflate r8)
+  Agent 0: (put-away w10 boot)
+  Agent 0: (fetch r19 boot)
+99 (Parallel, derived from single action with multiple steps):
+  Agent 0: (inflate r7)
+  Agent 0: (put-away w11 boot)
+  Agent 0: (put-on-wheel r19 the-hub19)
+100 (Parallel, derived from single action with multiple steps):
+  Agent 0: (inflate r6)
+  Agent 0: (put-away w12 boot)
+  Agent 0: (fetch r2 boot)
+101 (Parallel, derived from single action with multiple steps):
+  Agent 0: (inflate r5)
+  Agent 0: (put-away w13 boot)
+  Agent 0: (put-on-wheel r2 the-hub2)
+102 (Parallel, derived from single action with multiple steps):
+  Agent 0: (inflate r4)
+  Agent 0: (put-away w14 boot)
+  Agent 0: (fetch r3 boot)
+103 (Parallel, derived from single action with multiple steps):
+  Agent 0: (inflate r3)
+  Agent 0: (put-away w15 boot)
+  Agent 0: (put-on-wheel r3 the-hub3)
+104 (Parallel, derived from single action with multiple steps):
+  Agent 0: (inflate r2)
+  Agent 0: (put-away w16 boot)
+  Agent 0: (fetch r4 boot)
+105 (Parallel, derived from single action with multiple steps):
+  Agent 0: (inflate r19)
+  Agent 0: (put-away w17 boot)
+  Agent 0: (put-on-wheel r4 the-hub4)
+106 (Parallel, derived from single action with multiple steps):
+  Agent 0: (inflate r18)
+  Agent 0: (put-away w18 boot)
+  Agent 0: (fetch r5 boot)
+107 (Parallel, derived from single action with multiple steps):
+  Agent 0: (inflate r17)
+  Agent 0: (put-away w19 boot)
+  Agent 0: (put-on-wheel r5 the-hub5)
+108 (Parallel, derived from single action with multiple steps):
+  Agent 0: (inflate r16)
+  Agent 0: (put-away w2 boot)
+  Agent 0: (fetch r6 boot)
+109 (Parallel, derived from single action with multiple steps):
+  Agent 0: (inflate r15)
+  Agent 0: (put-away w3 boot)
+  Agent 0: (put-on-wheel r6 the-hub6)
+110 (Parallel, derived from single action with multiple steps):
+  Agent 0: (inflate r14)
+  Agent 0: (put-away w4 boot)
+  Agent 0: (fetch r7 boot)
+111 (Parallel, derived from single action with multiple steps):
+  Agent 0: (inflate r13)
+  Agent 0: (put-away w5 boot)
+  Agent 0: (put-on-wheel r7 the-hub7)
+112 (Parallel, derived from single action with multiple steps):
+  Agent 0: (inflate r12)
+  Agent 0: (put-away w6 boot)
+  Agent 0: (fetch r8 boot)
+113 (Parallel, derived from single action with multiple steps):
+  Agent 0: (inflate r11)
+  Agent 0: (put-away w7 boot)
+  Agent 0: (put-on-wheel r8 the-hub8)
+114 (Parallel, derived from single action with multiple steps):
+  Agent 0: (inflate r10)
+  Agent 0: (put-away w8 boot)
+  Agent 0: (fetch r9 boot)
+115 (Parallel):
+  Agent 0: (inflate r1)
+(put-away w9 boot)
+(put-on-wheel r9 the-hub9)
+(close boot)
+  Agent 1: (do-up nuts9 the-hub9)
+116 (Single): Agent 1: (jack-down the-hub9)
+117 (Single): Agent 1: (tighten nuts9 the-hub9)
+118 (Single): Agent 1: (do-up nuts8 the-hub8)
+119 (Single): Agent 1: (jack-down the-hub8)
+120 (Single): Agent 1: (tighten nuts8 the-hub8)
+121 (Single): Agent 1: (do-up nuts7 the-hub7)
+122 (Single): Agent 1: (jack-down the-hub7)
+123 (Single): Agent 1: (tighten nuts7 the-hub7)
+124 (Single): Agent 1: (do-up nuts6 the-hub6)
+125 (Single): Agent 1: (jack-down the-hub6)
+126 (Single): Agent 1: (tighten nuts6 the-hub6)
+127 (Single): Agent 1: (do-up nuts5 the-hub5)
+128 (Single): Agent 1: (jack-down the-hub5)
+129 (Single): Agent 1: (tighten nuts5 the-hub5)
+130 (Single): Agent 1: (do-up nuts4 the-hub4)
+131 (Single): Agent 1: (jack-down the-hub4)
+132 (Single): Agent 1: (tighten nuts4 the-hub4)
+133 (Single): Agent 1: (do-up nuts3 the-hub3)
+134 (Single): Agent 1: (jack-down the-hub3)
+135 (Single): Agent 1: (tighten nuts3 the-hub3)
+136 (Single): Agent 1: (do-up nuts2 the-hub2)
+137 (Single): Agent 1: (jack-down the-hub2)
+138 (Single): Agent 1: (tighten nuts2 the-hub2)
+139 (Single): Agent 1: (do-up nuts19 the-hub19)
+140 (Single): Agent 1: (jack-down the-hub19)
+141 (Single): Agent 1: (tighten nuts19 the-hub19)
+142 (Single): Agent 1: (do-up nuts18 the-hub18)
+143 (Single): Agent 1: (jack-down the-hub18)
+144 (Single): Agent 1: (tighten nuts18 the-hub18)
+145 (Single): Agent 1: (do-up nuts17 the-hub17)
+146 (Single): Agent 1: (jack-down the-hub17)
+147 (Single): Agent 1: (tighten nuts17 the-hub17)
+148 (Single): Agent 1: (do-up nuts16 the-hub16)
+149 (Single): Agent 1: (jack-down the-hub16)
+150 (Single): Agent 1: (tighten nuts16 the-hub16)
+151 (Single): Agent 1: (do-up nuts15 the-hub15)
+152 (Single): Agent 1: (jack-down the-hub15)
+153 (Single): Agent 1: (tighten nuts15 the-hub15)
+154 (Single): Agent 1: (do-up nuts14 the-hub14)
+155 (Single): Agent 1: (jack-down the-hub14)
+156 (Single): Agent 1: (tighten nuts14 the-hub14)
+157 (Single): Agent 1: (do-up nuts13 the-hub13)
+158 (Single): Agent 1: (jack-down the-hub13)
+159 (Single): Agent 1: (tighten nuts13 the-hub13)
+160 (Single): Agent 1: (do-up nuts12 the-hub12)
+161 (Single): Agent 1: (jack-down the-hub12)
+162 (Single): Agent 1: (tighten nuts12 the-hub12)
+163 (Single): Agent 1: (do-up nuts11 the-hub11)
+164 (Single): Agent 1: (jack-down the-hub11)
+165 (Single): Agent 1: (tighten nuts11 the-hub11)
+166 (Single): Agent 1: (do-up nuts10 the-hub10)
+167 (Single): Agent 1: (jack-down the-hub10)
+168 (Single): Agent 1: (tighten nuts10 the-hub10)
+169 (Single): Agent 1: (do-up nuts1 the-hub1)
+170 (Single): Agent 1: (jack-down the-hub1)
+171 (Single): Agent 1: (tighten nuts1 the-hub1)
+
+Total Cost: 171
+[results][tyreworld][19]
+[single_agent][planning time: 1003.0][cost: 211.0]
+[multi_agent][planning_time: 644.0493602561951][cost: 171.0][agents: 5][optimization time 1145.8649308681488]
+----------------------------------------
+Using cached single agent results
+LLM generated no subgoal for agent 4, reducing number of agents
+args.num_agents: 4
+['inflate all intact tyres', 'put-away all flat tyres in the boot', 'fetch all intact tyres from the boot']
+['./experiments_multiagent_help/run4033/tyreworld/p20_1.pddl', './experiments_multiagent_help/run4033/tyreworld/p20_2.pddl', './experiments_multiagent_help/run4033/tyreworld/p20_3.pddl']
+agent1
+[info][subgoal_1][tyreworld] task 20 takes 52.39 sec, found a plan with cost 20.0
+planner successful
+validating
+validator time 0.012965679168701172
+agent2
+[info][subgoal_2][tyreworld] task 20 takes 200.65 sec, found a plan with cost 101.0
+planner successful
+validating
+validator time 0.017369985580444336
+agent3
+[info][subgoal_3][tyreworld] task 20 takes 200.66 sec, found a plan with cost 40.0
+planner successful
+validating
+validator time 0.012929916381835938
+[info][multiagent main goal][tyreworld] task 20 takes 200.61 sec, found a plan with cost 61.0
+TASK: tyreworld - 4033 - 20
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (inflate r9)
+2 (Single): Agent 1: (inflate r8)
+3 (Single): Agent 1: (inflate r7)
+4 (Single): Agent 1: (inflate r6)
+5 (Single): Agent 1: (inflate r5)
+6 (Single): Agent 1: (inflate r4)
+7 (Single): Agent 1: (inflate r3)
+8 (Single): Agent 1: (inflate r20)
+9 (Single): Agent 1: (inflate r2)
+10 (Single): Agent 1: (inflate r19)
+11 (Single): Agent 1: (inflate r18)
+12 (Single): Agent 1: (inflate r17)
+13 (Single): Agent 1: (inflate r16)
+14 (Single): Agent 1: (inflate r15)
+15 (Single): Agent 1: (inflate r14)
+16 (Single): Agent 1: (inflate r13)
+17 (Single): Agent 1: (inflate r12)
+18 (Single): Agent 1: (inflate r11)
+19 (Single): Agent 1: (inflate r10)
+20 (Single): Agent 1: (inflate r1)
+
+merging plan 2 into initial_plan
+101 True
+verifying entire plan.
+merging plan 3 into initial_plan
+121 True
+verifying entire plan.
+merging main agent's plan into combined plan
+
+Main Agent's Plan:
+1 (Single): Agent 0: (do-up nuts9 the-hub9)
+2 (Single): Agent 0: (jack-down the-hub9)
+3 (Single): Agent 0: (tighten nuts9 the-hub9)
+4 (Single): Agent 0: (do-up nuts8 the-hub8)
+5 (Single): Agent 0: (jack-down the-hub8)
+6 (Single): Agent 0: (tighten nuts8 the-hub8)
+7 (Single): Agent 0: (do-up nuts7 the-hub7)
+8 (Single): Agent 0: (jack-down the-hub7)
+9 (Single): Agent 0: (tighten nuts7 the-hub7)
+10 (Single): Agent 0: (do-up nuts6 the-hub6)
+11 (Single): Agent 0: (jack-down the-hub6)
+12 (Single): Agent 0: (tighten nuts6 the-hub6)
+13 (Single): Agent 0: (do-up nuts5 the-hub5)
+14 (Single): Agent 0: (jack-down the-hub5)
+15 (Single): Agent 0: (tighten nuts5 the-hub5)
+16 (Single): Agent 0: (do-up nuts4 the-hub4)
+17 (Single): Agent 0: (jack-down the-hub4)
+18 (Single): Agent 0: (tighten nuts4 the-hub4)
+19 (Single): Agent 0: (do-up nuts3 the-hub3)
+20 (Single): Agent 0: (jack-down the-hub3)
+21 (Single): Agent 0: (tighten nuts3 the-hub3)
+22 (Single): Agent 0: (do-up nuts20 the-hub20)
+23 (Single): Agent 0: (jack-down the-hub20)
+24 (Single): Agent 0: (tighten nuts20 the-hub20)
+25 (Single): Agent 0: (do-up nuts2 the-hub2)
+26 (Single): Agent 0: (jack-down the-hub2)
+27 (Single): Agent 0: (tighten nuts2 the-hub2)
+28 (Single): Agent 0: (do-up nuts19 the-hub19)
+29 (Single): Agent 0: (jack-down the-hub19)
+30 (Single): Agent 0: (tighten nuts19 the-hub19)
+31 (Single): Agent 0: (do-up nuts18 the-hub18)
+32 (Single): Agent 0: (jack-down the-hub18)
+33 (Single): Agent 0: (tighten nuts18 the-hub18)
+34 (Single): Agent 0: (do-up nuts17 the-hub17)
+35 (Single): Agent 0: (jack-down the-hub17)
+36 (Single): Agent 0: (tighten nuts17 the-hub17)
+37 (Single): Agent 0: (do-up nuts16 the-hub16)
+38 (Single): Agent 0: (jack-down the-hub16)
+39 (Single): Agent 0: (tighten nuts16 the-hub16)
+40 (Single): Agent 0: (do-up nuts15 the-hub15)
+41 (Single): Agent 0: (jack-down the-hub15)
+42 (Single): Agent 0: (tighten nuts15 the-hub15)
+43 (Single): Agent 0: (do-up nuts14 the-hub14)
+44 (Single): Agent 0: (jack-down the-hub14)
+45 (Single): Agent 0: (tighten nuts14 the-hub14)
+46 (Single): Agent 0: (do-up nuts13 the-hub13)
+47 (Single): Agent 0: (jack-down the-hub13)
+48 (Single): Agent 0: (tighten nuts13 the-hub13)
+49 (Single): Agent 0: (do-up nuts12 the-hub12)
+50 (Single): Agent 0: (jack-down the-hub12)
+51 (Single): Agent 0: (tighten nuts12 the-hub12)
+52 (Single): Agent 0: (do-up nuts11 the-hub11)
+53 (Single): Agent 0: (jack-down the-hub11)
+54 (Single): Agent 0: (tighten nuts11 the-hub11)
+55 (Single): Agent 0: (do-up nuts10 the-hub10)
+56 (Single): Agent 0: (jack-down the-hub10)
+57 (Single): Agent 0: (tighten nuts10 the-hub10)
+58 (Single): Agent 0: (do-up nuts1 the-hub1)
+59 (Single): Agent 0: (jack-down the-hub1)
+60 (Single): Agent 0: (tighten nuts1 the-hub1)
+61 (Single): Agent 0: (close boot)
+
+Current Combined Plan:
+1 (Single): Agent 0: (loosen nuts9 the-hub9)
+2 (Single): Agent 0: (jack-up the-hub9)
+3 (Single): Agent 0: (undo nuts9 the-hub9)
+4 (Single): Agent 0: (remove-wheel w9 the-hub9)
+5 (Single): Agent 0: (loosen nuts8 the-hub8)
+6 (Single): Agent 0: (jack-up the-hub8)
+7 (Single): Agent 0: (undo nuts8 the-hub8)
+8 (Single): Agent 0: (remove-wheel w8 the-hub8)
+9 (Single): Agent 0: (loosen nuts7 the-hub7)
+10 (Single): Agent 0: (jack-up the-hub7)
+11 (Single): Agent 0: (undo nuts7 the-hub7)
+12 (Single): Agent 0: (remove-wheel w7 the-hub7)
+13 (Single): Agent 0: (loosen nuts6 the-hub6)
+14 (Single): Agent 0: (jack-up the-hub6)
+15 (Single): Agent 0: (undo nuts6 the-hub6)
+16 (Single): Agent 0: (remove-wheel w6 the-hub6)
+17 (Single): Agent 0: (loosen nuts5 the-hub5)
+18 (Single): Agent 0: (jack-up the-hub5)
+19 (Single): Agent 0: (undo nuts5 the-hub5)
+20 (Single): Agent 0: (remove-wheel w5 the-hub5)
+21 (Single): Agent 0: (loosen nuts4 the-hub4)
+22 (Single): Agent 0: (jack-up the-hub4)
+23 (Single): Agent 0: (undo nuts4 the-hub4)
+24 (Single): Agent 0: (remove-wheel w4 the-hub4)
+25 (Single): Agent 0: (loosen nuts3 the-hub3)
+26 (Single): Agent 0: (jack-up the-hub3)
+27 (Single): Agent 0: (undo nuts3 the-hub3)
+28 (Single): Agent 0: (remove-wheel w3 the-hub3)
+29 (Single): Agent 0: (loosen nuts20 the-hub20)
+30 (Single): Agent 0: (jack-up the-hub20)
+31 (Single): Agent 0: (undo nuts20 the-hub20)
+32 (Single): Agent 0: (remove-wheel w20 the-hub20)
+33 (Single): Agent 0: (loosen nuts2 the-hub2)
+34 (Single): Agent 0: (jack-up the-hub2)
+35 (Single): Agent 0: (undo nuts2 the-hub2)
+36 (Single): Agent 0: (remove-wheel w2 the-hub2)
+37 (Single): Agent 0: (loosen nuts19 the-hub19)
+38 (Single): Agent 0: (jack-up the-hub19)
+39 (Single): Agent 0: (undo nuts19 the-hub19)
+40 (Single): Agent 0: (remove-wheel w19 the-hub19)
+41 (Single): Agent 0: (loosen nuts18 the-hub18)
+42 (Single): Agent 0: (jack-up the-hub18)
+43 (Single): Agent 0: (undo nuts18 the-hub18)
+44 (Single): Agent 0: (remove-wheel w18 the-hub18)
+45 (Single): Agent 0: (loosen nuts17 the-hub17)
+46 (Single): Agent 0: (jack-up the-hub17)
+47 (Single): Agent 0: (undo nuts17 the-hub17)
+48 (Single): Agent 0: (remove-wheel w17 the-hub17)
+49 (Single): Agent 0: (loosen nuts16 the-hub16)
+50 (Single): Agent 0: (jack-up the-hub16)
+51 (Single): Agent 0: (undo nuts16 the-hub16)
+52 (Single): Agent 0: (remove-wheel w16 the-hub16)
+53 (Single): Agent 0: (loosen nuts15 the-hub15)
+54 (Single): Agent 0: (jack-up the-hub15)
+55 (Single): Agent 0: (undo nuts15 the-hub15)
+56 (Single): Agent 0: (remove-wheel w15 the-hub15)
+57 (Single): Agent 0: (loosen nuts14 the-hub14)
+58 (Single): Agent 0: (jack-up the-hub14)
+59 (Single): Agent 0: (undo nuts14 the-hub14)
+60 (Single): Agent 0: (remove-wheel w14 the-hub14)
+61 (Single): Agent 0: (loosen nuts13 the-hub13)
+62 (Single): Agent 0: (jack-up the-hub13)
+63 (Single): Agent 0: (undo nuts13 the-hub13)
+64 (Single): Agent 0: (remove-wheel w13 the-hub13)
+65 (Single): Agent 0: (loosen nuts12 the-hub12)
+66 (Single): Agent 0: (jack-up the-hub12)
+67 (Single): Agent 0: (undo nuts12 the-hub12)
+68 (Single): Agent 0: (remove-wheel w12 the-hub12)
+69 (Single): Agent 0: (loosen nuts11 the-hub11)
+70 (Single): Agent 0: (jack-up the-hub11)
+71 (Single): Agent 0: (undo nuts11 the-hub11)
+72 (Single): Agent 0: (remove-wheel w11 the-hub11)
+73 (Single): Agent 0: (loosen nuts10 the-hub10)
+74 (Single): Agent 0: (jack-up the-hub10)
+75 (Single): Agent 0: (undo nuts10 the-hub10)
+76 (Single): Agent 0: (remove-wheel w10 the-hub10)
+77 (Single): Agent 0: (loosen nuts1 the-hub1)
+78 (Single): Agent 0: (jack-up the-hub1)
+79 (Single): Agent 0: (undo nuts1 the-hub1)
+80 (Single): Agent 0: (remove-wheel w1 the-hub1)
+81 (Single): Agent 0: (open boot)
+82 (Single): Agent 1: (fetch r1 boot)
+83 (Single): Agent 1: (put-on-wheel r1 the-hub1)
+84 (Single): Agent 1: (fetch r10 boot)
+85 (Single): Agent 1: (put-on-wheel r10 the-hub10)
+86 (Single): Agent 1: (fetch r11 boot)
+87 (Single): Agent 1: (put-on-wheel r11 the-hub11)
+88 (Single): Agent 1: (fetch r12 boot)
+89 (Single): Agent 1: (put-on-wheel r12 the-hub12)
+90 (Single): Agent 1: (fetch r13 boot)
+91 (Single): Agent 1: (put-on-wheel r13 the-hub13)
+92 (Single): Agent 1: (fetch r14 boot)
+93 (Single): Agent 1: (put-on-wheel r14 the-hub14)
+94 (Single): Agent 1: (fetch r15 boot)
+95 (Single): Agent 1: (put-on-wheel r15 the-hub15)
+96 (Single): Agent 1: (fetch r16 boot)
+97 (Single): Agent 1: (put-on-wheel r16 the-hub16)
+98 (Single): Agent 1: (fetch r17 boot)
+99 (Single): Agent 1: (put-on-wheel r17 the-hub17)
+100 (Single): Agent 1: (fetch r18 boot)
+101 (Single): Agent 1: (put-on-wheel r18 the-hub18)
+102 (Parallel):
+  Agent 0: (inflate r9)
+(put-away w1 boot)
+  Agent 1: (fetch r19 boot)
+103 (Parallel):
+  Agent 0: (inflate r8)
+(put-away w10 boot)
+  Agent 1: (put-on-wheel r19 the-hub19)
+104 (Parallel):
+  Agent 0: (inflate r7)
+(put-away w11 boot)
+  Agent 1: (fetch r2 boot)
+105 (Parallel):
+  Agent 0: (inflate r6)
+(put-away w12 boot)
+  Agent 1: (put-on-wheel r2 the-hub2)
+106 (Parallel):
+  Agent 0: (inflate r5)
+(put-away w13 boot)
+  Agent 1: (fetch r20 boot)
+107 (Parallel):
+  Agent 0: (inflate r4)
+(put-away w14 boot)
+  Agent 1: (put-on-wheel r20 the-hub20)
+108 (Parallel):
+  Agent 0: (inflate r3)
+(put-away w15 boot)
+  Agent 1: (fetch r3 boot)
+109 (Parallel):
+  Agent 0: (inflate r20)
+(put-away w16 boot)
+  Agent 1: (put-on-wheel r3 the-hub3)
+110 (Parallel):
+  Agent 0: (inflate r2)
+(put-away w17 boot)
+  Agent 1: (fetch r4 boot)
+111 (Parallel):
+  Agent 0: (inflate r19)
+(put-away w18 boot)
+  Agent 1: (put-on-wheel r4 the-hub4)
+112 (Parallel):
+  Agent 0: (inflate r18)
+(put-away w19 boot)
+  Agent 1: (fetch r5 boot)
+113 (Parallel):
+  Agent 0: (inflate r17)
+(put-away w2 boot)
+  Agent 1: (put-on-wheel r5 the-hub5)
+114 (Parallel):
+  Agent 0: (inflate r16)
+(put-away w20 boot)
+  Agent 1: (fetch r6 boot)
+115 (Parallel):
+  Agent 0: (inflate r15)
+(put-away w3 boot)
+  Agent 1: (put-on-wheel r6 the-hub6)
+116 (Parallel):
+  Agent 0: (inflate r14)
+(put-away w4 boot)
+  Agent 1: (fetch r7 boot)
+117 (Parallel):
+  Agent 0: (inflate r13)
+(put-away w5 boot)
+  Agent 1: (put-on-wheel r7 the-hub7)
+118 (Parallel):
+  Agent 0: (inflate r12)
+(put-away w6 boot)
+  Agent 1: (fetch r8 boot)
+119 (Parallel):
+  Agent 0: (inflate r11)
+(put-away w7 boot)
+  Agent 1: (put-on-wheel r8 the-hub8)
+120 (Parallel):
+  Agent 0: (inflate r10)
+(put-away w8 boot)
+  Agent 1: (fetch r9 boot)
+121 (Parallel):
+  Agent 0: (inflate r1)
+(put-away w9 boot)
+  Agent 1: (put-on-wheel r9 the-hub9)
+
+181 True
+
+Final Merged Plan:
+1 (Single): Agent 0: (loosen nuts9 the-hub9)
+2 (Single): Agent 0: (jack-up the-hub9)
+3 (Single): Agent 0: (undo nuts9 the-hub9)
+4 (Single): Agent 0: (remove-wheel w9 the-hub9)
+5 (Single): Agent 0: (loosen nuts8 the-hub8)
+6 (Single): Agent 0: (jack-up the-hub8)
+7 (Single): Agent 0: (undo nuts8 the-hub8)
+8 (Single): Agent 0: (remove-wheel w8 the-hub8)
+9 (Single): Agent 0: (loosen nuts7 the-hub7)
+10 (Single): Agent 0: (jack-up the-hub7)
+11 (Single): Agent 0: (undo nuts7 the-hub7)
+12 (Single): Agent 0: (remove-wheel w7 the-hub7)
+13 (Single): Agent 0: (loosen nuts6 the-hub6)
+14 (Single): Agent 0: (jack-up the-hub6)
+15 (Single): Agent 0: (undo nuts6 the-hub6)
+16 (Single): Agent 0: (remove-wheel w6 the-hub6)
+17 (Single): Agent 0: (loosen nuts5 the-hub5)
+18 (Single): Agent 0: (jack-up the-hub5)
+19 (Single): Agent 0: (undo nuts5 the-hub5)
+20 (Single): Agent 0: (remove-wheel w5 the-hub5)
+21 (Single): Agent 0: (loosen nuts4 the-hub4)
+22 (Single): Agent 0: (jack-up the-hub4)
+23 (Single): Agent 0: (undo nuts4 the-hub4)
+24 (Single): Agent 0: (remove-wheel w4 the-hub4)
+25 (Single): Agent 0: (loosen nuts3 the-hub3)
+26 (Single): Agent 0: (jack-up the-hub3)
+27 (Single): Agent 0: (undo nuts3 the-hub3)
+28 (Single): Agent 0: (remove-wheel w3 the-hub3)
+29 (Single): Agent 0: (loosen nuts20 the-hub20)
+30 (Single): Agent 0: (jack-up the-hub20)
+31 (Single): Agent 0: (undo nuts20 the-hub20)
+32 (Single): Agent 0: (remove-wheel w20 the-hub20)
+33 (Single): Agent 0: (loosen nuts2 the-hub2)
+34 (Single): Agent 0: (jack-up the-hub2)
+35 (Single): Agent 0: (undo nuts2 the-hub2)
+36 (Single): Agent 0: (remove-wheel w2 the-hub2)
+37 (Single): Agent 0: (loosen nuts19 the-hub19)
+38 (Single): Agent 0: (jack-up the-hub19)
+39 (Single): Agent 0: (undo nuts19 the-hub19)
+40 (Single): Agent 0: (remove-wheel w19 the-hub19)
+41 (Single): Agent 0: (loosen nuts18 the-hub18)
+42 (Single): Agent 0: (jack-up the-hub18)
+43 (Single): Agent 0: (undo nuts18 the-hub18)
+44 (Single): Agent 0: (remove-wheel w18 the-hub18)
+45 (Single): Agent 0: (loosen nuts17 the-hub17)
+46 (Single): Agent 0: (jack-up the-hub17)
+47 (Single): Agent 0: (undo nuts17 the-hub17)
+48 (Single): Agent 0: (remove-wheel w17 the-hub17)
+49 (Single): Agent 0: (loosen nuts16 the-hub16)
+50 (Single): Agent 0: (jack-up the-hub16)
+51 (Single): Agent 0: (undo nuts16 the-hub16)
+52 (Single): Agent 0: (remove-wheel w16 the-hub16)
+53 (Single): Agent 0: (loosen nuts15 the-hub15)
+54 (Single): Agent 0: (jack-up the-hub15)
+55 (Single): Agent 0: (undo nuts15 the-hub15)
+56 (Single): Agent 0: (remove-wheel w15 the-hub15)
+57 (Single): Agent 0: (loosen nuts14 the-hub14)
+58 (Single): Agent 0: (jack-up the-hub14)
+59 (Single): Agent 0: (undo nuts14 the-hub14)
+60 (Single): Agent 0: (remove-wheel w14 the-hub14)
+61 (Single): Agent 0: (loosen nuts13 the-hub13)
+62 (Single): Agent 0: (jack-up the-hub13)
+63 (Single): Agent 0: (undo nuts13 the-hub13)
+64 (Single): Agent 0: (remove-wheel w13 the-hub13)
+65 (Single): Agent 0: (loosen nuts12 the-hub12)
+66 (Single): Agent 0: (jack-up the-hub12)
+67 (Single): Agent 0: (undo nuts12 the-hub12)
+68 (Single): Agent 0: (remove-wheel w12 the-hub12)
+69 (Single): Agent 0: (loosen nuts11 the-hub11)
+70 (Single): Agent 0: (jack-up the-hub11)
+71 (Single): Agent 0: (undo nuts11 the-hub11)
+72 (Single): Agent 0: (remove-wheel w11 the-hub11)
+73 (Single): Agent 0: (loosen nuts10 the-hub10)
+74 (Single): Agent 0: (jack-up the-hub10)
+75 (Single): Agent 0: (undo nuts10 the-hub10)
+76 (Single): Agent 0: (remove-wheel w10 the-hub10)
+77 (Single): Agent 0: (loosen nuts1 the-hub1)
+78 (Single): Agent 0: (jack-up the-hub1)
+79 (Single): Agent 0: (undo nuts1 the-hub1)
+80 (Single): Agent 0: (remove-wheel w1 the-hub1)
+81 (Single): Agent 0: (open boot)
+82 (Single): Agent 0: (fetch r1 boot)
+83 (Single): Agent 0: (put-on-wheel r1 the-hub1)
+84 (Single): Agent 0: (fetch r10 boot)
+85 (Single): Agent 0: (put-on-wheel r10 the-hub10)
+86 (Single): Agent 0: (fetch r11 boot)
+87 (Single): Agent 0: (put-on-wheel r11 the-hub11)
+88 (Single): Agent 0: (fetch r12 boot)
+89 (Single): Agent 0: (put-on-wheel r12 the-hub12)
+90 (Single): Agent 0: (fetch r13 boot)
+91 (Single): Agent 0: (put-on-wheel r13 the-hub13)
+92 (Single): Agent 0: (fetch r14 boot)
+93 (Single): Agent 0: (put-on-wheel r14 the-hub14)
+94 (Single): Agent 0: (fetch r15 boot)
+95 (Single): Agent 0: (put-on-wheel r15 the-hub15)
+96 (Single): Agent 0: (fetch r16 boot)
+97 (Single): Agent 0: (put-on-wheel r16 the-hub16)
+98 (Single): Agent 0: (fetch r17 boot)
+99 (Single): Agent 0: (put-on-wheel r17 the-hub17)
+100 (Single): Agent 0: (fetch r18 boot)
+101 (Single): Agent 0: (put-on-wheel r18 the-hub18)
+102 (Parallel, derived from single action with multiple steps):
+  Agent 0: (inflate r9)
+  Agent 0: (put-away w1 boot)
+  Agent 0: (fetch r19 boot)
+103 (Parallel, derived from single action with multiple steps):
+  Agent 0: (inflate r8)
+  Agent 0: (put-away w10 boot)
+  Agent 0: (put-on-wheel r19 the-hub19)
+104 (Parallel, derived from single action with multiple steps):
+  Agent 0: (inflate r7)
+  Agent 0: (put-away w11 boot)
+  Agent 0: (fetch r2 boot)
+105 (Parallel, derived from single action with multiple steps):
+  Agent 0: (inflate r6)
+  Agent 0: (put-away w12 boot)
+  Agent 0: (put-on-wheel r2 the-hub2)
+106 (Parallel, derived from single action with multiple steps):
+  Agent 0: (inflate r5)
+  Agent 0: (put-away w13 boot)
+  Agent 0: (fetch r20 boot)
+107 (Parallel, derived from single action with multiple steps):
+  Agent 0: (inflate r4)
+  Agent 0: (put-away w14 boot)
+  Agent 0: (put-on-wheel r20 the-hub20)
+108 (Parallel, derived from single action with multiple steps):
+  Agent 0: (inflate r3)
+  Agent 0: (put-away w15 boot)
+  Agent 0: (fetch r3 boot)
+109 (Parallel, derived from single action with multiple steps):
+  Agent 0: (inflate r20)
+  Agent 0: (put-away w16 boot)
+  Agent 0: (put-on-wheel r3 the-hub3)
+110 (Parallel, derived from single action with multiple steps):
+  Agent 0: (inflate r2)
+  Agent 0: (put-away w17 boot)
+  Agent 0: (fetch r4 boot)
+111 (Parallel, derived from single action with multiple steps):
+  Agent 0: (inflate r19)
+  Agent 0: (put-away w18 boot)
+  Agent 0: (put-on-wheel r4 the-hub4)
+112 (Parallel, derived from single action with multiple steps):
+  Agent 0: (inflate r18)
+  Agent 0: (put-away w19 boot)
+  Agent 0: (fetch r5 boot)
+113 (Parallel, derived from single action with multiple steps):
+  Agent 0: (inflate r17)
+  Agent 0: (put-away w2 boot)
+  Agent 0: (put-on-wheel r5 the-hub5)
+114 (Parallel, derived from single action with multiple steps):
+  Agent 0: (inflate r16)
+  Agent 0: (put-away w20 boot)
+  Agent 0: (fetch r6 boot)
+115 (Parallel, derived from single action with multiple steps):
+  Agent 0: (inflate r15)
+  Agent 0: (put-away w3 boot)
+  Agent 0: (put-on-wheel r6 the-hub6)
+116 (Parallel, derived from single action with multiple steps):
+  Agent 0: (inflate r14)
+  Agent 0: (put-away w4 boot)
+  Agent 0: (fetch r7 boot)
+117 (Parallel, derived from single action with multiple steps):
+  Agent 0: (inflate r13)
+  Agent 0: (put-away w5 boot)
+  Agent 0: (put-on-wheel r7 the-hub7)
+118 (Parallel, derived from single action with multiple steps):
+  Agent 0: (inflate r12)
+  Agent 0: (put-away w6 boot)
+  Agent 0: (fetch r8 boot)
+119 (Parallel, derived from single action with multiple steps):
+  Agent 0: (inflate r11)
+  Agent 0: (put-away w7 boot)
+  Agent 0: (put-on-wheel r8 the-hub8)
+120 (Parallel, derived from single action with multiple steps):
+  Agent 0: (inflate r10)
+  Agent 0: (put-away w8 boot)
+  Agent 0: (fetch r9 boot)
+121 (Parallel):
+  Agent 0: (inflate r1)
+(put-away w9 boot)
+(put-on-wheel r9 the-hub9)
+  Agent 1: (do-up nuts9 the-hub9)
+122 (Single): Agent 1: (jack-down the-hub9)
+123 (Single): Agent 1: (tighten nuts9 the-hub9)
+124 (Single): Agent 1: (do-up nuts8 the-hub8)
+125 (Single): Agent 1: (jack-down the-hub8)
+126 (Single): Agent 1: (tighten nuts8 the-hub8)
+127 (Single): Agent 1: (do-up nuts7 the-hub7)
+128 (Single): Agent 1: (jack-down the-hub7)
+129 (Single): Agent 1: (tighten nuts7 the-hub7)
+130 (Single): Agent 1: (do-up nuts6 the-hub6)
+131 (Single): Agent 1: (jack-down the-hub6)
+132 (Single): Agent 1: (tighten nuts6 the-hub6)
+133 (Single): Agent 1: (do-up nuts5 the-hub5)
+134 (Single): Agent 1: (jack-down the-hub5)
+135 (Single): Agent 1: (tighten nuts5 the-hub5)
+136 (Single): Agent 1: (do-up nuts4 the-hub4)
+137 (Single): Agent 1: (jack-down the-hub4)
+138 (Single): Agent 1: (tighten nuts4 the-hub4)
+139 (Single): Agent 1: (do-up nuts3 the-hub3)
+140 (Single): Agent 1: (jack-down the-hub3)
+141 (Single): Agent 1: (tighten nuts3 the-hub3)
+142 (Single): Agent 1: (do-up nuts20 the-hub20)
+143 (Single): Agent 1: (jack-down the-hub20)
+144 (Single): Agent 1: (tighten nuts20 the-hub20)
+145 (Single): Agent 1: (do-up nuts2 the-hub2)
+146 (Single): Agent 1: (jack-down the-hub2)
+147 (Single): Agent 1: (tighten nuts2 the-hub2)
+148 (Single): Agent 1: (do-up nuts19 the-hub19)
+149 (Single): Agent 1: (jack-down the-hub19)
+150 (Single): Agent 1: (tighten nuts19 the-hub19)
+151 (Single): Agent 1: (do-up nuts18 the-hub18)
+152 (Single): Agent 1: (jack-down the-hub18)
+153 (Single): Agent 1: (tighten nuts18 the-hub18)
+154 (Single): Agent 1: (do-up nuts17 the-hub17)
+155 (Single): Agent 1: (jack-down the-hub17)
+156 (Single): Agent 1: (tighten nuts17 the-hub17)
+157 (Single): Agent 1: (do-up nuts16 the-hub16)
+158 (Single): Agent 1: (jack-down the-hub16)
+159 (Single): Agent 1: (tighten nuts16 the-hub16)
+160 (Single): Agent 1: (do-up nuts15 the-hub15)
+161 (Single): Agent 1: (jack-down the-hub15)
+162 (Single): Agent 1: (tighten nuts15 the-hub15)
+163 (Single): Agent 1: (do-up nuts14 the-hub14)
+164 (Single): Agent 1: (jack-down the-hub14)
+165 (Single): Agent 1: (tighten nuts14 the-hub14)
+166 (Single): Agent 1: (do-up nuts13 the-hub13)
+167 (Single): Agent 1: (jack-down the-hub13)
+168 (Single): Agent 1: (tighten nuts13 the-hub13)
+169 (Single): Agent 1: (do-up nuts12 the-hub12)
+170 (Single): Agent 1: (jack-down the-hub12)
+171 (Single): Agent 1: (tighten nuts12 the-hub12)
+172 (Single): Agent 1: (do-up nuts11 the-hub11)
+173 (Single): Agent 1: (jack-down the-hub11)
+174 (Single): Agent 1: (tighten nuts11 the-hub11)
+175 (Single): Agent 1: (do-up nuts10 the-hub10)
+176 (Single): Agent 1: (jack-down the-hub10)
+177 (Single): Agent 1: (tighten nuts10 the-hub10)
+178 (Single): Agent 1: (do-up nuts1 the-hub1)
+179 (Single): Agent 1: (jack-down the-hub1)
+180 (Single): Agent 1: (tighten nuts1 the-hub1)
+181 (Single): Agent 1: (close boot)
+
+Total Cost: 181
+[results][tyreworld][20]
+[single_agent][planning time: 1003.02][cost: 222.0]
+[multi_agent][planning_time: 666.1539705371857][cost: 181.0][agents: 4][optimization time 1116.8960299491882]
+----------------------------------------

@@ -1,0 +1,114 @@
+Domain: tyreworld
+Success rate: 100.00% (20/20)
+Results:
+  [results][tyreworld][01]
+  [single_agent][planning time: 0.11][cost: 13.0]
+  [multi_agent][planning_time: 3.5448820114135744][cost: 12.0][agents: 2][optimization time 22.029266595840454]
+  Success: Yes
+
+  [results][tyreworld][02]
+  [single_agent][planning time: 1007.04][cost: 101.0]
+  [multi_agent][planning_time: 502.52244820594785][cost: 92.0][agents: 2][optimization time 251.22327375411987]
+  Success: Yes
+
+  [results][tyreworld][03]
+  [single_agent][planning time: 1006.17][cost: 35.0]
+  [multi_agent][planning_time: 501.5948147964478][cost: 34.0][agents: 2][optimization time 12.148629665374756]
+  Success: Yes
+
+  [results][tyreworld][04]
+  [single_agent][planning time: 1004.44][cost: 46.0]
+  [multi_agent][planning_time: 501.52653006553646][cost: 45.0][agents: 2][optimization time 10.478233337402344]
+  Success: Yes
+
+  [results][tyreworld][05]
+  [single_agent][planning time: 1003.45][cost: 57.0]
+  [multi_agent][planning_time: 502.4147344970703][cost: 52.0][agents: 2][optimization time 34.01684522628784]
+  Success: Yes
+
+  [results][tyreworld][06]
+  [single_agent][planning time: 1003.51][cost: 68.0]
+  [multi_agent][planning_time: 503.2019871044159][cost: 62.0][agents: 2][optimization time 60.5138418674469]
+  Success: Yes
+
+  [results][tyreworld][07]
+  [single_agent][planning time: 1003.07][cost: 79.0]
+  [multi_agent][planning_time: 503.5451966571808][cost: 72.0][agents: 2][optimization time 62.53646755218506]
+  Success: Yes
+
+  [results][tyreworld][08]
+  [single_agent][planning time: 1003.37][cost: 90.0]
+  [multi_agent][planning_time: 503.5509530448914][cost: 82.0][agents: 2][optimization time 267.7231912612915]
+  Success: Yes
+
+  [results][tyreworld][09]
+  [single_agent][planning time: 1002.95][cost: 101.0]
+  [multi_agent][planning_time: 502.68845288276674][cost: 92.0][agents: 2][optimization time 106.29678893089294]
+  Success: Yes
+
+  [results][tyreworld][10]
+  [single_agent][planning time: 1003.95][cost: 112.0]
+  [multi_agent][planning_time: 502.84968783378605][cost: 102.0][agents: 2][optimization time 130.98684692382812]
+  Success: Yes
+
+  [results][tyreworld][11]
+  [single_agent][planning time: 1003.21][cost: 123.0]
+  [multi_agent][planning_time: 503.73986633300785][cost: 112.0][agents: 2][optimization time 156.00964331626892]
+  Success: Yes
+
+  [results][tyreworld][12]
+  [single_agent][planning time: 1002.76][cost: 134.0]
+  [multi_agent][planning_time: 503.3648389816284][cost: 122.0][agents: 2][optimization time 195.3554825782776]
+  Success: Yes
+
+  [results][tyreworld][13]
+  [single_agent][planning time: 1002.57][cost: 145.0]
+  [multi_agent][planning_time: 504.3094613647461][cost: 132.0][agents: 2][optimization time 257.0626575946808]
+  Success: Yes
+
+  [results][tyreworld][14]
+  [single_agent][planning time: 1002.43][cost: 156.0]
+  [multi_agent][planning_time: 503.9194656085968][cost: 142.0][agents: 2][optimization time 277.0503399372101]
+  Success: Yes
+
+  [results][tyreworld][15]
+  [single_agent][planning time: 1002.54][cost: 167.0]
+  [multi_agent][planning_time: 509.4615928649902][cost: 152.0][agents: 2][optimization time 470.5594742298126]
+  Success: Yes
+
+  [results][tyreworld][16]
+  [single_agent][planning time: 1003.11][cost: 178.0]
+  [multi_agent][planning_time: 506.52419919967656][cost: 162.0][agents: 2][optimization time 405.06263613700867]
+  Success: Yes
+
+  [results][tyreworld][17]
+  [single_agent][planning time: 1003.33][cost: 189.0]
+  [multi_agent][planning_time: 512.5671830272674][cost: 172.0][agents: 2][optimization time 461.0933356285095]
+  Success: Yes
+
+  [results][tyreworld][18]
+  [single_agent][planning time: 1002.99][cost: 200.0]
+  [multi_agent][planning_time: 518.3797288990021][cost: 182.0][agents: 2][optimization time 465.42300963401794]
+  Success: Yes
+
+  [results][tyreworld][19]
+  [single_agent][planning time: 1003.0][cost: 211.0]
+  [multi_agent][planning_time: 529.6941469478608][cost: 192.0][agents: 2][optimization time 507.3437728881836]
+  Success: Yes
+
+  [results][tyreworld][20]
+  [single_agent][planning time: 1003.02][cost: 222.0]
+  [multi_agent][planning_time: 556.6431349468231][cost: 202.0][agents: 2][optimization time 570.2286198139191]
+  Success: Yes
+
+----------------------------------------
+
+Domain Averages:
+Domain: tyreworld
+  Single Agent:
+    Average Cost: 121.35
+    Average Planning Time: 953.35 sec
+  Multi Agent:
+    Average Cost: 110.75
+    Average Planning Time: 483.80 sec
+

@@ -12,6 +12,7 @@ print_usage() {
   echo "  --model MODEL              Specify the model to use"
   echo "  --domains DOMAIN1,DOMAIN2  Specify domains (comma-separated, default: grippers)"
   echo "  --tasks ID1,ID2,...        Specify task IDs (comma-separated, default: 1-20)"
+  echo "  --time-limit LIMIT         Specify the time limit for each task (default: 60)"
   echo "  --help                     Display this help message"
 }
 
@@ -21,7 +22,7 @@ PYTHON_SCRIPT=""
 SUMMARY_FILE=""
 # termes "tyreworld" "grippers" "barman" "blocksworld"
 DOMAINS=("grippers")
-TIME_LIMIT=1000
+TIME_LIMIT=60 # seconds
 TASK_IDS=(1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20)
 NUM_AGENTS=""
 RUN=100
@@ -61,6 +62,10 @@ while [[ $# -gt 0 ]]; do
             ;;
         --tasks)
             IFS=',' read -ra TASK_IDS <<< "$2"
+            shift 2
+            ;;
+        --time-limit)
+            TIME_LIMIT="$2"
             shift 2
             ;;
         --help)

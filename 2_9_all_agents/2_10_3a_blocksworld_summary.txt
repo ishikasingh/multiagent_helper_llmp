@@ -1,0 +1,104 @@
+Domain: blocksworld
+Success rate: 0.00% (0/18)
+Results:
+  [results][blocksworld][03]
+  [single_agent][planning time: 0.06][cost: 6.0]
+  [multi_agent][planning_time: 2.136343765258789][cost: 6.0][agents: 3][optimization time 3.811394691467285]
+  Success: No
+
+  [results][blocksworld][04]
+  [single_agent][planning time: 0.06][cost: 12.0]
+  [multi_agent][planning_time: 2.7843925189971928][cost: 12.0][agents: 3][optimization time 2.8304193019866943]
+  Success: No
+
+  [results][blocksworld][05]
+  [single_agent][planning time: 0.06][cost: 8.0]
+  [multi_agent][planning_time: 3.265294027328491][cost: 8.0][agents: 3][optimization time 1.1634047031402588]
+  Success: No
+
+  [results][blocksworld][06]
+  [single_agent][planning time: 0.08][cost: 12.0]
+  [multi_agent][planning_time: 3.505261392593384][cost: 12.0][agents: 3][optimization time 2.0976595878601074]
+  Success: No
+
+  [results][blocksworld][07]
+  [single_agent][planning time: 0.08][cost: 8.0]
+  [multi_agent][planning_time: 1.5118311023712159][cost: 8.0][agents: 3][optimization time 15.519447803497314]
+  Success: No
+
+  [results][blocksworld][08]
+  [single_agent][planning time: 0.1][cost: 14.0]
+  [multi_agent][planning_time: 2.8869094753265383][cost: 14.0][agents: 3][optimization time 3.9728126525878906]
+  Success: No
+
+  [results][blocksworld][09]
+  [single_agent][planning time: 0.97][cost: 14.0]
+  [multi_agent][planning_time: 4.343064460754395][cost: 24.0][agents: 3][optimization time 12.160703897476196]
+  Success: No
+
+  [results][blocksworld][10]
+  [single_agent][planning time: 0.99][cost: 18.0]
+  [multi_agent][planning_time: 2.8100221061706545][cost: 24.0][agents: 3][optimization time 13.063221454620361]
+  Success: No
+
+  [results][blocksworld][11]
+  [single_agent][planning time: 9.69][cost: 22.0]
+  [multi_agent][planning_time: 12.717124300003052][cost: 28.0][agents: 3][optimization time 10.234375476837158]
+  Success: No
+
+  [results][blocksworld][12]
+  [single_agent][planning time: 12.21][cost: 20.0]
+  [multi_agent][planning_time: 18.679073371887206][cost: 30.0][agents: 3][optimization time 5.885406732559204]
+  Success: No
+
+  [results][blocksworld][13]
+  [single_agent][planning time: 146.4][cost: 26.0]
+  [multi_agent][planning_time: 10.88973219871521][cost: 26.0][agents: 3][optimization time 7.74763560295105]
+  Success: No
+
+  [results][blocksworld][14]
+  [single_agent][planning time: 71.57][cost: 22.0]
+  [multi_agent][planning_time: 207.01535952568054][cost: 30.0][agents: 3][optimization time 4.320702314376831]
+  Success: No
+
+  [results][blocksworld][15]
+  [single_agent][planning time: 222.96][cost: 26.0]
+  [multi_agent][planning_time: 337.20766899108884][cost: 30.0][agents: 3][optimization time 5.082481622695923]
+  Success: No
+
+  [results][blocksworld][16]
+  [single_agent][planning time: 983.49][cost: 28.0]
+  [multi_agent][planning_time: 343.7030447292328][cost: 38.0][agents: 3][optimization time 10.43330192565918]
+  Success: No
+
+  [results][blocksworld][17]
+  [single_agent][planning time: 1000.34][cost: 22.0]
+  [multi_agent][planning_time: 75.86422941207886][cost: 26.0][agents: 3][optimization time 7.785943508148193]
+  Success: No
+
+  [results][blocksworld][18]
+  [single_agent][planning time: 969.95][cost: 30.0]
+  [multi_agent][planning_time: 338.001273059845][cost: 38.0][agents: 3][optimization time 66.40066361427307]
+  Success: No
+
+  [results][blocksworld][19]
+  [single_agent][planning time: 958.85][cost: 24.0]
+  [multi_agent][planning_time: 337.8848118495941][cost: 34.0][agents: 3][optimization time 2.6426000595092773]
+  Success: No
+
+  [results][blocksworld][20]
+  [single_agent][planning time: 1001.37][cost: 30.0]
+  [multi_agent][planning_time: 350.2138463687897][cost: 38.0][agents: 3][optimization time 4.928375244140625]
+  Success: No
+
+----------------------------------------
+
+Domain Averages:
+Domain: blocksworld
+  Single Agent:
+    Average Cost: 19.00
+    Average Planning Time: 298.85 sec
+  Multi Agent:
+    Average Cost: 23.67
+    Average Planning Time: 114.19 sec
+

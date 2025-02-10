@@ -1,0 +1,829 @@
+Using cached single agent results
+['ball1 is in room2.', 'ball2 is in room2.']
+['./experiments_multiagent_help/run2032/grippers/p01_1.pddl', './experiments_multiagent_help/run2032/grippers/p01_2.pddl']
+agent1
+[info][subgoal_1][grippers] task 01 takes 0.17 sec, found a plan with cost 3.0
+planner successful
+validating
+validator time 0.010071992874145508
+agent2
+[info][subgoal_2][grippers] task 01 takes 0.16 sec, found a plan with cost 3.0
+planner successful
+validating
+validator time 0.009462118148803711
+[info][multiagent main goal][grippers] task 01 takes 332.16 sec, no solution found
+TASK: grippers - 2032 - 01
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (pick robot1 ball1 room1 lgripper1)
+2 (Single): Agent 1: (move robot1 room1 room2)
+3 (Single): Agent 1: (drop robot1 ball1 room2 lgripper1)
+
+merging plan 2 into initial_plan
+inf False
+Merge failed - no valid solution found
+[results][grippers][01]
+[single_agent][planning time: 0.04][cost: 5.0]
+[multi_agent][planning_time: 2.5357616710662843][cost: inf][agents: 3][optimization time 5.041703939437866]
+----------------------------------------
+Using cached single agent results
+['ball3 should be in room3.', 'ball2 should be in room2.']
+['./experiments_multiagent_help/run2032/grippers/p02_1.pddl', './experiments_multiagent_help/run2032/grippers/p02_2.pddl']
+agent1
+[info][subgoal_1][grippers] task 02 takes 0.14 sec, found a plan with cost 4.0
+planner successful
+validating
+validator time 0.0058002471923828125
+agent2
+[info][subgoal_2][grippers] task 02 takes 0.14 sec, found a plan with cost 4.0
+planner successful
+validating
+validator time 0.006066083908081055
+[info][multiagent main goal][grippers] task 02 takes 0.15 sec, found a plan with cost 4.0
+TASK: grippers - 2032 - 02
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (move robot1 room2 room1)
+2 (Single): Agent 1: (pick robot1 ball3 room1 lgripper1)
+3 (Single): Agent 1: (move robot1 room1 room3)
+4 (Single): Agent 1: (drop robot1 ball3 room3 lgripper1)
+
+merging plan 2 into initial_plan
+7 True
+verifying entire plan.
+unsatisfied precondition encountered in merged plan, stopping process.
+Type-checking move
+...action passes type checking.
+Type-checking pick
+...action passes type checking.
+Type-checking drop
+...action passes type checking.
+Checking plan: ./experiments_multiagent_help/run2032/grippers/agent2_plan_final_temp.txt
+Plan to validate:
+
+Plan size: 8
+1:
+(move robot1 room2 room1)
+ 
+2:
+(pick robot1 ball2 room1 lgripper1)
+ 
+3:
+(move robot1 room1 room2)
+ 
+4:
+(move robot1 room2 room1)
+ 
+5:
+(drop robot1 ball2 room2 lgripper1)
+ 
+6:
+(pick robot1 ball3 room1 lgripper1)
+ 
+7:
+(move robot1 room1 room3)
+ 
+8:
+(drop robot1 ball3 room3 lgripper1)
+ 
+
+Plan Validation details
+-----------------------
+
+Checking next happening (time 1)
+Deleting (at-robby robot1 room2)
+Adding (at-robby robot1 room1)
+
+Checking next happening (time 2)
+Deleting (at ball2 room1)
+Deleting (free robot1 lgripper1)
+Adding (carry robot1 ball2 lgripper1)
+
+Checking next happening (time 3)
+Deleting (at-robby robot1 room1)
+Adding (at-robby robot1 room2)
+
+Checking next happening (time 4)
+Deleting (at-robby robot1 room2)
+Adding (at-robby robot1 room1)
+
+Checking next happening (time 5)
+Plan failed because of unsatisfied precondition in:
+(drop robot1 ball2 room2 lgripper1)
+
+
+Plan failed to execute
+
+Plan Repair Advice:
+
+(drop robot1 ball2 room2 lgripper1) has an unsatisfied precondition at time 5
+(Set (at-robby robot1 room2) to true)
+
+
+Failed plans:
+ ./experiments_multiagent_help/run2032/grippers/agent2_plan_final_temp.txt 
+
+[results][grippers][02]
+[single_agent][planning time: 0.05][cost: 9.0]
+[multi_agent][planning_time: 3.7601308155059816][cost: inf][agents: 3][optimization time 1.309293508529663]
+----------------------------------------
+Using cached single agent results
+LLM generated no subgoal for agent 1, reducing number of agents
+args.num_agents: 1
+[]
+[]
+[info][multiagent main goal][grippers] task 03 takes 0.2 sec, found a plan with cost 3.0
+[single_agent][planning time: 0.05][cost: 6.0]
+[multi_agent][planning_time: 0.05][cost: 6.0][agents: 1][optimization time 0]
+----------------------------------------
+Using cached single agent results
+LLM generated no subgoal for agent 1, reducing number of agents
+args.num_agents: 1
+[]
+[]
+[info][multiagent main goal][grippers] task 04 takes 332.17 sec, no solution found
+[single_agent][planning time: 0.05][cost: 4.0]
+[multi_agent][planning_time: 0.05][cost: 4.0][agents: 1][optimization time 0]
+----------------------------------------
+Using cached single agent results
+LLM generated no subgoal for agent 2, reducing number of agents
+args.num_agents: 2
+['ball3 should be in room2.']
+['./experiments_multiagent_help/run2032/grippers/p05_1.pddl']
+agent1
+[info][subgoal_1][grippers] task 05 takes 0.13 sec, found a plan with cost 4.0
+planner successful
+validating
+validator time 0.0063343048095703125
+[info][multiagent main goal][grippers] task 05 takes 332.14 sec, no solution found
+TASK: grippers - 2032 - 05
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (move robot1 room2 room1)
+2 (Single): Agent 1: (pick robot1 ball3 room1 lgripper1)
+3 (Single): Agent 1: (move robot1 room1 room2)
+4 (Single): Agent 1: (drop robot1 ball3 room2 lgripper1)
+
+merging main agent's plan into combined plan
+
+Main Agent's Plan:
+
+
+Current Combined Plan:
+1 (Single): Agent 1: (move robot1 room2 room1)
+2 (Single): Agent 1: (pick robot1 ball3 room1 lgripper1)
+3 (Single): Agent 1: (move robot1 room1 room2)
+4 (Single): Agent 1: (drop robot1 ball3 room2 lgripper1)
+
+4 True
+
+Final Merged Plan:
+1 (Single): Agent 0: (move robot1 room2 room1)
+2 (Single): Agent 0: (pick robot1 ball3 room1 lgripper1)
+3 (Single): Agent 0: (move robot1 room1 room2)
+4 (Single): Agent 0: (drop robot1 ball3 room2 lgripper1)
+
+Total Cost: 4
+[results][grippers][05]
+[single_agent][planning time: 0.05][cost: 4.0]
+[multi_agent][planning_time: 1.1004208374023436][cost: 4.0][agents: 2][optimization time 3.27864408493042]
+----------------------------------------
+b"Error: Could not read file: experiments_multiagent_help/run2032/grippers/p06_0.pddl\nReason: [Errno 2] No such file or directory: 'experiments_multiagent_help/run2032/grippers/p06_0.pddl'\n"
+Using cached single agent results
+LLM generated no subgoal for agent 1, reducing number of agents
+args.num_agents: 1
+[]
+[]
+planner broke
+INFO     planner time limit: None
+INFO     planner memory limit: None
+
+INFO     Running translator.
+INFO     translator stdin: None
+INFO     translator time limit: None
+INFO     translator memory limit: None
+INFO     translator command line string: /home/davidbai/.conda/envs/llm_pddl/bin/python /home/davidbai/multiagent_helper_llmp/downward/builds/release/bin/translate/translate.py domains/grippers/domain.pddl experiments_multiagent_help/run2032/grippers/p06_0.pddl --sas-file experiments_multiagent_help/run2032/grippers/p06_0_plan.pddl.sas
+Parsing...
+translate exit code: 30
+
+Driver aborting after translate
+INFO     Planner time: 0.11s
+
+list index out of range
+----------------------------------------
+Using cached single agent results
+['ball3 is in room3.', 'ball2 is in room3.']
+['./experiments_multiagent_help/run2032/grippers/p07_1.pddl', './experiments_multiagent_help/run2032/grippers/p07_2.pddl']
+agent1
+[info][subgoal_1][grippers] task 07 takes 0.15 sec, found a plan with cost 4.0
+planner successful
+validating
+validator time 0.00708317756652832
+agent2
+[info][subgoal_2][grippers] task 07 takes 0.15 sec, found a plan with cost 3.0
+planner successful
+validating
+validator time 0.00667881965637207
+[info][multiagent main goal][grippers] task 07 takes 0.15 sec, found a plan with cost 3.0
+TASK: grippers - 2032 - 07
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (move robot1 room4 room2)
+2 (Single): Agent 1: (pick robot1 ball3 room2 lgripper1)
+3 (Single): Agent 1: (move robot1 room2 room3)
+4 (Single): Agent 1: (drop robot1 ball3 room3 lgripper1)
+
+merging plan 2 into initial_plan
+inf False
+Merge failed - no valid solution found
+[results][grippers][07]
+[single_agent][planning time: 0.06][cost: 8.0]
+[multi_agent][planning_time: 2.8684453487396238][cost: inf][agents: 3][optimization time 3.1296329498291016]
+----------------------------------------
+Using cached single agent results
+['ball3 is in room2.', 'ball4 is in room1.']
+['./experiments_multiagent_help/run2032/grippers/p08_1.pddl', './experiments_multiagent_help/run2032/grippers/p08_2.pddl']
+agent1
+[info][subgoal_1][grippers] task 08 takes 0.16 sec, found a plan with cost 4.0
+planner successful
+validating
+validator time 0.007555246353149414
+agent2
+[info][subgoal_2][grippers] task 08 takes 0.15 sec, found a plan with cost 3.0
+planner successful
+validating
+validator time 0.007395744323730469
+[info][multiagent main goal][grippers] task 08 takes 0.15 sec, found a plan with cost 5.0
+TASK: grippers - 2032 - 08
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (move robot1 room2 room1)
+2 (Single): Agent 1: (pick robot1 ball3 room1 lgripper1)
+3 (Single): Agent 1: (move robot1 room1 room2)
+4 (Single): Agent 1: (drop robot1 ball3 room2 lgripper1)
+
+merging plan 2 into initial_plan
+7 True
+verifying entire plan.
+merging main agent's plan into combined plan
+
+Main Agent's Plan:
+1 (Single): Agent 0: (pick robot1 ball1 room2 lgripper1)
+2 (Single): Agent 0: (pick robot1 ball2 room2 rgripper1)
+3 (Single): Agent 0: (move robot1 room2 room1)
+4 (Single): Agent 0: (drop robot1 ball1 room1 lgripper1)
+5 (Single): Agent 0: (drop robot1 ball2 room1 rgripper1)
+
+Current Combined Plan:
+1 (Single): Agent 0: (move robot1 room2 room1)
+2 (Single): Agent 0: (pick robot1 ball3 room1 lgripper1)
+3 (Single): Agent 0: (move robot1 room1 room2)
+4 (Single): Agent 0: (drop robot1 ball3 room2 lgripper1)
+5 (Single): Agent 1: (pick robot1 ball4 room2 lgripper1)
+6 (Single): Agent 1: (move robot1 room2 room1)
+7 (Single): Agent 1: (drop robot1 ball4 room1 lgripper1)
+
+inf False
+Final merge failed - no valid solution found
+[results][grippers][08]
+[single_agent][planning time: 0.06][cost: 11.0]
+[multi_agent][planning_time: 2.9851736640930175][cost: inf][agents: 3][optimization time 8.37578272819519]
+----------------------------------------
+Using cached single agent results
+['ball2 is in room4.', 'ball5 is in room3.']
+['./experiments_multiagent_help/run2032/grippers/p09_1.pddl', './experiments_multiagent_help/run2032/grippers/p09_2.pddl']
+agent1
+[info][subgoal_1][grippers] task 09 takes 0.16 sec, found a plan with cost 4.0
+planner successful
+validating
+validator time 0.006787538528442383
+agent2
+[info][subgoal_2][grippers] task 09 takes 0.16 sec, found a plan with cost 4.0
+planner successful
+validating
+validator time 0.007310628890991211
+[info][multiagent main goal][grippers] task 09 takes 1.67 sec, found a plan with cost 12.0
+TASK: grippers - 2032 - 09
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (move robot1 room4 room3)
+2 (Single): Agent 1: (pick robot1 ball2 room3 lgripper1)
+3 (Single): Agent 1: (move robot1 room3 room4)
+4 (Single): Agent 1: (drop robot1 ball2 room4 lgripper1)
+
+merging plan 2 into initial_plan
+7 True
+verifying entire plan.
+merging main agent's plan into combined plan
+
+Main Agent's Plan:
+1 (Single): Agent 0: (pick robot1 ball1 room4 lgripper1)
+2 (Single): Agent 0: (move robot1 room4 room3)
+3 (Single): Agent 0: (pick robot1 ball7 room3 rgripper1)
+4 (Single): Agent 0: (move robot1 room3 room1)
+5 (Single): Agent 0: (drop robot1 ball1 room1 lgripper1)
+6 (Single): Agent 0: (pick robot1 ball6 room1 lgripper1)
+7 (Single): Agent 0: (drop robot1 ball7 room1 rgripper1)
+8 (Single): Agent 0: (move robot1 room1 room2)
+9 (Single): Agent 0: (pick robot1 ball4 room2 rgripper1)
+10 (Single): Agent 0: (drop robot1 ball6 room2 lgripper1)
+11 (Single): Agent 0: (move robot1 room2 room4)
+12 (Single): Agent 0: (drop robot1 ball4 room4 rgripper1)
+
+Current Combined Plan:
+1 (Single): Agent 0: (move robot1 room4 room3)
+2 (Single): Agent 0: (pick robot1 ball2 room3 lgripper1)
+3 (Single): Agent 0: (move robot1 room3 room4)
+4 (Parallel):
+  Agent 0: (drop robot1 ball2 room4 lgripper1)
+  Agent 1: (move robot1 room4 room2)
+5 (Single): Agent 1: (pick robot1 ball5 room2 lgripper1)
+6 (Single): Agent 1: (move robot1 room2 room3)
+7 (Single): Agent 1: (drop robot1 ball5 room3 lgripper1)
+
+18 True
+
+Final Merged Plan:
+1 (Single): Agent 1: (pick robot1 ball1 room4 lgripper1)
+2 (Single): Agent 1: (move robot1 room4 room3)
+3 (Single): Agent 1: (pick robot1 ball7 room3 rgripper1)
+4 (Single): Agent 1: (move robot1 room3 room1)
+5 (Single): Agent 1: (drop robot1 ball1 room1 lgripper1)
+6 (Single): Agent 1: (pick robot1 ball6 room1 lgripper1)
+7 (Single): Agent 1: (drop robot1 ball7 room1 rgripper1)
+8 (Single): Agent 1: (move robot1 room1 room2)
+9 (Single): Agent 1: (pick robot1 ball4 room2 rgripper1)
+10 (Single): Agent 1: (drop robot1 ball6 room2 lgripper1)
+11 (Single): Agent 1: (move robot1 room2 room4)
+12 (Single): Agent 0: (move robot1 room4 room3)
+13 (Single): Agent 0: (pick robot1 ball2 room3 lgripper1)
+14 (Single): Agent 0: (move robot1 room3 room4)
+15 (Parallel):
+  Agent 0: (drop robot1 ball2 room4 lgripper1)
+(move robot1 room4 room2)
+  Agent 1: (drop robot1 ball4 room4 rgripper1)
+16 (Single): Agent 0: (pick robot1 ball5 room2 lgripper1)
+17 (Single): Agent 0: (move robot1 room2 room3)
+18 (Single): Agent 0: (drop robot1 ball5 room3 lgripper1)
+
+Total Cost: 18
+[results][grippers][09]
+[single_agent][planning time: 5.85][cost: 17.0]
+[multi_agent][planning_time: 4.367042531967163][cost: 18.0][agents: 3][optimization time 6.146189212799072]
+----------------------------------------
+Using cached single agent results
+['ball2 in room1', 'ball3 in room1']
+['./experiments_multiagent_help/run2032/grippers/p10_1.pddl', './experiments_multiagent_help/run2032/grippers/p10_2.pddl']
+agent1
+[info][subgoal_1][grippers] task 10 takes 0.13 sec, found a plan with cost 4.0
+planner successful
+validating
+validator time 0.006511211395263672
+agent2
+[info][subgoal_2][grippers] task 10 takes 0.14 sec, found a plan with cost 4.0
+planner successful
+validating
+validator time 0.006426811218261719
+[info][multiagent main goal][grippers] task 10 takes 0.15 sec, found a plan with cost 4.0
+TASK: grippers - 2032 - 10
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (move robot1 room1 room2)
+2 (Single): Agent 1: (pick robot1 ball2 room2 lgripper1)
+3 (Single): Agent 1: (move robot1 room2 room1)
+4 (Single): Agent 1: (drop robot1 ball2 room1 lgripper1)
+
+merging plan 2 into initial_plan
+7 True
+verifying entire plan.
+merging main agent's plan into combined plan
+
+Main Agent's Plan:
+1 (Single): Agent 0: (move robot1 room1 room2)
+2 (Single): Agent 0: (pick robot1 ball4 room2 lgripper1)
+3 (Single): Agent 0: (move robot1 room2 room1)
+4 (Single): Agent 0: (drop robot1 ball4 room1 lgripper1)
+
+Current Combined Plan:
+1 (Single): Agent 0: (move robot1 room1 room2)
+2 (Single): Agent 0: (pick robot1 ball2 room2 lgripper1)
+3 (Single): Agent 0: (move robot1 room2 room1)
+4 (Parallel):
+  Agent 0: (drop robot1 ball2 room1 lgripper1)
+  Agent 1: (move robot1 room1 room2)
+5 (Single): Agent 1: (pick robot1 ball3 room2 lgripper1)
+6 (Single): Agent 1: (move robot1 room2 room1)
+7 (Single): Agent 1: (drop robot1 ball3 room1 lgripper1)
+
+10 True
+
+Final Merged Plan:
+1 (Single): Agent 0: (move robot1 room1 room2)
+2 (Single): Agent 0: (pick robot1 ball2 room2 lgripper1)
+3 (Single): Agent 0: (move robot1 room2 room1)
+4 (Parallel, derived from single action with multiple steps):
+  Agent 0: (drop robot1 ball2 room1 lgripper1)
+  Agent 0: (move robot1 room1 room2)
+5 (Single): Agent 0: (pick robot1 ball3 room2 lgripper1)
+6 (Single): Agent 0: (move robot1 room2 room1)
+7 (Parallel):
+  Agent 0: (drop robot1 ball3 room1 lgripper1)
+  Agent 1: (move robot1 room1 room2)
+8 (Single): Agent 1: (pick robot1 ball4 room2 lgripper1)
+9 (Single): Agent 1: (move robot1 room2 room1)
+10 (Single): Agent 1: (drop robot1 ball4 room1 lgripper1)
+
+Total Cost: 10
+[results][grippers][10]
+[single_agent][planning time: 0.05][cost: 10.0]
+[multi_agent][planning_time: 6.075082941055298][cost: 10.0][agents: 3][optimization time 3.722280740737915]
+----------------------------------------
+Using cached single agent results
+LLM generated no subgoal for agent 2, reducing number of agents
+args.num_agents: 2
+['ball3 should be in room2.']
+['./experiments_multiagent_help/run2032/grippers/p11_1.pddl']
+agent1
+[info][subgoal_1][grippers] task 11 takes 0.15 sec, found a plan with cost 3.0
+planner successful
+validating
+validator time 0.0044367313385009766
+[info][multiagent main goal][grippers] task 11 takes 332.12 sec, no solution found
+TASK: grippers - 2032 - 11
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (pick robot1 ball3 room1 lgripper1)
+2 (Single): Agent 1: (move robot1 room1 room2)
+3 (Single): Agent 1: (drop robot1 ball3 room2 lgripper1)
+
+merging main agent's plan into combined plan
+
+Main Agent's Plan:
+
+
+Current Combined Plan:
+1 (Single): Agent 1: (pick robot1 ball3 room1 lgripper1)
+2 (Single): Agent 1: (move robot1 room1 room2)
+3 (Single): Agent 1: (drop robot1 ball3 room2 lgripper1)
+
+3 True
+
+Final Merged Plan:
+1 (Single): Agent 0: (pick robot1 ball3 room1 lgripper1)
+2 (Single): Agent 0: (move robot1 room1 room2)
+3 (Single): Agent 0: (drop robot1 ball3 room2 lgripper1)
+
+Total Cost: 3
+[results][grippers][11]
+[single_agent][planning time: 0.04][cost: 3.0]
+[multi_agent][planning_time: 0.911742353439331][cost: 3.0][agents: 2][optimization time 3.502577304840088]
+----------------------------------------
+Using cached single agent results
+['ball4 should be in room2.', 'ball2 should be in room1.']
+['./experiments_multiagent_help/run2032/grippers/p12_1.pddl', './experiments_multiagent_help/run2032/grippers/p12_2.pddl']
+agent1
+[info][subgoal_1][grippers] task 12 takes 0.14 sec, found a plan with cost 4.0
+planner successful
+validating
+validator time 0.007185459136962891
+agent2
+[info][subgoal_2][grippers] task 12 takes 0.13 sec, found a plan with cost 3.0
+planner successful
+validating
+validator time 0.006545066833496094
+[info][multiagent main goal][grippers] task 12 takes 0.14 sec, found a plan with cost 3.0
+TASK: grippers - 2032 - 12
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (move robot1 room2 room1)
+2 (Single): Agent 1: (pick robot1 ball4 room1 lgripper1)
+3 (Single): Agent 1: (move robot1 room1 room2)
+4 (Single): Agent 1: (drop robot1 ball4 room2 lgripper1)
+
+merging plan 2 into initial_plan
+7 True
+verifying entire plan.
+merging main agent's plan into combined plan
+
+Main Agent's Plan:
+1 (Single): Agent 0: (pick robot1 ball5 room2 lgripper1)
+2 (Single): Agent 0: (move robot1 room2 room3)
+3 (Single): Agent 0: (drop robot1 ball5 room3 lgripper1)
+
+Current Combined Plan:
+1 (Single): Agent 0: (move robot1 room2 room1)
+2 (Single): Agent 0: (pick robot1 ball4 room1 lgripper1)
+3 (Single): Agent 0: (move robot1 room1 room2)
+4 (Single): Agent 0: (drop robot1 ball4 room2 lgripper1)
+5 (Single): Agent 1: (pick robot1 ball2 room2 lgripper1)
+6 (Single): Agent 1: (move robot1 room2 room1)
+7 (Single): Agent 1: (drop robot1 ball2 room1 lgripper1)
+
+inf False
+Final merge failed - no valid solution found
+[results][grippers][12]
+[single_agent][planning time: 0.09][cost: 9.0]
+[multi_agent][planning_time: 3.6337927913665773][cost: inf][agents: 3][optimization time 5.777971267700195]
+----------------------------------------
+Using cached single agent results
+['ball1 is in room1.', 'ball2 is in room1.']
+['./experiments_multiagent_help/run2032/grippers/p13_1.pddl', './experiments_multiagent_help/run2032/grippers/p13_2.pddl']
+agent1
+[info][subgoal_1][grippers] task 13 takes 0.15 sec, found a plan with cost 4.0
+planner successful
+validating
+validator time 0.004747152328491211
+agent2
+[info][subgoal_2][grippers] task 13 takes 0.14 sec, found a plan with cost 4.0
+planner successful
+validating
+validator time 0.0061380863189697266
+[info][multiagent main goal][grippers] task 13 takes 332.46 sec, no solution found
+TASK: grippers - 2032 - 13
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (move robot1 room1 room3)
+2 (Single): Agent 1: (pick robot1 ball1 room3 lgripper1)
+3 (Single): Agent 1: (move robot1 room3 room1)
+4 (Single): Agent 1: (drop robot1 ball1 room1 lgripper1)
+
+merging plan 2 into initial_plan
+7 True
+verifying entire plan.
+merging main agent's plan into combined plan
+
+Main Agent's Plan:
+
+
+Current Combined Plan:
+1 (Single): Agent 0: (move robot1 room1 room3)
+2 (Single): Agent 0: (pick robot1 ball1 room3 lgripper1)
+3 (Single): Agent 0: (move robot1 room3 room1)
+4 (Parallel):
+  Agent 0: (drop robot1 ball1 room1 lgripper1)
+  Agent 1: (move robot1 room1 room3)
+5 (Single): Agent 1: (pick robot1 ball2 room3 lgripper1)
+6 (Single): Agent 1: (move robot1 room3 room1)
+7 (Single): Agent 1: (drop robot1 ball2 room1 lgripper1)
+
+7 True
+
+Final Merged Plan:
+1 (Single): Agent 0: (move robot1 room1 room3)
+2 (Single): Agent 0: (pick robot1 ball1 room3 lgripper1)
+3 (Single): Agent 0: (move robot1 room3 room1)
+4 (Parallel, derived from single action with multiple steps):
+  Agent 0: (drop robot1 ball1 room1 lgripper1)
+  Agent 0: (move robot1 room1 room3)
+5 (Single): Agent 0: (pick robot1 ball2 room3 lgripper1)
+6 (Single): Agent 0: (move robot1 room3 room1)
+7 (Single): Agent 0: (drop robot1 ball2 room1 lgripper1)
+
+Total Cost: 7
+[results][grippers][13]
+[single_agent][planning time: 0.05][cost: 6.0]
+[multi_agent][planning_time: 1.3021877193450928][cost: 7.0][agents: 3][optimization time 4.283440113067627]
+----------------------------------------
+Using cached single agent results
+['ball2 is in room4.', 'ball3 is in room4.']
+['./experiments_multiagent_help/run2032/grippers/p14_1.pddl', './experiments_multiagent_help/run2032/grippers/p14_2.pddl']
+agent1
+[info][subgoal_1][grippers] task 14 takes 0.13 sec, found a plan with cost 4.0
+planner successful
+validating
+validator time 0.00521087646484375
+agent2
+[info][subgoal_2][grippers] task 14 takes 0.13 sec, found a plan with cost 4.0
+planner successful
+validating
+validator time 0.005364656448364258
+[info][multiagent main goal][grippers] task 14 takes 332.76 sec, no solution found
+TASK: grippers - 2032 - 14
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (move robot1 room2 room1)
+2 (Single): Agent 1: (pick robot1 ball2 room1 lgripper1)
+3 (Single): Agent 1: (move robot1 room1 room4)
+4 (Single): Agent 1: (drop robot1 ball2 room4 lgripper1)
+
+merging plan 2 into initial_plan
+inf False
+Merge failed - no valid solution found
+[results][grippers][14]
+[single_agent][planning time: 0.06][cost: 6.0]
+[multi_agent][planning_time: 1.4808554744720457][cost: inf][agents: 3][optimization time 3.5738956928253174]
+----------------------------------------
+Using cached single agent results
+LLM generated no subgoal for agent 1, reducing number of agents
+args.num_agents: 1
+[]
+[]
+[info][multiagent main goal][grippers] task 15 takes 332.79 sec, no solution found
+[single_agent][planning time: 0.1][cost: 10.0]
+[multi_agent][planning_time: 0.1][cost: 10.0][agents: 1][optimization time 0]
+----------------------------------------
+Using cached single agent results
+['ball7 should be in room4.', 'ball5 should be in room1.']
+['./experiments_multiagent_help/run2032/grippers/p16_1.pddl', './experiments_multiagent_help/run2032/grippers/p16_2.pddl']
+agent1
+[info][subgoal_1][grippers] task 16 takes 0.18 sec, found a plan with cost 3.0
+planner successful
+validating
+validator time 0.006120204925537109
+agent2
+[info][subgoal_2][grippers] task 16 takes 0.13 sec, found a plan with cost 4.0
+planner successful
+validating
+validator time 0.0052030086517333984
+[info][multiagent main goal][grippers] task 16 takes 5.08 sec, found a plan with cost 15.0
+TASK: grippers - 2032 - 16
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (pick robot1 ball7 room1 lgripper1)
+2 (Single): Agent 1: (move robot1 room1 room4)
+3 (Single): Agent 1: (drop robot1 ball7 room4 lgripper1)
+
+merging plan 2 into initial_plan
+7 True
+verifying entire plan.
+merging main agent's plan into combined plan
+
+Main Agent's Plan:
+1 (Single): Agent 0: (pick robot1 ball4 room1 lgripper1)
+2 (Single): Agent 0: (move robot1 room1 room3)
+3 (Single): Agent 0: (pick robot1 ball1 room3 rgripper1)
+4 (Single): Agent 0: (drop robot1 ball4 room3 lgripper1)
+5 (Single): Agent 0: (pick robot1 ball3 room3 lgripper1)
+6 (Single): Agent 0: (move robot1 room3 room2)
+7 (Single): Agent 0: (drop robot1 ball1 room2 rgripper1)
+8 (Single): Agent 0: (move robot1 room2 room4)
+9 (Single): Agent 0: (pick robot1 ball6 room4 rgripper1)
+10 (Single): Agent 0: (move robot1 room4 room1)
+11 (Single): Agent 0: (drop robot1 ball3 room1 lgripper1)
+12 (Single): Agent 0: (pick robot1 ball8 room1 lgripper1)
+13 (Single): Agent 0: (drop robot1 ball6 room1 rgripper1)
+14 (Single): Agent 0: (move robot1 room1 room2)
+15 (Single): Agent 0: (drop robot1 ball8 room2 lgripper1)
+
+Current Combined Plan:
+1 (Single): Agent 1: (move robot1 room1 room4)
+2 (Single): Agent 1: (pick robot1 ball5 room4 lgripper1)
+3 (Single): Agent 1: (move robot1 room4 room1)
+4 (Single): Agent 1: (drop robot1 ball5 room1 lgripper1)
+5 (Single): Agent 0: (pick robot1 ball7 room1 lgripper1)
+6 (Single): Agent 0: (move robot1 room1 room4)
+7 (Single): Agent 0: (drop robot1 ball7 room4 lgripper1)
+
+inf False
+Final merge failed - no valid solution found
+[results][grippers][16]
+[single_agent][planning time: 14.17][cost: 19.0]
+[multi_agent][planning_time: 8.027182474136353][cost: inf][agents: 3][optimization time 6.286188840866089]
+----------------------------------------
+Using cached single agent results
+['ball3 is in room1.', 'ball4 is in room1.']
+['./experiments_multiagent_help/run2032/grippers/p17_1.pddl', './experiments_multiagent_help/run2032/grippers/p17_2.pddl']
+agent1
+[info][subgoal_1][grippers] task 17 takes 0.15 sec, found a plan with cost 4.0
+planner successful
+validating
+validator time 0.0065457820892333984
+agent2
+[info][subgoal_2][grippers] task 17 takes 0.14 sec, found a plan with cost 4.0
+planner successful
+validating
+validator time 0.006505727767944336
+[info][multiagent main goal][grippers] task 17 takes 0.14 sec, found a plan with cost 3.0
+TASK: grippers - 2032 - 17
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (move robot1 room1 room2)
+2 (Single): Agent 1: (pick robot1 ball3 room2 lgripper1)
+3 (Single): Agent 1: (move robot1 room2 room1)
+4 (Single): Agent 1: (drop robot1 ball3 room1 lgripper1)
+
+merging plan 2 into initial_plan
+7 True
+verifying entire plan.
+merging main agent's plan into combined plan
+
+Main Agent's Plan:
+1 (Single): Agent 0: (pick robot1 ball1 room1 lgripper1)
+2 (Single): Agent 0: (move robot1 room1 room2)
+3 (Single): Agent 0: (drop robot1 ball1 room2 lgripper1)
+
+Current Combined Plan:
+1 (Single): Agent 0: (move robot1 room1 room2)
+2 (Single): Agent 0: (pick robot1 ball3 room2 lgripper1)
+3 (Single): Agent 0: (move robot1 room2 room1)
+4 (Parallel):
+  Agent 0: (drop robot1 ball3 room1 lgripper1)
+  Agent 1: (move robot1 room1 room2)
+5 (Single): Agent 1: (pick robot1 ball4 room2 lgripper1)
+6 (Single): Agent 1: (move robot1 room2 room1)
+7 (Single): Agent 1: (drop robot1 ball4 room1 lgripper1)
+
+10 True
+
+Final Merged Plan:
+1 (Single): Agent 0: (move robot1 room1 room2)
+2 (Single): Agent 0: (pick robot1 ball3 room2 lgripper1)
+3 (Single): Agent 0: (move robot1 room2 room1)
+4 (Parallel, derived from single action with multiple steps):
+  Agent 0: (drop robot1 ball3 room1 lgripper1)
+  Agent 0: (move robot1 room1 room2)
+5 (Single): Agent 0: (pick robot1 ball4 room2 lgripper1)
+6 (Single): Agent 0: (move robot1 room2 room1)
+7 (Single): Agent 0: (drop robot1 ball4 room1 lgripper1)
+8 (Single): Agent 1: (pick robot1 ball1 room1 lgripper1)
+9 (Single): Agent 1: (move robot1 room1 room2)
+10 (Single): Agent 1: (drop robot1 ball1 room2 lgripper1)
+
+Total Cost: 10
+[results][grippers][17]
+[single_agent][planning time: 0.04][cost: 8.0]
+[multi_agent][planning_time: 2.8363823223114015][cost: 10.0][agents: 3][optimization time 2.6796181201934814]
+----------------------------------------
+Using cached single agent results
+LLM generated no subgoal for agent 2, reducing number of agents
+args.num_agents: 2
+['ball3 should be in room2.']
+['./experiments_multiagent_help/run2032/grippers/p18_1.pddl']
+agent1
+[info][subgoal_1][grippers] task 18 takes 0.15 sec, found a plan with cost 4.0
+planner successful
+validating
+validator time 0.0064640045166015625
+[info][multiagent main goal][grippers] task 18 takes 0.15 sec, found a plan with cost 6.0
+TASK: grippers - 2032 - 18
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (move robot1 room3 room1)
+2 (Single): Agent 1: (pick robot1 ball3 room1 lgripper1)
+3 (Single): Agent 1: (move robot1 room1 room2)
+4 (Single): Agent 1: (drop robot1 ball3 room2 lgripper1)
+
+merging main agent's plan into combined plan
+
+Main Agent's Plan:
+1 (Single): Agent 0: (move robot1 room3 room2)
+2 (Single): Agent 0: (pick robot1 ball1 room2 lgripper1)
+3 (Single): Agent 0: (pick robot1 ball2 room2 rgripper1)
+4 (Single): Agent 0: (move robot1 room2 room1)
+5 (Single): Agent 0: (drop robot1 ball1 room1 lgripper1)
+6 (Single): Agent 0: (drop robot1 ball2 room1 rgripper1)
+
+Current Combined Plan:
+1 (Single): Agent 1: (move robot1 room3 room1)
+2 (Single): Agent 1: (pick robot1 ball3 room1 lgripper1)
+3 (Single): Agent 1: (move robot1 room1 room2)
+4 (Single): Agent 1: (drop robot1 ball3 room2 lgripper1)
+
+inf False
+Final merge failed - no valid solution found
+[results][grippers][18]
+[single_agent][planning time: 0.09][cost: 9.0]
+[multi_agent][planning_time: 1.744775581359863][cost: inf][agents: 2][optimization time 1.1583104133605957]
+----------------------------------------
+Using cached single agent results
+['ball3 should be in room1.', 'ball5 should be in room1.']
+['./experiments_multiagent_help/run2032/grippers/p19_1.pddl', './experiments_multiagent_help/run2032/grippers/p19_2.pddl']
+agent1
+[info][subgoal_1][grippers] task 19 takes 0.16 sec, found a plan with cost 4.0
+planner successful
+validating
+validator time 0.004345417022705078
+agent2
+[info][subgoal_2][grippers] task 19 takes 0.16 sec, found a plan with cost 3.0
+planner successful
+validating
+validator time 0.0065822601318359375
+[info][multiagent main goal][grippers] task 19 takes 1.25 sec, found a plan with cost 12.0
+TASK: grippers - 2032 - 19
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (move robot1 room4 room5)
+2 (Single): Agent 1: (pick robot1 ball3 room5 lgripper1)
+3 (Single): Agent 1: (move robot1 room5 room1)
+4 (Single): Agent 1: (drop robot1 ball3 room1 lgripper1)
+
+merging plan 2 into initial_plan
+inf False
+Merge failed - no valid solution found
+[results][grippers][19]
+[single_agent][planning time: 2.55][cost: 17.0]
+[multi_agent][planning_time: 3.8055532646179198][cost: inf][agents: 3][optimization time 1.5780003070831299]
+----------------------------------------
+Using cached single agent results
+['ball1 is in room3.', 'ball2 is in room2.']
+['./experiments_multiagent_help/run2032/grippers/p20_1.pddl', './experiments_multiagent_help/run2032/grippers/p20_2.pddl']
+agent1
+[info][subgoal_1][grippers] task 20 takes 0.15 sec, found a plan with cost 4.0
+planner successful
+validating
+validator time 0.005476951599121094
+agent2
+[info][subgoal_2][grippers] task 20 takes 0.14 sec, found a plan with cost 4.0
+planner successful
+validating
+validator time 0.005064487457275391
+[info][multiagent main goal][grippers] task 20 takes 332.82 sec, no solution found
+TASK: grippers - 2032 - 20
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (move robot1 room1 room2)
+2 (Single): Agent 1: (pick robot1 ball1 room2 lgripper1)
+3 (Single): Agent 1: (move robot1 room2 room3)
+4 (Single): Agent 1: (drop robot1 ball1 room3 lgripper1)
+
+merging plan 2 into initial_plan
+inf False
+Merge failed - no valid solution found
+[results][grippers][20]
+[single_agent][planning time: 0.04][cost: 7.0]
+[multi_agent][planning_time: 1.9537301445007325][cost: inf][agents: 3][optimization time 3.4710278511047363]
+----------------------------------------

@@ -1,0 +1,29 @@
+Domain: grippers
+Success rate: 0.00% (0/3)
+Results:
+  [results][grippers][10]
+  [single_agent][planning time: 0.05][cost: 10.0]
+  [multi_agent][planning_time: 1.2499791622161864][cost: 10.0][agents: 2][optimization time 5.914952516555786]
+  Success: No
+
+  [results][grippers][16]
+  [single_agent][planning time: 14.17][cost: 19.0]
+  [multi_agent][planning_time: 12.127426128387452][cost: 19.0][agents: 2][optimization time 3.432483434677124]
+  Success: No
+
+  [results][grippers][18]
+  [single_agent][planning time: 0.09][cost: 9.0]
+  [multi_agent][planning_time: 1.3843471813201904][cost: inf][agents: 2][optimization time 0.9551091194152832]
+  Success: No (Inf cost)
+
+----------------------------------------
+
+Domain Averages:
+Domain: grippers
+  Single Agent:
+    Average Cost: 12.67
+    Average Planning Time: 4.77 sec
+  Multi Agent:
+    Average Cost: 14.50
+    Average Planning Time: 4.92 sec
+

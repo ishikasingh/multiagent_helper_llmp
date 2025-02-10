@@ -1,0 +1,79 @@
+Domain: grippers
+Success rate: 0.00% (0/13)
+Results:
+  [results][grippers][01]
+  [single_agent][planning time: 0.04][cost: 5.0]
+  [multi_agent][planning_time: 2.506009464263916][cost: inf][agents: 3][optimization time 2.388052225112915]
+  Success: No (Inf cost)
+
+  [results][grippers][02]
+  [single_agent][planning time: 0.05][cost: 9.0]
+  [multi_agent][planning_time: 4.426732006072998][cost: inf][agents: 4][optimization time 3.92592716217041]
+  Success: No (Inf cost)
+
+  [results][grippers][07]
+  [single_agent][planning time: 0.06][cost: 8.0]
+  [multi_agent][planning_time: 4.742462825775147][cost: inf][agents: 4][optimization time 4.428692102432251]
+  Success: No (Inf cost)
+
+  [results][grippers][08]
+  [single_agent][planning time: 0.06][cost: 11.0]
+  [multi_agent][planning_time: 4.749080724716187][cost: inf][agents: 5][optimization time 5.496666669845581]
+  Success: No (Inf cost)
+
+  [results][grippers][09]
+  [single_agent][planning time: 5.85][cost: 17.0]
+  [multi_agent][planning_time: 6.181124114990235][cost: inf][agents: 5][optimization time 3.123215913772583]
+  Success: No (Inf cost)
+
+  [results][grippers][10]
+  [single_agent][planning time: 0.05][cost: 10.0]
+  [multi_agent][planning_time: 3.6691963291168213][cost: 10.0][agents: 4][optimization time 34.775678396224976]
+  Success: No
+
+  [results][grippers][11]
+  [single_agent][planning time: 0.04][cost: 3.0]
+  [multi_agent][planning_time: 0.491531753540039][cost: 3.0][agents: 2][optimization time 5.025510311126709]
+  Success: No
+
+  [results][grippers][12]
+  [single_agent][planning time: 0.09][cost: 9.0]
+  [multi_agent][planning_time: 4.992431840896606][cost: inf][agents: 4][optimization time 4.007801532745361]
+  Success: No (Inf cost)
+
+  [results][grippers][13]
+  [single_agent][planning time: 0.05][cost: 6.0]
+  [multi_agent][planning_time: 2.8861539363861084][cost: 7.0][agents: 3][optimization time 3.7755351066589355]
+  Success: No
+
+  [results][grippers][14]
+  [single_agent][planning time: 0.06][cost: 6.0]
+  [multi_agent][planning_time: 1.9653260993957522][cost: inf][agents: 3][optimization time 4.651045322418213]
+  Success: No (Inf cost)
+
+  [results][grippers][16]
+  [single_agent][planning time: 14.17][cost: 19.0]
+  [multi_agent][planning_time: 5.768021163940429][cost: inf][agents: 5][optimization time 4.75923490524292]
+  Success: No (Inf cost)
+
+  [results][grippers][18]
+  [single_agent][planning time: 0.09][cost: 9.0]
+  [multi_agent][planning_time: 3.17948920249939][cost: inf][agents: 2][optimization time 1.6469521522521973]
+  Success: No (Inf cost)
+
+  [results][grippers][19]
+  [single_agent][planning time: 2.55][cost: 17.0]
+  [multi_agent][planning_time: 5.820338830947875][cost: inf][agents: 5][optimization time 0.7577700614929199]
+  Success: No (Inf cost)
+
+----------------------------------------
+
+Domain Averages:
+Domain: grippers
+  Single Agent:
+    Average Cost: 9.92
+    Average Planning Time: 1.78 sec
+  Multi Agent:
+    Average Cost: 6.67
+    Average Planning Time: 3.95 sec
+
