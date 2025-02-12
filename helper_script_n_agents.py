@@ -22,7 +22,7 @@ def get_helper_subgoal_without_plan(expt_path, args, log_file):
     system_text += '\n'
 
     system_text += ''' Your goal is to generate goals for agents such that they can be executed in parallel to decrease plan execution length. Generate only one clearly stated small independent subgoal for each helper agent to help the main agent complete the given task. The subgoal must be executable by a helper agent completely independently without waiting for any main agent actions to change predicates. The subgoal SHOULD NOT be interwoven with other generated subgoals or the main task, but rather run uninterrupted from inception time in PARALLEL with other subgoals.  
-    The subgoal should be clearly stated with unambiguous terminology. Do not use actions like assist or help, only actions CLEARLY DEFINED IN THE DOMAIN. The main goal will be augmented based on the generated subgoals, but will run in parallel with them. Do not overtake the full sequence of actions. Remember, the helper agents are only assisting the main agent and act agnostically to the main agent. If there are no subgoals needed, return "none".
+    As you generate subgoals, you may assume that the prebvious subgoals have been fulfilled. The subgoal should be clearly stated with unambiguous terminology. Do not use actions like assist or help, only actions CLEARLY DEFINED IN THE DOMAIN. The main goal will be augmented based on the generated subgoals, but will run in parallel with them. Do not overtake the full sequence of actions. Remember, the helper agents are only assisting the main agent and act agnostically to the main agent. If there are no subgoals needed, return "none".
     '''
     
     # print("system_text \n", system_text, "\n")
