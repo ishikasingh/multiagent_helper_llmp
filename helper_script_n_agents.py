@@ -318,6 +318,13 @@ if __name__ == "__main__":
         try:
             # init conditions should be good from last iter of subgoal loop
             # add goal to main agent 
+            if not os.path.exists(f"./{path}/p{args.task_id}_0.pddl"):
+                #copy original pddl file to main agent
+                print("copying original pddl file to main agent for single agent case")
+                with open(f"./domains/{args.domain}/p{args.task_id}.pddl", 'r') as f:
+                    main_agent_pddl = f.read()
+                with open(f"./{path}/p{args.task_id}_0.pddl", 'w') as f:
+                    f.write(main_agent_pddl)
             planner_total_time, planner_total_time_opt, best_cost, planner_search_time_1st_plan, first_plan_cost = planner.planner(path, args, subgoal_idx=args.num_agents)
 
             if args.num_agents != 1:
