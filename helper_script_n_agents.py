@@ -347,10 +347,12 @@ if __name__ == "__main__":
                 print(f"[multi_agent][planning_time: {LLM_pddl_sg_time[0]+LLM_text_sg_time[0]+np.sum(multiagent_helper_planning_time)+multiagent_main_planning_time[0]}][cost: {float(overall_plan_length[0])}][agents: {args.num_agents}][optimization time {dp_end - dp_start}]")    
             else:
                 if best_cost < singleagent_cost[0]:
+                    print(f"[results][{args.domain}][{args.task_id}]")
                     print(f"[single_agent][planning time: {singleagent_planning_time[0]}][cost: {singleagent_cost[0]}]")
                     # print(f"[multi_agent][planning_time: {planner_total_time}][cost: {best_cost}][agents: {args.num_agents}][optimization time {0}]")
                     print(f"[multi_agent][planning_time: {singleagent_planning_time[0]}][cost: {singleagent_cost[0]}][agents: {args.num_agents}][optimization time {0}]")
                 else:
+                    print(f"[results][{args.domain}][{args.task_id}]")
                     print(f"[single_agent][planning time: {singleagent_planning_time[0]}][cost: {singleagent_cost[0]}]")
                     print(f"[multi_agent][planning_time: {singleagent_planning_time[0]}][cost: {singleagent_cost[0]}][agents: {args.num_agents}][optimization time {0}]")
                 
