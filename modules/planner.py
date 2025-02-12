@@ -391,7 +391,7 @@ def execute_agent_action(expt_path, domain_pddl_file, indices, agent_plans, agen
                 validation_filename=val_path,
                 pddl_problem_filename=task_paths[i],
                 pddl_problem_filename_edited=new_task_path,
-                env_conds_only=False
+                env_conds_only=(i!=agent_to_execute)
             )
             with open(new_task_path, 'r') as f:
                 new_task_states[i] = f.read()
@@ -439,6 +439,7 @@ def execute_all_agents_action(expt_path, domain_pddl_file, indices, agent_plans,
                     f.write(output.stdout)
                 if 'unsatisfied precondition' in output.stdout:
                     # print("unsatisfied precondition encountered for action", current_action)
+                    # print(output.stdout)
                     temp_all_valid = False
                     break
                 parallel_actions.append((i, current_action_str))
@@ -455,20 +456,6 @@ def execute_all_agents_action(expt_path, domain_pddl_file, indices, agent_plans,
                             pddl_problem_filename_edited=new_task_paths[k],
                             env_conds_only=True)
         if temp_all_valid:
-            for i in range(len(agent_plans)):
-                if indices[i] < len(agent_plans[i]):
-                    get_updated_init_conditions_recurse(expt_path,
-                        validation_filename=val_paths[i],
-                        pddl_problem_filename=task_paths[i],
-                        pddl_problem_filename_edited=new_task_paths[i],
-                        env_conds_only=False)
-                    for j in range(len(agent_plans)):
-                        if i != j:
-                            get_updated_init_conditions_recurse(expt_path,
-                                validation_filename=val_paths[i],
-                                pddl_problem_filename=task_paths[j],
-                                pddl_problem_filename_edited=new_task_paths[j],
-                                env_conds_only=True)
             new_task_states = []
             for path in task_paths:
                 with open(path, 'r') as f:
