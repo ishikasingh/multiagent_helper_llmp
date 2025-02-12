@@ -1,0 +1,779 @@
+Using cached single agent results
+LLM generated no subgoal for agent 3, reducing number of agents
+args.num_agents: 3
+['ball1 is in room2.', 'ball2 is in room2.']
+['./experiments_multiagent_help/run4032/grippers/p01_1.pddl', './experiments_multiagent_help/run4032/grippers/p01_2.pddl']
+agent1
+[info][subgoal_1][grippers] task 01 takes 0.2 sec, found a plan with cost 3.0
+planner successful
+validating
+validator time 0.011810779571533203
+agent2
+[info][subgoal_2][grippers] task 01 takes 0.18 sec, found a plan with cost 3.0
+planner successful
+validating
+validator time 0.010741233825683594
+[info][multiagent main goal][grippers] task 01 takes 199.46 sec, no solution found
+TASK: grippers - 4032 - 01
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (pick robot1 ball1 room1 lgripper1)
+2 (Single): Agent 1: (move robot1 room1 room2)
+3 (Single): Agent 1: (drop robot1 ball1 room2 lgripper1)
+
+merging plan 2 into initial_plan
+inf False
+Merge failed - no valid solution found
+[results][grippers][01]
+[single_agent][planning time: 0.04][cost: 5.0]
+[multi_agent][planning_time: 2.506009464263916][cost: inf][agents: 3][optimization time 2.388052225112915]
+----------------------------------------
+Using cached single agent results
+LLM generated no subgoal for agent 4, reducing number of agents
+args.num_agents: 4
+['ball3 is in room3.', 'ball2 is in room2.', 'ball1 is in room2.']
+['./experiments_multiagent_help/run4032/grippers/p02_1.pddl', './experiments_multiagent_help/run4032/grippers/p02_2.pddl', './experiments_multiagent_help/run4032/grippers/p02_3.pddl']
+agent1
+[info][subgoal_1][grippers] task 02 takes 0.15 sec, found a plan with cost 4.0
+planner successful
+validating
+validator time 0.005640983581542969
+agent2
+[info][subgoal_2][grippers] task 02 takes 0.15 sec, found a plan with cost 4.0
+planner successful
+validating
+validator time 0.006620645523071289
+agent3
+[info][subgoal_3][grippers] task 02 takes 0.14 sec, found a plan with cost 4.0
+planner successful
+validating
+validator time 0.006018400192260742
+[info][multiagent main goal][grippers] task 02 takes 199.39 sec, no solution found
+TASK: grippers - 4032 - 02
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (move robot1 room2 room1)
+2 (Single): Agent 1: (pick robot1 ball3 room1 lgripper1)
+3 (Single): Agent 1: (move robot1 room1 room3)
+4 (Single): Agent 1: (drop robot1 ball3 room3 lgripper1)
+
+merging plan 2 into initial_plan
+7 True
+verifying entire plan.
+unsatisfied precondition encountered in merged plan, stopping process.
+Type-checking move
+...action passes type checking.
+Type-checking pick
+...action passes type checking.
+Type-checking drop
+...action passes type checking.
+Checking plan: ./experiments_multiagent_help/run4032/grippers/agent2_plan_final_temp.txt
+Plan to validate:
+
+Plan size: 8
+1:
+(move robot1 room2 room1)
+ 
+2:
+(pick robot1 ball2 room1 lgripper1)
+ 
+3:
+(move robot1 room1 room2)
+ 
+4:
+(move robot1 room2 room1)
+ 
+5:
+(drop robot1 ball2 room2 lgripper1)
+ 
+6:
+(pick robot1 ball3 room1 lgripper1)
+ 
+7:
+(move robot1 room1 room3)
+ 
+8:
+(drop robot1 ball3 room3 lgripper1)
+ 
+
+Plan Validation details
+-----------------------
+
+Checking next happening (time 1)
+Deleting (at-robby robot1 room2)
+Adding (at-robby robot1 room1)
+
+Checking next happening (time 2)
+Deleting (at ball2 room1)
+Deleting (free robot1 lgripper1)
+Adding (carry robot1 ball2 lgripper1)
+
+Checking next happening (time 3)
+Deleting (at-robby robot1 room1)
+Adding (at-robby robot1 room2)
+
+Checking next happening (time 4)
+Deleting (at-robby robot1 room2)
+Adding (at-robby robot1 room1)
+
+Checking next happening (time 5)
+Plan failed because of unsatisfied precondition in:
+(drop robot1 ball2 room2 lgripper1)
+
+
+Plan failed to execute
+
+Plan Repair Advice:
+
+(drop robot1 ball2 room2 lgripper1) has an unsatisfied precondition at time 5
+(Set (at-robby robot1 room2) to true)
+
+
+Failed plans:
+ ./experiments_multiagent_help/run4032/grippers/agent2_plan_final_temp.txt 
+
+[results][grippers][02]
+[single_agent][planning time: 0.05][cost: 9.0]
+[multi_agent][planning_time: 4.426732006072998][cost: inf][agents: 4][optimization time 3.92592716217041]
+----------------------------------------
+b"Error: Could not read file: experiments_multiagent_help/run4032/grippers/p03_0.pddl\nReason: [Errno 2] No such file or directory: 'experiments_multiagent_help/run4032/grippers/p03_0.pddl'\n"
+Using cached single agent results
+LLM generated no subgoal for agent 1, reducing number of agents
+args.num_agents: 1
+[]
+[]
+planner broke
+INFO     planner time limit: None
+INFO     planner memory limit: None
+
+INFO     Running translator.
+INFO     translator stdin: None
+INFO     translator time limit: None
+INFO     translator memory limit: None
+INFO     translator command line string: /home/davidbai/.conda/envs/llm_pddl/bin/python /home/davidbai/multiagent_helper_llmp/downward/builds/release/bin/translate/translate.py domains/grippers/domain.pddl experiments_multiagent_help/run4032/grippers/p03_0.pddl --sas-file experiments_multiagent_help/run4032/grippers/p03_0_plan.pddl.sas
+Parsing...
+translate exit code: 30
+
+Driver aborting after translate
+INFO     Planner time: 0.10s
+
+list index out of range
+----------------------------------------
+b"Error: Could not read file: experiments_multiagent_help/run4032/grippers/p04_0.pddl\nReason: [Errno 2] No such file or directory: 'experiments_multiagent_help/run4032/grippers/p04_0.pddl'\n"
+Using cached single agent results
+LLM generated no subgoal for agent 1, reducing number of agents
+args.num_agents: 1
+[]
+[]
+planner broke
+INFO     planner time limit: None
+INFO     planner memory limit: None
+
+INFO     Running translator.
+INFO     translator stdin: None
+INFO     translator time limit: None
+INFO     translator memory limit: None
+INFO     translator command line string: /home/davidbai/.conda/envs/llm_pddl/bin/python /home/davidbai/multiagent_helper_llmp/downward/builds/release/bin/translate/translate.py domains/grippers/domain.pddl experiments_multiagent_help/run4032/grippers/p04_0.pddl --sas-file experiments_multiagent_help/run4032/grippers/p04_0_plan.pddl.sas
+Parsing...
+translate exit code: 30
+
+Driver aborting after translate
+INFO     Planner time: 0.12s
+
+list index out of range
+----------------------------------------
+b"Error: Could not read file: experiments_multiagent_help/run4032/grippers/p05_0.pddl\nReason: [Errno 2] No such file or directory: 'experiments_multiagent_help/run4032/grippers/p05_0.pddl'\n"
+Using cached single agent results
+LLM generated no subgoal for agent 1, reducing number of agents
+args.num_agents: 1
+[]
+[]
+planner broke
+INFO     planner time limit: None
+INFO     planner memory limit: None
+
+INFO     Running translator.
+INFO     translator stdin: None
+INFO     translator time limit: None
+INFO     translator memory limit: None
+INFO     translator command line string: /home/davidbai/.conda/envs/llm_pddl/bin/python /home/davidbai/multiagent_helper_llmp/downward/builds/release/bin/translate/translate.py domains/grippers/domain.pddl experiments_multiagent_help/run4032/grippers/p05_0.pddl --sas-file experiments_multiagent_help/run4032/grippers/p05_0_plan.pddl.sas
+Parsing...
+translate exit code: 30
+
+Driver aborting after translate
+INFO     Planner time: 0.11s
+
+list index out of range
+----------------------------------------
+b"Error: Could not read file: experiments_multiagent_help/run4032/grippers/p06_0.pddl\nReason: [Errno 2] No such file or directory: 'experiments_multiagent_help/run4032/grippers/p06_0.pddl'\n"
+Using cached single agent results
+LLM generated no subgoal for agent 1, reducing number of agents
+args.num_agents: 1
+[]
+[]
+planner broke
+INFO     planner time limit: None
+INFO     planner memory limit: None
+
+INFO     Running translator.
+INFO     translator stdin: None
+INFO     translator time limit: None
+INFO     translator memory limit: None
+INFO     translator command line string: /home/davidbai/.conda/envs/llm_pddl/bin/python /home/davidbai/multiagent_helper_llmp/downward/builds/release/bin/translate/translate.py domains/grippers/domain.pddl experiments_multiagent_help/run4032/grippers/p06_0.pddl --sas-file experiments_multiagent_help/run4032/grippers/p06_0_plan.pddl.sas
+Parsing...
+translate exit code: 30
+
+Driver aborting after translate
+INFO     Planner time: 0.11s
+
+list index out of range
+----------------------------------------
+Using cached single agent results
+LLM generated no subgoal for agent 4, reducing number of agents
+args.num_agents: 4
+['ball2 is in room3.', 'ball3 is in room3.', 'ball1 is in room2.']
+['./experiments_multiagent_help/run4032/grippers/p07_1.pddl', './experiments_multiagent_help/run4032/grippers/p07_2.pddl', './experiments_multiagent_help/run4032/grippers/p07_3.pddl']
+agent1
+[info][subgoal_1][grippers] task 07 takes 0.15 sec, found a plan with cost 3.0
+planner successful
+validating
+validator time 0.00617218017578125
+agent2
+[info][subgoal_2][grippers] task 07 takes 0.15 sec, found a plan with cost 4.0
+planner successful
+validating
+validator time 0.0050601959228515625
+agent3
+[info][subgoal_3][grippers] task 07 takes 0.15 sec, found a plan with cost 3.0
+planner successful
+validating
+validator time 0.005965709686279297
+[info][multiagent main goal][grippers] task 07 takes 199.35 sec, no solution found
+TASK: grippers - 4032 - 07
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (pick robot1 ball2 room4 lgripper1)
+2 (Single): Agent 1: (move robot1 room4 room3)
+3 (Single): Agent 1: (drop robot1 ball2 room3 lgripper1)
+
+merging plan 2 into initial_plan
+inf False
+Merge failed - no valid solution found
+[results][grippers][07]
+[single_agent][planning time: 0.06][cost: 8.0]
+[multi_agent][planning_time: 4.742462825775147][cost: inf][agents: 4][optimization time 4.428692102432251]
+----------------------------------------
+Using cached single agent results
+['ball3 is in room2.', 'ball1 is in room1.', 'ball2 is in room1.', 'ball4 is in room1.']
+['./experiments_multiagent_help/run4032/grippers/p08_1.pddl', './experiments_multiagent_help/run4032/grippers/p08_2.pddl', './experiments_multiagent_help/run4032/grippers/p08_3.pddl', './experiments_multiagent_help/run4032/grippers/p08_4.pddl']
+agent1
+[info][subgoal_1][grippers] task 08 takes 0.15 sec, found a plan with cost 4.0
+planner successful
+validating
+validator time 0.005844831466674805
+agent2
+[info][subgoal_2][grippers] task 08 takes 0.14 sec, found a plan with cost 3.0
+planner successful
+validating
+validator time 0.006339550018310547
+agent3
+[info][subgoal_3][grippers] task 08 takes 0.14 sec, found a plan with cost 3.0
+planner successful
+validating
+validator time 0.007153034210205078
+agent4
+[info][subgoal_4][grippers] task 08 takes 0.14 sec, found a plan with cost 3.0
+planner successful
+validating
+validator time 0.005968332290649414
+[info][multiagent main goal][grippers] task 08 takes 199.37 sec, no solution found
+TASK: grippers - 4032 - 08
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (move robot1 room2 room1)
+2 (Single): Agent 1: (pick robot1 ball3 room1 lgripper1)
+3 (Single): Agent 1: (move robot1 room1 room2)
+4 (Single): Agent 1: (drop robot1 ball3 room2 lgripper1)
+
+merging plan 2 into initial_plan
+7 True
+verifying entire plan.
+merging plan 3 into initial_plan
+inf False
+Merge failed - no valid solution found
+[results][grippers][08]
+[single_agent][planning time: 0.06][cost: 11.0]
+[multi_agent][planning_time: 4.749080724716187][cost: inf][agents: 5][optimization time 5.496666669845581]
+----------------------------------------
+Using cached single agent results
+['ball2 in room4', 'ball5 in room3', 'ball6 in room2', 'ball7 in room1']
+['./experiments_multiagent_help/run4032/grippers/p09_1.pddl', './experiments_multiagent_help/run4032/grippers/p09_2.pddl', './experiments_multiagent_help/run4032/grippers/p09_3.pddl', './experiments_multiagent_help/run4032/grippers/p09_4.pddl']
+agent1
+[info][subgoal_1][grippers] task 09 takes 0.17 sec, found a plan with cost 4.0
+planner successful
+validating
+validator time 0.006220817565917969
+agent2
+[info][subgoal_2][grippers] task 09 takes 0.17 sec, found a plan with cost 4.0
+planner successful
+validating
+validator time 0.005351543426513672
+agent3
+[info][subgoal_3][grippers] task 09 takes 0.16 sec, found a plan with cost 4.0
+planner successful
+validating
+validator time 0.006329774856567383
+agent4
+[info][subgoal_4][grippers] task 09 takes 0.16 sec, found a plan with cost 4.0
+planner successful
+validating
+validator time 0.006177186965942383
+[info][multiagent main goal][grippers] task 09 takes 0.24 sec, found a plan with cost 7.0
+TASK: grippers - 4032 - 09
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (move robot1 room4 room3)
+2 (Single): Agent 1: (pick robot1 ball2 room3 lgripper1)
+3 (Single): Agent 1: (move robot1 room3 room4)
+4 (Single): Agent 1: (drop robot1 ball2 room4 lgripper1)
+
+merging plan 2 into initial_plan
+7 True
+verifying entire plan.
+merging plan 3 into initial_plan
+inf False
+Merge failed - no valid solution found
+[results][grippers][09]
+[single_agent][planning time: 5.85][cost: 17.0]
+[multi_agent][planning_time: 6.181124114990235][cost: inf][agents: 5][optimization time 3.123215913772583]
+----------------------------------------
+Using cached single agent results
+LLM generated no subgoal for agent 4, reducing number of agents
+args.num_agents: 4
+['ball2 in room1', 'ball3 in room1', 'ball4 in room1']
+['./experiments_multiagent_help/run4032/grippers/p10_1.pddl', './experiments_multiagent_help/run4032/grippers/p10_2.pddl', './experiments_multiagent_help/run4032/grippers/p10_3.pddl']
+agent1
+[info][subgoal_1][grippers] task 10 takes 0.15 sec, found a plan with cost 4.0
+planner successful
+validating
+validator time 0.0055942535400390625
+agent2
+[info][subgoal_2][grippers] task 10 takes 0.16 sec, found a plan with cost 4.0
+planner successful
+validating
+validator time 0.005797386169433594
+agent3
+[info][subgoal_3][grippers] task 10 takes 0.15 sec, found a plan with cost 4.0
+planner successful
+validating
+validator time 0.006165027618408203
+[info][multiagent main goal][grippers] task 10 takes 199.38 sec, no solution found
+TASK: grippers - 4032 - 10
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (move robot1 room1 room2)
+2 (Single): Agent 1: (pick robot1 ball2 room2 lgripper1)
+3 (Single): Agent 1: (move robot1 room2 room1)
+4 (Single): Agent 1: (drop robot1 ball2 room1 lgripper1)
+
+merging plan 2 into initial_plan
+7 True
+verifying entire plan.
+merging plan 3 into initial_plan
+10 True
+verifying entire plan.
+merging main agent's plan into combined plan
+
+Main Agent's Plan:
+
+
+Current Combined Plan:
+1 (Single): Agent 0: (move robot1 room1 room2)
+2 (Single): Agent 0: (pick robot1 ball2 room2 lgripper1)
+3 (Single): Agent 0: (move robot1 room2 room1)
+4 (Parallel, derived from single action with multiple steps):
+  Agent 0: (drop robot1 ball2 room1 lgripper1)
+  Agent 0: (move robot1 room1 room2)
+5 (Single): Agent 0: (pick robot1 ball3 room2 lgripper1)
+6 (Single): Agent 0: (move robot1 room2 room1)
+7 (Parallel):
+  Agent 0: (drop robot1 ball3 room1 lgripper1)
+  Agent 1: (move robot1 room1 room2)
+8 (Single): Agent 1: (pick robot1 ball4 room2 lgripper1)
+9 (Single): Agent 1: (move robot1 room2 room1)
+10 (Single): Agent 1: (drop robot1 ball4 room1 lgripper1)
+
+10 True
+
+Final Merged Plan:
+1 (Single): Agent 0: (move robot1 room1 room2)
+2 (Single): Agent 0: (pick robot1 ball2 room2 lgripper1)
+3 (Single): Agent 0: (move robot1 room2 room1)
+4 (Parallel, derived from single action with multiple steps):
+  Agent 0: (drop robot1 ball2 room1 lgripper1)
+  Agent 0: (move robot1 room1 room2)
+5 (Single): Agent 0: (pick robot1 ball3 room2 lgripper1)
+6 (Single): Agent 0: (move robot1 room2 room1)
+7 (Parallel, derived from single action with multiple steps):
+  Agent 0: (drop robot1 ball3 room1 lgripper1)
+  Agent 0: (move robot1 room1 room2)
+8 (Single): Agent 0: (pick robot1 ball4 room2 lgripper1)
+9 (Single): Agent 0: (move robot1 room2 room1)
+10 (Single): Agent 0: (drop robot1 ball4 room1 lgripper1)
+
+Total Cost: 10
+[results][grippers][10]
+[single_agent][planning time: 0.05][cost: 10.0]
+[multi_agent][planning_time: 3.6691963291168213][cost: 10.0][agents: 4][optimization time 34.775678396224976]
+----------------------------------------
+Using cached single agent results
+LLM generated no subgoal for agent 2, reducing number of agents
+args.num_agents: 2
+['ball3 is in room2.']
+['./experiments_multiagent_help/run4032/grippers/p11_1.pddl']
+agent1
+[info][subgoal_1][grippers] task 11 takes 0.15 sec, found a plan with cost 3.0
+planner successful
+validating
+validator time 0.0032982826232910156
+[info][multiagent main goal][grippers] task 11 takes 199.35 sec, no solution found
+TASK: grippers - 4032 - 11
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (pick robot1 ball3 room1 lgripper1)
+2 (Single): Agent 1: (move robot1 room1 room2)
+3 (Single): Agent 1: (drop robot1 ball3 room2 lgripper1)
+
+merging main agent's plan into combined plan
+
+Main Agent's Plan:
+
+
+Current Combined Plan:
+1 (Single): Agent 1: (pick robot1 ball3 room1 lgripper1)
+2 (Single): Agent 1: (move robot1 room1 room2)
+3 (Single): Agent 1: (drop robot1 ball3 room2 lgripper1)
+
+3 True
+
+Final Merged Plan:
+1 (Single): Agent 0: (pick robot1 ball3 room1 lgripper1)
+2 (Single): Agent 0: (move robot1 room1 room2)
+3 (Single): Agent 0: (drop robot1 ball3 room2 lgripper1)
+
+Total Cost: 3
+[results][grippers][11]
+[single_agent][planning time: 0.04][cost: 3.0]
+[multi_agent][planning_time: 0.491531753540039][cost: 3.0][agents: 2][optimization time 5.025510311126709]
+----------------------------------------
+Using cached single agent results
+LLM generated no subgoal for agent 4, reducing number of agents
+args.num_agents: 4
+['ball4 is in room2.', 'ball2 is in room1.', 'ball5 is in room3.']
+['./experiments_multiagent_help/run4032/grippers/p12_1.pddl', './experiments_multiagent_help/run4032/grippers/p12_2.pddl', './experiments_multiagent_help/run4032/grippers/p12_3.pddl']
+agent1
+[info][subgoal_1][grippers] task 12 takes 0.15 sec, found a plan with cost 4.0
+planner successful
+validating
+validator time 0.0064814090728759766
+agent2
+[info][subgoal_2][grippers] task 12 takes 0.16 sec, found a plan with cost 3.0
+planner successful
+validating
+validator time 0.006214141845703125
+agent3
+[info][subgoal_3][grippers] task 12 takes 0.15 sec, found a plan with cost 3.0
+planner successful
+validating
+validator time 0.0062389373779296875
+[info][multiagent main goal][grippers] task 12 takes 199.39 sec, no solution found
+TASK: grippers - 4032 - 12
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (move robot1 room2 room1)
+2 (Single): Agent 1: (pick robot1 ball4 room1 lgripper1)
+3 (Single): Agent 1: (move robot1 room1 room2)
+4 (Single): Agent 1: (drop robot1 ball4 room2 lgripper1)
+
+merging plan 2 into initial_plan
+7 True
+verifying entire plan.
+merging plan 3 into initial_plan
+inf False
+Merge failed - no valid solution found
+[results][grippers][12]
+[single_agent][planning time: 0.09][cost: 9.0]
+[multi_agent][planning_time: 4.992431840896606][cost: inf][agents: 4][optimization time 4.007801532745361]
+----------------------------------------
+Using cached single agent results
+LLM generated no subgoal for agent 3, reducing number of agents
+args.num_agents: 3
+['ball1 is in room1.', 'ball2 is in room1.']
+['./experiments_multiagent_help/run4032/grippers/p13_1.pddl', './experiments_multiagent_help/run4032/grippers/p13_2.pddl']
+agent1
+[info][subgoal_1][grippers] task 13 takes 0.12 sec, found a plan with cost 4.0
+planner successful
+validating
+validator time 0.0064961910247802734
+agent2
+[info][subgoal_2][grippers] task 13 takes 0.13 sec, found a plan with cost 4.0
+planner successful
+validating
+validator time 0.006704807281494141
+[info][multiagent main goal][grippers] task 13 takes 199.39 sec, no solution found
+TASK: grippers - 4032 - 13
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (move robot1 room1 room3)
+2 (Single): Agent 1: (pick robot1 ball1 room3 lgripper1)
+3 (Single): Agent 1: (move robot1 room3 room1)
+4 (Single): Agent 1: (drop robot1 ball1 room1 lgripper1)
+
+merging plan 2 into initial_plan
+7 True
+verifying entire plan.
+merging main agent's plan into combined plan
+
+Main Agent's Plan:
+
+
+Current Combined Plan:
+1 (Single): Agent 0: (move robot1 room1 room3)
+2 (Single): Agent 0: (pick robot1 ball1 room3 lgripper1)
+3 (Single): Agent 0: (move robot1 room3 room1)
+4 (Parallel):
+  Agent 0: (drop robot1 ball1 room1 lgripper1)
+  Agent 1: (move robot1 room1 room3)
+5 (Single): Agent 1: (pick robot1 ball2 room3 lgripper1)
+6 (Single): Agent 1: (move robot1 room3 room1)
+7 (Single): Agent 1: (drop robot1 ball2 room1 lgripper1)
+
+7 True
+
+Final Merged Plan:
+1 (Single): Agent 0: (move robot1 room1 room3)
+2 (Single): Agent 0: (pick robot1 ball1 room3 lgripper1)
+3 (Single): Agent 0: (move robot1 room3 room1)
+4 (Parallel, derived from single action with multiple steps):
+  Agent 0: (drop robot1 ball1 room1 lgripper1)
+  Agent 0: (move robot1 room1 room3)
+5 (Single): Agent 0: (pick robot1 ball2 room3 lgripper1)
+6 (Single): Agent 0: (move robot1 room3 room1)
+7 (Single): Agent 0: (drop robot1 ball2 room1 lgripper1)
+
+Total Cost: 7
+[results][grippers][13]
+[single_agent][planning time: 0.05][cost: 6.0]
+[multi_agent][planning_time: 2.8861539363861084][cost: 7.0][agents: 3][optimization time 3.7755351066589355]
+----------------------------------------
+Using cached single agent results
+LLM generated no subgoal for agent 3, reducing number of agents
+args.num_agents: 3
+['ball2 should be in room4.', 'ball3 should be in room4.']
+['./experiments_multiagent_help/run4032/grippers/p14_1.pddl', './experiments_multiagent_help/run4032/grippers/p14_2.pddl']
+agent1
+[info][subgoal_1][grippers] task 14 takes 0.15 sec, found a plan with cost 4.0
+planner successful
+validating
+validator time 0.006345987319946289
+agent2
+[info][subgoal_2][grippers] task 14 takes 0.13 sec, found a plan with cost 4.0
+planner successful
+validating
+validator time 0.0056803226470947266
+[info][multiagent main goal][grippers] task 14 takes 199.35 sec, no solution found
+TASK: grippers - 4032 - 14
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (move robot1 room2 room1)
+2 (Single): Agent 1: (pick robot1 ball2 room1 lgripper1)
+3 (Single): Agent 1: (move robot1 room1 room4)
+4 (Single): Agent 1: (drop robot1 ball2 room4 lgripper1)
+
+merging plan 2 into initial_plan
+inf False
+Merge failed - no valid solution found
+[results][grippers][14]
+[single_agent][planning time: 0.06][cost: 6.0]
+[multi_agent][planning_time: 1.9653260993957522][cost: inf][agents: 3][optimization time 4.651045322418213]
+----------------------------------------
+b"Error: Could not read file: experiments_multiagent_help/run4032/grippers/p15_0.pddl\nReason: [Errno 2] No such file or directory: 'experiments_multiagent_help/run4032/grippers/p15_0.pddl'\n"
+Using cached single agent results
+LLM generated no subgoal for agent 1, reducing number of agents
+args.num_agents: 1
+[]
+[]
+planner broke
+INFO     planner time limit: None
+INFO     planner memory limit: None
+
+INFO     Running translator.
+INFO     translator stdin: None
+INFO     translator time limit: None
+INFO     translator memory limit: None
+INFO     translator command line string: /home/davidbai/.conda/envs/llm_pddl/bin/python /home/davidbai/multiagent_helper_llmp/downward/builds/release/bin/translate/translate.py domains/grippers/domain.pddl experiments_multiagent_help/run4032/grippers/p15_0.pddl --sas-file experiments_multiagent_help/run4032/grippers/p15_0_plan.pddl.sas
+Parsing...
+translate exit code: 30
+
+Driver aborting after translate
+INFO     Planner time: 0.10s
+
+list index out of range
+----------------------------------------
+Using cached single agent results
+['ball7 should be in room4.', 'ball5 should be in room1.', 'ball3 should be in room1.', 'ball8 should be in room2.']
+['./experiments_multiagent_help/run4032/grippers/p16_1.pddl', './experiments_multiagent_help/run4032/grippers/p16_2.pddl', './experiments_multiagent_help/run4032/grippers/p16_3.pddl', './experiments_multiagent_help/run4032/grippers/p16_4.pddl']
+agent1
+[info][subgoal_1][grippers] task 16 takes 0.15 sec, found a plan with cost 3.0
+planner successful
+validating
+validator time 0.0061223506927490234
+agent2
+[info][subgoal_2][grippers] task 16 takes 0.15 sec, found a plan with cost 4.0
+planner successful
+validating
+validator time 0.005118846893310547
+agent3
+[info][subgoal_3][grippers] task 16 takes 0.16 sec, found a plan with cost 4.0
+planner successful
+validating
+validator time 0.0050811767578125
+agent4
+[info][subgoal_4][grippers] task 16 takes 0.17 sec, found a plan with cost 3.0
+planner successful
+validating
+validator time 0.006116390228271484
+[info][multiagent main goal][grippers] task 16 takes 0.93 sec, found a plan with cost 10.0
+TASK: grippers - 4032 - 16
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (pick robot1 ball7 room1 lgripper1)
+2 (Single): Agent 1: (move robot1 room1 room4)
+3 (Single): Agent 1: (drop robot1 ball7 room4 lgripper1)
+
+merging plan 2 into initial_plan
+7 True
+verifying entire plan.
+merging plan 3 into initial_plan
+10 True
+verifying entire plan.
+merging plan 4 into initial_plan
+inf False
+Merge failed - no valid solution found
+[results][grippers][16]
+[single_agent][planning time: 14.17][cost: 19.0]
+[multi_agent][planning_time: 5.768021163940429][cost: inf][agents: 5][optimization time 4.75923490524292]
+----------------------------------------
+b"Error: Could not read file: experiments_multiagent_help/run4032/grippers/p17_0.pddl\nReason: [Errno 2] No such file or directory: 'experiments_multiagent_help/run4032/grippers/p17_0.pddl'\n"
+Using cached single agent results
+LLM generated no subgoal for agent 1, reducing number of agents
+args.num_agents: 1
+[]
+[]
+planner broke
+INFO     planner time limit: None
+INFO     planner memory limit: None
+
+INFO     Running translator.
+INFO     translator stdin: None
+INFO     translator time limit: None
+INFO     translator memory limit: None
+INFO     translator command line string: /home/davidbai/.conda/envs/llm_pddl/bin/python /home/davidbai/multiagent_helper_llmp/downward/builds/release/bin/translate/translate.py domains/grippers/domain.pddl experiments_multiagent_help/run4032/grippers/p17_0.pddl --sas-file experiments_multiagent_help/run4032/grippers/p17_0_plan.pddl.sas
+Parsing...
+translate exit code: 30
+
+Driver aborting after translate
+INFO     Planner time: 0.11s
+
+list index out of range
+----------------------------------------
+Using cached single agent results
+LLM generated no subgoal for agent 2, reducing number of agents
+args.num_agents: 2
+['ball3 should be in room2.']
+['./experiments_multiagent_help/run4032/grippers/p18_1.pddl']
+agent1
+[info][subgoal_1][grippers] task 18 takes 0.16 sec, found a plan with cost 4.0
+planner successful
+validating
+validator time 0.006192684173583984
+[info][multiagent main goal][grippers] task 18 takes 0.16 sec, found a plan with cost 6.0
+TASK: grippers - 4032 - 18
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (move robot1 room3 room1)
+2 (Single): Agent 1: (pick robot1 ball3 room1 lgripper1)
+3 (Single): Agent 1: (move robot1 room1 room2)
+4 (Single): Agent 1: (drop robot1 ball3 room2 lgripper1)
+
+merging main agent's plan into combined plan
+
+Main Agent's Plan:
+1 (Single): Agent 0: (move robot1 room3 room2)
+2 (Single): Agent 0: (pick robot1 ball1 room2 lgripper1)
+3 (Single): Agent 0: (pick robot1 ball2 room2 rgripper1)
+4 (Single): Agent 0: (move robot1 room2 room1)
+5 (Single): Agent 0: (drop robot1 ball1 room1 lgripper1)
+6 (Single): Agent 0: (drop robot1 ball2 room1 rgripper1)
+
+Current Combined Plan:
+1 (Single): Agent 1: (move robot1 room3 room1)
+2 (Single): Agent 1: (pick robot1 ball3 room1 lgripper1)
+3 (Single): Agent 1: (move robot1 room1 room2)
+4 (Single): Agent 1: (drop robot1 ball3 room2 lgripper1)
+
+inf False
+Final merge failed - no valid solution found
+[results][grippers][18]
+[single_agent][planning time: 0.09][cost: 9.0]
+[multi_agent][planning_time: 3.17948920249939][cost: inf][agents: 2][optimization time 1.6469521522521973]
+----------------------------------------
+Using cached single agent results
+['ball3 should be in room1.', 'ball4 should be in room2.', 'ball1 should be in room3.', 'ball5 should be in room1.']
+['./experiments_multiagent_help/run4032/grippers/p19_1.pddl', './experiments_multiagent_help/run4032/grippers/p19_2.pddl', './experiments_multiagent_help/run4032/grippers/p19_3.pddl', './experiments_multiagent_help/run4032/grippers/p19_4.pddl']
+agent1
+[info][subgoal_1][grippers] task 19 takes 0.16 sec, found a plan with cost 4.0
+planner successful
+validating
+validator time 0.006415367126464844
+agent2
+[info][subgoal_2][grippers] task 19 takes 0.16 sec, found a plan with cost 4.0
+planner successful
+validating
+validator time 0.006424427032470703
+agent3
+[info][subgoal_3][grippers] task 19 takes 0.16 sec, found a plan with cost 4.0
+planner successful
+validating
+validator time 0.0029883384704589844
+agent4
+[info][subgoal_4][grippers] task 19 takes 0.16 sec, found a plan with cost 3.0
+planner successful
+validating
+validator time 0.006318092346191406
+[info][multiagent main goal][grippers] task 19 takes 0.22 sec, found a plan with cost 7.0
+TASK: grippers - 4032 - 19
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (move robot1 room4 room5)
+2 (Single): Agent 1: (pick robot1 ball3 room5 lgripper1)
+3 (Single): Agent 1: (move robot1 room5 room1)
+4 (Single): Agent 1: (drop robot1 ball3 room1 lgripper1)
+
+merging plan 2 into initial_plan
+inf False
+Merge failed - no valid solution found
+[results][grippers][19]
+[single_agent][planning time: 2.55][cost: 17.0]
+[multi_agent][planning_time: 5.820338830947875][cost: inf][agents: 5][optimization time 0.7577700614929199]
+----------------------------------------
+b"Error: Could not read file: experiments_multiagent_help/run4032/grippers/p20_0.pddl\nReason: [Errno 2] No such file or directory: 'experiments_multiagent_help/run4032/grippers/p20_0.pddl'\n"
+Using cached single agent results
+LLM generated no subgoal for agent 1, reducing number of agents
+args.num_agents: 1
+[]
+[]
+planner broke
+INFO     planner time limit: None
+INFO     planner memory limit: None
+
+INFO     Running translator.
+INFO     translator stdin: None
+INFO     translator time limit: None
+INFO     translator memory limit: None
+INFO     translator command line string: /home/davidbai/.conda/envs/llm_pddl/bin/python /home/davidbai/multiagent_helper_llmp/downward/builds/release/bin/translate/translate.py domains/grippers/domain.pddl experiments_multiagent_help/run4032/grippers/p20_0.pddl --sas-file experiments_multiagent_help/run4032/grippers/p20_0_plan.pddl.sas
+Parsing...
+translate exit code: 30
+
+Driver aborting after translate
+INFO     Planner time: 0.11s
+
+list index out of range
+----------------------------------------

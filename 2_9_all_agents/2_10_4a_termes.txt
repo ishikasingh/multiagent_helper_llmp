@@ -1,0 +1,2841 @@
+Using cached single agent results
+['height at pos-0-2 is 2 and all blocks are placed.', 'height at pos-3-1 is 2 and all blocks are placed.', 'height at pos-2-1 is 2 and all blocks are placed.']
+['./experiments_multiagent_help/run3034/termes/p01_1.pddl', './experiments_multiagent_help/run3034/termes/p01_2.pddl', './experiments_multiagent_help/run3034/termes/p01_3.pddl']
+agent1
+[info][subgoal_1][termes] task 01 takes 1.13 sec, found a plan with cost 20.0
+planner successful
+validating
+validator time 0.011446475982666016
+agent2
+[info][subgoal_2][termes] task 01 takes 0.28 sec, found a plan with cost 9.0
+planner successful
+validating
+validator time 0.011864185333251953
+agent3
+[info][subgoal_3][termes] task 01 takes 8.02 sec, found a plan with cost 24.0
+planner successful
+validating
+validator time 0.03376197814941406
+[info][multiagent main goal][termes] task 01 takes 21.47 sec, found a plan with cost 32.0
+TASK: termes - 3034 - 01
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (create-block pos-2-0)
+2 (Single): Agent 1: (place-block pos-2-0 pos-1-0 n0 n1)
+3 (Single): Agent 1: (create-block pos-2-0)
+4 (Single): Agent 1: (place-block pos-2-0 pos-2-1 n0 n1)
+5 (Single): Agent 1: (create-block pos-2-0)
+6 (Single): Agent 1: (move-up pos-2-0 n0 pos-1-0 n1)
+7 (Single): Agent 1: (move-down pos-1-0 n1 pos-0-0 n0)
+8 (Single): Agent 1: (move pos-0-0 pos-0-1 n0)
+9 (Single): Agent 1: (place-block pos-0-1 pos-0-2 n0 n1)
+10 (Single): Agent 1: (move pos-0-1 pos-1-1 n0)
+11 (Single): Agent 1: (remove-block pos-1-1 pos-1-0 n1 n0)
+12 (Single): Agent 1: (place-block pos-1-1 pos-0-1 n0 n1)
+13 (Single): Agent 1: (remove-block pos-1-1 pos-2-1 n1 n0)
+14 (Single): Agent 1: (move-up pos-1-1 n0 pos-0-1 n1)
+15 (Single): Agent 1: (place-block pos-0-1 pos-0-2 n1 n2)
+16 (Single): Agent 1: (move-down pos-0-1 n1 pos-0-0 n0)
+17 (Single): Agent 1: (remove-block pos-0-0 pos-0-1 n1 n0)
+18 (Single): Agent 1: (move pos-0-0 pos-1-0 n0)
+19 (Single): Agent 1: (move pos-1-0 pos-2-0 n0)
+20 (Single): Agent 1: (destroy-block pos-2-0)
+
+merging plan 2 into initial_plan
+29 True
+verifying entire plan.
+merging plan 3 into initial_plan
+inf False
+Merge failed - no valid solution found
+[results][termes][01]
+[single_agent][planning time: 28.84][cost: 36.0]
+[multi_agent][planning_time: 43.44528474807739][cost: inf][agents: 4][optimization time 14.222046136856079]
+----------------------------------------
+Using cached single agent results
+LLM generated no subgoal for agent 3, reducing number of agents
+args.num_agents: 3
+['height pos-3-0 3', 'height pos-2-1 3']
+['./experiments_multiagent_help/run3034/termes/p02_1.pddl', './experiments_multiagent_help/run3034/termes/p02_2.pddl']
+agent1
+[info][subgoal_1][termes] task 02 takes 6.94 sec, found a plan with cost 32.0
+planner successful
+validating
+validator time 0.008756399154663086
+agent2
+[info][subgoal_2][termes] task 02 takes 13.24 sec, found a plan with cost 36.0
+planner successful
+validating
+validator time 0.008905649185180664
+[info][multiagent main goal][termes] task 02 takes 250.12 sec, found a plan with cost 52.0
+TASK: termes - 3034 - 02
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (create-block pos-2-0)
+2 (Single): Agent 1: (place-block pos-2-0 pos-2-1 n0 n1)
+3 (Single): Agent 1: (create-block pos-2-0)
+4 (Single): Agent 1: (move pos-2-0 pos-3-0 n0)
+5 (Single): Agent 1: (place-block pos-3-0 pos-3-1 n0 n1)
+6 (Single): Agent 1: (move pos-3-0 pos-2-0 n0)
+7 (Single): Agent 1: (create-block pos-2-0)
+8 (Single): Agent 1: (place-block pos-2-0 pos-3-0 n0 n1)
+9 (Single): Agent 1: (create-block pos-2-0)
+10 (Single): Agent 1: (move-up pos-2-0 n0 pos-3-0 n1)
+11 (Single): Agent 1: (move pos-3-0 pos-3-1 n1)
+12 (Single): Agent 1: (place-block pos-3-1 pos-3-0 n1 n2)
+13 (Single): Agent 1: (move pos-3-1 pos-2-1 n1)
+14 (Single): Agent 1: (move-down pos-2-1 n1 pos-2-0 n0)
+15 (Single): Agent 1: (create-block pos-2-0)
+16 (Single): Agent 1: (move-up pos-2-0 n0 pos-2-1 n1)
+17 (Single): Agent 1: (place-block pos-2-1 pos-3-1 n1 n2)
+18 (Single): Agent 1: (move-down pos-2-1 n1 pos-2-0 n0)
+19 (Single): Agent 1: (create-block pos-2-0)
+20 (Single): Agent 1: (move-up pos-2-0 n0 pos-2-1 n1)
+21 (Single): Agent 1: (move-up pos-2-1 n1 pos-3-1 n2)
+22 (Single): Agent 1: (place-block pos-3-1 pos-3-0 n2 n3)
+23 (Single): Agent 1: (move-down pos-3-1 n2 pos-2-1 n1)
+24 (Single): Agent 1: (remove-block pos-2-1 pos-3-1 n2 n1)
+25 (Single): Agent 1: (move-down pos-2-1 n1 pos-2-0 n0)
+26 (Single): Agent 1: (destroy-block pos-2-0)
+27 (Single): Agent 1: (remove-block pos-2-0 pos-2-1 n1 n0)
+28 (Single): Agent 1: (destroy-block pos-2-0)
+29 (Single): Agent 1: (move pos-2-0 pos-2-1 n0)
+30 (Single): Agent 1: (remove-block pos-2-1 pos-3-1 n1 n0)
+31 (Single): Agent 1: (move pos-2-1 pos-2-0 n0)
+32 (Single): Agent 1: (destroy-block pos-2-0)
+
+merging plan 2 into initial_plan
+68 True
+verifying entire plan.
+merging main agent's plan into combined plan
+
+Main Agent's Plan:
+1 (Single): Agent 0: (create-block pos-2-0)
+2 (Single): Agent 0: (move pos-2-0 pos-1-0 n0)
+3 (Single): Agent 0: (place-block pos-1-0 pos-1-1 n0 n1)
+4 (Single): Agent 0: (move pos-1-0 pos-2-0 n0)
+5 (Single): Agent 0: (create-block pos-2-0)
+6 (Single): Agent 0: (place-block pos-2-0 pos-1-0 n0 n1)
+7 (Single): Agent 0: (create-block pos-2-0)
+8 (Single): Agent 0: (move pos-2-0 pos-3-0 n0)
+9 (Single): Agent 0: (place-block pos-3-0 pos-3-1 n0 n1)
+10 (Single): Agent 0: (move pos-3-0 pos-2-0 n0)
+11 (Single): Agent 0: (create-block pos-2-0)
+12 (Single): Agent 0: (place-block pos-2-0 pos-3-0 n0 n1)
+13 (Single): Agent 0: (create-block pos-2-0)
+14 (Single): Agent 0: (move-up pos-2-0 n0 pos-1-0 n1)
+15 (Single): Agent 0: (place-block pos-1-0 pos-1-1 n1 n2)
+16 (Single): Agent 0: (move-up pos-1-0 n1 pos-1-1 n2)
+17 (Single): Agent 0: (remove-block pos-1-1 pos-2-1 n3 n2)
+18 (Single): Agent 0: (move pos-1-1 pos-2-1 n2)
+19 (Single): Agent 0: (move-down pos-2-1 n2 pos-3-1 n1)
+20 (Single): Agent 0: (place-block pos-3-1 pos-3-0 n1 n2)
+21 (Single): Agent 0: (remove-block pos-3-1 pos-2-1 n2 n1)
+22 (Single): Agent 0: (move pos-3-1 pos-2-1 n1)
+23 (Single): Agent 0: (place-block pos-2-1 pos-3-1 n1 n2)
+24 (Single): Agent 0: (remove-block pos-2-1 pos-1-1 n2 n1)
+25 (Single): Agent 0: (move-up pos-2-1 n1 pos-3-1 n2)
+26 (Single): Agent 0: (place-block pos-3-1 pos-3-0 n2 n3)
+27 (Single): Agent 0: (move-down pos-3-1 n2 pos-2-1 n1)
+28 (Single): Agent 0: (remove-block pos-2-1 pos-3-1 n2 n1)
+29 (Single): Agent 0: (move pos-2-1 pos-3-1 n1)
+30 (Single): Agent 0: (place-block pos-3-1 pos-2-1 n1 n2)
+31 (Single): Agent 0: (move-down pos-3-1 n1 pos-3-2 n0)
+32 (Single): Agent 0: (remove-block pos-3-2 pos-3-1 n1 n0)
+33 (Single): Agent 0: (move pos-3-2 pos-2-2 n0)
+34 (Single): Agent 0: (move pos-2-2 pos-1-2 n0)
+35 (Single): Agent 0: (move-up pos-1-2 n0 pos-1-1 n1)
+36 (Single): Agent 0: (move pos-1-1 pos-1-0 n1)
+37 (Single): Agent 0: (place-block pos-1-0 pos-1-1 n1 n2)
+38 (Single): Agent 0: (move-down pos-1-0 n1 pos-2-0 n0)
+39 (Single): Agent 0: (create-block pos-2-0)
+40 (Single): Agent 0: (move-up pos-2-0 n0 pos-1-0 n1)
+41 (Single): Agent 0: (move-up pos-1-0 n1 pos-1-1 n2)
+42 (Single): Agent 0: (place-block pos-1-1 pos-2-1 n2 n3)
+43 (Single): Agent 0: (move-down pos-1-1 n2 pos-1-0 n1)
+44 (Single): Agent 0: (remove-block pos-1-0 pos-1-1 n2 n1)
+45 (Single): Agent 0: (move-down pos-1-0 n1 pos-2-0 n0)
+46 (Single): Agent 0: (destroy-block pos-2-0)
+47 (Single): Agent 0: (remove-block pos-2-0 pos-1-0 n1 n0)
+48 (Single): Agent 0: (destroy-block pos-2-0)
+49 (Single): Agent 0: (move pos-2-0 pos-1-0 n0)
+50 (Single): Agent 0: (remove-block pos-1-0 pos-1-1 n1 n0)
+51 (Single): Agent 0: (move pos-1-0 pos-2-0 n0)
+52 (Single): Agent 0: (destroy-block pos-2-0)
+
+Current Combined Plan:
+1 (Single): Agent 0: (create-block pos-2-0)
+2 (Single): Agent 0: (place-block pos-2-0 pos-2-1 n0 n1)
+3 (Single): Agent 0: (create-block pos-2-0)
+4 (Single): Agent 0: (move pos-2-0 pos-3-0 n0)
+5 (Single): Agent 0: (place-block pos-3-0 pos-3-1 n0 n1)
+6 (Single): Agent 0: (move pos-3-0 pos-2-0 n0)
+7 (Single): Agent 0: (create-block pos-2-0)
+8 (Single): Agent 0: (place-block pos-2-0 pos-3-0 n0 n1)
+9 (Single): Agent 0: (create-block pos-2-0)
+10 (Single): Agent 0: (move-up pos-2-0 n0 pos-3-0 n1)
+11 (Single): Agent 0: (move pos-3-0 pos-3-1 n1)
+12 (Single): Agent 0: (place-block pos-3-1 pos-3-0 n1 n2)
+13 (Single): Agent 0: (move pos-3-1 pos-2-1 n1)
+14 (Single): Agent 0: (move-down pos-2-1 n1 pos-2-0 n0)
+15 (Single): Agent 0: (create-block pos-2-0)
+16 (Single): Agent 0: (move-up pos-2-0 n0 pos-2-1 n1)
+17 (Single): Agent 0: (place-block pos-2-1 pos-3-1 n1 n2)
+18 (Single): Agent 0: (move-down pos-2-1 n1 pos-2-0 n0)
+19 (Single): Agent 0: (create-block pos-2-0)
+20 (Single): Agent 0: (move-up pos-2-0 n0 pos-2-1 n1)
+21 (Single): Agent 0: (move-up pos-2-1 n1 pos-3-1 n2)
+22 (Single): Agent 0: (place-block pos-3-1 pos-3-0 n2 n3)
+23 (Single): Agent 0: (move-down pos-3-1 n2 pos-2-1 n1)
+24 (Single): Agent 0: (remove-block pos-2-1 pos-3-1 n2 n1)
+25 (Single): Agent 0: (move-down pos-2-1 n1 pos-2-0 n0)
+26 (Single): Agent 0: (destroy-block pos-2-0)
+27 (Single): Agent 0: (remove-block pos-2-0 pos-2-1 n1 n0)
+28 (Single): Agent 0: (destroy-block pos-2-0)
+29 (Single): Agent 0: (move pos-2-0 pos-2-1 n0)
+30 (Single): Agent 0: (remove-block pos-2-1 pos-3-1 n1 n0)
+31 (Single): Agent 0: (move pos-2-1 pos-2-0 n0)
+32 (Single): Agent 0: (destroy-block pos-2-0)
+33 (Single): Agent 1: (create-block pos-2-0)
+34 (Single): Agent 1: (move pos-2-0 pos-2-1 n0)
+35 (Single): Agent 1: (place-block pos-2-1 pos-3-1 n0 n1)
+36 (Single): Agent 1: (move pos-2-1 pos-2-0 n0)
+37 (Single): Agent 1: (create-block pos-2-0)
+38 (Single): Agent 1: (place-block pos-2-0 pos-2-1 n0 n1)
+39 (Single): Agent 1: (create-block pos-2-0)
+40 (Single): Agent 1: (move-up pos-2-0 n0 pos-2-1 n1)
+41 (Single): Agent 1: (place-block pos-2-1 pos-3-1 n1 n2)
+42 (Single): Agent 1: (move-up pos-2-1 n1 pos-3-1 n2)
+43 (Single): Agent 1: (remove-block pos-3-1 pos-3-0 n3 n2)
+44 (Single): Agent 1: (move-down pos-3-1 n2 pos-2-1 n1)
+45 (Single): Agent 1: (move-down pos-2-1 n1 pos-2-0 n0)
+46 (Single): Agent 1: (destroy-block pos-2-0)
+47 (Single): Agent 1: (move-up pos-2-0 n0 pos-2-1 n1)
+48 (Single): Agent 1: (remove-block pos-2-1 pos-3-1 n2 n1)
+49 (Single): Agent 1: (move pos-2-1 pos-3-1 n1)
+50 (Single): Agent 1: (place-block pos-3-1 pos-2-1 n1 n2)
+51 (Single): Agent 1: (remove-block pos-3-1 pos-3-0 n2 n1)
+52 (Single): Agent 1: (move pos-3-1 pos-3-0 n1)
+53 (Single): Agent 1: (place-block pos-3-0 pos-3-1 n1 n2)
+54 (Single): Agent 1: (move-down pos-3-0 n1 pos-2-0 n0)
+55 (Single): Agent 1: (create-block pos-2-0)
+56 (Single): Agent 1: (move-up pos-2-0 n0 pos-3-0 n1)
+57 (Single): Agent 1: (move-up pos-3-0 n1 pos-3-1 n2)
+58 (Single): Agent 1: (place-block pos-3-1 pos-2-1 n2 n3)
+59 (Single): Agent 1: (move-down pos-3-1 n2 pos-3-0 n1)
+60 (Single): Agent 1: (remove-block pos-3-0 pos-3-1 n2 n1)
+61 (Single): Agent 1: (move-down pos-3-0 n1 pos-2-0 n0)
+62 (Single): Agent 1: (destroy-block pos-2-0)
+63 (Single): Agent 1: (remove-block pos-2-0 pos-3-0 n1 n0)
+64 (Single): Agent 1: (destroy-block pos-2-0)
+65 (Single): Agent 1: (move pos-2-0 pos-3-0 n0)
+66 (Single): Agent 1: (remove-block pos-3-0 pos-3-1 n1 n0)
+67 (Single): Agent 1: (move pos-3-0 pos-2-0 n0)
+68 (Single): Agent 1: (destroy-block pos-2-0)
+
+119 True
+
+Final Merged Plan:
+1 (Single): Agent 0: (create-block pos-2-0)
+2 (Single): Agent 0: (place-block pos-2-0 pos-2-1 n0 n1)
+3 (Single): Agent 0: (create-block pos-2-0)
+4 (Single): Agent 0: (move pos-2-0 pos-3-0 n0)
+5 (Single): Agent 0: (place-block pos-3-0 pos-3-1 n0 n1)
+6 (Single): Agent 0: (move pos-3-0 pos-2-0 n0)
+7 (Single): Agent 0: (create-block pos-2-0)
+8 (Single): Agent 0: (place-block pos-2-0 pos-3-0 n0 n1)
+9 (Single): Agent 0: (create-block pos-2-0)
+10 (Single): Agent 0: (move-up pos-2-0 n0 pos-3-0 n1)
+11 (Single): Agent 0: (move pos-3-0 pos-3-1 n1)
+12 (Single): Agent 0: (place-block pos-3-1 pos-3-0 n1 n2)
+13 (Single): Agent 0: (move pos-3-1 pos-2-1 n1)
+14 (Single): Agent 0: (move-down pos-2-1 n1 pos-2-0 n0)
+15 (Single): Agent 0: (create-block pos-2-0)
+16 (Single): Agent 0: (move-up pos-2-0 n0 pos-2-1 n1)
+17 (Single): Agent 0: (place-block pos-2-1 pos-3-1 n1 n2)
+18 (Single): Agent 0: (move-down pos-2-1 n1 pos-2-0 n0)
+19 (Single): Agent 0: (create-block pos-2-0)
+20 (Single): Agent 0: (move-up pos-2-0 n0 pos-2-1 n1)
+21 (Single): Agent 0: (move-up pos-2-1 n1 pos-3-1 n2)
+22 (Single): Agent 0: (place-block pos-3-1 pos-3-0 n2 n3)
+23 (Single): Agent 0: (move-down pos-3-1 n2 pos-2-1 n1)
+24 (Single): Agent 0: (remove-block pos-2-1 pos-3-1 n2 n1)
+25 (Single): Agent 0: (move-down pos-2-1 n1 pos-2-0 n0)
+26 (Single): Agent 0: (destroy-block pos-2-0)
+27 (Single): Agent 0: (remove-block pos-2-0 pos-2-1 n1 n0)
+28 (Single): Agent 0: (destroy-block pos-2-0)
+29 (Single): Agent 0: (move pos-2-0 pos-2-1 n0)
+30 (Single): Agent 0: (remove-block pos-2-1 pos-3-1 n1 n0)
+31 (Single): Agent 0: (move pos-2-1 pos-2-0 n0)
+32 (Single): Agent 0: (destroy-block pos-2-0)
+33 (Single): Agent 0: (create-block pos-2-0)
+34 (Single): Agent 0: (move pos-2-0 pos-2-1 n0)
+35 (Single): Agent 0: (place-block pos-2-1 pos-3-1 n0 n1)
+36 (Single): Agent 0: (move pos-2-1 pos-2-0 n0)
+37 (Single): Agent 0: (create-block pos-2-0)
+38 (Single): Agent 0: (place-block pos-2-0 pos-2-1 n0 n1)
+39 (Single): Agent 0: (create-block pos-2-0)
+40 (Single): Agent 0: (move-up pos-2-0 n0 pos-2-1 n1)
+41 (Single): Agent 0: (place-block pos-2-1 pos-3-1 n1 n2)
+42 (Single): Agent 0: (move-up pos-2-1 n1 pos-3-1 n2)
+43 (Single): Agent 0: (remove-block pos-3-1 pos-3-0 n3 n2)
+44 (Single): Agent 0: (move-down pos-3-1 n2 pos-2-1 n1)
+45 (Single): Agent 0: (move-down pos-2-1 n1 pos-2-0 n0)
+46 (Single): Agent 0: (destroy-block pos-2-0)
+47 (Single): Agent 0: (move-up pos-2-0 n0 pos-2-1 n1)
+48 (Single): Agent 0: (remove-block pos-2-1 pos-3-1 n2 n1)
+49 (Single): Agent 0: (move pos-2-1 pos-3-1 n1)
+50 (Single): Agent 0: (place-block pos-3-1 pos-2-1 n1 n2)
+51 (Single): Agent 0: (remove-block pos-3-1 pos-3-0 n2 n1)
+52 (Single): Agent 0: (move pos-3-1 pos-3-0 n1)
+53 (Single): Agent 0: (place-block pos-3-0 pos-3-1 n1 n2)
+54 (Single): Agent 0: (move-down pos-3-0 n1 pos-2-0 n0)
+55 (Single): Agent 0: (create-block pos-2-0)
+56 (Single): Agent 0: (move-up pos-2-0 n0 pos-3-0 n1)
+57 (Single): Agent 0: (move-up pos-3-0 n1 pos-3-1 n2)
+58 (Single): Agent 0: (place-block pos-3-1 pos-2-1 n2 n3)
+59 (Single): Agent 0: (move-down pos-3-1 n2 pos-3-0 n1)
+60 (Single): Agent 0: (remove-block pos-3-0 pos-3-1 n2 n1)
+61 (Single): Agent 0: (move-down pos-3-0 n1 pos-2-0 n0)
+62 (Single): Agent 0: (destroy-block pos-2-0)
+63 (Single): Agent 0: (remove-block pos-2-0 pos-3-0 n1 n0)
+64 (Single): Agent 0: (destroy-block pos-2-0)
+65 (Single): Agent 1: (create-block pos-2-0)
+66 (Single): Agent 1: (move pos-2-0 pos-1-0 n0)
+67 (Single): Agent 1: (place-block pos-1-0 pos-1-1 n0 n1)
+68 (Single): Agent 1: (move pos-1-0 pos-2-0 n0)
+69 (Single): Agent 1: (create-block pos-2-0)
+70 (Parallel):
+  Agent 0: (move pos-2-0 pos-3-0 n0)
+  Agent 1: (place-block pos-2-0 pos-1-0 n0 n1)
+71 (Single): Agent 0: (remove-block pos-3-0 pos-3-1 n1 n0)
+72 (Single): Agent 0: (move pos-3-0 pos-2-0 n0)
+73 (Single): Agent 0: (destroy-block pos-2-0)
+74 (Single): Agent 1: (create-block pos-2-0)
+75 (Single): Agent 1: (move pos-2-0 pos-3-0 n0)
+76 (Single): Agent 1: (place-block pos-3-0 pos-3-1 n0 n1)
+77 (Single): Agent 1: (move pos-3-0 pos-2-0 n0)
+78 (Single): Agent 1: (create-block pos-2-0)
+79 (Single): Agent 1: (place-block pos-2-0 pos-3-0 n0 n1)
+80 (Single): Agent 1: (create-block pos-2-0)
+81 (Single): Agent 1: (move-up pos-2-0 n0 pos-1-0 n1)
+82 (Single): Agent 1: (place-block pos-1-0 pos-1-1 n1 n2)
+83 (Single): Agent 1: (move-up pos-1-0 n1 pos-1-1 n2)
+84 (Single): Agent 1: (remove-block pos-1-1 pos-2-1 n3 n2)
+85 (Single): Agent 1: (move pos-1-1 pos-2-1 n2)
+86 (Single): Agent 1: (move-down pos-2-1 n2 pos-3-1 n1)
+87 (Single): Agent 1: (place-block pos-3-1 pos-3-0 n1 n2)
+88 (Single): Agent 1: (remove-block pos-3-1 pos-2-1 n2 n1)
+89 (Single): Agent 1: (move pos-3-1 pos-2-1 n1)
+90 (Single): Agent 1: (place-block pos-2-1 pos-3-1 n1 n2)
+91 (Single): Agent 1: (remove-block pos-2-1 pos-1-1 n2 n1)
+92 (Single): Agent 1: (move-up pos-2-1 n1 pos-3-1 n2)
+93 (Single): Agent 1: (place-block pos-3-1 pos-3-0 n2 n3)
+94 (Single): Agent 1: (move-down pos-3-1 n2 pos-2-1 n1)
+95 (Single): Agent 1: (remove-block pos-2-1 pos-3-1 n2 n1)
+96 (Single): Agent 1: (move pos-2-1 pos-3-1 n1)
+97 (Single): Agent 1: (place-block pos-3-1 pos-2-1 n1 n2)
+98 (Single): Agent 1: (move-down pos-3-1 n1 pos-3-2 n0)
+99 (Single): Agent 1: (remove-block pos-3-2 pos-3-1 n1 n0)
+100 (Single): Agent 1: (move pos-3-2 pos-2-2 n0)
+101 (Single): Agent 1: (move pos-2-2 pos-1-2 n0)
+102 (Single): Agent 1: (move-up pos-1-2 n0 pos-1-1 n1)
+103 (Single): Agent 1: (move pos-1-1 pos-1-0 n1)
+104 (Single): Agent 1: (place-block pos-1-0 pos-1-1 n1 n2)
+105 (Single): Agent 1: (move-down pos-1-0 n1 pos-2-0 n0)
+106 (Single): Agent 1: (create-block pos-2-0)
+107 (Single): Agent 1: (move-up pos-2-0 n0 pos-1-0 n1)
+108 (Single): Agent 1: (move-up pos-1-0 n1 pos-1-1 n2)
+109 (Single): Agent 1: (place-block pos-1-1 pos-2-1 n2 n3)
+110 (Single): Agent 1: (move-down pos-1-1 n2 pos-1-0 n1)
+111 (Single): Agent 1: (remove-block pos-1-0 pos-1-1 n2 n1)
+112 (Single): Agent 1: (move-down pos-1-0 n1 pos-2-0 n0)
+113 (Single): Agent 1: (destroy-block pos-2-0)
+114 (Single): Agent 1: (remove-block pos-2-0 pos-1-0 n1 n0)
+115 (Single): Agent 1: (destroy-block pos-2-0)
+116 (Single): Agent 1: (move pos-2-0 pos-1-0 n0)
+117 (Single): Agent 1: (remove-block pos-1-0 pos-1-1 n1 n0)
+118 (Single): Agent 1: (move pos-1-0 pos-2-0 n0)
+119 (Single): Agent 1: (destroy-block pos-2-0)
+
+Total Cost: 119
+[results][termes][02]
+[single_agent][planning time: 194.87][cost: 54.0]
+[multi_agent][planning_time: 277.6879108428955][cost: 119.0][agents: 3][optimization time 117.32841777801514]
+----------------------------------------
+Using cached single agent results
+['height-at pos-2-2 is 2 and all blocks are placed.', 'height-at pos-1-2 is 2 and all blocks are placed.', 'height-at pos-0-1 is 2 and all blocks are placed.']
+['./experiments_multiagent_help/run3034/termes/p03_1.pddl', './experiments_multiagent_help/run3034/termes/p03_2.pddl', './experiments_multiagent_help/run3034/termes/p03_3.pddl']
+agent1
+[info][subgoal_1][termes] task 03 takes 0.42 sec, found a plan with cost 12.0
+planner successful
+validating
+validator time 0.010156631469726562
+agent2
+[info][subgoal_2][termes] task 03 takes 0.54 sec, found a plan with cost 12.0
+planner successful
+validating
+validator time 0.01031351089477539
+agent3
+[info][subgoal_3][termes] task 03 takes 1.27 sec, found a plan with cost 16.0
+planner successful
+validating
+validator time 0.01070404052734375
+[info][multiagent main goal][termes] task 03 takes 250.17 sec, found a plan with cost 64.0
+TASK: termes - 3034 - 03
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (create-block pos-2-0)
+2 (Single): Agent 1: (move pos-2-0 pos-2-1 n0)
+3 (Single): Agent 1: (place-block pos-2-1 pos-2-2 n0 n1)
+4 (Single): Agent 1: (move pos-2-1 pos-2-0 n0)
+5 (Single): Agent 1: (create-block pos-2-0)
+6 (Single): Agent 1: (place-block pos-2-0 pos-2-1 n0 n1)
+7 (Single): Agent 1: (create-block pos-2-0)
+8 (Single): Agent 1: (move-up pos-2-0 n0 pos-2-1 n1)
+9 (Single): Agent 1: (place-block pos-2-1 pos-2-2 n1 n2)
+10 (Single): Agent 1: (move-down pos-2-1 n1 pos-2-0 n0)
+11 (Single): Agent 1: (remove-block pos-2-0 pos-2-1 n1 n0)
+12 (Single): Agent 1: (destroy-block pos-2-0)
+
+merging plan 2 into initial_plan
+24 True
+verifying entire plan.
+merging plan 3 into initial_plan
+40 True
+verifying entire plan.
+merging main agent's plan into combined plan
+
+Main Agent's Plan:
+1 (Single): Agent 0: (create-block pos-2-0)
+2 (Single): Agent 0: (move pos-2-0 pos-3-0 n0)
+3 (Single): Agent 0: (place-block pos-3-0 pos-3-1 n0 n1)
+4 (Single): Agent 0: (move pos-3-0 pos-2-0 n0)
+5 (Single): Agent 0: (create-block pos-2-0)
+6 (Single): Agent 0: (place-block pos-2-0 pos-2-1 n0 n1)
+7 (Single): Agent 0: (create-block pos-2-0)
+8 (Single): Agent 0: (move-up pos-2-0 n0 pos-2-1 n1)
+9 (Single): Agent 0: (place-block pos-2-1 pos-3-1 n1 n2)
+10 (Single): Agent 0: (move-down pos-2-1 n1 pos-2-0 n0)
+11 (Single): Agent 0: (create-block pos-2-0)
+12 (Single): Agent 0: (move pos-2-0 pos-1-0 n0)
+13 (Single): Agent 0: (place-block pos-1-0 pos-1-1 n0 n1)
+14 (Single): Agent 0: (move pos-1-0 pos-2-0 n0)
+15 (Single): Agent 0: (create-block pos-2-0)
+16 (Single): Agent 0: (move-up pos-2-0 n0 pos-2-1 n1)
+17 (Single): Agent 0: (move pos-2-1 pos-1-1 n1)
+18 (Single): Agent 0: (place-block pos-1-1 pos-2-1 n1 n2)
+19 (Single): Agent 0: (remove-block pos-1-1 pos-0-1 n2 n1)
+20 (Single): Agent 0: (move-up pos-1-1 n1 pos-2-1 n2)
+21 (Single): Agent 0: (place-block pos-2-1 pos-3-1 n2 n3)
+22 (Single): Agent 0: (move-down pos-2-1 n2 pos-1-1 n1)
+23 (Single): Agent 0: (move-down pos-1-1 n1 pos-1-0 n0)
+24 (Single): Agent 0: (move pos-1-0 pos-2-0 n0)
+25 (Single): Agent 0: (create-block pos-2-0)
+26 (Single): Agent 0: (place-block pos-2-0 pos-1-0 n0 n1)
+27 (Single): Agent 0: (create-block pos-2-0)
+28 (Single): Agent 0: (move-up pos-2-0 n0 pos-1-0 n1)
+29 (Single): Agent 0: (place-block pos-1-0 pos-1-1 n1 n2)
+30 (Single): Agent 0: (move-down pos-1-0 n1 pos-0-0 n0)
+31 (Single): Agent 0: (remove-block pos-0-0 pos-0-1 n1 n0)
+32 (Single): Agent 0: (move-up pos-0-0 n0 pos-1-0 n1)
+33 (Single): Agent 0: (move-up pos-1-0 n1 pos-1-1 n2)
+34 (Single): Agent 0: (place-block pos-1-1 pos-2-1 n2 n3)
+35 (Single): Agent 0: (move-down pos-1-1 n2 pos-1-0 n1)
+36 (Single): Agent 0: (move-down pos-1-0 n1 pos-2-0 n0)
+37 (Single): Agent 0: (create-block pos-2-0)
+38 (Single): Agent 0: (move-up pos-2-0 n0 pos-1-0 n1)
+39 (Single): Agent 0: (move-up pos-1-0 n1 pos-1-1 n2)
+40 (Single): Agent 0: (move-up pos-1-1 n2 pos-2-1 n3)
+41 (Single): Agent 0: (place-block pos-2-1 pos-3-1 n3 n4)
+42 (Single): Agent 0: (move-down pos-2-1 n3 pos-1-1 n2)
+43 (Single): Agent 0: (remove-block pos-1-1 pos-2-1 n3 n2)
+44 (Single): Agent 0: (move-down pos-1-1 n2 pos-1-0 n1)
+45 (Single): Agent 0: (move-down pos-1-0 n1 pos-2-0 n0)
+46 (Single): Agent 0: (destroy-block pos-2-0)
+47 (Single): Agent 0: (move-up pos-2-0 n0 pos-1-0 n1)
+48 (Single): Agent 0: (remove-block pos-1-0 pos-1-1 n2 n1)
+49 (Single): Agent 0: (move-down pos-1-0 n1 pos-2-0 n0)
+50 (Single): Agent 0: (destroy-block pos-2-0)
+51 (Single): Agent 0: (remove-block pos-2-0 pos-1-0 n1 n0)
+52 (Single): Agent 0: (destroy-block pos-2-0)
+53 (Single): Agent 0: (move pos-2-0 pos-1-0 n0)
+54 (Single): Agent 0: (move-up pos-1-0 n0 pos-1-1 n1)
+55 (Single): Agent 0: (remove-block pos-1-1 pos-2-1 n2 n1)
+56 (Single): Agent 0: (move-down pos-1-1 n1 pos-1-0 n0)
+57 (Single): Agent 0: (move pos-1-0 pos-2-0 n0)
+58 (Single): Agent 0: (destroy-block pos-2-0)
+59 (Single): Agent 0: (remove-block pos-2-0 pos-2-1 n1 n0)
+60 (Single): Agent 0: (destroy-block pos-2-0)
+61 (Single): Agent 0: (move pos-2-0 pos-2-1 n0)
+62 (Single): Agent 0: (remove-block pos-2-1 pos-1-1 n1 n0)
+63 (Single): Agent 0: (move pos-2-1 pos-2-0 n0)
+64 (Single): Agent 0: (destroy-block pos-2-0)
+
+Current Combined Plan:
+1 (Single): Agent 0: (create-block pos-2-0)
+2 (Single): Agent 0: (move pos-2-0 pos-2-1 n0)
+3 (Single): Agent 0: (place-block pos-2-1 pos-2-2 n0 n1)
+4 (Single): Agent 0: (move pos-2-1 pos-2-0 n0)
+5 (Single): Agent 0: (create-block pos-2-0)
+6 (Single): Agent 0: (place-block pos-2-0 pos-2-1 n0 n1)
+7 (Single): Agent 0: (create-block pos-2-0)
+8 (Single): Agent 0: (move-up pos-2-0 n0 pos-2-1 n1)
+9 (Single): Agent 0: (place-block pos-2-1 pos-2-2 n1 n2)
+10 (Single): Agent 0: (move-down pos-2-1 n1 pos-2-0 n0)
+11 (Single): Agent 0: (remove-block pos-2-0 pos-2-1 n1 n0)
+12 (Single): Agent 0: (destroy-block pos-2-0)
+13 (Single): Agent 0: (create-block pos-2-0)
+14 (Single): Agent 0: (move pos-2-0 pos-2-1 n0)
+15 (Single): Agent 0: (move pos-2-1 pos-1-1 n0)
+16 (Single): Agent 0: (place-block pos-1-1 pos-1-2 n0 n1)
+17 (Single): Agent 0: (move-up pos-1-1 n0 pos-1-2 n1)
+18 (Single): Agent 0: (remove-block pos-1-2 pos-2-2 n2 n1)
+19 (Single): Agent 0: (move pos-1-2 pos-2-2 n1)
+20 (Single): Agent 0: (place-block pos-2-2 pos-1-2 n1 n2)
+21 (Single): Agent 0: (move-down pos-2-2 n1 pos-2-1 n0)
+22 (Single): Agent 0: (remove-block pos-2-1 pos-2-2 n1 n0)
+23 (Single): Agent 0: (move pos-2-1 pos-2-0 n0)
+24 (Single): Agent 0: (destroy-block pos-2-0)
+25 (Single): Agent 1: (create-block pos-2-0)
+26 (Single): Agent 1: (move pos-2-0 pos-1-0 n0)
+27 (Single): Agent 1: (place-block pos-1-0 pos-1-1 n0 n1)
+28 (Single): Agent 1: (move-up pos-1-0 n0 pos-1-1 n1)
+29 (Single): Agent 1: (remove-block pos-1-1 pos-1-2 n2 n1)
+30 (Single): Agent 1: (move-down pos-1-1 n1 pos-0-1 n0)
+31 (Single): Agent 1: (move pos-0-1 pos-0-2 n0)
+32 (Single): Agent 1: (place-block pos-0-2 pos-0-1 n0 n1)
+33 (Single): Agent 1: (remove-block pos-0-2 pos-1-2 n1 n0)
+34 (Single): Agent 1: (move pos-0-2 pos-1-2 n0)
+35 (Single): Agent 1: (move-up pos-1-2 n0 pos-1-1 n1)
+36 (Single): Agent 1: (place-block pos-1-1 pos-0-1 n1 n2)
+37 (Single): Agent 1: (move-down pos-1-1 n1 pos-2-1 n0)
+38 (Single): Agent 1: (remove-block pos-2-1 pos-1-1 n1 n0)
+39 (Single): Agent 1: (move pos-2-1 pos-2-0 n0)
+40 (Single): Agent 1: (destroy-block pos-2-0)
+
+104 True
+
+Final Merged Plan:
+1 (Single): Agent 0: (create-block pos-2-0)
+2 (Single): Agent 0: (move pos-2-0 pos-2-1 n0)
+3 (Single): Agent 0: (place-block pos-2-1 pos-2-2 n0 n1)
+4 (Single): Agent 0: (move pos-2-1 pos-2-0 n0)
+5 (Single): Agent 0: (create-block pos-2-0)
+6 (Single): Agent 0: (place-block pos-2-0 pos-2-1 n0 n1)
+7 (Single): Agent 0: (create-block pos-2-0)
+8 (Single): Agent 0: (move-up pos-2-0 n0 pos-2-1 n1)
+9 (Single): Agent 0: (place-block pos-2-1 pos-2-2 n1 n2)
+10 (Single): Agent 0: (move-down pos-2-1 n1 pos-2-0 n0)
+11 (Single): Agent 0: (remove-block pos-2-0 pos-2-1 n1 n0)
+12 (Single): Agent 0: (destroy-block pos-2-0)
+13 (Single): Agent 0: (create-block pos-2-0)
+14 (Single): Agent 0: (move pos-2-0 pos-2-1 n0)
+15 (Single): Agent 0: (move pos-2-1 pos-1-1 n0)
+16 (Single): Agent 0: (place-block pos-1-1 pos-1-2 n0 n1)
+17 (Single): Agent 0: (move-up pos-1-1 n0 pos-1-2 n1)
+18 (Single): Agent 0: (remove-block pos-1-2 pos-2-2 n2 n1)
+19 (Single): Agent 0: (move pos-1-2 pos-2-2 n1)
+20 (Single): Agent 0: (place-block pos-2-2 pos-1-2 n1 n2)
+21 (Single): Agent 0: (move-down pos-2-2 n1 pos-2-1 n0)
+22 (Single): Agent 0: (remove-block pos-2-1 pos-2-2 n1 n0)
+23 (Single): Agent 0: (move pos-2-1 pos-2-0 n0)
+24 (Single): Agent 0: (destroy-block pos-2-0)
+25 (Single): Agent 0: (create-block pos-2-0)
+26 (Single): Agent 0: (move pos-2-0 pos-1-0 n0)
+27 (Single): Agent 0: (place-block pos-1-0 pos-1-1 n0 n1)
+28 (Single): Agent 0: (move-up pos-1-0 n0 pos-1-1 n1)
+29 (Single): Agent 0: (remove-block pos-1-1 pos-1-2 n2 n1)
+30 (Single): Agent 0: (move-down pos-1-1 n1 pos-0-1 n0)
+31 (Single): Agent 0: (move pos-0-1 pos-0-2 n0)
+32 (Single): Agent 0: (place-block pos-0-2 pos-0-1 n0 n1)
+33 (Single): Agent 0: (remove-block pos-0-2 pos-1-2 n1 n0)
+34 (Single): Agent 0: (move pos-0-2 pos-1-2 n0)
+35 (Single): Agent 0: (move-up pos-1-2 n0 pos-1-1 n1)
+36 (Single): Agent 0: (place-block pos-1-1 pos-0-1 n1 n2)
+37 (Single): Agent 0: (move-down pos-1-1 n1 pos-2-1 n0)
+38 (Single): Agent 0: (remove-block pos-2-1 pos-1-1 n1 n0)
+39 (Single): Agent 0: (move pos-2-1 pos-2-0 n0)
+40 (Single): Agent 0: (destroy-block pos-2-0)
+41 (Single): Agent 1: (create-block pos-2-0)
+42 (Single): Agent 1: (move pos-2-0 pos-3-0 n0)
+43 (Single): Agent 1: (place-block pos-3-0 pos-3-1 n0 n1)
+44 (Single): Agent 1: (move pos-3-0 pos-2-0 n0)
+45 (Single): Agent 1: (create-block pos-2-0)
+46 (Single): Agent 1: (place-block pos-2-0 pos-2-1 n0 n1)
+47 (Single): Agent 1: (create-block pos-2-0)
+48 (Single): Agent 1: (move-up pos-2-0 n0 pos-2-1 n1)
+49 (Single): Agent 1: (place-block pos-2-1 pos-3-1 n1 n2)
+50 (Single): Agent 1: (move-down pos-2-1 n1 pos-2-0 n0)
+51 (Single): Agent 1: (create-block pos-2-0)
+52 (Single): Agent 1: (move pos-2-0 pos-1-0 n0)
+53 (Single): Agent 1: (place-block pos-1-0 pos-1-1 n0 n1)
+54 (Single): Agent 1: (move pos-1-0 pos-2-0 n0)
+55 (Single): Agent 1: (create-block pos-2-0)
+56 (Single): Agent 1: (move-up pos-2-0 n0 pos-2-1 n1)
+57 (Single): Agent 1: (move pos-2-1 pos-1-1 n1)
+58 (Single): Agent 1: (place-block pos-1-1 pos-2-1 n1 n2)
+59 (Single): Agent 1: (remove-block pos-1-1 pos-0-1 n2 n1)
+60 (Single): Agent 1: (move-up pos-1-1 n1 pos-2-1 n2)
+61 (Single): Agent 1: (place-block pos-2-1 pos-3-1 n2 n3)
+62 (Single): Agent 1: (move-down pos-2-1 n2 pos-1-1 n1)
+63 (Single): Agent 1: (move-down pos-1-1 n1 pos-1-0 n0)
+64 (Single): Agent 1: (move pos-1-0 pos-2-0 n0)
+65 (Single): Agent 1: (create-block pos-2-0)
+66 (Single): Agent 1: (place-block pos-2-0 pos-1-0 n0 n1)
+67 (Single): Agent 1: (create-block pos-2-0)
+68 (Single): Agent 1: (move-up pos-2-0 n0 pos-1-0 n1)
+69 (Single): Agent 1: (place-block pos-1-0 pos-1-1 n1 n2)
+70 (Single): Agent 1: (move-down pos-1-0 n1 pos-0-0 n0)
+71 (Single): Agent 1: (remove-block pos-0-0 pos-0-1 n1 n0)
+72 (Single): Agent 1: (move-up pos-0-0 n0 pos-1-0 n1)
+73 (Single): Agent 1: (move-up pos-1-0 n1 pos-1-1 n2)
+74 (Single): Agent 1: (place-block pos-1-1 pos-2-1 n2 n3)
+75 (Single): Agent 1: (move-down pos-1-1 n2 pos-1-0 n1)
+76 (Single): Agent 1: (move-down pos-1-0 n1 pos-2-0 n0)
+77 (Single): Agent 1: (create-block pos-2-0)
+78 (Single): Agent 1: (move-up pos-2-0 n0 pos-1-0 n1)
+79 (Single): Agent 1: (move-up pos-1-0 n1 pos-1-1 n2)
+80 (Single): Agent 1: (move-up pos-1-1 n2 pos-2-1 n3)
+81 (Single): Agent 1: (place-block pos-2-1 pos-3-1 n3 n4)
+82 (Single): Agent 1: (move-down pos-2-1 n3 pos-1-1 n2)
+83 (Single): Agent 1: (remove-block pos-1-1 pos-2-1 n3 n2)
+84 (Single): Agent 1: (move-down pos-1-1 n2 pos-1-0 n1)
+85 (Single): Agent 1: (move-down pos-1-0 n1 pos-2-0 n0)
+86 (Single): Agent 1: (destroy-block pos-2-0)
+87 (Single): Agent 1: (move-up pos-2-0 n0 pos-1-0 n1)
+88 (Single): Agent 1: (remove-block pos-1-0 pos-1-1 n2 n1)
+89 (Single): Agent 1: (move-down pos-1-0 n1 pos-2-0 n0)
+90 (Single): Agent 1: (destroy-block pos-2-0)
+91 (Single): Agent 1: (remove-block pos-2-0 pos-1-0 n1 n0)
+92 (Single): Agent 1: (destroy-block pos-2-0)
+93 (Single): Agent 1: (move pos-2-0 pos-1-0 n0)
+94 (Single): Agent 1: (move-up pos-1-0 n0 pos-1-1 n1)
+95 (Single): Agent 1: (remove-block pos-1-1 pos-2-1 n2 n1)
+96 (Single): Agent 1: (move-down pos-1-1 n1 pos-1-0 n0)
+97 (Single): Agent 1: (move pos-1-0 pos-2-0 n0)
+98 (Single): Agent 1: (destroy-block pos-2-0)
+99 (Single): Agent 1: (remove-block pos-2-0 pos-2-1 n1 n0)
+100 (Single): Agent 1: (destroy-block pos-2-0)
+101 (Single): Agent 1: (move pos-2-0 pos-2-1 n0)
+102 (Single): Agent 1: (remove-block pos-2-1 pos-1-1 n1 n0)
+103 (Single): Agent 1: (move pos-2-1 pos-2-0 n0)
+104 (Single): Agent 1: (destroy-block pos-2-0)
+
+Total Cost: 104
+[results][termes][03]
+[single_agent][planning time: 1000.06][cost: 68.0]
+[multi_agent][planning_time: 262.4367534160614][cost: 104.0][agents: 4][optimization time 112.83067440986633]
+----------------------------------------
+Using cached single agent results
+LLM generated no subgoal for agent 3, reducing number of agents
+args.num_agents: 3
+['height pos-3-2 4', 'height pos-2-0 3']
+['./experiments_multiagent_help/run3034/termes/p04_1.pddl', './experiments_multiagent_help/run3034/termes/p04_2.pddl']
+agent1
+[info][subgoal_1][termes] task 04 takes 238.47 sec, found a plan with cost 53.0
+planner successful
+validating
+validator time 0.011762857437133789
+agent2
+[info][subgoal_2][termes] task 04 takes 0.92 sec, found a plan with cost 14.0
+planner successful
+validating
+validator time 0.010102510452270508
+[info][multiagent main goal][termes] task 04 takes 24.77 sec, found a plan with cost 28.0
+TASK: termes - 3034 - 04
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (create-block pos-1-0)
+2 (Single): Agent 1: (place-block pos-1-0 pos-1-1 n0 n1)
+3 (Single): Agent 1: (create-block pos-1-0)
+4 (Single): Agent 1: (place-block pos-1-0 pos-2-0 n0 n1)
+5 (Single): Agent 1: (create-block pos-1-0)
+6 (Single): Agent 1: (move-up pos-1-0 n0 pos-2-0 n1)
+7 (Single): Agent 1: (move-down pos-2-0 n1 pos-2-1 n0)
+8 (Single): Agent 1: (place-block pos-2-1 pos-3-1 n0 n1)
+9 (Single): Agent 1: (remove-block pos-2-1 pos-2-0 n1 n0)
+10 (Single): Agent 1: (move pos-2-1 pos-2-2 n0)
+11 (Single): Agent 1: (place-block pos-2-2 pos-3-2 n0 n1)
+12 (Single): Agent 1: (move pos-2-2 pos-2-1 n0)
+13 (Single): Agent 1: (remove-block pos-2-1 pos-1-1 n1 n0)
+14 (Single): Agent 1: (move-up pos-2-1 n0 pos-3-1 n1)
+15 (Single): Agent 1: (place-block pos-3-1 pos-3-2 n1 n2)
+16 (Single): Agent 1: (move-down pos-3-1 n1 pos-2-1 n0)
+17 (Single): Agent 1: (move pos-2-1 pos-1-1 n0)
+18 (Single): Agent 1: (move pos-1-1 pos-1-0 n0)
+19 (Single): Agent 1: (create-block pos-1-0)
+20 (Single): Agent 1: (move pos-1-0 pos-2-0 n0)
+21 (Single): Agent 1: (place-block pos-2-0 pos-2-1 n0 n1)
+22 (Single): Agent 1: (move pos-2-0 pos-1-0 n0)
+23 (Single): Agent 1: (create-block pos-1-0)
+24 (Single): Agent 1: (place-block pos-1-0 pos-1-1 n0 n1)
+25 (Single): Agent 1: (create-block pos-1-0)
+26 (Single): Agent 1: (move pos-1-0 pos-2-0 n0)
+27 (Single): Agent 1: (move-up pos-2-0 n0 pos-2-1 n1)
+28 (Single): Agent 1: (place-block pos-2-1 pos-3-1 n1 n2)
+29 (Single): Agent 1: (move-down pos-2-1 n1 pos-2-0 n0)
+30 (Single): Agent 1: (move pos-2-0 pos-1-0 n0)
+31 (Single): Agent 1: (create-block pos-1-0)
+32 (Single): Agent 1: (move-up pos-1-0 n0 pos-1-1 n1)
+33 (Single): Agent 1: (place-block pos-1-1 pos-2-1 n1 n2)
+34 (Single): Agent 1: (move-down pos-1-1 n1 pos-1-0 n0)
+35 (Single): Agent 1: (create-block pos-1-0)
+36 (Single): Agent 1: (move-up pos-1-0 n0 pos-1-1 n1)
+37 (Single): Agent 1: (move-up pos-1-1 n1 pos-2-1 n2)
+38 (Single): Agent 1: (move pos-2-1 pos-3-1 n2)
+39 (Single): Agent 1: (place-block pos-3-1 pos-3-2 n2 n3)
+40 (Single): Agent 1: (move pos-3-1 pos-2-1 n2)
+41 (Single): Agent 1: (move-down pos-2-1 n2 pos-1-1 n1)
+42 (Single): Agent 1: (move-down pos-1-1 n1 pos-1-0 n0)
+43 (Single): Agent 1: (create-block pos-1-0)
+44 (Single): Agent 1: (move-up pos-1-0 n0 pos-1-1 n1)
+45 (Single): Agent 1: (move-up pos-1-1 n1 pos-2-1 n2)
+46 (Single): Agent 1: (place-block pos-2-1 pos-3-1 n2 n3)
+47 (Single): Agent 1: (move-down pos-2-1 n2 pos-1-1 n1)
+48 (Single): Agent 1: (move-down pos-1-1 n1 pos-1-0 n0)
+49 (Single): Agent 1: (create-block pos-1-0)
+50 (Single): Agent 1: (move-up pos-1-0 n0 pos-1-1 n1)
+51 (Single): Agent 1: (move-up pos-1-1 n1 pos-2-1 n2)
+52 (Single): Agent 1: (move-up pos-2-1 n2 pos-3-1 n3)
+53 (Single): Agent 1: (place-block pos-3-1 pos-3-2 n3 n4)
+
+merging plan 2 into initial_plan
+inf False
+Merge failed - no valid solution found
+[results][termes][04]
+[single_agent][planning time: 955.4][cost: 80.0]
+[multi_agent][planning_time: 271.12692013740536][cost: inf][agents: 3][optimization time 46.47040605545044]
+----------------------------------------
+Using cached single agent results
+['height-at pos-1-1 is 3 and all blocks are placed.', 'height-at pos-0-2 is 2 and all blocks are placed.', 'height-at pos-3-2 is 2 and all blocks are placed.']
+['./experiments_multiagent_help/run3034/termes/p05_1.pddl', './experiments_multiagent_help/run3034/termes/p05_2.pddl', './experiments_multiagent_help/run3034/termes/p05_3.pddl']
+agent1
+[info][subgoal_1][termes] task 05 takes 12.94 sec, found a plan with cost 36.0
+planner successful
+validating
+validator time 0.012116193771362305
+agent2
+[info][subgoal_2][termes] task 05 takes 36.85 sec, found a plan with cost 38.0
+planner successful
+validating
+validator time 0.13210415840148926
+agent3
+[info][subgoal_3][termes] task 05 takes 1.43 sec, found a plan with cost 18.0
+planner successful
+validating
+validator time 0.0355219841003418
+[info][multiagent main goal][termes] task 05 takes 250.25 sec, found a plan with cost 132.0
+TASK: termes - 3034 - 05
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (create-block pos-2-0)
+2 (Single): Agent 1: (place-block pos-2-0 pos-2-1 n0 n1)
+3 (Single): Agent 1: (create-block pos-2-0)
+4 (Single): Agent 1: (move pos-2-0 pos-3-0 n0)
+5 (Single): Agent 1: (place-block pos-3-0 pos-3-1 n0 n1)
+6 (Single): Agent 1: (move pos-3-0 pos-2-0 n0)
+7 (Single): Agent 1: (create-block pos-2-0)
+8 (Single): Agent 1: (move pos-2-0 pos-1-0 n0)
+9 (Single): Agent 1: (place-block pos-1-0 pos-1-1 n0 n1)
+10 (Single): Agent 1: (move pos-1-0 pos-2-0 n0)
+11 (Single): Agent 1: (create-block pos-2-0)
+12 (Single): Agent 1: (move-up pos-2-0 n0 pos-2-1 n1)
+13 (Single): Agent 1: (place-block pos-2-1 pos-1-1 n1 n2)
+14 (Single): Agent 1: (move-down pos-2-1 n1 pos-2-0 n0)
+15 (Single): Agent 1: (create-block pos-2-0)
+16 (Single): Agent 1: (move pos-2-0 pos-3-0 n0)
+17 (Single): Agent 1: (move-up pos-3-0 n0 pos-3-1 n1)
+18 (Single): Agent 1: (place-block pos-3-1 pos-2-1 n1 n2)
+19 (Single): Agent 1: (move-down pos-3-1 n1 pos-3-0 n0)
+20 (Single): Agent 1: (move pos-3-0 pos-2-0 n0)
+21 (Single): Agent 1: (create-block pos-2-0)
+22 (Single): Agent 1: (move pos-2-0 pos-3-0 n0)
+23 (Single): Agent 1: (move-up pos-3-0 n0 pos-3-1 n1)
+24 (Single): Agent 1: (move-up pos-3-1 n1 pos-2-1 n2)
+25 (Single): Agent 1: (place-block pos-2-1 pos-1-1 n2 n3)
+26 (Single): Agent 1: (move-down pos-2-1 n2 pos-3-1 n1)
+27 (Single): Agent 1: (remove-block pos-3-1 pos-2-1 n2 n1)
+28 (Single): Agent 1: (move-down pos-3-1 n1 pos-3-0 n0)
+29 (Single): Agent 1: (move pos-3-0 pos-2-0 n0)
+30 (Single): Agent 1: (destroy-block pos-2-0)
+31 (Single): Agent 1: (remove-block pos-2-0 pos-2-1 n1 n0)
+32 (Single): Agent 1: (destroy-block pos-2-0)
+33 (Single): Agent 1: (move pos-2-0 pos-3-0 n0)
+34 (Single): Agent 1: (remove-block pos-3-0 pos-3-1 n1 n0)
+35 (Single): Agent 1: (move pos-3-0 pos-2-0 n0)
+36 (Single): Agent 1: (destroy-block pos-2-0)
+
+merging plan 2 into initial_plan
+72 True
+verifying entire plan.
+unsatisfied precondition encountered in merged plan, stopping process.
+Type-checking move
+...action passes type checking.
+Type-checking move-up
+...action passes type checking.
+Type-checking move-down
+...action passes type checking.
+Type-checking place-block
+...action passes type checking.
+Type-checking remove-block
+...action passes type checking.
+Type-checking create-block
+...action passes type checking.
+Type-checking destroy-block
+...action passes type checking.
+Checking plan: ./experiments_multiagent_help/run3034/termes/agent2_plan_final_temp.txt
+Plan to validate:
+
+Plan size: 74
+1:
+(create-block pos-2-0)
+ 
+2:
+(place-block pos-2-0 pos-2-1 n0 n1)
+ 
+3:
+(create-block pos-2-0)
+ 
+4:
+(move pos-2-0 pos-3-0 n0)
+ 
+5:
+(place-block pos-3-0 pos-3-1 n0 n1)
+ 
+6:
+(move pos-3-0 pos-2-0 n0)
+ 
+7:
+(create-block pos-2-0)
+ 
+8:
+(move pos-2-0 pos-1-0 n0)
+ 
+9:
+(place-block pos-1-0 pos-1-1 n0 n1)
+ 
+10:
+(move pos-1-0 pos-2-0 n0)
+ 
+11:
+(create-block pos-2-0)
+ 
+12:
+(move-up pos-2-0 n0 pos-2-1 n1)
+ 
+13:
+(place-block pos-2-1 pos-1-1 n1 n2)
+ 
+14:
+(move-down pos-2-1 n1 pos-2-0 n0)
+ 
+15:
+(create-block pos-2-0)
+ 
+16:
+(move pos-2-0 pos-3-0 n0)
+ 
+17:
+(move-up pos-3-0 n0 pos-3-1 n1)
+ 
+18:
+(place-block pos-3-1 pos-2-1 n1 n2)
+ 
+19:
+(move-down pos-3-1 n1 pos-3-0 n0)
+ 
+20:
+(move pos-3-0 pos-2-0 n0)
+ 
+21:
+(create-block pos-2-0)
+ 
+22:
+(move pos-2-0 pos-3-0 n0)
+ 
+23:
+(move-up pos-3-0 n0 pos-3-1 n1)
+ 
+24:
+(move-up pos-3-1 n1 pos-2-1 n2)
+ 
+25:
+(place-block pos-2-1 pos-1-1 n2 n3)
+ 
+26:
+(move-down pos-2-1 n2 pos-3-1 n1)
+ 
+27:
+(remove-block pos-3-1 pos-2-1 n2 n1)
+ 
+28:
+(move-down pos-3-1 n1 pos-3-0 n0)
+ 
+29:
+(move pos-3-0 pos-2-0 n0)
+ 
+30:
+(destroy-block pos-2-0)
+ 
+31:
+(remove-block pos-2-0 pos-2-1 n1 n0)
+ 
+32:
+(destroy-block pos-2-0)
+ 
+33:
+(create-block pos-2-0)
+ 
+34:
+(move pos-2-0 pos-1-0 n0)
+ 
+35:
+(place-block pos-1-0 pos-0-0 n0 n1)
+ 
+36:
+(move pos-1-0 pos-2-0 n0)
+ 
+37:
+(create-block pos-2-0)
+ 
+38:
+(place-block pos-2-0 pos-1-0 n0 n1)
+ 
+39:
+(create-block pos-2-0)
+ 
+40:
+(move-up pos-2-0 n0 pos-1-0 n1)
+ 
+41:
+(move pos-1-0 pos-0-0 n1)
+ 
+42:
+(place-block pos-0-0 pos-1-0 n1 n2)
+ 
+43:
+(move-up pos-0-0 n1 pos-1-0 n2)
+ 
+44:
+(remove-block pos-1-0 pos-1-1 n3 n2)
+ 
+45:
+(move-down pos-1-0 n2 pos-0-0 n1)
+ 
+46:
+(move-down pos-0-0 n1 pos-0-1 n0)
+ 
+47:
+(place-block pos-0-1 pos-0-2 n0 n1)
+ 
+48:
+(remove-block pos-0-1 pos-0-0 n1 n0)
+ 
+49:
+(move pos-0-1 pos-0-0 n0)
+ 
+50:
+(place-block pos-0-0 pos-0-1 n0 n1)
+ 
+51:
+(move-up pos-0-0 n0 pos-0-1 n1)
+ 
+52:
+(remove-block pos-0-1 pos-1-1 n2 n1)
+ 
+53:
+(place-block pos-0-1 pos-0-2 n1 n2)
+ 
+54:
+(move pos-0-1 pos-1-1 n1)
+ 
+55:
+(remove-block pos-1-1 pos-1-0 n2 n1)
+ 
+56:
+(move-down pos-1-1 n1 pos-2-1 n0)
+ 
+57:
+(move pos-2-1 pos-2-0 n0)
+ 
+58:
+(destroy-block pos-2-0)
+ 
+59:
+(remove-block pos-2-0 pos-1-0 n1 n0)
+ 
+60:
+(move pos-2-0 pos-3-0 n0)
+ 
+61:
+(destroy-block pos-2-0)
+ 
+62:
+(remove-block pos-3-0 pos-3-1 n1 n0)
+ 
+63:
+(move pos-3-0 pos-2-0 n0)
+ 
+64:
+(destroy-block pos-2-0)
+ 
+65:
+(move pos-2-0 pos-1-0 n0)
+ 
+66:
+(remove-block pos-1-0 pos-1-1 n1 n0)
+ 
+67:
+(move pos-1-0 pos-1-1 n0)
+ 
+68:
+(place-block pos-1-1 pos-1-0 n0 n1)
+ 
+69:
+(remove-block pos-1-1 pos-0-1 n1 n0)
+ 
+70:
+(move pos-1-1 pos-2-1 n0)
+ 
+71:
+(move pos-2-1 pos-2-0 n0)
+ 
+72:
+(destroy-block pos-2-0)
+ 
+73:
+(remove-block pos-2-0 pos-1-0 n1 n0)
+ 
+74:
+(destroy-block pos-2-0)
+ 
+
+Plan Validation details
+-----------------------
+
+Checking next happening (time 1)
+Adding (has-block)
+
+Checking next happening (time 2)
+Deleting (height pos-2-1 n0)
+Deleting (has-block)
+Adding (height pos-2-1 n1)
+
+Checking next happening (time 3)
+Adding (has-block)
+
+Checking next happening (time 4)
+Deleting (at pos-2-0)
+Adding (at pos-3-0)
+
+Checking next happening (time 5)
+Deleting (height pos-3-1 n0)
+Deleting (has-block)
+Adding (height pos-3-1 n1)
+
+Checking next happening (time 6)
+Deleting (at pos-3-0)
+Adding (at pos-2-0)
+
+Checking next happening (time 7)
+Adding (has-block)
+
+Checking next happening (time 8)
+Deleting (at pos-2-0)
+Adding (at pos-1-0)
+
+Checking next happening (time 9)
+Deleting (height pos-1-1 n0)
+Deleting (has-block)
+Adding (height pos-1-1 n1)
+
+Checking next happening (time 10)
+Deleting (at pos-1-0)
+Adding (at pos-2-0)
+
+Checking next happening (time 11)
+Adding (has-block)
+
+Checking next happening (time 12)
+Deleting (at pos-2-0)
+Adding (at pos-2-1)
+
+Checking next happening (time 13)
+Deleting (height pos-1-1 n1)
+Deleting (has-block)
+Adding (height pos-1-1 n2)
+
+Checking next happening (time 14)
+Deleting (at pos-2-1)
+Adding (at pos-2-0)
+
+Checking next happening (time 15)
+Adding (has-block)
+
+Checking next happening (time 16)
+Deleting (at pos-2-0)
+Adding (at pos-3-0)
+
+Checking next happening (time 17)
+Deleting (at pos-3-0)
+Adding (at pos-3-1)
+
+Checking next happening (time 18)
+Deleting (height pos-2-1 n1)
+Deleting (has-block)
+Adding (height pos-2-1 n2)
+
+Checking next happening (time 19)
+Deleting (at pos-3-1)
+Adding (at pos-3-0)
+
+Checking next happening (time 20)
+Deleting (at pos-3-0)
+Adding (at pos-2-0)
+
+Checking next happening (time 21)
+Adding (has-block)
+
+Checking next happening (time 22)
+Deleting (at pos-2-0)
+Adding (at pos-3-0)
+
+Checking next happening (time 23)
+Deleting (at pos-3-0)
+Adding (at pos-3-1)
+
+Checking next happening (time 24)
+Deleting (at pos-3-1)
+Adding (at pos-2-1)
+
+Checking next happening (time 25)
+Deleting (height pos-1-1 n2)
+Deleting (has-block)
+Adding (height pos-1-1 n3)
+
+Checking next happening (time 26)
+Deleting (at pos-2-1)
+Adding (at pos-3-1)
+
+Checking next happening (time 27)
+Deleting (height pos-2-1 n2)
+Adding (height pos-2-1 n1)
+Adding (has-block)
+
+Checking next happening (time 28)
+Deleting (at pos-3-1)
+Adding (at pos-3-0)
+
+Checking next happening (time 29)
+Deleting (at pos-3-0)
+Adding (at pos-2-0)
+
+Checking next happening (time 30)
+Deleting (has-block)
+
+Checking next happening (time 31)
+Deleting (height pos-2-1 n1)
+Adding (height pos-2-1 n0)
+Adding (has-block)
+
+Checking next happening (time 32)
+Deleting (has-block)
+
+Checking next happening (time 33)
+Adding (has-block)
+
+Checking next happening (time 34)
+Deleting (at pos-2-0)
+Adding (at pos-1-0)
+
+Checking next happening (time 35)
+Deleting (height pos-0-0 n0)
+Deleting (has-block)
+Adding (height pos-0-0 n1)
+
+Checking next happening (time 36)
+Deleting (at pos-1-0)
+Adding (at pos-2-0)
+
+Checking next happening (time 37)
+Adding (has-block)
+
+Checking next happening (time 38)
+Deleting (height pos-1-0 n0)
+Deleting (has-block)
+Adding (height pos-1-0 n1)
+
+Checking next happening (time 39)
+Adding (has-block)
+
+Checking next happening (time 40)
+Deleting (at pos-2-0)
+Adding (at pos-1-0)
+
+Checking next happening (time 41)
+Deleting (at pos-1-0)
+Adding (at pos-0-0)
+
+Checking next happening (time 42)
+Deleting (height pos-1-0 n1)
+Deleting (has-block)
+Adding (height pos-1-0 n2)
+
+Checking next happening (time 43)
+Deleting (at pos-0-0)
+Adding (at pos-1-0)
+
+Checking next happening (time 44)
+Deleting (height pos-1-1 n3)
+Adding (height pos-1-1 n2)
+Adding (has-block)
+
+Checking next happening (time 45)
+Deleting (at pos-1-0)
+Adding (at pos-0-0)
+
+Checking next happening (time 46)
+Deleting (at pos-0-0)
+Adding (at pos-0-1)
+
+Checking next happening (time 47)
+Deleting (height pos-0-2 n0)
+Deleting (has-block)
+Adding (height pos-0-2 n1)
+
+Checking next happening (time 48)
+Deleting (height pos-0-0 n1)
+Adding (height pos-0-0 n0)
+Adding (has-block)
+
+Checking next happening (time 49)
+Deleting (at pos-0-1)
+Adding (at pos-0-0)
+
+Checking next happening (time 50)
+Deleting (height pos-0-1 n0)
+Deleting (has-block)
+Adding (height pos-0-1 n1)
+
+Checking next happening (time 51)
+Deleting (at pos-0-0)
+Adding (at pos-0-1)
+
+Checking next happening (time 52)
+Deleting (height pos-1-1 n2)
+Adding (height pos-1-1 n1)
+Adding (has-block)
+
+Checking next happening (time 53)
+Deleting (height pos-0-2 n1)
+Deleting (has-block)
+Adding (height pos-0-2 n2)
+
+Checking next happening (time 54)
+Deleting (at pos-0-1)
+Adding (at pos-1-1)
+
+Checking next happening (time 55)
+Deleting (height pos-1-0 n2)
+Adding (height pos-1-0 n1)
+Adding (has-block)
+
+Checking next happening (time 56)
+Deleting (at pos-1-1)
+Adding (at pos-2-1)
+
+Checking next happening (time 57)
+Deleting (at pos-2-1)
+Adding (at pos-2-0)
+
+Checking next happening (time 58)
+Deleting (has-block)
+
+Checking next happening (time 59)
+Deleting (height pos-1-0 n1)
+Adding (height pos-1-0 n0)
+Adding (has-block)
+
+Checking next happening (time 60)
+Deleting (at pos-2-0)
+Adding (at pos-3-0)
+
+Checking next happening (time 61)
+Plan failed because of unsatisfied precondition in:
+(destroy-block pos-2-0)
+
+
+Plan failed to execute
+
+Plan Repair Advice:
+
+(destroy-block pos-2-0) has an unsatisfied precondition at time 61
+(Set (at pos-2-0) to true)
+
+
+Failed plans:
+ ./experiments_multiagent_help/run3034/termes/agent2_plan_final_temp.txt 
+
+[results][termes][05]
+[single_agent][planning time: 1000.17][cost: 136.0]
+[multi_agent][planning_time: 313.5202781867981][cost: inf][agents: 4][optimization time 42.351645946502686]
+----------------------------------------
+Using cached single agent results
+LLM generated no subgoal for agent 3, reducing number of agents
+args.num_agents: 3
+['height pos-3-2 5', 'height pos-1-2 5']
+['./experiments_multiagent_help/run3034/termes/p06_1.pddl', './experiments_multiagent_help/run3034/termes/p06_2.pddl']
+agent1
+[info][subgoal_1][termes] task 06 takes 250.18 sec, found a plan with cost 82.0
+planner successful
+validating
+validator time 0.014676570892333984
+agent2
+[info][subgoal_2][termes] task 06 takes 250.19 sec, found a plan with cost 100.0
+planner successful
+validating
+validator time 0.015855789184570312
+[info][multiagent main goal][termes] task 06 takes 250.12 sec, found a plan with cost 128.0
+TASK: termes - 3034 - 06
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (create-block pos-2-0)
+2 (Single): Agent 1: (move pos-2-0 pos-2-1 n0)
+3 (Single): Agent 1: (move pos-2-1 pos-2-2 n0)
+4 (Single): Agent 1: (place-block pos-2-2 pos-3-2 n0 n1)
+5 (Single): Agent 1: (move pos-2-2 pos-2-1 n0)
+6 (Single): Agent 1: (move pos-2-1 pos-2-0 n0)
+7 (Single): Agent 1: (create-block pos-2-0)
+8 (Single): Agent 1: (move pos-2-0 pos-2-1 n0)
+9 (Single): Agent 1: (place-block pos-2-1 pos-2-2 n0 n1)
+10 (Single): Agent 1: (move pos-2-1 pos-2-0 n0)
+11 (Single): Agent 1: (create-block pos-2-0)
+12 (Single): Agent 1: (move pos-2-0 pos-2-1 n0)
+13 (Single): Agent 1: (move-up pos-2-1 n0 pos-2-2 n1)
+14 (Single): Agent 1: (place-block pos-2-2 pos-3-2 n1 n2)
+15 (Single): Agent 1: (move-down pos-2-2 n1 pos-2-1 n0)
+16 (Single): Agent 1: (move pos-2-1 pos-2-0 n0)
+17 (Single): Agent 1: (create-block pos-2-0)
+18 (Single): Agent 1: (place-block pos-2-0 pos-2-1 n0 n1)
+19 (Single): Agent 1: (create-block pos-2-0)
+20 (Single): Agent 1: (move-up pos-2-0 n0 pos-2-1 n1)
+21 (Single): Agent 1: (place-block pos-2-1 pos-2-2 n1 n2)
+22 (Single): Agent 1: (move-down pos-2-1 n1 pos-2-0 n0)
+23 (Single): Agent 1: (create-block pos-2-0)
+24 (Single): Agent 1: (move-up pos-2-0 n0 pos-2-1 n1)
+25 (Single): Agent 1: (move-up pos-2-1 n1 pos-2-2 n2)
+26 (Single): Agent 1: (place-block pos-2-2 pos-3-2 n2 n3)
+27 (Single): Agent 1: (move-down pos-2-2 n2 pos-2-1 n1)
+28 (Single): Agent 1: (move-down pos-2-1 n1 pos-2-0 n0)
+29 (Single): Agent 1: (create-block pos-2-0)
+30 (Single): Agent 1: (move pos-2-0 pos-3-0 n0)
+31 (Single): Agent 1: (place-block pos-3-0 pos-3-1 n0 n1)
+32 (Single): Agent 1: (move pos-3-0 pos-2-0 n0)
+33 (Single): Agent 1: (create-block pos-2-0)
+34 (Single): Agent 1: (place-block pos-2-0 pos-3-0 n0 n1)
+35 (Single): Agent 1: (create-block pos-2-0)
+36 (Single): Agent 1: (move-up pos-2-0 n0 pos-3-0 n1)
+37 (Single): Agent 1: (move pos-3-0 pos-3-1 n1)
+38 (Single): Agent 1: (place-block pos-3-1 pos-2-1 n1 n2)
+39 (Single): Agent 1: (move pos-3-1 pos-3-0 n1)
+40 (Single): Agent 1: (move-down pos-3-0 n1 pos-2-0 n0)
+41 (Single): Agent 1: (create-block pos-2-0)
+42 (Single): Agent 1: (move-up pos-2-0 n0 pos-3-0 n1)
+43 (Single): Agent 1: (place-block pos-3-0 pos-3-1 n1 n2)
+44 (Single): Agent 1: (move-down pos-3-0 n1 pos-2-0 n0)
+45 (Single): Agent 1: (create-block pos-2-0)
+46 (Single): Agent 1: (move-up pos-2-0 n0 pos-3-0 n1)
+47 (Single): Agent 1: (move-up pos-3-0 n1 pos-3-1 n2)
+48 (Single): Agent 1: (move pos-3-1 pos-2-1 n2)
+49 (Single): Agent 1: (place-block pos-2-1 pos-2-2 n2 n3)
+50 (Single): Agent 1: (move pos-2-1 pos-3-1 n2)
+51 (Single): Agent 1: (move-down pos-3-1 n2 pos-3-0 n1)
+52 (Single): Agent 1: (move-down pos-3-0 n1 pos-2-0 n0)
+53 (Single): Agent 1: (create-block pos-2-0)
+54 (Single): Agent 1: (move-up pos-2-0 n0 pos-3-0 n1)
+55 (Single): Agent 1: (move-up pos-3-0 n1 pos-3-1 n2)
+56 (Single): Agent 1: (place-block pos-3-1 pos-2-1 n2 n3)
+57 (Single): Agent 1: (move-down pos-3-1 n2 pos-3-0 n1)
+58 (Single): Agent 1: (move-down pos-3-0 n1 pos-2-0 n0)
+59 (Single): Agent 1: (create-block pos-2-0)
+60 (Single): Agent 1: (move-up pos-2-0 n0 pos-3-0 n1)
+61 (Single): Agent 1: (move-up pos-3-0 n1 pos-3-1 n2)
+62 (Single): Agent 1: (move-up pos-3-1 n2 pos-2-1 n3)
+63 (Single): Agent 1: (move pos-2-1 pos-2-2 n3)
+64 (Single): Agent 1: (place-block pos-2-2 pos-3-2 n3 n4)
+65 (Single): Agent 1: (move pos-2-2 pos-2-1 n3)
+66 (Single): Agent 1: (move-down pos-2-1 n3 pos-3-1 n2)
+67 (Single): Agent 1: (move-down pos-3-1 n2 pos-3-0 n1)
+68 (Single): Agent 1: (move-down pos-3-0 n1 pos-2-0 n0)
+69 (Single): Agent 1: (create-block pos-2-0)
+70 (Single): Agent 1: (move-up pos-2-0 n0 pos-3-0 n1)
+71 (Single): Agent 1: (move-up pos-3-0 n1 pos-3-1 n2)
+72 (Single): Agent 1: (move-up pos-3-1 n2 pos-2-1 n3)
+73 (Single): Agent 1: (place-block pos-2-1 pos-2-2 n3 n4)
+74 (Single): Agent 1: (move-down pos-2-1 n3 pos-3-1 n2)
+75 (Single): Agent 1: (move-down pos-3-1 n2 pos-3-0 n1)
+76 (Single): Agent 1: (move-down pos-3-0 n1 pos-2-0 n0)
+77 (Single): Agent 1: (create-block pos-2-0)
+78 (Single): Agent 1: (move-up pos-2-0 n0 pos-3-0 n1)
+79 (Single): Agent 1: (move-up pos-3-0 n1 pos-3-1 n2)
+80 (Single): Agent 1: (move-up pos-3-1 n2 pos-2-1 n3)
+81 (Single): Agent 1: (move-up pos-2-1 n3 pos-2-2 n4)
+82 (Single): Agent 1: (place-block pos-2-2 pos-3-2 n4 n5)
+
+merging plan 2 into initial_plan
+inf False
+Merge failed - no valid solution found
+[results][termes][06]
+[single_agent][planning time: 1000.16][cost: 172.0]
+[multi_agent][planning_time: 756.4216041469574][cost: inf][agents: 3][optimization time 55.93531107902527]
+----------------------------------------
+Using cached single agent results
+['height-at pos-1-1 is 2 and all blocks are placed.', 'height-at pos-3-3 is 2 and all blocks are placed.', 'height-at pos-4-0 is 2 and all blocks are placed.']
+['./experiments_multiagent_help/run3034/termes/p07_1.pddl', './experiments_multiagent_help/run3034/termes/p07_2.pddl', './experiments_multiagent_help/run3034/termes/p07_3.pddl']
+agent1
+[info][subgoal_1][termes] task 07 takes 0.97 sec, found a plan with cost 12.0
+planner successful
+validating
+validator time 0.008113384246826172
+agent2
+[info][subgoal_2][termes] task 07 takes 10.53 sec, found a plan with cost 20.0
+planner successful
+validating
+validator time 0.011640310287475586
+agent3
+[info][subgoal_3][termes] task 07 takes 7.19 sec, found a plan with cost 20.0
+planner successful
+validating
+validator time 0.012203454971313477
+[info][multiagent main goal][termes] task 07 takes 250.15 sec, found a plan with cost 62.0
+TASK: termes - 3034 - 07
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (create-block pos-2-0)
+2 (Single): Agent 1: (place-block pos-2-0 pos-1-0 n0 n1)
+3 (Single): Agent 1: (create-block pos-2-0)
+4 (Single): Agent 1: (move pos-2-0 pos-2-1 n0)
+5 (Single): Agent 1: (place-block pos-2-1 pos-1-1 n0 n1)
+6 (Single): Agent 1: (move pos-2-1 pos-2-0 n0)
+7 (Single): Agent 1: (create-block pos-2-0)
+8 (Single): Agent 1: (move-up pos-2-0 n0 pos-1-0 n1)
+9 (Single): Agent 1: (place-block pos-1-0 pos-1-1 n1 n2)
+10 (Single): Agent 1: (move-down pos-1-0 n1 pos-2-0 n0)
+11 (Single): Agent 1: (remove-block pos-2-0 pos-1-0 n1 n0)
+12 (Single): Agent 1: (destroy-block pos-2-0)
+
+merging plan 2 into initial_plan
+31 True
+verifying entire plan.
+merging plan 3 into initial_plan
+51 True
+verifying entire plan.
+merging main agent's plan into combined plan
+
+Main Agent's Plan:
+1 (Single): Agent 0: (create-block pos-2-0)
+2 (Single): Agent 0: (place-block pos-2-0 pos-3-0 n0 n1)
+3 (Single): Agent 0: (move-up pos-2-0 n0 pos-3-0 n1)
+4 (Single): Agent 0: (remove-block pos-3-0 pos-4-0 n2 n1)
+5 (Single): Agent 0: (move-down pos-3-0 n1 pos-3-1 n0)
+6 (Single): Agent 0: (place-block pos-3-1 pos-3-2 n0 n1)
+7 (Single): Agent 0: (move pos-3-1 pos-4-1 n0)
+8 (Single): Agent 0: (remove-block pos-4-1 pos-4-0 n1 n0)
+9 (Single): Agent 0: (move pos-4-1 pos-3-1 n0)
+10 (Single): Agent 0: (move pos-3-1 pos-2-1 n0)
+11 (Single): Agent 0: (place-block pos-2-1 pos-1-1 n0 n1)
+12 (Single): Agent 0: (move pos-2-1 pos-2-0 n0)
+13 (Single): Agent 0: (create-block pos-2-0)
+14 (Single): Agent 0: (move pos-2-0 pos-1-0 n0)
+15 (Single): Agent 0: (place-block pos-1-0 pos-0-0 n0 n1)
+16 (Single): Agent 0: (move pos-1-0 pos-2-0 n0)
+17 (Single): Agent 0: (remove-block pos-2-0 pos-3-0 n1 n0)
+18 (Single): Agent 0: (place-block pos-2-0 pos-2-1 n0 n1)
+19 (Single): Agent 0: (create-block pos-2-0)
+20 (Single): Agent 0: (place-block pos-2-0 pos-1-0 n0 n1)
+21 (Single): Agent 0: (create-block pos-2-0)
+22 (Single): Agent 0: (move-up pos-2-0 n0 pos-1-0 n1)
+23 (Single): Agent 0: (move pos-1-0 pos-1-1 n1)
+24 (Single): Agent 0: (move-down pos-1-1 n1 pos-0-1 n0)
+25 (Single): Agent 0: (move pos-0-1 pos-0-2 n0)
+26 (Single): Agent 0: (place-block pos-0-2 pos-0-3 n0 n1)
+27 (Single): Agent 0: (move pos-0-2 pos-0-1 n0)
+28 (Single): Agent 0: (remove-block pos-0-1 pos-1-1 n1 n0)
+29 (Single): Agent 0: (place-block pos-0-1 pos-0-2 n0 n1)
+30 (Single): Agent 0: (remove-block pos-0-1 pos-0-0 n1 n0)
+31 (Single): Agent 0: (move-up pos-0-1 n0 pos-0-2 n1)
+32 (Single): Agent 0: (place-block pos-0-2 pos-0-3 n1 n2)
+33 (Single): Agent 0: (move-down pos-0-2 n1 pos-1-2 n0)
+34 (Single): Agent 0: (move pos-1-2 pos-2-2 n0)
+35 (Single): Agent 0: (remove-block pos-2-2 pos-2-1 n1 n0)
+36 (Single): Agent 0: (place-block pos-2-2 pos-1-2 n0 n1)
+37 (Single): Agent 0: (remove-block pos-2-2 pos-3-2 n1 n0)
+38 (Single): Agent 0: (move-up pos-2-2 n0 pos-1-2 n1)
+39 (Single): Agent 0: (place-block pos-1-2 pos-0-2 n1 n2)
+40 (Single): Agent 0: (move-down pos-1-2 n1 pos-1-1 n0)
+41 (Single): Agent 0: (remove-block pos-1-1 pos-1-0 n1 n0)
+42 (Single): Agent 0: (move-up pos-1-1 n0 pos-1-2 n1)
+43 (Single): Agent 0: (move-up pos-1-2 n1 pos-0-2 n2)
+44 (Single): Agent 0: (place-block pos-0-2 pos-0-3 n2 n3)
+45 (Single): Agent 0: (move-down pos-0-2 n2 pos-1-2 n1)
+46 (Single): Agent 0: (remove-block pos-1-2 pos-0-2 n2 n1)
+47 (Single): Agent 0: (move-down pos-1-2 n1 pos-1-1 n0)
+48 (Single): Agent 0: (place-block pos-1-1 pos-2-1 n0 n1)
+49 (Single): Agent 0: (remove-block pos-1-1 pos-1-2 n1 n0)
+50 (Single): Agent 0: (move pos-1-1 pos-0-1 n0)
+51 (Single): Agent 0: (place-block pos-0-1 pos-1-1 n0 n1)
+52 (Single): Agent 0: (remove-block pos-0-1 pos-0-2 n1 n0)
+53 (Single): Agent 0: (move pos-0-1 pos-0-0 n0)
+54 (Single): Agent 0: (move pos-0-0 pos-1-0 n0)
+55 (Single): Agent 0: (move pos-1-0 pos-2-0 n0)
+56 (Single): Agent 0: (destroy-block pos-2-0)
+57 (Single): Agent 0: (move pos-2-0 pos-1-0 n0)
+58 (Single): Agent 0: (remove-block pos-1-0 pos-1-1 n1 n0)
+59 (Single): Agent 0: (move pos-1-0 pos-2-0 n0)
+60 (Single): Agent 0: (destroy-block pos-2-0)
+61 (Single): Agent 0: (remove-block pos-2-0 pos-2-1 n1 n0)
+62 (Single): Agent 0: (destroy-block pos-2-0)
+
+Current Combined Plan:
+1 (Single): Agent 0: (create-block pos-2-0)
+2 (Single): Agent 0: (place-block pos-2-0 pos-1-0 n0 n1)
+3 (Single): Agent 0: (create-block pos-2-0)
+4 (Single): Agent 0: (move pos-2-0 pos-2-1 n0)
+5 (Single): Agent 0: (place-block pos-2-1 pos-1-1 n0 n1)
+6 (Single): Agent 0: (move pos-2-1 pos-2-0 n0)
+7 (Single): Agent 0: (create-block pos-2-0)
+8 (Single): Agent 0: (move-up pos-2-0 n0 pos-1-0 n1)
+9 (Single): Agent 0: (place-block pos-1-0 pos-1-1 n1 n2)
+10 (Single): Agent 0: (move-down pos-1-0 n1 pos-2-0 n0)
+11 (Single): Agent 0: (create-block pos-2-0)
+12 (Single): Agent 0: (place-block pos-2-0 pos-2-1 n0 n1)
+13 (Single): Agent 0: (remove-block pos-2-0 pos-1-0 n1 n0)
+14 (Parallel, derived from single action with multiple steps):
+  Agent 0: (destroy-block pos-2-0)
+  Agent 0: (move-up pos-2-0 n0 pos-2-1 n1)
+15 (Single): Agent 0: (remove-block pos-2-1 pos-1-1 n2 n1)
+16 (Single): Agent 0: (move-down pos-2-1 n1 pos-2-2 n0)
+17 (Single): Agent 0: (move pos-2-2 pos-2-3 n0)
+18 (Single): Agent 0: (place-block pos-2-3 pos-3-3 n0 n1)
+19 (Single): Agent 0: (move pos-2-3 pos-2-2 n0)
+20 (Single): Agent 0: (remove-block pos-2-2 pos-2-1 n1 n0)
+21 (Single): Agent 0: (place-block pos-2-2 pos-2-3 n0 n1)
+22 (Single): Agent 0: (move pos-2-2 pos-2-1 n0)
+23 (Single): Agent 0: (remove-block pos-2-1 pos-1-1 n1 n0)
+24 (Single): Agent 0: (move pos-2-1 pos-2-2 n0)
+25 (Single): Agent 0: (move-up pos-2-2 n0 pos-2-3 n1)
+26 (Single): Agent 0: (place-block pos-2-3 pos-3-3 n1 n2)
+27 (Single): Agent 0: (move-down pos-2-3 n1 pos-2-2 n0)
+28 (Single): Agent 0: (remove-block pos-2-2 pos-2-3 n1 n0)
+29 (Single): Agent 0: (move pos-2-2 pos-2-1 n0)
+30 (Single): Agent 0: (move pos-2-1 pos-2-0 n0)
+31 (Single): Agent 0: (destroy-block pos-2-0)
+32 (Single): Agent 1: (create-block pos-2-0)
+33 (Single): Agent 1: (move pos-2-0 pos-3-0 n0)
+34 (Single): Agent 1: (move pos-3-0 pos-3-1 n0)
+35 (Single): Agent 1: (place-block pos-3-1 pos-3-2 n0 n1)
+36 (Single): Agent 1: (move-up pos-3-1 n0 pos-3-2 n1)
+37 (Single): Agent 1: (remove-block pos-3-2 pos-3-3 n2 n1)
+38 (Single): Agent 1: (move-down pos-3-2 n1 pos-3-1 n0)
+39 (Single): Agent 1: (place-block pos-3-1 pos-3-0 n0 n1)
+40 (Single): Agent 1: (remove-block pos-3-1 pos-3-2 n1 n0)
+41 (Single): Agent 1: (move pos-3-1 pos-4-1 n0)
+42 (Single): Agent 1: (place-block pos-4-1 pos-4-0 n0 n1)
+43 (Single): Agent 1: (move pos-4-1 pos-3-1 n0)
+44 (Single): Agent 1: (move pos-3-1 pos-3-2 n0)
+45 (Single): Agent 1: (remove-block pos-3-2 pos-3-3 n1 n0)
+46 (Single): Agent 1: (move pos-3-2 pos-3-1 n0)
+47 (Single): Agent 1: (move-up pos-3-1 n0 pos-3-0 n1)
+48 (Single): Agent 1: (place-block pos-3-0 pos-4-0 n1 n2)
+49 (Single): Agent 1: (move-down pos-3-0 n1 pos-2-0 n0)
+50 (Single): Agent 1: (remove-block pos-2-0 pos-3-0 n1 n0)
+51 (Single): Agent 1: (destroy-block pos-2-0)
+
+113 True
+
+Final Merged Plan:
+1 (Single): Agent 0: (create-block pos-2-0)
+2 (Single): Agent 0: (place-block pos-2-0 pos-1-0 n0 n1)
+3 (Single): Agent 0: (create-block pos-2-0)
+4 (Single): Agent 0: (move pos-2-0 pos-2-1 n0)
+5 (Single): Agent 0: (place-block pos-2-1 pos-1-1 n0 n1)
+6 (Single): Agent 0: (move pos-2-1 pos-2-0 n0)
+7 (Single): Agent 0: (create-block pos-2-0)
+8 (Single): Agent 0: (move-up pos-2-0 n0 pos-1-0 n1)
+9 (Single): Agent 0: (place-block pos-1-0 pos-1-1 n1 n2)
+10 (Single): Agent 0: (move-down pos-1-0 n1 pos-2-0 n0)
+11 (Single): Agent 0: (create-block pos-2-0)
+12 (Single): Agent 0: (place-block pos-2-0 pos-2-1 n0 n1)
+13 (Single): Agent 0: (remove-block pos-2-0 pos-1-0 n1 n0)
+14 (Parallel, derived from single action with multiple steps):
+  Agent 0: (destroy-block pos-2-0)
+  Agent 0: (move-up pos-2-0 n0 pos-2-1 n1)
+15 (Single): Agent 0: (remove-block pos-2-1 pos-1-1 n2 n1)
+16 (Single): Agent 0: (move-down pos-2-1 n1 pos-2-2 n0)
+17 (Single): Agent 0: (move pos-2-2 pos-2-3 n0)
+18 (Single): Agent 0: (place-block pos-2-3 pos-3-3 n0 n1)
+19 (Single): Agent 0: (move pos-2-3 pos-2-2 n0)
+20 (Single): Agent 0: (remove-block pos-2-2 pos-2-1 n1 n0)
+21 (Single): Agent 0: (place-block pos-2-2 pos-2-3 n0 n1)
+22 (Single): Agent 0: (move pos-2-2 pos-2-1 n0)
+23 (Single): Agent 0: (remove-block pos-2-1 pos-1-1 n1 n0)
+24 (Single): Agent 0: (move pos-2-1 pos-2-2 n0)
+25 (Single): Agent 0: (move-up pos-2-2 n0 pos-2-3 n1)
+26 (Single): Agent 0: (place-block pos-2-3 pos-3-3 n1 n2)
+27 (Single): Agent 0: (move-down pos-2-3 n1 pos-2-2 n0)
+28 (Single): Agent 0: (remove-block pos-2-2 pos-2-3 n1 n0)
+29 (Single): Agent 0: (move pos-2-2 pos-2-1 n0)
+30 (Single): Agent 0: (move pos-2-1 pos-2-0 n0)
+31 (Single): Agent 0: (destroy-block pos-2-0)
+32 (Single): Agent 0: (create-block pos-2-0)
+33 (Single): Agent 0: (move pos-2-0 pos-3-0 n0)
+34 (Single): Agent 0: (move pos-3-0 pos-3-1 n0)
+35 (Single): Agent 0: (place-block pos-3-1 pos-3-2 n0 n1)
+36 (Single): Agent 0: (move-up pos-3-1 n0 pos-3-2 n1)
+37 (Single): Agent 0: (remove-block pos-3-2 pos-3-3 n2 n1)
+38 (Single): Agent 0: (move-down pos-3-2 n1 pos-3-1 n0)
+39 (Single): Agent 0: (place-block pos-3-1 pos-3-0 n0 n1)
+40 (Single): Agent 0: (remove-block pos-3-1 pos-3-2 n1 n0)
+41 (Single): Agent 0: (move pos-3-1 pos-4-1 n0)
+42 (Single): Agent 0: (place-block pos-4-1 pos-4-0 n0 n1)
+43 (Single): Agent 0: (move pos-4-1 pos-3-1 n0)
+44 (Single): Agent 0: (move pos-3-1 pos-3-2 n0)
+45 (Single): Agent 0: (remove-block pos-3-2 pos-3-3 n1 n0)
+46 (Single): Agent 0: (move pos-3-2 pos-3-1 n0)
+47 (Single): Agent 0: (move-up pos-3-1 n0 pos-3-0 n1)
+48 (Single): Agent 0: (place-block pos-3-0 pos-4-0 n1 n2)
+49 (Single): Agent 0: (move-down pos-3-0 n1 pos-2-0 n0)
+50 (Single): Agent 0: (remove-block pos-2-0 pos-3-0 n1 n0)
+51 (Single): Agent 0: (destroy-block pos-2-0)
+52 (Single): Agent 1: (create-block pos-2-0)
+53 (Single): Agent 1: (place-block pos-2-0 pos-3-0 n0 n1)
+54 (Single): Agent 1: (move-up pos-2-0 n0 pos-3-0 n1)
+55 (Single): Agent 1: (remove-block pos-3-0 pos-4-0 n2 n1)
+56 (Single): Agent 1: (move-down pos-3-0 n1 pos-3-1 n0)
+57 (Single): Agent 1: (place-block pos-3-1 pos-3-2 n0 n1)
+58 (Single): Agent 1: (move pos-3-1 pos-4-1 n0)
+59 (Single): Agent 1: (remove-block pos-4-1 pos-4-0 n1 n0)
+60 (Single): Agent 1: (move pos-4-1 pos-3-1 n0)
+61 (Single): Agent 1: (move pos-3-1 pos-2-1 n0)
+62 (Single): Agent 1: (place-block pos-2-1 pos-1-1 n0 n1)
+63 (Single): Agent 1: (move pos-2-1 pos-2-0 n0)
+64 (Single): Agent 1: (create-block pos-2-0)
+65 (Single): Agent 1: (move pos-2-0 pos-1-0 n0)
+66 (Single): Agent 1: (place-block pos-1-0 pos-0-0 n0 n1)
+67 (Single): Agent 1: (move pos-1-0 pos-2-0 n0)
+68 (Single): Agent 1: (remove-block pos-2-0 pos-3-0 n1 n0)
+69 (Single): Agent 1: (place-block pos-2-0 pos-2-1 n0 n1)
+70 (Single): Agent 1: (create-block pos-2-0)
+71 (Single): Agent 1: (place-block pos-2-0 pos-1-0 n0 n1)
+72 (Single): Agent 1: (create-block pos-2-0)
+73 (Single): Agent 1: (move-up pos-2-0 n0 pos-1-0 n1)
+74 (Single): Agent 1: (move pos-1-0 pos-1-1 n1)
+75 (Single): Agent 1: (move-down pos-1-1 n1 pos-0-1 n0)
+76 (Single): Agent 1: (move pos-0-1 pos-0-2 n0)
+77 (Single): Agent 1: (place-block pos-0-2 pos-0-3 n0 n1)
+78 (Single): Agent 1: (move pos-0-2 pos-0-1 n0)
+79 (Single): Agent 1: (remove-block pos-0-1 pos-1-1 n1 n0)
+80 (Single): Agent 1: (place-block pos-0-1 pos-0-2 n0 n1)
+81 (Single): Agent 1: (remove-block pos-0-1 pos-0-0 n1 n0)
+82 (Single): Agent 1: (move-up pos-0-1 n0 pos-0-2 n1)
+83 (Single): Agent 1: (place-block pos-0-2 pos-0-3 n1 n2)
+84 (Single): Agent 1: (move-down pos-0-2 n1 pos-1-2 n0)
+85 (Single): Agent 1: (move pos-1-2 pos-2-2 n0)
+86 (Single): Agent 1: (remove-block pos-2-2 pos-2-1 n1 n0)
+87 (Single): Agent 1: (place-block pos-2-2 pos-1-2 n0 n1)
+88 (Single): Agent 1: (remove-block pos-2-2 pos-3-2 n1 n0)
+89 (Single): Agent 1: (move-up pos-2-2 n0 pos-1-2 n1)
+90 (Single): Agent 1: (place-block pos-1-2 pos-0-2 n1 n2)
+91 (Single): Agent 1: (move-down pos-1-2 n1 pos-1-1 n0)
+92 (Single): Agent 1: (remove-block pos-1-1 pos-1-0 n1 n0)
+93 (Single): Agent 1: (move-up pos-1-1 n0 pos-1-2 n1)
+94 (Single): Agent 1: (move-up pos-1-2 n1 pos-0-2 n2)
+95 (Single): Agent 1: (place-block pos-0-2 pos-0-3 n2 n3)
+96 (Single): Agent 1: (move-down pos-0-2 n2 pos-1-2 n1)
+97 (Single): Agent 1: (remove-block pos-1-2 pos-0-2 n2 n1)
+98 (Single): Agent 1: (move-down pos-1-2 n1 pos-1-1 n0)
+99 (Single): Agent 1: (place-block pos-1-1 pos-2-1 n0 n1)
+100 (Single): Agent 1: (remove-block pos-1-1 pos-1-2 n1 n0)
+101 (Single): Agent 1: (move pos-1-1 pos-0-1 n0)
+102 (Single): Agent 1: (place-block pos-0-1 pos-1-1 n0 n1)
+103 (Single): Agent 1: (remove-block pos-0-1 pos-0-2 n1 n0)
+104 (Single): Agent 1: (move pos-0-1 pos-0-0 n0)
+105 (Single): Agent 1: (move pos-0-0 pos-1-0 n0)
+106 (Single): Agent 1: (move pos-1-0 pos-2-0 n0)
+107 (Single): Agent 1: (destroy-block pos-2-0)
+108 (Single): Agent 1: (move pos-2-0 pos-1-0 n0)
+109 (Single): Agent 1: (remove-block pos-1-0 pos-1-1 n1 n0)
+110 (Single): Agent 1: (move pos-1-0 pos-2-0 n0)
+111 (Single): Agent 1: (destroy-block pos-2-0)
+112 (Single): Agent 1: (remove-block pos-2-0 pos-2-1 n1 n0)
+113 (Single): Agent 1: (destroy-block pos-2-0)
+
+Total Cost: 113
+[results][termes][07]
+[single_agent][planning time: 1000.18][cost: 56.0]
+[multi_agent][planning_time: 285.25712188720706][cost: 113.0][agents: 4][optimization time 33.5209858417511]
+----------------------------------------
+Using cached single agent results
+LLM generated no subgoal for agent 3, reducing number of agents
+args.num_agents: 3
+['The height at pos-1-1 is 3 and all blocks are placed.', 'The height at pos-0-2 is 3 and all blocks are placed.']
+['./experiments_multiagent_help/run3034/termes/p08_1.pddl', './experiments_multiagent_help/run3034/termes/p08_2.pddl']
+agent1
+[info][subgoal_1][termes] task 08 takes 23.94 sec, found a plan with cost 23.0
+planner successful
+validating
+validator time 0.011703014373779297
+agent2
+[info][subgoal_2][termes] task 08 takes 250.16 sec, found a plan with cost 42.0
+planner successful
+validating
+validator time 0.014437437057495117
+[info][multiagent main goal][termes] task 08 takes 250.21 sec, found a plan with cost 36.0
+TASK: termes - 3034 - 08
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (create-block pos-2-0)
+2 (Single): Agent 1: (place-block pos-2-0 pos-1-0 n0 n1)
+3 (Single): Agent 1: (create-block pos-2-0)
+4 (Single): Agent 1: (move pos-2-0 pos-2-1 n0)
+5 (Single): Agent 1: (place-block pos-2-1 pos-1-1 n0 n1)
+6 (Single): Agent 1: (move pos-2-1 pos-2-0 n0)
+7 (Single): Agent 1: (create-block pos-2-0)
+8 (Single): Agent 1: (place-block pos-2-0 pos-2-1 n0 n1)
+9 (Single): Agent 1: (create-block pos-2-0)
+10 (Single): Agent 1: (move-up pos-2-0 n0 pos-1-0 n1)
+11 (Single): Agent 1: (move pos-1-0 pos-1-1 n1)
+12 (Single): Agent 1: (place-block pos-1-1 pos-1-0 n1 n2)
+13 (Single): Agent 1: (move pos-1-1 pos-2-1 n1)
+14 (Single): Agent 1: (move-down pos-2-1 n1 pos-2-0 n0)
+15 (Single): Agent 1: (create-block pos-2-0)
+16 (Single): Agent 1: (move-up pos-2-0 n0 pos-2-1 n1)
+17 (Single): Agent 1: (place-block pos-2-1 pos-1-1 n1 n2)
+18 (Single): Agent 1: (move-down pos-2-1 n1 pos-2-0 n0)
+19 (Single): Agent 1: (create-block pos-2-0)
+20 (Single): Agent 1: (move-up pos-2-0 n0 pos-2-1 n1)
+21 (Single): Agent 1: (move-up pos-2-1 n1 pos-1-1 n2)
+22 (Single): Agent 1: (move pos-1-1 pos-1-0 n2)
+23 (Single): Agent 1: (place-block pos-1-0 pos-1-1 n2 n3)
+
+merging plan 2 into initial_plan
+inf False
+Merge failed - no valid solution found
+[results][termes][08]
+[single_agent][planning time: 1000.25][cost: 64.0]
+[multi_agent][planning_time: 534.8578966236115][cost: inf][agents: 3][optimization time 8.575933933258057]
+----------------------------------------
+Using cached single agent results
+['height at pos-1-3 is 2 and all blocks are placed.', 'height at pos-2-3 is 2 and all blocks are placed.', 'height at pos-3-3 is 2 and all blocks are placed.']
+['./experiments_multiagent_help/run3034/termes/p09_1.pddl', './experiments_multiagent_help/run3034/termes/p09_2.pddl', './experiments_multiagent_help/run3034/termes/p09_3.pddl']
+agent1
+[info][subgoal_1][termes] task 09 takes 3.78 sec, found a plan with cost 20.0
+planner successful
+validating
+validator time 0.011852741241455078
+agent2
+[info][subgoal_2][termes] task 09 takes 1.3 sec, found a plan with cost 14.0
+planner successful
+validating
+validator time 0.011424064636230469
+agent3
+[info][subgoal_3][termes] task 09 takes 1.47 sec, found a plan with cost 14.0
+planner successful
+validating
+validator time 0.010711193084716797
+[info][multiagent main goal][termes] task 09 takes 250.17 sec, found a plan with cost 108.0
+TASK: termes - 3034 - 09
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (create-block pos-2-0)
+2 (Single): Agent 1: (place-block pos-2-0 pos-2-1 n0 n1)
+3 (Single): Agent 1: (create-block pos-2-0)
+4 (Single): Agent 1: (place-block pos-2-0 pos-1-0 n0 n1)
+5 (Single): Agent 1: (create-block pos-2-0)
+6 (Single): Agent 1: (move-up pos-2-0 n0 pos-2-1 n1)
+7 (Single): Agent 1: (move-down pos-2-1 n1 pos-1-1 n0)
+8 (Single): Agent 1: (move pos-1-1 pos-1-2 n0)
+9 (Single): Agent 1: (place-block pos-1-2 pos-1-3 n0 n1)
+10 (Single): Agent 1: (move pos-1-2 pos-1-1 n0)
+11 (Single): Agent 1: (remove-block pos-1-1 pos-1-0 n1 n0)
+12 (Single): Agent 1: (place-block pos-1-1 pos-1-2 n0 n1)
+13 (Single): Agent 1: (remove-block pos-1-1 pos-2-1 n1 n0)
+14 (Single): Agent 1: (move-up pos-1-1 n0 pos-1-2 n1)
+15 (Single): Agent 1: (place-block pos-1-2 pos-1-3 n1 n2)
+16 (Single): Agent 1: (move-down pos-1-2 n1 pos-1-1 n0)
+17 (Single): Agent 1: (remove-block pos-1-1 pos-1-2 n1 n0)
+18 (Single): Agent 1: (move pos-1-1 pos-1-0 n0)
+19 (Single): Agent 1: (move pos-1-0 pos-2-0 n0)
+20 (Single): Agent 1: (destroy-block pos-2-0)
+
+merging plan 2 into initial_plan
+34 True
+verifying entire plan.
+merging plan 3 into initial_plan
+48 True
+verifying entire plan.
+merging main agent's plan into combined plan
+
+Main Agent's Plan:
+1 (Single): Agent 0: (create-block pos-2-0)
+2 (Single): Agent 0: (move pos-2-0 pos-2-1 n0)
+3 (Single): Agent 0: (move pos-2-1 pos-2-2 n0)
+4 (Single): Agent 0: (place-block pos-2-2 pos-2-3 n0 n1)
+5 (Single): Agent 0: (move-up pos-2-2 n0 pos-2-3 n1)
+6 (Single): Agent 0: (remove-block pos-2-3 pos-3-3 n2 n1)
+7 (Single): Agent 0: (move-down pos-2-3 n1 pos-1-3 n0)
+8 (Single): Agent 0: (place-block pos-1-3 pos-0-3 n0 n1)
+9 (Single): Agent 0: (remove-block pos-1-3 pos-2-3 n1 n0)
+10 (Single): Agent 0: (move pos-1-3 pos-2-3 n0)
+11 (Single): Agent 0: (place-block pos-2-3 pos-1-3 n0 n1)
+12 (Single): Agent 0: (remove-block pos-2-3 pos-3-3 n1 n0)
+13 (Single): Agent 0: (move-up pos-2-3 n0 pos-1-3 n1)
+14 (Single): Agent 0: (place-block pos-1-3 pos-0-3 n1 n2)
+15 (Single): Agent 0: (move-down pos-1-3 n1 pos-1-2 n0)
+16 (Single): Agent 0: (move pos-1-2 pos-1-1 n0)
+17 (Single): Agent 0: (move pos-1-1 pos-1-0 n0)
+18 (Single): Agent 0: (move pos-1-0 pos-2-0 n0)
+19 (Single): Agent 0: (create-block pos-2-0)
+20 (Single): Agent 0: (place-block pos-2-0 pos-1-0 n0 n1)
+21 (Single): Agent 0: (create-block pos-2-0)
+22 (Single): Agent 0: (place-block pos-2-0 pos-2-1 n0 n1)
+23 (Single): Agent 0: (create-block pos-2-0)
+24 (Single): Agent 0: (move-up pos-2-0 n0 pos-2-1 n1)
+25 (Single): Agent 0: (move-down pos-2-1 n1 pos-1-1 n0)
+26 (Single): Agent 0: (place-block pos-1-1 pos-1-2 n0 n1)
+27 (Single): Agent 0: (remove-block pos-1-1 pos-2-1 n1 n0)
+28 (Single): Agent 0: (move-up pos-1-1 n0 pos-1-2 n1)
+29 (Single): Agent 0: (place-block pos-1-2 pos-1-3 n1 n2)
+30 (Single): Agent 0: (move-down pos-1-2 n1 pos-1-1 n0)
+31 (Single): Agent 0: (remove-block pos-1-1 pos-1-0 n1 n0)
+32 (Single): Agent 0: (move-up pos-1-1 n0 pos-1-2 n1)
+33 (Single): Agent 0: (move-up pos-1-2 n1 pos-1-3 n2)
+34 (Single): Agent 0: (place-block pos-1-3 pos-0-3 n2 n3)
+35 (Single): Agent 0: (move-down pos-1-3 n2 pos-1-2 n1)
+36 (Single): Agent 0: (move-down pos-1-2 n1 pos-1-1 n0)
+37 (Single): Agent 0: (move pos-1-1 pos-1-0 n0)
+38 (Single): Agent 0: (move pos-1-0 pos-2-0 n0)
+39 (Single): Agent 0: (create-block pos-2-0)
+40 (Single): Agent 0: (move pos-2-0 pos-1-0 n0)
+41 (Single): Agent 0: (place-block pos-1-0 pos-1-1 n0 n1)
+42 (Single): Agent 0: (move pos-1-0 pos-2-0 n0)
+43 (Single): Agent 0: (create-block pos-2-0)
+44 (Single): Agent 0: (move pos-2-0 pos-2-1 n0)
+45 (Single): Agent 0: (move-up pos-2-1 n0 pos-1-1 n1)
+46 (Single): Agent 0: (place-block pos-1-1 pos-1-2 n1 n2)
+47 (Single): Agent 0: (move-down pos-1-1 n1 pos-2-1 n0)
+48 (Single): Agent 0: (move pos-2-1 pos-2-0 n0)
+49 (Single): Agent 0: (create-block pos-2-0)
+50 (Single): Agent 0: (move pos-2-0 pos-1-0 n0)
+51 (Single): Agent 0: (move-up pos-1-0 n0 pos-1-1 n1)
+52 (Single): Agent 0: (move-up pos-1-1 n1 pos-1-2 n2)
+53 (Single): Agent 0: (place-block pos-1-2 pos-1-3 n2 n3)
+54 (Single): Agent 0: (move-down pos-1-2 n2 pos-1-1 n1)
+55 (Single): Agent 0: (move-down pos-1-1 n1 pos-2-1 n0)
+56 (Single): Agent 0: (move pos-2-1 pos-2-0 n0)
+57 (Single): Agent 0: (create-block pos-2-0)
+58 (Single): Agent 0: (move pos-2-0 pos-2-1 n0)
+59 (Single): Agent 0: (place-block pos-2-1 pos-2-2 n0 n1)
+60 (Single): Agent 0: (remove-block pos-2-1 pos-1-1 n1 n0)
+61 (Single): Agent 0: (move-up pos-2-1 n0 pos-2-2 n1)
+62 (Single): Agent 0: (move-up pos-2-2 n1 pos-1-2 n2)
+63 (Single): Agent 0: (move-up pos-1-2 n2 pos-1-3 n3)
+64 (Single): Agent 0: (place-block pos-1-3 pos-0-3 n3 n4)
+65 (Single): Agent 0: (move-down pos-1-3 n3 pos-1-2 n2)
+66 (Single): Agent 0: (remove-block pos-1-2 pos-1-3 n3 n2)
+67 (Single): Agent 0: (move-down pos-1-2 n2 pos-2-2 n1)
+68 (Single): Agent 0: (move-down pos-2-2 n1 pos-2-1 n0)
+69 (Single): Agent 0: (place-block pos-2-1 pos-3-1 n0 n1)
+70 (Single): Agent 0: (move-up pos-2-1 n0 pos-2-2 n1)
+71 (Single): Agent 0: (remove-block pos-2-2 pos-1-2 n2 n1)
+72 (Single): Agent 0: (move-down pos-2-2 n1 pos-2-1 n0)
+73 (Single): Agent 0: (move pos-2-1 pos-1-1 n0)
+74 (Single): Agent 0: (place-block pos-1-1 pos-1-0 n0 n1)
+75 (Single): Agent 0: (move-up pos-1-1 n0 pos-1-2 n1)
+76 (Single): Agent 0: (remove-block pos-1-2 pos-1-3 n2 n1)
+77 (Single): Agent 0: (move-down pos-1-2 n1 pos-1-1 n0)
+78 (Single): Agent 0: (move pos-1-1 pos-2-1 n0)
+79 (Single): Agent 0: (place-block pos-2-1 pos-1-1 n0 n1)
+80 (Single): Agent 0: (remove-block pos-2-1 pos-2-2 n1 n0)
+81 (Single): Agent 0: (move pos-2-1 pos-2-0 n0)
+82 (Single): Agent 0: (destroy-block pos-2-0)
+83 (Single): Agent 0: (move pos-2-0 pos-2-1 n0)
+84 (Single): Agent 0: (remove-block pos-2-1 pos-3-1 n1 n0)
+85 (Single): Agent 0: (move pos-2-1 pos-2-0 n0)
+86 (Single): Agent 0: (destroy-block pos-2-0)
+87 (Single): Agent 0: (move pos-2-0 pos-2-1 n0)
+88 (Single): Agent 0: (move pos-2-1 pos-2-2 n0)
+89 (Single): Agent 0: (move pos-2-2 pos-2-3 n0)
+90 (Single): Agent 0: (remove-block pos-2-3 pos-1-3 n1 n0)
+91 (Single): Agent 0: (move pos-2-3 pos-2-2 n0)
+92 (Single): Agent 0: (move pos-2-2 pos-2-1 n0)
+93 (Single): Agent 0: (move pos-2-1 pos-2-0 n0)
+94 (Single): Agent 0: (destroy-block pos-2-0)
+95 (Single): Agent 0: (move pos-2-0 pos-2-1 n0)
+96 (Single): Agent 0: (move pos-2-1 pos-2-2 n0)
+97 (Single): Agent 0: (remove-block pos-2-2 pos-1-2 n1 n0)
+98 (Single): Agent 0: (place-block pos-2-2 pos-2-1 n0 n1)
+99 (Single): Agent 0: (move-up pos-2-2 n0 pos-2-1 n1)
+100 (Single): Agent 0: (move-down pos-2-1 n1 pos-2-0 n0)
+101 (Single): Agent 0: (remove-block pos-2-0 pos-1-0 n1 n0)
+102 (Single): Agent 0: (destroy-block pos-2-0)
+103 (Single): Agent 0: (move pos-2-0 pos-1-0 n0)
+104 (Single): Agent 0: (remove-block pos-1-0 pos-1-1 n1 n0)
+105 (Single): Agent 0: (move pos-1-0 pos-2-0 n0)
+106 (Single): Agent 0: (destroy-block pos-2-0)
+107 (Single): Agent 0: (remove-block pos-2-0 pos-2-1 n1 n0)
+108 (Single): Agent 0: (destroy-block pos-2-0)
+
+Current Combined Plan:
+1 (Single): Agent 0: (create-block pos-2-0)
+2 (Single): Agent 0: (place-block pos-2-0 pos-2-1 n0 n1)
+3 (Single): Agent 0: (create-block pos-2-0)
+4 (Single): Agent 0: (place-block pos-2-0 pos-1-0 n0 n1)
+5 (Single): Agent 0: (create-block pos-2-0)
+6 (Single): Agent 0: (move-up pos-2-0 n0 pos-2-1 n1)
+7 (Single): Agent 0: (move-down pos-2-1 n1 pos-1-1 n0)
+8 (Single): Agent 0: (move pos-1-1 pos-1-2 n0)
+9 (Single): Agent 0: (place-block pos-1-2 pos-1-3 n0 n1)
+10 (Single): Agent 0: (move pos-1-2 pos-1-1 n0)
+11 (Single): Agent 0: (remove-block pos-1-1 pos-1-0 n1 n0)
+12 (Single): Agent 0: (place-block pos-1-1 pos-1-2 n0 n1)
+13 (Single): Agent 0: (remove-block pos-1-1 pos-2-1 n1 n0)
+14 (Single): Agent 0: (move-up pos-1-1 n0 pos-1-2 n1)
+15 (Single): Agent 0: (place-block pos-1-2 pos-1-3 n1 n2)
+16 (Single): Agent 0: (move-down pos-1-2 n1 pos-1-1 n0)
+17 (Single): Agent 0: (remove-block pos-1-1 pos-1-2 n1 n0)
+18 (Single): Agent 0: (move pos-1-1 pos-1-0 n0)
+19 (Single): Agent 0: (move pos-1-0 pos-2-0 n0)
+20 (Single): Agent 0: (destroy-block pos-2-0)
+21 (Single): Agent 0: (create-block pos-2-0)
+22 (Single): Agent 0: (move pos-2-0 pos-2-1 n0)
+23 (Single): Agent 0: (move pos-2-1 pos-2-2 n0)
+24 (Single): Agent 0: (place-block pos-2-2 pos-2-3 n0 n1)
+25 (Single): Agent 0: (move-up pos-2-2 n0 pos-2-3 n1)
+26 (Single): Agent 0: (remove-block pos-2-3 pos-1-3 n2 n1)
+27 (Single): Agent 0: (move pos-2-3 pos-1-3 n1)
+28 (Single): Agent 0: (place-block pos-1-3 pos-2-3 n1 n2)
+29 (Single): Agent 0: (move-down pos-1-3 n1 pos-1-2 n0)
+30 (Single): Agent 0: (remove-block pos-1-2 pos-1-3 n1 n0)
+31 (Single): Agent 0: (move pos-1-2 pos-1-1 n0)
+32 (Single): Agent 0: (move pos-1-1 pos-1-0 n0)
+33 (Single): Agent 0: (move pos-1-0 pos-2-0 n0)
+34 (Single): Agent 0: (destroy-block pos-2-0)
+35 (Single): Agent 1: (create-block pos-2-0)
+36 (Single): Agent 1: (move pos-2-0 pos-2-1 n0)
+37 (Single): Agent 1: (move pos-2-1 pos-2-2 n0)
+38 (Single): Agent 1: (move pos-2-2 pos-3-2 n0)
+39 (Single): Agent 1: (place-block pos-3-2 pos-3-3 n0 n1)
+40 (Single): Agent 1: (move-up pos-3-2 n0 pos-3-3 n1)
+41 (Single): Agent 1: (remove-block pos-3-3 pos-2-3 n2 n1)
+42 (Single): Agent 1: (move pos-3-3 pos-2-3 n1)
+43 (Single): Agent 1: (place-block pos-2-3 pos-3-3 n1 n2)
+44 (Single): Agent 1: (move-down pos-2-3 n1 pos-2-2 n0)
+45 (Single): Agent 1: (remove-block pos-2-2 pos-2-3 n1 n0)
+46 (Single): Agent 1: (move pos-2-2 pos-2-1 n0)
+47 (Single): Agent 1: (move pos-2-1 pos-2-0 n0)
+48 (Single): Agent 1: (destroy-block pos-2-0)
+
+156 True
+
+Final Merged Plan:
+1 (Single): Agent 0: (create-block pos-2-0)
+2 (Single): Agent 0: (place-block pos-2-0 pos-2-1 n0 n1)
+3 (Single): Agent 0: (create-block pos-2-0)
+4 (Single): Agent 0: (place-block pos-2-0 pos-1-0 n0 n1)
+5 (Single): Agent 0: (create-block pos-2-0)
+6 (Single): Agent 0: (move-up pos-2-0 n0 pos-2-1 n1)
+7 (Single): Agent 0: (move-down pos-2-1 n1 pos-1-1 n0)
+8 (Single): Agent 0: (move pos-1-1 pos-1-2 n0)
+9 (Single): Agent 0: (place-block pos-1-2 pos-1-3 n0 n1)
+10 (Single): Agent 0: (move pos-1-2 pos-1-1 n0)
+11 (Single): Agent 0: (remove-block pos-1-1 pos-1-0 n1 n0)
+12 (Single): Agent 0: (place-block pos-1-1 pos-1-2 n0 n1)
+13 (Single): Agent 0: (remove-block pos-1-1 pos-2-1 n1 n0)
+14 (Single): Agent 0: (move-up pos-1-1 n0 pos-1-2 n1)
+15 (Single): Agent 0: (place-block pos-1-2 pos-1-3 n1 n2)
+16 (Single): Agent 0: (move-down pos-1-2 n1 pos-1-1 n0)
+17 (Single): Agent 0: (remove-block pos-1-1 pos-1-2 n1 n0)
+18 (Single): Agent 0: (move pos-1-1 pos-1-0 n0)
+19 (Single): Agent 0: (move pos-1-0 pos-2-0 n0)
+20 (Single): Agent 0: (destroy-block pos-2-0)
+21 (Single): Agent 0: (create-block pos-2-0)
+22 (Single): Agent 0: (move pos-2-0 pos-2-1 n0)
+23 (Single): Agent 0: (move pos-2-1 pos-2-2 n0)
+24 (Single): Agent 0: (place-block pos-2-2 pos-2-3 n0 n1)
+25 (Single): Agent 0: (move-up pos-2-2 n0 pos-2-3 n1)
+26 (Single): Agent 0: (remove-block pos-2-3 pos-1-3 n2 n1)
+27 (Single): Agent 0: (move pos-2-3 pos-1-3 n1)
+28 (Single): Agent 0: (place-block pos-1-3 pos-2-3 n1 n2)
+29 (Single): Agent 0: (move-down pos-1-3 n1 pos-1-2 n0)
+30 (Single): Agent 0: (remove-block pos-1-2 pos-1-3 n1 n0)
+31 (Single): Agent 0: (move pos-1-2 pos-1-1 n0)
+32 (Single): Agent 0: (move pos-1-1 pos-1-0 n0)
+33 (Single): Agent 0: (move pos-1-0 pos-2-0 n0)
+34 (Single): Agent 0: (destroy-block pos-2-0)
+35 (Single): Agent 0: (create-block pos-2-0)
+36 (Single): Agent 0: (move pos-2-0 pos-2-1 n0)
+37 (Single): Agent 0: (move pos-2-1 pos-2-2 n0)
+38 (Single): Agent 0: (move pos-2-2 pos-3-2 n0)
+39 (Single): Agent 0: (place-block pos-3-2 pos-3-3 n0 n1)
+40 (Single): Agent 0: (move-up pos-3-2 n0 pos-3-3 n1)
+41 (Single): Agent 0: (remove-block pos-3-3 pos-2-3 n2 n1)
+42 (Single): Agent 0: (move pos-3-3 pos-2-3 n1)
+43 (Single): Agent 0: (place-block pos-2-3 pos-3-3 n1 n2)
+44 (Single): Agent 0: (move-down pos-2-3 n1 pos-2-2 n0)
+45 (Single): Agent 0: (remove-block pos-2-2 pos-2-3 n1 n0)
+46 (Single): Agent 0: (move pos-2-2 pos-2-1 n0)
+47 (Single): Agent 0: (move pos-2-1 pos-2-0 n0)
+48 (Single): Agent 0: (destroy-block pos-2-0)
+49 (Single): Agent 1: (create-block pos-2-0)
+50 (Single): Agent 1: (move pos-2-0 pos-2-1 n0)
+51 (Single): Agent 1: (move pos-2-1 pos-2-2 n0)
+52 (Single): Agent 1: (place-block pos-2-2 pos-2-3 n0 n1)
+53 (Single): Agent 1: (move-up pos-2-2 n0 pos-2-3 n1)
+54 (Single): Agent 1: (remove-block pos-2-3 pos-3-3 n2 n1)
+55 (Single): Agent 1: (move-down pos-2-3 n1 pos-1-3 n0)
+56 (Single): Agent 1: (place-block pos-1-3 pos-0-3 n0 n1)
+57 (Single): Agent 1: (remove-block pos-1-3 pos-2-3 n1 n0)
+58 (Single): Agent 1: (move pos-1-3 pos-2-3 n0)
+59 (Single): Agent 1: (place-block pos-2-3 pos-1-3 n0 n1)
+60 (Single): Agent 1: (remove-block pos-2-3 pos-3-3 n1 n0)
+61 (Single): Agent 1: (move-up pos-2-3 n0 pos-1-3 n1)
+62 (Single): Agent 1: (place-block pos-1-3 pos-0-3 n1 n2)
+63 (Single): Agent 1: (move-down pos-1-3 n1 pos-1-2 n0)
+64 (Single): Agent 1: (move pos-1-2 pos-1-1 n0)
+65 (Single): Agent 1: (move pos-1-1 pos-1-0 n0)
+66 (Single): Agent 1: (move pos-1-0 pos-2-0 n0)
+67 (Single): Agent 1: (create-block pos-2-0)
+68 (Single): Agent 1: (place-block pos-2-0 pos-1-0 n0 n1)
+69 (Single): Agent 1: (create-block pos-2-0)
+70 (Single): Agent 1: (place-block pos-2-0 pos-2-1 n0 n1)
+71 (Single): Agent 1: (create-block pos-2-0)
+72 (Single): Agent 1: (move-up pos-2-0 n0 pos-2-1 n1)
+73 (Single): Agent 1: (move-down pos-2-1 n1 pos-1-1 n0)
+74 (Single): Agent 1: (place-block pos-1-1 pos-1-2 n0 n1)
+75 (Single): Agent 1: (remove-block pos-1-1 pos-2-1 n1 n0)
+76 (Single): Agent 1: (move-up pos-1-1 n0 pos-1-2 n1)
+77 (Single): Agent 1: (place-block pos-1-2 pos-1-3 n1 n2)
+78 (Single): Agent 1: (move-down pos-1-2 n1 pos-1-1 n0)
+79 (Single): Agent 1: (remove-block pos-1-1 pos-1-0 n1 n0)
+80 (Single): Agent 1: (move-up pos-1-1 n0 pos-1-2 n1)
+81 (Single): Agent 1: (move-up pos-1-2 n1 pos-1-3 n2)
+82 (Single): Agent 1: (place-block pos-1-3 pos-0-3 n2 n3)
+83 (Single): Agent 1: (move-down pos-1-3 n2 pos-1-2 n1)
+84 (Single): Agent 1: (move-down pos-1-2 n1 pos-1-1 n0)
+85 (Single): Agent 1: (move pos-1-1 pos-1-0 n0)
+86 (Single): Agent 1: (move pos-1-0 pos-2-0 n0)
+87 (Single): Agent 1: (create-block pos-2-0)
+88 (Single): Agent 1: (move pos-2-0 pos-1-0 n0)
+89 (Single): Agent 1: (place-block pos-1-0 pos-1-1 n0 n1)
+90 (Single): Agent 1: (move pos-1-0 pos-2-0 n0)
+91 (Single): Agent 1: (create-block pos-2-0)
+92 (Single): Agent 1: (move pos-2-0 pos-2-1 n0)
+93 (Single): Agent 1: (move-up pos-2-1 n0 pos-1-1 n1)
+94 (Single): Agent 1: (place-block pos-1-1 pos-1-2 n1 n2)
+95 (Single): Agent 1: (move-down pos-1-1 n1 pos-2-1 n0)
+96 (Single): Agent 1: (move pos-2-1 pos-2-0 n0)
+97 (Single): Agent 1: (create-block pos-2-0)
+98 (Single): Agent 1: (move pos-2-0 pos-1-0 n0)
+99 (Single): Agent 1: (move-up pos-1-0 n0 pos-1-1 n1)
+100 (Single): Agent 1: (move-up pos-1-1 n1 pos-1-2 n2)
+101 (Single): Agent 1: (place-block pos-1-2 pos-1-3 n2 n3)
+102 (Single): Agent 1: (move-down pos-1-2 n2 pos-1-1 n1)
+103 (Single): Agent 1: (move-down pos-1-1 n1 pos-2-1 n0)
+104 (Single): Agent 1: (move pos-2-1 pos-2-0 n0)
+105 (Single): Agent 1: (create-block pos-2-0)
+106 (Single): Agent 1: (move pos-2-0 pos-2-1 n0)
+107 (Single): Agent 1: (place-block pos-2-1 pos-2-2 n0 n1)
+108 (Single): Agent 1: (remove-block pos-2-1 pos-1-1 n1 n0)
+109 (Single): Agent 1: (move-up pos-2-1 n0 pos-2-2 n1)
+110 (Single): Agent 1: (move-up pos-2-2 n1 pos-1-2 n2)
+111 (Single): Agent 1: (move-up pos-1-2 n2 pos-1-3 n3)
+112 (Single): Agent 1: (place-block pos-1-3 pos-0-3 n3 n4)
+113 (Single): Agent 1: (move-down pos-1-3 n3 pos-1-2 n2)
+114 (Single): Agent 1: (remove-block pos-1-2 pos-1-3 n3 n2)
+115 (Single): Agent 1: (move-down pos-1-2 n2 pos-2-2 n1)
+116 (Single): Agent 1: (move-down pos-2-2 n1 pos-2-1 n0)
+117 (Single): Agent 1: (place-block pos-2-1 pos-3-1 n0 n1)
+118 (Single): Agent 1: (move-up pos-2-1 n0 pos-2-2 n1)
+119 (Single): Agent 1: (remove-block pos-2-2 pos-1-2 n2 n1)
+120 (Single): Agent 1: (move-down pos-2-2 n1 pos-2-1 n0)
+121 (Single): Agent 1: (move pos-2-1 pos-1-1 n0)
+122 (Single): Agent 1: (place-block pos-1-1 pos-1-0 n0 n1)
+123 (Single): Agent 1: (move-up pos-1-1 n0 pos-1-2 n1)
+124 (Single): Agent 1: (remove-block pos-1-2 pos-1-3 n2 n1)
+125 (Single): Agent 1: (move-down pos-1-2 n1 pos-1-1 n0)
+126 (Single): Agent 1: (move pos-1-1 pos-2-1 n0)
+127 (Single): Agent 1: (place-block pos-2-1 pos-1-1 n0 n1)
+128 (Single): Agent 1: (remove-block pos-2-1 pos-2-2 n1 n0)
+129 (Single): Agent 1: (move pos-2-1 pos-2-0 n0)
+130 (Single): Agent 1: (destroy-block pos-2-0)
+131 (Single): Agent 1: (move pos-2-0 pos-2-1 n0)
+132 (Single): Agent 1: (remove-block pos-2-1 pos-3-1 n1 n0)
+133 (Single): Agent 1: (move pos-2-1 pos-2-0 n0)
+134 (Single): Agent 1: (destroy-block pos-2-0)
+135 (Single): Agent 1: (move pos-2-0 pos-2-1 n0)
+136 (Single): Agent 1: (move pos-2-1 pos-2-2 n0)
+137 (Single): Agent 1: (move pos-2-2 pos-2-3 n0)
+138 (Single): Agent 1: (remove-block pos-2-3 pos-1-3 n1 n0)
+139 (Single): Agent 1: (move pos-2-3 pos-2-2 n0)
+140 (Single): Agent 1: (move pos-2-2 pos-2-1 n0)
+141 (Single): Agent 1: (move pos-2-1 pos-2-0 n0)
+142 (Single): Agent 1: (destroy-block pos-2-0)
+143 (Single): Agent 1: (move pos-2-0 pos-2-1 n0)
+144 (Single): Agent 1: (move pos-2-1 pos-2-2 n0)
+145 (Single): Agent 1: (remove-block pos-2-2 pos-1-2 n1 n0)
+146 (Single): Agent 1: (place-block pos-2-2 pos-2-1 n0 n1)
+147 (Single): Agent 1: (move-up pos-2-2 n0 pos-2-1 n1)
+148 (Single): Agent 1: (move-down pos-2-1 n1 pos-2-0 n0)
+149 (Single): Agent 1: (remove-block pos-2-0 pos-1-0 n1 n0)
+150 (Single): Agent 1: (destroy-block pos-2-0)
+151 (Single): Agent 1: (move pos-2-0 pos-1-0 n0)
+152 (Single): Agent 1: (remove-block pos-1-0 pos-1-1 n1 n0)
+153 (Single): Agent 1: (move pos-1-0 pos-2-0 n0)
+154 (Single): Agent 1: (destroy-block pos-2-0)
+155 (Single): Agent 1: (remove-block pos-2-0 pos-2-1 n1 n0)
+156 (Single): Agent 1: (destroy-block pos-2-0)
+
+Total Cost: 156
+[results][termes][09]
+[single_agent][planning time: 1000.2][cost: 100.0]
+[multi_agent][planning_time: 271.2109217357635][cost: 156.0][agents: 4][optimization time 27.164361000061035]
+----------------------------------------
+Using cached single agent results
+LLM generated no subgoal for agent 3, reducing number of agents
+args.num_agents: 3
+['height pos-3-0 2', 'height pos-2-3 4']
+['./experiments_multiagent_help/run3034/termes/p10_1.pddl', './experiments_multiagent_help/run3034/termes/p10_2.pddl']
+agent1
+[info][subgoal_1][termes] task 10 takes 0.53 sec, found a plan with cost 10.0
+planner successful
+validating
+validator time 0.010473251342773438
+agent2
+[info][subgoal_2][termes] task 10 takes 250.27 sec, found a plan with cost 44.0
+planner successful
+validating
+validator time 0.018352985382080078
+[info][multiagent main goal][termes] task 10 takes 121.59 sec, found a plan with cost 24.0
+TASK: termes - 3034 - 10
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (create-block pos-2-0)
+2 (Single): Agent 1: (place-block pos-2-0 pos-3-0 n0 n1)
+3 (Single): Agent 1: (create-block pos-2-0)
+4 (Single): Agent 1: (move pos-2-0 pos-2-1 n0)
+5 (Single): Agent 1: (place-block pos-2-1 pos-3-1 n0 n1)
+6 (Single): Agent 1: (move pos-2-1 pos-2-0 n0)
+7 (Single): Agent 1: (create-block pos-2-0)
+8 (Single): Agent 1: (move pos-2-0 pos-2-1 n0)
+9 (Single): Agent 1: (move-up pos-2-1 n0 pos-3-1 n1)
+10 (Single): Agent 1: (place-block pos-3-1 pos-3-0 n1 n2)
+
+merging plan 2 into initial_plan
+inf False
+Merge failed - no valid solution found
+[results][termes][10]
+[single_agent][planning time: 1000.3][cost: 76.0]
+[multi_agent][planning_time: 376.4443367862701][cost: inf][agents: 3][optimization time 195.6469156742096]
+----------------------------------------
+Using cached single agent results
+['height pos-2-0 3 and no unplaced blocks', 'height pos-1-2 3 and no unplaced blocks', 'height pos-3-0 3 and no unplaced blocks']
+['./experiments_multiagent_help/run3034/termes/p11_1.pddl', './experiments_multiagent_help/run3034/termes/p11_2.pddl', './experiments_multiagent_help/run3034/termes/p11_3.pddl']
+agent1
+[info][subgoal_1][termes] task 11 takes 2.9 sec, found a plan with cost 22.0
+planner successful
+validating
+validator time 0.01715993881225586
+agent2
+[info][subgoal_2][termes] task 11 takes 1.39 sec, found a plan with cost 17.0
+planner successful
+validating
+validator time 0.012552738189697266
+agent3
+[info][subgoal_3][termes] task 11 takes 1.85 sec, found a plan with cost 17.0
+planner successful
+validating
+validator time 0.01101827621459961
+[info][multiagent main goal][termes] task 11 takes 51.22 sec, found a plan with cost 30.0
+TASK: termes - 3034 - 11
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (create-block pos-1-0)
+2 (Single): Agent 1: (move pos-1-0 pos-1-1 n0)
+3 (Single): Agent 1: (place-block pos-1-1 pos-2-1 n0 n1)
+4 (Single): Agent 1: (move pos-1-1 pos-1-0 n0)
+5 (Single): Agent 1: (create-block pos-1-0)
+6 (Single): Agent 1: (place-block pos-1-0 pos-1-1 n0 n1)
+7 (Single): Agent 1: (create-block pos-1-0)
+8 (Single): Agent 1: (place-block pos-1-0 pos-2-0 n0 n1)
+9 (Single): Agent 1: (create-block pos-1-0)
+10 (Single): Agent 1: (move-up pos-1-0 n0 pos-1-1 n1)
+11 (Single): Agent 1: (move pos-1-1 pos-2-1 n1)
+12 (Single): Agent 1: (place-block pos-2-1 pos-2-0 n1 n2)
+13 (Single): Agent 1: (move pos-2-1 pos-1-1 n1)
+14 (Single): Agent 1: (move-down pos-1-1 n1 pos-1-0 n0)
+15 (Single): Agent 1: (create-block pos-1-0)
+16 (Single): Agent 1: (move-up pos-1-0 n0 pos-1-1 n1)
+17 (Single): Agent 1: (place-block pos-1-1 pos-2-1 n1 n2)
+18 (Single): Agent 1: (move-down pos-1-1 n1 pos-1-0 n0)
+19 (Single): Agent 1: (create-block pos-1-0)
+20 (Single): Agent 1: (move-up pos-1-0 n0 pos-1-1 n1)
+21 (Single): Agent 1: (move-up pos-1-1 n1 pos-2-1 n2)
+22 (Single): Agent 1: (place-block pos-2-1 pos-2-0 n2 n3)
+
+merging plan 2 into initial_plan
+inf False
+Merge failed - no valid solution found
+[results][termes][11]
+[single_agent][planning time: 522.23][cost: 66.0]
+[multi_agent][planning_time: 63.92765007972717][cost: inf][agents: 4][optimization time 31.952125310897827]
+----------------------------------------
+Using cached single agent results
+['height pos-0-0 2 and no unplaced blocks', 'height pos-0-1 2 and no unplaced blocks', 'height pos-2-0 2 and no unplaced blocks']
+['./experiments_multiagent_help/run3034/termes/p12_1.pddl', './experiments_multiagent_help/run3034/termes/p12_2.pddl', './experiments_multiagent_help/run3034/termes/p12_3.pddl']
+agent1
+[info][subgoal_1][termes] task 12 takes 0.55 sec, found a plan with cost 14.0
+planner successful
+validating
+validator time 0.013657331466674805
+agent2
+[info][subgoal_2][termes] task 12 takes 0.32 sec, found a plan with cost 10.0
+planner successful
+validating
+validator time 0.013045787811279297
+agent3
+[info][subgoal_3][termes] task 12 takes 0.82 sec, found a plan with cost 16.0
+planner successful
+validating
+validator time 0.009636402130126953
+[info][multiagent main goal][termes] task 12 takes 47.42 sec, found a plan with cost 38.0
+TASK: termes - 3034 - 12
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (create-block pos-1-0)
+2 (Single): Agent 1: (move pos-1-0 pos-1-1 n0)
+3 (Single): Agent 1: (place-block pos-1-1 pos-0-1 n0 n1)
+4 (Single): Agent 1: (move pos-1-1 pos-1-0 n0)
+5 (Single): Agent 1: (create-block pos-1-0)
+6 (Single): Agent 1: (place-block pos-1-0 pos-0-0 n0 n1)
+7 (Single): Agent 1: (create-block pos-1-0)
+8 (Single): Agent 1: (move-up pos-1-0 n0 pos-0-0 n1)
+9 (Single): Agent 1: (move pos-0-0 pos-0-1 n1)
+10 (Single): Agent 1: (place-block pos-0-1 pos-0-0 n1 n2)
+11 (Single): Agent 1: (move-down pos-0-1 n1 pos-1-1 n0)
+12 (Single): Agent 1: (remove-block pos-1-1 pos-0-1 n1 n0)
+13 (Single): Agent 1: (move pos-1-1 pos-1-0 n0)
+14 (Single): Agent 1: (destroy-block pos-1-0)
+
+merging plan 2 into initial_plan
+24 True
+verifying entire plan.
+merging plan 3 into initial_plan
+40 True
+verifying entire plan.
+merging main agent's plan into combined plan
+
+Main Agent's Plan:
+1 (Single): Agent 0: (create-block pos-1-0)
+2 (Single): Agent 0: (move pos-1-0 pos-0-0 n0)
+3 (Single): Agent 0: (place-block pos-0-0 pos-0-1 n0 n1)
+4 (Single): Agent 0: (move pos-0-0 pos-1-0 n0)
+5 (Single): Agent 0: (create-block pos-1-0)
+6 (Single): Agent 0: (move pos-1-0 pos-1-1 n0)
+7 (Single): Agent 0: (place-block pos-1-1 pos-2-1 n0 n1)
+8 (Single): Agent 0: (move pos-1-1 pos-1-0 n0)
+9 (Single): Agent 0: (create-block pos-1-0)
+10 (Single): Agent 0: (place-block pos-1-0 pos-1-1 n0 n1)
+11 (Single): Agent 0: (create-block pos-1-0)
+12 (Single): Agent 0: (move-up pos-1-0 n0 pos-1-1 n1)
+13 (Single): Agent 0: (place-block pos-1-1 pos-2-1 n1 n2)
+14 (Single): Agent 0: (move-down pos-1-1 n1 pos-1-0 n0)
+15 (Single): Agent 0: (create-block pos-1-0)
+16 (Single): Agent 0: (place-block pos-1-0 pos-0-0 n0 n1)
+17 (Single): Agent 0: (create-block pos-1-0)
+18 (Single): Agent 0: (move-up pos-1-0 n0 pos-1-1 n1)
+19 (Single): Agent 0: (move pos-1-1 pos-0-1 n1)
+20 (Single): Agent 0: (place-block pos-0-1 pos-1-1 n1 n2)
+21 (Single): Agent 0: (move pos-0-1 pos-0-0 n1)
+22 (Single): Agent 0: (move-down pos-0-0 n1 pos-1-0 n0)
+23 (Single): Agent 0: (create-block pos-1-0)
+24 (Single): Agent 0: (move-up pos-1-0 n0 pos-0-0 n1)
+25 (Single): Agent 0: (move pos-0-0 pos-0-1 n1)
+26 (Single): Agent 0: (move-up pos-0-1 n1 pos-1-1 n2)
+27 (Single): Agent 0: (place-block pos-1-1 pos-2-1 n2 n3)
+28 (Single): Agent 0: (move-down pos-1-1 n2 pos-0-1 n1)
+29 (Single): Agent 0: (remove-block pos-0-1 pos-1-1 n2 n1)
+30 (Single): Agent 0: (place-block pos-0-1 pos-0-0 n1 n2)
+31 (Single): Agent 0: (move pos-0-1 pos-1-1 n1)
+32 (Single): Agent 0: (move-down pos-1-1 n1 pos-1-0 n0)
+33 (Single): Agent 0: (create-block pos-1-0)
+34 (Single): Agent 0: (move-up pos-1-0 n0 pos-1-1 n1)
+35 (Single): Agent 0: (place-block pos-1-1 pos-0-1 n1 n2)
+36 (Single): Agent 0: (move-down pos-1-1 n1 pos-1-0 n0)
+37 (Single): Agent 0: (remove-block pos-1-0 pos-1-1 n1 n0)
+38 (Single): Agent 0: (destroy-block pos-1-0)
+
+Current Combined Plan:
+1 (Single): Agent 0: (create-block pos-1-0)
+2 (Single): Agent 0: (move pos-1-0 pos-1-1 n0)
+3 (Single): Agent 0: (place-block pos-1-1 pos-0-1 n0 n1)
+4 (Single): Agent 0: (move pos-1-1 pos-1-0 n0)
+5 (Single): Agent 0: (create-block pos-1-0)
+6 (Single): Agent 0: (place-block pos-1-0 pos-0-0 n0 n1)
+7 (Single): Agent 0: (create-block pos-1-0)
+8 (Single): Agent 0: (move-up pos-1-0 n0 pos-0-0 n1)
+9 (Single): Agent 0: (move pos-0-0 pos-0-1 n1)
+10 (Single): Agent 0: (place-block pos-0-1 pos-0-0 n1 n2)
+11 (Single): Agent 0: (move-down pos-0-1 n1 pos-1-1 n0)
+12 (Single): Agent 0: (remove-block pos-1-1 pos-0-1 n1 n0)
+13 (Single): Agent 0: (move pos-1-1 pos-1-0 n0)
+14 (Single): Agent 0: (destroy-block pos-1-0)
+15 (Single): Agent 0: (create-block pos-1-0)
+16 (Single): Agent 0: (move pos-1-0 pos-1-1 n0)
+17 (Single): Agent 0: (place-block pos-1-1 pos-0-1 n0 n1)
+18 (Single): Agent 0: (move-up pos-1-1 n0 pos-0-1 n1)
+19 (Single): Agent 0: (remove-block pos-0-1 pos-0-0 n2 n1)
+20 (Single): Agent 0: (move pos-0-1 pos-0-0 n1)
+21 (Single): Agent 0: (place-block pos-0-0 pos-0-1 n1 n2)
+22 (Single): Agent 0: (move-down pos-0-0 n1 pos-1-0 n0)
+23 (Single): Agent 0: (remove-block pos-1-0 pos-0-0 n1 n0)
+24 (Single): Agent 0: (destroy-block pos-1-0)
+25 (Single): Agent 1: (create-block pos-1-0)
+26 (Single): Agent 1: (place-block pos-1-0 pos-0-0 n0 n1)
+27 (Single): Agent 1: (move-up pos-1-0 n0 pos-0-0 n1)
+28 (Single): Agent 1: (remove-block pos-0-0 pos-0-1 n2 n1)
+29 (Single): Agent 1: (move-down pos-0-0 n1 pos-1-0 n0)
+30 (Single): Agent 1: (place-block pos-1-0 pos-2-0 n0 n1)
+31 (Single): Agent 1: (remove-block pos-1-0 pos-0-0 n1 n0)
+32 (Single): Agent 1: (move pos-1-0 pos-1-1 n0)
+33 (Single): Agent 1: (place-block pos-1-1 pos-2-1 n0 n1)
+34 (Single): Agent 1: (remove-block pos-1-1 pos-0-1 n1 n0)
+35 (Single): Agent 1: (move-up pos-1-1 n0 pos-2-1 n1)
+36 (Single): Agent 1: (place-block pos-2-1 pos-2-0 n1 n2)
+37 (Single): Agent 1: (move-down pos-2-1 n1 pos-1-1 n0)
+38 (Single): Agent 1: (remove-block pos-1-1 pos-2-1 n1 n0)
+39 (Single): Agent 1: (move pos-1-1 pos-1-0 n0)
+40 (Single): Agent 1: (destroy-block pos-1-0)
+
+78 True
+
+Final Merged Plan:
+1 (Single): Agent 0: (create-block pos-1-0)
+2 (Single): Agent 0: (move pos-1-0 pos-1-1 n0)
+3 (Single): Agent 0: (place-block pos-1-1 pos-0-1 n0 n1)
+4 (Single): Agent 0: (move pos-1-1 pos-1-0 n0)
+5 (Single): Agent 0: (create-block pos-1-0)
+6 (Single): Agent 0: (place-block pos-1-0 pos-0-0 n0 n1)
+7 (Single): Agent 0: (create-block pos-1-0)
+8 (Single): Agent 0: (move-up pos-1-0 n0 pos-0-0 n1)
+9 (Single): Agent 0: (move pos-0-0 pos-0-1 n1)
+10 (Single): Agent 0: (place-block pos-0-1 pos-0-0 n1 n2)
+11 (Single): Agent 0: (move-down pos-0-1 n1 pos-1-1 n0)
+12 (Single): Agent 0: (remove-block pos-1-1 pos-0-1 n1 n0)
+13 (Single): Agent 0: (move pos-1-1 pos-1-0 n0)
+14 (Single): Agent 0: (destroy-block pos-1-0)
+15 (Single): Agent 0: (create-block pos-1-0)
+16 (Single): Agent 0: (move pos-1-0 pos-1-1 n0)
+17 (Single): Agent 0: (place-block pos-1-1 pos-0-1 n0 n1)
+18 (Single): Agent 0: (move-up pos-1-1 n0 pos-0-1 n1)
+19 (Single): Agent 0: (remove-block pos-0-1 pos-0-0 n2 n1)
+20 (Single): Agent 0: (move pos-0-1 pos-0-0 n1)
+21 (Single): Agent 0: (place-block pos-0-0 pos-0-1 n1 n2)
+22 (Single): Agent 0: (move-down pos-0-0 n1 pos-1-0 n0)
+23 (Single): Agent 0: (remove-block pos-1-0 pos-0-0 n1 n0)
+24 (Single): Agent 0: (destroy-block pos-1-0)
+25 (Single): Agent 0: (create-block pos-1-0)
+26 (Single): Agent 0: (place-block pos-1-0 pos-0-0 n0 n1)
+27 (Single): Agent 0: (move-up pos-1-0 n0 pos-0-0 n1)
+28 (Single): Agent 0: (remove-block pos-0-0 pos-0-1 n2 n1)
+29 (Single): Agent 0: (move-down pos-0-0 n1 pos-1-0 n0)
+30 (Single): Agent 0: (place-block pos-1-0 pos-2-0 n0 n1)
+31 (Single): Agent 0: (remove-block pos-1-0 pos-0-0 n1 n0)
+32 (Single): Agent 0: (move pos-1-0 pos-1-1 n0)
+33 (Single): Agent 0: (place-block pos-1-1 pos-2-1 n0 n1)
+34 (Single): Agent 0: (remove-block pos-1-1 pos-0-1 n1 n0)
+35 (Single): Agent 0: (move-up pos-1-1 n0 pos-2-1 n1)
+36 (Single): Agent 0: (place-block pos-2-1 pos-2-0 n1 n2)
+37 (Single): Agent 0: (move-down pos-2-1 n1 pos-1-1 n0)
+38 (Single): Agent 0: (remove-block pos-1-1 pos-2-1 n1 n0)
+39 (Single): Agent 0: (move pos-1-1 pos-1-0 n0)
+40 (Single): Agent 0: (destroy-block pos-1-0)
+41 (Single): Agent 1: (create-block pos-1-0)
+42 (Single): Agent 1: (move pos-1-0 pos-0-0 n0)
+43 (Single): Agent 1: (place-block pos-0-0 pos-0-1 n0 n1)
+44 (Single): Agent 1: (move pos-0-0 pos-1-0 n0)
+45 (Single): Agent 1: (create-block pos-1-0)
+46 (Single): Agent 1: (move pos-1-0 pos-1-1 n0)
+47 (Single): Agent 1: (place-block pos-1-1 pos-2-1 n0 n1)
+48 (Single): Agent 1: (move pos-1-1 pos-1-0 n0)
+49 (Single): Agent 1: (create-block pos-1-0)
+50 (Single): Agent 1: (place-block pos-1-0 pos-1-1 n0 n1)
+51 (Single): Agent 1: (create-block pos-1-0)
+52 (Single): Agent 1: (move-up pos-1-0 n0 pos-1-1 n1)
+53 (Single): Agent 1: (place-block pos-1-1 pos-2-1 n1 n2)
+54 (Single): Agent 1: (move-down pos-1-1 n1 pos-1-0 n0)
+55 (Single): Agent 1: (create-block pos-1-0)
+56 (Single): Agent 1: (place-block pos-1-0 pos-0-0 n0 n1)
+57 (Single): Agent 1: (create-block pos-1-0)
+58 (Single): Agent 1: (move-up pos-1-0 n0 pos-1-1 n1)
+59 (Single): Agent 1: (move pos-1-1 pos-0-1 n1)
+60 (Single): Agent 1: (place-block pos-0-1 pos-1-1 n1 n2)
+61 (Single): Agent 1: (move pos-0-1 pos-0-0 n1)
+62 (Single): Agent 1: (move-down pos-0-0 n1 pos-1-0 n0)
+63 (Single): Agent 1: (create-block pos-1-0)
+64 (Single): Agent 1: (move-up pos-1-0 n0 pos-0-0 n1)
+65 (Single): Agent 1: (move pos-0-0 pos-0-1 n1)
+66 (Single): Agent 1: (move-up pos-0-1 n1 pos-1-1 n2)
+67 (Single): Agent 1: (place-block pos-1-1 pos-2-1 n2 n3)
+68 (Single): Agent 1: (move-down pos-1-1 n2 pos-0-1 n1)
+69 (Single): Agent 1: (remove-block pos-0-1 pos-1-1 n2 n1)
+70 (Single): Agent 1: (place-block pos-0-1 pos-0-0 n1 n2)
+71 (Single): Agent 1: (move pos-0-1 pos-1-1 n1)
+72 (Single): Agent 1: (move-down pos-1-1 n1 pos-1-0 n0)
+73 (Single): Agent 1: (create-block pos-1-0)
+74 (Single): Agent 1: (move-up pos-1-0 n0 pos-1-1 n1)
+75 (Single): Agent 1: (place-block pos-1-1 pos-0-1 n1 n2)
+76 (Single): Agent 1: (move-down pos-1-1 n1 pos-1-0 n0)
+77 (Single): Agent 1: (remove-block pos-1-0 pos-1-1 n1 n0)
+78 (Single): Agent 1: (destroy-block pos-1-0)
+
+Total Cost: 78
+[results][termes][12]
+[single_agent][planning time: 73.53][cost: 46.0]
+[multi_agent][planning_time: 59.99534998893738][cost: 78.0][agents: 4][optimization time 21.44072699546814]
+----------------------------------------
+Using cached single agent results
+['height pos-3-0 3', 'height pos-2-2 4', 'height pos-0-1 3']
+['./experiments_multiagent_help/run3034/termes/p13_1.pddl', './experiments_multiagent_help/run3034/termes/p13_2.pddl', './experiments_multiagent_help/run3034/termes/p13_3.pddl']
+agent1
+[info][subgoal_1][termes] task 13 takes 2.24 sec, found a plan with cost 22.0
+planner successful
+validating
+validator time 0.009622812271118164
+agent2
+[info][subgoal_2][termes] task 13 takes 134.33 sec, found a plan with cost 35.0
+planner successful
+validating
+validator time 0.010892868041992188
+agent3
+[info][subgoal_3][termes] task 13 takes 1.63 sec, found a plan with cost 22.0
+planner successful
+validating
+validator time 0.008836746215820312
+[info][multiagent main goal][termes] task 13 takes 4.81 sec, found a plan with cost 24.0
+TASK: termes - 3034 - 13
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (create-block pos-2-0)
+2 (Single): Agent 1: (move pos-2-0 pos-2-1 n0)
+3 (Single): Agent 1: (place-block pos-2-1 pos-3-1 n0 n1)
+4 (Single): Agent 1: (move pos-2-1 pos-2-0 n0)
+5 (Single): Agent 1: (create-block pos-2-0)
+6 (Single): Agent 1: (place-block pos-2-0 pos-3-0 n0 n1)
+7 (Single): Agent 1: (create-block pos-2-0)
+8 (Single): Agent 1: (move pos-2-0 pos-2-1 n0)
+9 (Single): Agent 1: (move-up pos-2-1 n0 pos-3-1 n1)
+10 (Single): Agent 1: (place-block pos-3-1 pos-3-0 n1 n2)
+11 (Single): Agent 1: (move-down pos-3-1 n1 pos-2-1 n0)
+12 (Single): Agent 1: (move pos-2-1 pos-2-0 n0)
+13 (Single): Agent 1: (create-block pos-2-0)
+14 (Single): Agent 1: (place-block pos-2-0 pos-2-1 n0 n1)
+15 (Single): Agent 1: (create-block pos-2-0)
+16 (Single): Agent 1: (move-up pos-2-0 n0 pos-2-1 n1)
+17 (Single): Agent 1: (place-block pos-2-1 pos-3-1 n1 n2)
+18 (Single): Agent 1: (move-down pos-2-1 n1 pos-2-0 n0)
+19 (Single): Agent 1: (create-block pos-2-0)
+20 (Single): Agent 1: (move-up pos-2-0 n0 pos-2-1 n1)
+21 (Single): Agent 1: (move-up pos-2-1 n1 pos-3-1 n2)
+22 (Single): Agent 1: (place-block pos-3-1 pos-3-0 n2 n3)
+
+merging plan 2 into initial_plan
+inf False
+Merge failed - no valid solution found
+[results][termes][13]
+[single_agent][planning time: 1000.21][cost: 92.0]
+[multi_agent][planning_time: 150.0714519119263][cost: inf][agents: 4][optimization time 5.037602424621582]
+----------------------------------------
+Using cached single agent results
+['height pos-3-0 3', 'height pos-3-1 3', 'height pos-3-2 4']
+['./experiments_multiagent_help/run3034/termes/p14_1.pddl', './experiments_multiagent_help/run3034/termes/p14_2.pddl', './experiments_multiagent_help/run3034/termes/p14_3.pddl']
+agent1
+[info][subgoal_1][termes] task 14 takes 4.73 sec, found a plan with cost 25.0
+planner successful
+validating
+validator time 0.010947704315185547
+agent2
+[info][subgoal_2][termes] task 14 takes 0.86 sec, found a plan with cost 14.0
+planner successful
+validating
+validator time 0.008806228637695312
+agent3
+[info][subgoal_3][termes] task 14 takes 94.73 sec, found a plan with cost 31.0
+planner successful
+validating
+validator time 0.012609481811523438
+[info][multiagent main goal][termes] task 14 takes 250.13 sec, found a plan with cost 48.0
+TASK: termes - 3034 - 14
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (create-block pos-1-0)
+2 (Single): Agent 1: (move pos-1-0 pos-2-0 n0)
+3 (Single): Agent 1: (place-block pos-2-0 pos-3-0 n0 n1)
+4 (Single): Agent 1: (move pos-2-0 pos-1-0 n0)
+5 (Single): Agent 1: (create-block pos-1-0)
+6 (Single): Agent 1: (place-block pos-1-0 pos-2-0 n0 n1)
+7 (Single): Agent 1: (create-block pos-1-0)
+8 (Single): Agent 1: (move-up pos-1-0 n0 pos-2-0 n1)
+9 (Single): Agent 1: (place-block pos-2-0 pos-3-0 n1 n2)
+10 (Single): Agent 1: (move-down pos-2-0 n1 pos-1-0 n0)
+11 (Single): Agent 1: (create-block pos-1-0)
+12 (Single): Agent 1: (move pos-1-0 pos-1-1 n0)
+13 (Single): Agent 1: (place-block pos-1-1 pos-2-1 n0 n1)
+14 (Single): Agent 1: (move pos-1-1 pos-1-0 n0)
+15 (Single): Agent 1: (create-block pos-1-0)
+16 (Single): Agent 1: (move-up pos-1-0 n0 pos-2-0 n1)
+17 (Single): Agent 1: (move pos-2-0 pos-2-1 n1)
+18 (Single): Agent 1: (place-block pos-2-1 pos-2-0 n1 n2)
+19 (Single): Agent 1: (move-down pos-2-1 n1 pos-1-1 n0)
+20 (Single): Agent 1: (move pos-1-1 pos-1-0 n0)
+21 (Single): Agent 1: (create-block pos-1-0)
+22 (Single): Agent 1: (move pos-1-0 pos-1-1 n0)
+23 (Single): Agent 1: (move-up pos-1-1 n0 pos-2-1 n1)
+24 (Single): Agent 1: (move-up pos-2-1 n1 pos-2-0 n2)
+25 (Single): Agent 1: (place-block pos-2-0 pos-3-0 n2 n3)
+
+merging plan 2 into initial_plan
+inf False
+Merge failed - no valid solution found
+[results][termes][14]
+[single_agent][planning time: 1000.21][cost: 104.0]
+[multi_agent][planning_time: 356.44216604232787][cost: inf][agents: 4][optimization time 7.519637584686279]
+----------------------------------------
+Using cached single agent results
+['height at pos-3-0 is 3 and all blocks are placed.', 'height at pos-3-2 is 2 and all blocks are placed.', 'height at pos-0-2 is 5 and all blocks are placed.']
+['./experiments_multiagent_help/run3034/termes/p15_1.pddl', './experiments_multiagent_help/run3034/termes/p15_2.pddl', './experiments_multiagent_help/run3034/termes/p15_3.pddl']
+agent1
+[info][subgoal_1][termes] task 15 takes 2.32 sec, found a plan with cost 22.0
+planner successful
+validating
+validator time 0.010677814483642578
+agent2
+[info][subgoal_2][termes] task 15 takes 0.31 sec, found a plan with cost 8.0
+planner successful
+validating
+validator time 0.009224176406860352
+agent3
+[info][subgoal_3][termes] task 15 takes 250.19 sec, found a plan with cost 77.0
+planner successful
+validating
+validator time 0.01328420639038086
+[info][multiagent main goal][termes] task 15 takes 250.21 sec, found a plan with cost 48.0
+TASK: termes - 3034 - 15
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (create-block pos-2-0)
+2 (Single): Agent 1: (move pos-2-0 pos-2-1 n0)
+3 (Single): Agent 1: (place-block pos-2-1 pos-3-1 n0 n1)
+4 (Single): Agent 1: (move pos-2-1 pos-2-0 n0)
+5 (Single): Agent 1: (create-block pos-2-0)
+6 (Single): Agent 1: (place-block pos-2-0 pos-2-1 n0 n1)
+7 (Single): Agent 1: (create-block pos-2-0)
+8 (Single): Agent 1: (place-block pos-2-0 pos-3-0 n0 n1)
+9 (Single): Agent 1: (create-block pos-2-0)
+10 (Single): Agent 1: (move-up pos-2-0 n0 pos-2-1 n1)
+11 (Single): Agent 1: (move pos-2-1 pos-3-1 n1)
+12 (Single): Agent 1: (place-block pos-3-1 pos-3-0 n1 n2)
+13 (Single): Agent 1: (move pos-3-1 pos-2-1 n1)
+14 (Single): Agent 1: (move-down pos-2-1 n1 pos-2-0 n0)
+15 (Single): Agent 1: (create-block pos-2-0)
+16 (Single): Agent 1: (move-up pos-2-0 n0 pos-2-1 n1)
+17 (Single): Agent 1: (place-block pos-2-1 pos-3-1 n1 n2)
+18 (Single): Agent 1: (move-down pos-2-1 n1 pos-2-0 n0)
+19 (Single): Agent 1: (create-block pos-2-0)
+20 (Single): Agent 1: (move-up pos-2-0 n0 pos-2-1 n1)
+21 (Single): Agent 1: (move-up pos-2-1 n1 pos-3-1 n2)
+22 (Single): Agent 1: (place-block pos-3-1 pos-3-0 n2 n3)
+
+merging plan 2 into initial_plan
+inf False
+Merge failed - no valid solution found
+[results][termes][15]
+[single_agent][planning time: 1000.16][cost: 146.0]
+[multi_agent][planning_time: 507.4874897289276][cost: inf][agents: 4][optimization time 3.6218998432159424]
+----------------------------------------
+Using cached single agent results
+['height pos-3-1 5', 'height pos-3-2 4', 'height pos-2-0 2']
+['./experiments_multiagent_help/run3034/termes/p16_1.pddl', './experiments_multiagent_help/run3034/termes/p16_2.pddl', './experiments_multiagent_help/run3034/termes/p16_3.pddl']
+agent1
+[info][subgoal_1][termes] task 16 takes 250.19 sec, found a plan with cost 82.0
+planner successful
+validating
+validator time 0.01297616958618164
+agent2
+[info][subgoal_2][termes] task 16 takes 19.84 sec, found a plan with cost 29.0
+planner successful
+validating
+validator time 0.01186370849609375
+agent3
+[info][subgoal_3][termes] task 16 takes 0.19 sec, found a plan with cost 4.0
+planner successful
+validating
+validator time 0.008741140365600586
+[info][multiagent main goal][termes] task 16 takes 250.13 sec, found a plan with cost 94.0
+TASK: termes - 3034 - 16
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (create-block pos-1-0)
+2 (Single): Agent 1: (move pos-1-0 pos-2-0 n0)
+3 (Single): Agent 1: (move pos-2-0 pos-3-0 n0)
+4 (Single): Agent 1: (place-block pos-3-0 pos-3-1 n0 n1)
+5 (Single): Agent 1: (move pos-3-0 pos-2-0 n0)
+6 (Single): Agent 1: (move pos-2-0 pos-1-0 n0)
+7 (Single): Agent 1: (create-block pos-1-0)
+8 (Single): Agent 1: (move pos-1-0 pos-2-0 n0)
+9 (Single): Agent 1: (place-block pos-2-0 pos-3-0 n0 n1)
+10 (Single): Agent 1: (move pos-2-0 pos-1-0 n0)
+11 (Single): Agent 1: (create-block pos-1-0)
+12 (Single): Agent 1: (move pos-1-0 pos-2-0 n0)
+13 (Single): Agent 1: (move-up pos-2-0 n0 pos-3-0 n1)
+14 (Single): Agent 1: (place-block pos-3-0 pos-3-1 n1 n2)
+15 (Single): Agent 1: (move-down pos-3-0 n1 pos-2-0 n0)
+16 (Single): Agent 1: (move pos-2-0 pos-1-0 n0)
+17 (Single): Agent 1: (create-block pos-1-0)
+18 (Single): Agent 1: (place-block pos-1-0 pos-2-0 n0 n1)
+19 (Single): Agent 1: (create-block pos-1-0)
+20 (Single): Agent 1: (move-up pos-1-0 n0 pos-2-0 n1)
+21 (Single): Agent 1: (place-block pos-2-0 pos-3-0 n1 n2)
+22 (Single): Agent 1: (move-down pos-2-0 n1 pos-1-0 n0)
+23 (Single): Agent 1: (create-block pos-1-0)
+24 (Single): Agent 1: (move-up pos-1-0 n0 pos-2-0 n1)
+25 (Single): Agent 1: (move-up pos-2-0 n1 pos-3-0 n2)
+26 (Single): Agent 1: (place-block pos-3-0 pos-3-1 n2 n3)
+27 (Single): Agent 1: (move-down pos-3-0 n2 pos-2-0 n1)
+28 (Single): Agent 1: (move-down pos-2-0 n1 pos-1-0 n0)
+29 (Single): Agent 1: (create-block pos-1-0)
+30 (Single): Agent 1: (move pos-1-0 pos-1-1 n0)
+31 (Single): Agent 1: (place-block pos-1-1 pos-2-1 n0 n1)
+32 (Single): Agent 1: (move pos-1-1 pos-1-0 n0)
+33 (Single): Agent 1: (create-block pos-1-0)
+34 (Single): Agent 1: (place-block pos-1-0 pos-1-1 n0 n1)
+35 (Single): Agent 1: (create-block pos-1-0)
+36 (Single): Agent 1: (move-up pos-1-0 n0 pos-2-0 n1)
+37 (Single): Agent 1: (move pos-2-0 pos-2-1 n1)
+38 (Single): Agent 1: (place-block pos-2-1 pos-2-0 n1 n2)
+39 (Single): Agent 1: (move pos-2-1 pos-1-1 n1)
+40 (Single): Agent 1: (move-down pos-1-1 n1 pos-1-0 n0)
+41 (Single): Agent 1: (create-block pos-1-0)
+42 (Single): Agent 1: (move-up pos-1-0 n0 pos-1-1 n1)
+43 (Single): Agent 1: (move pos-1-1 pos-2-1 n1)
+44 (Single): Agent 1: (move-up pos-2-1 n1 pos-2-0 n2)
+45 (Single): Agent 1: (place-block pos-2-0 pos-3-0 n2 n3)
+46 (Single): Agent 1: (move-down pos-2-0 n2 pos-2-1 n1)
+47 (Single): Agent 1: (move pos-2-1 pos-1-1 n1)
+48 (Single): Agent 1: (move-down pos-1-1 n1 pos-1-0 n0)
+49 (Single): Agent 1: (create-block pos-1-0)
+50 (Single): Agent 1: (move-up pos-1-0 n0 pos-1-1 n1)
+51 (Single): Agent 1: (place-block pos-1-1 pos-2-1 n1 n2)
+52 (Single): Agent 1: (move-down pos-1-1 n1 pos-1-0 n0)
+53 (Single): Agent 1: (create-block pos-1-0)
+54 (Single): Agent 1: (move-up pos-1-0 n0 pos-1-1 n1)
+55 (Single): Agent 1: (move-up pos-1-1 n1 pos-2-1 n2)
+56 (Single): Agent 1: (place-block pos-2-1 pos-2-0 n2 n3)
+57 (Single): Agent 1: (move-down pos-2-1 n2 pos-1-1 n1)
+58 (Single): Agent 1: (move-down pos-1-1 n1 pos-1-0 n0)
+59 (Single): Agent 1: (create-block pos-1-0)
+60 (Single): Agent 1: (move-up pos-1-0 n0 pos-1-1 n1)
+61 (Single): Agent 1: (move-up pos-1-1 n1 pos-2-1 n2)
+62 (Single): Agent 1: (move-up pos-2-1 n2 pos-3-1 n3)
+63 (Single): Agent 1: (move pos-3-1 pos-3-0 n3)
+64 (Single): Agent 1: (place-block pos-3-0 pos-3-1 n3 n4)
+65 (Single): Agent 1: (move pos-3-0 pos-2-0 n3)
+66 (Single): Agent 1: (move-down pos-2-0 n3 pos-2-1 n2)
+67 (Single): Agent 1: (move-down pos-2-1 n2 pos-1-1 n1)
+68 (Single): Agent 1: (move-down pos-1-1 n1 pos-1-0 n0)
+69 (Single): Agent 1: (create-block pos-1-0)
+70 (Single): Agent 1: (move-up pos-1-0 n0 pos-1-1 n1)
+71 (Single): Agent 1: (move-up pos-1-1 n1 pos-2-1 n2)
+72 (Single): Agent 1: (move-up pos-2-1 n2 pos-2-0 n3)
+73 (Single): Agent 1: (place-block pos-2-0 pos-3-0 n3 n4)
+74 (Single): Agent 1: (move-down pos-2-0 n3 pos-2-1 n2)
+75 (Single): Agent 1: (move-down pos-2-1 n2 pos-1-1 n1)
+76 (Single): Agent 1: (move-down pos-1-1 n1 pos-1-0 n0)
+77 (Single): Agent 1: (create-block pos-1-0)
+78 (Single): Agent 1: (move-up pos-1-0 n0 pos-1-1 n1)
+79 (Single): Agent 1: (move-up pos-1-1 n1 pos-2-1 n2)
+80 (Single): Agent 1: (move-up pos-2-1 n2 pos-2-0 n3)
+81 (Single): Agent 1: (move-up pos-2-0 n3 pos-3-0 n4)
+82 (Single): Agent 1: (place-block pos-3-0 pos-3-1 n4 n5)
+
+merging plan 2 into initial_plan
+inf False
+Merge failed - no valid solution found
+[results][termes][16]
+[single_agent][planning time: 1000.2][cost: 154.0]
+[multi_agent][planning_time: 527.5947175979613][cost: inf][agents: 4][optimization time 10.62650442123413]
+----------------------------------------
+Using cached single agent results
+['height at pos-1-0 is 3 and all blocks are placed.', 'height at pos-2-0 is 3 and all blocks are placed.', 'height at pos-3-2 is 3 and all blocks are placed.']
+['./experiments_multiagent_help/run3034/termes/p17_1.pddl', './experiments_multiagent_help/run3034/termes/p17_2.pddl', './experiments_multiagent_help/run3034/termes/p17_3.pddl']
+agent1
+[info][subgoal_1][termes] task 17 takes 2.47 sec, found a plan with cost 25.0
+planner successful
+validating
+validator time 0.011077642440795898
+agent2
+[info][subgoal_2][termes] task 17 takes 0.17 sec, found a plan with cost 6.0
+planner successful
+validating
+validator time 0.006788015365600586
+agent3
+[info][subgoal_3][termes] task 17 takes 0.74 sec, found a plan with cost 19.0
+planner successful
+validating
+validator time 0.008173227310180664
+[info][multiagent main goal][termes] task 17 takes 250.14 sec, found a plan with cost 80.0
+TASK: termes - 3034 - 17
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (create-block pos-3-0)
+2 (Single): Agent 1: (move pos-3-0 pos-2-0 n0)
+3 (Single): Agent 1: (place-block pos-2-0 pos-1-0 n0 n1)
+4 (Single): Agent 1: (move pos-2-0 pos-3-0 n0)
+5 (Single): Agent 1: (create-block pos-3-0)
+6 (Single): Agent 1: (move pos-3-0 pos-2-0 n0)
+7 (Single): Agent 1: (place-block pos-2-0 pos-2-1 n0 n1)
+8 (Single): Agent 1: (move pos-2-0 pos-3-0 n0)
+9 (Single): Agent 1: (create-block pos-3-0)
+10 (Single): Agent 1: (place-block pos-3-0 pos-2-0 n0 n1)
+11 (Single): Agent 1: (create-block pos-3-0)
+12 (Single): Agent 1: (move-up pos-3-0 n0 pos-2-0 n1)
+13 (Single): Agent 1: (place-block pos-2-0 pos-1-0 n1 n2)
+14 (Single): Agent 1: (move-down pos-2-0 n1 pos-3-0 n0)
+15 (Single): Agent 1: (create-block pos-3-0)
+16 (Single): Agent 1: (move pos-3-0 pos-3-1 n0)
+17 (Single): Agent 1: (move-up pos-3-1 n0 pos-2-1 n1)
+18 (Single): Agent 1: (place-block pos-2-1 pos-2-0 n1 n2)
+19 (Single): Agent 1: (move-down pos-2-1 n1 pos-3-1 n0)
+20 (Single): Agent 1: (move pos-3-1 pos-3-0 n0)
+21 (Single): Agent 1: (create-block pos-3-0)
+22 (Single): Agent 1: (move pos-3-0 pos-3-1 n0)
+23 (Single): Agent 1: (move-up pos-3-1 n0 pos-2-1 n1)
+24 (Single): Agent 1: (move-up pos-2-1 n1 pos-2-0 n2)
+25 (Single): Agent 1: (place-block pos-2-0 pos-1-0 n2 n3)
+
+merging plan 2 into initial_plan
+inf False
+Merge failed - no valid solution found
+[results][termes][17]
+[single_agent][planning time: 1000.16][cost: 116.0]
+[multi_agent][planning_time: 265.9086339664459][cost: inf][agents: 4][optimization time 4.985450267791748]
+----------------------------------------
+Using cached single agent results
+['height pos-0-0 2 and all blocks placed.', 'height pos-0-2 2 and all blocks placed.', 'height pos-3-1 2 and all blocks placed.']
+['./experiments_multiagent_help/run3034/termes/p18_1.pddl', './experiments_multiagent_help/run3034/termes/p18_2.pddl', './experiments_multiagent_help/run3034/termes/p18_3.pddl']
+agent1
+[info][subgoal_1][termes] task 18 takes 0.27 sec, found a plan with cost 9.0
+planner successful
+validating
+validator time 0.00958561897277832
+agent2
+[info][subgoal_2][termes] task 18 takes 0.48 sec, found a plan with cost 11.0
+planner successful
+validating
+validator time 0.009752511978149414
+agent3
+[info][subgoal_3][termes] task 18 takes 0.37 sec, found a plan with cost 9.0
+planner successful
+validating
+validator time 0.007879018783569336
+[info][multiagent main goal][termes] task 18 takes 250.15 sec, found a plan with cost 50.0
+TASK: termes - 3034 - 18
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (create-block pos-2-0)
+2 (Single): Agent 1: (move pos-2-0 pos-1-0 n0)
+3 (Single): Agent 1: (place-block pos-1-0 pos-0-0 n0 n1)
+4 (Single): Agent 1: (move pos-1-0 pos-2-0 n0)
+5 (Single): Agent 1: (create-block pos-2-0)
+6 (Single): Agent 1: (place-block pos-2-0 pos-1-0 n0 n1)
+7 (Single): Agent 1: (create-block pos-2-0)
+8 (Single): Agent 1: (move-up pos-2-0 n0 pos-1-0 n1)
+9 (Single): Agent 1: (place-block pos-1-0 pos-0-0 n1 n2)
+
+merging plan 2 into initial_plan
+inf False
+Merge failed - no valid solution found
+[results][termes][18]
+[single_agent][planning time: 490.77][cost: 76.0]
+[multi_agent][planning_time: 258.2059753131866][cost: inf][agents: 4][optimization time 2.701637029647827]
+----------------------------------------
+Using cached single agent results
+['height pos-1-2 2 and all blocks placed.', 'height pos-2-0 2 and all blocks placed.', 'height pos-2-2 2 and all blocks placed.']
+['./experiments_multiagent_help/run3034/termes/p19_1.pddl', './experiments_multiagent_help/run3034/termes/p19_2.pddl', './experiments_multiagent_help/run3034/termes/p19_3.pddl']
+agent1
+[info][subgoal_1][termes] task 19 takes 0.5 sec, found a plan with cost 15.0
+planner successful
+validating
+validator time 0.010497570037841797
+agent2
+[info][subgoal_2][termes] task 19 takes 0.34 sec, found a plan with cost 10.0
+planner successful
+validating
+validator time 0.00972604751586914
+agent3
+[info][subgoal_3][termes] task 19 takes 0.24 sec, found a plan with cost 4.0
+planner successful
+validating
+validator time 0.009010076522827148
+[info][multiagent main goal][termes] task 19 takes 250.18 sec, found a plan with cost 72.0
+TASK: termes - 3034 - 19
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (create-block pos-3-0)
+2 (Single): Agent 1: (place-block pos-3-0 pos-2-0 n0 n1)
+3 (Single): Agent 1: (create-block pos-3-0)
+4 (Single): Agent 1: (place-block pos-3-0 pos-3-1 n0 n1)
+5 (Single): Agent 1: (create-block pos-3-0)
+6 (Single): Agent 1: (move-up pos-3-0 n0 pos-3-1 n1)
+7 (Single): Agent 1: (move-down pos-3-1 n1 pos-3-2 n0)
+8 (Single): Agent 1: (move pos-3-2 pos-2-2 n0)
+9 (Single): Agent 1: (place-block pos-2-2 pos-1-2 n0 n1)
+10 (Single): Agent 1: (move pos-2-2 pos-2-1 n0)
+11 (Single): Agent 1: (remove-block pos-2-1 pos-3-1 n1 n0)
+12 (Single): Agent 1: (place-block pos-2-1 pos-2-2 n0 n1)
+13 (Single): Agent 1: (remove-block pos-2-1 pos-2-0 n1 n0)
+14 (Single): Agent 1: (move-up pos-2-1 n0 pos-2-2 n1)
+15 (Single): Agent 1: (place-block pos-2-2 pos-1-2 n1 n2)
+
+merging plan 2 into initial_plan
+inf False
+Merge failed - no valid solution found
+[results][termes][19]
+[single_agent][planning time: 1000.24][cost: 94.0]
+[multi_agent][planning_time: 258.9623386955261][cost: inf][agents: 4][optimization time 2.9687840938568115]
+----------------------------------------
+Using cached single agent results
+['height at pos-0-2 is 2 and all blocks are placed.', 'height at pos-3-0 is 2 and all blocks are placed.', 'height at pos-3-2 is 2 and all blocks are placed.']
+['./experiments_multiagent_help/run3034/termes/p20_1.pddl', './experiments_multiagent_help/run3034/termes/p20_2.pddl', './experiments_multiagent_help/run3034/termes/p20_3.pddl']
+agent1
+[info][subgoal_1][termes] task 20 takes 0.59 sec, found a plan with cost 15.0
+planner successful
+validating
+validator time 0.0100555419921875
+agent2
+[info][subgoal_2][termes] task 20 takes 0.44 sec, found a plan with cost 10.0
+planner successful
+validating
+validator time 0.009054183959960938
+agent3
+[info][subgoal_3][termes] task 20 takes 0.3 sec, found a plan with cost 8.0
+planner successful
+validating
+validator time 0.009167909622192383
+[info][multiagent main goal][termes] task 20 takes 250.17 sec, found a plan with cost 88.0
+TASK: termes - 3034 - 20
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (create-block pos-2-0)
+2 (Single): Agent 1: (place-block pos-2-0 pos-1-0 n0 n1)
+3 (Single): Agent 1: (create-block pos-2-0)
+4 (Single): Agent 1: (place-block pos-2-0 pos-2-1 n0 n1)
+5 (Single): Agent 1: (create-block pos-2-0)
+6 (Single): Agent 1: (move-up pos-2-0 n0 pos-1-0 n1)
+7 (Single): Agent 1: (move-down pos-1-0 n1 pos-0-0 n0)
+8 (Single): Agent 1: (move pos-0-0 pos-0-1 n0)
+9 (Single): Agent 1: (place-block pos-0-1 pos-0-2 n0 n1)
+10 (Single): Agent 1: (move pos-0-1 pos-1-1 n0)
+11 (Single): Agent 1: (remove-block pos-1-1 pos-1-0 n1 n0)
+12 (Single): Agent 1: (place-block pos-1-1 pos-0-1 n0 n1)
+13 (Single): Agent 1: (remove-block pos-1-1 pos-2-1 n1 n0)
+14 (Single): Agent 1: (move-up pos-1-1 n0 pos-0-1 n1)
+15 (Single): Agent 1: (place-block pos-0-1 pos-0-2 n1 n2)
+
+merging plan 2 into initial_plan
+inf False
+Merge failed - no valid solution found
+[results][termes][20]
+[single_agent][planning time: 1000.26][cost: 106.0]
+[multi_agent][planning_time: 257.79074907302856][cost: inf][agents: 4][optimization time 9.026488304138184]
+----------------------------------------
