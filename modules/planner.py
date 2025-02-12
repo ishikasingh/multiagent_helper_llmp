@@ -467,7 +467,7 @@ def execute_all_agents_action(expt_path, domain_pddl_file, indices, agent_plans,
                     validation_filename=val_paths[i],
                     pddl_problem_filename=task_paths[i],
                     pddl_problem_filename_edited=new_task_paths[i],
-                    env_conds_only=True)
+                    env_conds_only=False)
                 for k in range(len(agent_plans)):
                     if k != i:
                         get_updated_init_conditions_recurse(expt_path,
@@ -477,7 +477,7 @@ def execute_all_agents_action(expt_path, domain_pddl_file, indices, agent_plans,
                             env_conds_only=True)
         if temp_all_valid:
             new_task_states = []
-            for path in task_paths:
+            for path in new_task_paths:
                 with open(path, 'r') as f:
                     new_task_states.append(f.read())
             
