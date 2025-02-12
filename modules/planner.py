@@ -306,6 +306,26 @@ def validator_simulation_recursive(expt_path, logfile, multi=False):
     print(cost, success)
     
     if success:
+        val_path = f"./{expt_path}/agent0_val_final_temp.txt"
+        plan_path = f"./{expt_path}/agent0_plan_final_temp.txt"
+        
+        print("verifying final merged plan.")
+        with open(plan_path, 'w') as f:
+            for action in merged_plan:
+                if action[0] == 'parallel':
+                    f.write(flatten_plan(action[1]))
+                else:
+                    f.write(action[2])
+        
+        output = subprocess.run(["./downward/validate", "-v", domain_pddl_file, task_pddl_file, plan_path],
+                                  capture_output=True, text=True)
+        with open(val_path, 'w') as f:
+            f.write(output.stdout)
+
+        if 'Plan invalid' in output.stdout:
+            print("Plan invalid, final plan is invalid.")
+            return float('inf'), False
+        
         print("\nFinal Merged Plan:")
         print(plan_tostring(merged_plan))
         print(f"\nTotal Cost: {cost}")
