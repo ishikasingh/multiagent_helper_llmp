@@ -4,20 +4,20 @@
 BASE_DIR="/home/davidbai/multiagent_helper_llmp"
 
 declare -a experiments=(
-    # Blocksworld tasks
-    "--output-file 2_18_2a_blocksworld.txt --summary-file 2_18_2a_blocksworld_summary.txt --python-script helper_script_n_agents.py --num-agents 2 --model 'gpt-4o' --run 1030 --time-limit 500 --domains blocksworld"
+#     # Blocksworld tasks
+#     "--output-file 2_18_2a_blocksworld.txt --summary-file 2_18_2a_blocksworld_summary.txt --python-script helper_script_n_agents.py --num-agents 2 --model 'gpt-4o' --run 1030 --time-limit 500 --domains blocksworld"
     
-    # Barman tasks
-   "--output-file 2_18_2a_barman.txt --summary-file 2_18_2a_barman_summary.txt --python-script helper_script_n_agents.py --num-agents 2 --model 'gpt-4o' --run 1031 --time-limit 500 --domains barman-enabled"
+#     # Barman tasks
+#    "--output-file 2_18_2a_barman.txt --summary-file 2_18_2a_barman_summary.txt --python-script helper_script_n_agents.py --num-agents 2 --model 'gpt-4o' --run 1031 --time-limit 500 --domains barman-enabled"
     
     # Grippers tasks    
     "--output-file 2_18_2a_grippers.txt --summary-file 2_18_2a_grippers_summary.txt --python-script helper_script_n_agents.py --num-agents 2 --model 'gpt-4o' --run 1032 --time-limit 500 --domains grippers"
 
-    #Tyreworld tasks
-    "--output-file 2_18_2a_tyreworld.txt --summary-file 2_18_2a_tyreworld_summary.txt --python-script helper_script_n_agents.py --num-agents 2 --model 'gpt-4o' --run 1033 --time-limit 500 --domains tyreworld"
+    # #Tyreworld tasks
+    # "--output-file 2_18_2a_tyreworld.txt --summary-file 2_18_2a_tyreworld_summary.txt --python-script helper_script_n_agents.py --num-agents 2 --model 'gpt-4o' --run 1033 --time-limit 500 --domains tyreworld"
 
-    # Termes tasks
-    "--output-file 2_18_2a_termes.txt --summary-file 2_18_2a_termes_summary.txt --python-script helper_script_n_agents.py --num-agents 2 --model 'gpt-4o' --run 1034 --time-limit 500 --domains termes"
+    # # Termes tasks
+    # "--output-file 2_18_2a_termes.txt --summary-file 2_18_2a_termes_summary.txt --python-script helper_script_n_agents.py --num-agents 2 --model 'gpt-4o' --run 1034 --time-limit 500 --domains termes"
 )
 
 

@@ -22,7 +22,7 @@ def get_helper_subgoal_without_plan(expt_path, args, log_file):
     system_text += '\n'
 
     system_text += ''' Your goal is to generate goals for agents such that they can be executed in parallel to decrease plan execution length. Generate only one clearly stated small independent subgoal for each helper agent to help the main agent complete the given task. The subgoal must be executable by a helper agent completely independently without waiting for any main agent actions to change predicates. The subgoal SHOULD NOT be interwoven with other generated subgoals or the main task, but rather run uninterrupted from inception time in PARALLEL with other subgoals.  
-    The subgoal should be clearly stated with unambiguous terminology. Do not use actions like assist or help, only actions CLEARLY DEFINED IN THE DOMAIN. The main goal will be augmented based on the generated subgoals, but will run in parallel with them. Do not overtake the full sequence of actions. Remember, the helper agents are only assisting the main agent and act agnostically to the main agent. If there are no subgoals needed, return "none".
+    The subgoal should be clearly stated with unambiguous terminology. Do not use actions like assist or help, only actions CLEARLY DEFINED IN THE DOMAIN. The main goal will be augmented based on the generated subgoals, but will run in parallel with them. Do not overtake the full sequence of actions. Remember, the helper agents are only assisting the main agent and act agnostically to the main agent. If there are no subgoals that will make the task run faster, return "none". Remember that even if the domain states that there is "one" agent, you can generate as many as you'd like. 
     '''
     
     # print("system_text \n", system_text, "\n")
@@ -56,7 +56,7 @@ def get_helper_subgoal_without_plan(expt_path, args, log_file):
     shot1 contains cocktail1. shot2 contains cocktail2. 
     '''
     
-    if args.domain == 'tyreworld' or args.domain == 'grippers':
+    if args.domain == 'tyreworld' or args.domain == 'grippers' or args.domain == 'blocksworld':
         prompt_text += '''
         A possible agent1 subgoal looking at how the domain works based on the plan example provided for another task in this domain could be - 
         agent1 subgoals: It can independently prepare cocktail1 using shot3 and shaker1. The agent will grasp shot3, fill it with ingredients, pour to shaker, shake the cocktail, and pour it to the target glass. All actions can be done while agent0 works with other containers. Therefore, agent1's clearly stated (with object names) complete and final goal condition is: contains shot1 cocktail1.
@@ -318,6 +318,13 @@ if __name__ == "__main__":
         try:
             # init conditions should be good from last iter of subgoal loop
             # add goal to main agent 
+            if not os.path.exists(f"./{path}/p{args.task_id}_0.pddl"):
+                #copy original pddl file to main agent
+                print("copying original pddl file to main agent for single agent case")
+                with open(f"./domains/{args.domain}/p{args.task_id}.pddl", 'r') as f:
+                    main_agent_pddl = f.read()
+                with open(f"./{path}/p{args.task_id}_0.pddl", 'w') as f:
+                    f.write(main_agent_pddl)
             planner_total_time, planner_total_time_opt, best_cost, planner_search_time_1st_plan, first_plan_cost = planner.planner(path, args, subgoal_idx=args.num_agents)
 
             if args.num_agents != 1:
@@ -340,10 +347,12 @@ if __name__ == "__main__":
                 print(f"[multi_agent][planning_time: {LLM_pddl_sg_time[0]+LLM_text_sg_time[0]+np.sum(multiagent_helper_planning_time)+multiagent_main_planning_time[0]}][cost: {float(overall_plan_length[0])}][agents: {args.num_agents}][optimization time {dp_end - dp_start}]")    
             else:
                 if best_cost < singleagent_cost[0]:
+                    print(f"[results][{args.domain}][{args.task_id}]")
                     print(f"[single_agent][planning time: {singleagent_planning_time[0]}][cost: {singleagent_cost[0]}]")
                     # print(f"[multi_agent][planning_time: {planner_total_time}][cost: {best_cost}][agents: {args.num_agents}][optimization time {0}]")
                     print(f"[multi_agent][planning_time: {singleagent_planning_time[0]}][cost: {singleagent_cost[0]}][agents: {args.num_agents}][optimization time {0}]")
                 else:
+                    print(f"[results][{args.domain}][{args.task_id}]")
                     print(f"[single_agent][planning time: {singleagent_planning_time[0]}][cost: {singleagent_cost[0]}]")
                     print(f"[multi_agent][planning_time: {singleagent_planning_time[0]}][cost: {singleagent_cost[0]}][agents: {args.num_agents}][optimization time {0}]")
                 
