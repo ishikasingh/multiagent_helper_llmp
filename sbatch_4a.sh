@@ -5,11 +5,21 @@ BASE_DIR="/home/davidbai/multiagent_helper_llmp"
 
 #Array of experiment configurations with domains - only missing 4-agent tasks
 declare -a experiments=(
-    # Termes missing tasks
-    "--output-file 1_17_4a_termes.txt --summary-file 1_17_4a_termes_summary.txt --python-script helper_script_n_agents.py --num-agents 4 --model 'gpt-4o' --run 2022 --domains termes --tasks 14,15,16,17,18,19,20"
+    # Blocksworld tasks
+    "--output-file 2_18_4a_blocksworld.txt --summary-file 2_18_4a_blocksworld_summary.txt --python-script helper_script_n_agents.py --num-agents 4 --model 'gpt-4o' --run 3030 --time-limit 250 --domains blocksworld"
     
-    # Tyreworld missing tasks (split into two runs due to large number)
-    "--output-file 1_17_4a_tyreworld_0.txt --summary-file 1_17_4a_tyreworld_1_summary.txt --python-script helper_script_n_agents.py --num-agents 4 --model 'gpt-4o' --run 2023 --domains tyreworld --tasks 10,12,13,14,15,19,20"
+    # Barman tasks
+   "--output-file 2_18_4a_barman.txt --summary-file 2_18_4a_barman_summary.txt --python-script helper_script_n_agents.py --num-agents 4 --model 'gpt-4o' --run 3031 --time-limit 250 --domains barman-enabled"
+
+    # Grippers tasks
+    "--output-file 2_18_4a_grippers.txt --summary-file 2_18_4a_grippers_summary.txt --python-script helper_script_n_agents.py --num-agents 4 --model 'gpt-4o' --run 3032 --time-limit 250 --domains grippers"
+
+    #Tyreworld tasks
+    "--output-file 2_18_4a_tyreworld.txt --summary-file 2_18_4a_tyreworld_summary.txt --python-script helper_script_n_agents.py --num-agents 4 --model 'gpt-4o' --run 3033 --time-limit 250 --domains tyreworld"
+
+    # Termes tasks
+    "--output-file 2_18_4a_termes.txt --summary-file 2_18_4a_termes_summary.txt --python-script helper_script_n_agents.py --num-agents 4 --model 'gpt-4o' --run 3034 --time-limit 250 --domains termes"
+
 )
 
 
