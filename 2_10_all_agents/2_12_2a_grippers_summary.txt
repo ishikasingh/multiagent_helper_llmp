@@ -1,0 +1,114 @@
+Domain: grippers
+Success rate: 55.00% (11/20)
+Results:
+  [results][grippers][01]
+  [single_agent][planning time: 0.04][cost: 5.0]
+  [multi_agent][planning_time: 0.04][cost: 5.0][agents: 1][optimization time 0]
+  Success: No
+
+  [results][grippers][02]
+  [single_agent][planning time: 0.05][cost: 9.0]
+  [multi_agent][planning_time: 1.657041702270508][cost: 7.0][agents: 2][optimization time 13.862164497375488]
+  Success: Yes
+
+  [results][grippers][03]
+  [single_agent][planning time: 0.05][cost: 6.0]
+  [multi_agent][planning_time: 0.05][cost: 6.0][agents: 1][optimization time 0]
+  Success: No
+
+  [results][grippers][04]
+  [single_agent][planning time: 0.05][cost: 4.0]
+  [multi_agent][planning_time: 0.8824518394470215][cost: 4.0][agents: 2][optimization time 5.568107604980469]
+  Success: No
+
+  [results][grippers][05]
+  [single_agent][planning time: 0.05][cost: 4.0]
+  [multi_agent][planning_time: 0.05][cost: 4.0][agents: 1][optimization time 0]
+  Success: No
+
+  [results][grippers][06]
+  [single_agent][planning time: 0.06][cost: 4.0]
+  [multi_agent][planning_time: 0.06][cost: 4.0][agents: 1][optimization time 0]
+  Success: No
+
+  [results][grippers][07]
+  [single_agent][planning time: 0.06][cost: 8.0]
+  [multi_agent][planning_time: 1.3520950317382814][cost: 6.0][agents: 2][optimization time 2.5280566215515137]
+  Success: Yes
+
+  [results][grippers][08]
+  [single_agent][planning time: 0.06][cost: 11.0]
+  [multi_agent][planning_time: 1.2359565830230714][cost: 9.0][agents: 2][optimization time 3.8153114318847656]
+  Success: Yes
+
+  [results][grippers][09]
+  [single_agent][planning time: 5.85][cost: 17.0]
+  [multi_agent][planning_time: 6.960100603103638][cost: 15.0][agents: 2][optimization time 7.929460048675537]
+  Success: Yes
+
+  [results][grippers][10]
+  [single_agent][planning time: 0.05][cost: 10.0]
+  [multi_agent][planning_time: 1.2381502532958986][cost: 6.0][agents: 2][optimization time 2.3889291286468506]
+  Success: Yes
+
+  [results][grippers][11]
+  [single_agent][planning time: 0.04][cost: 3.0]
+  [multi_agent][planning_time: 0.2918873596191407][cost: 3.0][agents: 2][optimization time 4.522899389266968]
+  Success: No
+
+  [results][grippers][12]
+  [single_agent][planning time: 0.09][cost: 9.0]
+  [multi_agent][planning_time: 1.0812603473663331][cost: 6.0][agents: 2][optimization time 5.236707448959351]
+  Success: Yes
+
+  [results][grippers][13]
+  [single_agent][planning time: 0.05][cost: 6.0]
+  [multi_agent][planning_time: 1.5978671550750734][cost: 4.0][agents: 2][optimization time 2.371514081954956]
+  Success: Yes
+
+  [results][grippers][14]
+  [single_agent][planning time: 0.06][cost: 6.0]
+  [multi_agent][planning_time: 1.2941953086853029][cost: 4.0][agents: 2][optimization time 2.4944636821746826]
+  Success: Yes
+
+  [results][grippers][15]
+  [single_agent][planning time: 0.1][cost: 10.0]
+  [multi_agent][planning_time: 1.7354961872100831][cost: 7.0][agents: 2][optimization time 4.457946300506592]
+  Success: Yes
+
+  [results][grippers][16]
+  [single_agent][planning time: 14.17][cost: 19.0]
+  [multi_agent][planning_time: 10.528335018157959][cost: 17.0][agents: 2][optimization time 12.356733798980713]
+  Success: Yes
+
+  [results][grippers][17]
+  [single_agent][planning time: 0.04][cost: 8.0]
+  [multi_agent][planning_time: 0.04][cost: 8.0][agents: 1][optimization time 0]
+  Success: No
+
+  [results][grippers][18]
+  [single_agent][planning time: 0.09][cost: 9.0]
+  [multi_agent][planning_time: 0.09][cost: 9.0][agents: 1][optimization time 0]
+  Success: No
+
+  [results][grippers][19]
+  [single_agent][planning time: 2.55][cost: 17.0]
+  [multi_agent][planning_time: 3.7772081661224366][cost: 14.0][agents: 2][optimization time 6.53462553024292]
+  Success: Yes
+
+  [results][grippers][20]
+  [single_agent][planning time: 0.04][cost: 7.0]
+  [multi_agent][planning_time: 0.04][cost: 7.0][agents: 1][optimization time 0]
+  Success: No
+
+----------------------------------------
+
+Domain Averages:
+Domain: grippers
+  Single Agent:
+    Average Cost: 8.60
+    Average Planning Time: 1.18 sec
+  Multi Agent:
+    Average Cost: 7.25
+    Average Planning Time: 1.70 sec
+

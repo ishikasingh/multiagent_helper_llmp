@@ -1,0 +1,1441 @@
+Using cached single agent results
+['ball1 is in room2.', 'ball2 is in room2.']
+['./experiments_multiagent_help/run2032/grippers/p01_1.pddl', './experiments_multiagent_help/run2032/grippers/p01_2.pddl']
+agent1
+[info][subgoal_1][grippers] task 01 takes 0.07 sec, found a plan with cost 3.0
+planner successful
+validating
+validator time 0.003520965576171875
+agent2
+[info][subgoal_2][grippers] task 01 takes 0.07 sec, found a plan with cost 3.0
+planner successful
+validating
+validator time 0.0032982826232910156
+[info][multiagent main goal][grippers] task 01 takes 333.27 sec, no solution found
+TASK: grippers - 2032 - 01
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (pick robot1 ball1 room1 lgripper1)
+2 (Single): Agent 1: (move robot1 room1 room2)
+3 (Single): Agent 1: (drop robot1 ball1 room2 lgripper1)
+
+merging plan 2 into initial_plan
+3 True
+verifying entire plan.
+unsatisfied precondition encountered in merged plan, stopping process.
+Type-checking move
+...action passes type checking.
+Type-checking pick
+...action passes type checking.
+Type-checking drop
+...action passes type checking.
+Checking plan: ./experiments_multiagent_help/run2032/grippers/agent2_plan_final_temp.txt
+Plan to validate:
+
+Plan size: 6
+1:
+(pick robot1 ball1 room1 lgripper1)
+ 
+2:
+(pick robot1 ball2 room1 lgripper1)
+ 
+3:
+(move robot1 room1 room2)
+ 
+4:
+(move robot1 room1 room2)
+ 
+5:
+(drop robot1 ball1 room2 lgripper1)
+ 
+6:
+(drop robot1 ball2 room2 lgripper1)
+ 
+
+Plan Validation details
+-----------------------
+
+Checking next happening (time 1)
+Deleting (at ball1 room1)
+Deleting (free robot1 lgripper1)
+Adding (carry robot1 ball1 lgripper1)
+
+Checking next happening (time 2)
+Plan failed because of unsatisfied precondition in:
+(pick robot1 ball2 room1 lgripper1)
+
+
+Plan failed to execute
+
+Plan Repair Advice:
+
+(pick robot1 ball2 room1 lgripper1) has an unsatisfied precondition at time 2
+(Set (free robot1 lgripper1) to true)
+
+
+Failed plans:
+ ./experiments_multiagent_help/run2032/grippers/agent2_plan_final_temp.txt 
+
+[results][grippers][01]
+[single_agent][planning time: 0.04][cost: 5.0]
+[multi_agent][planning_time: 1.5661252880096437][cost: inf][agents: 3][optimization time 4.025637865066528]
+----------------------------------------
+Using cached single agent results
+['ball3 is in room3.', 'ball2 is in room2.']
+['./experiments_multiagent_help/run2032/grippers/p02_1.pddl', './experiments_multiagent_help/run2032/grippers/p02_2.pddl']
+agent1
+[info][subgoal_1][grippers] task 02 takes 0.07 sec, found a plan with cost 4.0
+planner successful
+validating
+validator time 0.0023124217987060547
+agent2
+[info][subgoal_2][grippers] task 02 takes 0.07 sec, found a plan with cost 4.0
+planner successful
+validating
+validator time 0.0022706985473632812
+[info][multiagent main goal][grippers] task 02 takes 0.07 sec, found a plan with cost 4.0
+TASK: grippers - 2032 - 02
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (move robot1 room2 room1)
+2 (Single): Agent 1: (pick robot1 ball3 room1 lgripper1)
+3 (Single): Agent 1: (move robot1 room1 room3)
+4 (Single): Agent 1: (drop robot1 ball3 room3 lgripper1)
+
+merging plan 2 into initial_plan
+4 True
+verifying entire plan.
+unsatisfied precondition encountered in merged plan, stopping process.
+Type-checking move
+...action passes type checking.
+Type-checking pick
+...action passes type checking.
+Type-checking drop
+...action passes type checking.
+Checking plan: ./experiments_multiagent_help/run2032/grippers/agent2_plan_final_temp.txt
+Plan to validate:
+
+Plan size: 8
+1:
+(move robot1 room2 room1)
+ 
+2:
+(move robot1 room2 room1)
+ 
+3:
+(pick robot1 ball3 room1 lgripper1)
+ 
+4:
+(pick robot1 ball2 room1 lgripper1)
+ 
+5:
+(move robot1 room1 room3)
+ 
+6:
+(move robot1 room1 room2)
+ 
+7:
+(drop robot1 ball3 room3 lgripper1)
+ 
+8:
+(drop robot1 ball2 room2 lgripper1)
+ 
+
+Plan Validation details
+-----------------------
+
+Checking next happening (time 1)
+Deleting (at-robby robot1 room2)
+Adding (at-robby robot1 room1)
+
+Checking next happening (time 2)
+Plan failed because of unsatisfied precondition in:
+(move robot1 room2 room1)
+
+
+Plan failed to execute
+
+Plan Repair Advice:
+
+(move robot1 room2 room1) has an unsatisfied precondition at time 2
+(Set (at-robby robot1 room2) to true)
+
+
+Failed plans:
+ ./experiments_multiagent_help/run2032/grippers/agent2_plan_final_temp.txt 
+
+[results][grippers][02]
+[single_agent][planning time: 0.05][cost: 9.0]
+[multi_agent][planning_time: 2.7120699501037597][cost: inf][agents: 3][optimization time 2.6747539043426514]
+----------------------------------------
+Using cached single agent results
+LLM generated no subgoal for agent 1, reducing number of agents
+args.num_agents: 1
+[]
+[]
+[info][multiagent main goal][grippers] task 03 takes 332.99 sec, no solution found
+[results][grippers][03]
+[single_agent][planning time: 0.05][cost: 6.0]
+[multi_agent][planning_time: 0.05][cost: 6.0][agents: 1][optimization time 0]
+----------------------------------------
+Using cached single agent results
+LLM generated no subgoal for agent 2, reducing number of agents
+args.num_agents: 2
+['ball3 is in room3.']
+['./experiments_multiagent_help/run2032/grippers/p04_1.pddl']
+agent1
+[info][subgoal_1][grippers] task 04 takes 0.08 sec, found a plan with cost 4.0
+planner successful
+validating
+validator time 0.0024871826171875
+[info][multiagent main goal][grippers] task 04 takes 333.04 sec, no solution found
+TASK: grippers - 2032 - 04
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (move robot1 room4 room1)
+2 (Single): Agent 1: (pick robot1 ball3 room1 lgripper1)
+3 (Single): Agent 1: (move robot1 room1 room3)
+4 (Single): Agent 1: (drop robot1 ball3 room3 lgripper1)
+
+merging main agent's plan into combined plan
+
+Main Agent's Plan:
+
+
+Current Combined Plan:
+1 (Single): Agent 1: (move robot1 room4 room1)
+2 (Single): Agent 1: (pick robot1 ball3 room1 lgripper1)
+3 (Single): Agent 1: (move robot1 room1 room3)
+4 (Single): Agent 1: (drop robot1 ball3 room3 lgripper1)
+
+4 True
+verifying final merged plan.
+
+Final Merged Plan:
+1 (Single): Agent 0: (move robot1 room4 room1)
+2 (Single): Agent 0: (pick robot1 ball3 room1 lgripper1)
+3 (Single): Agent 0: (move robot1 room1 room3)
+4 (Single): Agent 0: (drop robot1 ball3 room3 lgripper1)
+
+Total Cost: 4
+[results][grippers][04]
+[single_agent][planning time: 0.05][cost: 4.0]
+[multi_agent][planning_time: 0.8416801261901856][cost: 4.0][agents: 2][optimization time 4.646400451660156]
+----------------------------------------
+b'Traceback (most recent call last):\n  File "/home/davidbai/multiagent_helper_llmp/downward/builds/release/bin/translate/translate.py", line 747, in <module>\n    main()\n  File "/home/davidbai/multiagent_helper_llmp/downward/builds/release/bin/translate/translate.py", line 705, in main\n    task = pddl_parser.open(\n  File "/home/davidbai/multiagent_helper_llmp/downward/builds/release/bin/translate/pddl_parser/pddl_file.py", line 39, in open\n    return parsing_functions.parse_task(domain_pddl, task_pddl)\n  File "/home/davidbai/multiagent_helper_llmp/downward/builds/release/bin/translate/pddl_parser/parsing_functions.py", line 634, in parse_task\n    task_name, task_domain_name, task_requirements, objects, init, goal, \\\n  File "/home/davidbai/multiagent_helper_llmp/downward/builds/release/bin/translate/pddl_parser/parsing_functions.py", line 790, in parse_task_pddl\n    yield parse_condition(context, goal[1], type_dict, predicate_dict)\n  File "/home/davidbai/multiagent_helper_llmp/downward/builds/release/bin/translate/pddl_parser/parsing_functions.py", line 209, in parse_condition\n    condition = parse_condition_aux(\n  File "/home/davidbai/multiagent_helper_llmp/downward/builds/release/bin/translate/pddl_parser/parsing_functions.py", line 242, in parse_condition_aux\n    elif tag in predicate_dict:\nTypeError: unhashable type: \'list\'\n'
+Using cached single agent results
+LLM generated no subgoal for agent 2, reducing number of agents
+args.num_agents: 2
+['ball3 is in room2.']
+['./experiments_multiagent_help/run2032/grippers/p05_1.pddl']
+agent1
+planner broke
+INFO     planner time limit: None
+INFO     planner memory limit: None
+
+INFO     Running translator.
+INFO     translator stdin: None
+INFO     translator time limit: None
+INFO     translator memory limit: None
+INFO     translator command line string: /home/davidbai/.conda/envs/llm_pddl/bin/python /home/davidbai/multiagent_helper_llmp/downward/builds/release/bin/translate/translate.py domains/grippers/domain.pddl experiments_multiagent_help/run2032/grippers/p05_1.pddl --sas-file experiments_multiagent_help/run2032/grippers/p05_1_plan.pddl.sas
+Parsing...
+translate exit code: 30
+
+Driver aborting after translate
+INFO     Planner time: 0.06s
+
+list index out of range
+[info][multiagent main goal][grippers] task 05 takes 332.75 sec, no solution found
+TASK: grippers - 2032 - 05
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (move robot1 room2 room1)
+2 (Single): Agent 1: (pick robot1 ball3 room1 lgripper1)
+3 (Single): Agent 1: (move robot1 room1 room2)
+4 (Single): Agent 1: (drop robot1 ball3 room2 lgripper1)
+
+merging main agent's plan into combined plan
+
+Main Agent's Plan:
+
+
+Current Combined Plan:
+1 (Single): Agent 1: (move robot1 room2 room1)
+2 (Single): Agent 1: (pick robot1 ball3 room1 lgripper1)
+3 (Single): Agent 1: (move robot1 room1 room2)
+4 (Single): Agent 1: (drop robot1 ball3 room2 lgripper1)
+
+4 True
+verifying final merged plan.
+
+Final Merged Plan:
+1 (Single): Agent 0: (move robot1 room2 room1)
+2 (Single): Agent 0: (pick robot1 ball3 room1 lgripper1)
+3 (Single): Agent 0: (move robot1 room1 room2)
+4 (Single): Agent 0: (drop robot1 ball3 room2 lgripper1)
+
+Total Cost: 4
+[results][grippers][05]
+[single_agent][planning time: 0.05][cost: 4.0]
+[multi_agent][planning_time: 0.5531237125396729][cost: 4.0][agents: 2][optimization time 3.3181731700897217]
+----------------------------------------
+Using cached single agent results
+LLM generated no subgoal for agent 1, reducing number of agents
+args.num_agents: 1
+[]
+[]
+[info][multiagent main goal][grippers] task 06 takes 0.07 sec, found a plan with cost 4.0
+[results][grippers][06]
+[single_agent][planning time: 0.06][cost: 4.0]
+[multi_agent][planning_time: 0.06][cost: 4.0][agents: 1][optimization time 0]
+----------------------------------------
+Using cached single agent results
+['ball1 is in room2.', 'ball2 is in room3.']
+['./experiments_multiagent_help/run2032/grippers/p07_1.pddl', './experiments_multiagent_help/run2032/grippers/p07_2.pddl']
+agent1
+[info][subgoal_1][grippers] task 07 takes 0.07 sec, found a plan with cost 3.0
+planner successful
+validating
+validator time 0.0021860599517822266
+agent2
+[info][subgoal_2][grippers] task 07 takes 0.07 sec, found a plan with cost 3.0
+planner successful
+validating
+validator time 0.0024852752685546875
+[info][multiagent main goal][grippers] task 07 takes 0.08 sec, found a plan with cost 4.0
+TASK: grippers - 2032 - 07
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (pick robot1 ball1 room4 lgripper1)
+2 (Single): Agent 1: (move robot1 room4 room2)
+3 (Single): Agent 1: (drop robot1 ball1 room2 lgripper1)
+
+merging plan 2 into initial_plan
+3 True
+verifying entire plan.
+unsatisfied precondition encountered in merged plan, stopping process.
+Type-checking move
+...action passes type checking.
+Type-checking pick
+...action passes type checking.
+Type-checking drop
+...action passes type checking.
+Checking plan: ./experiments_multiagent_help/run2032/grippers/agent2_plan_final_temp.txt
+Plan to validate:
+
+Plan size: 6
+1:
+(pick robot1 ball1 room4 lgripper1)
+ 
+2:
+(pick robot1 ball2 room4 lgripper1)
+ 
+3:
+(move robot1 room4 room2)
+ 
+4:
+(move robot1 room4 room3)
+ 
+5:
+(drop robot1 ball1 room2 lgripper1)
+ 
+6:
+(drop robot1 ball2 room3 lgripper1)
+ 
+
+Plan Validation details
+-----------------------
+
+Checking next happening (time 1)
+Deleting (at ball1 room4)
+Deleting (free robot1 lgripper1)
+Adding (carry robot1 ball1 lgripper1)
+
+Checking next happening (time 2)
+Plan failed because of unsatisfied precondition in:
+(pick robot1 ball2 room4 lgripper1)
+
+
+Plan failed to execute
+
+Plan Repair Advice:
+
+(pick robot1 ball2 room4 lgripper1) has an unsatisfied precondition at time 2
+(Set (free robot1 lgripper1) to true)
+
+
+Failed plans:
+ ./experiments_multiagent_help/run2032/grippers/agent2_plan_final_temp.txt 
+
+[results][grippers][07]
+[single_agent][planning time: 0.06][cost: 8.0]
+[multi_agent][planning_time: 2.751909704208374][cost: inf][agents: 3][optimization time 0.9826714992523193]
+----------------------------------------
+Using cached single agent results
+['ball3 is in room2.', 'ball5 is in room1.']
+['./experiments_multiagent_help/run2032/grippers/p08_1.pddl', './experiments_multiagent_help/run2032/grippers/p08_2.pddl']
+agent1
+[info][subgoal_1][grippers] task 08 takes 0.08 sec, found a plan with cost 4.0
+planner successful
+validating
+validator time 0.003267049789428711
+agent2
+[info][subgoal_2][grippers] task 08 takes 333.0 sec, no solution found
+planner successful
+validating
+validator time 0.004064321517944336
+[info][multiagent main goal][grippers] task 08 takes 0.08 sec, found a plan with cost 9.0
+TASK: grippers - 2032 - 08
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (move robot1 room2 room1)
+2 (Single): Agent 1: (pick robot1 ball3 room1 lgripper1)
+3 (Single): Agent 1: (move robot1 room1 room2)
+4 (Single): Agent 1: (drop robot1 ball3 room2 lgripper1)
+
+merging plan 2 into initial_plan
+4 True
+verifying entire plan.
+merging main agent's plan into combined plan
+
+Main Agent's Plan:
+1 (Single): Agent 0: (pick robot1 ball1 room2 lgripper1)
+2 (Single): Agent 0: (pick robot1 ball2 room2 rgripper1)
+3 (Single): Agent 0: (move robot1 room2 room1)
+4 (Single): Agent 0: (drop robot1 ball1 room1 lgripper1)
+5 (Single): Agent 0: (drop robot1 ball2 room1 rgripper1)
+6 (Single): Agent 0: (move robot1 room1 room2)
+7 (Single): Agent 0: (pick robot1 ball4 room2 lgripper1)
+8 (Single): Agent 0: (move robot1 room2 room1)
+9 (Single): Agent 0: (drop robot1 ball4 room1 lgripper1)
+
+Current Combined Plan:
+1 (Single): Agent 0: (move robot1 room2 room1)
+2 (Single): Agent 0: (pick robot1 ball3 room1 lgripper1)
+3 (Single): Agent 0: (move robot1 room1 room2)
+4 (Single): Agent 0: (drop robot1 ball3 room2 lgripper1)
+
+9 True
+verifying final merged plan.
+
+Final Merged Plan:
+1 (Single): Agent 1: (pick robot1 ball1 room2 lgripper1)
+2 (Single): Agent 1: (pick robot1 ball2 room2 rgripper1)
+3 (Single): Agent 1: (move robot1 room2 room1)
+4 (Single): Agent 1: (drop robot1 ball1 room1 lgripper1)
+5 (Single): Agent 1: (drop robot1 ball2 room1 rgripper1)
+6 (Parallel):
+  Agent 0: (move robot1 room2 room1)
+  Agent 1: (move robot1 room1 room2)
+7 (Parallel):
+  Agent 0: (pick robot1 ball3 room1 lgripper1)
+  Agent 1: (pick robot1 ball4 room2 lgripper1)
+8 (Parallel):
+  Agent 0: (move robot1 room1 room2)
+  Agent 1: (move robot1 room2 room1)
+9 (Parallel):
+  Agent 0: (drop robot1 ball3 room2 lgripper1)
+  Agent 1: (drop robot1 ball4 room1 lgripper1)
+
+Total Cost: 9
+[results][grippers][08]
+[single_agent][planning time: 0.06][cost: 11.0]
+[multi_agent][planning_time: 1.7788011169433595][cost: 9.0][agents: 3][optimization time 6.304777145385742]
+----------------------------------------
+Using cached single agent results
+['ball2 is in room4.', 'ball4 is in room4.']
+['./experiments_multiagent_help/run2032/grippers/p09_1.pddl', './experiments_multiagent_help/run2032/grippers/p09_2.pddl']
+agent1
+[info][subgoal_1][grippers] task 09 takes 0.08 sec, found a plan with cost 4.0
+planner successful
+validating
+validator time 0.0024445056915283203
+agent2
+[info][subgoal_2][grippers] task 09 takes 0.08 sec, found a plan with cost 4.0
+planner successful
+validating
+validator time 0.0023946762084960938
+[info][multiagent main goal][grippers] task 09 takes 1.51 sec, found a plan with cost 12.0
+TASK: grippers - 2032 - 09
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (move robot1 room4 room3)
+2 (Single): Agent 1: (pick robot1 ball2 room3 lgripper1)
+3 (Single): Agent 1: (move robot1 room3 room4)
+4 (Single): Agent 1: (drop robot1 ball2 room4 lgripper1)
+
+merging plan 2 into initial_plan
+4 True
+verifying entire plan.
+unsatisfied precondition encountered in merged plan, stopping process.
+Type-checking move
+...action passes type checking.
+Type-checking pick
+...action passes type checking.
+Type-checking drop
+...action passes type checking.
+Checking plan: ./experiments_multiagent_help/run2032/grippers/agent2_plan_final_temp.txt
+Plan to validate:
+
+Plan size: 8
+1:
+(move robot1 room4 room3)
+ 
+2:
+(move robot1 room4 room2)
+ 
+3:
+(pick robot1 ball2 room3 lgripper1)
+ 
+4:
+(pick robot1 ball4 room2 lgripper1)
+ 
+5:
+(move robot1 room3 room4)
+ 
+6:
+(move robot1 room2 room4)
+ 
+7:
+(drop robot1 ball2 room4 lgripper1)
+ 
+8:
+(drop robot1 ball4 room4 lgripper1)
+ 
+
+Plan Validation details
+-----------------------
+
+Checking next happening (time 1)
+Deleting (at-robby robot1 room4)
+Adding (at-robby robot1 room3)
+
+Checking next happening (time 2)
+Plan failed because of unsatisfied precondition in:
+(move robot1 room4 room2)
+
+
+Plan failed to execute
+
+Plan Repair Advice:
+
+(move robot1 room4 room2) has an unsatisfied precondition at time 2
+(Set (at-robby robot1 room4) to true)
+
+
+Failed plans:
+ ./experiments_multiagent_help/run2032/grippers/agent2_plan_final_temp.txt 
+
+[results][grippers][09]
+[single_agent][planning time: 5.85][cost: 17.0]
+[multi_agent][planning_time: 3.8192531299591064][cost: inf][agents: 3][optimization time 3.885004758834839]
+----------------------------------------
+Using cached single agent results
+['ball2 is in room1.', 'ball3 is in room1.']
+['./experiments_multiagent_help/run2032/grippers/p10_1.pddl', './experiments_multiagent_help/run2032/grippers/p10_2.pddl']
+agent1
+[info][subgoal_1][grippers] task 10 takes 0.07 sec, found a plan with cost 4.0
+planner successful
+validating
+validator time 0.0023615360260009766
+agent2
+[info][subgoal_2][grippers] task 10 takes 0.07 sec, found a plan with cost 4.0
+planner successful
+validating
+validator time 0.002206087112426758
+[info][multiagent main goal][grippers] task 10 takes 0.07 sec, found a plan with cost 4.0
+TASK: grippers - 2032 - 10
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (move robot1 room1 room2)
+2 (Single): Agent 1: (pick robot1 ball2 room2 lgripper1)
+3 (Single): Agent 1: (move robot1 room2 room1)
+4 (Single): Agent 1: (drop robot1 ball2 room1 lgripper1)
+
+merging plan 2 into initial_plan
+4 True
+verifying entire plan.
+unsatisfied precondition encountered in merged plan, stopping process.
+Type-checking move
+...action passes type checking.
+Type-checking pick
+...action passes type checking.
+Type-checking drop
+...action passes type checking.
+Checking plan: ./experiments_multiagent_help/run2032/grippers/agent2_plan_final_temp.txt
+Plan to validate:
+
+Plan size: 8
+1:
+(move robot1 room1 room2)
+ 
+2:
+(move robot1 room1 room2)
+ 
+3:
+(pick robot1 ball2 room2 lgripper1)
+ 
+4:
+(pick robot1 ball3 room2 lgripper1)
+ 
+5:
+(move robot1 room2 room1)
+ 
+6:
+(move robot1 room2 room1)
+ 
+7:
+(drop robot1 ball2 room1 lgripper1)
+ 
+8:
+(drop robot1 ball3 room1 lgripper1)
+ 
+
+Plan Validation details
+-----------------------
+
+Checking next happening (time 1)
+Deleting (at-robby robot1 room1)
+Adding (at-robby robot1 room2)
+
+Checking next happening (time 2)
+Plan failed because of unsatisfied precondition in:
+(move robot1 room1 room2)
+
+
+Plan failed to execute
+
+Plan Repair Advice:
+
+(move robot1 room1 room2) has an unsatisfied precondition at time 2
+(Set (at-robby robot1 room1) to true)
+
+
+Failed plans:
+ ./experiments_multiagent_help/run2032/grippers/agent2_plan_final_temp.txt 
+
+[results][grippers][10]
+[single_agent][planning time: 0.05][cost: 10.0]
+[multi_agent][planning_time: 2.393241367340088][cost: inf][agents: 3][optimization time 2.107851505279541]
+----------------------------------------
+Using cached single agent results
+LLM generated no subgoal for agent 2, reducing number of agents
+args.num_agents: 2
+['ball3 is in room2.']
+['./experiments_multiagent_help/run2032/grippers/p11_1.pddl']
+agent1
+[info][subgoal_1][grippers] task 11 takes 0.07 sec, found a plan with cost 3.0
+planner successful
+validating
+validator time 0.002221822738647461
+[info][multiagent main goal][grippers] task 11 takes 332.6 sec, no solution found
+TASK: grippers - 2032 - 11
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (pick robot1 ball3 room1 lgripper1)
+2 (Single): Agent 1: (move robot1 room1 room2)
+3 (Single): Agent 1: (drop robot1 ball3 room2 lgripper1)
+
+merging main agent's plan into combined plan
+
+Main Agent's Plan:
+
+
+Current Combined Plan:
+1 (Single): Agent 1: (pick robot1 ball3 room1 lgripper1)
+2 (Single): Agent 1: (move robot1 room1 room2)
+3 (Single): Agent 1: (drop robot1 ball3 room2 lgripper1)
+
+3 True
+verifying final merged plan.
+
+Final Merged Plan:
+1 (Single): Agent 0: (pick robot1 ball3 room1 lgripper1)
+2 (Single): Agent 0: (move robot1 room1 room2)
+3 (Single): Agent 0: (drop robot1 ball3 room2 lgripper1)
+
+Total Cost: 3
+[results][grippers][11]
+[single_agent][planning time: 0.04][cost: 3.0]
+[multi_agent][planning_time: 0.9729927253723145][cost: 3.0][agents: 2][optimization time 2.904942274093628]
+----------------------------------------
+Using cached single agent results
+['ball4 is in room2.', 'ball2 is in room1.']
+['./experiments_multiagent_help/run2032/grippers/p12_1.pddl', './experiments_multiagent_help/run2032/grippers/p12_2.pddl']
+agent1
+[info][subgoal_1][grippers] task 12 takes 0.07 sec, found a plan with cost 4.0
+planner successful
+validating
+validator time 0.0022356510162353516
+agent2
+[info][subgoal_2][grippers] task 12 takes 0.07 sec, found a plan with cost 3.0
+planner successful
+validating
+validator time 0.00620579719543457
+[info][multiagent main goal][grippers] task 12 takes 0.07 sec, found a plan with cost 3.0
+TASK: grippers - 2032 - 12
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (move robot1 room2 room1)
+2 (Single): Agent 1: (pick robot1 ball4 room1 lgripper1)
+3 (Single): Agent 1: (move robot1 room1 room2)
+4 (Single): Agent 1: (drop robot1 ball4 room2 lgripper1)
+
+merging plan 2 into initial_plan
+4 True
+verifying entire plan.
+unsatisfied precondition encountered in merged plan, stopping process.
+Type-checking move
+...action passes type checking.
+Type-checking pick
+...action passes type checking.
+Type-checking drop
+...action passes type checking.
+Checking plan: ./experiments_multiagent_help/run2032/grippers/agent2_plan_final_temp.txt
+Plan to validate:
+
+Plan size: 7
+1:
+(move robot1 room2 room1)
+ 
+2:
+(pick robot1 ball4 room1 lgripper1)
+ 
+3:
+(pick robot1 ball2 room2 lgripper1)
+ 
+4:
+(move robot1 room1 room2)
+ 
+5:
+(move robot1 room2 room1)
+ 
+6:
+(drop robot1 ball4 room2 lgripper1)
+ 
+7:
+(drop robot1 ball2 room1 lgripper1)
+ 
+
+Plan Validation details
+-----------------------
+
+Checking next happening (time 1)
+Deleting (at-robby robot1 room2)
+Adding (at-robby robot1 room1)
+
+Checking next happening (time 2)
+Deleting (at ball4 room1)
+Deleting (free robot1 lgripper1)
+Adding (carry robot1 ball4 lgripper1)
+
+Checking next happening (time 3)
+Plan failed because of unsatisfied precondition in:
+(pick robot1 ball2 room2 lgripper1)
+
+
+Plan failed to execute
+
+Plan Repair Advice:
+
+(pick robot1 ball2 room2 lgripper1) has an unsatisfied precondition at time 3
+(Follow each of:
+    (Set (at-robby robot1 room2) to true)
+    and (Set (free robot1 lgripper1) to true)
+)
+
+
+Failed plans:
+ ./experiments_multiagent_help/run2032/grippers/agent2_plan_final_temp.txt 
+
+[results][grippers][12]
+[single_agent][planning time: 0.09][cost: 9.0]
+[multi_agent][planning_time: 2.529974660873413][cost: inf][agents: 3][optimization time 2.762537717819214]
+----------------------------------------
+Using cached single agent results
+['ball1 is in room1.', 'ball2 is in room1.']
+['./experiments_multiagent_help/run2032/grippers/p13_1.pddl', './experiments_multiagent_help/run2032/grippers/p13_2.pddl']
+agent1
+[info][subgoal_1][grippers] task 13 takes 0.07 sec, found a plan with cost 4.0
+planner successful
+validating
+validator time 0.002238035202026367
+agent2
+[info][subgoal_2][grippers] task 13 takes 0.07 sec, found a plan with cost 4.0
+planner successful
+validating
+validator time 0.0050199031829833984
+[info][multiagent main goal][grippers] task 13 takes 333.02 sec, no solution found
+TASK: grippers - 2032 - 13
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (move robot1 room1 room3)
+2 (Single): Agent 1: (pick robot1 ball1 room3 lgripper1)
+3 (Single): Agent 1: (move robot1 room3 room1)
+4 (Single): Agent 1: (drop robot1 ball1 room1 lgripper1)
+
+merging plan 2 into initial_plan
+4 True
+verifying entire plan.
+unsatisfied precondition encountered in merged plan, stopping process.
+Type-checking move
+...action passes type checking.
+Type-checking pick
+...action passes type checking.
+Type-checking drop
+...action passes type checking.
+Checking plan: ./experiments_multiagent_help/run2032/grippers/agent2_plan_final_temp.txt
+Plan to validate:
+
+Plan size: 8
+1:
+(move robot1 room1 room3)
+ 
+2:
+(move robot1 room1 room3)
+ 
+3:
+(pick robot1 ball1 room3 lgripper1)
+ 
+4:
+(pick robot1 ball2 room3 lgripper1)
+ 
+5:
+(move robot1 room3 room1)
+ 
+6:
+(move robot1 room3 room1)
+ 
+7:
+(drop robot1 ball1 room1 lgripper1)
+ 
+8:
+(drop robot1 ball2 room1 lgripper1)
+ 
+
+Plan Validation details
+-----------------------
+
+Checking next happening (time 1)
+Deleting (at-robby robot1 room1)
+Adding (at-robby robot1 room3)
+
+Checking next happening (time 2)
+Plan failed because of unsatisfied precondition in:
+(move robot1 room1 room3)
+
+
+Plan failed to execute
+
+Plan Repair Advice:
+
+(move robot1 room1 room3) has an unsatisfied precondition at time 2
+(Set (at-robby robot1 room1) to true)
+
+
+Failed plans:
+ ./experiments_multiagent_help/run2032/grippers/agent2_plan_final_temp.txt 
+
+[results][grippers][13]
+[single_agent][planning time: 0.05][cost: 6.0]
+[multi_agent][planning_time: 1.2442058467864991][cost: inf][agents: 3][optimization time 5.34160852432251]
+----------------------------------------
+Using cached single agent results
+['ball2 should be in room4.', 'ball3 should be in room4.']
+['./experiments_multiagent_help/run2032/grippers/p14_1.pddl', './experiments_multiagent_help/run2032/grippers/p14_2.pddl']
+agent1
+[info][subgoal_1][grippers] task 14 takes 0.07 sec, found a plan with cost 4.0
+planner successful
+validating
+validator time 0.003660440444946289
+agent2
+[info][subgoal_2][grippers] task 14 takes 0.07 sec, found a plan with cost 4.0
+planner successful
+validating
+validator time 0.0021331310272216797
+[info][multiagent main goal][grippers] task 14 takes 332.81 sec, no solution found
+TASK: grippers - 2032 - 14
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (move robot1 room2 room1)
+2 (Single): Agent 1: (pick robot1 ball2 room1 lgripper1)
+3 (Single): Agent 1: (move robot1 room1 room4)
+4 (Single): Agent 1: (drop robot1 ball2 room4 lgripper1)
+
+merging plan 2 into initial_plan
+4 True
+verifying entire plan.
+unsatisfied precondition encountered in merged plan, stopping process.
+Type-checking move
+...action passes type checking.
+Type-checking pick
+...action passes type checking.
+Type-checking drop
+...action passes type checking.
+Checking plan: ./experiments_multiagent_help/run2032/grippers/agent2_plan_final_temp.txt
+Plan to validate:
+
+Plan size: 8
+1:
+(move robot1 room2 room1)
+ 
+2:
+(move robot1 room2 room1)
+ 
+3:
+(pick robot1 ball2 room1 lgripper1)
+ 
+4:
+(pick robot1 ball3 room1 lgripper1)
+ 
+5:
+(move robot1 room1 room4)
+ 
+6:
+(move robot1 room1 room4)
+ 
+7:
+(drop robot1 ball2 room4 lgripper1)
+ 
+8:
+(drop robot1 ball3 room4 lgripper1)
+ 
+
+Plan Validation details
+-----------------------
+
+Checking next happening (time 1)
+Deleting (at-robby robot1 room2)
+Adding (at-robby robot1 room1)
+
+Checking next happening (time 2)
+Plan failed because of unsatisfied precondition in:
+(move robot1 room2 room1)
+
+
+Plan failed to execute
+
+Plan Repair Advice:
+
+(move robot1 room2 room1) has an unsatisfied precondition at time 2
+(Set (at-robby robot1 room2) to true)
+
+
+Failed plans:
+ ./experiments_multiagent_help/run2032/grippers/agent2_plan_final_temp.txt 
+
+[results][grippers][14]
+[single_agent][planning time: 0.06][cost: 6.0]
+[multi_agent][planning_time: 1.0857602500915529][cost: inf][agents: 3][optimization time 5.28740668296814]
+----------------------------------------
+Using cached single agent results
+['ball1 is in room5.', 'ball2 is in room2.']
+['./experiments_multiagent_help/run2032/grippers/p15_1.pddl', './experiments_multiagent_help/run2032/grippers/p15_2.pddl']
+agent1
+[info][subgoal_1][grippers] task 15 takes 0.07 sec, found a plan with cost 4.0
+planner successful
+validating
+validator time 0.001886129379272461
+agent2
+[info][subgoal_2][grippers] task 15 takes 0.07 sec, found a plan with cost 4.0
+planner successful
+validating
+validator time 0.0019927024841308594
+[info][multiagent main goal][grippers] task 15 takes 0.07 sec, found a plan with cost 4.0
+TASK: grippers - 2032 - 15
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (move robot1 room4 room3)
+2 (Single): Agent 1: (pick robot1 ball1 room3 lgripper1)
+3 (Single): Agent 1: (move robot1 room3 room5)
+4 (Single): Agent 1: (drop robot1 ball1 room5 lgripper1)
+
+merging plan 2 into initial_plan
+4 True
+verifying entire plan.
+unsatisfied precondition encountered in merged plan, stopping process.
+Type-checking move
+...action passes type checking.
+Type-checking pick
+...action passes type checking.
+Type-checking drop
+...action passes type checking.
+Checking plan: ./experiments_multiagent_help/run2032/grippers/agent2_plan_final_temp.txt
+Plan to validate:
+
+Plan size: 8
+1:
+(move robot1 room4 room3)
+ 
+2:
+(move robot1 room4 room5)
+ 
+3:
+(pick robot1 ball1 room3 lgripper1)
+ 
+4:
+(pick robot1 ball2 room5 lgripper1)
+ 
+5:
+(move robot1 room3 room5)
+ 
+6:
+(move robot1 room5 room2)
+ 
+7:
+(drop robot1 ball1 room5 lgripper1)
+ 
+8:
+(drop robot1 ball2 room2 lgripper1)
+ 
+
+Plan Validation details
+-----------------------
+
+Checking next happening (time 1)
+Deleting (at-robby robot1 room4)
+Adding (at-robby robot1 room3)
+
+Checking next happening (time 2)
+Plan failed because of unsatisfied precondition in:
+(move robot1 room4 room5)
+
+
+Plan failed to execute
+
+Plan Repair Advice:
+
+(move robot1 room4 room5) has an unsatisfied precondition at time 2
+(Set (at-robby robot1 room4) to true)
+
+
+Failed plans:
+ ./experiments_multiagent_help/run2032/grippers/agent2_plan_final_temp.txt 
+
+[results][grippers][15]
+[single_agent][planning time: 0.1][cost: 10.0]
+[multi_agent][planning_time: 2.7044217205047607][cost: inf][agents: 3][optimization time 2.0159835815429688]
+----------------------------------------
+Using cached single agent results
+['ball7 should be in room4.', 'ball5 should be in room1.']
+['./experiments_multiagent_help/run2032/grippers/p16_1.pddl', './experiments_multiagent_help/run2032/grippers/p16_2.pddl']
+agent1
+[info][subgoal_1][grippers] task 16 takes 0.08 sec, found a plan with cost 3.0
+planner successful
+validating
+validator time 0.001992464065551758
+agent2
+[info][subgoal_2][grippers] task 16 takes 0.08 sec, found a plan with cost 4.0
+planner successful
+validating
+validator time 0.002961874008178711
+[info][multiagent main goal][grippers] task 16 takes 4.47 sec, found a plan with cost 15.0
+TASK: grippers - 2032 - 16
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (pick robot1 ball7 room1 lgripper1)
+2 (Single): Agent 1: (move robot1 room1 room4)
+3 (Single): Agent 1: (drop robot1 ball7 room4 lgripper1)
+
+merging plan 2 into initial_plan
+4 True
+verifying entire plan.
+unsatisfied precondition encountered in merged plan, stopping process.
+Type-checking move
+...action passes type checking.
+Type-checking pick
+...action passes type checking.
+Type-checking drop
+...action passes type checking.
+Checking plan: ./experiments_multiagent_help/run2032/grippers/agent2_plan_final_temp.txt
+Plan to validate:
+
+Plan size: 7
+1:
+(move robot1 room1 room4)
+ 
+2:
+(pick robot1 ball7 room1 lgripper1)
+ 
+3:
+(pick robot1 ball5 room4 lgripper1)
+ 
+4:
+(move robot1 room1 room4)
+ 
+5:
+(move robot1 room4 room1)
+ 
+6:
+(drop robot1 ball7 room4 lgripper1)
+ 
+7:
+(drop robot1 ball5 room1 lgripper1)
+ 
+
+Plan Validation details
+-----------------------
+
+Checking next happening (time 1)
+Deleting (at-robby robot1 room1)
+Adding (at-robby robot1 room4)
+
+Checking next happening (time 2)
+Plan failed because of unsatisfied precondition in:
+(pick robot1 ball7 room1 lgripper1)
+
+
+Plan failed to execute
+
+Plan Repair Advice:
+
+(pick robot1 ball7 room1 lgripper1) has an unsatisfied precondition at time 2
+(Set (at-robby robot1 room1) to true)
+
+
+Failed plans:
+ ./experiments_multiagent_help/run2032/grippers/agent2_plan_final_temp.txt 
+
+[results][grippers][16]
+[single_agent][planning time: 14.17][cost: 19.0]
+[multi_agent][planning_time: 6.997875099182129][cost: inf][agents: 3][optimization time 1.589784860610962]
+----------------------------------------
+Using cached single agent results
+['ball3 should be in room1.', 'ball4 should be in room1.']
+['./experiments_multiagent_help/run2032/grippers/p17_1.pddl', './experiments_multiagent_help/run2032/grippers/p17_2.pddl']
+agent1
+[info][subgoal_1][grippers] task 17 takes 0.07 sec, found a plan with cost 4.0
+planner successful
+validating
+validator time 0.003134489059448242
+agent2
+[info][subgoal_2][grippers] task 17 takes 0.07 sec, found a plan with cost 4.0
+planner successful
+validating
+validator time 0.004800081253051758
+[info][multiagent main goal][grippers] task 17 takes 0.06 sec, found a plan with cost 3.0
+TASK: grippers - 2032 - 17
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (move robot1 room1 room2)
+2 (Single): Agent 1: (pick robot1 ball3 room2 lgripper1)
+3 (Single): Agent 1: (move robot1 room2 room1)
+4 (Single): Agent 1: (drop robot1 ball3 room1 lgripper1)
+
+merging plan 2 into initial_plan
+4 True
+verifying entire plan.
+unsatisfied precondition encountered in merged plan, stopping process.
+Type-checking move
+...action passes type checking.
+Type-checking pick
+...action passes type checking.
+Type-checking drop
+...action passes type checking.
+Checking plan: ./experiments_multiagent_help/run2032/grippers/agent2_plan_final_temp.txt
+Plan to validate:
+
+Plan size: 8
+1:
+(move robot1 room1 room2)
+ 
+2:
+(move robot1 room1 room2)
+ 
+3:
+(pick robot1 ball3 room2 lgripper1)
+ 
+4:
+(pick robot1 ball4 room2 lgripper1)
+ 
+5:
+(move robot1 room2 room1)
+ 
+6:
+(move robot1 room2 room1)
+ 
+7:
+(drop robot1 ball3 room1 lgripper1)
+ 
+8:
+(drop robot1 ball4 room1 lgripper1)
+ 
+
+Plan Validation details
+-----------------------
+
+Checking next happening (time 1)
+Deleting (at-robby robot1 room1)
+Adding (at-robby robot1 room2)
+
+Checking next happening (time 2)
+Plan failed because of unsatisfied precondition in:
+(move robot1 room1 room2)
+
+
+Plan failed to execute
+
+Plan Repair Advice:
+
+(move robot1 room1 room2) has an unsatisfied precondition at time 2
+(Set (at-robby robot1 room1) to true)
+
+
+Failed plans:
+ ./experiments_multiagent_help/run2032/grippers/agent2_plan_final_temp.txt 
+
+[results][grippers][17]
+[single_agent][planning time: 0.04][cost: 8.0]
+[multi_agent][planning_time: 2.56549186706543][cost: inf][agents: 3][optimization time 4.639253377914429]
+----------------------------------------
+Using cached single agent results
+['ball3 is in room2.', 'ball1 is in room1.']
+['./experiments_multiagent_help/run2032/grippers/p18_1.pddl', './experiments_multiagent_help/run2032/grippers/p18_2.pddl']
+agent1
+[info][subgoal_1][grippers] task 18 takes 0.07 sec, found a plan with cost 4.0
+planner successful
+validating
+validator time 0.004454135894775391
+agent2
+[info][subgoal_2][grippers] task 18 takes 0.07 sec, found a plan with cost 4.0
+planner successful
+validating
+validator time 0.0032689571380615234
+[info][multiagent main goal][grippers] task 18 takes 0.07 sec, found a plan with cost 4.0
+TASK: grippers - 2032 - 18
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (move robot1 room3 room1)
+2 (Single): Agent 1: (pick robot1 ball3 room1 lgripper1)
+3 (Single): Agent 1: (move robot1 room1 room2)
+4 (Single): Agent 1: (drop robot1 ball3 room2 lgripper1)
+
+merging plan 2 into initial_plan
+4 True
+verifying entire plan.
+unsatisfied precondition encountered in merged plan, stopping process.
+Type-checking move
+...action passes type checking.
+Type-checking pick
+...action passes type checking.
+Type-checking drop
+...action passes type checking.
+Checking plan: ./experiments_multiagent_help/run2032/grippers/agent2_plan_final_temp.txt
+Plan to validate:
+
+Plan size: 8
+1:
+(move robot1 room3 room1)
+ 
+2:
+(move robot1 room3 room2)
+ 
+3:
+(pick robot1 ball3 room1 lgripper1)
+ 
+4:
+(pick robot1 ball1 room2 lgripper1)
+ 
+5:
+(move robot1 room1 room2)
+ 
+6:
+(move robot1 room2 room1)
+ 
+7:
+(drop robot1 ball3 room2 lgripper1)
+ 
+8:
+(drop robot1 ball1 room1 lgripper1)
+ 
+
+Plan Validation details
+-----------------------
+
+Checking next happening (time 1)
+Deleting (at-robby robot1 room3)
+Adding (at-robby robot1 room1)
+
+Checking next happening (time 2)
+Plan failed because of unsatisfied precondition in:
+(move robot1 room3 room2)
+
+
+Plan failed to execute
+
+Plan Repair Advice:
+
+(move robot1 room3 room2) has an unsatisfied precondition at time 2
+(Set (at-robby robot1 room3) to true)
+
+
+Failed plans:
+ ./experiments_multiagent_help/run2032/grippers/agent2_plan_final_temp.txt 
+
+[results][grippers][18]
+[single_agent][planning time: 0.09][cost: 9.0]
+[multi_agent][planning_time: 2.568668088912964][cost: inf][agents: 3][optimization time 2.2947816848754883]
+----------------------------------------
+Using cached single agent results
+['ball3 should be in room1.', 'ball5 should be in room1.']
+['./experiments_multiagent_help/run2032/grippers/p19_1.pddl', './experiments_multiagent_help/run2032/grippers/p19_2.pddl']
+agent1
+[info][subgoal_1][grippers] task 19 takes 0.09 sec, found a plan with cost 4.0
+planner successful
+validating
+validator time 0.0028853416442871094
+agent2
+[info][subgoal_2][grippers] task 19 takes 0.08 sec, found a plan with cost 3.0
+planner successful
+validating
+validator time 0.0021789073944091797
+[info][multiagent main goal][grippers] task 19 takes 0.72 sec, found a plan with cost 12.0
+TASK: grippers - 2032 - 19
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (move robot1 room4 room5)
+2 (Single): Agent 1: (pick robot1 ball3 room5 lgripper1)
+3 (Single): Agent 1: (move robot1 room5 room1)
+4 (Single): Agent 1: (drop robot1 ball3 room1 lgripper1)
+
+merging plan 2 into initial_plan
+4 True
+verifying entire plan.
+unsatisfied precondition encountered in merged plan, stopping process.
+Type-checking move
+...action passes type checking.
+Type-checking pick
+...action passes type checking.
+Type-checking drop
+...action passes type checking.
+Checking plan: ./experiments_multiagent_help/run2032/grippers/agent2_plan_final_temp.txt
+Plan to validate:
+
+Plan size: 7
+1:
+(move robot1 room4 room5)
+ 
+2:
+(pick robot1 ball3 room5 lgripper1)
+ 
+3:
+(pick robot1 ball5 room4 lgripper1)
+ 
+4:
+(move robot1 room5 room1)
+ 
+5:
+(move robot1 room4 room1)
+ 
+6:
+(drop robot1 ball3 room1 lgripper1)
+ 
+7:
+(drop robot1 ball5 room1 lgripper1)
+ 
+
+Plan Validation details
+-----------------------
+
+Checking next happening (time 1)
+Deleting (at-robby robot1 room4)
+Adding (at-robby robot1 room5)
+
+Checking next happening (time 2)
+Deleting (at ball3 room5)
+Deleting (free robot1 lgripper1)
+Adding (carry robot1 ball3 lgripper1)
+
+Checking next happening (time 3)
+Plan failed because of unsatisfied precondition in:
+(pick robot1 ball5 room4 lgripper1)
+
+
+Plan failed to execute
+
+Plan Repair Advice:
+
+(pick robot1 ball5 room4 lgripper1) has an unsatisfied precondition at time 3
+(Follow each of:
+    (Set (at-robby robot1 room4) to true)
+    and (Set (free robot1 lgripper1) to true)
+)
+
+
+Failed plans:
+ ./experiments_multiagent_help/run2032/grippers/agent2_plan_final_temp.txt 
+
+[results][grippers][19]
+[single_agent][planning time: 2.55][cost: 17.0]
+[multi_agent][planning_time: 3.420992984771728][cost: inf][agents: 3][optimization time 1.6421406269073486]
+----------------------------------------
+Using cached single agent results
+['ball1 is in room3.', 'ball2 is in room2.']
+['./experiments_multiagent_help/run2032/grippers/p20_1.pddl', './experiments_multiagent_help/run2032/grippers/p20_2.pddl']
+agent1
+[info][subgoal_1][grippers] task 20 takes 0.07 sec, found a plan with cost 4.0
+planner successful
+validating
+validator time 0.0020580291748046875
+agent2
+[info][subgoal_2][grippers] task 20 takes 0.07 sec, found a plan with cost 4.0
+planner successful
+validating
+validator time 0.002062559127807617
+[info][multiagent main goal][grippers] task 20 takes 333.15 sec, no solution found
+TASK: grippers - 2032 - 20
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (move robot1 room1 room2)
+2 (Single): Agent 1: (pick robot1 ball1 room2 lgripper1)
+3 (Single): Agent 1: (move robot1 room2 room3)
+4 (Single): Agent 1: (drop robot1 ball1 room3 lgripper1)
+
+merging plan 2 into initial_plan
+4 True
+verifying entire plan.
+unsatisfied precondition encountered in merged plan, stopping process.
+Type-checking move
+...action passes type checking.
+Type-checking pick
+...action passes type checking.
+Type-checking drop
+...action passes type checking.
+Checking plan: ./experiments_multiagent_help/run2032/grippers/agent2_plan_final_temp.txt
+Plan to validate:
+
+Plan size: 8
+1:
+(move robot1 room1 room2)
+ 
+2:
+(move robot1 room1 room3)
+ 
+3:
+(pick robot1 ball1 room2 lgripper1)
+ 
+4:
+(pick robot1 ball2 room3 lgripper1)
+ 
+5:
+(move robot1 room2 room3)
+ 
+6:
+(move robot1 room3 room2)
+ 
+7:
+(drop robot1 ball1 room3 lgripper1)
+ 
+8:
+(drop robot1 ball2 room2 lgripper1)
+ 
+
+Plan Validation details
+-----------------------
+
+Checking next happening (time 1)
+Deleting (at-robby robot1 room1)
+Adding (at-robby robot1 room2)
+
+Checking next happening (time 2)
+Plan failed because of unsatisfied precondition in:
+(move robot1 room1 room3)
+
+
+Plan failed to execute
+
+Plan Repair Advice:
+
+(move robot1 room1 room3) has an unsatisfied precondition at time 2
+(Set (at-robby robot1 room1) to true)
+
+
+Failed plans:
+ ./experiments_multiagent_help/run2032/grippers/agent2_plan_final_temp.txt 
+
+[results][grippers][20]
+[single_agent][planning time: 0.04][cost: 7.0]
+[multi_agent][planning_time: 1.4014471912384034][cost: inf][agents: 3][optimization time 4.108044624328613]
+----------------------------------------

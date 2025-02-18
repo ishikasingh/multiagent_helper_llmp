@@ -1,0 +1,7363 @@
+Using cached single agent results
+['height at pos-0-2 is 2 and all blocks are placed.', 'height at pos-3-1 is 2 and all blocks are placed.', 'height at pos-2-1 is 2 and all blocks are placed.', 'height at pos-0-1 is 2 and all blocks are placed.']
+['./experiments_multiagent_help/run4034/termes/p01_1.pddl', './experiments_multiagent_help/run4034/termes/p01_2.pddl', './experiments_multiagent_help/run4034/termes/p01_3.pddl', './experiments_multiagent_help/run4034/termes/p01_4.pddl']
+agent1
+[info][subgoal_1][termes] task 01 takes 0.61 sec, found a plan with cost 20.0
+planner successful
+validating
+validator time 0.003512859344482422
+agent2
+[info][subgoal_2][termes] task 01 takes 0.14 sec, found a plan with cost 9.0
+planner successful
+validating
+validator time 0.0034945011138916016
+agent3
+[info][subgoal_3][termes] task 01 takes 5.91 sec, found a plan with cost 24.0
+planner successful
+validating
+validator time 0.0038449764251708984
+agent4
+[info][subgoal_4][termes] task 01 takes 1.13 sec, found a plan with cost 18.0
+planner successful
+validating
+validator time 0.007192373275756836
+[info][multiagent main goal][termes] task 01 takes 15.89 sec, found a plan with cost 34.0
+TASK: termes - 4034 - 01
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (create-block pos-2-0)
+2 (Single): Agent 1: (place-block pos-2-0 pos-1-0 n0 n1)
+3 (Single): Agent 1: (create-block pos-2-0)
+4 (Single): Agent 1: (place-block pos-2-0 pos-2-1 n0 n1)
+5 (Single): Agent 1: (create-block pos-2-0)
+6 (Single): Agent 1: (move-up pos-2-0 n0 pos-1-0 n1)
+7 (Single): Agent 1: (move-down pos-1-0 n1 pos-0-0 n0)
+8 (Single): Agent 1: (move pos-0-0 pos-0-1 n0)
+9 (Single): Agent 1: (place-block pos-0-1 pos-0-2 n0 n1)
+10 (Single): Agent 1: (move pos-0-1 pos-1-1 n0)
+11 (Single): Agent 1: (remove-block pos-1-1 pos-1-0 n1 n0)
+12 (Single): Agent 1: (place-block pos-1-1 pos-0-1 n0 n1)
+13 (Single): Agent 1: (remove-block pos-1-1 pos-2-1 n1 n0)
+14 (Single): Agent 1: (move-up pos-1-1 n0 pos-0-1 n1)
+15 (Single): Agent 1: (place-block pos-0-1 pos-0-2 n1 n2)
+16 (Single): Agent 1: (move-down pos-0-1 n1 pos-0-0 n0)
+17 (Single): Agent 1: (remove-block pos-0-0 pos-0-1 n1 n0)
+18 (Single): Agent 1: (move pos-0-0 pos-1-0 n0)
+19 (Single): Agent 1: (move pos-1-0 pos-2-0 n0)
+20 (Single): Agent 1: (destroy-block pos-2-0)
+
+merging plan 2 into initial_plan
+20 True
+verifying entire plan.
+unsatisfied precondition encountered in merged plan, stopping process.
+Type-checking move
+...action passes type checking.
+Type-checking move-up
+...action passes type checking.
+Type-checking move-down
+...action passes type checking.
+Type-checking place-block
+...action passes type checking.
+Type-checking remove-block
+...action passes type checking.
+Type-checking create-block
+...action passes type checking.
+Type-checking destroy-block
+...action passes type checking.
+Checking plan: ./experiments_multiagent_help/run4034/termes/agent2_plan_final_temp.txt
+Plan to validate:
+
+Plan size: 29
+1:
+(create-block pos-2-0)
+ 
+2:
+(place-block pos-2-0 pos-1-0 n0 n1)
+ 
+3:
+(create-block pos-2-0)
+ 
+4:
+(place-block pos-2-0 pos-2-1 n0 n1)
+ 
+5:
+(create-block pos-2-0)
+ 
+6:
+(move-up pos-2-0 n0 pos-1-0 n1)
+ 
+7:
+(move-down pos-1-0 n1 pos-0-0 n0)
+ 
+8:
+(move pos-0-0 pos-0-1 n0)
+ 
+9:
+(place-block pos-0-1 pos-0-2 n0 n1)
+ 
+10:
+(move pos-0-1 pos-1-1 n0)
+ 
+11:
+(remove-block pos-1-1 pos-1-0 n1 n0)
+ 
+12:
+(place-block pos-1-1 pos-0-1 n0 n1)
+ 
+13:
+(create-block pos-2-0)
+ 
+14:
+(remove-block pos-1-1 pos-2-1 n1 n0)
+ 
+15:
+(move pos-2-0 pos-3-0 n0)
+ 
+16:
+(move-up pos-1-1 n0 pos-0-1 n1)
+ 
+17:
+(place-block pos-3-0 pos-3-1 n0 n1)
+ 
+18:
+(place-block pos-0-1 pos-0-2 n1 n2)
+ 
+19:
+(move pos-3-0 pos-2-0 n0)
+ 
+20:
+(move-down pos-0-1 n1 pos-0-0 n0)
+ 
+21:
+(create-block pos-2-0)
+ 
+22:
+(remove-block pos-0-0 pos-0-1 n1 n0)
+ 
+23:
+(place-block pos-2-0 pos-3-0 n0 n1)
+ 
+24:
+(move pos-0-0 pos-1-0 n0)
+ 
+25:
+(create-block pos-2-0)
+ 
+26:
+(move pos-1-0 pos-2-0 n0)
+ 
+27:
+(move-up pos-2-0 n0 pos-3-0 n1)
+ 
+28:
+(destroy-block pos-2-0)
+ 
+29:
+(place-block pos-3-0 pos-3-1 n1 n2)
+ 
+
+Plan Validation details
+-----------------------
+
+Checking next happening (time 1)
+Adding (has-block)
+
+Checking next happening (time 2)
+Deleting (height pos-1-0 n0)
+Deleting (has-block)
+Adding (height pos-1-0 n1)
+
+Checking next happening (time 3)
+Adding (has-block)
+
+Checking next happening (time 4)
+Deleting (height pos-2-1 n0)
+Deleting (has-block)
+Adding (height pos-2-1 n1)
+
+Checking next happening (time 5)
+Adding (has-block)
+
+Checking next happening (time 6)
+Deleting (at pos-2-0)
+Adding (at pos-1-0)
+
+Checking next happening (time 7)
+Deleting (at pos-1-0)
+Adding (at pos-0-0)
+
+Checking next happening (time 8)
+Deleting (at pos-0-0)
+Adding (at pos-0-1)
+
+Checking next happening (time 9)
+Deleting (height pos-0-2 n0)
+Deleting (has-block)
+Adding (height pos-0-2 n1)
+
+Checking next happening (time 10)
+Deleting (at pos-0-1)
+Adding (at pos-1-1)
+
+Checking next happening (time 11)
+Deleting (height pos-1-0 n1)
+Adding (height pos-1-0 n0)
+Adding (has-block)
+
+Checking next happening (time 12)
+Deleting (height pos-0-1 n0)
+Deleting (has-block)
+Adding (height pos-0-1 n1)
+
+Checking next happening (time 13)
+Plan failed because of unsatisfied precondition in:
+(create-block pos-2-0)
+
+
+Plan failed to execute
+
+Plan Repair Advice:
+
+(create-block pos-2-0) has an unsatisfied precondition at time 13
+(Set (at pos-2-0) to true)
+
+
+Failed plans:
+ ./experiments_multiagent_help/run4034/termes/agent2_plan_final_temp.txt 
+
+[results][termes][01]
+[single_agent][planning time: 28.84][cost: 36.0]
+[multi_agent][planning_time: 34.70620267868042][cost: inf][agents: 5][optimization time 45.57926654815674]
+----------------------------------------
+Using cached single agent results
+LLM generated no subgoal for agent 3, reducing number of agents
+args.num_agents: 3
+['height pos-3-0 3', 'height pos-2-1 3']
+['./experiments_multiagent_help/run4034/termes/p02_1.pddl', './experiments_multiagent_help/run4034/termes/p02_2.pddl']
+agent1
+[info][subgoal_1][termes] task 02 takes 5.26 sec, found a plan with cost 32.0
+planner successful
+validating
+validator time 0.0036449432373046875
+agent2
+[info][subgoal_2][termes] task 02 takes 10.8 sec, found a plan with cost 36.0
+planner successful
+validating
+validator time 0.003935098648071289
+[info][multiagent main goal][termes] task 02 takes 200.11 sec, found a plan with cost 52.0
+TASK: termes - 4034 - 02
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (create-block pos-2-0)
+2 (Single): Agent 1: (place-block pos-2-0 pos-2-1 n0 n1)
+3 (Single): Agent 1: (create-block pos-2-0)
+4 (Single): Agent 1: (move pos-2-0 pos-3-0 n0)
+5 (Single): Agent 1: (place-block pos-3-0 pos-3-1 n0 n1)
+6 (Single): Agent 1: (move pos-3-0 pos-2-0 n0)
+7 (Single): Agent 1: (create-block pos-2-0)
+8 (Single): Agent 1: (place-block pos-2-0 pos-3-0 n0 n1)
+9 (Single): Agent 1: (create-block pos-2-0)
+10 (Single): Agent 1: (move-up pos-2-0 n0 pos-3-0 n1)
+11 (Single): Agent 1: (move pos-3-0 pos-3-1 n1)
+12 (Single): Agent 1: (place-block pos-3-1 pos-3-0 n1 n2)
+13 (Single): Agent 1: (move pos-3-1 pos-2-1 n1)
+14 (Single): Agent 1: (move-down pos-2-1 n1 pos-2-0 n0)
+15 (Single): Agent 1: (create-block pos-2-0)
+16 (Single): Agent 1: (move-up pos-2-0 n0 pos-2-1 n1)
+17 (Single): Agent 1: (place-block pos-2-1 pos-3-1 n1 n2)
+18 (Single): Agent 1: (move-down pos-2-1 n1 pos-2-0 n0)
+19 (Single): Agent 1: (create-block pos-2-0)
+20 (Single): Agent 1: (move-up pos-2-0 n0 pos-2-1 n1)
+21 (Single): Agent 1: (move-up pos-2-1 n1 pos-3-1 n2)
+22 (Single): Agent 1: (place-block pos-3-1 pos-3-0 n2 n3)
+23 (Single): Agent 1: (move-down pos-3-1 n2 pos-2-1 n1)
+24 (Single): Agent 1: (remove-block pos-2-1 pos-3-1 n2 n1)
+25 (Single): Agent 1: (move-down pos-2-1 n1 pos-2-0 n0)
+26 (Single): Agent 1: (destroy-block pos-2-0)
+27 (Single): Agent 1: (remove-block pos-2-0 pos-2-1 n1 n0)
+28 (Single): Agent 1: (destroy-block pos-2-0)
+29 (Single): Agent 1: (move pos-2-0 pos-2-1 n0)
+30 (Single): Agent 1: (remove-block pos-2-1 pos-3-1 n1 n0)
+31 (Single): Agent 1: (move pos-2-1 pos-2-0 n0)
+32 (Single): Agent 1: (destroy-block pos-2-0)
+
+merging plan 2 into initial_plan
+64 True
+verifying entire plan.
+unsatisfied precondition encountered in merged plan, stopping process.
+Type-checking move
+...action passes type checking.
+Type-checking move-up
+...action passes type checking.
+Type-checking move-down
+...action passes type checking.
+Type-checking place-block
+...action passes type checking.
+Type-checking remove-block
+...action passes type checking.
+Type-checking create-block
+...action passes type checking.
+Type-checking destroy-block
+...action passes type checking.
+Checking plan: ./experiments_multiagent_help/run4034/termes/agent2_plan_final_temp.txt
+Plan to validate:
+
+Plan size: 68
+1:
+(create-block pos-2-0)
+ 
+2:
+(place-block pos-2-0 pos-2-1 n0 n1)
+ 
+3:
+(create-block pos-2-0)
+ 
+4:
+(move pos-2-0 pos-3-0 n0)
+ 
+5:
+(place-block pos-3-0 pos-3-1 n0 n1)
+ 
+6:
+(move pos-3-0 pos-2-0 n0)
+ 
+7:
+(create-block pos-2-0)
+ 
+8:
+(place-block pos-2-0 pos-3-0 n0 n1)
+ 
+9:
+(create-block pos-2-0)
+ 
+10:
+(move-up pos-2-0 n0 pos-3-0 n1)
+ 
+11:
+(move pos-3-0 pos-3-1 n1)
+ 
+12:
+(place-block pos-3-1 pos-3-0 n1 n2)
+ 
+13:
+(move pos-3-1 pos-2-1 n1)
+ 
+14:
+(move-down pos-2-1 n1 pos-2-0 n0)
+ 
+15:
+(create-block pos-2-0)
+ 
+16:
+(move-up pos-2-0 n0 pos-2-1 n1)
+ 
+17:
+(place-block pos-2-1 pos-3-1 n1 n2)
+ 
+18:
+(move-down pos-2-1 n1 pos-2-0 n0)
+ 
+19:
+(create-block pos-2-0)
+ 
+20:
+(move-up pos-2-0 n0 pos-2-1 n1)
+ 
+21:
+(move-up pos-2-1 n1 pos-3-1 n2)
+ 
+22:
+(place-block pos-3-1 pos-3-0 n2 n3)
+ 
+23:
+(move-down pos-3-1 n2 pos-2-1 n1)
+ 
+24:
+(remove-block pos-2-1 pos-3-1 n2 n1)
+ 
+25:
+(move-down pos-2-1 n1 pos-2-0 n0)
+ 
+26:
+(destroy-block pos-2-0)
+ 
+27:
+(remove-block pos-2-0 pos-2-1 n1 n0)
+ 
+28:
+(destroy-block pos-2-0)
+ 
+29:
+(move pos-2-0 pos-2-1 n0)
+ 
+30:
+(create-block pos-2-0)
+ 
+31:
+(remove-block pos-2-1 pos-3-1 n1 n0)
+ 
+32:
+(move pos-2-0 pos-2-1 n0)
+ 
+33:
+(place-block pos-2-1 pos-3-1 n0 n1)
+ 
+34:
+(move pos-2-1 pos-2-0 n0)
+ 
+35:
+(create-block pos-2-0)
+ 
+36:
+(move pos-2-1 pos-2-0 n0)
+ 
+37:
+(place-block pos-2-0 pos-2-1 n0 n1)
+ 
+38:
+(create-block pos-2-0)
+ 
+39:
+(move-up pos-2-0 n0 pos-2-1 n1)
+ 
+40:
+(place-block pos-2-1 pos-3-1 n1 n2)
+ 
+41:
+(move-up pos-2-1 n1 pos-3-1 n2)
+ 
+42:
+(remove-block pos-3-1 pos-3-0 n3 n2)
+ 
+43:
+(move-down pos-3-1 n2 pos-2-1 n1)
+ 
+44:
+(move-down pos-2-1 n1 pos-2-0 n0)
+ 
+45:
+(destroy-block pos-2-0)
+ 
+46:
+(move-up pos-2-0 n0 pos-2-1 n1)
+ 
+47:
+(remove-block pos-2-1 pos-3-1 n2 n1)
+ 
+48:
+(move pos-2-1 pos-3-1 n1)
+ 
+49:
+(place-block pos-3-1 pos-2-1 n1 n2)
+ 
+50:
+(remove-block pos-3-1 pos-3-0 n2 n1)
+ 
+51:
+(move pos-3-1 pos-3-0 n1)
+ 
+52:
+(place-block pos-3-0 pos-3-1 n1 n2)
+ 
+53:
+(move-down pos-3-0 n1 pos-2-0 n0)
+ 
+54:
+(create-block pos-2-0)
+ 
+55:
+(move-up pos-2-0 n0 pos-3-0 n1)
+ 
+56:
+(move-up pos-3-0 n1 pos-3-1 n2)
+ 
+57:
+(place-block pos-3-1 pos-2-1 n2 n3)
+ 
+58:
+(move-down pos-3-1 n2 pos-3-0 n1)
+ 
+59:
+(remove-block pos-3-0 pos-3-1 n2 n1)
+ 
+60:
+(move-down pos-3-0 n1 pos-2-0 n0)
+ 
+61:
+(destroy-block pos-2-0)
+ 
+62:
+(remove-block pos-2-0 pos-3-0 n1 n0)
+ 
+63:
+(destroy-block pos-2-0)
+ 
+64:
+(move pos-2-0 pos-3-0 n0)
+ 
+65:
+(remove-block pos-3-0 pos-3-1 n1 n0)
+ 
+66:
+(move pos-3-0 pos-2-0 n0)
+ 
+67:
+(destroy-block pos-2-0)
+ 
+68:
+(destroy-block pos-2-0)
+ 
+
+Plan Validation details
+-----------------------
+
+Checking next happening (time 1)
+Adding (has-block)
+
+Checking next happening (time 2)
+Deleting (height pos-2-1 n0)
+Deleting (has-block)
+Adding (height pos-2-1 n1)
+
+Checking next happening (time 3)
+Adding (has-block)
+
+Checking next happening (time 4)
+Deleting (at pos-2-0)
+Adding (at pos-3-0)
+
+Checking next happening (time 5)
+Deleting (height pos-3-1 n0)
+Deleting (has-block)
+Adding (height pos-3-1 n1)
+
+Checking next happening (time 6)
+Deleting (at pos-3-0)
+Adding (at pos-2-0)
+
+Checking next happening (time 7)
+Adding (has-block)
+
+Checking next happening (time 8)
+Deleting (height pos-3-0 n0)
+Deleting (has-block)
+Adding (height pos-3-0 n1)
+
+Checking next happening (time 9)
+Adding (has-block)
+
+Checking next happening (time 10)
+Deleting (at pos-2-0)
+Adding (at pos-3-0)
+
+Checking next happening (time 11)
+Deleting (at pos-3-0)
+Adding (at pos-3-1)
+
+Checking next happening (time 12)
+Deleting (height pos-3-0 n1)
+Deleting (has-block)
+Adding (height pos-3-0 n2)
+
+Checking next happening (time 13)
+Deleting (at pos-3-1)
+Adding (at pos-2-1)
+
+Checking next happening (time 14)
+Deleting (at pos-2-1)
+Adding (at pos-2-0)
+
+Checking next happening (time 15)
+Adding (has-block)
+
+Checking next happening (time 16)
+Deleting (at pos-2-0)
+Adding (at pos-2-1)
+
+Checking next happening (time 17)
+Deleting (height pos-3-1 n1)
+Deleting (has-block)
+Adding (height pos-3-1 n2)
+
+Checking next happening (time 18)
+Deleting (at pos-2-1)
+Adding (at pos-2-0)
+
+Checking next happening (time 19)
+Adding (has-block)
+
+Checking next happening (time 20)
+Deleting (at pos-2-0)
+Adding (at pos-2-1)
+
+Checking next happening (time 21)
+Deleting (at pos-2-1)
+Adding (at pos-3-1)
+
+Checking next happening (time 22)
+Deleting (height pos-3-0 n2)
+Deleting (has-block)
+Adding (height pos-3-0 n3)
+
+Checking next happening (time 23)
+Deleting (at pos-3-1)
+Adding (at pos-2-1)
+
+Checking next happening (time 24)
+Deleting (height pos-3-1 n2)
+Adding (height pos-3-1 n1)
+Adding (has-block)
+
+Checking next happening (time 25)
+Deleting (at pos-2-1)
+Adding (at pos-2-0)
+
+Checking next happening (time 26)
+Deleting (has-block)
+
+Checking next happening (time 27)
+Deleting (height pos-2-1 n1)
+Adding (height pos-2-1 n0)
+Adding (has-block)
+
+Checking next happening (time 28)
+Deleting (has-block)
+
+Checking next happening (time 29)
+Deleting (at pos-2-0)
+Adding (at pos-2-1)
+
+Checking next happening (time 30)
+Plan failed because of unsatisfied precondition in:
+(create-block pos-2-0)
+
+
+Plan failed to execute
+
+Plan Repair Advice:
+
+(create-block pos-2-0) has an unsatisfied precondition at time 30
+(Set (at pos-2-0) to true)
+
+
+Failed plans:
+ ./experiments_multiagent_help/run4034/termes/agent2_plan_final_temp.txt 
+
+[results][termes][02]
+[single_agent][planning time: 194.87][cost: 54.0]
+[multi_agent][planning_time: 222.0283450317383][cost: inf][agents: 3][optimization time 16.713467121124268]
+----------------------------------------
+Using cached single agent results
+['contains pos-3-1 block4 and all blocks are placed.', 'contains pos-3-2 block2 and all blocks are placed.', 'contains pos-2-1 block3 and all blocks are placed.', 'contains pos-1-1 block2 and all blocks are placed.']
+['./experiments_multiagent_help/run4034/termes/p03_1.pddl', './experiments_multiagent_help/run4034/termes/p03_2.pddl', './experiments_multiagent_help/run4034/termes/p03_3.pddl', './experiments_multiagent_help/run4034/termes/p03_4.pddl']
+agent1
+[info][subgoal_1][termes] task 03 takes 200.13 sec, found a plan with cost 68.0
+planner successful
+validating
+validator time 0.007555961608886719
+agent2
+[info][subgoal_2][termes] task 03 takes 200.13 sec, found a plan with cost 64.0
+planner successful
+validating
+validator time 0.023479938507080078
+agent3
+[info][subgoal_3][termes] task 03 takes 1.94 sec, found a plan with cost 20.0
+planner successful
+validating
+validator time 0.0038862228393554688
+agent4
+planner broke
+INFO     planner time limit: None
+INFO     planner memory limit: None
+
+INFO     Running translator.
+INFO     translator stdin: None
+INFO     translator time limit: None
+INFO     translator memory limit: None
+INFO     translator command line string: /home/davidbai/.conda/envs/llm_pddl/bin/python /home/davidbai/multiagent_helper_llmp/downward/builds/release/bin/translate/translate.py domains/termes/domain.pddl experiments_multiagent_help/run4034/termes/p03_4.pddl --sas-file experiments_multiagent_help/run4034/termes/p03_4_plan.pddl.sas
+Parsing...
+Parsing task
+	->Parsing goal
+	->Parsing condition
+Expected logical operator or predicate name
+Got: contains
+translate exit code: 31
+
+Driver aborting after translate
+INFO     Planner time: 0.06s
+
+list index out of range
+[info][multiagent main goal][termes] task 03 takes 200.12 sec, found a plan with cost 62.0
+TASK: termes - 4034 - 03
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (create-block pos-2-0)
+2 (Single): Agent 1: (move pos-2-0 pos-3-0 n0)
+3 (Single): Agent 1: (place-block pos-3-0 pos-3-1 n0 n1)
+4 (Single): Agent 1: (move pos-3-0 pos-2-0 n0)
+5 (Single): Agent 1: (create-block pos-2-0)
+6 (Single): Agent 1: (place-block pos-2-0 pos-2-1 n0 n1)
+7 (Single): Agent 1: (create-block pos-2-0)
+8 (Single): Agent 1: (move-up pos-2-0 n0 pos-2-1 n1)
+9 (Single): Agent 1: (place-block pos-2-1 pos-3-1 n1 n2)
+10 (Single): Agent 1: (move-down pos-2-1 n1 pos-2-0 n0)
+11 (Single): Agent 1: (create-block pos-2-0)
+12 (Single): Agent 1: (move pos-2-0 pos-1-0 n0)
+13 (Single): Agent 1: (place-block pos-1-0 pos-1-1 n0 n1)
+14 (Single): Agent 1: (move pos-1-0 pos-2-0 n0)
+15 (Single): Agent 1: (create-block pos-2-0)
+16 (Single): Agent 1: (move-up pos-2-0 n0 pos-2-1 n1)
+17 (Single): Agent 1: (move pos-2-1 pos-1-1 n1)
+18 (Single): Agent 1: (place-block pos-1-1 pos-2-1 n1 n2)
+19 (Single): Agent 1: (move-down pos-1-1 n1 pos-1-0 n0)
+20 (Single): Agent 1: (move pos-1-0 pos-2-0 n0)
+21 (Single): Agent 1: (create-block pos-2-0)
+22 (Single): Agent 1: (place-block pos-2-0 pos-1-0 n0 n1)
+23 (Single): Agent 1: (create-block pos-2-0)
+24 (Single): Agent 1: (move-up pos-2-0 n0 pos-1-0 n1)
+25 (Single): Agent 1: (move pos-1-0 pos-1-1 n1)
+26 (Single): Agent 1: (move-up pos-1-1 n1 pos-2-1 n2)
+27 (Single): Agent 1: (place-block pos-2-1 pos-3-1 n2 n3)
+28 (Single): Agent 1: (move-down pos-2-1 n2 pos-1-1 n1)
+29 (Single): Agent 1: (move pos-1-1 pos-1-0 n1)
+30 (Single): Agent 1: (move-down pos-1-0 n1 pos-2-0 n0)
+31 (Single): Agent 1: (create-block pos-2-0)
+32 (Single): Agent 1: (move-up pos-2-0 n0 pos-1-0 n1)
+33 (Single): Agent 1: (place-block pos-1-0 pos-1-1 n1 n2)
+34 (Single): Agent 1: (move-down pos-1-0 n1 pos-2-0 n0)
+35 (Single): Agent 1: (create-block pos-2-0)
+36 (Single): Agent 1: (move-up pos-2-0 n0 pos-1-0 n1)
+37 (Single): Agent 1: (move-up pos-1-0 n1 pos-1-1 n2)
+38 (Single): Agent 1: (place-block pos-1-1 pos-2-1 n2 n3)
+39 (Single): Agent 1: (move-down pos-1-1 n2 pos-1-0 n1)
+40 (Single): Agent 1: (move-down pos-1-0 n1 pos-2-0 n0)
+41 (Single): Agent 1: (create-block pos-2-0)
+42 (Single): Agent 1: (move-up pos-2-0 n0 pos-1-0 n1)
+43 (Single): Agent 1: (move-up pos-1-0 n1 pos-1-1 n2)
+44 (Single): Agent 1: (move-up pos-1-1 n2 pos-2-1 n3)
+45 (Single): Agent 1: (place-block pos-2-1 pos-3-1 n3 n4)
+46 (Single): Agent 1: (move-down pos-2-1 n3 pos-1-1 n2)
+47 (Single): Agent 1: (remove-block pos-1-1 pos-2-1 n3 n2)
+48 (Single): Agent 1: (move-down pos-1-1 n2 pos-1-0 n1)
+49 (Single): Agent 1: (move-down pos-1-0 n1 pos-2-0 n0)
+50 (Single): Agent 1: (destroy-block pos-2-0)
+51 (Single): Agent 1: (move-up pos-2-0 n0 pos-1-0 n1)
+52 (Single): Agent 1: (remove-block pos-1-0 pos-1-1 n2 n1)
+53 (Single): Agent 1: (move-down pos-1-0 n1 pos-2-0 n0)
+54 (Single): Agent 1: (destroy-block pos-2-0)
+55 (Single): Agent 1: (remove-block pos-2-0 pos-1-0 n1 n0)
+56 (Single): Agent 1: (destroy-block pos-2-0)
+57 (Single): Agent 1: (move pos-2-0 pos-1-0 n0)
+58 (Single): Agent 1: (move-up pos-1-0 n0 pos-1-1 n1)
+59 (Single): Agent 1: (remove-block pos-1-1 pos-2-1 n2 n1)
+60 (Single): Agent 1: (move-down pos-1-1 n1 pos-1-0 n0)
+61 (Single): Agent 1: (move pos-1-0 pos-2-0 n0)
+62 (Single): Agent 1: (destroy-block pos-2-0)
+63 (Single): Agent 1: (remove-block pos-2-0 pos-2-1 n1 n0)
+64 (Single): Agent 1: (destroy-block pos-2-0)
+65 (Single): Agent 1: (move pos-2-0 pos-2-1 n0)
+66 (Single): Agent 1: (remove-block pos-2-1 pos-1-1 n1 n0)
+67 (Single): Agent 1: (move pos-2-1 pos-2-0 n0)
+68 (Single): Agent 1: (destroy-block pos-2-0)
+
+merging plan 2 into initial_plan
+120 True
+verifying entire plan.
+unsatisfied precondition encountered in merged plan, stopping process.
+Type-checking move
+...action passes type checking.
+Type-checking move-up
+...action passes type checking.
+Type-checking move-down
+...action passes type checking.
+Type-checking place-block
+...action passes type checking.
+Type-checking remove-block
+...action passes type checking.
+Type-checking create-block
+...action passes type checking.
+Type-checking destroy-block
+...action passes type checking.
+Checking plan: ./experiments_multiagent_help/run4034/termes/agent2_plan_final_temp.txt
+Plan to validate:
+
+Plan size: 132
+1:
+(create-block pos-2-0)
+ 
+2:
+(move pos-2-0 pos-2-1 n0)
+ 
+3:
+(move pos-2-1 pos-2-2 n0)
+ 
+4:
+(place-block pos-2-2 pos-3-2 n0 n1)
+ 
+5:
+(move pos-2-2 pos-2-1 n0)
+ 
+6:
+(move pos-2-1 pos-2-0 n0)
+ 
+7:
+(create-block pos-2-0)
+ 
+8:
+(move pos-2-0 pos-2-1 n0)
+ 
+9:
+(place-block pos-2-1 pos-2-2 n0 n1)
+ 
+10:
+(move pos-2-1 pos-2-0 n0)
+ 
+11:
+(create-block pos-2-0)
+ 
+12:
+(create-block pos-2-0)
+ 
+13:
+(move pos-2-0 pos-3-0 n0)
+ 
+14:
+(move pos-2-0 pos-2-1 n0)
+ 
+15:
+(place-block pos-3-0 pos-3-1 n0 n1)
+ 
+16:
+(move-up pos-2-1 n0 pos-2-2 n1)
+ 
+17:
+(move pos-3-0 pos-2-0 n0)
+ 
+18:
+(place-block pos-2-2 pos-3-2 n1 n2)
+ 
+19:
+(create-block pos-2-0)
+ 
+20:
+(move-down pos-2-2 n1 pos-2-1 n0)
+ 
+21:
+(place-block pos-2-0 pos-2-1 n0 n1)
+ 
+22:
+(move pos-2-1 pos-2-0 n0)
+ 
+23:
+(create-block pos-2-0)
+ 
+24:
+(move-up pos-2-0 n0 pos-2-1 n1)
+ 
+25:
+(place-block pos-2-1 pos-3-1 n1 n2)
+ 
+26:
+(move-down pos-2-1 n1 pos-2-0 n0)
+ 
+27:
+(create-block pos-2-0)
+ 
+28:
+(move pos-2-0 pos-1-0 n0)
+ 
+29:
+(place-block pos-1-0 pos-1-1 n0 n1)
+ 
+30:
+(move pos-1-0 pos-2-0 n0)
+ 
+31:
+(create-block pos-2-0)
+ 
+32:
+(move-up pos-2-0 n0 pos-2-1 n1)
+ 
+33:
+(move pos-2-1 pos-1-1 n1)
+ 
+34:
+(place-block pos-1-1 pos-2-1 n1 n2)
+ 
+35:
+(move-down pos-1-1 n1 pos-1-0 n0)
+ 
+36:
+(move pos-1-0 pos-2-0 n0)
+ 
+37:
+(create-block pos-2-0)
+ 
+38:
+(place-block pos-2-0 pos-1-0 n0 n1)
+ 
+39:
+(create-block pos-2-0)
+ 
+40:
+(move-up pos-2-0 n0 pos-1-0 n1)
+ 
+41:
+(move pos-1-0 pos-1-1 n1)
+ 
+42:
+(move-up pos-1-1 n1 pos-2-1 n2)
+ 
+43:
+(place-block pos-2-1 pos-3-1 n2 n3)
+ 
+44:
+(move-down pos-2-1 n2 pos-1-1 n1)
+ 
+45:
+(move pos-1-1 pos-1-0 n1)
+ 
+46:
+(move-down pos-1-0 n1 pos-2-0 n0)
+ 
+47:
+(create-block pos-2-0)
+ 
+48:
+(move-up pos-2-0 n0 pos-1-0 n1)
+ 
+49:
+(place-block pos-1-0 pos-1-1 n1 n2)
+ 
+50:
+(move-down pos-1-0 n1 pos-2-0 n0)
+ 
+51:
+(create-block pos-2-0)
+ 
+52:
+(move-up pos-2-0 n0 pos-1-0 n1)
+ 
+53:
+(move-up pos-1-0 n1 pos-1-1 n2)
+ 
+54:
+(place-block pos-1-1 pos-2-1 n2 n3)
+ 
+55:
+(move-down pos-1-1 n2 pos-1-0 n1)
+ 
+56:
+(move-down pos-1-0 n1 pos-2-0 n0)
+ 
+57:
+(create-block pos-2-0)
+ 
+58:
+(move-up pos-2-0 n0 pos-1-0 n1)
+ 
+59:
+(move-up pos-1-0 n1 pos-1-1 n2)
+ 
+60:
+(move-up pos-1-1 n2 pos-2-1 n3)
+ 
+61:
+(place-block pos-2-1 pos-3-1 n3 n4)
+ 
+62:
+(move-down pos-2-1 n3 pos-1-1 n2)
+ 
+63:
+(remove-block pos-1-1 pos-2-1 n3 n2)
+ 
+64:
+(move-down pos-1-1 n2 pos-1-0 n1)
+ 
+65:
+(move-down pos-1-0 n1 pos-2-0 n0)
+ 
+66:
+(destroy-block pos-2-0)
+ 
+67:
+(move-up pos-2-0 n0 pos-1-0 n1)
+ 
+68:
+(remove-block pos-1-0 pos-1-1 n2 n1)
+ 
+69:
+(move-down pos-1-0 n1 pos-2-0 n0)
+ 
+70:
+(destroy-block pos-2-0)
+ 
+71:
+(remove-block pos-2-0 pos-1-0 n1 n0)
+ 
+72:
+(destroy-block pos-2-0)
+ 
+73:
+(move pos-2-0 pos-1-0 n0)
+ 
+74:
+(move-up pos-1-0 n0 pos-1-1 n1)
+ 
+75:
+(remove-block pos-1-1 pos-2-1 n2 n1)
+ 
+76:
+(move-down pos-1-1 n1 pos-1-0 n0)
+ 
+77:
+(move pos-1-0 pos-2-0 n0)
+ 
+78:
+(destroy-block pos-2-0)
+ 
+79:
+(remove-block pos-2-0 pos-2-1 n1 n0)
+ 
+80:
+(create-block pos-2-0)
+ 
+81:
+(place-block pos-2-0 pos-2-1 n0 n1)
+ 
+82:
+(create-block pos-2-0)
+ 
+83:
+(move-up pos-2-0 n0 pos-2-1 n1)
+ 
+84:
+(place-block pos-2-1 pos-2-2 n1 n2)
+ 
+85:
+(move-down pos-2-1 n1 pos-2-0 n0)
+ 
+86:
+(create-block pos-2-0)
+ 
+87:
+(move-up pos-2-0 n0 pos-2-1 n1)
+ 
+88:
+(move-up pos-2-1 n1 pos-2-2 n2)
+ 
+89:
+(place-block pos-2-2 pos-3-2 n2 n3)
+ 
+90:
+(move-up pos-2-2 n2 pos-3-2 n3)
+ 
+91:
+(remove-block pos-3-2 pos-3-1 n4 n3)
+ 
+92:
+(move-down pos-3-2 n3 pos-2-2 n2)
+ 
+93:
+(move-down pos-2-2 n2 pos-2-1 n1)
+ 
+94:
+(move-down pos-2-1 n1 pos-2-0 n0)
+ 
+95:
+(destroy-block pos-2-0)
+ 
+96:
+(move-up pos-2-0 n0 pos-2-1 n1)
+ 
+97:
+(move-up pos-2-1 n1 pos-2-2 n2)
+ 
+98:
+(remove-block pos-2-2 pos-3-2 n3 n2)
+ 
+99:
+(move-down pos-2-2 n2 pos-2-1 n1)
+ 
+100:
+(move-down pos-2-1 n1 pos-2-0 n0)
+ 
+101:
+(destroy-block pos-2-0)
+ 
+102:
+(move-up pos-2-0 n0 pos-2-1 n1)
+ 
+103:
+(move-up pos-2-1 n1 pos-2-2 n2)
+ 
+104:
+(move pos-2-2 pos-3-2 n2)
+ 
+105:
+(remove-block pos-3-2 pos-3-1 n3 n2)
+ 
+106:
+(move pos-3-2 pos-3-1 n2)
+ 
+107:
+(move-down pos-3-1 n2 pos-2-1 n1)
+ 
+108:
+(move-down pos-2-1 n1 pos-2-0 n0)
+ 
+109:
+(destroy-block pos-2-0)
+ 
+110:
+(move-up pos-2-0 n0 pos-2-1 n1)
+ 
+111:
+(remove-block pos-2-1 pos-3-1 n2 n1)
+ 
+112:
+(move-down pos-2-1 n1 pos-2-0 n0)
+ 
+113:
+(destroy-block pos-2-0)
+ 
+114:
+(move-up pos-2-0 n0 pos-2-1 n1)
+ 
+115:
+(remove-block pos-2-1 pos-2-2 n2 n1)
+ 
+116:
+(move-down pos-2-1 n1 pos-2-0 n0)
+ 
+117:
+(destroy-block pos-2-0)
+ 
+118:
+(remove-block pos-2-0 pos-2-1 n1 n0)
+ 
+119:
+(destroy-block pos-2-0)
+ 
+120:
+(move pos-2-0 pos-2-1 n0)
+ 
+121:
+(remove-block pos-2-1 pos-3-1 n1 n0)
+ 
+122:
+(move pos-2-1 pos-2-0 n0)
+ 
+123:
+(destroy-block pos-2-0)
+ 
+124:
+(destroy-block pos-2-0)
+ 
+125:
+(move pos-2-0 pos-2-1 n0)
+ 
+126:
+(move pos-2-0 pos-2-1 n0)
+ 
+127:
+(remove-block pos-2-1 pos-1-1 n1 n0)
+ 
+128:
+(remove-block pos-2-1 pos-2-2 n1 n0)
+ 
+129:
+(move pos-2-1 pos-2-0 n0)
+ 
+130:
+(move pos-2-1 pos-2-0 n0)
+ 
+131:
+(destroy-block pos-2-0)
+ 
+132:
+(destroy-block pos-2-0)
+ 
+
+Plan Validation details
+-----------------------
+
+Checking next happening (time 1)
+Adding (has-block)
+
+Checking next happening (time 2)
+Deleting (at pos-2-0)
+Adding (at pos-2-1)
+
+Checking next happening (time 3)
+Deleting (at pos-2-1)
+Adding (at pos-2-2)
+
+Checking next happening (time 4)
+Deleting (height pos-3-2 n0)
+Deleting (has-block)
+Adding (height pos-3-2 n1)
+
+Checking next happening (time 5)
+Deleting (at pos-2-2)
+Adding (at pos-2-1)
+
+Checking next happening (time 6)
+Deleting (at pos-2-1)
+Adding (at pos-2-0)
+
+Checking next happening (time 7)
+Adding (has-block)
+
+Checking next happening (time 8)
+Deleting (at pos-2-0)
+Adding (at pos-2-1)
+
+Checking next happening (time 9)
+Deleting (height pos-2-2 n0)
+Deleting (has-block)
+Adding (height pos-2-2 n1)
+
+Checking next happening (time 10)
+Deleting (at pos-2-1)
+Adding (at pos-2-0)
+
+Checking next happening (time 11)
+Adding (has-block)
+
+Checking next happening (time 12)
+Plan failed because of unsatisfied precondition in:
+(create-block pos-2-0)
+
+
+Plan failed to execute
+
+Plan Repair Advice:
+
+(create-block pos-2-0) has an unsatisfied precondition at time 12
+(Set (has-block) to false)
+
+
+Failed plans:
+ ./experiments_multiagent_help/run4034/termes/agent2_plan_final_temp.txt 
+
+[results][termes][03]
+[single_agent][planning time: 1000.06][cost: 68.0]
+[multi_agent][planning_time: 611.7258961868285][cost: inf][agents: 5][optimization time 248.97495865821838]
+----------------------------------------
+Using cached single agent results
+LLM generated no subgoal for agent 3, reducing number of agents
+args.num_agents: 3
+['height pos-3-2 4', 'height pos-2-0 3']
+['./experiments_multiagent_help/run4034/termes/p04_1.pddl', './experiments_multiagent_help/run4034/termes/p04_2.pddl']
+agent1
+[info][subgoal_1][termes] task 04 takes 200.13 sec, found a plan with cost 80.0
+planner successful
+validating
+validator time 0.006864309310913086
+agent2
+[info][subgoal_2][termes] task 04 takes 1.54 sec, found a plan with cost 22.0
+planner successful
+validating
+validator time 0.0052411556243896484
+[info][multiagent main goal][termes] task 04 takes 0.18 sec, found a plan with cost 10.0
+TASK: termes - 4034 - 04
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (create-block pos-1-0)
+2 (Single): Agent 1: (place-block pos-1-0 pos-1-1 n0 n1)
+3 (Single): Agent 1: (create-block pos-1-0)
+4 (Single): Agent 1: (place-block pos-1-0 pos-2-0 n0 n1)
+5 (Single): Agent 1: (create-block pos-1-0)
+6 (Single): Agent 1: (move-up pos-1-0 n0 pos-2-0 n1)
+7 (Single): Agent 1: (move-down pos-2-0 n1 pos-3-0 n0)
+8 (Single): Agent 1: (move pos-3-0 pos-3-1 n0)
+9 (Single): Agent 1: (place-block pos-3-1 pos-3-2 n0 n1)
+10 (Single): Agent 1: (move pos-3-1 pos-2-1 n0)
+11 (Single): Agent 1: (remove-block pos-2-1 pos-2-0 n1 n0)
+12 (Single): Agent 1: (place-block pos-2-1 pos-3-1 n0 n1)
+13 (Single): Agent 1: (remove-block pos-2-1 pos-1-1 n1 n0)
+14 (Single): Agent 1: (move-up pos-2-1 n0 pos-3-1 n1)
+15 (Single): Agent 1: (place-block pos-3-1 pos-3-2 n1 n2)
+16 (Single): Agent 1: (move-down pos-3-1 n1 pos-2-1 n0)
+17 (Single): Agent 1: (move pos-2-1 pos-1-1 n0)
+18 (Single): Agent 1: (move pos-1-1 pos-1-0 n0)
+19 (Single): Agent 1: (create-block pos-1-0)
+20 (Single): Agent 1: (move pos-1-0 pos-2-0 n0)
+21 (Single): Agent 1: (place-block pos-2-0 pos-3-0 n0 n1)
+22 (Single): Agent 1: (move pos-2-0 pos-1-0 n0)
+23 (Single): Agent 1: (create-block pos-1-0)
+24 (Single): Agent 1: (move pos-1-0 pos-2-0 n0)
+25 (Single): Agent 1: (move-up pos-2-0 n0 pos-3-0 n1)
+26 (Single): Agent 1: (place-block pos-3-0 pos-3-1 n1 n2)
+27 (Single): Agent 1: (move-down pos-3-0 n1 pos-2-0 n0)
+28 (Single): Agent 1: (move pos-2-0 pos-1-0 n0)
+29 (Single): Agent 1: (create-block pos-1-0)
+30 (Single): Agent 1: (move pos-1-0 pos-2-0 n0)
+31 (Single): Agent 1: (move-up pos-2-0 n0 pos-3-0 n1)
+32 (Single): Agent 1: (move-up pos-3-0 n1 pos-3-1 n2)
+33 (Single): Agent 1: (place-block pos-3-1 pos-3-2 n2 n3)
+34 (Single): Agent 1: (move-down pos-3-1 n2 pos-3-0 n1)
+35 (Single): Agent 1: (move-down pos-3-0 n1 pos-2-0 n0)
+36 (Single): Agent 1: (move pos-2-0 pos-1-0 n0)
+37 (Single): Agent 1: (create-block pos-1-0)
+38 (Single): Agent 1: (place-block pos-1-0 pos-2-0 n0 n1)
+39 (Single): Agent 1: (create-block pos-1-0)
+40 (Single): Agent 1: (move-up pos-1-0 n0 pos-2-0 n1)
+41 (Single): Agent 1: (place-block pos-2-0 pos-3-0 n1 n2)
+42 (Single): Agent 1: (move-down pos-2-0 n1 pos-1-0 n0)
+43 (Single): Agent 1: (create-block pos-1-0)
+44 (Single): Agent 1: (move-up pos-1-0 n0 pos-2-0 n1)
+45 (Single): Agent 1: (move-up pos-2-0 n1 pos-3-0 n2)
+46 (Single): Agent 1: (place-block pos-3-0 pos-3-1 n2 n3)
+47 (Single): Agent 1: (move-down pos-3-0 n2 pos-2-0 n1)
+48 (Single): Agent 1: (move-down pos-2-0 n1 pos-1-0 n0)
+49 (Single): Agent 1: (create-block pos-1-0)
+50 (Single): Agent 1: (move-up pos-1-0 n0 pos-2-0 n1)
+51 (Single): Agent 1: (move-up pos-2-0 n1 pos-3-0 n2)
+52 (Single): Agent 1: (move-up pos-3-0 n2 pos-3-1 n3)
+53 (Single): Agent 1: (place-block pos-3-1 pos-3-2 n3 n4)
+54 (Single): Agent 1: (move-down pos-3-1 n3 pos-3-0 n2)
+55 (Single): Agent 1: (remove-block pos-3-0 pos-3-1 n3 n2)
+56 (Single): Agent 1: (move-down pos-3-0 n2 pos-2-0 n1)
+57 (Single): Agent 1: (move-down pos-2-0 n1 pos-1-0 n0)
+58 (Single): Agent 1: (destroy-block pos-1-0)
+59 (Single): Agent 1: (move-up pos-1-0 n0 pos-2-0 n1)
+60 (Single): Agent 1: (remove-block pos-2-0 pos-3-0 n2 n1)
+61 (Single): Agent 1: (move-down pos-2-0 n1 pos-1-0 n0)
+62 (Single): Agent 1: (destroy-block pos-1-0)
+63 (Single): Agent 1: (remove-block pos-1-0 pos-2-0 n1 n0)
+64 (Single): Agent 1: (destroy-block pos-1-0)
+65 (Single): Agent 1: (move pos-1-0 pos-2-0 n0)
+66 (Single): Agent 1: (move-up pos-2-0 n0 pos-3-0 n1)
+67 (Single): Agent 1: (remove-block pos-3-0 pos-3-1 n2 n1)
+68 (Single): Agent 1: (move-down pos-3-0 n1 pos-2-0 n0)
+69 (Single): Agent 1: (move pos-2-0 pos-1-0 n0)
+70 (Single): Agent 1: (destroy-block pos-1-0)
+71 (Single): Agent 1: (move pos-1-0 pos-2-0 n0)
+72 (Single): Agent 1: (move pos-2-0 pos-2-1 n0)
+73 (Single): Agent 1: (remove-block pos-2-1 pos-3-1 n1 n0)
+74 (Single): Agent 1: (place-block pos-2-1 pos-1-1 n0 n1)
+75 (Single): Agent 1: (move pos-2-1 pos-2-0 n0)
+76 (Single): Agent 1: (remove-block pos-2-0 pos-3-0 n1 n0)
+77 (Single): Agent 1: (move pos-2-0 pos-1-0 n0)
+78 (Single): Agent 1: (destroy-block pos-1-0)
+79 (Single): Agent 1: (remove-block pos-1-0 pos-1-1 n1 n0)
+80 (Single): Agent 1: (destroy-block pos-1-0)
+
+merging plan 2 into initial_plan
+99 True
+verifying entire plan.
+unsatisfied precondition encountered in merged plan, stopping process.
+Type-checking move
+...action passes type checking.
+Type-checking move-up
+...action passes type checking.
+Type-checking move-down
+...action passes type checking.
+Type-checking place-block
+...action passes type checking.
+Type-checking remove-block
+...action passes type checking.
+Type-checking create-block
+...action passes type checking.
+Type-checking destroy-block
+...action passes type checking.
+Checking plan: ./experiments_multiagent_help/run4034/termes/agent2_plan_final_temp.txt
+Plan to validate:
+
+Plan size: 102
+1:
+(create-block pos-1-0)
+ 
+2:
+(place-block pos-1-0 pos-1-1 n0 n1)
+ 
+3:
+(create-block pos-1-0)
+ 
+4:
+(place-block pos-1-0 pos-2-0 n0 n1)
+ 
+5:
+(create-block pos-1-0)
+ 
+6:
+(move-up pos-1-0 n0 pos-2-0 n1)
+ 
+7:
+(move-down pos-2-0 n1 pos-3-0 n0)
+ 
+8:
+(move pos-3-0 pos-3-1 n0)
+ 
+9:
+(place-block pos-3-1 pos-3-2 n0 n1)
+ 
+10:
+(move pos-3-1 pos-2-1 n0)
+ 
+11:
+(remove-block pos-2-1 pos-2-0 n1 n0)
+ 
+12:
+(place-block pos-2-1 pos-3-1 n0 n1)
+ 
+13:
+(remove-block pos-2-1 pos-1-1 n1 n0)
+ 
+14:
+(move-up pos-2-1 n0 pos-3-1 n1)
+ 
+15:
+(place-block pos-3-1 pos-3-2 n1 n2)
+ 
+16:
+(move-down pos-3-1 n1 pos-2-1 n0)
+ 
+17:
+(move pos-2-1 pos-1-1 n0)
+ 
+18:
+(move pos-1-1 pos-1-0 n0)
+ 
+19:
+(create-block pos-1-0)
+ 
+20:
+(move pos-1-0 pos-2-0 n0)
+ 
+21:
+(place-block pos-2-0 pos-3-0 n0 n1)
+ 
+22:
+(move pos-2-0 pos-1-0 n0)
+ 
+23:
+(create-block pos-1-0)
+ 
+24:
+(move pos-1-0 pos-2-0 n0)
+ 
+25:
+(move-up pos-2-0 n0 pos-3-0 n1)
+ 
+26:
+(place-block pos-3-0 pos-3-1 n1 n2)
+ 
+27:
+(move-down pos-3-0 n1 pos-2-0 n0)
+ 
+28:
+(move pos-2-0 pos-1-0 n0)
+ 
+29:
+(create-block pos-1-0)
+ 
+30:
+(move pos-1-0 pos-2-0 n0)
+ 
+31:
+(move-up pos-2-0 n0 pos-3-0 n1)
+ 
+32:
+(move-up pos-3-0 n1 pos-3-1 n2)
+ 
+33:
+(place-block pos-3-1 pos-3-2 n2 n3)
+ 
+34:
+(move-down pos-3-1 n2 pos-3-0 n1)
+ 
+35:
+(move-down pos-3-0 n1 pos-2-0 n0)
+ 
+36:
+(move pos-2-0 pos-1-0 n0)
+ 
+37:
+(create-block pos-1-0)
+ 
+38:
+(place-block pos-1-0 pos-2-0 n0 n1)
+ 
+39:
+(create-block pos-1-0)
+ 
+40:
+(move-up pos-1-0 n0 pos-2-0 n1)
+ 
+41:
+(place-block pos-2-0 pos-3-0 n1 n2)
+ 
+42:
+(move-down pos-2-0 n1 pos-1-0 n0)
+ 
+43:
+(create-block pos-1-0)
+ 
+44:
+(move-up pos-1-0 n0 pos-2-0 n1)
+ 
+45:
+(move-up pos-2-0 n1 pos-3-0 n2)
+ 
+46:
+(place-block pos-3-0 pos-3-1 n2 n3)
+ 
+47:
+(move-down pos-3-0 n2 pos-2-0 n1)
+ 
+48:
+(move-down pos-2-0 n1 pos-1-0 n0)
+ 
+49:
+(create-block pos-1-0)
+ 
+50:
+(move-up pos-1-0 n0 pos-2-0 n1)
+ 
+51:
+(move-up pos-2-0 n1 pos-3-0 n2)
+ 
+52:
+(move-up pos-3-0 n2 pos-3-1 n3)
+ 
+53:
+(place-block pos-3-1 pos-3-2 n3 n4)
+ 
+54:
+(move-down pos-3-1 n3 pos-3-0 n2)
+ 
+55:
+(remove-block pos-3-0 pos-3-1 n3 n2)
+ 
+56:
+(move-down pos-3-0 n2 pos-2-0 n1)
+ 
+57:
+(move-down pos-2-0 n1 pos-1-0 n0)
+ 
+58:
+(destroy-block pos-1-0)
+ 
+59:
+(move-up pos-1-0 n0 pos-2-0 n1)
+ 
+60:
+(remove-block pos-2-0 pos-3-0 n2 n1)
+ 
+61:
+(move-down pos-2-0 n1 pos-1-0 n0)
+ 
+62:
+(destroy-block pos-1-0)
+ 
+63:
+(remove-block pos-1-0 pos-2-0 n1 n0)
+ 
+64:
+(destroy-block pos-1-0)
+ 
+65:
+(move pos-1-0 pos-2-0 n0)
+ 
+66:
+(move-up pos-2-0 n0 pos-3-0 n1)
+ 
+67:
+(remove-block pos-3-0 pos-3-1 n2 n1)
+ 
+68:
+(move-down pos-3-0 n1 pos-2-0 n0)
+ 
+69:
+(move pos-2-0 pos-1-0 n0)
+ 
+70:
+(destroy-block pos-1-0)
+ 
+71:
+(move pos-1-0 pos-2-0 n0)
+ 
+72:
+(move pos-2-0 pos-2-1 n0)
+ 
+73:
+(remove-block pos-2-1 pos-3-1 n1 n0)
+ 
+74:
+(create-block pos-1-0)
+ 
+75:
+(place-block pos-2-1 pos-1-1 n0 n1)
+ 
+76:
+(move pos-1-0 pos-1-1 n0)
+ 
+77:
+(move pos-2-1 pos-2-0 n0)
+ 
+78:
+(remove-block pos-2-0 pos-3-0 n1 n0)
+ 
+79:
+(move pos-2-0 pos-1-0 n0)
+ 
+80:
+(destroy-block pos-1-0)
+ 
+81:
+(remove-block pos-1-0 pos-1-1 n1 n0)
+ 
+82:
+(place-block pos-1-1 pos-2-1 n0 n1)
+ 
+83:
+(move pos-1-1 pos-1-0 n0)
+ 
+84:
+(create-block pos-1-0)
+ 
+85:
+(place-block pos-1-0 pos-2-0 n0 n1)
+ 
+86:
+(create-block pos-1-0)
+ 
+87:
+(move pos-1-0 pos-1-1 n0)
+ 
+88:
+(move-up pos-1-1 n0 pos-2-1 n1)
+ 
+89:
+(place-block pos-2-1 pos-2-0 n1 n2)
+ 
+90:
+(move-down pos-2-1 n1 pos-1-1 n0)
+ 
+91:
+(move pos-1-1 pos-1-0 n0)
+ 
+92:
+(create-block pos-1-0)
+ 
+93:
+(place-block pos-1-0 pos-1-1 n0 n1)
+ 
+94:
+(create-block pos-1-0)
+ 
+95:
+(move-up pos-1-0 n0 pos-1-1 n1)
+ 
+96:
+(place-block pos-1-1 pos-2-1 n1 n2)
+ 
+97:
+(move-down pos-1-1 n1 pos-1-0 n0)
+ 
+98:
+(create-block pos-1-0)
+ 
+99:
+(move-up pos-1-0 n0 pos-1-1 n1)
+ 
+100:
+(move-up pos-1-1 n1 pos-2-1 n2)
+ 
+101:
+(destroy-block pos-1-0)
+ 
+102:
+(place-block pos-2-1 pos-2-0 n2 n3)
+ 
+
+Plan Validation details
+-----------------------
+
+Checking next happening (time 1)
+Adding (has-block)
+
+Checking next happening (time 2)
+Deleting (height pos-1-1 n0)
+Deleting (has-block)
+Adding (height pos-1-1 n1)
+
+Checking next happening (time 3)
+Adding (has-block)
+
+Checking next happening (time 4)
+Deleting (height pos-2-0 n0)
+Deleting (has-block)
+Adding (height pos-2-0 n1)
+
+Checking next happening (time 5)
+Adding (has-block)
+
+Checking next happening (time 6)
+Deleting (at pos-1-0)
+Adding (at pos-2-0)
+
+Checking next happening (time 7)
+Deleting (at pos-2-0)
+Adding (at pos-3-0)
+
+Checking next happening (time 8)
+Deleting (at pos-3-0)
+Adding (at pos-3-1)
+
+Checking next happening (time 9)
+Deleting (height pos-3-2 n0)
+Deleting (has-block)
+Adding (height pos-3-2 n1)
+
+Checking next happening (time 10)
+Deleting (at pos-3-1)
+Adding (at pos-2-1)
+
+Checking next happening (time 11)
+Deleting (height pos-2-0 n1)
+Adding (height pos-2-0 n0)
+Adding (has-block)
+
+Checking next happening (time 12)
+Deleting (height pos-3-1 n0)
+Deleting (has-block)
+Adding (height pos-3-1 n1)
+
+Checking next happening (time 13)
+Deleting (height pos-1-1 n1)
+Adding (height pos-1-1 n0)
+Adding (has-block)
+
+Checking next happening (time 14)
+Deleting (at pos-2-1)
+Adding (at pos-3-1)
+
+Checking next happening (time 15)
+Deleting (height pos-3-2 n1)
+Deleting (has-block)
+Adding (height pos-3-2 n2)
+
+Checking next happening (time 16)
+Deleting (at pos-3-1)
+Adding (at pos-2-1)
+
+Checking next happening (time 17)
+Deleting (at pos-2-1)
+Adding (at pos-1-1)
+
+Checking next happening (time 18)
+Deleting (at pos-1-1)
+Adding (at pos-1-0)
+
+Checking next happening (time 19)
+Adding (has-block)
+
+Checking next happening (time 20)
+Deleting (at pos-1-0)
+Adding (at pos-2-0)
+
+Checking next happening (time 21)
+Deleting (height pos-3-0 n0)
+Deleting (has-block)
+Adding (height pos-3-0 n1)
+
+Checking next happening (time 22)
+Deleting (at pos-2-0)
+Adding (at pos-1-0)
+
+Checking next happening (time 23)
+Adding (has-block)
+
+Checking next happening (time 24)
+Deleting (at pos-1-0)
+Adding (at pos-2-0)
+
+Checking next happening (time 25)
+Deleting (at pos-2-0)
+Adding (at pos-3-0)
+
+Checking next happening (time 26)
+Deleting (height pos-3-1 n1)
+Deleting (has-block)
+Adding (height pos-3-1 n2)
+
+Checking next happening (time 27)
+Deleting (at pos-3-0)
+Adding (at pos-2-0)
+
+Checking next happening (time 28)
+Deleting (at pos-2-0)
+Adding (at pos-1-0)
+
+Checking next happening (time 29)
+Adding (has-block)
+
+Checking next happening (time 30)
+Deleting (at pos-1-0)
+Adding (at pos-2-0)
+
+Checking next happening (time 31)
+Deleting (at pos-2-0)
+Adding (at pos-3-0)
+
+Checking next happening (time 32)
+Deleting (at pos-3-0)
+Adding (at pos-3-1)
+
+Checking next happening (time 33)
+Deleting (height pos-3-2 n2)
+Deleting (has-block)
+Adding (height pos-3-2 n3)
+
+Checking next happening (time 34)
+Deleting (at pos-3-1)
+Adding (at pos-3-0)
+
+Checking next happening (time 35)
+Deleting (at pos-3-0)
+Adding (at pos-2-0)
+
+Checking next happening (time 36)
+Deleting (at pos-2-0)
+Adding (at pos-1-0)
+
+Checking next happening (time 37)
+Adding (has-block)
+
+Checking next happening (time 38)
+Deleting (height pos-2-0 n0)
+Deleting (has-block)
+Adding (height pos-2-0 n1)
+
+Checking next happening (time 39)
+Adding (has-block)
+
+Checking next happening (time 40)
+Deleting (at pos-1-0)
+Adding (at pos-2-0)
+
+Checking next happening (time 41)
+Deleting (height pos-3-0 n1)
+Deleting (has-block)
+Adding (height pos-3-0 n2)
+
+Checking next happening (time 42)
+Deleting (at pos-2-0)
+Adding (at pos-1-0)
+
+Checking next happening (time 43)
+Adding (has-block)
+
+Checking next happening (time 44)
+Deleting (at pos-1-0)
+Adding (at pos-2-0)
+
+Checking next happening (time 45)
+Deleting (at pos-2-0)
+Adding (at pos-3-0)
+
+Checking next happening (time 46)
+Deleting (height pos-3-1 n2)
+Deleting (has-block)
+Adding (height pos-3-1 n3)
+
+Checking next happening (time 47)
+Deleting (at pos-3-0)
+Adding (at pos-2-0)
+
+Checking next happening (time 48)
+Deleting (at pos-2-0)
+Adding (at pos-1-0)
+
+Checking next happening (time 49)
+Adding (has-block)
+
+Checking next happening (time 50)
+Deleting (at pos-1-0)
+Adding (at pos-2-0)
+
+Checking next happening (time 51)
+Deleting (at pos-2-0)
+Adding (at pos-3-0)
+
+Checking next happening (time 52)
+Deleting (at pos-3-0)
+Adding (at pos-3-1)
+
+Checking next happening (time 53)
+Deleting (height pos-3-2 n3)
+Deleting (has-block)
+Adding (height pos-3-2 n4)
+
+Checking next happening (time 54)
+Deleting (at pos-3-1)
+Adding (at pos-3-0)
+
+Checking next happening (time 55)
+Deleting (height pos-3-1 n3)
+Adding (height pos-3-1 n2)
+Adding (has-block)
+
+Checking next happening (time 56)
+Deleting (at pos-3-0)
+Adding (at pos-2-0)
+
+Checking next happening (time 57)
+Deleting (at pos-2-0)
+Adding (at pos-1-0)
+
+Checking next happening (time 58)
+Deleting (has-block)
+
+Checking next happening (time 59)
+Deleting (at pos-1-0)
+Adding (at pos-2-0)
+
+Checking next happening (time 60)
+Deleting (height pos-3-0 n2)
+Adding (height pos-3-0 n1)
+Adding (has-block)
+
+Checking next happening (time 61)
+Deleting (at pos-2-0)
+Adding (at pos-1-0)
+
+Checking next happening (time 62)
+Deleting (has-block)
+
+Checking next happening (time 63)
+Deleting (height pos-2-0 n1)
+Adding (height pos-2-0 n0)
+Adding (has-block)
+
+Checking next happening (time 64)
+Deleting (has-block)
+
+Checking next happening (time 65)
+Deleting (at pos-1-0)
+Adding (at pos-2-0)
+
+Checking next happening (time 66)
+Deleting (at pos-2-0)
+Adding (at pos-3-0)
+
+Checking next happening (time 67)
+Deleting (height pos-3-1 n2)
+Adding (height pos-3-1 n1)
+Adding (has-block)
+
+Checking next happening (time 68)
+Deleting (at pos-3-0)
+Adding (at pos-2-0)
+
+Checking next happening (time 69)
+Deleting (at pos-2-0)
+Adding (at pos-1-0)
+
+Checking next happening (time 70)
+Deleting (has-block)
+
+Checking next happening (time 71)
+Deleting (at pos-1-0)
+Adding (at pos-2-0)
+
+Checking next happening (time 72)
+Deleting (at pos-2-0)
+Adding (at pos-2-1)
+
+Checking next happening (time 73)
+Deleting (height pos-3-1 n1)
+Adding (height pos-3-1 n0)
+Adding (has-block)
+
+Checking next happening (time 74)
+Plan failed because of unsatisfied precondition in:
+(create-block pos-1-0)
+
+
+Plan failed to execute
+
+Plan Repair Advice:
+
+(create-block pos-1-0) has an unsatisfied precondition at time 74
+(Follow each of:
+    (Set (at pos-1-0) to true)
+    and (Set (has-block) to false)
+)
+
+
+Failed plans:
+ ./experiments_multiagent_help/run4034/termes/agent2_plan_final_temp.txt 
+
+[results][termes][04]
+[single_agent][planning time: 955.4][cost: 80.0]
+[multi_agent][planning_time: 205.95045599937438][cost: inf][agents: 3][optimization time 99.17591071128845]
+----------------------------------------
+Using cached single agent results
+['agent1 subgoal: Build blocks so that the height at pos-1-1 is 2 and all blocks are placed.', 'Build blocks so that the height at pos-3-1 is 3 and all blocks are placed.', 'Build blocks so that the height at pos-0-1 is 4 and all blocks are placed.', 'Build blocks so that the height at pos-1-2 is 3 and all blocks are placed.']
+['./experiments_multiagent_help/run4034/termes/p05_1.pddl', './experiments_multiagent_help/run4034/termes/p05_2.pddl', './experiments_multiagent_help/run4034/termes/p05_3.pddl', './experiments_multiagent_help/run4034/termes/p05_4.pddl']
+agent1
+[info][subgoal_1][termes] task 05 takes 0.25 sec, found a plan with cost 12.0
+planner successful
+validating
+validator time 0.003851175308227539
+agent2
+[info][subgoal_2][termes] task 05 takes 17.84 sec, found a plan with cost 30.0
+planner successful
+validating
+validator time 0.003654003143310547
+agent3
+[info][subgoal_3][termes] task 05 takes 200.14 sec, found a plan with cost 74.0
+planner successful
+validating
+validator time 0.020027637481689453
+agent4
+[info][subgoal_4][termes] task 05 takes 200.15 sec, found a plan with cost 72.0
+planner successful
+validating
+validator time 0.005875110626220703
+[info][multiagent main goal][termes] task 05 takes 200.15 sec, found a plan with cost 144.0
+TASK: termes - 4034 - 05
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (create-block pos-2-0)
+2 (Single): Agent 1: (place-block pos-2-0 pos-1-0 n0 n1)
+3 (Single): Agent 1: (create-block pos-2-0)
+4 (Single): Agent 1: (move pos-2-0 pos-2-1 n0)
+5 (Single): Agent 1: (place-block pos-2-1 pos-1-1 n0 n1)
+6 (Single): Agent 1: (move pos-2-1 pos-2-0 n0)
+7 (Single): Agent 1: (create-block pos-2-0)
+8 (Single): Agent 1: (move-up pos-2-0 n0 pos-1-0 n1)
+9 (Single): Agent 1: (place-block pos-1-0 pos-1-1 n1 n2)
+10 (Single): Agent 1: (move-down pos-1-0 n1 pos-2-0 n0)
+11 (Single): Agent 1: (remove-block pos-2-0 pos-1-0 n1 n0)
+12 (Single): Agent 1: (destroy-block pos-2-0)
+
+merging plan 2 into initial_plan
+34 True
+verifying entire plan.
+unsatisfied precondition encountered in merged plan, stopping process.
+Type-checking move
+...action passes type checking.
+Type-checking move-up
+...action passes type checking.
+Type-checking move-down
+...action passes type checking.
+Type-checking place-block
+...action passes type checking.
+Type-checking remove-block
+...action passes type checking.
+Type-checking create-block
+...action passes type checking.
+Type-checking destroy-block
+...action passes type checking.
+Checking plan: ./experiments_multiagent_help/run4034/termes/agent2_plan_final_temp.txt
+Plan to validate:
+
+Plan size: 42
+1:
+(create-block pos-2-0)
+ 
+2:
+(place-block pos-2-0 pos-1-0 n0 n1)
+ 
+3:
+(create-block pos-2-0)
+ 
+4:
+(move pos-2-0 pos-2-1 n0)
+ 
+5:
+(place-block pos-2-1 pos-1-1 n0 n1)
+ 
+6:
+(create-block pos-2-0)
+ 
+7:
+(move pos-2-1 pos-2-0 n0)
+ 
+8:
+(place-block pos-2-0 pos-2-1 n0 n1)
+ 
+9:
+(create-block pos-2-0)
+ 
+10:
+(move pos-2-0 pos-3-0 n0)
+ 
+11:
+(place-block pos-3-0 pos-3-1 n0 n1)
+ 
+12:
+(move pos-3-0 pos-2-0 n0)
+ 
+13:
+(create-block pos-2-0)
+ 
+14:
+(create-block pos-2-0)
+ 
+15:
+(move-up pos-2-0 n0 pos-1-0 n1)
+ 
+16:
+(move-up pos-2-0 n0 pos-2-1 n1)
+ 
+17:
+(place-block pos-1-0 pos-1-1 n1 n2)
+ 
+18:
+(place-block pos-2-1 pos-3-1 n1 n2)
+ 
+19:
+(remove-block pos-2-1 pos-1-1 n2 n1)
+ 
+20:
+(move-down pos-1-0 n1 pos-2-0 n0)
+ 
+21:
+(move pos-2-1 pos-1-1 n1)
+ 
+22:
+(remove-block pos-2-0 pos-1-0 n1 n0)
+ 
+23:
+(place-block pos-1-1 pos-2-1 n1 n2)
+ 
+24:
+(move-down pos-1-1 n1 pos-1-0 n0)
+ 
+25:
+(move pos-1-0 pos-2-0 n0)
+ 
+26:
+(create-block pos-2-0)
+ 
+27:
+(move pos-2-0 pos-1-0 n0)
+ 
+28:
+(move-up pos-1-0 n0 pos-1-1 n1)
+ 
+29:
+(move-up pos-1-1 n1 pos-2-1 n2)
+ 
+30:
+(place-block pos-2-1 pos-3-1 n2 n3)
+ 
+31:
+(move-down pos-2-1 n2 pos-1-1 n1)
+ 
+32:
+(remove-block pos-1-1 pos-2-1 n2 n1)
+ 
+33:
+(move-down pos-1-1 n1 pos-1-0 n0)
+ 
+34:
+(move pos-1-0 pos-2-0 n0)
+ 
+35:
+(destroy-block pos-2-0)
+ 
+36:
+(move pos-2-0 pos-1-0 n0)
+ 
+37:
+(remove-block pos-1-0 pos-1-1 n1 n0)
+ 
+38:
+(move pos-1-0 pos-2-0 n0)
+ 
+39:
+(destroy-block pos-2-0)
+ 
+40:
+(remove-block pos-2-0 pos-2-1 n1 n0)
+ 
+41:
+(destroy-block pos-2-0)
+ 
+42:
+(destroy-block pos-2-0)
+ 
+
+Plan Validation details
+-----------------------
+
+Checking next happening (time 1)
+Adding (has-block)
+
+Checking next happening (time 2)
+Deleting (height pos-1-0 n0)
+Deleting (has-block)
+Adding (height pos-1-0 n1)
+
+Checking next happening (time 3)
+Adding (has-block)
+
+Checking next happening (time 4)
+Deleting (at pos-2-0)
+Adding (at pos-2-1)
+
+Checking next happening (time 5)
+Deleting (height pos-1-1 n0)
+Deleting (has-block)
+Adding (height pos-1-1 n1)
+
+Checking next happening (time 6)
+Plan failed because of unsatisfied precondition in:
+(create-block pos-2-0)
+
+
+Plan failed to execute
+
+Plan Repair Advice:
+
+(create-block pos-2-0) has an unsatisfied precondition at time 6
+(Set (at pos-2-0) to true)
+
+
+Failed plans:
+ ./experiments_multiagent_help/run4034/termes/agent2_plan_final_temp.txt 
+
+[results][termes][05]
+[single_agent][planning time: 1000.17][cost: 136.0]
+[multi_agent][planning_time: 631.7334337520599][cost: inf][agents: 5][optimization time 34.515239238739014]
+----------------------------------------
+Using cached single agent results
+LLM generated no subgoal for agent 3, reducing number of agents
+args.num_agents: 3
+['height pos-1-2 5', 'height pos-3-2 5']
+['./experiments_multiagent_help/run4034/termes/p06_1.pddl', './experiments_multiagent_help/run4034/termes/p06_2.pddl']
+agent1
+[info][subgoal_1][termes] task 06 takes 200.15 sec, found a plan with cost 82.0
+planner successful
+validating
+validator time 0.006765604019165039
+agent2
+[info][subgoal_2][termes] task 06 takes 176.36 sec, found a plan with cost 40.0
+planner successful
+validating
+validator time 0.014100313186645508
+[info][multiagent main goal][termes] task 06 takes 200.14 sec, found a plan with cost 76.0
+TASK: termes - 4034 - 06
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (create-block pos-2-0)
+2 (Single): Agent 1: (place-block pos-2-0 pos-1-0 n0 n1)
+3 (Single): Agent 1: (create-block pos-2-0)
+4 (Single): Agent 1: (move pos-2-0 pos-2-1 n0)
+5 (Single): Agent 1: (move pos-2-1 pos-1-1 n0)
+6 (Single): Agent 1: (place-block pos-1-1 pos-1-2 n0 n1)
+7 (Single): Agent 1: (remove-block pos-1-1 pos-1-0 n1 n0)
+8 (Single): Agent 1: (move pos-1-1 pos-2-1 n0)
+9 (Single): Agent 1: (place-block pos-2-1 pos-2-2 n0 n1)
+10 (Single): Agent 1: (move pos-2-1 pos-2-0 n0)
+11 (Single): Agent 1: (create-block pos-2-0)
+12 (Single): Agent 1: (move pos-2-0 pos-2-1 n0)
+13 (Single): Agent 1: (move-up pos-2-1 n0 pos-2-2 n1)
+14 (Single): Agent 1: (place-block pos-2-2 pos-1-2 n1 n2)
+15 (Single): Agent 1: (move-down pos-2-2 n1 pos-2-1 n0)
+16 (Single): Agent 1: (move pos-2-1 pos-2-0 n0)
+17 (Single): Agent 1: (create-block pos-2-0)
+18 (Single): Agent 1: (place-block pos-2-0 pos-2-1 n0 n1)
+19 (Single): Agent 1: (create-block pos-2-0)
+20 (Single): Agent 1: (move-up pos-2-0 n0 pos-2-1 n1)
+21 (Single): Agent 1: (place-block pos-2-1 pos-2-2 n1 n2)
+22 (Single): Agent 1: (move-down pos-2-1 n1 pos-2-0 n0)
+23 (Single): Agent 1: (create-block pos-2-0)
+24 (Single): Agent 1: (move pos-2-0 pos-1-0 n0)
+25 (Single): Agent 1: (place-block pos-1-0 pos-1-1 n0 n1)
+26 (Single): Agent 1: (move pos-1-0 pos-2-0 n0)
+27 (Single): Agent 1: (create-block pos-2-0)
+28 (Single): Agent 1: (place-block pos-2-0 pos-1-0 n0 n1)
+29 (Single): Agent 1: (create-block pos-2-0)
+30 (Single): Agent 1: (move-up pos-2-0 n0 pos-2-1 n1)
+31 (Single): Agent 1: (move pos-2-1 pos-1-1 n1)
+32 (Single): Agent 1: (place-block pos-1-1 pos-2-1 n1 n2)
+33 (Single): Agent 1: (move pos-1-1 pos-1-0 n1)
+34 (Single): Agent 1: (move-down pos-1-0 n1 pos-2-0 n0)
+35 (Single): Agent 1: (create-block pos-2-0)
+36 (Single): Agent 1: (move-up pos-2-0 n0 pos-1-0 n1)
+37 (Single): Agent 1: (place-block pos-1-0 pos-1-1 n1 n2)
+38 (Single): Agent 1: (move-down pos-1-0 n1 pos-2-0 n0)
+39 (Single): Agent 1: (create-block pos-2-0)
+40 (Single): Agent 1: (move-up pos-2-0 n0 pos-1-0 n1)
+41 (Single): Agent 1: (move-up pos-1-0 n1 pos-1-1 n2)
+42 (Single): Agent 1: (place-block pos-1-1 pos-1-2 n2 n3)
+43 (Single): Agent 1: (move-down pos-1-1 n2 pos-1-0 n1)
+44 (Single): Agent 1: (move-down pos-1-0 n1 pos-2-0 n0)
+45 (Single): Agent 1: (create-block pos-2-0)
+46 (Single): Agent 1: (move-up pos-2-0 n0 pos-1-0 n1)
+47 (Single): Agent 1: (move-up pos-1-0 n1 pos-1-1 n2)
+48 (Single): Agent 1: (move pos-1-1 pos-2-1 n2)
+49 (Single): Agent 1: (place-block pos-2-1 pos-2-2 n2 n3)
+50 (Single): Agent 1: (move pos-2-1 pos-1-1 n2)
+51 (Single): Agent 1: (move-down pos-1-1 n2 pos-1-0 n1)
+52 (Single): Agent 1: (move-down pos-1-0 n1 pos-2-0 n0)
+53 (Single): Agent 1: (create-block pos-2-0)
+54 (Single): Agent 1: (move-up pos-2-0 n0 pos-1-0 n1)
+55 (Single): Agent 1: (move-up pos-1-0 n1 pos-1-1 n2)
+56 (Single): Agent 1: (place-block pos-1-1 pos-2-1 n2 n3)
+57 (Single): Agent 1: (move-down pos-1-1 n2 pos-1-0 n1)
+58 (Single): Agent 1: (move-down pos-1-0 n1 pos-2-0 n0)
+59 (Single): Agent 1: (create-block pos-2-0)
+60 (Single): Agent 1: (move-up pos-2-0 n0 pos-1-0 n1)
+61 (Single): Agent 1: (move-up pos-1-0 n1 pos-1-1 n2)
+62 (Single): Agent 1: (move-up pos-1-1 n2 pos-1-2 n3)
+63 (Single): Agent 1: (move pos-1-2 pos-2-2 n3)
+64 (Single): Agent 1: (place-block pos-2-2 pos-1-2 n3 n4)
+65 (Single): Agent 1: (move pos-2-2 pos-2-1 n3)
+66 (Single): Agent 1: (move-down pos-2-1 n3 pos-1-1 n2)
+67 (Single): Agent 1: (move-down pos-1-1 n2 pos-1-0 n1)
+68 (Single): Agent 1: (move-down pos-1-0 n1 pos-2-0 n0)
+69 (Single): Agent 1: (create-block pos-2-0)
+70 (Single): Agent 1: (move-up pos-2-0 n0 pos-1-0 n1)
+71 (Single): Agent 1: (move-up pos-1-0 n1 pos-1-1 n2)
+72 (Single): Agent 1: (move-up pos-1-1 n2 pos-2-1 n3)
+73 (Single): Agent 1: (place-block pos-2-1 pos-2-2 n3 n4)
+74 (Single): Agent 1: (move-down pos-2-1 n3 pos-1-1 n2)
+75 (Single): Agent 1: (move-down pos-1-1 n2 pos-1-0 n1)
+76 (Single): Agent 1: (move-down pos-1-0 n1 pos-2-0 n0)
+77 (Single): Agent 1: (create-block pos-2-0)
+78 (Single): Agent 1: (move-up pos-2-0 n0 pos-1-0 n1)
+79 (Single): Agent 1: (move-up pos-1-0 n1 pos-1-1 n2)
+80 (Single): Agent 1: (move-up pos-1-1 n2 pos-2-1 n3)
+81 (Single): Agent 1: (move-up pos-2-1 n3 pos-2-2 n4)
+82 (Single): Agent 1: (place-block pos-2-2 pos-1-2 n4 n5)
+
+merging plan 2 into initial_plan
+98 True
+verifying entire plan.
+unsatisfied precondition encountered in merged plan, stopping process.
+Type-checking move
+...action passes type checking.
+Type-checking move-up
+...action passes type checking.
+Type-checking move-down
+...action passes type checking.
+Type-checking place-block
+...action passes type checking.
+Type-checking remove-block
+...action passes type checking.
+Type-checking create-block
+...action passes type checking.
+Type-checking destroy-block
+...action passes type checking.
+Checking plan: ./experiments_multiagent_help/run4034/termes/agent2_plan_final_temp.txt
+Plan to validate:
+
+Plan size: 122
+1:
+(create-block pos-2-0)
+ 
+2:
+(place-block pos-2-0 pos-1-0 n0 n1)
+ 
+3:
+(create-block pos-2-0)
+ 
+4:
+(move pos-2-0 pos-2-1 n0)
+ 
+5:
+(move pos-2-1 pos-1-1 n0)
+ 
+6:
+(place-block pos-1-1 pos-1-2 n0 n1)
+ 
+7:
+(remove-block pos-1-1 pos-1-0 n1 n0)
+ 
+8:
+(move pos-1-1 pos-2-1 n0)
+ 
+9:
+(place-block pos-2-1 pos-2-2 n0 n1)
+ 
+10:
+(move pos-2-1 pos-2-0 n0)
+ 
+11:
+(create-block pos-2-0)
+ 
+12:
+(move pos-2-0 pos-2-1 n0)
+ 
+13:
+(move-up pos-2-1 n0 pos-2-2 n1)
+ 
+14:
+(place-block pos-2-2 pos-1-2 n1 n2)
+ 
+15:
+(move-down pos-2-2 n1 pos-2-1 n0)
+ 
+16:
+(move pos-2-1 pos-2-0 n0)
+ 
+17:
+(create-block pos-2-0)
+ 
+18:
+(place-block pos-2-0 pos-2-1 n0 n1)
+ 
+19:
+(create-block pos-2-0)
+ 
+20:
+(move-up pos-2-0 n0 pos-2-1 n1)
+ 
+21:
+(place-block pos-2-1 pos-2-2 n1 n2)
+ 
+22:
+(move-down pos-2-1 n1 pos-2-0 n0)
+ 
+23:
+(create-block pos-2-0)
+ 
+24:
+(move pos-2-0 pos-1-0 n0)
+ 
+25:
+(place-block pos-1-0 pos-1-1 n0 n1)
+ 
+26:
+(move pos-1-0 pos-2-0 n0)
+ 
+27:
+(create-block pos-2-0)
+ 
+28:
+(place-block pos-2-0 pos-1-0 n0 n1)
+ 
+29:
+(create-block pos-2-0)
+ 
+30:
+(move-up pos-2-0 n0 pos-2-1 n1)
+ 
+31:
+(move pos-2-1 pos-1-1 n1)
+ 
+32:
+(place-block pos-1-1 pos-2-1 n1 n2)
+ 
+33:
+(move pos-1-1 pos-1-0 n1)
+ 
+34:
+(move-down pos-1-0 n1 pos-2-0 n0)
+ 
+35:
+(create-block pos-2-0)
+ 
+36:
+(move-up pos-2-0 n0 pos-1-0 n1)
+ 
+37:
+(place-block pos-1-0 pos-1-1 n1 n2)
+ 
+38:
+(move-down pos-1-0 n1 pos-2-0 n0)
+ 
+39:
+(create-block pos-2-0)
+ 
+40:
+(move-up pos-2-0 n0 pos-1-0 n1)
+ 
+41:
+(move-up pos-1-0 n1 pos-1-1 n2)
+ 
+42:
+(place-block pos-1-1 pos-1-2 n2 n3)
+ 
+43:
+(move-down pos-1-1 n2 pos-1-0 n1)
+ 
+44:
+(move-down pos-1-0 n1 pos-2-0 n0)
+ 
+45:
+(create-block pos-2-0)
+ 
+46:
+(move-up pos-2-0 n0 pos-1-0 n1)
+ 
+47:
+(move-up pos-1-0 n1 pos-1-1 n2)
+ 
+48:
+(move pos-1-1 pos-2-1 n2)
+ 
+49:
+(place-block pos-2-1 pos-2-2 n2 n3)
+ 
+50:
+(move pos-2-1 pos-1-1 n2)
+ 
+51:
+(move-down pos-1-1 n2 pos-1-0 n1)
+ 
+52:
+(move-down pos-1-0 n1 pos-2-0 n0)
+ 
+53:
+(create-block pos-2-0)
+ 
+54:
+(move-up pos-2-0 n0 pos-1-0 n1)
+ 
+55:
+(move-up pos-1-0 n1 pos-1-1 n2)
+ 
+56:
+(place-block pos-1-1 pos-2-1 n2 n3)
+ 
+57:
+(move-down pos-1-1 n2 pos-1-0 n1)
+ 
+58:
+(move-down pos-1-0 n1 pos-2-0 n0)
+ 
+59:
+(create-block pos-2-0)
+ 
+60:
+(create-block pos-2-0)
+ 
+61:
+(move-up pos-2-0 n0 pos-1-0 n1)
+ 
+62:
+(move pos-2-0 pos-3-0 n0)
+ 
+63:
+(move-up pos-1-0 n1 pos-1-1 n2)
+ 
+64:
+(move pos-3-0 pos-3-1 n0)
+ 
+65:
+(move-up pos-1-1 n2 pos-1-2 n3)
+ 
+66:
+(place-block pos-3-1 pos-3-2 n0 n1)
+ 
+67:
+(move pos-1-2 pos-2-2 n3)
+ 
+68:
+(move pos-3-1 pos-3-0 n0)
+ 
+69:
+(place-block pos-2-2 pos-1-2 n3 n4)
+ 
+70:
+(move pos-3-0 pos-2-0 n0)
+ 
+71:
+(move pos-2-2 pos-2-1 n3)
+ 
+72:
+(create-block pos-2-0)
+ 
+73:
+(move-down pos-2-1 n3 pos-1-1 n2)
+ 
+74:
+(move pos-2-0 pos-3-0 n0)
+ 
+75:
+(move-down pos-1-1 n2 pos-1-0 n1)
+ 
+76:
+(place-block pos-3-0 pos-3-1 n0 n1)
+ 
+77:
+(move-down pos-1-0 n1 pos-2-0 n0)
+ 
+78:
+(move pos-3-0 pos-2-0 n0)
+ 
+79:
+(create-block pos-2-0)
+ 
+80:
+(create-block pos-2-0)
+ 
+81:
+(move-up pos-2-0 n0 pos-1-0 n1)
+ 
+82:
+(place-block pos-2-0 pos-3-0 n0 n1)
+ 
+83:
+(move-up pos-1-0 n1 pos-1-1 n2)
+ 
+84:
+(create-block pos-2-0)
+ 
+85:
+(move-up pos-1-1 n2 pos-2-1 n3)
+ 
+86:
+(move-up pos-2-0 n0 pos-3-0 n1)
+ 
+87:
+(place-block pos-2-1 pos-2-2 n3 n4)
+ 
+88:
+(move pos-3-0 pos-3-1 n1)
+ 
+89:
+(move-down pos-2-1 n3 pos-1-1 n2)
+ 
+90:
+(place-block pos-3-1 pos-3-2 n1 n2)
+ 
+91:
+(move-down pos-1-1 n2 pos-1-0 n1)
+ 
+92:
+(move pos-3-1 pos-3-0 n1)
+ 
+93:
+(move-down pos-1-0 n1 pos-2-0 n0)
+ 
+94:
+(move-down pos-3-0 n1 pos-2-0 n0)
+ 
+95:
+(create-block pos-2-0)
+ 
+96:
+(create-block pos-2-0)
+ 
+97:
+(move-up pos-2-0 n0 pos-1-0 n1)
+ 
+98:
+(move-up pos-2-0 n0 pos-3-0 n1)
+ 
+99:
+(move-up pos-1-0 n1 pos-1-1 n2)
+ 
+100:
+(place-block pos-3-0 pos-3-1 n1 n2)
+ 
+101:
+(move-up pos-1-1 n2 pos-2-1 n3)
+ 
+102:
+(move-up pos-3-0 n1 pos-3-1 n2)
+ 
+103:
+(move-up pos-2-1 n3 pos-2-2 n4)
+ 
+104:
+(move-up pos-3-1 n2 pos-2-1 n3)
+ 
+105:
+(place-block pos-2-2 pos-1-2 n4 n5)
+ 
+106:
+(move-up pos-2-1 n3 pos-2-2 n4)
+ 
+107:
+(remove-block pos-2-2 pos-1-2 n5 n4)
+ 
+108:
+(move-down pos-2-2 n4 pos-2-1 n3)
+ 
+109:
+(move-down pos-2-1 n3 pos-3-1 n2)
+ 
+110:
+(place-block pos-3-1 pos-3-2 n2 n3)
+ 
+111:
+(move-up pos-3-1 n2 pos-3-2 n3)
+ 
+112:
+(remove-block pos-3-2 pos-2-2 n4 n3)
+ 
+113:
+(move pos-3-2 pos-2-2 n3)
+ 
+114:
+(place-block pos-2-2 pos-3-2 n3 n4)
+ 
+115:
+(remove-block pos-2-2 pos-1-2 n4 n3)
+ 
+116:
+(move pos-2-2 pos-2-1 n3)
+ 
+117:
+(place-block pos-2-1 pos-2-2 n3 n4)
+ 
+118:
+(move-down pos-2-1 n3 pos-1-1 n2)
+ 
+119:
+(remove-block pos-1-1 pos-1-2 n3 n2)
+ 
+120:
+(move-up pos-1-1 n2 pos-2-1 n3)
+ 
+121:
+(move-up pos-2-1 n3 pos-2-2 n4)
+ 
+122:
+(place-block pos-2-2 pos-3-2 n4 n5)
+ 
+
+Plan Validation details
+-----------------------
+
+Checking next happening (time 1)
+Adding (has-block)
+
+Checking next happening (time 2)
+Deleting (height pos-1-0 n0)
+Deleting (has-block)
+Adding (height pos-1-0 n1)
+
+Checking next happening (time 3)
+Adding (has-block)
+
+Checking next happening (time 4)
+Deleting (at pos-2-0)
+Adding (at pos-2-1)
+
+Checking next happening (time 5)
+Deleting (at pos-2-1)
+Adding (at pos-1-1)
+
+Checking next happening (time 6)
+Deleting (height pos-1-2 n0)
+Deleting (has-block)
+Adding (height pos-1-2 n1)
+
+Checking next happening (time 7)
+Deleting (height pos-1-0 n1)
+Adding (height pos-1-0 n0)
+Adding (has-block)
+
+Checking next happening (time 8)
+Deleting (at pos-1-1)
+Adding (at pos-2-1)
+
+Checking next happening (time 9)
+Deleting (height pos-2-2 n0)
+Deleting (has-block)
+Adding (height pos-2-2 n1)
+
+Checking next happening (time 10)
+Deleting (at pos-2-1)
+Adding (at pos-2-0)
+
+Checking next happening (time 11)
+Adding (has-block)
+
+Checking next happening (time 12)
+Deleting (at pos-2-0)
+Adding (at pos-2-1)
+
+Checking next happening (time 13)
+Deleting (at pos-2-1)
+Adding (at pos-2-2)
+
+Checking next happening (time 14)
+Deleting (height pos-1-2 n1)
+Deleting (has-block)
+Adding (height pos-1-2 n2)
+
+Checking next happening (time 15)
+Deleting (at pos-2-2)
+Adding (at pos-2-1)
+
+Checking next happening (time 16)
+Deleting (at pos-2-1)
+Adding (at pos-2-0)
+
+Checking next happening (time 17)
+Adding (has-block)
+
+Checking next happening (time 18)
+Deleting (height pos-2-1 n0)
+Deleting (has-block)
+Adding (height pos-2-1 n1)
+
+Checking next happening (time 19)
+Adding (has-block)
+
+Checking next happening (time 20)
+Deleting (at pos-2-0)
+Adding (at pos-2-1)
+
+Checking next happening (time 21)
+Deleting (height pos-2-2 n1)
+Deleting (has-block)
+Adding (height pos-2-2 n2)
+
+Checking next happening (time 22)
+Deleting (at pos-2-1)
+Adding (at pos-2-0)
+
+Checking next happening (time 23)
+Adding (has-block)
+
+Checking next happening (time 24)
+Deleting (at pos-2-0)
+Adding (at pos-1-0)
+
+Checking next happening (time 25)
+Deleting (height pos-1-1 n0)
+Deleting (has-block)
+Adding (height pos-1-1 n1)
+
+Checking next happening (time 26)
+Deleting (at pos-1-0)
+Adding (at pos-2-0)
+
+Checking next happening (time 27)
+Adding (has-block)
+
+Checking next happening (time 28)
+Deleting (height pos-1-0 n0)
+Deleting (has-block)
+Adding (height pos-1-0 n1)
+
+Checking next happening (time 29)
+Adding (has-block)
+
+Checking next happening (time 30)
+Deleting (at pos-2-0)
+Adding (at pos-2-1)
+
+Checking next happening (time 31)
+Deleting (at pos-2-1)
+Adding (at pos-1-1)
+
+Checking next happening (time 32)
+Deleting (height pos-2-1 n1)
+Deleting (has-block)
+Adding (height pos-2-1 n2)
+
+Checking next happening (time 33)
+Deleting (at pos-1-1)
+Adding (at pos-1-0)
+
+Checking next happening (time 34)
+Deleting (at pos-1-0)
+Adding (at pos-2-0)
+
+Checking next happening (time 35)
+Adding (has-block)
+
+Checking next happening (time 36)
+Deleting (at pos-2-0)
+Adding (at pos-1-0)
+
+Checking next happening (time 37)
+Deleting (height pos-1-1 n1)
+Deleting (has-block)
+Adding (height pos-1-1 n2)
+
+Checking next happening (time 38)
+Deleting (at pos-1-0)
+Adding (at pos-2-0)
+
+Checking next happening (time 39)
+Adding (has-block)
+
+Checking next happening (time 40)
+Deleting (at pos-2-0)
+Adding (at pos-1-0)
+
+Checking next happening (time 41)
+Deleting (at pos-1-0)
+Adding (at pos-1-1)
+
+Checking next happening (time 42)
+Deleting (height pos-1-2 n2)
+Deleting (has-block)
+Adding (height pos-1-2 n3)
+
+Checking next happening (time 43)
+Deleting (at pos-1-1)
+Adding (at pos-1-0)
+
+Checking next happening (time 44)
+Deleting (at pos-1-0)
+Adding (at pos-2-0)
+
+Checking next happening (time 45)
+Adding (has-block)
+
+Checking next happening (time 46)
+Deleting (at pos-2-0)
+Adding (at pos-1-0)
+
+Checking next happening (time 47)
+Deleting (at pos-1-0)
+Adding (at pos-1-1)
+
+Checking next happening (time 48)
+Deleting (at pos-1-1)
+Adding (at pos-2-1)
+
+Checking next happening (time 49)
+Deleting (height pos-2-2 n2)
+Deleting (has-block)
+Adding (height pos-2-2 n3)
+
+Checking next happening (time 50)
+Deleting (at pos-2-1)
+Adding (at pos-1-1)
+
+Checking next happening (time 51)
+Deleting (at pos-1-1)
+Adding (at pos-1-0)
+
+Checking next happening (time 52)
+Deleting (at pos-1-0)
+Adding (at pos-2-0)
+
+Checking next happening (time 53)
+Adding (has-block)
+
+Checking next happening (time 54)
+Deleting (at pos-2-0)
+Adding (at pos-1-0)
+
+Checking next happening (time 55)
+Deleting (at pos-1-0)
+Adding (at pos-1-1)
+
+Checking next happening (time 56)
+Deleting (height pos-2-1 n2)
+Deleting (has-block)
+Adding (height pos-2-1 n3)
+
+Checking next happening (time 57)
+Deleting (at pos-1-1)
+Adding (at pos-1-0)
+
+Checking next happening (time 58)
+Deleting (at pos-1-0)
+Adding (at pos-2-0)
+
+Checking next happening (time 59)
+Adding (has-block)
+
+Checking next happening (time 60)
+Plan failed because of unsatisfied precondition in:
+(create-block pos-2-0)
+
+
+Plan failed to execute
+
+Plan Repair Advice:
+
+(create-block pos-2-0) has an unsatisfied precondition at time 60
+(Set (has-block) to false)
+
+
+Failed plans:
+ ./experiments_multiagent_help/run4034/termes/agent2_plan_final_temp.txt 
+
+[results][termes][06]
+[single_agent][planning time: 1000.16][cost: 172.0]
+[multi_agent][planning_time: 602.1282156944275][cost: inf][agents: 3][optimization time 202.84463334083557]
+----------------------------------------
+Using cached single agent results
+['height-at pos-1-1 is 2 and all blocks are placed.', 'height-at pos-2-2 is 2 and all blocks are placed.', 'height-at pos-3-3 is 2 and all blocks are placed.', 'height-at pos-4-0 is 2 and all blocks are placed.']
+['./experiments_multiagent_help/run4034/termes/p07_1.pddl', './experiments_multiagent_help/run4034/termes/p07_2.pddl', './experiments_multiagent_help/run4034/termes/p07_3.pddl', './experiments_multiagent_help/run4034/termes/p07_4.pddl']
+agent1
+[info][subgoal_1][termes] task 07 takes 0.55 sec, found a plan with cost 12.0
+planner successful
+validating
+validator time 0.003457784652709961
+agent2
+[info][subgoal_2][termes] task 07 takes 0.2 sec, found a plan with cost 9.0
+planner successful
+validating
+validator time 0.0032389163970947266
+agent3
+[info][subgoal_3][termes] task 07 takes 149.84 sec, found a plan with cost 24.0
+planner successful
+validating
+validator time 0.005948543548583984
+agent4
+[info][subgoal_4][termes] task 07 takes 6.35 sec, found a plan with cost 20.0
+planner successful
+validating
+validator time 0.003645658493041992
+[info][multiagent main goal][termes] task 07 takes 200.15 sec, found a plan with cost 62.0
+TASK: termes - 4034 - 07
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (create-block pos-2-0)
+2 (Single): Agent 1: (place-block pos-2-0 pos-1-0 n0 n1)
+3 (Single): Agent 1: (create-block pos-2-0)
+4 (Single): Agent 1: (move pos-2-0 pos-2-1 n0)
+5 (Single): Agent 1: (place-block pos-2-1 pos-1-1 n0 n1)
+6 (Single): Agent 1: (move pos-2-1 pos-2-0 n0)
+7 (Single): Agent 1: (create-block pos-2-0)
+8 (Single): Agent 1: (move-up pos-2-0 n0 pos-1-0 n1)
+9 (Single): Agent 1: (place-block pos-1-0 pos-1-1 n1 n2)
+10 (Single): Agent 1: (move-down pos-1-0 n1 pos-2-0 n0)
+11 (Single): Agent 1: (remove-block pos-2-0 pos-1-0 n1 n0)
+12 (Single): Agent 1: (destroy-block pos-2-0)
+
+merging plan 2 into initial_plan
+12 True
+verifying entire plan.
+unsatisfied precondition encountered in merged plan, stopping process.
+Type-checking move
+...action passes type checking.
+Type-checking move-up
+...action passes type checking.
+Type-checking move-down
+...action passes type checking.
+Type-checking place-block
+...action passes type checking.
+Type-checking remove-block
+...action passes type checking.
+Type-checking create-block
+...action passes type checking.
+Type-checking destroy-block
+...action passes type checking.
+Checking plan: ./experiments_multiagent_help/run4034/termes/agent2_plan_final_temp.txt
+Plan to validate:
+
+Plan size: 21
+1:
+(create-block pos-2-0)
+ 
+2:
+(place-block pos-2-0 pos-1-0 n0 n1)
+ 
+3:
+(create-block pos-2-0)
+ 
+4:
+(move pos-2-0 pos-2-1 n0)
+ 
+5:
+(create-block pos-2-0)
+ 
+6:
+(place-block pos-2-1 pos-1-1 n0 n1)
+ 
+7:
+(move pos-2-0 pos-2-1 n0)
+ 
+8:
+(move pos-2-1 pos-2-0 n0)
+ 
+9:
+(place-block pos-2-1 pos-2-2 n0 n1)
+ 
+10:
+(create-block pos-2-0)
+ 
+11:
+(move pos-2-1 pos-2-0 n0)
+ 
+12:
+(move-up pos-2-0 n0 pos-1-0 n1)
+ 
+13:
+(create-block pos-2-0)
+ 
+14:
+(place-block pos-1-0 pos-1-1 n1 n2)
+ 
+15:
+(place-block pos-2-0 pos-2-1 n0 n1)
+ 
+16:
+(move-down pos-1-0 n1 pos-2-0 n0)
+ 
+17:
+(create-block pos-2-0)
+ 
+18:
+(remove-block pos-2-0 pos-1-0 n1 n0)
+ 
+19:
+(move-up pos-2-0 n0 pos-2-1 n1)
+ 
+20:
+(destroy-block pos-2-0)
+ 
+21:
+(place-block pos-2-1 pos-2-2 n1 n2)
+ 
+
+Plan Validation details
+-----------------------
+
+Checking next happening (time 1)
+Adding (has-block)
+
+Checking next happening (time 2)
+Deleting (height pos-1-0 n0)
+Deleting (has-block)
+Adding (height pos-1-0 n1)
+
+Checking next happening (time 3)
+Adding (has-block)
+
+Checking next happening (time 4)
+Deleting (at pos-2-0)
+Adding (at pos-2-1)
+
+Checking next happening (time 5)
+Plan failed because of unsatisfied precondition in:
+(create-block pos-2-0)
+
+
+Plan failed to execute
+
+Plan Repair Advice:
+
+(create-block pos-2-0) has an unsatisfied precondition at time 5
+(Follow each of:
+    (Set (at pos-2-0) to true)
+    and (Set (has-block) to false)
+)
+
+
+Failed plans:
+ ./experiments_multiagent_help/run4034/termes/agent2_plan_final_temp.txt 
+
+[results][termes][07]
+[single_agent][planning time: 1000.18][cost: 56.0]
+[multi_agent][planning_time: 372.1292901897431][cost: inf][agents: 5][optimization time 9.42430830001831]
+----------------------------------------
+Using cached single agent results
+LLM generated no subgoal for agent 3, reducing number of agents
+args.num_agents: 3
+['The height at pos-1-1 is 3 and all blocks are placed.', 'The height at pos-0-2 is 3 and all blocks are placed.']
+['./experiments_multiagent_help/run4034/termes/p08_1.pddl', './experiments_multiagent_help/run4034/termes/p08_2.pddl']
+agent1
+[info][subgoal_1][termes] task 08 takes 20.85 sec, found a plan with cost 23.0
+planner successful
+validating
+validator time 0.0037260055541992188
+agent2
+[info][subgoal_2][termes] task 08 takes 27.38 sec, found a plan with cost 25.0
+planner successful
+validating
+validator time 0.0046007633209228516
+[info][multiagent main goal][termes] task 08 takes 200.16 sec, found a plan with cost 28.0
+TASK: termes - 4034 - 08
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (create-block pos-2-0)
+2 (Single): Agent 1: (place-block pos-2-0 pos-1-0 n0 n1)
+3 (Single): Agent 1: (create-block pos-2-0)
+4 (Single): Agent 1: (move pos-2-0 pos-2-1 n0)
+5 (Single): Agent 1: (place-block pos-2-1 pos-1-1 n0 n1)
+6 (Single): Agent 1: (move pos-2-1 pos-2-0 n0)
+7 (Single): Agent 1: (create-block pos-2-0)
+8 (Single): Agent 1: (place-block pos-2-0 pos-2-1 n0 n1)
+9 (Single): Agent 1: (create-block pos-2-0)
+10 (Single): Agent 1: (move-up pos-2-0 n0 pos-1-0 n1)
+11 (Single): Agent 1: (move pos-1-0 pos-1-1 n1)
+12 (Single): Agent 1: (place-block pos-1-1 pos-1-0 n1 n2)
+13 (Single): Agent 1: (move pos-1-1 pos-2-1 n1)
+14 (Single): Agent 1: (move-down pos-2-1 n1 pos-2-0 n0)
+15 (Single): Agent 1: (create-block pos-2-0)
+16 (Single): Agent 1: (move-up pos-2-0 n0 pos-2-1 n1)
+17 (Single): Agent 1: (place-block pos-2-1 pos-1-1 n1 n2)
+18 (Single): Agent 1: (move-down pos-2-1 n1 pos-2-0 n0)
+19 (Single): Agent 1: (create-block pos-2-0)
+20 (Single): Agent 1: (move-up pos-2-0 n0 pos-2-1 n1)
+21 (Single): Agent 1: (move-up pos-2-1 n1 pos-1-1 n2)
+22 (Single): Agent 1: (move pos-1-1 pos-1-0 n2)
+23 (Single): Agent 1: (place-block pos-1-0 pos-1-1 n2 n3)
+
+merging plan 2 into initial_plan
+41 True
+verifying entire plan.
+unsatisfied precondition encountered in merged plan, stopping process.
+Type-checking move
+...action passes type checking.
+Type-checking move-up
+...action passes type checking.
+Type-checking move-down
+...action passes type checking.
+Type-checking place-block
+...action passes type checking.
+Type-checking remove-block
+...action passes type checking.
+Type-checking create-block
+...action passes type checking.
+Type-checking destroy-block
+...action passes type checking.
+Checking plan: ./experiments_multiagent_help/run4034/termes/agent2_plan_final_temp.txt
+Plan to validate:
+
+Plan size: 48
+1:
+(create-block pos-2-0)
+ 
+2:
+(place-block pos-2-0 pos-1-0 n0 n1)
+ 
+3:
+(create-block pos-2-0)
+ 
+4:
+(move pos-2-0 pos-2-1 n0)
+ 
+5:
+(place-block pos-2-1 pos-1-1 n0 n1)
+ 
+6:
+(move pos-2-1 pos-2-0 n0)
+ 
+7:
+(create-block pos-2-0)
+ 
+8:
+(place-block pos-2-0 pos-2-1 n0 n1)
+ 
+9:
+(create-block pos-2-0)
+ 
+10:
+(move-up pos-2-0 n0 pos-1-0 n1)
+ 
+11:
+(move pos-1-0 pos-1-1 n1)
+ 
+12:
+(place-block pos-1-1 pos-1-0 n1 n2)
+ 
+13:
+(move pos-1-1 pos-2-1 n1)
+ 
+14:
+(move-down pos-2-1 n1 pos-2-0 n0)
+ 
+15:
+(create-block pos-2-0)
+ 
+16:
+(move-up pos-2-0 n0 pos-2-1 n1)
+ 
+17:
+(place-block pos-2-1 pos-1-1 n1 n2)
+ 
+18:
+(create-block pos-2-0)
+ 
+19:
+(move-down pos-2-1 n1 pos-2-0 n0)
+ 
+20:
+(move-up pos-2-0 n0 pos-2-1 n1)
+ 
+21:
+(create-block pos-2-0)
+ 
+22:
+(move-down pos-2-1 n1 pos-2-2 n0)
+ 
+23:
+(move-up pos-2-0 n0 pos-2-1 n1)
+ 
+24:
+(place-block pos-2-2 pos-1-2 n0 n1)
+ 
+25:
+(move-up pos-2-1 n1 pos-1-1 n2)
+ 
+26:
+(remove-block pos-2-2 pos-2-1 n1 n0)
+ 
+27:
+(move-up pos-2-2 n0 pos-1-2 n1)
+ 
+28:
+(move-down pos-1-2 n1 pos-0-2 n0)
+ 
+29:
+(move pos-0-2 pos-0-1 n0)
+ 
+30:
+(place-block pos-0-1 pos-0-0 n0 n1)
+ 
+31:
+(move pos-1-1 pos-1-0 n2)
+ 
+32:
+(move-up pos-0-1 n0 pos-0-0 n1)
+ 
+33:
+(place-block pos-1-0 pos-1-1 n2 n3)
+ 
+34:
+(move-up pos-0-0 n1 pos-1-0 n2)
+ 
+35:
+(remove-block pos-1-0 pos-1-1 n3 n2)
+ 
+36:
+(move-down pos-1-0 n2 pos-0-0 n1)
+ 
+37:
+(move-down pos-0-0 n1 pos-0-1 n0)
+ 
+38:
+(place-block pos-0-1 pos-0-2 n0 n1)
+ 
+39:
+(remove-block pos-0-1 pos-0-0 n1 n0)
+ 
+40:
+(move-up pos-0-1 n0 pos-0-2 n1)
+ 
+41:
+(move pos-0-2 pos-1-2 n1)
+ 
+42:
+(place-block pos-1-2 pos-0-2 n1 n2)
+ 
+43:
+(remove-block pos-1-2 pos-1-1 n2 n1)
+ 
+44:
+(move pos-1-2 pos-1-1 n1)
+ 
+45:
+(place-block pos-1-1 pos-1-2 n1 n2)
+ 
+46:
+(remove-block pos-1-1 pos-1-0 n2 n1)
+ 
+47:
+(move-up pos-1-1 n1 pos-1-2 n2)
+ 
+48:
+(place-block pos-1-2 pos-0-2 n2 n3)
+ 
+
+Plan Validation details
+-----------------------
+
+Checking next happening (time 1)
+Adding (has-block)
+
+Checking next happening (time 2)
+Deleting (height pos-1-0 n0)
+Deleting (has-block)
+Adding (height pos-1-0 n1)
+
+Checking next happening (time 3)
+Adding (has-block)
+
+Checking next happening (time 4)
+Deleting (at pos-2-0)
+Adding (at pos-2-1)
+
+Checking next happening (time 5)
+Deleting (height pos-1-1 n0)
+Deleting (has-block)
+Adding (height pos-1-1 n1)
+
+Checking next happening (time 6)
+Deleting (at pos-2-1)
+Adding (at pos-2-0)
+
+Checking next happening (time 7)
+Adding (has-block)
+
+Checking next happening (time 8)
+Deleting (height pos-2-1 n0)
+Deleting (has-block)
+Adding (height pos-2-1 n1)
+
+Checking next happening (time 9)
+Adding (has-block)
+
+Checking next happening (time 10)
+Deleting (at pos-2-0)
+Adding (at pos-1-0)
+
+Checking next happening (time 11)
+Deleting (at pos-1-0)
+Adding (at pos-1-1)
+
+Checking next happening (time 12)
+Deleting (height pos-1-0 n1)
+Deleting (has-block)
+Adding (height pos-1-0 n2)
+
+Checking next happening (time 13)
+Deleting (at pos-1-1)
+Adding (at pos-2-1)
+
+Checking next happening (time 14)
+Deleting (at pos-2-1)
+Adding (at pos-2-0)
+
+Checking next happening (time 15)
+Adding (has-block)
+
+Checking next happening (time 16)
+Deleting (at pos-2-0)
+Adding (at pos-2-1)
+
+Checking next happening (time 17)
+Deleting (height pos-1-1 n1)
+Deleting (has-block)
+Adding (height pos-1-1 n2)
+
+Checking next happening (time 18)
+Plan failed because of unsatisfied precondition in:
+(create-block pos-2-0)
+
+
+Plan failed to execute
+
+Plan Repair Advice:
+
+(create-block pos-2-0) has an unsatisfied precondition at time 18
+(Set (at pos-2-0) to true)
+
+
+Failed plans:
+ ./experiments_multiagent_help/run4034/termes/agent2_plan_final_temp.txt 
+
+[results][termes][08]
+[single_agent][planning time: 1000.25][cost: 64.0]
+[multi_agent][planning_time: 251.21307791709899][cost: inf][agents: 3][optimization time 14.923794507980347]
+----------------------------------------
+Using cached single agent results
+['The height at pos-1-2 is 2 and all blocks are placed.', 'The height at pos-3-1 is 2 and all blocks are placed.', 'The height at pos-4-2 is 2 and all blocks are placed.', 'The height at pos-2-3 is 2 and all blocks are placed.']
+['./experiments_multiagent_help/run4034/termes/p09_1.pddl', './experiments_multiagent_help/run4034/termes/p09_2.pddl', './experiments_multiagent_help/run4034/termes/p09_3.pddl', './experiments_multiagent_help/run4034/termes/p09_4.pddl']
+agent1
+[info][subgoal_1][termes] task 09 takes 2.99 sec, found a plan with cost 18.0
+planner successful
+validating
+validator time 0.0034666061401367188
+agent2
+[info][subgoal_2][termes] task 09 takes 3.07 sec, found a plan with cost 16.0
+planner successful
+validating
+validator time 0.0035037994384765625
+agent3
+[info][subgoal_3][termes] task 09 takes 9.04 sec, found a plan with cost 18.0
+planner successful
+validating
+validator time 0.004323482513427734
+agent4
+[info][subgoal_4][termes] task 09 takes 3.04 sec, found a plan with cost 18.0
+planner successful
+validating
+validator time 0.0035774707794189453
+[info][multiagent main goal][termes] task 09 takes 200.17 sec, found a plan with cost 110.0
+TASK: termes - 4034 - 09
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (create-block pos-2-0)
+2 (Single): Agent 1: (move pos-2-0 pos-2-1 n0)
+3 (Single): Agent 1: (move pos-2-1 pos-1-1 n0)
+4 (Single): Agent 1: (place-block pos-1-1 pos-1-2 n0 n1)
+5 (Single): Agent 1: (move pos-1-1 pos-1-0 n0)
+6 (Single): Agent 1: (move pos-1-0 pos-2-0 n0)
+7 (Single): Agent 1: (create-block pos-2-0)
+8 (Single): Agent 1: (move pos-2-0 pos-2-1 n0)
+9 (Single): Agent 1: (place-block pos-2-1 pos-2-2 n0 n1)
+10 (Single): Agent 1: (move pos-2-1 pos-2-0 n0)
+11 (Single): Agent 1: (create-block pos-2-0)
+12 (Single): Agent 1: (move pos-2-0 pos-2-1 n0)
+13 (Single): Agent 1: (move-up pos-2-1 n0 pos-2-2 n1)
+14 (Single): Agent 1: (place-block pos-2-2 pos-1-2 n1 n2)
+15 (Single): Agent 1: (move-down pos-2-2 n1 pos-2-1 n0)
+16 (Single): Agent 1: (remove-block pos-2-1 pos-2-2 n1 n0)
+17 (Single): Agent 1: (move pos-2-1 pos-2-0 n0)
+18 (Single): Agent 1: (destroy-block pos-2-0)
+
+merging plan 2 into initial_plan
+26 True
+verifying entire plan.
+unsatisfied precondition encountered in merged plan, stopping process.
+Type-checking move
+...action passes type checking.
+Type-checking move-up
+...action passes type checking.
+Type-checking move-down
+...action passes type checking.
+Type-checking place-block
+...action passes type checking.
+Type-checking remove-block
+...action passes type checking.
+Type-checking create-block
+...action passes type checking.
+Type-checking destroy-block
+...action passes type checking.
+Checking plan: ./experiments_multiagent_help/run4034/termes/agent2_plan_final_temp.txt
+Plan to validate:
+
+Plan size: 34
+1:
+(create-block pos-2-0)
+ 
+2:
+(move pos-2-0 pos-2-1 n0)
+ 
+3:
+(move pos-2-1 pos-1-1 n0)
+ 
+4:
+(place-block pos-1-1 pos-1-2 n0 n1)
+ 
+5:
+(move pos-1-1 pos-1-0 n0)
+ 
+6:
+(move pos-1-0 pos-2-0 n0)
+ 
+7:
+(create-block pos-2-0)
+ 
+8:
+(move pos-2-0 pos-2-1 n0)
+ 
+9:
+(place-block pos-2-1 pos-2-2 n0 n1)
+ 
+10:
+(move pos-2-1 pos-2-0 n0)
+ 
+11:
+(create-block pos-2-0)
+ 
+12:
+(create-block pos-2-0)
+ 
+13:
+(move pos-2-0 pos-2-1 n0)
+ 
+14:
+(move pos-2-0 pos-2-1 n0)
+ 
+15:
+(move-up pos-2-1 n0 pos-2-2 n1)
+ 
+16:
+(place-block pos-2-1 pos-1-1 n0 n1)
+ 
+17:
+(place-block pos-2-2 pos-1-2 n1 n2)
+ 
+18:
+(move-up pos-2-1 n0 pos-1-1 n1)
+ 
+19:
+(remove-block pos-1-1 pos-1-2 n2 n1)
+ 
+20:
+(move-down pos-1-1 n1 pos-2-1 n0)
+ 
+21:
+(move-down pos-2-2 n1 pos-2-1 n0)
+ 
+22:
+(place-block pos-2-1 pos-3-1 n0 n1)
+ 
+23:
+(remove-block pos-2-1 pos-2-2 n1 n0)
+ 
+24:
+(remove-block pos-2-1 pos-1-1 n1 n0)
+ 
+25:
+(move pos-2-1 pos-2-2 n0)
+ 
+26:
+(move pos-2-1 pos-2-0 n0)
+ 
+27:
+(place-block pos-2-2 pos-2-1 n0 n1)
+ 
+28:
+(remove-block pos-2-2 pos-1-2 n1 n0)
+ 
+29:
+(move-up pos-2-2 n0 pos-2-1 n1)
+ 
+30:
+(place-block pos-2-1 pos-3-1 n1 n2)
+ 
+31:
+(move-down pos-2-1 n1 pos-2-0 n0)
+ 
+32:
+(remove-block pos-2-0 pos-2-1 n1 n0)
+ 
+33:
+(destroy-block pos-2-0)
+ 
+34:
+(destroy-block pos-2-0)
+ 
+
+Plan Validation details
+-----------------------
+
+Checking next happening (time 1)
+Adding (has-block)
+
+Checking next happening (time 2)
+Deleting (at pos-2-0)
+Adding (at pos-2-1)
+
+Checking next happening (time 3)
+Deleting (at pos-2-1)
+Adding (at pos-1-1)
+
+Checking next happening (time 4)
+Deleting (height pos-1-2 n0)
+Deleting (has-block)
+Adding (height pos-1-2 n1)
+
+Checking next happening (time 5)
+Deleting (at pos-1-1)
+Adding (at pos-1-0)
+
+Checking next happening (time 6)
+Deleting (at pos-1-0)
+Adding (at pos-2-0)
+
+Checking next happening (time 7)
+Adding (has-block)
+
+Checking next happening (time 8)
+Deleting (at pos-2-0)
+Adding (at pos-2-1)
+
+Checking next happening (time 9)
+Deleting (height pos-2-2 n0)
+Deleting (has-block)
+Adding (height pos-2-2 n1)
+
+Checking next happening (time 10)
+Deleting (at pos-2-1)
+Adding (at pos-2-0)
+
+Checking next happening (time 11)
+Adding (has-block)
+
+Checking next happening (time 12)
+Plan failed because of unsatisfied precondition in:
+(create-block pos-2-0)
+
+
+Plan failed to execute
+
+Plan Repair Advice:
+
+(create-block pos-2-0) has an unsatisfied precondition at time 12
+(Set (has-block) to false)
+
+
+Failed plans:
+ ./experiments_multiagent_help/run4034/termes/agent2_plan_final_temp.txt 
+
+[results][termes][09]
+[single_agent][planning time: 1000.2][cost: 100.0]
+[multi_agent][planning_time: 236.0358608341217][cost: inf][agents: 5][optimization time 10.276627779006958]
+----------------------------------------
+Using cached single agent results
+LLM generated no subgoal for agent 3, reducing number of agents
+args.num_agents: 3
+['The height at pos-3-0 is 2 and all blocks are placed.', 'The height at pos-2-3 is 4 and all blocks are placed.']
+['./experiments_multiagent_help/run4034/termes/p10_1.pddl', './experiments_multiagent_help/run4034/termes/p10_2.pddl']
+agent1
+[info][subgoal_1][termes] task 10 takes 0.31 sec, found a plan with cost 10.0
+planner successful
+validating
+validator time 0.003233671188354492
+agent2
+[info][subgoal_2][termes] task 10 takes 200.18 sec, found a plan with cost 44.0
+planner successful
+validating
+validator time 0.005126476287841797
+[info][multiagent main goal][termes] task 10 takes 105.38 sec, found a plan with cost 24.0
+TASK: termes - 4034 - 10
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (create-block pos-2-0)
+2 (Single): Agent 1: (place-block pos-2-0 pos-3-0 n0 n1)
+3 (Single): Agent 1: (create-block pos-2-0)
+4 (Single): Agent 1: (move pos-2-0 pos-2-1 n0)
+5 (Single): Agent 1: (place-block pos-2-1 pos-3-1 n0 n1)
+6 (Single): Agent 1: (move pos-2-1 pos-2-0 n0)
+7 (Single): Agent 1: (create-block pos-2-0)
+8 (Single): Agent 1: (move pos-2-0 pos-2-1 n0)
+9 (Single): Agent 1: (move-up pos-2-1 n0 pos-3-1 n1)
+10 (Single): Agent 1: (place-block pos-3-1 pos-3-0 n1 n2)
+
+merging plan 2 into initial_plan
+44 True
+verifying entire plan.
+unsatisfied precondition encountered in merged plan, stopping process.
+Type-checking move
+...action passes type checking.
+Type-checking move-up
+...action passes type checking.
+Type-checking move-down
+...action passes type checking.
+Type-checking place-block
+...action passes type checking.
+Type-checking remove-block
+...action passes type checking.
+Type-checking create-block
+...action passes type checking.
+Type-checking destroy-block
+...action passes type checking.
+Checking plan: ./experiments_multiagent_help/run4034/termes/agent2_plan_final_temp.txt
+Plan to validate:
+
+Plan size: 54
+1:
+(create-block pos-2-0)
+ 
+2:
+(place-block pos-2-0 pos-2-1 n0 n1)
+ 
+3:
+(create-block pos-2-0)
+ 
+4:
+(move-up pos-2-0 n0 pos-2-1 n1)
+ 
+5:
+(move-down pos-2-1 n1 pos-2-2 n0)
+ 
+6:
+(place-block pos-2-2 pos-2-3 n0 n1)
+ 
+7:
+(remove-block pos-2-2 pos-2-1 n1 n0)
+ 
+8:
+(move pos-2-2 pos-2-1 n0)
+ 
+9:
+(place-block pos-2-1 pos-2-2 n0 n1)
+ 
+10:
+(create-block pos-2-0)
+ 
+11:
+(move pos-2-1 pos-2-0 n0)
+ 
+12:
+(place-block pos-2-0 pos-3-0 n0 n1)
+ 
+13:
+(create-block pos-2-0)
+ 
+14:
+(create-block pos-2-0)
+ 
+15:
+(move pos-2-0 pos-2-1 n0)
+ 
+16:
+(move pos-2-0 pos-2-1 n0)
+ 
+17:
+(move-up pos-2-1 n0 pos-2-2 n1)
+ 
+18:
+(place-block pos-2-1 pos-3-1 n0 n1)
+ 
+19:
+(place-block pos-2-2 pos-2-3 n1 n2)
+ 
+20:
+(move pos-2-1 pos-2-0 n0)
+ 
+21:
+(move-down pos-2-2 n1 pos-2-1 n0)
+ 
+22:
+(create-block pos-2-0)
+ 
+23:
+(move pos-2-1 pos-2-0 n0)
+ 
+24:
+(move pos-2-0 pos-2-1 n0)
+ 
+25:
+(create-block pos-2-0)
+ 
+26:
+(move-up pos-2-1 n0 pos-3-1 n1)
+ 
+27:
+(place-block pos-2-0 pos-2-1 n0 n1)
+ 
+28:
+(create-block pos-2-0)
+ 
+29:
+(move-up pos-2-0 n0 pos-2-1 n1)
+ 
+30:
+(place-block pos-2-1 pos-2-2 n1 n2)
+ 
+31:
+(move-down pos-2-1 n1 pos-2-0 n0)
+ 
+32:
+(create-block pos-2-0)
+ 
+33:
+(move-up pos-2-0 n0 pos-2-1 n1)
+ 
+34:
+(move-up pos-2-1 n1 pos-2-2 n2)
+ 
+35:
+(place-block pos-2-2 pos-2-3 n2 n3)
+ 
+36:
+(move-down pos-2-2 n2 pos-2-1 n1)
+ 
+37:
+(move-down pos-2-1 n1 pos-2-0 n0)
+ 
+38:
+(create-block pos-2-0)
+ 
+39:
+(move-up pos-2-0 n0 pos-2-1 n1)
+ 
+40:
+(move pos-2-1 pos-3-1 n1)
+ 
+41:
+(place-block pos-3-1 pos-3-0 n1 n2)
+ 
+42:
+(place-block pos-3-1 pos-2-1 n1 n2)
+ 
+43:
+(remove-block pos-3-1 pos-3-0 n2 n1)
+ 
+44:
+(move-up pos-3-1 n1 pos-2-1 n2)
+ 
+45:
+(place-block pos-2-1 pos-2-2 n2 n3)
+ 
+46:
+(move-down pos-2-1 n2 pos-3-1 n1)
+ 
+47:
+(move pos-3-1 pos-3-0 n1)
+ 
+48:
+(move-down pos-3-0 n1 pos-2-0 n0)
+ 
+49:
+(create-block pos-2-0)
+ 
+50:
+(move-up pos-2-0 n0 pos-3-0 n1)
+ 
+51:
+(move pos-3-0 pos-3-1 n1)
+ 
+52:
+(move-up pos-3-1 n1 pos-2-1 n2)
+ 
+53:
+(move-up pos-2-1 n2 pos-2-2 n3)
+ 
+54:
+(place-block pos-2-2 pos-2-3 n3 n4)
+ 
+
+Plan Validation details
+-----------------------
+
+Checking next happening (time 1)
+Adding (has-block)
+
+Checking next happening (time 2)
+Deleting (height pos-2-1 n0)
+Deleting (has-block)
+Adding (height pos-2-1 n1)
+
+Checking next happening (time 3)
+Adding (has-block)
+
+Checking next happening (time 4)
+Deleting (at pos-2-0)
+Adding (at pos-2-1)
+
+Checking next happening (time 5)
+Deleting (at pos-2-1)
+Adding (at pos-2-2)
+
+Checking next happening (time 6)
+Deleting (height pos-2-3 n0)
+Deleting (has-block)
+Adding (height pos-2-3 n1)
+
+Checking next happening (time 7)
+Deleting (height pos-2-1 n1)
+Adding (height pos-2-1 n0)
+Adding (has-block)
+
+Checking next happening (time 8)
+Deleting (at pos-2-2)
+Adding (at pos-2-1)
+
+Checking next happening (time 9)
+Deleting (height pos-2-2 n0)
+Deleting (has-block)
+Adding (height pos-2-2 n1)
+
+Checking next happening (time 10)
+Plan failed because of unsatisfied precondition in:
+(create-block pos-2-0)
+
+
+Plan failed to execute
+
+Plan Repair Advice:
+
+(create-block pos-2-0) has an unsatisfied precondition at time 10
+(Set (at pos-2-0) to true)
+
+
+Failed plans:
+ ./experiments_multiagent_help/run4034/termes/agent2_plan_final_temp.txt 
+
+[results][termes][10]
+[single_agent][planning time: 1000.3][cost: 76.0]
+[multi_agent][planning_time: 309.1121317100525][cost: inf][agents: 3][optimization time 26.224812746047974]
+----------------------------------------
+Using cached single agent results
+LLM generated no subgoal for agent 4, reducing number of agents
+args.num_agents: 4
+['height pos-1-2 3 and all blocks are placed.', 'height pos-2-0 3 and all blocks are placed.', 'height pos-3-0 3 and all blocks are placed.']
+['./experiments_multiagent_help/run4034/termes/p11_1.pddl', './experiments_multiagent_help/run4034/termes/p11_2.pddl', './experiments_multiagent_help/run4034/termes/p11_3.pddl']
+agent1
+[info][subgoal_1][termes] task 11 takes 2.41 sec, found a plan with cost 25.0
+planner successful
+validating
+validator time 0.0033752918243408203
+agent2
+[info][subgoal_2][termes] task 11 takes 77.09 sec, found a plan with cost 34.0
+planner successful
+validating
+validator time 0.00934743881225586
+agent3
+[info][subgoal_3][termes] task 11 takes 0.5 sec, found a plan with cost 21.0
+planner successful
+validating
+validator time 0.003309965133666992
+[info][multiagent main goal][termes] task 11 takes 200.12 sec, found a plan with cost 44.0
+TASK: termes - 4034 - 11
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (create-block pos-1-0)
+2 (Single): Agent 1: (move pos-1-0 pos-1-1 n0)
+3 (Single): Agent 1: (place-block pos-1-1 pos-1-2 n0 n1)
+4 (Single): Agent 1: (move pos-1-1 pos-1-0 n0)
+5 (Single): Agent 1: (create-block pos-1-0)
+6 (Single): Agent 1: (place-block pos-1-0 pos-1-1 n0 n1)
+7 (Single): Agent 1: (create-block pos-1-0)
+8 (Single): Agent 1: (move pos-1-0 pos-0-0 n0)
+9 (Single): Agent 1: (place-block pos-0-0 pos-0-1 n0 n1)
+10 (Single): Agent 1: (move pos-0-0 pos-1-0 n0)
+11 (Single): Agent 1: (create-block pos-1-0)
+12 (Single): Agent 1: (move-up pos-1-0 n0 pos-1-1 n1)
+13 (Single): Agent 1: (place-block pos-1-1 pos-1-2 n1 n2)
+14 (Single): Agent 1: (move-down pos-1-1 n1 pos-1-0 n0)
+15 (Single): Agent 1: (create-block pos-1-0)
+16 (Single): Agent 1: (move pos-1-0 pos-0-0 n0)
+17 (Single): Agent 1: (move-up pos-0-0 n0 pos-0-1 n1)
+18 (Single): Agent 1: (place-block pos-0-1 pos-1-1 n1 n2)
+19 (Single): Agent 1: (move-down pos-0-1 n1 pos-0-0 n0)
+20 (Single): Agent 1: (move pos-0-0 pos-1-0 n0)
+21 (Single): Agent 1: (create-block pos-1-0)
+22 (Single): Agent 1: (move pos-1-0 pos-0-0 n0)
+23 (Single): Agent 1: (move-up pos-0-0 n0 pos-0-1 n1)
+24 (Single): Agent 1: (move-up pos-0-1 n1 pos-1-1 n2)
+25 (Single): Agent 1: (place-block pos-1-1 pos-1-2 n2 n3)
+
+merging plan 2 into initial_plan
+56 True
+verifying entire plan.
+unsatisfied precondition encountered in merged plan, stopping process.
+Type-checking move
+...action passes type checking.
+Type-checking move-up
+...action passes type checking.
+Type-checking move-down
+...action passes type checking.
+Type-checking place-block
+...action passes type checking.
+Type-checking remove-block
+...action passes type checking.
+Type-checking create-block
+...action passes type checking.
+Type-checking destroy-block
+...action passes type checking.
+Checking plan: ./experiments_multiagent_help/run4034/termes/agent2_plan_final_temp.txt
+Plan to validate:
+
+Plan size: 59
+1:
+(create-block pos-1-0)
+ 
+2:
+(move pos-1-0 pos-1-1 n0)
+ 
+3:
+(place-block pos-1-1 pos-1-2 n0 n1)
+ 
+4:
+(move pos-1-1 pos-1-0 n0)
+ 
+5:
+(create-block pos-1-0)
+ 
+6:
+(place-block pos-1-0 pos-1-1 n0 n1)
+ 
+7:
+(create-block pos-1-0)
+ 
+8:
+(move pos-1-0 pos-0-0 n0)
+ 
+9:
+(place-block pos-0-0 pos-0-1 n0 n1)
+ 
+10:
+(move pos-0-0 pos-1-0 n0)
+ 
+11:
+(create-block pos-1-0)
+ 
+12:
+(move-up pos-1-0 n0 pos-1-1 n1)
+ 
+13:
+(place-block pos-1-1 pos-1-2 n1 n2)
+ 
+14:
+(move-down pos-1-1 n1 pos-1-0 n0)
+ 
+15:
+(create-block pos-1-0)
+ 
+16:
+(move pos-1-0 pos-0-0 n0)
+ 
+17:
+(move-up pos-0-0 n0 pos-0-1 n1)
+ 
+18:
+(place-block pos-0-1 pos-1-1 n1 n2)
+ 
+19:
+(move-down pos-0-1 n1 pos-0-0 n0)
+ 
+20:
+(move pos-0-0 pos-1-0 n0)
+ 
+21:
+(create-block pos-1-0)
+ 
+22:
+(move pos-1-0 pos-0-0 n0)
+ 
+23:
+(move-up pos-0-0 n0 pos-0-1 n1)
+ 
+24:
+(move pos-1-0 pos-0-0 n0)
+ 
+25:
+(move-up pos-0-1 n1 pos-1-1 n2)
+ 
+26:
+(remove-block pos-0-0 pos-0-1 n1 n0)
+ 
+27:
+(move pos-0-0 pos-1-0 n0)
+ 
+28:
+(place-block pos-1-0 pos-2-0 n0 n1)
+ 
+29:
+(create-block pos-1-0)
+ 
+30:
+(move-up pos-1-0 n0 pos-2-0 n1)
+ 
+31:
+(move-down pos-2-0 n1 pos-2-1 n0)
+ 
+32:
+(move pos-2-1 pos-2-2 n0)
+ 
+33:
+(place-block pos-2-2 pos-2-1 n0 n1)
+ 
+34:
+(move-up pos-2-2 n0 pos-2-1 n1)
+ 
+35:
+(place-block pos-1-1 pos-1-2 n2 n3)
+ 
+36:
+(move-up pos-2-1 n1 pos-1-1 n2)
+ 
+37:
+(remove-block pos-1-1 pos-1-2 n3 n2)
+ 
+38:
+(move-down pos-1-1 n2 pos-2-1 n1)
+ 
+39:
+(place-block pos-2-1 pos-2-0 n1 n2)
+ 
+40:
+(remove-block pos-2-1 pos-1-1 n2 n1)
+ 
+41:
+(move pos-2-1 pos-1-1 n1)
+ 
+42:
+(place-block pos-1-1 pos-2-1 n1 n2)
+ 
+43:
+(remove-block pos-1-1 pos-1-2 n2 n1)
+ 
+44:
+(move-up pos-1-1 n1 pos-2-1 n2)
+ 
+45:
+(place-block pos-2-1 pos-2-0 n2 n3)
+ 
+46:
+(move-down pos-2-1 n2 pos-1-1 n1)
+ 
+47:
+(remove-block pos-1-1 pos-2-1 n2 n1)
+ 
+48:
+(move-down pos-1-1 n1 pos-1-0 n0)
+ 
+49:
+(destroy-block pos-1-0)
+ 
+50:
+(remove-block pos-1-0 pos-1-1 n1 n0)
+ 
+51:
+(destroy-block pos-1-0)
+ 
+52:
+(move pos-1-0 pos-1-1 n0)
+ 
+53:
+(remove-block pos-1-1 pos-1-2 n1 n0)
+ 
+54:
+(move pos-1-1 pos-1-0 n0)
+ 
+55:
+(destroy-block pos-1-0)
+ 
+56:
+(move pos-1-0 pos-1-1 n0)
+ 
+57:
+(remove-block pos-1-1 pos-2-1 n1 n0)
+ 
+58:
+(move pos-1-1 pos-1-0 n0)
+ 
+59:
+(destroy-block pos-1-0)
+ 
+
+Plan Validation details
+-----------------------
+
+Checking next happening (time 1)
+Adding (has-block)
+
+Checking next happening (time 2)
+Deleting (at pos-1-0)
+Adding (at pos-1-1)
+
+Checking next happening (time 3)
+Deleting (height pos-1-2 n0)
+Deleting (has-block)
+Adding (height pos-1-2 n1)
+
+Checking next happening (time 4)
+Deleting (at pos-1-1)
+Adding (at pos-1-0)
+
+Checking next happening (time 5)
+Adding (has-block)
+
+Checking next happening (time 6)
+Deleting (height pos-1-1 n0)
+Deleting (has-block)
+Adding (height pos-1-1 n1)
+
+Checking next happening (time 7)
+Adding (has-block)
+
+Checking next happening (time 8)
+Deleting (at pos-1-0)
+Adding (at pos-0-0)
+
+Checking next happening (time 9)
+Deleting (height pos-0-1 n0)
+Deleting (has-block)
+Adding (height pos-0-1 n1)
+
+Checking next happening (time 10)
+Deleting (at pos-0-0)
+Adding (at pos-1-0)
+
+Checking next happening (time 11)
+Adding (has-block)
+
+Checking next happening (time 12)
+Deleting (at pos-1-0)
+Adding (at pos-1-1)
+
+Checking next happening (time 13)
+Deleting (height pos-1-2 n1)
+Deleting (has-block)
+Adding (height pos-1-2 n2)
+
+Checking next happening (time 14)
+Deleting (at pos-1-1)
+Adding (at pos-1-0)
+
+Checking next happening (time 15)
+Adding (has-block)
+
+Checking next happening (time 16)
+Deleting (at pos-1-0)
+Adding (at pos-0-0)
+
+Checking next happening (time 17)
+Deleting (at pos-0-0)
+Adding (at pos-0-1)
+
+Checking next happening (time 18)
+Deleting (height pos-1-1 n1)
+Deleting (has-block)
+Adding (height pos-1-1 n2)
+
+Checking next happening (time 19)
+Deleting (at pos-0-1)
+Adding (at pos-0-0)
+
+Checking next happening (time 20)
+Deleting (at pos-0-0)
+Adding (at pos-1-0)
+
+Checking next happening (time 21)
+Adding (has-block)
+
+Checking next happening (time 22)
+Deleting (at pos-1-0)
+Adding (at pos-0-0)
+
+Checking next happening (time 23)
+Deleting (at pos-0-0)
+Adding (at pos-0-1)
+
+Checking next happening (time 24)
+Plan failed because of unsatisfied precondition in:
+(move pos-1-0 pos-0-0 n0)
+
+
+Plan failed to execute
+
+Plan Repair Advice:
+
+(move pos-1-0 pos-0-0 n0) has an unsatisfied precondition at time 24
+(Set (at pos-1-0) to true)
+
+
+Failed plans:
+ ./experiments_multiagent_help/run4034/termes/agent2_plan_final_temp.txt 
+
+[results][termes][11]
+[single_agent][planning time: 522.23][cost: 66.0]
+[multi_agent][planning_time: 287.06245290756226][cost: inf][agents: 4][optimization time 17.341047286987305]
+----------------------------------------
+Using cached single agent results
+['height pos-0-0 2 and all blocks placed', 'height pos-0-1 2 and all blocks placed', 'height pos-2-0 2 and all blocks placed', 'height pos-2-1 3 and all blocks placed']
+['./experiments_multiagent_help/run4034/termes/p12_1.pddl', './experiments_multiagent_help/run4034/termes/p12_2.pddl', './experiments_multiagent_help/run4034/termes/p12_3.pddl', './experiments_multiagent_help/run4034/termes/p12_4.pddl']
+agent1
+[info][subgoal_1][termes] task 12 takes 0.29 sec, found a plan with cost 14.0
+planner successful
+validating
+validator time 0.0032625198364257812
+agent2
+[info][subgoal_2][termes] task 12 takes 0.12 sec, found a plan with cost 7.0
+planner successful
+validating
+validator time 0.0031239986419677734
+agent3
+[info][subgoal_3][termes] task 12 takes 0.73 sec, found a plan with cost 14.0
+planner successful
+validating
+validator time 0.0032193660736083984
+agent4
+[info][subgoal_4][termes] task 12 takes 21.69 sec, found a plan with cost 34.0
+planner successful
+validating
+validator time 0.0037131309509277344
+[info][multiagent main goal][termes] task 12 takes 26.1 sec, found a plan with cost 34.0
+TASK: termes - 4034 - 12
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (create-block pos-1-0)
+2 (Single): Agent 1: (move pos-1-0 pos-1-1 n0)
+3 (Single): Agent 1: (place-block pos-1-1 pos-0-1 n0 n1)
+4 (Single): Agent 1: (move pos-1-1 pos-1-0 n0)
+5 (Single): Agent 1: (create-block pos-1-0)
+6 (Single): Agent 1: (place-block pos-1-0 pos-0-0 n0 n1)
+7 (Single): Agent 1: (create-block pos-1-0)
+8 (Single): Agent 1: (move-up pos-1-0 n0 pos-0-0 n1)
+9 (Single): Agent 1: (move pos-0-0 pos-0-1 n1)
+10 (Single): Agent 1: (place-block pos-0-1 pos-0-0 n1 n2)
+11 (Single): Agent 1: (move-down pos-0-1 n1 pos-1-1 n0)
+12 (Single): Agent 1: (remove-block pos-1-1 pos-0-1 n1 n0)
+13 (Single): Agent 1: (move pos-1-1 pos-1-0 n0)
+14 (Single): Agent 1: (destroy-block pos-1-0)
+
+merging plan 2 into initial_plan
+17 True
+verifying entire plan.
+unsatisfied precondition encountered in merged plan, stopping process.
+Type-checking move
+...action passes type checking.
+Type-checking move-up
+...action passes type checking.
+Type-checking move-down
+...action passes type checking.
+Type-checking place-block
+...action passes type checking.
+Type-checking remove-block
+...action passes type checking.
+Type-checking create-block
+...action passes type checking.
+Type-checking destroy-block
+...action passes type checking.
+Checking plan: ./experiments_multiagent_help/run4034/termes/agent2_plan_final_temp.txt
+Plan to validate:
+
+Plan size: 21
+1:
+(create-block pos-1-0)
+ 
+2:
+(move pos-1-0 pos-1-1 n0)
+ 
+3:
+(place-block pos-1-1 pos-0-1 n0 n1)
+ 
+4:
+(move pos-1-1 pos-1-0 n0)
+ 
+5:
+(create-block pos-1-0)
+ 
+6:
+(place-block pos-1-0 pos-0-0 n0 n1)
+ 
+7:
+(create-block pos-1-0)
+ 
+8:
+(move-up pos-1-0 n0 pos-0-0 n1)
+ 
+9:
+(move pos-0-0 pos-0-1 n1)
+ 
+10:
+(place-block pos-0-1 pos-0-0 n1 n2)
+ 
+11:
+(move-down pos-0-1 n1 pos-1-1 n0)
+ 
+12:
+(create-block pos-1-0)
+ 
+13:
+(remove-block pos-1-1 pos-0-1 n1 n0)
+ 
+14:
+(move pos-1-0 pos-1-1 n0)
+ 
+15:
+(place-block pos-1-1 pos-0-1 n0 n1)
+ 
+16:
+(move-up pos-1-1 n0 pos-0-1 n1)
+ 
+17:
+(remove-block pos-0-1 pos-0-0 n2 n1)
+ 
+18:
+(move pos-1-1 pos-1-0 n0)
+ 
+19:
+(move pos-0-1 pos-0-0 n1)
+ 
+20:
+(destroy-block pos-1-0)
+ 
+21:
+(place-block pos-0-0 pos-0-1 n1 n2)
+ 
+
+Plan Validation details
+-----------------------
+
+Checking next happening (time 1)
+Adding (has-block)
+
+Checking next happening (time 2)
+Deleting (at pos-1-0)
+Adding (at pos-1-1)
+
+Checking next happening (time 3)
+Deleting (height pos-0-1 n0)
+Deleting (has-block)
+Adding (height pos-0-1 n1)
+
+Checking next happening (time 4)
+Deleting (at pos-1-1)
+Adding (at pos-1-0)
+
+Checking next happening (time 5)
+Adding (has-block)
+
+Checking next happening (time 6)
+Deleting (height pos-0-0 n0)
+Deleting (has-block)
+Adding (height pos-0-0 n1)
+
+Checking next happening (time 7)
+Adding (has-block)
+
+Checking next happening (time 8)
+Deleting (at pos-1-0)
+Adding (at pos-0-0)
+
+Checking next happening (time 9)
+Deleting (at pos-0-0)
+Adding (at pos-0-1)
+
+Checking next happening (time 10)
+Deleting (height pos-0-0 n1)
+Deleting (has-block)
+Adding (height pos-0-0 n2)
+
+Checking next happening (time 11)
+Deleting (at pos-0-1)
+Adding (at pos-1-1)
+
+Checking next happening (time 12)
+Plan failed because of unsatisfied precondition in:
+(create-block pos-1-0)
+
+
+Plan failed to execute
+
+Plan Repair Advice:
+
+(create-block pos-1-0) has an unsatisfied precondition at time 12
+(Set (at pos-1-0) to true)
+
+
+Failed plans:
+ ./experiments_multiagent_help/run4034/termes/agent2_plan_final_temp.txt 
+
+[results][termes][12]
+[single_agent][planning time: 73.53][cost: 46.0]
+[multi_agent][planning_time: 59.56089561462402][cost: inf][agents: 5][optimization time 5.101532220840454]
+----------------------------------------
+Using cached single agent results
+LLM generated no subgoal for agent 4, reducing number of agents
+args.num_agents: 4
+['height pos-2-2 4', 'height pos-0-1 3', 'height pos-3-0 3']
+['./experiments_multiagent_help/run4034/termes/p13_1.pddl', './experiments_multiagent_help/run4034/termes/p13_2.pddl', './experiments_multiagent_help/run4034/termes/p13_3.pddl']
+agent1
+[info][subgoal_1][termes] task 13 takes 114.05 sec, found a plan with cost 45.0
+planner successful
+validating
+validator time 0.006478786468505859
+agent2
+[info][subgoal_2][termes] task 13 takes 0.42 sec, found a plan with cost 16.0
+planner successful
+validating
+validator time 0.003254413604736328
+agent3
+[info][subgoal_3][termes] task 13 takes 0.86 sec, found a plan with cost 16.0
+planner successful
+validating
+validator time 0.003168344497680664
+[info][multiagent main goal][termes] task 13 takes 0.51 sec, found a plan with cost 16.0
+TASK: termes - 4034 - 13
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (create-block pos-2-0)
+2 (Single): Agent 1: (move pos-2-0 pos-2-1 n0)
+3 (Single): Agent 1: (place-block pos-2-1 pos-1-1 n0 n1)
+4 (Single): Agent 1: (move pos-2-1 pos-2-0 n0)
+5 (Single): Agent 1: (create-block pos-2-0)
+6 (Single): Agent 1: (move pos-2-0 pos-2-1 n0)
+7 (Single): Agent 1: (place-block pos-2-1 pos-2-2 n0 n1)
+8 (Single): Agent 1: (move pos-2-1 pos-2-0 n0)
+9 (Single): Agent 1: (create-block pos-2-0)
+10 (Single): Agent 1: (place-block pos-2-0 pos-2-1 n0 n1)
+11 (Single): Agent 1: (create-block pos-2-0)
+12 (Single): Agent 1: (move-up pos-2-0 n0 pos-2-1 n1)
+13 (Single): Agent 1: (place-block pos-2-1 pos-2-2 n1 n2)
+14 (Single): Agent 1: (move-down pos-2-1 n1 pos-2-0 n0)
+15 (Single): Agent 1: (create-block pos-2-0)
+16 (Single): Agent 1: (move-up pos-2-0 n0 pos-2-1 n1)
+17 (Single): Agent 1: (move pos-2-1 pos-1-1 n1)
+18 (Single): Agent 1: (place-block pos-1-1 pos-2-1 n1 n2)
+19 (Single): Agent 1: (move-down pos-1-1 n1 pos-1-0 n0)
+20 (Single): Agent 1: (move pos-1-0 pos-2-0 n0)
+21 (Single): Agent 1: (create-block pos-2-0)
+22 (Single): Agent 1: (move pos-2-0 pos-1-0 n0)
+23 (Single): Agent 1: (move-up pos-1-0 n0 pos-1-1 n1)
+24 (Single): Agent 1: (move-up pos-1-1 n1 pos-2-1 n2)
+25 (Single): Agent 1: (place-block pos-2-1 pos-2-2 n2 n3)
+26 (Single): Agent 1: (move-down pos-2-1 n2 pos-1-1 n1)
+27 (Single): Agent 1: (move-down pos-1-1 n1 pos-1-0 n0)
+28 (Single): Agent 1: (move pos-1-0 pos-2-0 n0)
+29 (Single): Agent 1: (create-block pos-2-0)
+30 (Single): Agent 1: (place-block pos-2-0 pos-1-0 n0 n1)
+31 (Single): Agent 1: (create-block pos-2-0)
+32 (Single): Agent 1: (move-up pos-2-0 n0 pos-1-0 n1)
+33 (Single): Agent 1: (place-block pos-1-0 pos-1-1 n1 n2)
+34 (Single): Agent 1: (move-down pos-1-0 n1 pos-2-0 n0)
+35 (Single): Agent 1: (create-block pos-2-0)
+36 (Single): Agent 1: (move-up pos-2-0 n0 pos-1-0 n1)
+37 (Single): Agent 1: (move-up pos-1-0 n1 pos-1-1 n2)
+38 (Single): Agent 1: (place-block pos-1-1 pos-2-1 n2 n3)
+39 (Single): Agent 1: (move-down pos-1-1 n2 pos-1-0 n1)
+40 (Single): Agent 1: (move-down pos-1-0 n1 pos-2-0 n0)
+41 (Single): Agent 1: (create-block pos-2-0)
+42 (Single): Agent 1: (move-up pos-2-0 n0 pos-1-0 n1)
+43 (Single): Agent 1: (move-up pos-1-0 n1 pos-1-1 n2)
+44 (Single): Agent 1: (move-up pos-1-1 n2 pos-2-1 n3)
+45 (Single): Agent 1: (place-block pos-2-1 pos-2-2 n3 n4)
+
+merging plan 2 into initial_plan
+50 True
+verifying entire plan.
+unsatisfied precondition encountered in merged plan, stopping process.
+Type-checking move
+...action passes type checking.
+Type-checking move-up
+...action passes type checking.
+Type-checking move-down
+...action passes type checking.
+Type-checking place-block
+...action passes type checking.
+Type-checking remove-block
+...action passes type checking.
+Type-checking create-block
+...action passes type checking.
+Type-checking destroy-block
+...action passes type checking.
+Checking plan: ./experiments_multiagent_help/run4034/termes/agent2_plan_final_temp.txt
+Plan to validate:
+
+Plan size: 61
+1:
+(create-block pos-2-0)
+ 
+2:
+(move pos-2-0 pos-2-1 n0)
+ 
+3:
+(place-block pos-2-1 pos-1-1 n0 n1)
+ 
+4:
+(move pos-2-1 pos-2-0 n0)
+ 
+5:
+(create-block pos-2-0)
+ 
+6:
+(move pos-2-0 pos-2-1 n0)
+ 
+7:
+(place-block pos-2-1 pos-2-2 n0 n1)
+ 
+8:
+(move pos-2-1 pos-2-0 n0)
+ 
+9:
+(create-block pos-2-0)
+ 
+10:
+(place-block pos-2-0 pos-2-1 n0 n1)
+ 
+11:
+(create-block pos-2-0)
+ 
+12:
+(move-up pos-2-0 n0 pos-2-1 n1)
+ 
+13:
+(place-block pos-2-1 pos-2-2 n1 n2)
+ 
+14:
+(move-down pos-2-1 n1 pos-2-0 n0)
+ 
+15:
+(create-block pos-2-0)
+ 
+16:
+(move-up pos-2-0 n0 pos-2-1 n1)
+ 
+17:
+(move pos-2-1 pos-1-1 n1)
+ 
+18:
+(place-block pos-1-1 pos-2-1 n1 n2)
+ 
+19:
+(move-down pos-1-1 n1 pos-1-0 n0)
+ 
+20:
+(move pos-1-0 pos-2-0 n0)
+ 
+21:
+(create-block pos-2-0)
+ 
+22:
+(move pos-2-0 pos-1-0 n0)
+ 
+23:
+(move-up pos-1-0 n0 pos-1-1 n1)
+ 
+24:
+(move-up pos-1-1 n1 pos-2-1 n2)
+ 
+25:
+(place-block pos-2-1 pos-2-2 n2 n3)
+ 
+26:
+(move-down pos-2-1 n2 pos-1-1 n1)
+ 
+27:
+(move-down pos-1-1 n1 pos-1-0 n0)
+ 
+28:
+(move pos-1-0 pos-2-0 n0)
+ 
+29:
+(create-block pos-2-0)
+ 
+30:
+(place-block pos-2-0 pos-1-0 n0 n1)
+ 
+31:
+(create-block pos-2-0)
+ 
+32:
+(move-up pos-2-0 n0 pos-1-0 n1)
+ 
+33:
+(place-block pos-1-0 pos-1-1 n1 n2)
+ 
+34:
+(move-down pos-1-0 n1 pos-2-0 n0)
+ 
+35:
+(create-block pos-2-0)
+ 
+36:
+(create-block pos-2-0)
+ 
+37:
+(move-up pos-2-0 n0 pos-1-0 n1)
+ 
+38:
+(move-up pos-2-0 n0 pos-1-0 n1)
+ 
+39:
+(move-down pos-1-0 n1 pos-0-0 n0)
+ 
+40:
+(move-up pos-1-0 n1 pos-1-1 n2)
+ 
+41:
+(place-block pos-0-0 pos-0-1 n0 n1)
+ 
+42:
+(place-block pos-1-1 pos-2-1 n2 n3)
+ 
+43:
+(move-up pos-0-0 n0 pos-1-0 n1)
+ 
+44:
+(move-down pos-1-1 n2 pos-1-0 n1)
+ 
+45:
+(remove-block pos-1-0 pos-1-1 n2 n1)
+ 
+46:
+(move pos-1-0 pos-1-1 n1)
+ 
+47:
+(place-block pos-1-1 pos-0-1 n1 n2)
+ 
+48:
+(move pos-1-1 pos-1-0 n1)
+ 
+49:
+(move-down pos-1-0 n1 pos-2-0 n0)
+ 
+50:
+(move-down pos-1-0 n1 pos-2-0 n0)
+ 
+51:
+(create-block pos-2-0)
+ 
+52:
+(create-block pos-2-0)
+ 
+53:
+(move-up pos-2-0 n0 pos-1-0 n1)
+ 
+54:
+(move-up pos-2-0 n0 pos-1-0 n1)
+ 
+55:
+(place-block pos-1-0 pos-1-1 n1 n2)
+ 
+56:
+(move-up pos-1-0 n1 pos-1-1 n2)
+ 
+57:
+(move-up pos-1-1 n2 pos-2-1 n3)
+ 
+58:
+(move-up pos-1-0 n1 pos-1-1 n2)
+ 
+59:
+(place-block pos-2-1 pos-2-2 n3 n4)
+ 
+60:
+(remove-block pos-1-1 pos-2-1 n3 n2)
+ 
+61:
+(place-block pos-1-1 pos-0-1 n2 n3)
+ 
+
+Plan Validation details
+-----------------------
+
+Checking next happening (time 1)
+Adding (has-block)
+
+Checking next happening (time 2)
+Deleting (at pos-2-0)
+Adding (at pos-2-1)
+
+Checking next happening (time 3)
+Deleting (height pos-1-1 n0)
+Deleting (has-block)
+Adding (height pos-1-1 n1)
+
+Checking next happening (time 4)
+Deleting (at pos-2-1)
+Adding (at pos-2-0)
+
+Checking next happening (time 5)
+Adding (has-block)
+
+Checking next happening (time 6)
+Deleting (at pos-2-0)
+Adding (at pos-2-1)
+
+Checking next happening (time 7)
+Deleting (height pos-2-2 n0)
+Deleting (has-block)
+Adding (height pos-2-2 n1)
+
+Checking next happening (time 8)
+Deleting (at pos-2-1)
+Adding (at pos-2-0)
+
+Checking next happening (time 9)
+Adding (has-block)
+
+Checking next happening (time 10)
+Deleting (height pos-2-1 n0)
+Deleting (has-block)
+Adding (height pos-2-1 n1)
+
+Checking next happening (time 11)
+Adding (has-block)
+
+Checking next happening (time 12)
+Deleting (at pos-2-0)
+Adding (at pos-2-1)
+
+Checking next happening (time 13)
+Deleting (height pos-2-2 n1)
+Deleting (has-block)
+Adding (height pos-2-2 n2)
+
+Checking next happening (time 14)
+Deleting (at pos-2-1)
+Adding (at pos-2-0)
+
+Checking next happening (time 15)
+Adding (has-block)
+
+Checking next happening (time 16)
+Deleting (at pos-2-0)
+Adding (at pos-2-1)
+
+Checking next happening (time 17)
+Deleting (at pos-2-1)
+Adding (at pos-1-1)
+
+Checking next happening (time 18)
+Deleting (height pos-2-1 n1)
+Deleting (has-block)
+Adding (height pos-2-1 n2)
+
+Checking next happening (time 19)
+Deleting (at pos-1-1)
+Adding (at pos-1-0)
+
+Checking next happening (time 20)
+Deleting (at pos-1-0)
+Adding (at pos-2-0)
+
+Checking next happening (time 21)
+Adding (has-block)
+
+Checking next happening (time 22)
+Deleting (at pos-2-0)
+Adding (at pos-1-0)
+
+Checking next happening (time 23)
+Deleting (at pos-1-0)
+Adding (at pos-1-1)
+
+Checking next happening (time 24)
+Deleting (at pos-1-1)
+Adding (at pos-2-1)
+
+Checking next happening (time 25)
+Deleting (height pos-2-2 n2)
+Deleting (has-block)
+Adding (height pos-2-2 n3)
+
+Checking next happening (time 26)
+Deleting (at pos-2-1)
+Adding (at pos-1-1)
+
+Checking next happening (time 27)
+Deleting (at pos-1-1)
+Adding (at pos-1-0)
+
+Checking next happening (time 28)
+Deleting (at pos-1-0)
+Adding (at pos-2-0)
+
+Checking next happening (time 29)
+Adding (has-block)
+
+Checking next happening (time 30)
+Deleting (height pos-1-0 n0)
+Deleting (has-block)
+Adding (height pos-1-0 n1)
+
+Checking next happening (time 31)
+Adding (has-block)
+
+Checking next happening (time 32)
+Deleting (at pos-2-0)
+Adding (at pos-1-0)
+
+Checking next happening (time 33)
+Deleting (height pos-1-1 n1)
+Deleting (has-block)
+Adding (height pos-1-1 n2)
+
+Checking next happening (time 34)
+Deleting (at pos-1-0)
+Adding (at pos-2-0)
+
+Checking next happening (time 35)
+Adding (has-block)
+
+Checking next happening (time 36)
+Plan failed because of unsatisfied precondition in:
+(create-block pos-2-0)
+
+
+Plan failed to execute
+
+Plan Repair Advice:
+
+(create-block pos-2-0) has an unsatisfied precondition at time 36
+(Set (has-block) to false)
+
+
+Failed plans:
+ ./experiments_multiagent_help/run4034/termes/agent2_plan_final_temp.txt 
+
+[results][termes][13]
+[single_agent][planning time: 1000.21][cost: 92.0]
+[multi_agent][planning_time: 119.67173441886902][cost: inf][agents: 4][optimization time 24.933085203170776]
+----------------------------------------
+Using cached single agent results
+['height at pos-3-0 is 3 and all blocks are placed.', 'height at pos-3-1 is 3 and all blocks are placed.', 'height at pos-3-2 is 4 and all blocks are placed.', 'height at pos-2-0 is 4 and all blocks are placed.']
+['./experiments_multiagent_help/run4034/termes/p14_1.pddl', './experiments_multiagent_help/run4034/termes/p14_2.pddl', './experiments_multiagent_help/run4034/termes/p14_3.pddl', './experiments_multiagent_help/run4034/termes/p14_4.pddl']
+agent1
+[info][subgoal_1][termes] task 14 takes 2.75 sec, found a plan with cost 25.0
+planner successful
+validating
+validator time 0.0033364295959472656
+agent2
+[info][subgoal_2][termes] task 14 takes 0.38 sec, found a plan with cost 14.0
+planner successful
+validating
+validator time 0.0030791759490966797
+agent3
+[info][subgoal_3][termes] task 14 takes 43.76 sec, found a plan with cost 31.0
+planner successful
+validating
+validator time 0.004408121109008789
+agent4
+[info][subgoal_4][termes] task 14 takes 1.6 sec, found a plan with cost 20.0
+planner successful
+validating
+validator time 0.003305673599243164
+[info][multiagent main goal][termes] task 14 takes 200.13 sec, found a plan with cost 36.0
+TASK: termes - 4034 - 14
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (create-block pos-1-0)
+2 (Single): Agent 1: (move pos-1-0 pos-2-0 n0)
+3 (Single): Agent 1: (place-block pos-2-0 pos-3-0 n0 n1)
+4 (Single): Agent 1: (move pos-2-0 pos-1-0 n0)
+5 (Single): Agent 1: (create-block pos-1-0)
+6 (Single): Agent 1: (place-block pos-1-0 pos-2-0 n0 n1)
+7 (Single): Agent 1: (create-block pos-1-0)
+8 (Single): Agent 1: (move-up pos-1-0 n0 pos-2-0 n1)
+9 (Single): Agent 1: (place-block pos-2-0 pos-3-0 n1 n2)
+10 (Single): Agent 1: (move-down pos-2-0 n1 pos-1-0 n0)
+11 (Single): Agent 1: (create-block pos-1-0)
+12 (Single): Agent 1: (move pos-1-0 pos-1-1 n0)
+13 (Single): Agent 1: (place-block pos-1-1 pos-2-1 n0 n1)
+14 (Single): Agent 1: (move pos-1-1 pos-1-0 n0)
+15 (Single): Agent 1: (create-block pos-1-0)
+16 (Single): Agent 1: (move-up pos-1-0 n0 pos-2-0 n1)
+17 (Single): Agent 1: (move pos-2-0 pos-2-1 n1)
+18 (Single): Agent 1: (place-block pos-2-1 pos-2-0 n1 n2)
+19 (Single): Agent 1: (move-down pos-2-1 n1 pos-1-1 n0)
+20 (Single): Agent 1: (move pos-1-1 pos-1-0 n0)
+21 (Single): Agent 1: (create-block pos-1-0)
+22 (Single): Agent 1: (move pos-1-0 pos-1-1 n0)
+23 (Single): Agent 1: (move-up pos-1-1 n0 pos-2-1 n1)
+24 (Single): Agent 1: (move-up pos-2-1 n1 pos-2-0 n2)
+25 (Single): Agent 1: (place-block pos-2-0 pos-3-0 n2 n3)
+
+merging plan 2 into initial_plan
+30 True
+verifying entire plan.
+unsatisfied precondition encountered in merged plan, stopping process.
+Type-checking move
+...action passes type checking.
+Type-checking move-up
+...action passes type checking.
+Type-checking move-down
+...action passes type checking.
+Type-checking place-block
+...action passes type checking.
+Type-checking remove-block
+...action passes type checking.
+Type-checking create-block
+...action passes type checking.
+Type-checking destroy-block
+...action passes type checking.
+Checking plan: ./experiments_multiagent_help/run4034/termes/agent2_plan_final_temp.txt
+Plan to validate:
+
+Plan size: 39
+1:
+(create-block pos-1-0)
+ 
+2:
+(move pos-1-0 pos-2-0 n0)
+ 
+3:
+(place-block pos-2-0 pos-3-0 n0 n1)
+ 
+4:
+(move pos-2-0 pos-1-0 n0)
+ 
+5:
+(create-block pos-1-0)
+ 
+6:
+(place-block pos-1-0 pos-2-0 n0 n1)
+ 
+7:
+(create-block pos-1-0)
+ 
+8:
+(move-up pos-1-0 n0 pos-2-0 n1)
+ 
+9:
+(place-block pos-2-0 pos-3-0 n1 n2)
+ 
+10:
+(move-down pos-2-0 n1 pos-1-0 n0)
+ 
+11:
+(create-block pos-1-0)
+ 
+12:
+(move pos-1-0 pos-1-1 n0)
+ 
+13:
+(place-block pos-1-1 pos-2-1 n0 n1)
+ 
+14:
+(move pos-1-1 pos-1-0 n0)
+ 
+15:
+(create-block pos-1-0)
+ 
+16:
+(move-up pos-1-0 n0 pos-2-0 n1)
+ 
+17:
+(move pos-2-0 pos-2-1 n1)
+ 
+18:
+(create-block pos-1-0)
+ 
+19:
+(place-block pos-2-1 pos-2-0 n1 n2)
+ 
+20:
+(move pos-1-0 pos-1-1 n0)
+ 
+21:
+(move-down pos-2-1 n1 pos-1-1 n0)
+ 
+22:
+(move-up pos-1-1 n0 pos-2-1 n1)
+ 
+23:
+(move pos-1-1 pos-1-0 n0)
+ 
+24:
+(move-down pos-2-1 n1 pos-3-1 n0)
+ 
+25:
+(create-block pos-1-0)
+ 
+26:
+(move pos-3-1 pos-3-2 n0)
+ 
+27:
+(move pos-1-0 pos-1-1 n0)
+ 
+28:
+(place-block pos-3-2 pos-3-1 n0 n1)
+ 
+29:
+(move-up pos-1-1 n0 pos-2-1 n1)
+ 
+30:
+(move-up pos-3-2 n0 pos-3-1 n1)
+ 
+31:
+(move-up pos-2-1 n1 pos-2-0 n2)
+ 
+32:
+(move pos-3-1 pos-2-1 n1)
+ 
+33:
+(place-block pos-2-0 pos-3-0 n2 n3)
+ 
+34:
+(remove-block pos-2-1 pos-2-0 n2 n1)
+ 
+35:
+(place-block pos-2-1 pos-3-1 n1 n2)
+ 
+36:
+(move-up pos-2-1 n1 pos-3-1 n2)
+ 
+37:
+(remove-block pos-3-1 pos-3-0 n3 n2)
+ 
+38:
+(move pos-3-1 pos-3-0 n2)
+ 
+39:
+(place-block pos-3-0 pos-3-1 n2 n3)
+ 
+
+Plan Validation details
+-----------------------
+
+Checking next happening (time 1)
+Adding (has-block)
+
+Checking next happening (time 2)
+Deleting (at pos-1-0)
+Adding (at pos-2-0)
+
+Checking next happening (time 3)
+Deleting (height pos-3-0 n0)
+Deleting (has-block)
+Adding (height pos-3-0 n1)
+
+Checking next happening (time 4)
+Deleting (at pos-2-0)
+Adding (at pos-1-0)
+
+Checking next happening (time 5)
+Adding (has-block)
+
+Checking next happening (time 6)
+Deleting (height pos-2-0 n0)
+Deleting (has-block)
+Adding (height pos-2-0 n1)
+
+Checking next happening (time 7)
+Adding (has-block)
+
+Checking next happening (time 8)
+Deleting (at pos-1-0)
+Adding (at pos-2-0)
+
+Checking next happening (time 9)
+Deleting (height pos-3-0 n1)
+Deleting (has-block)
+Adding (height pos-3-0 n2)
+
+Checking next happening (time 10)
+Deleting (at pos-2-0)
+Adding (at pos-1-0)
+
+Checking next happening (time 11)
+Adding (has-block)
+
+Checking next happening (time 12)
+Deleting (at pos-1-0)
+Adding (at pos-1-1)
+
+Checking next happening (time 13)
+Deleting (height pos-2-1 n0)
+Deleting (has-block)
+Adding (height pos-2-1 n1)
+
+Checking next happening (time 14)
+Deleting (at pos-1-1)
+Adding (at pos-1-0)
+
+Checking next happening (time 15)
+Adding (has-block)
+
+Checking next happening (time 16)
+Deleting (at pos-1-0)
+Adding (at pos-2-0)
+
+Checking next happening (time 17)
+Deleting (at pos-2-0)
+Adding (at pos-2-1)
+
+Checking next happening (time 18)
+Plan failed because of unsatisfied precondition in:
+(create-block pos-1-0)
+
+
+Plan failed to execute
+
+Plan Repair Advice:
+
+(create-block pos-1-0) has an unsatisfied precondition at time 18
+(Follow each of:
+    (Set (at pos-1-0) to true)
+    and (Set (has-block) to false)
+)
+
+
+Failed plans:
+ ./experiments_multiagent_help/run4034/termes/agent2_plan_final_temp.txt 
+
+[results][termes][14]
+[single_agent][planning time: 1000.21][cost: 104.0]
+[multi_agent][planning_time: 253.66791927337647][cost: inf][agents: 5][optimization time 15.281663179397583]
+----------------------------------------
+Using cached single agent results
+LLM generated no subgoal for agent 4, reducing number of agents
+args.num_agents: 4
+['height pos-3-0 3', 'height pos-3-2 2', 'height pos-0-2 5']
+['./experiments_multiagent_help/run4034/termes/p15_1.pddl', './experiments_multiagent_help/run4034/termes/p15_2.pddl', './experiments_multiagent_help/run4034/termes/p15_3.pddl']
+agent1
+[info][subgoal_1][termes] task 15 takes 1.64 sec, found a plan with cost 22.0
+planner successful
+validating
+validator time 0.0033750534057617188
+agent2
+[info][subgoal_2][termes] task 15 takes 0.18 sec, found a plan with cost 8.0
+planner successful
+validating
+validator time 0.002965688705444336
+agent3
+[info][subgoal_3][termes] task 15 takes 200.14 sec, found a plan with cost 77.0
+planner successful
+validating
+validator time 0.00593876838684082
+[info][multiagent main goal][termes] task 15 takes 200.15 sec, found a plan with cost 48.0
+TASK: termes - 4034 - 15
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (create-block pos-2-0)
+2 (Single): Agent 1: (move pos-2-0 pos-2-1 n0)
+3 (Single): Agent 1: (place-block pos-2-1 pos-3-1 n0 n1)
+4 (Single): Agent 1: (move pos-2-1 pos-2-0 n0)
+5 (Single): Agent 1: (create-block pos-2-0)
+6 (Single): Agent 1: (place-block pos-2-0 pos-3-0 n0 n1)
+7 (Single): Agent 1: (create-block pos-2-0)
+8 (Single): Agent 1: (move pos-2-0 pos-2-1 n0)
+9 (Single): Agent 1: (move-up pos-2-1 n0 pos-3-1 n1)
+10 (Single): Agent 1: (place-block pos-3-1 pos-3-0 n1 n2)
+11 (Single): Agent 1: (move-down pos-3-1 n1 pos-2-1 n0)
+12 (Single): Agent 1: (move pos-2-1 pos-2-0 n0)
+13 (Single): Agent 1: (create-block pos-2-0)
+14 (Single): Agent 1: (place-block pos-2-0 pos-2-1 n0 n1)
+15 (Single): Agent 1: (create-block pos-2-0)
+16 (Single): Agent 1: (move-up pos-2-0 n0 pos-2-1 n1)
+17 (Single): Agent 1: (place-block pos-2-1 pos-3-1 n1 n2)
+18 (Single): Agent 1: (move-down pos-2-1 n1 pos-2-0 n0)
+19 (Single): Agent 1: (create-block pos-2-0)
+20 (Single): Agent 1: (move-up pos-2-0 n0 pos-2-1 n1)
+21 (Single): Agent 1: (move-up pos-2-1 n1 pos-3-1 n2)
+22 (Single): Agent 1: (place-block pos-3-1 pos-3-0 n2 n3)
+
+merging plan 2 into initial_plan
+28 True
+verifying entire plan.
+unsatisfied precondition encountered in merged plan, stopping process.
+Type-checking move
+...action passes type checking.
+Type-checking move-up
+...action passes type checking.
+Type-checking move-down
+...action passes type checking.
+Type-checking place-block
+...action passes type checking.
+Type-checking remove-block
+...action passes type checking.
+Type-checking create-block
+...action passes type checking.
+Type-checking destroy-block
+...action passes type checking.
+Checking plan: ./experiments_multiagent_help/run4034/termes/agent2_plan_final_temp.txt
+Plan to validate:
+
+Plan size: 30
+1:
+(create-block pos-2-0)
+ 
+2:
+(move pos-2-0 pos-2-1 n0)
+ 
+3:
+(place-block pos-2-1 pos-3-1 n0 n1)
+ 
+4:
+(move pos-2-1 pos-2-0 n0)
+ 
+5:
+(create-block pos-2-0)
+ 
+6:
+(place-block pos-2-0 pos-3-0 n0 n1)
+ 
+7:
+(create-block pos-2-0)
+ 
+8:
+(move pos-2-0 pos-2-1 n0)
+ 
+9:
+(move-up pos-2-1 n0 pos-3-1 n1)
+ 
+10:
+(place-block pos-3-1 pos-3-0 n1 n2)
+ 
+11:
+(move-down pos-3-1 n1 pos-2-1 n0)
+ 
+12:
+(move pos-2-1 pos-2-0 n0)
+ 
+13:
+(create-block pos-2-0)
+ 
+14:
+(place-block pos-2-0 pos-2-1 n0 n1)
+ 
+15:
+(create-block pos-2-0)
+ 
+16:
+(move-up pos-2-0 n0 pos-2-1 n1)
+ 
+17:
+(place-block pos-2-1 pos-3-1 n1 n2)
+ 
+18:
+(move-down pos-2-1 n1 pos-2-0 n0)
+ 
+19:
+(create-block pos-2-0)
+ 
+20:
+(move-up pos-2-0 n0 pos-2-1 n1)
+ 
+21:
+(move-up pos-2-1 n1 pos-3-1 n2)
+ 
+22:
+(move-up pos-2-0 n0 pos-2-1 n1)
+ 
+23:
+(place-block pos-3-1 pos-3-0 n2 n3)
+ 
+24:
+(remove-block pos-2-1 pos-3-1 n2 n1)
+ 
+25:
+(move-down pos-2-1 n1 pos-2-2 n0)
+ 
+26:
+(place-block pos-2-2 pos-3-2 n0 n1)
+ 
+27:
+(remove-block pos-2-2 pos-2-1 n1 n0)
+ 
+28:
+(move-up pos-2-2 n0 pos-3-2 n1)
+ 
+29:
+(move pos-3-2 pos-3-1 n1)
+ 
+30:
+(place-block pos-3-1 pos-3-2 n1 n2)
+ 
+
+Plan Validation details
+-----------------------
+
+Checking next happening (time 1)
+Adding (has-block)
+
+Checking next happening (time 2)
+Deleting (at pos-2-0)
+Adding (at pos-2-1)
+
+Checking next happening (time 3)
+Deleting (height pos-3-1 n0)
+Deleting (has-block)
+Adding (height pos-3-1 n1)
+
+Checking next happening (time 4)
+Deleting (at pos-2-1)
+Adding (at pos-2-0)
+
+Checking next happening (time 5)
+Adding (has-block)
+
+Checking next happening (time 6)
+Deleting (height pos-3-0 n0)
+Deleting (has-block)
+Adding (height pos-3-0 n1)
+
+Checking next happening (time 7)
+Adding (has-block)
+
+Checking next happening (time 8)
+Deleting (at pos-2-0)
+Adding (at pos-2-1)
+
+Checking next happening (time 9)
+Deleting (at pos-2-1)
+Adding (at pos-3-1)
+
+Checking next happening (time 10)
+Deleting (height pos-3-0 n1)
+Deleting (has-block)
+Adding (height pos-3-0 n2)
+
+Checking next happening (time 11)
+Deleting (at pos-3-1)
+Adding (at pos-2-1)
+
+Checking next happening (time 12)
+Deleting (at pos-2-1)
+Adding (at pos-2-0)
+
+Checking next happening (time 13)
+Adding (has-block)
+
+Checking next happening (time 14)
+Deleting (height pos-2-1 n0)
+Deleting (has-block)
+Adding (height pos-2-1 n1)
+
+Checking next happening (time 15)
+Adding (has-block)
+
+Checking next happening (time 16)
+Deleting (at pos-2-0)
+Adding (at pos-2-1)
+
+Checking next happening (time 17)
+Deleting (height pos-3-1 n1)
+Deleting (has-block)
+Adding (height pos-3-1 n2)
+
+Checking next happening (time 18)
+Deleting (at pos-2-1)
+Adding (at pos-2-0)
+
+Checking next happening (time 19)
+Adding (has-block)
+
+Checking next happening (time 20)
+Deleting (at pos-2-0)
+Adding (at pos-2-1)
+
+Checking next happening (time 21)
+Deleting (at pos-2-1)
+Adding (at pos-3-1)
+
+Checking next happening (time 22)
+Plan failed because of unsatisfied precondition in:
+(move-up pos-2-0 n0 pos-2-1 n1)
+
+
+Plan failed to execute
+
+Plan Repair Advice:
+
+(move-up pos-2-0 n0 pos-2-1 n1) has an unsatisfied precondition at time 22
+(Set (at pos-2-0) to true)
+
+
+Failed plans:
+ ./experiments_multiagent_help/run4034/termes/agent2_plan_final_temp.txt 
+
+[results][termes][15]
+[single_agent][planning time: 1000.16][cost: 146.0]
+[multi_agent][planning_time: 405.9050203418732][cost: inf][agents: 4][optimization time 10.302153825759888]
+----------------------------------------
+Using cached single agent results
+['height pos-2-0 2 and all blocks placed.', 'height pos-3-1 5 and all blocks placed.', 'height pos-3-2 4 and all blocks placed.', 'height pos-1-2 5 and all blocks placed.']
+['./experiments_multiagent_help/run4034/termes/p16_1.pddl', './experiments_multiagent_help/run4034/termes/p16_2.pddl', './experiments_multiagent_help/run4034/termes/p16_3.pddl', './experiments_multiagent_help/run4034/termes/p16_4.pddl']
+agent1
+[info][subgoal_1][termes] task 16 takes 0.18 sec, found a plan with cost 10.0
+planner successful
+validating
+validator time 0.002970457077026367
+agent2
+[info][subgoal_2][termes] task 16 takes 200.13 sec, found a plan with cost 76.0
+planner successful
+validating
+validator time 0.01367807388305664
+agent3
+[info][subgoal_3][termes] task 16 takes 157.05 sec, found a plan with cost 49.0
+planner successful
+validating
+validator time 0.006745100021362305
+agent4
+[info][subgoal_4][termes] task 16 takes 31.25 sec, found a plan with cost 25.0
+planner successful
+validating
+validator time 0.004461526870727539
+[info][multiagent main goal][termes] task 16 takes 200.14 sec, found a plan with cost 42.0
+TASK: termes - 4034 - 16
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (create-block pos-1-0)
+2 (Single): Agent 1: (place-block pos-1-0 pos-2-0 n0 n1)
+3 (Single): Agent 1: (create-block pos-1-0)
+4 (Single): Agent 1: (move pos-1-0 pos-1-1 n0)
+5 (Single): Agent 1: (place-block pos-1-1 pos-2-1 n0 n1)
+6 (Single): Agent 1: (move pos-1-1 pos-1-0 n0)
+7 (Single): Agent 1: (create-block pos-1-0)
+8 (Single): Agent 1: (move pos-1-0 pos-1-1 n0)
+9 (Single): Agent 1: (move-up pos-1-1 n0 pos-2-1 n1)
+10 (Single): Agent 1: (place-block pos-2-1 pos-2-0 n1 n2)
+
+merging plan 2 into initial_plan
+83 True
+verifying entire plan.
+unsatisfied precondition encountered in merged plan, stopping process.
+Type-checking move
+...action passes type checking.
+Type-checking move-up
+...action passes type checking.
+Type-checking move-down
+...action passes type checking.
+Type-checking place-block
+...action passes type checking.
+Type-checking remove-block
+...action passes type checking.
+Type-checking create-block
+...action passes type checking.
+Type-checking destroy-block
+...action passes type checking.
+Checking plan: ./experiments_multiagent_help/run4034/termes/agent2_plan_final_temp.txt
+Plan to validate:
+
+Plan size: 86
+1:
+(create-block pos-1-0)
+ 
+2:
+(place-block pos-1-0 pos-2-0 n0 n1)
+ 
+3:
+(create-block pos-1-0)
+ 
+4:
+(move pos-1-0 pos-1-1 n0)
+ 
+5:
+(place-block pos-1-1 pos-2-1 n0 n1)
+ 
+6:
+(move pos-1-1 pos-1-0 n0)
+ 
+7:
+(create-block pos-1-0)
+ 
+8:
+(move pos-1-0 pos-1-1 n0)
+ 
+9:
+(create-block pos-1-0)
+ 
+10:
+(move-up pos-1-1 n0 pos-2-1 n1)
+ 
+11:
+(place-block pos-1-0 pos-1-1 n0 n1)
+ 
+12:
+(create-block pos-1-0)
+ 
+13:
+(move-up pos-1-0 n0 pos-1-1 n1)
+ 
+14:
+(move pos-1-1 pos-2-1 n1)
+ 
+15:
+(place-block pos-2-1 pos-2-0 n1 n2)
+ 
+16:
+(place-block pos-2-1 pos-1-1 n1 n2)
+ 
+17:
+(remove-block pos-2-1 pos-2-0 n2 n1)
+ 
+18:
+(move pos-2-1 pos-2-0 n1)
+ 
+19:
+(move-down pos-2-0 n1 pos-3-0 n0)
+ 
+20:
+(place-block pos-3-0 pos-3-1 n0 n1)
+ 
+21:
+(remove-block pos-3-0 pos-2-0 n1 n0)
+ 
+22:
+(move pos-3-0 pos-2-0 n0)
+ 
+23:
+(move-up pos-2-0 n0 pos-2-1 n1)
+ 
+24:
+(place-block pos-2-1 pos-3-1 n1 n2)
+ 
+25:
+(move-down pos-2-1 n1 pos-2-0 n0)
+ 
+26:
+(move pos-2-0 pos-1-0 n0)
+ 
+27:
+(create-block pos-1-0)
+ 
+28:
+(move pos-1-0 pos-0-0 n0)
+ 
+29:
+(place-block pos-0-0 pos-0-1 n0 n1)
+ 
+30:
+(move pos-0-0 pos-1-0 n0)
+ 
+31:
+(create-block pos-1-0)
+ 
+32:
+(place-block pos-1-0 pos-0-0 n0 n1)
+ 
+33:
+(create-block pos-1-0)
+ 
+34:
+(move-up pos-1-0 n0 pos-0-0 n1)
+ 
+35:
+(place-block pos-0-0 pos-0-1 n1 n2)
+ 
+36:
+(move-down pos-0-0 n1 pos-1-0 n0)
+ 
+37:
+(create-block pos-1-0)
+ 
+38:
+(place-block pos-1-0 pos-2-0 n0 n1)
+ 
+39:
+(create-block pos-1-0)
+ 
+40:
+(move-up pos-1-0 n0 pos-2-0 n1)
+ 
+41:
+(place-block pos-2-0 pos-2-1 n1 n2)
+ 
+42:
+(move-down pos-2-0 n1 pos-1-0 n0)
+ 
+43:
+(create-block pos-1-0)
+ 
+44:
+(move-up pos-1-0 n0 pos-2-0 n1)
+ 
+45:
+(move-up pos-2-0 n1 pos-2-1 n2)
+ 
+46:
+(place-block pos-2-1 pos-3-1 n2 n3)
+ 
+47:
+(move-down pos-2-1 n2 pos-2-0 n1)
+ 
+48:
+(move-down pos-2-0 n1 pos-1-0 n0)
+ 
+49:
+(create-block pos-1-0)
+ 
+50:
+(move-up pos-1-0 n0 pos-0-0 n1)
+ 
+51:
+(move-up pos-0-0 n1 pos-0-1 n2)
+ 
+52:
+(move pos-0-1 pos-1-1 n2)
+ 
+53:
+(place-block pos-1-1 pos-2-1 n2 n3)
+ 
+54:
+(move pos-1-1 pos-0-1 n2)
+ 
+55:
+(move-down pos-0-1 n2 pos-0-0 n1)
+ 
+56:
+(move-down pos-0-0 n1 pos-1-0 n0)
+ 
+57:
+(create-block pos-1-0)
+ 
+58:
+(move-up pos-1-0 n0 pos-0-0 n1)
+ 
+59:
+(move-up pos-0-0 n1 pos-0-1 n2)
+ 
+60:
+(place-block pos-0-1 pos-1-1 n2 n3)
+ 
+61:
+(move-down pos-0-1 n2 pos-0-0 n1)
+ 
+62:
+(move-down pos-0-0 n1 pos-1-0 n0)
+ 
+63:
+(create-block pos-1-0)
+ 
+64:
+(move-up pos-1-0 n0 pos-0-0 n1)
+ 
+65:
+(move-up pos-0-0 n1 pos-0-1 n2)
+ 
+66:
+(move-up pos-0-1 n2 pos-1-1 n3)
+ 
+67:
+(move pos-1-1 pos-2-1 n3)
+ 
+68:
+(place-block pos-2-1 pos-3-1 n3 n4)
+ 
+69:
+(move pos-2-1 pos-1-1 n3)
+ 
+70:
+(move-down pos-1-1 n3 pos-0-1 n2)
+ 
+71:
+(move-down pos-0-1 n2 pos-0-0 n1)
+ 
+72:
+(move-down pos-0-0 n1 pos-1-0 n0)
+ 
+73:
+(create-block pos-1-0)
+ 
+74:
+(move-up pos-1-0 n0 pos-0-0 n1)
+ 
+75:
+(move-up pos-0-0 n1 pos-0-1 n2)
+ 
+76:
+(move-up pos-0-1 n2 pos-1-1 n3)
+ 
+77:
+(place-block pos-1-1 pos-2-1 n3 n4)
+ 
+78:
+(move-down pos-1-1 n3 pos-0-1 n2)
+ 
+79:
+(move-down pos-0-1 n2 pos-0-0 n1)
+ 
+80:
+(move-down pos-0-0 n1 pos-1-0 n0)
+ 
+81:
+(create-block pos-1-0)
+ 
+82:
+(move-up pos-1-0 n0 pos-0-0 n1)
+ 
+83:
+(move-up pos-0-0 n1 pos-0-1 n2)
+ 
+84:
+(move-up pos-0-1 n2 pos-1-1 n3)
+ 
+85:
+(move-up pos-1-1 n3 pos-2-1 n4)
+ 
+86:
+(place-block pos-2-1 pos-3-1 n4 n5)
+ 
+
+Plan Validation details
+-----------------------
+
+Checking next happening (time 1)
+Adding (has-block)
+
+Checking next happening (time 2)
+Deleting (height pos-2-0 n0)
+Deleting (has-block)
+Adding (height pos-2-0 n1)
+
+Checking next happening (time 3)
+Adding (has-block)
+
+Checking next happening (time 4)
+Deleting (at pos-1-0)
+Adding (at pos-1-1)
+
+Checking next happening (time 5)
+Deleting (height pos-2-1 n0)
+Deleting (has-block)
+Adding (height pos-2-1 n1)
+
+Checking next happening (time 6)
+Deleting (at pos-1-1)
+Adding (at pos-1-0)
+
+Checking next happening (time 7)
+Adding (has-block)
+
+Checking next happening (time 8)
+Deleting (at pos-1-0)
+Adding (at pos-1-1)
+
+Checking next happening (time 9)
+Plan failed because of unsatisfied precondition in:
+(create-block pos-1-0)
+
+
+Plan failed to execute
+
+Plan Repair Advice:
+
+(create-block pos-1-0) has an unsatisfied precondition at time 9
+(Follow each of:
+    (Set (at pos-1-0) to true)
+    and (Set (has-block) to false)
+)
+
+
+Failed plans:
+ ./experiments_multiagent_help/run4034/termes/agent2_plan_final_temp.txt 
+
+[results][termes][16]
+[single_agent][planning time: 1000.2][cost: 154.0]
+[multi_agent][planning_time: 594.2880470752716][cost: inf][agents: 5][optimization time 8.161975145339966]
+----------------------------------------
+Using cached single agent results
+['height at pos-1-0 is 3 and all blocks are placed.', 'height at pos-1-2 is 3 and all blocks are placed.', 'height at pos-2-0 is 3 and all blocks are placed.', 'height at pos-3-2 is 3 and all blocks are placed.']
+['./experiments_multiagent_help/run4034/termes/p17_1.pddl', './experiments_multiagent_help/run4034/termes/p17_2.pddl', './experiments_multiagent_help/run4034/termes/p17_3.pddl', './experiments_multiagent_help/run4034/termes/p17_4.pddl']
+agent1
+[info][subgoal_1][termes] task 17 takes 1.99 sec, found a plan with cost 25.0
+planner successful
+validating
+validator time 0.003396272659301758
+agent2
+[info][subgoal_2][termes] task 17 takes 2.11 sec, found a plan with cost 21.0
+planner successful
+validating
+validator time 0.0033349990844726562
+agent3
+[info][subgoal_3][termes] task 17 takes 0.36 sec, found a plan with cost 12.0
+planner successful
+validating
+validator time 0.003095388412475586
+agent4
+[info][subgoal_4][termes] task 17 takes 9.93 sec, found a plan with cost 23.0
+planner successful
+validating
+validator time 0.0033288002014160156
+[info][multiagent main goal][termes] task 17 takes 200.14 sec, found a plan with cost 74.0
+TASK: termes - 4034 - 17
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (create-block pos-3-0)
+2 (Single): Agent 1: (move pos-3-0 pos-2-0 n0)
+3 (Single): Agent 1: (place-block pos-2-0 pos-1-0 n0 n1)
+4 (Single): Agent 1: (move pos-2-0 pos-3-0 n0)
+5 (Single): Agent 1: (create-block pos-3-0)
+6 (Single): Agent 1: (move pos-3-0 pos-2-0 n0)
+7 (Single): Agent 1: (place-block pos-2-0 pos-2-1 n0 n1)
+8 (Single): Agent 1: (move pos-2-0 pos-3-0 n0)
+9 (Single): Agent 1: (create-block pos-3-0)
+10 (Single): Agent 1: (place-block pos-3-0 pos-2-0 n0 n1)
+11 (Single): Agent 1: (create-block pos-3-0)
+12 (Single): Agent 1: (move-up pos-3-0 n0 pos-2-0 n1)
+13 (Single): Agent 1: (place-block pos-2-0 pos-1-0 n1 n2)
+14 (Single): Agent 1: (move-down pos-2-0 n1 pos-3-0 n0)
+15 (Single): Agent 1: (create-block pos-3-0)
+16 (Single): Agent 1: (move pos-3-0 pos-3-1 n0)
+17 (Single): Agent 1: (move-up pos-3-1 n0 pos-2-1 n1)
+18 (Single): Agent 1: (place-block pos-2-1 pos-2-0 n1 n2)
+19 (Single): Agent 1: (move-down pos-2-1 n1 pos-3-1 n0)
+20 (Single): Agent 1: (move pos-3-1 pos-3-0 n0)
+21 (Single): Agent 1: (create-block pos-3-0)
+22 (Single): Agent 1: (move pos-3-0 pos-3-1 n0)
+23 (Single): Agent 1: (move-up pos-3-1 n0 pos-2-1 n1)
+24 (Single): Agent 1: (move-up pos-2-1 n1 pos-2-0 n2)
+25 (Single): Agent 1: (place-block pos-2-0 pos-1-0 n2 n3)
+
+merging plan 2 into initial_plan
+42 True
+verifying entire plan.
+unsatisfied precondition encountered in merged plan, stopping process.
+Type-checking move
+...action passes type checking.
+Type-checking move-up
+...action passes type checking.
+Type-checking move-down
+...action passes type checking.
+Type-checking place-block
+...action passes type checking.
+Type-checking remove-block
+...action passes type checking.
+Type-checking create-block
+...action passes type checking.
+Type-checking destroy-block
+...action passes type checking.
+Checking plan: ./experiments_multiagent_help/run4034/termes/agent2_plan_final_temp.txt
+Plan to validate:
+
+Plan size: 46
+1:
+(create-block pos-3-0)
+ 
+2:
+(move pos-3-0 pos-2-0 n0)
+ 
+3:
+(place-block pos-2-0 pos-1-0 n0 n1)
+ 
+4:
+(move pos-2-0 pos-3-0 n0)
+ 
+5:
+(create-block pos-3-0)
+ 
+6:
+(move pos-3-0 pos-2-0 n0)
+ 
+7:
+(place-block pos-2-0 pos-2-1 n0 n1)
+ 
+8:
+(move pos-2-0 pos-3-0 n0)
+ 
+9:
+(create-block pos-3-0)
+ 
+10:
+(place-block pos-3-0 pos-2-0 n0 n1)
+ 
+11:
+(create-block pos-3-0)
+ 
+12:
+(move-up pos-3-0 n0 pos-2-0 n1)
+ 
+13:
+(place-block pos-2-0 pos-1-0 n1 n2)
+ 
+14:
+(move-down pos-2-0 n1 pos-3-0 n0)
+ 
+15:
+(create-block pos-3-0)
+ 
+16:
+(move pos-3-0 pos-3-1 n0)
+ 
+17:
+(move-up pos-3-1 n0 pos-2-1 n1)
+ 
+18:
+(place-block pos-2-1 pos-2-0 n1 n2)
+ 
+19:
+(move-down pos-2-1 n1 pos-3-1 n0)
+ 
+20:
+(move pos-3-1 pos-3-0 n0)
+ 
+21:
+(create-block pos-3-0)
+ 
+22:
+(move pos-3-0 pos-3-1 n0)
+ 
+23:
+(create-block pos-3-0)
+ 
+24:
+(move-up pos-3-1 n0 pos-2-1 n1)
+ 
+25:
+(place-block pos-3-0 pos-3-1 n0 n1)
+ 
+26:
+(move-up pos-3-0 n0 pos-3-1 n1)
+ 
+27:
+(move-up pos-2-1 n1 pos-2-0 n2)
+ 
+28:
+(move pos-3-1 pos-2-1 n1)
+ 
+29:
+(place-block pos-2-0 pos-1-0 n2 n3)
+ 
+30:
+(move-up pos-2-1 n1 pos-2-0 n2)
+ 
+31:
+(remove-block pos-2-0 pos-1-0 n3 n2)
+ 
+32:
+(move-down pos-2-0 n2 pos-2-1 n1)
+ 
+33:
+(move-down pos-2-1 n1 pos-2-2 n0)
+ 
+34:
+(place-block pos-2-2 pos-1-2 n0 n1)
+ 
+35:
+(remove-block pos-2-2 pos-2-1 n1 n0)
+ 
+36:
+(move pos-2-2 pos-2-1 n0)
+ 
+37:
+(place-block pos-2-1 pos-1-1 n0 n1)
+ 
+38:
+(remove-block pos-2-1 pos-3-1 n1 n0)
+ 
+39:
+(move-up pos-2-1 n0 pos-1-1 n1)
+ 
+40:
+(place-block pos-1-1 pos-1-2 n1 n2)
+ 
+41:
+(remove-block pos-1-1 pos-1-0 n2 n1)
+ 
+42:
+(move pos-1-1 pos-1-0 n1)
+ 
+43:
+(place-block pos-1-0 pos-1-1 n1 n2)
+ 
+44:
+(remove-block pos-1-0 pos-2-0 n2 n1)
+ 
+45:
+(move-up pos-1-0 n1 pos-1-1 n2)
+ 
+46:
+(place-block pos-1-1 pos-1-2 n2 n3)
+ 
+
+Plan Validation details
+-----------------------
+
+Checking next happening (time 1)
+Adding (has-block)
+
+Checking next happening (time 2)
+Deleting (at pos-3-0)
+Adding (at pos-2-0)
+
+Checking next happening (time 3)
+Deleting (height pos-1-0 n0)
+Deleting (has-block)
+Adding (height pos-1-0 n1)
+
+Checking next happening (time 4)
+Deleting (at pos-2-0)
+Adding (at pos-3-0)
+
+Checking next happening (time 5)
+Adding (has-block)
+
+Checking next happening (time 6)
+Deleting (at pos-3-0)
+Adding (at pos-2-0)
+
+Checking next happening (time 7)
+Deleting (height pos-2-1 n0)
+Deleting (has-block)
+Adding (height pos-2-1 n1)
+
+Checking next happening (time 8)
+Deleting (at pos-2-0)
+Adding (at pos-3-0)
+
+Checking next happening (time 9)
+Adding (has-block)
+
+Checking next happening (time 10)
+Deleting (height pos-2-0 n0)
+Deleting (has-block)
+Adding (height pos-2-0 n1)
+
+Checking next happening (time 11)
+Adding (has-block)
+
+Checking next happening (time 12)
+Deleting (at pos-3-0)
+Adding (at pos-2-0)
+
+Checking next happening (time 13)
+Deleting (height pos-1-0 n1)
+Deleting (has-block)
+Adding (height pos-1-0 n2)
+
+Checking next happening (time 14)
+Deleting (at pos-2-0)
+Adding (at pos-3-0)
+
+Checking next happening (time 15)
+Adding (has-block)
+
+Checking next happening (time 16)
+Deleting (at pos-3-0)
+Adding (at pos-3-1)
+
+Checking next happening (time 17)
+Deleting (at pos-3-1)
+Adding (at pos-2-1)
+
+Checking next happening (time 18)
+Deleting (height pos-2-0 n1)
+Deleting (has-block)
+Adding (height pos-2-0 n2)
+
+Checking next happening (time 19)
+Deleting (at pos-2-1)
+Adding (at pos-3-1)
+
+Checking next happening (time 20)
+Deleting (at pos-3-1)
+Adding (at pos-3-0)
+
+Checking next happening (time 21)
+Adding (has-block)
+
+Checking next happening (time 22)
+Deleting (at pos-3-0)
+Adding (at pos-3-1)
+
+Checking next happening (time 23)
+Plan failed because of unsatisfied precondition in:
+(create-block pos-3-0)
+
+
+Plan failed to execute
+
+Plan Repair Advice:
+
+(create-block pos-3-0) has an unsatisfied precondition at time 23
+(Follow each of:
+    (Set (at pos-3-0) to true)
+    and (Set (has-block) to false)
+)
+
+
+Failed plans:
+ ./experiments_multiagent_help/run4034/termes/agent2_plan_final_temp.txt 
+
+[results][termes][17]
+[single_agent][planning time: 1000.16][cost: 116.0]
+[multi_agent][planning_time: 219.05599120140073][cost: inf][agents: 5][optimization time 10.261778831481934]
+----------------------------------------
+Using cached single agent results
+['height pos-0-0 2', 'height pos-0-2 2', 'height pos-1-0 3', 'height pos-1-2 3']
+['./experiments_multiagent_help/run4034/termes/p18_1.pddl', './experiments_multiagent_help/run4034/termes/p18_2.pddl', './experiments_multiagent_help/run4034/termes/p18_3.pddl', './experiments_multiagent_help/run4034/termes/p18_4.pddl']
+agent1
+[info][subgoal_1][termes] task 18 takes 0.14 sec, found a plan with cost 9.0
+planner successful
+validating
+validator time 0.0031561851501464844
+agent2
+[info][subgoal_2][termes] task 18 takes 0.27 sec, found a plan with cost 11.0
+planner successful
+validating
+validator time 0.0029904842376708984
+agent3
+[info][subgoal_3][termes] task 18 takes 1.62 sec, found a plan with cost 16.0
+planner successful
+validating
+validator time 0.0031943321228027344
+agent4
+[info][subgoal_4][termes] task 18 takes 1.28 sec, found a plan with cost 20.0
+planner successful
+validating
+validator time 0.0043299198150634766
+[info][multiagent main goal][termes] task 18 takes 200.12 sec, found a plan with cost 40.0
+TASK: termes - 4034 - 18
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (create-block pos-2-0)
+2 (Single): Agent 1: (move pos-2-0 pos-1-0 n0)
+3 (Single): Agent 1: (place-block pos-1-0 pos-0-0 n0 n1)
+4 (Single): Agent 1: (move pos-1-0 pos-2-0 n0)
+5 (Single): Agent 1: (create-block pos-2-0)
+6 (Single): Agent 1: (place-block pos-2-0 pos-1-0 n0 n1)
+7 (Single): Agent 1: (create-block pos-2-0)
+8 (Single): Agent 1: (move-up pos-2-0 n0 pos-1-0 n1)
+9 (Single): Agent 1: (place-block pos-1-0 pos-0-0 n1 n2)
+
+merging plan 2 into initial_plan
+16 True
+verifying entire plan.
+unsatisfied precondition encountered in merged plan, stopping process.
+Type-checking move
+...action passes type checking.
+Type-checking move-up
+...action passes type checking.
+Type-checking move-down
+...action passes type checking.
+Type-checking place-block
+...action passes type checking.
+Type-checking remove-block
+...action passes type checking.
+Type-checking create-block
+...action passes type checking.
+Type-checking destroy-block
+...action passes type checking.
+Checking plan: ./experiments_multiagent_help/run4034/termes/agent2_plan_final_temp.txt
+Plan to validate:
+
+Plan size: 20
+1:
+(create-block pos-2-0)
+ 
+2:
+(move pos-2-0 pos-1-0 n0)
+ 
+3:
+(place-block pos-1-0 pos-0-0 n0 n1)
+ 
+4:
+(move pos-1-0 pos-2-0 n0)
+ 
+5:
+(create-block pos-2-0)
+ 
+6:
+(place-block pos-2-0 pos-1-0 n0 n1)
+ 
+7:
+(create-block pos-2-0)
+ 
+8:
+(move-up pos-2-0 n0 pos-1-0 n1)
+ 
+9:
+(move-down pos-1-0 n1 pos-1-1 n0)
+ 
+10:
+(move pos-1-1 pos-0-1 n0)
+ 
+11:
+(create-block pos-2-0)
+ 
+12:
+(place-block pos-0-1 pos-0-2 n0 n1)
+ 
+13:
+(move-up pos-2-0 n0 pos-1-0 n1)
+ 
+14:
+(move pos-0-1 pos-1-1 n0)
+ 
+15:
+(place-block pos-1-0 pos-0-0 n1 n2)
+ 
+16:
+(remove-block pos-1-1 pos-1-0 n1 n0)
+ 
+17:
+(place-block pos-1-1 pos-0-1 n0 n1)
+ 
+18:
+(move-up pos-1-1 n0 pos-0-1 n1)
+ 
+19:
+(remove-block pos-0-1 pos-0-0 n2 n1)
+ 
+20:
+(place-block pos-0-1 pos-0-2 n1 n2)
+ 
+
+Plan Validation details
+-----------------------
+
+Checking next happening (time 1)
+Adding (has-block)
+
+Checking next happening (time 2)
+Deleting (at pos-2-0)
+Adding (at pos-1-0)
+
+Checking next happening (time 3)
+Deleting (height pos-0-0 n0)
+Deleting (has-block)
+Adding (height pos-0-0 n1)
+
+Checking next happening (time 4)
+Deleting (at pos-1-0)
+Adding (at pos-2-0)
+
+Checking next happening (time 5)
+Adding (has-block)
+
+Checking next happening (time 6)
+Deleting (height pos-1-0 n0)
+Deleting (has-block)
+Adding (height pos-1-0 n1)
+
+Checking next happening (time 7)
+Adding (has-block)
+
+Checking next happening (time 8)
+Deleting (at pos-2-0)
+Adding (at pos-1-0)
+
+Checking next happening (time 9)
+Deleting (at pos-1-0)
+Adding (at pos-1-1)
+
+Checking next happening (time 10)
+Deleting (at pos-1-1)
+Adding (at pos-0-1)
+
+Checking next happening (time 11)
+Plan failed because of unsatisfied precondition in:
+(create-block pos-2-0)
+
+
+Plan failed to execute
+
+Plan Repair Advice:
+
+(create-block pos-2-0) has an unsatisfied precondition at time 11
+(Follow each of:
+    (Set (at pos-2-0) to true)
+    and (Set (has-block) to false)
+)
+
+
+Failed plans:
+ ./experiments_multiagent_help/run4034/termes/agent2_plan_final_temp.txt 
+
+[results][termes][18]
+[single_agent][planning time: 490.77][cost: 76.0]
+[multi_agent][planning_time: 207.91772192001343][cost: inf][agents: 5][optimization time 3.5970425605773926]
+----------------------------------------
+Using cached single agent results
+['height pos-1-0 4 and all blocks placed.', 'height pos-1-1 4 and all blocks placed.', 'height pos-1-2 2 and all blocks placed.', 'height pos-2-0 2 and all blocks placed.']
+['./experiments_multiagent_help/run4034/termes/p19_1.pddl', './experiments_multiagent_help/run4034/termes/p19_2.pddl', './experiments_multiagent_help/run4034/termes/p19_3.pddl', './experiments_multiagent_help/run4034/termes/p19_4.pddl']
+agent1
+[info][subgoal_1][termes] task 19 takes 63.14 sec, found a plan with cost 45.0
+planner successful
+validating
+validator time 0.003983497619628906
+agent2
+[info][subgoal_2][termes] task 19 takes 200.12 sec, found a plan with cost 54.0
+planner successful
+validating
+validator time 0.006501197814941406
+agent3
+[info][subgoal_3][termes] task 19 takes 200.15 sec, found a plan with cost 74.0
+planner successful
+validating
+validator time 0.005765199661254883
+agent4
+[info][subgoal_4][termes] task 19 takes 0.17 sec, found a plan with cost 10.0
+planner successful
+validating
+validator time 0.0029370784759521484
+[info][multiagent main goal][termes] task 19 takes 200.12 sec, found a plan with cost 74.0
+TASK: termes - 4034 - 19
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (create-block pos-3-0)
+2 (Single): Agent 1: (move pos-3-0 pos-2-0 n0)
+3 (Single): Agent 1: (place-block pos-2-0 pos-1-0 n0 n1)
+4 (Single): Agent 1: (move pos-2-0 pos-3-0 n0)
+5 (Single): Agent 1: (create-block pos-3-0)
+6 (Single): Agent 1: (place-block pos-3-0 pos-2-0 n0 n1)
+7 (Single): Agent 1: (create-block pos-3-0)
+8 (Single): Agent 1: (move-up pos-3-0 n0 pos-2-0 n1)
+9 (Single): Agent 1: (place-block pos-2-0 pos-1-0 n1 n2)
+10 (Single): Agent 1: (move-down pos-2-0 n1 pos-3-0 n0)
+11 (Single): Agent 1: (create-block pos-3-0)
+12 (Single): Agent 1: (move pos-3-0 pos-3-1 n0)
+13 (Single): Agent 1: (place-block pos-3-1 pos-2-1 n0 n1)
+14 (Single): Agent 1: (move pos-3-1 pos-3-0 n0)
+15 (Single): Agent 1: (create-block pos-3-0)
+16 (Single): Agent 1: (move pos-3-0 pos-3-1 n0)
+17 (Single): Agent 1: (move-up pos-3-1 n0 pos-2-1 n1)
+18 (Single): Agent 1: (place-block pos-2-1 pos-2-0 n1 n2)
+19 (Single): Agent 1: (move-down pos-2-1 n1 pos-3-1 n0)
+20 (Single): Agent 1: (move pos-3-1 pos-3-0 n0)
+21 (Single): Agent 1: (create-block pos-3-0)
+22 (Single): Agent 1: (move pos-3-0 pos-3-1 n0)
+23 (Single): Agent 1: (move-up pos-3-1 n0 pos-2-1 n1)
+24 (Single): Agent 1: (move-up pos-2-1 n1 pos-2-0 n2)
+25 (Single): Agent 1: (place-block pos-2-0 pos-1-0 n2 n3)
+26 (Single): Agent 1: (move-down pos-2-0 n2 pos-2-1 n1)
+27 (Single): Agent 1: (move-down pos-2-1 n1 pos-3-1 n0)
+28 (Single): Agent 1: (move pos-3-1 pos-3-0 n0)
+29 (Single): Agent 1: (create-block pos-3-0)
+30 (Single): Agent 1: (place-block pos-3-0 pos-3-1 n0 n1)
+31 (Single): Agent 1: (create-block pos-3-0)
+32 (Single): Agent 1: (move-up pos-3-0 n0 pos-3-1 n1)
+33 (Single): Agent 1: (place-block pos-3-1 pos-2-1 n1 n2)
+34 (Single): Agent 1: (move-down pos-3-1 n1 pos-3-0 n0)
+35 (Single): Agent 1: (create-block pos-3-0)
+36 (Single): Agent 1: (move-up pos-3-0 n0 pos-3-1 n1)
+37 (Single): Agent 1: (move-up pos-3-1 n1 pos-2-1 n2)
+38 (Single): Agent 1: (place-block pos-2-1 pos-2-0 n2 n3)
+39 (Single): Agent 1: (move-down pos-2-1 n2 pos-3-1 n1)
+40 (Single): Agent 1: (move-down pos-3-1 n1 pos-3-0 n0)
+41 (Single): Agent 1: (create-block pos-3-0)
+42 (Single): Agent 1: (move-up pos-3-0 n0 pos-3-1 n1)
+43 (Single): Agent 1: (move-up pos-3-1 n1 pos-2-1 n2)
+44 (Single): Agent 1: (move-up pos-2-1 n2 pos-2-0 n3)
+45 (Single): Agent 1: (place-block pos-2-0 pos-1-0 n3 n4)
+
+merging plan 2 into initial_plan
+86 True
+verifying entire plan.
+unsatisfied precondition encountered in merged plan, stopping process.
+Type-checking move
+...action passes type checking.
+Type-checking move-up
+...action passes type checking.
+Type-checking move-down
+...action passes type checking.
+Type-checking place-block
+...action passes type checking.
+Type-checking remove-block
+...action passes type checking.
+Type-checking create-block
+...action passes type checking.
+Type-checking destroy-block
+...action passes type checking.
+Checking plan: ./experiments_multiagent_help/run4034/termes/agent2_plan_final_temp.txt
+Plan to validate:
+
+Plan size: 99
+1:
+(create-block pos-3-0)
+ 
+2:
+(move pos-3-0 pos-2-0 n0)
+ 
+3:
+(place-block pos-2-0 pos-1-0 n0 n1)
+ 
+4:
+(move pos-2-0 pos-3-0 n0)
+ 
+5:
+(create-block pos-3-0)
+ 
+6:
+(place-block pos-3-0 pos-2-0 n0 n1)
+ 
+7:
+(create-block pos-3-0)
+ 
+8:
+(move-up pos-3-0 n0 pos-2-0 n1)
+ 
+9:
+(place-block pos-2-0 pos-1-0 n1 n2)
+ 
+10:
+(move-down pos-2-0 n1 pos-3-0 n0)
+ 
+11:
+(create-block pos-3-0)
+ 
+12:
+(move pos-3-0 pos-3-1 n0)
+ 
+13:
+(place-block pos-3-1 pos-2-1 n0 n1)
+ 
+14:
+(move pos-3-1 pos-3-0 n0)
+ 
+15:
+(create-block pos-3-0)
+ 
+16:
+(move pos-3-0 pos-3-1 n0)
+ 
+17:
+(move-up pos-3-1 n0 pos-2-1 n1)
+ 
+18:
+(place-block pos-2-1 pos-2-0 n1 n2)
+ 
+19:
+(move-down pos-2-1 n1 pos-3-1 n0)
+ 
+20:
+(move pos-3-1 pos-3-0 n0)
+ 
+21:
+(create-block pos-3-0)
+ 
+22:
+(move pos-3-0 pos-3-1 n0)
+ 
+23:
+(move-up pos-3-1 n0 pos-2-1 n1)
+ 
+24:
+(move-up pos-2-1 n1 pos-2-0 n2)
+ 
+25:
+(place-block pos-2-0 pos-1-0 n2 n3)
+ 
+26:
+(move-down pos-2-0 n2 pos-2-1 n1)
+ 
+27:
+(move-down pos-2-1 n1 pos-3-1 n0)
+ 
+28:
+(move pos-3-1 pos-3-0 n0)
+ 
+29:
+(create-block pos-3-0)
+ 
+30:
+(place-block pos-3-0 pos-3-1 n0 n1)
+ 
+31:
+(create-block pos-3-0)
+ 
+32:
+(move-up pos-3-0 n0 pos-3-1 n1)
+ 
+33:
+(create-block pos-3-0)
+ 
+34:
+(place-block pos-3-1 pos-2-1 n1 n2)
+ 
+35:
+(move-up pos-3-0 n0 pos-3-1 n1)
+ 
+36:
+(move-down pos-3-1 n1 pos-3-0 n0)
+ 
+37:
+(move-down pos-3-1 n1 pos-3-2 n0)
+ 
+38:
+(create-block pos-3-0)
+ 
+39:
+(move pos-3-2 pos-2-2 n0)
+ 
+40:
+(move-up pos-3-0 n0 pos-3-1 n1)
+ 
+41:
+(move pos-2-2 pos-1-2 n0)
+ 
+42:
+(move-up pos-3-1 n1 pos-2-1 n2)
+ 
+43:
+(place-block pos-1-2 pos-1-1 n0 n1)
+ 
+44:
+(place-block pos-2-1 pos-2-0 n2 n3)
+ 
+45:
+(move-up pos-1-2 n0 pos-1-1 n1)
+ 
+46:
+(move-down pos-2-1 n2 pos-3-1 n1)
+ 
+47:
+(remove-block pos-1-1 pos-2-1 n2 n1)
+ 
+48:
+(move pos-1-1 pos-2-1 n1)
+ 
+49:
+(place-block pos-2-1 pos-1-1 n1 n2)
+ 
+50:
+(move pos-2-1 pos-3-1 n1)
+ 
+51:
+(move-down pos-3-1 n1 pos-3-0 n0)
+ 
+52:
+(move-down pos-3-1 n1 pos-3-0 n0)
+ 
+53:
+(create-block pos-3-0)
+ 
+54:
+(create-block pos-3-0)
+ 
+55:
+(move-up pos-3-0 n0 pos-3-1 n1)
+ 
+56:
+(move-up pos-3-0 n0 pos-3-1 n1)
+ 
+57:
+(place-block pos-3-1 pos-2-1 n1 n2)
+ 
+58:
+(move-up pos-3-1 n1 pos-2-1 n2)
+ 
+59:
+(move-up pos-2-1 n2 pos-2-0 n3)
+ 
+60:
+(move-up pos-3-1 n1 pos-2-1 n2)
+ 
+61:
+(place-block pos-2-0 pos-1-0 n3 n4)
+ 
+62:
+(remove-block pos-2-1 pos-2-0 n3 n2)
+ 
+63:
+(place-block pos-2-1 pos-1-1 n2 n3)
+ 
+64:
+(move-up pos-2-1 n2 pos-1-1 n3)
+ 
+65:
+(remove-block pos-1-1 pos-1-0 n4 n3)
+ 
+66:
+(move pos-1-1 pos-1-0 n3)
+ 
+67:
+(place-block pos-1-0 pos-1-1 n3 n4)
+ 
+68:
+(move-down pos-1-0 n3 pos-2-0 n2)
+ 
+69:
+(remove-block pos-2-0 pos-1-0 n3 n2)
+ 
+70:
+(move pos-2-0 pos-2-1 n2)
+ 
+71:
+(move-down pos-2-1 n2 pos-3-1 n1)
+ 
+72:
+(move-down pos-3-1 n1 pos-3-0 n0)
+ 
+73:
+(destroy-block pos-3-0)
+ 
+74:
+(move-up pos-3-0 n0 pos-3-1 n1)
+ 
+75:
+(remove-block pos-3-1 pos-2-1 n2 n1)
+ 
+76:
+(move-down pos-3-1 n1 pos-3-0 n0)
+ 
+77:
+(destroy-block pos-3-0)
+ 
+78:
+(move-up pos-3-0 n0 pos-3-1 n1)
+ 
+79:
+(move pos-3-1 pos-2-1 n1)
+ 
+80:
+(remove-block pos-2-1 pos-2-0 n2 n1)
+ 
+81:
+(move pos-2-1 pos-3-1 n1)
+ 
+82:
+(move-down pos-3-1 n1 pos-3-0 n0)
+ 
+83:
+(destroy-block pos-3-0)
+ 
+84:
+(move-up pos-3-0 n0 pos-2-0 n1)
+ 
+85:
+(remove-block pos-2-0 pos-1-0 n2 n1)
+ 
+86:
+(move-down pos-2-0 n1 pos-3-0 n0)
+ 
+87:
+(destroy-block pos-3-0)
+ 
+88:
+(remove-block pos-3-0 pos-2-0 n1 n0)
+ 
+89:
+(destroy-block pos-3-0)
+ 
+90:
+(move pos-3-0 pos-2-0 n0)
+ 
+91:
+(remove-block pos-2-0 pos-1-0 n1 n0)
+ 
+92:
+(move pos-2-0 pos-3-0 n0)
+ 
+93:
+(destroy-block pos-3-0)
+ 
+94:
+(move pos-3-0 pos-2-0 n0)
+ 
+95:
+(remove-block pos-2-0 pos-2-1 n1 n0)
+ 
+96:
+(move pos-2-0 pos-3-0 n0)
+ 
+97:
+(destroy-block pos-3-0)
+ 
+98:
+(remove-block pos-3-0 pos-3-1 n1 n0)
+ 
+99:
+(destroy-block pos-3-0)
+ 
+
+Plan Validation details
+-----------------------
+
+Checking next happening (time 1)
+Adding (has-block)
+
+Checking next happening (time 2)
+Deleting (at pos-3-0)
+Adding (at pos-2-0)
+
+Checking next happening (time 3)
+Deleting (height pos-1-0 n0)
+Deleting (has-block)
+Adding (height pos-1-0 n1)
+
+Checking next happening (time 4)
+Deleting (at pos-2-0)
+Adding (at pos-3-0)
+
+Checking next happening (time 5)
+Adding (has-block)
+
+Checking next happening (time 6)
+Deleting (height pos-2-0 n0)
+Deleting (has-block)
+Adding (height pos-2-0 n1)
+
+Checking next happening (time 7)
+Adding (has-block)
+
+Checking next happening (time 8)
+Deleting (at pos-3-0)
+Adding (at pos-2-0)
+
+Checking next happening (time 9)
+Deleting (height pos-1-0 n1)
+Deleting (has-block)
+Adding (height pos-1-0 n2)
+
+Checking next happening (time 10)
+Deleting (at pos-2-0)
+Adding (at pos-3-0)
+
+Checking next happening (time 11)
+Adding (has-block)
+
+Checking next happening (time 12)
+Deleting (at pos-3-0)
+Adding (at pos-3-1)
+
+Checking next happening (time 13)
+Deleting (height pos-2-1 n0)
+Deleting (has-block)
+Adding (height pos-2-1 n1)
+
+Checking next happening (time 14)
+Deleting (at pos-3-1)
+Adding (at pos-3-0)
+
+Checking next happening (time 15)
+Adding (has-block)
+
+Checking next happening (time 16)
+Deleting (at pos-3-0)
+Adding (at pos-3-1)
+
+Checking next happening (time 17)
+Deleting (at pos-3-1)
+Adding (at pos-2-1)
+
+Checking next happening (time 18)
+Deleting (height pos-2-0 n1)
+Deleting (has-block)
+Adding (height pos-2-0 n2)
+
+Checking next happening (time 19)
+Deleting (at pos-2-1)
+Adding (at pos-3-1)
+
+Checking next happening (time 20)
+Deleting (at pos-3-1)
+Adding (at pos-3-0)
+
+Checking next happening (time 21)
+Adding (has-block)
+
+Checking next happening (time 22)
+Deleting (at pos-3-0)
+Adding (at pos-3-1)
+
+Checking next happening (time 23)
+Deleting (at pos-3-1)
+Adding (at pos-2-1)
+
+Checking next happening (time 24)
+Deleting (at pos-2-1)
+Adding (at pos-2-0)
+
+Checking next happening (time 25)
+Deleting (height pos-1-0 n2)
+Deleting (has-block)
+Adding (height pos-1-0 n3)
+
+Checking next happening (time 26)
+Deleting (at pos-2-0)
+Adding (at pos-2-1)
+
+Checking next happening (time 27)
+Deleting (at pos-2-1)
+Adding (at pos-3-1)
+
+Checking next happening (time 28)
+Deleting (at pos-3-1)
+Adding (at pos-3-0)
+
+Checking next happening (time 29)
+Adding (has-block)
+
+Checking next happening (time 30)
+Deleting (height pos-3-1 n0)
+Deleting (has-block)
+Adding (height pos-3-1 n1)
+
+Checking next happening (time 31)
+Adding (has-block)
+
+Checking next happening (time 32)
+Deleting (at pos-3-0)
+Adding (at pos-3-1)
+
+Checking next happening (time 33)
+Plan failed because of unsatisfied precondition in:
+(create-block pos-3-0)
+
+
+Plan failed to execute
+
+Plan Repair Advice:
+
+(create-block pos-3-0) has an unsatisfied precondition at time 33
+(Follow each of:
+    (Set (at pos-3-0) to true)
+    and (Set (has-block) to false)
+)
+
+
+Failed plans:
+ ./experiments_multiagent_help/run4034/termes/agent2_plan_final_temp.txt 
+
+[results][termes][19]
+[single_agent][planning time: 1000.24][cost: 94.0]
+[multi_agent][planning_time: 672.166685295105][cost: inf][agents: 5][optimization time 24.632294178009033]
+----------------------------------------
+Using cached single agent results
+['height pos-0-0 4', 'height pos-0-2 2', 'height pos-1-0 4', 'height pos-3-0 2']
+['./experiments_multiagent_help/run4034/termes/p20_1.pddl', './experiments_multiagent_help/run4034/termes/p20_2.pddl', './experiments_multiagent_help/run4034/termes/p20_3.pddl', './experiments_multiagent_help/run4034/termes/p20_4.pddl']
+agent1
+[info][subgoal_1][termes] task 20 takes 110.39 sec, found a plan with cost 45.0
+planner successful
+validating
+validator time 0.005983829498291016
+agent2
+[info][subgoal_2][termes] task 20 takes 0.2 sec, found a plan with cost 11.0
+planner successful
+validating
+validator time 0.0030651092529296875
+agent3
+[info][subgoal_3][termes] task 20 takes 0.24 sec, found a plan with cost 10.0
+planner successful
+validating
+validator time 0.003992557525634766
+agent4
+[info][subgoal_4][termes] task 20 takes 0.18 sec, found a plan with cost 10.0
+planner successful
+validating
+validator time 0.003131389617919922
+[info][multiagent main goal][termes] task 20 takes 200.12 sec, found a plan with cost 44.0
+TASK: termes - 4034 - 20
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (create-block pos-2-0)
+2 (Single): Agent 1: (move pos-2-0 pos-1-0 n0)
+3 (Single): Agent 1: (place-block pos-1-0 pos-0-0 n0 n1)
+4 (Single): Agent 1: (move pos-1-0 pos-2-0 n0)
+5 (Single): Agent 1: (create-block pos-2-0)
+6 (Single): Agent 1: (place-block pos-2-0 pos-1-0 n0 n1)
+7 (Single): Agent 1: (create-block pos-2-0)
+8 (Single): Agent 1: (move-up pos-2-0 n0 pos-1-0 n1)
+9 (Single): Agent 1: (place-block pos-1-0 pos-0-0 n1 n2)
+10 (Single): Agent 1: (move-down pos-1-0 n1 pos-2-0 n0)
+11 (Single): Agent 1: (create-block pos-2-0)
+12 (Single): Agent 1: (move pos-2-0 pos-2-1 n0)
+13 (Single): Agent 1: (place-block pos-2-1 pos-1-1 n0 n1)
+14 (Single): Agent 1: (move pos-2-1 pos-2-0 n0)
+15 (Single): Agent 1: (create-block pos-2-0)
+16 (Single): Agent 1: (move-up pos-2-0 n0 pos-1-0 n1)
+17 (Single): Agent 1: (move pos-1-0 pos-1-1 n1)
+18 (Single): Agent 1: (place-block pos-1-1 pos-1-0 n1 n2)
+19 (Single): Agent 1: (move-down pos-1-1 n1 pos-2-1 n0)
+20 (Single): Agent 1: (move pos-2-1 pos-2-0 n0)
+21 (Single): Agent 1: (create-block pos-2-0)
+22 (Single): Agent 1: (place-block pos-2-0 pos-2-1 n0 n1)
+23 (Single): Agent 1: (create-block pos-2-0)
+24 (Single): Agent 1: (move-up pos-2-0 n0 pos-2-1 n1)
+25 (Single): Agent 1: (place-block pos-2-1 pos-1-1 n1 n2)
+26 (Single): Agent 1: (move-down pos-2-1 n1 pos-2-0 n0)
+27 (Single): Agent 1: (create-block pos-2-0)
+28 (Single): Agent 1: (move-up pos-2-0 n0 pos-2-1 n1)
+29 (Single): Agent 1: (move-up pos-2-1 n1 pos-1-1 n2)
+30 (Single): Agent 1: (move pos-1-1 pos-1-0 n2)
+31 (Single): Agent 1: (place-block pos-1-0 pos-0-0 n2 n3)
+32 (Single): Agent 1: (move pos-1-0 pos-1-1 n2)
+33 (Single): Agent 1: (move-down pos-1-1 n2 pos-2-1 n1)
+34 (Single): Agent 1: (move-down pos-2-1 n1 pos-2-0 n0)
+35 (Single): Agent 1: (create-block pos-2-0)
+36 (Single): Agent 1: (move-up pos-2-0 n0 pos-2-1 n1)
+37 (Single): Agent 1: (move-up pos-2-1 n1 pos-1-1 n2)
+38 (Single): Agent 1: (place-block pos-1-1 pos-1-0 n2 n3)
+39 (Single): Agent 1: (move-down pos-1-1 n2 pos-2-1 n1)
+40 (Single): Agent 1: (move-down pos-2-1 n1 pos-2-0 n0)
+41 (Single): Agent 1: (create-block pos-2-0)
+42 (Single): Agent 1: (move-up pos-2-0 n0 pos-2-1 n1)
+43 (Single): Agent 1: (move-up pos-2-1 n1 pos-1-1 n2)
+44 (Single): Agent 1: (move-up pos-1-1 n2 pos-1-0 n3)
+45 (Single): Agent 1: (place-block pos-1-0 pos-0-0 n3 n4)
+
+merging plan 2 into initial_plan
+47 True
+verifying entire plan.
+unsatisfied precondition encountered in merged plan, stopping process.
+Type-checking move
+...action passes type checking.
+Type-checking move-up
+...action passes type checking.
+Type-checking move-down
+...action passes type checking.
+Type-checking place-block
+...action passes type checking.
+Type-checking remove-block
+...action passes type checking.
+Type-checking create-block
+...action passes type checking.
+Type-checking destroy-block
+...action passes type checking.
+Checking plan: ./experiments_multiagent_help/run4034/termes/agent2_plan_final_temp.txt
+Plan to validate:
+
+Plan size: 56
+1:
+(create-block pos-2-0)
+ 
+2:
+(move pos-2-0 pos-1-0 n0)
+ 
+3:
+(place-block pos-1-0 pos-0-0 n0 n1)
+ 
+4:
+(move pos-1-0 pos-2-0 n0)
+ 
+5:
+(create-block pos-2-0)
+ 
+6:
+(place-block pos-2-0 pos-1-0 n0 n1)
+ 
+7:
+(create-block pos-2-0)
+ 
+8:
+(move-up pos-2-0 n0 pos-1-0 n1)
+ 
+9:
+(place-block pos-1-0 pos-0-0 n1 n2)
+ 
+10:
+(move-down pos-1-0 n1 pos-2-0 n0)
+ 
+11:
+(create-block pos-2-0)
+ 
+12:
+(move pos-2-0 pos-2-1 n0)
+ 
+13:
+(place-block pos-2-1 pos-1-1 n0 n1)
+ 
+14:
+(move pos-2-1 pos-2-0 n0)
+ 
+15:
+(create-block pos-2-0)
+ 
+16:
+(move-up pos-2-0 n0 pos-1-0 n1)
+ 
+17:
+(move pos-1-0 pos-1-1 n1)
+ 
+18:
+(place-block pos-1-1 pos-1-0 n1 n2)
+ 
+19:
+(move-down pos-1-1 n1 pos-2-1 n0)
+ 
+20:
+(move pos-2-1 pos-2-0 n0)
+ 
+21:
+(create-block pos-2-0)
+ 
+22:
+(place-block pos-2-0 pos-2-1 n0 n1)
+ 
+23:
+(create-block pos-2-0)
+ 
+24:
+(move-up pos-2-0 n0 pos-2-1 n1)
+ 
+25:
+(place-block pos-2-1 pos-1-1 n1 n2)
+ 
+26:
+(move-down pos-2-1 n1 pos-2-0 n0)
+ 
+27:
+(create-block pos-2-0)
+ 
+28:
+(move-up pos-2-0 n0 pos-2-1 n1)
+ 
+29:
+(move-up pos-2-1 n1 pos-1-1 n2)
+ 
+30:
+(move pos-1-1 pos-1-0 n2)
+ 
+31:
+(place-block pos-1-0 pos-0-0 n2 n3)
+ 
+32:
+(move pos-1-0 pos-1-1 n2)
+ 
+33:
+(move-down pos-1-1 n2 pos-2-1 n1)
+ 
+34:
+(move-down pos-2-1 n1 pos-2-0 n0)
+ 
+35:
+(create-block pos-2-0)
+ 
+36:
+(move-up pos-2-0 n0 pos-2-1 n1)
+ 
+37:
+(move-up pos-2-1 n1 pos-1-1 n2)
+ 
+38:
+(create-block pos-2-0)
+ 
+39:
+(place-block pos-1-1 pos-1-0 n2 n3)
+ 
+40:
+(move-up pos-2-0 n0 pos-2-1 n1)
+ 
+41:
+(move-down pos-1-1 n2 pos-2-1 n1)
+ 
+42:
+(move-down pos-2-1 n1 pos-2-2 n0)
+ 
+43:
+(move-down pos-2-1 n1 pos-2-0 n0)
+ 
+44:
+(move pos-2-2 pos-1-2 n0)
+ 
+45:
+(create-block pos-2-0)
+ 
+46:
+(place-block pos-1-2 pos-0-2 n0 n1)
+ 
+47:
+(move-up pos-2-0 n0 pos-2-1 n1)
+ 
+48:
+(move pos-1-2 pos-2-2 n0)
+ 
+49:
+(move-up pos-2-1 n1 pos-1-1 n2)
+ 
+50:
+(remove-block pos-2-2 pos-2-1 n1 n0)
+ 
+51:
+(place-block pos-2-2 pos-1-2 n0 n1)
+ 
+52:
+(move-up pos-2-2 n0 pos-1-2 n1)
+ 
+53:
+(move-up pos-1-1 n2 pos-1-0 n3)
+ 
+54:
+(remove-block pos-1-2 pos-1-1 n2 n1)
+ 
+55:
+(place-block pos-1-0 pos-0-0 n3 n4)
+ 
+56:
+(place-block pos-1-2 pos-0-2 n1 n2)
+ 
+
+Plan Validation details
+-----------------------
+
+Checking next happening (time 1)
+Adding (has-block)
+
+Checking next happening (time 2)
+Deleting (at pos-2-0)
+Adding (at pos-1-0)
+
+Checking next happening (time 3)
+Deleting (height pos-0-0 n0)
+Deleting (has-block)
+Adding (height pos-0-0 n1)
+
+Checking next happening (time 4)
+Deleting (at pos-1-0)
+Adding (at pos-2-0)
+
+Checking next happening (time 5)
+Adding (has-block)
+
+Checking next happening (time 6)
+Deleting (height pos-1-0 n0)
+Deleting (has-block)
+Adding (height pos-1-0 n1)
+
+Checking next happening (time 7)
+Adding (has-block)
+
+Checking next happening (time 8)
+Deleting (at pos-2-0)
+Adding (at pos-1-0)
+
+Checking next happening (time 9)
+Deleting (height pos-0-0 n1)
+Deleting (has-block)
+Adding (height pos-0-0 n2)
+
+Checking next happening (time 10)
+Deleting (at pos-1-0)
+Adding (at pos-2-0)
+
+Checking next happening (time 11)
+Adding (has-block)
+
+Checking next happening (time 12)
+Deleting (at pos-2-0)
+Adding (at pos-2-1)
+
+Checking next happening (time 13)
+Deleting (height pos-1-1 n0)
+Deleting (has-block)
+Adding (height pos-1-1 n1)
+
+Checking next happening (time 14)
+Deleting (at pos-2-1)
+Adding (at pos-2-0)
+
+Checking next happening (time 15)
+Adding (has-block)
+
+Checking next happening (time 16)
+Deleting (at pos-2-0)
+Adding (at pos-1-0)
+
+Checking next happening (time 17)
+Deleting (at pos-1-0)
+Adding (at pos-1-1)
+
+Checking next happening (time 18)
+Deleting (height pos-1-0 n1)
+Deleting (has-block)
+Adding (height pos-1-0 n2)
+
+Checking next happening (time 19)
+Deleting (at pos-1-1)
+Adding (at pos-2-1)
+
+Checking next happening (time 20)
+Deleting (at pos-2-1)
+Adding (at pos-2-0)
+
+Checking next happening (time 21)
+Adding (has-block)
+
+Checking next happening (time 22)
+Deleting (height pos-2-1 n0)
+Deleting (has-block)
+Adding (height pos-2-1 n1)
+
+Checking next happening (time 23)
+Adding (has-block)
+
+Checking next happening (time 24)
+Deleting (at pos-2-0)
+Adding (at pos-2-1)
+
+Checking next happening (time 25)
+Deleting (height pos-1-1 n1)
+Deleting (has-block)
+Adding (height pos-1-1 n2)
+
+Checking next happening (time 26)
+Deleting (at pos-2-1)
+Adding (at pos-2-0)
+
+Checking next happening (time 27)
+Adding (has-block)
+
+Checking next happening (time 28)
+Deleting (at pos-2-0)
+Adding (at pos-2-1)
+
+Checking next happening (time 29)
+Deleting (at pos-2-1)
+Adding (at pos-1-1)
+
+Checking next happening (time 30)
+Deleting (at pos-1-1)
+Adding (at pos-1-0)
+
+Checking next happening (time 31)
+Deleting (height pos-0-0 n2)
+Deleting (has-block)
+Adding (height pos-0-0 n3)
+
+Checking next happening (time 32)
+Deleting (at pos-1-0)
+Adding (at pos-1-1)
+
+Checking next happening (time 33)
+Deleting (at pos-1-1)
+Adding (at pos-2-1)
+
+Checking next happening (time 34)
+Deleting (at pos-2-1)
+Adding (at pos-2-0)
+
+Checking next happening (time 35)
+Adding (has-block)
+
+Checking next happening (time 36)
+Deleting (at pos-2-0)
+Adding (at pos-2-1)
+
+Checking next happening (time 37)
+Deleting (at pos-2-1)
+Adding (at pos-1-1)
+
+Checking next happening (time 38)
+Plan failed because of unsatisfied precondition in:
+(create-block pos-2-0)
+
+
+Plan failed to execute
+
+Plan Repair Advice:
+
+(create-block pos-2-0) has an unsatisfied precondition at time 38
+(Follow each of:
+    (Set (at pos-2-0) to true)
+    and (Set (has-block) to false)
+)
+
+
+Failed plans:
+ ./experiments_multiagent_help/run4034/termes/agent2_plan_final_temp.txt 
+
+[results][termes][20]
+[single_agent][planning time: 1000.26][cost: 106.0]
+[multi_agent][planning_time: 315.28918254852294][cost: inf][agents: 5][optimization time 21.52355170249939]
+----------------------------------------

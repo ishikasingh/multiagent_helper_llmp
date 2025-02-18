@@ -34,8 +34,6 @@ def parse_results(file_path):
                     results[current_domain][task_num] = current_result
                     
             current_result = {}
-            
-            # Updated regex pattern to include hyphens in domain names
             match = re.search(r'\[results\]\[([\w-]+)\]\[(\d+)\]', line)
             if match:
                 current_domain = match.group(1)

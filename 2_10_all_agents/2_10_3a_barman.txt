@@ -1,0 +1,3767 @@
+Using cached single agent results
+['contains shot1 cocktail1 and all hands are empty.', 'contains shot2 cocktail3 and all hands are empty.']
+['./experiments_multiagent_help/run2031/barman-enabled/p01_1.pddl', './experiments_multiagent_help/run2031/barman-enabled/p01_2.pddl']
+agent1
+[info][subgoal_1][barman-enabled] task 01 takes 46.74 sec, found a plan with cost 11.0
+planner successful
+validating
+validator time 0.004471778869628906
+agent2
+[info][subgoal_2][barman-enabled] task 01 takes 8.38 sec, found a plan with cost 11.0
+planner successful
+validating
+validator time 0.0035321712493896484
+[info][multiagent main goal][barman-enabled] task 01 takes 0.93 sec, found a plan with cost 11.0
+TASK: barman-enabled - 2031 - 01
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (grasp left shot4)
+2 (Single): Agent 1: (fill-shot shot4 ingredient1 left right dispenser1)
+3 (Single): Agent 1: (pour-shot-to-clean-shaker shot4 ingredient1 shaker1 left l0 l1)
+4 (Single): Agent 1: (clean-shot shot4 ingredient1 left right)
+5 (Single): Agent 1: (fill-shot shot4 ingredient3 left right dispenser3)
+6 (Single): Agent 1: (pour-shot-to-used-shaker shot4 ingredient3 shaker1 left l1 l2)
+7 (Single): Agent 1: (leave left shot4)
+8 (Single): Agent 1: (grasp left shaker1)
+9 (Single): Agent 1: (shake cocktail1 ingredient1 ingredient3 shaker1 left right)
+10 (Single): Agent 1: (pour-shaker-to-shot cocktail1 shot1 left shaker1 l2 l1)
+11 (Single): Agent 1: (leave left shaker1)
+
+merging plan 2 into initial_plan
+11 True
+verifying entire plan.
+unsatisfied precondition encountered in merged plan, stopping process.
+Type-checking grasp
+...action passes type checking.
+Type-checking leave
+...action passes type checking.
+Type-checking fill-shot
+...action passes type checking.
+Type-checking refill-shot
+...action passes type checking.
+Type-checking empty-shot
+...action passes type checking.
+Type-checking clean-shot
+...action passes type checking.
+Type-checking pour-shot-to-clean-shaker
+...action passes type checking.
+Type-checking pour-shot-to-used-shaker
+...action passes type checking.
+Type-checking empty-shaker
+...action passes type checking.
+Type-checking clean-shaker
+...action passes type checking.
+Type-checking shake
+...action passes type checking.
+Type-checking pour-shaker-to-shot
+...action passes type checking.
+Checking plan: ./experiments_multiagent_help/run2031/barman-enabled/agent2_plan_final_temp.txt
+Plan to validate:
+
+Plan size: 22
+1:
+(grasp left shot4)
+ 
+2:
+(grasp right shot3)
+ 
+3:
+(fill-shot shot4 ingredient1 left right dispenser1)
+ 
+4:
+(fill-shot shot3 ingredient1 right left dispenser1)
+ 
+5:
+(pour-shot-to-clean-shaker shot4 ingredient1 shaker1 left l0 l1)
+ 
+6:
+(pour-shot-to-clean-shaker shot3 ingredient1 shaker2 right l0 l1)
+ 
+7:
+(clean-shot shot4 ingredient1 left right)
+ 
+8:
+(clean-shot shot3 ingredient1 right left)
+ 
+9:
+(fill-shot shot4 ingredient3 left right dispenser3)
+ 
+10:
+(fill-shot shot3 ingredient2 right left dispenser2)
+ 
+11:
+(pour-shot-to-used-shaker shot4 ingredient3 shaker1 left l1 l2)
+ 
+12:
+(pour-shot-to-used-shaker shot3 ingredient2 shaker2 right l1 l2)
+ 
+13:
+(leave left shot4)
+ 
+14:
+(grasp left shaker2)
+ 
+15:
+(grasp left shaker1)
+ 
+16:
+(leave right shot3)
+ 
+17:
+(shake cocktail1 ingredient1 ingredient3 shaker1 left right)
+ 
+18:
+(shake cocktail3 ingredient1 ingredient2 shaker2 left right)
+ 
+19:
+(pour-shaker-to-shot cocktail1 shot1 left shaker1 l2 l1)
+ 
+20:
+(pour-shaker-to-shot cocktail3 shot2 left shaker2 l2 l1)
+ 
+21:
+(leave left shaker1)
+ 
+22:
+(leave left shaker2)
+ 
+
+Plan Validation details
+-----------------------
+
+Checking next happening (time 1)
+Deleting (ontable shot4)
+Deleting (handempty left)
+Adding (holding left shot4)
+
+Checking next happening (time 2)
+Deleting (ontable shot3)
+Deleting (handempty right)
+Adding (holding right shot3)
+
+Checking next happening (time 3)
+Plan failed because of unsatisfied precondition in:
+(fill-shot shot4 ingredient1 left right dispenser1)
+
+
+Plan failed to execute
+
+Plan Repair Advice:
+
+(fill-shot shot4 ingredient1 left right dispenser1) has an unsatisfied precondition at time 3
+(Set (handempty right) to true)
+
+
+Failed plans:
+ ./experiments_multiagent_help/run2031/barman-enabled/agent2_plan_final_temp.txt 
+
+[results][barman-enabled][01]
+[single_agent][planning time: 1006.43][cost: 27.0]
+[multi_agent][planning_time: 60.56253199577332][cost: inf][agents: 3][optimization time 47.178932428359985]
+----------------------------------------
+Using cached single agent results
+['contains shot1 cocktail1 and all hands are empty.', 'contains shot2 cocktail3 and all hands are empty.']
+['./experiments_multiagent_help/run2031/barman-enabled/p02_1.pddl', './experiments_multiagent_help/run2031/barman-enabled/p02_2.pddl']
+agent1
+[info][subgoal_1][barman-enabled] task 02 takes 43.75 sec, found a plan with cost 11.0
+planner successful
+validating
+validator time 0.0035173892974853516
+agent2
+[info][subgoal_2][barman-enabled] task 02 takes 11.68 sec, found a plan with cost 11.0
+planner successful
+validating
+validator time 0.0033571720123291016
+[info][multiagent main goal][barman-enabled] task 02 takes 0.88 sec, found a plan with cost 11.0
+TASK: barman-enabled - 2031 - 02
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (grasp right shot4)
+2 (Single): Agent 1: (fill-shot shot4 ingredient1 right left dispenser1)
+3 (Single): Agent 1: (pour-shot-to-clean-shaker shot4 ingredient1 shaker1 right l0 l1)
+4 (Single): Agent 1: (clean-shot shot4 ingredient1 right left)
+5 (Single): Agent 1: (fill-shot shot4 ingredient3 right left dispenser3)
+6 (Single): Agent 1: (pour-shot-to-used-shaker shot4 ingredient3 shaker1 right l1 l2)
+7 (Single): Agent 1: (grasp left shaker1)
+8 (Single): Agent 1: (leave right shot4)
+9 (Single): Agent 1: (shake cocktail1 ingredient3 ingredient1 shaker1 left right)
+10 (Single): Agent 1: (pour-shaker-to-shot cocktail1 shot1 left shaker1 l2 l1)
+11 (Single): Agent 1: (leave left shaker1)
+
+merging plan 2 into initial_plan
+11 True
+verifying entire plan.
+unsatisfied precondition encountered in merged plan, stopping process.
+Type-checking grasp
+...action passes type checking.
+Type-checking leave
+...action passes type checking.
+Type-checking fill-shot
+...action passes type checking.
+Type-checking refill-shot
+...action passes type checking.
+Type-checking empty-shot
+...action passes type checking.
+Type-checking clean-shot
+...action passes type checking.
+Type-checking pour-shot-to-clean-shaker
+...action passes type checking.
+Type-checking pour-shot-to-used-shaker
+...action passes type checking.
+Type-checking empty-shaker
+...action passes type checking.
+Type-checking clean-shaker
+...action passes type checking.
+Type-checking shake
+...action passes type checking.
+Type-checking pour-shaker-to-shot
+...action passes type checking.
+Checking plan: ./experiments_multiagent_help/run2031/barman-enabled/agent2_plan_final_temp.txt
+Plan to validate:
+
+Plan size: 22
+1:
+(grasp right shot4)
+ 
+2:
+(grasp right shot3)
+ 
+3:
+(fill-shot shot4 ingredient1 right left dispenser1)
+ 
+4:
+(fill-shot shot3 ingredient1 right left dispenser1)
+ 
+5:
+(pour-shot-to-clean-shaker shot4 ingredient1 shaker1 right l0 l1)
+ 
+6:
+(pour-shot-to-clean-shaker shot3 ingredient1 shaker2 right l0 l1)
+ 
+7:
+(clean-shot shot4 ingredient1 right left)
+ 
+8:
+(clean-shot shot3 ingredient1 right left)
+ 
+9:
+(fill-shot shot4 ingredient3 right left dispenser3)
+ 
+10:
+(fill-shot shot3 ingredient3 right left dispenser3)
+ 
+11:
+(pour-shot-to-used-shaker shot4 ingredient3 shaker1 right l1 l2)
+ 
+12:
+(pour-shot-to-used-shaker shot3 ingredient3 shaker2 right l1 l2)
+ 
+13:
+(grasp left shaker1)
+ 
+14:
+(grasp left shaker2)
+ 
+15:
+(leave right shot4)
+ 
+16:
+(leave right shot3)
+ 
+17:
+(shake cocktail1 ingredient3 ingredient1 shaker1 left right)
+ 
+18:
+(shake cocktail3 ingredient3 ingredient1 shaker2 left right)
+ 
+19:
+(pour-shaker-to-shot cocktail1 shot1 left shaker1 l2 l1)
+ 
+20:
+(pour-shaker-to-shot cocktail3 shot2 left shaker2 l2 l1)
+ 
+21:
+(leave left shaker1)
+ 
+22:
+(leave left shaker2)
+ 
+
+Plan Validation details
+-----------------------
+
+Checking next happening (time 1)
+Deleting (ontable shot4)
+Deleting (handempty right)
+Adding (holding right shot4)
+
+Checking next happening (time 2)
+Plan failed because of unsatisfied precondition in:
+(grasp right shot3)
+
+
+Plan failed to execute
+
+Plan Repair Advice:
+
+(grasp right shot3) has an unsatisfied precondition at time 2
+(Set (handempty right) to true)
+
+
+Failed plans:
+ ./experiments_multiagent_help/run2031/barman-enabled/agent2_plan_final_temp.txt 
+
+[results][barman-enabled][02]
+[single_agent][planning time: 1002.14][cost: 27.0]
+[multi_agent][planning_time: 60.62763887405396][cost: inf][agents: 3][optimization time 10.001636743545532]
+----------------------------------------
+Using cached single agent results
+['contains shot2 cocktail1 and all hands are empty.', 'contains shot1 cocktail2 and all hands are empty.']
+['./experiments_multiagent_help/run2031/barman-enabled/p03_1.pddl', './experiments_multiagent_help/run2031/barman-enabled/p03_2.pddl']
+agent1
+[info][subgoal_1][barman-enabled] task 03 takes 44.51 sec, found a plan with cost 11.0
+planner successful
+validating
+validator time 0.0045964717864990234
+agent2
+[info][subgoal_2][barman-enabled] task 03 takes 15.61 sec, found a plan with cost 11.0
+planner successful
+validating
+validator time 0.003931760787963867
+[info][multiagent main goal][barman-enabled] task 03 takes 1.04 sec, found a plan with cost 11.0
+TASK: barman-enabled - 2031 - 03
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (grasp left shot4)
+2 (Single): Agent 1: (fill-shot shot4 ingredient1 left right dispenser1)
+3 (Single): Agent 1: (pour-shot-to-clean-shaker shot4 ingredient1 shaker1 left l0 l1)
+4 (Single): Agent 1: (clean-shot shot4 ingredient1 left right)
+5 (Single): Agent 1: (fill-shot shot4 ingredient3 left right dispenser3)
+6 (Single): Agent 1: (pour-shot-to-used-shaker shot4 ingredient3 shaker1 left l1 l2)
+7 (Single): Agent 1: (leave left shot4)
+8 (Single): Agent 1: (grasp left shaker1)
+9 (Single): Agent 1: (shake cocktail1 ingredient1 ingredient3 shaker1 left right)
+10 (Single): Agent 1: (pour-shaker-to-shot cocktail1 shot2 left shaker1 l2 l1)
+11 (Single): Agent 1: (leave left shaker1)
+
+merging plan 2 into initial_plan
+11 True
+verifying entire plan.
+unsatisfied precondition encountered in merged plan, stopping process.
+Type-checking grasp
+...action passes type checking.
+Type-checking leave
+...action passes type checking.
+Type-checking fill-shot
+...action passes type checking.
+Type-checking refill-shot
+...action passes type checking.
+Type-checking empty-shot
+...action passes type checking.
+Type-checking clean-shot
+...action passes type checking.
+Type-checking pour-shot-to-clean-shaker
+...action passes type checking.
+Type-checking pour-shot-to-used-shaker
+...action passes type checking.
+Type-checking empty-shaker
+...action passes type checking.
+Type-checking clean-shaker
+...action passes type checking.
+Type-checking shake
+...action passes type checking.
+Type-checking pour-shaker-to-shot
+...action passes type checking.
+Checking plan: ./experiments_multiagent_help/run2031/barman-enabled/agent2_plan_final_temp.txt
+Plan to validate:
+
+Plan size: 22
+1:
+(grasp left shot4)
+ 
+2:
+(grasp right shot3)
+ 
+3:
+(fill-shot shot4 ingredient1 left right dispenser1)
+ 
+4:
+(fill-shot shot3 ingredient3 right left dispenser3)
+ 
+5:
+(pour-shot-to-clean-shaker shot4 ingredient1 shaker1 left l0 l1)
+ 
+6:
+(pour-shot-to-clean-shaker shot3 ingredient3 shaker2 right l0 l1)
+ 
+7:
+(clean-shot shot4 ingredient1 left right)
+ 
+8:
+(clean-shot shot3 ingredient3 right left)
+ 
+9:
+(fill-shot shot4 ingredient3 left right dispenser3)
+ 
+10:
+(fill-shot shot3 ingredient2 right left dispenser2)
+ 
+11:
+(pour-shot-to-used-shaker shot4 ingredient3 shaker1 left l1 l2)
+ 
+12:
+(pour-shot-to-used-shaker shot3 ingredient2 shaker2 right l1 l2)
+ 
+13:
+(leave left shot4)
+ 
+14:
+(leave right shot3)
+ 
+15:
+(grasp left shaker1)
+ 
+16:
+(grasp left shaker2)
+ 
+17:
+(shake cocktail1 ingredient1 ingredient3 shaker1 left right)
+ 
+18:
+(shake cocktail2 ingredient2 ingredient3 shaker2 left right)
+ 
+19:
+(pour-shaker-to-shot cocktail1 shot2 left shaker1 l2 l1)
+ 
+20:
+(pour-shaker-to-shot cocktail2 shot1 left shaker2 l2 l1)
+ 
+21:
+(leave left shaker1)
+ 
+22:
+(leave left shaker2)
+ 
+
+Plan Validation details
+-----------------------
+
+Checking next happening (time 1)
+Deleting (ontable shot4)
+Deleting (handempty left)
+Adding (holding left shot4)
+
+Checking next happening (time 2)
+Deleting (ontable shot3)
+Deleting (handempty right)
+Adding (holding right shot3)
+
+Checking next happening (time 3)
+Plan failed because of unsatisfied precondition in:
+(fill-shot shot4 ingredient1 left right dispenser1)
+
+
+Plan failed to execute
+
+Plan Repair Advice:
+
+(fill-shot shot4 ingredient1 left right dispenser1) has an unsatisfied precondition at time 3
+(Set (handempty right) to true)
+
+
+Failed plans:
+ ./experiments_multiagent_help/run2031/barman-enabled/agent2_plan_final_temp.txt 
+
+[results][barman-enabled][03]
+[single_agent][planning time: 1002.03][cost: 27.0]
+[multi_agent][planning_time: 64.21565357208252][cost: inf][agents: 3][optimization time 20.684335231781006]
+----------------------------------------
+Using cached single agent results
+['contains shot1 cocktail1 and all hands are empty.', 'contains shot2 cocktail3 and all hands are empty.']
+['./experiments_multiagent_help/run2031/barman-enabled/p04_1.pddl', './experiments_multiagent_help/run2031/barman-enabled/p04_2.pddl']
+agent1
+[info][subgoal_1][barman-enabled] task 04 takes 43.84 sec, found a plan with cost 11.0
+planner successful
+validating
+validator time 0.0038442611694335938
+agent2
+[info][subgoal_2][barman-enabled] task 04 takes 15.67 sec, found a plan with cost 11.0
+planner successful
+validating
+validator time 0.004769802093505859
+[info][multiagent main goal][barman-enabled] task 04 takes 2.6 sec, found a plan with cost 11.0
+TASK: barman-enabled - 2031 - 04
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (grasp left shot4)
+2 (Single): Agent 1: (fill-shot shot4 ingredient1 left right dispenser1)
+3 (Single): Agent 1: (pour-shot-to-clean-shaker shot4 ingredient1 shaker1 left l0 l1)
+4 (Single): Agent 1: (clean-shot shot4 ingredient1 left right)
+5 (Single): Agent 1: (fill-shot shot4 ingredient2 left right dispenser2)
+6 (Single): Agent 1: (pour-shot-to-used-shaker shot4 ingredient2 shaker1 left l1 l2)
+7 (Single): Agent 1: (leave left shot4)
+8 (Single): Agent 1: (grasp left shaker1)
+9 (Single): Agent 1: (shake cocktail1 ingredient2 ingredient1 shaker1 left right)
+10 (Single): Agent 1: (pour-shaker-to-shot cocktail1 shot1 left shaker1 l2 l1)
+11 (Single): Agent 1: (leave left shaker1)
+
+merging plan 2 into initial_plan
+18 True
+verifying entire plan.
+unsatisfied precondition encountered in merged plan, stopping process.
+Type-checking grasp
+...action passes type checking.
+Type-checking leave
+...action passes type checking.
+Type-checking fill-shot
+...action passes type checking.
+Type-checking refill-shot
+...action passes type checking.
+Type-checking empty-shot
+...action passes type checking.
+Type-checking clean-shot
+...action passes type checking.
+Type-checking pour-shot-to-clean-shaker
+...action passes type checking.
+Type-checking pour-shot-to-used-shaker
+...action passes type checking.
+Type-checking empty-shaker
+...action passes type checking.
+Type-checking clean-shaker
+...action passes type checking.
+Type-checking shake
+...action passes type checking.
+Type-checking pour-shaker-to-shot
+...action passes type checking.
+Checking plan: ./experiments_multiagent_help/run2031/barman-enabled/agent2_plan_final_temp.txt
+Plan to validate:
+
+Plan size: 22
+1:
+(grasp left shot4)
+ 
+2:
+(fill-shot shot4 ingredient1 left right dispenser1)
+ 
+3:
+(pour-shot-to-clean-shaker shot4 ingredient1 shaker1 left l0 l1)
+ 
+4:
+(clean-shot shot4 ingredient1 left right)
+ 
+5:
+(fill-shot shot4 ingredient2 left right dispenser2)
+ 
+6:
+(pour-shot-to-used-shaker shot4 ingredient2 shaker1 left l1 l2)
+ 
+7:
+(leave left shot4)
+ 
+8:
+(grasp right shot4)
+ 
+9:
+(refill-shot shot4 ingredient2 right left dispenser2)
+ 
+10:
+(pour-shot-to-clean-shaker shot4 ingredient2 shaker2 right l0 l1)
+ 
+11:
+(clean-shot shot4 ingredient2 right left)
+ 
+12:
+(fill-shot shot4 ingredient1 right left dispenser1)
+ 
+13:
+(pour-shot-to-used-shaker shot4 ingredient1 shaker2 right l1 l2)
+ 
+14:
+(grasp left shaker2)
+ 
+15:
+(grasp left shaker1)
+ 
+16:
+(leave right shot4)
+ 
+17:
+(shake cocktail1 ingredient2 ingredient1 shaker1 left right)
+ 
+18:
+(shake cocktail3 ingredient1 ingredient2 shaker2 left right)
+ 
+19:
+(pour-shaker-to-shot cocktail1 shot1 left shaker1 l2 l1)
+ 
+20:
+(pour-shaker-to-shot cocktail3 shot2 left shaker2 l2 l1)
+ 
+21:
+(leave left shaker1)
+ 
+22:
+(leave left shaker2)
+ 
+
+Plan Validation details
+-----------------------
+
+Checking next happening (time 1)
+Deleting (ontable shot4)
+Deleting (handempty left)
+Adding (holding left shot4)
+
+Checking next happening (time 2)
+Deleting (empty shot4)
+Deleting (clean shot4)
+Adding (contains shot4 ingredient1)
+Adding (used shot4 ingredient1)
+
+Checking next happening (time 3)
+Deleting (contains shot4 ingredient1)
+Deleting (empty shaker1)
+Deleting (clean shaker1)
+Deleting (shaker-level shaker1 l0)
+Adding (empty shot4)
+Adding (contains shaker1 ingredient1)
+Adding (unshaked shaker1)
+Adding (shaker-level shaker1 l1)
+
+Checking next happening (time 4)
+Deleting (used shot4 ingredient1)
+Adding (clean shot4)
+
+Checking next happening (time 5)
+Deleting (empty shot4)
+Deleting (clean shot4)
+Adding (contains shot4 ingredient2)
+Adding (used shot4 ingredient2)
+
+Checking next happening (time 6)
+Deleting (contains shot4 ingredient2)
+Deleting (shaker-level shaker1 l1)
+Adding (contains shaker1 ingredient2)
+Adding (empty shot4)
+Adding (shaker-level shaker1 l2)
+
+Checking next happening (time 7)
+Deleting (holding left shot4)
+Adding (handempty left)
+Adding (ontable shot4)
+
+Checking next happening (time 8)
+Deleting (ontable shot4)
+Deleting (handempty right)
+Adding (holding right shot4)
+
+Checking next happening (time 9)
+Deleting (empty shot4)
+Adding (contains shot4 ingredient2)
+
+Checking next happening (time 10)
+Deleting (contains shot4 ingredient2)
+Deleting (empty shaker2)
+Deleting (clean shaker2)
+Deleting (shaker-level shaker2 l0)
+Adding (empty shot4)
+Adding (contains shaker2 ingredient2)
+Adding (unshaked shaker2)
+Adding (shaker-level shaker2 l1)
+
+Checking next happening (time 11)
+Deleting (used shot4 ingredient2)
+Adding (clean shot4)
+
+Checking next happening (time 12)
+Deleting (empty shot4)
+Deleting (clean shot4)
+Adding (contains shot4 ingredient1)
+Adding (used shot4 ingredient1)
+
+Checking next happening (time 13)
+Deleting (contains shot4 ingredient1)
+Deleting (shaker-level shaker2 l1)
+Adding (contains shaker2 ingredient1)
+Adding (empty shot4)
+Adding (shaker-level shaker2 l2)
+
+Checking next happening (time 14)
+Deleting (ontable shaker2)
+Deleting (handempty left)
+Adding (holding left shaker2)
+
+Checking next happening (time 15)
+Plan failed because of unsatisfied precondition in:
+(grasp left shaker1)
+
+
+Plan failed to execute
+
+Plan Repair Advice:
+
+(grasp left shaker1) has an unsatisfied precondition at time 15
+(Set (handempty left) to true)
+
+
+Failed plans:
+ ./experiments_multiagent_help/run2031/barman-enabled/agent2_plan_final_temp.txt 
+
+[results][barman-enabled][04]
+[single_agent][planning time: 1004.02][cost: 27.0]
+[multi_agent][planning_time: 64.70010791778564][cost: inf][agents: 3][optimization time 5.023025751113892]
+----------------------------------------
+Using cached single agent results
+['contains shot1 cocktail1 and all hands are empty.', 'contains shot2 cocktail4 and all hands are empty.']
+['./experiments_multiagent_help/run2031/barman-enabled/p05_1.pddl', './experiments_multiagent_help/run2031/barman-enabled/p05_2.pddl']
+agent1
+[info][subgoal_1][barman-enabled] task 05 takes 113.35 sec, found a plan with cost 11.0
+planner successful
+validating
+validator time 0.00401616096496582
+agent2
+[info][subgoal_2][barman-enabled] task 05 takes 51.62 sec, found a plan with cost 11.0
+planner successful
+validating
+validator time 0.004485607147216797
+[info][multiagent main goal][barman-enabled] task 05 takes 334.2 sec, found a plan with cost 24.0
+TASK: barman-enabled - 2031 - 05
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (grasp left shot5)
+2 (Single): Agent 1: (fill-shot shot5 ingredient1 left right dispenser1)
+3 (Single): Agent 1: (pour-shot-to-clean-shaker shot5 ingredient1 shaker1 left l0 l1)
+4 (Single): Agent 1: (clean-shot shot5 ingredient1 left right)
+5 (Single): Agent 1: (fill-shot shot5 ingredient2 left right dispenser2)
+6 (Single): Agent 1: (pour-shot-to-used-shaker shot5 ingredient2 shaker1 left l1 l2)
+7 (Single): Agent 1: (leave left shot5)
+8 (Single): Agent 1: (grasp left shaker1)
+9 (Single): Agent 1: (shake cocktail1 ingredient2 ingredient1 shaker1 left right)
+10 (Single): Agent 1: (pour-shaker-to-shot cocktail1 shot1 left shaker1 l2 l1)
+11 (Single): Agent 1: (leave left shaker1)
+
+merging plan 2 into initial_plan
+11 True
+verifying entire plan.
+unsatisfied precondition encountered in merged plan, stopping process.
+Type-checking grasp
+...action passes type checking.
+Type-checking leave
+...action passes type checking.
+Type-checking fill-shot
+...action passes type checking.
+Type-checking refill-shot
+...action passes type checking.
+Type-checking empty-shot
+...action passes type checking.
+Type-checking clean-shot
+...action passes type checking.
+Type-checking pour-shot-to-clean-shaker
+...action passes type checking.
+Type-checking pour-shot-to-used-shaker
+...action passes type checking.
+Type-checking empty-shaker
+...action passes type checking.
+Type-checking clean-shaker
+...action passes type checking.
+Type-checking shake
+...action passes type checking.
+Type-checking pour-shaker-to-shot
+...action passes type checking.
+Checking plan: ./experiments_multiagent_help/run2031/barman-enabled/agent2_plan_final_temp.txt
+Plan to validate:
+
+Plan size: 22
+1:
+(grasp left shot5)
+ 
+2:
+(grasp right shot4)
+ 
+3:
+(fill-shot shot5 ingredient1 left right dispenser1)
+ 
+4:
+(fill-shot shot4 ingredient2 right left dispenser2)
+ 
+5:
+(pour-shot-to-clean-shaker shot5 ingredient1 shaker1 left l0 l1)
+ 
+6:
+(pour-shot-to-clean-shaker shot4 ingredient2 shaker2 right l0 l1)
+ 
+7:
+(clean-shot shot5 ingredient1 left right)
+ 
+8:
+(clean-shot shot4 ingredient2 right left)
+ 
+9:
+(fill-shot shot5 ingredient2 left right dispenser2)
+ 
+10:
+(fill-shot shot4 ingredient3 right left dispenser3)
+ 
+11:
+(pour-shot-to-used-shaker shot5 ingredient2 shaker1 left l1 l2)
+ 
+12:
+(pour-shot-to-used-shaker shot4 ingredient3 shaker2 right l1 l2)
+ 
+13:
+(leave left shot5)
+ 
+14:
+(leave right shot4)
+ 
+15:
+(grasp left shaker1)
+ 
+16:
+(grasp left shaker2)
+ 
+17:
+(shake cocktail1 ingredient2 ingredient1 shaker1 left right)
+ 
+18:
+(shake cocktail4 ingredient3 ingredient2 shaker2 left right)
+ 
+19:
+(pour-shaker-to-shot cocktail1 shot1 left shaker1 l2 l1)
+ 
+20:
+(pour-shaker-to-shot cocktail4 shot2 left shaker2 l2 l1)
+ 
+21:
+(leave left shaker1)
+ 
+22:
+(leave left shaker2)
+ 
+
+Plan Validation details
+-----------------------
+
+Checking next happening (time 1)
+Deleting (ontable shot5)
+Deleting (handempty left)
+Adding (holding left shot5)
+
+Checking next happening (time 2)
+Deleting (ontable shot4)
+Deleting (handempty right)
+Adding (holding right shot4)
+
+Checking next happening (time 3)
+Plan failed because of unsatisfied precondition in:
+(fill-shot shot5 ingredient1 left right dispenser1)
+
+
+Plan failed to execute
+
+Plan Repair Advice:
+
+(fill-shot shot5 ingredient1 left right dispenser1) has an unsatisfied precondition at time 3
+(Set (handempty right) to true)
+
+
+Failed plans:
+ ./experiments_multiagent_help/run2031/barman-enabled/agent2_plan_final_temp.txt 
+
+[results][barman-enabled][05]
+[single_agent][planning time: 1002.25][cost: 40.0]
+[multi_agent][planning_time: 501.801459236145][cost: inf][agents: 3][optimization time 11.567719221115112]
+----------------------------------------
+Using cached single agent results
+['contains shot3 cocktail1 and all hands are empty.', 'contains shot1 cocktail2 and all hands are empty.']
+['./experiments_multiagent_help/run2031/barman-enabled/p06_1.pddl', './experiments_multiagent_help/run2031/barman-enabled/p06_2.pddl']
+agent1
+[info][subgoal_1][barman-enabled] task 06 takes 112.02 sec, found a plan with cost 11.0
+planner successful
+validating
+validator time 0.0050983428955078125
+agent2
+[info][subgoal_2][barman-enabled] task 06 takes 38.55 sec, found a plan with cost 11.0
+planner successful
+validating
+validator time 0.0038869380950927734
+[info][multiagent main goal][barman-enabled] task 06 takes 334.2 sec, found a plan with cost 24.0
+TASK: barman-enabled - 2031 - 06
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (grasp left shot5)
+2 (Single): Agent 1: (fill-shot shot5 ingredient1 left right dispenser1)
+3 (Single): Agent 1: (pour-shot-to-clean-shaker shot5 ingredient1 shaker1 left l0 l1)
+4 (Single): Agent 1: (clean-shot shot5 ingredient1 left right)
+5 (Single): Agent 1: (fill-shot shot5 ingredient3 left right dispenser3)
+6 (Single): Agent 1: (pour-shot-to-used-shaker shot5 ingredient3 shaker1 left l1 l2)
+7 (Single): Agent 1: (leave left shot5)
+8 (Single): Agent 1: (grasp left shaker1)
+9 (Single): Agent 1: (shake cocktail1 ingredient3 ingredient1 shaker1 left right)
+10 (Single): Agent 1: (pour-shaker-to-shot cocktail1 shot3 left shaker1 l2 l1)
+11 (Single): Agent 1: (leave left shaker1)
+
+merging plan 2 into initial_plan
+11 True
+verifying entire plan.
+unsatisfied precondition encountered in merged plan, stopping process.
+Type-checking grasp
+...action passes type checking.
+Type-checking leave
+...action passes type checking.
+Type-checking fill-shot
+...action passes type checking.
+Type-checking refill-shot
+...action passes type checking.
+Type-checking empty-shot
+...action passes type checking.
+Type-checking clean-shot
+...action passes type checking.
+Type-checking pour-shot-to-clean-shaker
+...action passes type checking.
+Type-checking pour-shot-to-used-shaker
+...action passes type checking.
+Type-checking empty-shaker
+...action passes type checking.
+Type-checking clean-shaker
+...action passes type checking.
+Type-checking shake
+...action passes type checking.
+Type-checking pour-shaker-to-shot
+...action passes type checking.
+Checking plan: ./experiments_multiagent_help/run2031/barman-enabled/agent2_plan_final_temp.txt
+Plan to validate:
+
+Plan size: 22
+1:
+(grasp left shot5)
+ 
+2:
+(grasp left shot4)
+ 
+3:
+(fill-shot shot5 ingredient1 left right dispenser1)
+ 
+4:
+(fill-shot shot4 ingredient1 left right dispenser1)
+ 
+5:
+(pour-shot-to-clean-shaker shot5 ingredient1 shaker1 left l0 l1)
+ 
+6:
+(pour-shot-to-clean-shaker shot4 ingredient1 shaker2 left l0 l1)
+ 
+7:
+(clean-shot shot5 ingredient1 left right)
+ 
+8:
+(clean-shot shot4 ingredient1 left right)
+ 
+9:
+(fill-shot shot5 ingredient3 left right dispenser3)
+ 
+10:
+(fill-shot shot4 ingredient2 left right dispenser2)
+ 
+11:
+(pour-shot-to-used-shaker shot5 ingredient3 shaker1 left l1 l2)
+ 
+12:
+(pour-shot-to-used-shaker shot4 ingredient2 shaker2 left l1 l2)
+ 
+13:
+(leave left shot5)
+ 
+14:
+(leave left shot4)
+ 
+15:
+(grasp left shaker1)
+ 
+16:
+(grasp left shaker2)
+ 
+17:
+(shake cocktail1 ingredient3 ingredient1 shaker1 left right)
+ 
+18:
+(shake cocktail2 ingredient2 ingredient1 shaker2 left right)
+ 
+19:
+(pour-shaker-to-shot cocktail1 shot3 left shaker1 l2 l1)
+ 
+20:
+(pour-shaker-to-shot cocktail2 shot1 left shaker2 l2 l1)
+ 
+21:
+(leave left shaker1)
+ 
+22:
+(leave left shaker2)
+ 
+
+Plan Validation details
+-----------------------
+
+Checking next happening (time 1)
+Deleting (ontable shot5)
+Deleting (handempty left)
+Adding (holding left shot5)
+
+Checking next happening (time 2)
+Plan failed because of unsatisfied precondition in:
+(grasp left shot4)
+
+
+Plan failed to execute
+
+Plan Repair Advice:
+
+(grasp left shot4) has an unsatisfied precondition at time 2
+(Set (handempty left) to true)
+
+
+Failed plans:
+ ./experiments_multiagent_help/run2031/barman-enabled/agent2_plan_final_temp.txt 
+
+[results][barman-enabled][06]
+[single_agent][planning time: 1002.03][cost: 40.0]
+[multi_agent][planning_time: 487.800611038208][cost: inf][agents: 3][optimization time 11.738139390945435]
+----------------------------------------
+Using cached single agent results
+['contains shot2 cocktail1 and all hands are empty.', 'contains shot3 cocktail2 and all hands are empty.']
+['./experiments_multiagent_help/run2031/barman-enabled/p07_1.pddl', './experiments_multiagent_help/run2031/barman-enabled/p07_2.pddl']
+agent1
+[info][subgoal_1][barman-enabled] task 07 takes 109.98 sec, found a plan with cost 11.0
+planner successful
+validating
+validator time 0.005174875259399414
+agent2
+[info][subgoal_2][barman-enabled] task 07 takes 38.21 sec, found a plan with cost 11.0
+planner successful
+validating
+validator time 0.003880023956298828
+[info][multiagent main goal][barman-enabled] task 07 takes 334.2 sec, found a plan with cost 23.0
+TASK: barman-enabled - 2031 - 07
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (grasp left shot5)
+2 (Single): Agent 1: (fill-shot shot5 ingredient1 left right dispenser1)
+3 (Single): Agent 1: (pour-shot-to-clean-shaker shot5 ingredient1 shaker1 left l0 l1)
+4 (Single): Agent 1: (clean-shot shot5 ingredient1 left right)
+5 (Single): Agent 1: (fill-shot shot5 ingredient2 left right dispenser2)
+6 (Single): Agent 1: (pour-shot-to-used-shaker shot5 ingredient2 shaker1 left l1 l2)
+7 (Single): Agent 1: (leave left shot5)
+8 (Single): Agent 1: (grasp left shaker1)
+9 (Single): Agent 1: (shake cocktail1 ingredient2 ingredient1 shaker1 left right)
+10 (Single): Agent 1: (pour-shaker-to-shot cocktail1 shot2 left shaker1 l2 l1)
+11 (Single): Agent 1: (leave left shaker1)
+
+merging plan 2 into initial_plan
+18 True
+verifying entire plan.
+unsatisfied precondition encountered in merged plan, stopping process.
+Type-checking grasp
+...action passes type checking.
+Type-checking leave
+...action passes type checking.
+Type-checking fill-shot
+...action passes type checking.
+Type-checking refill-shot
+...action passes type checking.
+Type-checking empty-shot
+...action passes type checking.
+Type-checking clean-shot
+...action passes type checking.
+Type-checking pour-shot-to-clean-shaker
+...action passes type checking.
+Type-checking pour-shot-to-used-shaker
+...action passes type checking.
+Type-checking empty-shaker
+...action passes type checking.
+Type-checking clean-shaker
+...action passes type checking.
+Type-checking shake
+...action passes type checking.
+Type-checking pour-shaker-to-shot
+...action passes type checking.
+Checking plan: ./experiments_multiagent_help/run2031/barman-enabled/agent2_plan_final_temp.txt
+Plan to validate:
+
+Plan size: 22
+1:
+(grasp left shot5)
+ 
+2:
+(fill-shot shot5 ingredient1 left right dispenser1)
+ 
+3:
+(pour-shot-to-clean-shaker shot5 ingredient1 shaker1 left l0 l1)
+ 
+4:
+(clean-shot shot5 ingredient1 left right)
+ 
+5:
+(fill-shot shot5 ingredient2 left right dispenser2)
+ 
+6:
+(pour-shot-to-used-shaker shot5 ingredient2 shaker1 left l1 l2)
+ 
+7:
+(leave left shot5)
+ 
+8:
+(grasp left shot5)
+ 
+9:
+(refill-shot shot5 ingredient2 left right dispenser2)
+ 
+10:
+(pour-shot-to-clean-shaker shot5 ingredient2 shaker2 left l0 l1)
+ 
+11:
+(clean-shot shot5 ingredient2 left right)
+ 
+12:
+(fill-shot shot5 ingredient3 left right dispenser3)
+ 
+13:
+(pour-shot-to-used-shaker shot5 ingredient3 shaker2 left l1 l2)
+ 
+14:
+(leave left shot5)
+ 
+15:
+(grasp left shaker1)
+ 
+16:
+(grasp left shaker2)
+ 
+17:
+(shake cocktail1 ingredient2 ingredient1 shaker1 left right)
+ 
+18:
+(shake cocktail2 ingredient2 ingredient3 shaker2 left right)
+ 
+19:
+(pour-shaker-to-shot cocktail1 shot2 left shaker1 l2 l1)
+ 
+20:
+(pour-shaker-to-shot cocktail2 shot3 left shaker2 l2 l1)
+ 
+21:
+(leave left shaker1)
+ 
+22:
+(leave left shaker2)
+ 
+
+Plan Validation details
+-----------------------
+
+Checking next happening (time 1)
+Deleting (ontable shot5)
+Deleting (handempty left)
+Adding (holding left shot5)
+
+Checking next happening (time 2)
+Deleting (empty shot5)
+Deleting (clean shot5)
+Adding (contains shot5 ingredient1)
+Adding (used shot5 ingredient1)
+
+Checking next happening (time 3)
+Deleting (contains shot5 ingredient1)
+Deleting (empty shaker1)
+Deleting (clean shaker1)
+Deleting (shaker-level shaker1 l0)
+Adding (empty shot5)
+Adding (contains shaker1 ingredient1)
+Adding (unshaked shaker1)
+Adding (shaker-level shaker1 l1)
+
+Checking next happening (time 4)
+Deleting (used shot5 ingredient1)
+Adding (clean shot5)
+
+Checking next happening (time 5)
+Deleting (empty shot5)
+Deleting (clean shot5)
+Adding (contains shot5 ingredient2)
+Adding (used shot5 ingredient2)
+
+Checking next happening (time 6)
+Deleting (contains shot5 ingredient2)
+Deleting (shaker-level shaker1 l1)
+Adding (contains shaker1 ingredient2)
+Adding (empty shot5)
+Adding (shaker-level shaker1 l2)
+
+Checking next happening (time 7)
+Deleting (holding left shot5)
+Adding (handempty left)
+Adding (ontable shot5)
+
+Checking next happening (time 8)
+Deleting (ontable shot5)
+Deleting (handempty left)
+Adding (holding left shot5)
+
+Checking next happening (time 9)
+Deleting (empty shot5)
+Adding (contains shot5 ingredient2)
+
+Checking next happening (time 10)
+Deleting (contains shot5 ingredient2)
+Deleting (empty shaker2)
+Deleting (clean shaker2)
+Deleting (shaker-level shaker2 l0)
+Adding (empty shot5)
+Adding (contains shaker2 ingredient2)
+Adding (unshaked shaker2)
+Adding (shaker-level shaker2 l1)
+
+Checking next happening (time 11)
+Deleting (used shot5 ingredient2)
+Adding (clean shot5)
+
+Checking next happening (time 12)
+Deleting (empty shot5)
+Deleting (clean shot5)
+Adding (contains shot5 ingredient3)
+Adding (used shot5 ingredient3)
+
+Checking next happening (time 13)
+Deleting (contains shot5 ingredient3)
+Deleting (shaker-level shaker2 l1)
+Adding (contains shaker2 ingredient3)
+Adding (empty shot5)
+Adding (shaker-level shaker2 l2)
+
+Checking next happening (time 14)
+Deleting (holding left shot5)
+Adding (handempty left)
+Adding (ontable shot5)
+
+Checking next happening (time 15)
+Deleting (ontable shaker1)
+Deleting (handempty left)
+Adding (holding left shaker1)
+
+Checking next happening (time 16)
+Plan failed because of unsatisfied precondition in:
+(grasp left shaker2)
+
+
+Plan failed to execute
+
+Plan Repair Advice:
+
+(grasp left shaker2) has an unsatisfied precondition at time 16
+(Set (handempty left) to true)
+
+
+Failed plans:
+ ./experiments_multiagent_help/run2031/barman-enabled/agent2_plan_final_temp.txt 
+
+[results][barman-enabled][07]
+[single_agent][planning time: 1001.01][cost: 39.0]
+[multi_agent][planning_time: 485.6650084400177][cost: inf][agents: 3][optimization time 29.284321308135986]
+----------------------------------------
+Using cached single agent results
+['contains shot1 cocktail3 and all hands are empty.', 'contains shot2 cocktail2 and all hands are empty.']
+['./experiments_multiagent_help/run2031/barman-enabled/p08_1.pddl', './experiments_multiagent_help/run2031/barman-enabled/p08_2.pddl']
+agent1
+[info][subgoal_1][barman-enabled] task 08 takes 110.75 sec, found a plan with cost 11.0
+planner successful
+validating
+validator time 0.0063593387603759766
+agent2
+[info][subgoal_2][barman-enabled] task 08 takes 51.49 sec, found a plan with cost 11.0
+planner successful
+validating
+validator time 0.011884450912475586
+[info][multiagent main goal][barman-enabled] task 08 takes 334.21 sec, found a plan with cost 23.0
+TASK: barman-enabled - 2031 - 08
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (grasp left shot5)
+2 (Single): Agent 1: (fill-shot shot5 ingredient2 left right dispenser2)
+3 (Single): Agent 1: (pour-shot-to-clean-shaker shot5 ingredient2 shaker1 left l0 l1)
+4 (Single): Agent 1: (clean-shot shot5 ingredient2 left right)
+5 (Single): Agent 1: (fill-shot shot5 ingredient3 left right dispenser3)
+6 (Single): Agent 1: (pour-shot-to-used-shaker shot5 ingredient3 shaker1 left l1 l2)
+7 (Single): Agent 1: (leave left shot5)
+8 (Single): Agent 1: (grasp left shaker1)
+9 (Single): Agent 1: (shake cocktail3 ingredient3 ingredient2 shaker1 left right)
+10 (Single): Agent 1: (pour-shaker-to-shot cocktail3 shot1 left shaker1 l2 l1)
+11 (Single): Agent 1: (leave left shaker1)
+
+merging plan 2 into initial_plan
+18 True
+verifying entire plan.
+unsatisfied precondition encountered in merged plan, stopping process.
+Type-checking grasp
+...action passes type checking.
+Type-checking leave
+...action passes type checking.
+Type-checking fill-shot
+...action passes type checking.
+Type-checking refill-shot
+...action passes type checking.
+Type-checking empty-shot
+...action passes type checking.
+Type-checking clean-shot
+...action passes type checking.
+Type-checking pour-shot-to-clean-shaker
+...action passes type checking.
+Type-checking pour-shot-to-used-shaker
+...action passes type checking.
+Type-checking empty-shaker
+...action passes type checking.
+Type-checking clean-shaker
+...action passes type checking.
+Type-checking shake
+...action passes type checking.
+Type-checking pour-shaker-to-shot
+...action passes type checking.
+Checking plan: ./experiments_multiagent_help/run2031/barman-enabled/agent2_plan_final_temp.txt
+Plan to validate:
+
+Plan size: 22
+1:
+(grasp left shot5)
+ 
+2:
+(fill-shot shot5 ingredient2 left right dispenser2)
+ 
+3:
+(pour-shot-to-clean-shaker shot5 ingredient2 shaker1 left l0 l1)
+ 
+4:
+(clean-shot shot5 ingredient2 left right)
+ 
+5:
+(fill-shot shot5 ingredient3 left right dispenser3)
+ 
+6:
+(pour-shot-to-used-shaker shot5 ingredient3 shaker1 left l1 l2)
+ 
+7:
+(leave left shot5)
+ 
+8:
+(grasp right shot5)
+ 
+9:
+(refill-shot shot5 ingredient3 right left dispenser3)
+ 
+10:
+(pour-shot-to-clean-shaker shot5 ingredient3 shaker2 right l0 l1)
+ 
+11:
+(clean-shot shot5 ingredient3 right left)
+ 
+12:
+(fill-shot shot5 ingredient1 right left dispenser1)
+ 
+13:
+(pour-shot-to-used-shaker shot5 ingredient1 shaker2 right l1 l2)
+ 
+14:
+(grasp left shaker2)
+ 
+15:
+(grasp left shaker1)
+ 
+16:
+(leave right shot5)
+ 
+17:
+(shake cocktail3 ingredient3 ingredient2 shaker1 left right)
+ 
+18:
+(shake cocktail2 ingredient1 ingredient3 shaker2 left right)
+ 
+19:
+(pour-shaker-to-shot cocktail3 shot1 left shaker1 l2 l1)
+ 
+20:
+(pour-shaker-to-shot cocktail2 shot2 left shaker2 l2 l1)
+ 
+21:
+(leave left shaker1)
+ 
+22:
+(leave left shaker2)
+ 
+
+Plan Validation details
+-----------------------
+
+Checking next happening (time 1)
+Deleting (ontable shot5)
+Deleting (handempty left)
+Adding (holding left shot5)
+
+Checking next happening (time 2)
+Deleting (empty shot5)
+Deleting (clean shot5)
+Adding (contains shot5 ingredient2)
+Adding (used shot5 ingredient2)
+
+Checking next happening (time 3)
+Deleting (contains shot5 ingredient2)
+Deleting (empty shaker1)
+Deleting (clean shaker1)
+Deleting (shaker-level shaker1 l0)
+Adding (empty shot5)
+Adding (contains shaker1 ingredient2)
+Adding (unshaked shaker1)
+Adding (shaker-level shaker1 l1)
+
+Checking next happening (time 4)
+Deleting (used shot5 ingredient2)
+Adding (clean shot5)
+
+Checking next happening (time 5)
+Deleting (empty shot5)
+Deleting (clean shot5)
+Adding (contains shot5 ingredient3)
+Adding (used shot5 ingredient3)
+
+Checking next happening (time 6)
+Deleting (contains shot5 ingredient3)
+Deleting (shaker-level shaker1 l1)
+Adding (contains shaker1 ingredient3)
+Adding (empty shot5)
+Adding (shaker-level shaker1 l2)
+
+Checking next happening (time 7)
+Deleting (holding left shot5)
+Adding (handempty left)
+Adding (ontable shot5)
+
+Checking next happening (time 8)
+Deleting (ontable shot5)
+Deleting (handempty right)
+Adding (holding right shot5)
+
+Checking next happening (time 9)
+Deleting (empty shot5)
+Adding (contains shot5 ingredient3)
+
+Checking next happening (time 10)
+Deleting (contains shot5 ingredient3)
+Deleting (empty shaker2)
+Deleting (clean shaker2)
+Deleting (shaker-level shaker2 l0)
+Adding (empty shot5)
+Adding (contains shaker2 ingredient3)
+Adding (unshaked shaker2)
+Adding (shaker-level shaker2 l1)
+
+Checking next happening (time 11)
+Deleting (used shot5 ingredient3)
+Adding (clean shot5)
+
+Checking next happening (time 12)
+Deleting (empty shot5)
+Deleting (clean shot5)
+Adding (contains shot5 ingredient1)
+Adding (used shot5 ingredient1)
+
+Checking next happening (time 13)
+Deleting (contains shot5 ingredient1)
+Deleting (shaker-level shaker2 l1)
+Adding (contains shaker2 ingredient1)
+Adding (empty shot5)
+Adding (shaker-level shaker2 l2)
+
+Checking next happening (time 14)
+Deleting (ontable shaker2)
+Deleting (handempty left)
+Adding (holding left shaker2)
+
+Checking next happening (time 15)
+Plan failed because of unsatisfied precondition in:
+(grasp left shaker1)
+
+
+Plan failed to execute
+
+Plan Repair Advice:
+
+(grasp left shaker1) has an unsatisfied precondition at time 15
+(Set (handempty left) to true)
+
+
+Failed plans:
+ ./experiments_multiagent_help/run2031/barman-enabled/agent2_plan_final_temp.txt 
+
+[results][barman-enabled][08]
+[single_agent][planning time: 1001.36][cost: 40.0]
+[multi_agent][planning_time: 499.9021219730377][cost: inf][agents: 3][optimization time 5.64670729637146]
+----------------------------------------
+Using cached single agent results
+['contains shot4 cocktail1 and all hands are empty.', 'contains shot1 cocktail2 and all hands are empty.']
+['./experiments_multiagent_help/run2031/barman-enabled/p09_1.pddl', './experiments_multiagent_help/run2031/barman-enabled/p09_2.pddl']
+agent1
+[info][subgoal_1][barman-enabled] task 09 takes 240.37 sec, found a plan with cost 11.0
+planner successful
+validating
+validator time 0.008408546447753906
+agent2
+[info][subgoal_2][barman-enabled] task 09 takes 136.43 sec, found a plan with cost 11.0
+planner successful
+validating
+validator time 0.008612632751464844
+[info][multiagent main goal][barman-enabled] task 09 takes 334.21 sec, found a plan with cost 34.0
+TASK: barman-enabled - 2031 - 09
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (grasp left shot6)
+2 (Single): Agent 1: (fill-shot shot6 ingredient1 left right dispenser1)
+3 (Single): Agent 1: (pour-shot-to-clean-shaker shot6 ingredient1 shaker1 left l0 l1)
+4 (Single): Agent 1: (clean-shot shot6 ingredient1 left right)
+5 (Single): Agent 1: (fill-shot shot6 ingredient3 left right dispenser3)
+6 (Single): Agent 1: (pour-shot-to-used-shaker shot6 ingredient3 shaker1 left l1 l2)
+7 (Single): Agent 1: (leave left shot6)
+8 (Single): Agent 1: (grasp left shaker1)
+9 (Single): Agent 1: (shake cocktail1 ingredient1 ingredient3 shaker1 left right)
+10 (Single): Agent 1: (pour-shaker-to-shot cocktail1 shot4 left shaker1 l2 l1)
+11 (Single): Agent 1: (leave left shaker1)
+
+merging plan 2 into initial_plan
+18 True
+verifying entire plan.
+unsatisfied precondition encountered in merged plan, stopping process.
+Type-checking grasp
+...action passes type checking.
+Type-checking leave
+...action passes type checking.
+Type-checking fill-shot
+...action passes type checking.
+Type-checking refill-shot
+...action passes type checking.
+Type-checking empty-shot
+...action passes type checking.
+Type-checking clean-shot
+...action passes type checking.
+Type-checking pour-shot-to-clean-shaker
+...action passes type checking.
+Type-checking pour-shot-to-used-shaker
+...action passes type checking.
+Type-checking empty-shaker
+...action passes type checking.
+Type-checking clean-shaker
+...action passes type checking.
+Type-checking shake
+...action passes type checking.
+Type-checking pour-shaker-to-shot
+...action passes type checking.
+Checking plan: ./experiments_multiagent_help/run2031/barman-enabled/agent2_plan_final_temp.txt
+Plan to validate:
+
+Plan size: 22
+1:
+(grasp left shot6)
+ 
+2:
+(fill-shot shot6 ingredient1 left right dispenser1)
+ 
+3:
+(pour-shot-to-clean-shaker shot6 ingredient1 shaker1 left l0 l1)
+ 
+4:
+(clean-shot shot6 ingredient1 left right)
+ 
+5:
+(fill-shot shot6 ingredient3 left right dispenser3)
+ 
+6:
+(pour-shot-to-used-shaker shot6 ingredient3 shaker1 left l1 l2)
+ 
+7:
+(leave left shot6)
+ 
+8:
+(grasp right shot6)
+ 
+9:
+(refill-shot shot6 ingredient3 right left dispenser3)
+ 
+10:
+(pour-shot-to-clean-shaker shot6 ingredient3 shaker2 right l0 l1)
+ 
+11:
+(clean-shot shot6 ingredient3 right left)
+ 
+12:
+(fill-shot shot6 ingredient1 right left dispenser1)
+ 
+13:
+(pour-shot-to-used-shaker shot6 ingredient1 shaker2 right l1 l2)
+ 
+14:
+(grasp left shaker2)
+ 
+15:
+(grasp left shaker1)
+ 
+16:
+(leave right shot6)
+ 
+17:
+(shake cocktail1 ingredient1 ingredient3 shaker1 left right)
+ 
+18:
+(shake cocktail2 ingredient1 ingredient3 shaker2 left right)
+ 
+19:
+(pour-shaker-to-shot cocktail1 shot4 left shaker1 l2 l1)
+ 
+20:
+(pour-shaker-to-shot cocktail2 shot1 left shaker2 l2 l1)
+ 
+21:
+(leave left shaker1)
+ 
+22:
+(leave left shaker2)
+ 
+
+Plan Validation details
+-----------------------
+
+Checking next happening (time 1)
+Deleting (ontable shot6)
+Deleting (handempty left)
+Adding (holding left shot6)
+
+Checking next happening (time 2)
+Deleting (empty shot6)
+Deleting (clean shot6)
+Adding (contains shot6 ingredient1)
+Adding (used shot6 ingredient1)
+
+Checking next happening (time 3)
+Deleting (contains shot6 ingredient1)
+Deleting (empty shaker1)
+Deleting (clean shaker1)
+Deleting (shaker-level shaker1 l0)
+Adding (empty shot6)
+Adding (contains shaker1 ingredient1)
+Adding (unshaked shaker1)
+Adding (shaker-level shaker1 l1)
+
+Checking next happening (time 4)
+Deleting (used shot6 ingredient1)
+Adding (clean shot6)
+
+Checking next happening (time 5)
+Deleting (empty shot6)
+Deleting (clean shot6)
+Adding (contains shot6 ingredient3)
+Adding (used shot6 ingredient3)
+
+Checking next happening (time 6)
+Deleting (contains shot6 ingredient3)
+Deleting (shaker-level shaker1 l1)
+Adding (contains shaker1 ingredient3)
+Adding (empty shot6)
+Adding (shaker-level shaker1 l2)
+
+Checking next happening (time 7)
+Deleting (holding left shot6)
+Adding (handempty left)
+Adding (ontable shot6)
+
+Checking next happening (time 8)
+Deleting (ontable shot6)
+Deleting (handempty right)
+Adding (holding right shot6)
+
+Checking next happening (time 9)
+Deleting (empty shot6)
+Adding (contains shot6 ingredient3)
+
+Checking next happening (time 10)
+Deleting (contains shot6 ingredient3)
+Deleting (empty shaker2)
+Deleting (clean shaker2)
+Deleting (shaker-level shaker2 l0)
+Adding (empty shot6)
+Adding (contains shaker2 ingredient3)
+Adding (unshaked shaker2)
+Adding (shaker-level shaker2 l1)
+
+Checking next happening (time 11)
+Deleting (used shot6 ingredient3)
+Adding (clean shot6)
+
+Checking next happening (time 12)
+Deleting (empty shot6)
+Deleting (clean shot6)
+Adding (contains shot6 ingredient1)
+Adding (used shot6 ingredient1)
+
+Checking next happening (time 13)
+Deleting (contains shot6 ingredient1)
+Deleting (shaker-level shaker2 l1)
+Adding (contains shaker2 ingredient1)
+Adding (empty shot6)
+Adding (shaker-level shaker2 l2)
+
+Checking next happening (time 14)
+Deleting (ontable shaker2)
+Deleting (handempty left)
+Adding (holding left shaker2)
+
+Checking next happening (time 15)
+Plan failed because of unsatisfied precondition in:
+(grasp left shaker1)
+
+
+Plan failed to execute
+
+Plan Repair Advice:
+
+(grasp left shaker1) has an unsatisfied precondition at time 15
+(Set (handempty left) to true)
+
+
+Failed plans:
+ ./experiments_multiagent_help/run2031/barman-enabled/agent2_plan_final_temp.txt 
+
+[results][barman-enabled][09]
+[single_agent][planning time: 1001.45][cost: 50.0]
+[multi_agent][planning_time: 713.6711886024475][cost: inf][agents: 3][optimization time 6.671312093734741]
+----------------------------------------
+Using cached single agent results
+['contains shot5 cocktail1 and all hands are empty.', 'contains shot4 cocktail2 and all hands are empty.']
+['./experiments_multiagent_help/run2031/barman-enabled/p10_1.pddl', './experiments_multiagent_help/run2031/barman-enabled/p10_2.pddl']
+agent1
+[info][subgoal_1][barman-enabled] task 10 takes 244.57 sec, found a plan with cost 11.0
+planner successful
+validating
+validator time 0.00434565544128418
+agent2
+[info][subgoal_2][barman-enabled] task 10 takes 136.11 sec, found a plan with cost 11.0
+planner successful
+validating
+validator time 0.005313873291015625
+[info][multiagent main goal][barman-enabled] task 10 takes 334.22 sec, found a plan with cost 35.0
+TASK: barman-enabled - 2031 - 10
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (grasp left shot6)
+2 (Single): Agent 1: (fill-shot shot6 ingredient2 left right dispenser2)
+3 (Single): Agent 1: (pour-shot-to-clean-shaker shot6 ingredient2 shaker1 left l0 l1)
+4 (Single): Agent 1: (clean-shot shot6 ingredient2 left right)
+5 (Single): Agent 1: (fill-shot shot6 ingredient1 left right dispenser1)
+6 (Single): Agent 1: (pour-shot-to-used-shaker shot6 ingredient1 shaker1 left l1 l2)
+7 (Single): Agent 1: (leave left shot6)
+8 (Single): Agent 1: (grasp left shaker1)
+9 (Single): Agent 1: (shake cocktail1 ingredient2 ingredient1 shaker1 left right)
+10 (Single): Agent 1: (pour-shaker-to-shot cocktail1 shot5 left shaker1 l2 l1)
+11 (Single): Agent 1: (leave left shaker1)
+
+merging plan 2 into initial_plan
+18 True
+verifying entire plan.
+unsatisfied precondition encountered in merged plan, stopping process.
+Type-checking grasp
+...action passes type checking.
+Type-checking leave
+...action passes type checking.
+Type-checking fill-shot
+...action passes type checking.
+Type-checking refill-shot
+...action passes type checking.
+Type-checking empty-shot
+...action passes type checking.
+Type-checking clean-shot
+...action passes type checking.
+Type-checking pour-shot-to-clean-shaker
+...action passes type checking.
+Type-checking pour-shot-to-used-shaker
+...action passes type checking.
+Type-checking empty-shaker
+...action passes type checking.
+Type-checking clean-shaker
+...action passes type checking.
+Type-checking shake
+...action passes type checking.
+Type-checking pour-shaker-to-shot
+...action passes type checking.
+Checking plan: ./experiments_multiagent_help/run2031/barman-enabled/agent2_plan_final_temp.txt
+Plan to validate:
+
+Plan size: 22
+1:
+(grasp left shot6)
+ 
+2:
+(fill-shot shot6 ingredient2 left right dispenser2)
+ 
+3:
+(pour-shot-to-clean-shaker shot6 ingredient2 shaker1 left l0 l1)
+ 
+4:
+(clean-shot shot6 ingredient2 left right)
+ 
+5:
+(fill-shot shot6 ingredient1 left right dispenser1)
+ 
+6:
+(pour-shot-to-used-shaker shot6 ingredient1 shaker1 left l1 l2)
+ 
+7:
+(leave left shot6)
+ 
+8:
+(grasp right shot6)
+ 
+9:
+(refill-shot shot6 ingredient1 right left dispenser1)
+ 
+10:
+(pour-shot-to-clean-shaker shot6 ingredient1 shaker2 right l0 l1)
+ 
+11:
+(clean-shot shot6 ingredient1 right left)
+ 
+12:
+(fill-shot shot6 ingredient2 right left dispenser2)
+ 
+13:
+(pour-shot-to-used-shaker shot6 ingredient2 shaker2 right l1 l2)
+ 
+14:
+(grasp left shaker2)
+ 
+15:
+(grasp left shaker1)
+ 
+16:
+(leave right shot6)
+ 
+17:
+(shake cocktail1 ingredient2 ingredient1 shaker1 left right)
+ 
+18:
+(shake cocktail2 ingredient1 ingredient2 shaker2 left right)
+ 
+19:
+(pour-shaker-to-shot cocktail1 shot5 left shaker1 l2 l1)
+ 
+20:
+(pour-shaker-to-shot cocktail2 shot4 left shaker2 l2 l1)
+ 
+21:
+(leave left shaker1)
+ 
+22:
+(leave left shaker2)
+ 
+
+Plan Validation details
+-----------------------
+
+Checking next happening (time 1)
+Deleting (ontable shot6)
+Deleting (handempty left)
+Adding (holding left shot6)
+
+Checking next happening (time 2)
+Deleting (empty shot6)
+Deleting (clean shot6)
+Adding (contains shot6 ingredient2)
+Adding (used shot6 ingredient2)
+
+Checking next happening (time 3)
+Deleting (contains shot6 ingredient2)
+Deleting (empty shaker1)
+Deleting (clean shaker1)
+Deleting (shaker-level shaker1 l0)
+Adding (empty shot6)
+Adding (contains shaker1 ingredient2)
+Adding (unshaked shaker1)
+Adding (shaker-level shaker1 l1)
+
+Checking next happening (time 4)
+Deleting (used shot6 ingredient2)
+Adding (clean shot6)
+
+Checking next happening (time 5)
+Deleting (empty shot6)
+Deleting (clean shot6)
+Adding (contains shot6 ingredient1)
+Adding (used shot6 ingredient1)
+
+Checking next happening (time 6)
+Deleting (contains shot6 ingredient1)
+Deleting (shaker-level shaker1 l1)
+Adding (contains shaker1 ingredient1)
+Adding (empty shot6)
+Adding (shaker-level shaker1 l2)
+
+Checking next happening (time 7)
+Deleting (holding left shot6)
+Adding (handempty left)
+Adding (ontable shot6)
+
+Checking next happening (time 8)
+Deleting (ontable shot6)
+Deleting (handempty right)
+Adding (holding right shot6)
+
+Checking next happening (time 9)
+Deleting (empty shot6)
+Adding (contains shot6 ingredient1)
+
+Checking next happening (time 10)
+Deleting (contains shot6 ingredient1)
+Deleting (empty shaker2)
+Deleting (clean shaker2)
+Deleting (shaker-level shaker2 l0)
+Adding (empty shot6)
+Adding (contains shaker2 ingredient1)
+Adding (unshaked shaker2)
+Adding (shaker-level shaker2 l1)
+
+Checking next happening (time 11)
+Deleting (used shot6 ingredient1)
+Adding (clean shot6)
+
+Checking next happening (time 12)
+Deleting (empty shot6)
+Deleting (clean shot6)
+Adding (contains shot6 ingredient2)
+Adding (used shot6 ingredient2)
+
+Checking next happening (time 13)
+Deleting (contains shot6 ingredient2)
+Deleting (shaker-level shaker2 l1)
+Adding (contains shaker2 ingredient2)
+Adding (empty shot6)
+Adding (shaker-level shaker2 l2)
+
+Checking next happening (time 14)
+Deleting (ontable shaker2)
+Deleting (handempty left)
+Adding (holding left shaker2)
+
+Checking next happening (time 15)
+Plan failed because of unsatisfied precondition in:
+(grasp left shaker1)
+
+
+Plan failed to execute
+
+Plan Repair Advice:
+
+(grasp left shaker1) has an unsatisfied precondition at time 15
+(Set (handempty left) to true)
+
+
+Failed plans:
+ ./experiments_multiagent_help/run2031/barman-enabled/agent2_plan_final_temp.txt 
+
+[results][barman-enabled][10]
+[single_agent][planning time: 1001.53][cost: 53.0]
+[multi_agent][planning_time: 717.9014781951905][cost: inf][agents: 3][optimization time 5.452080965042114]
+----------------------------------------
+Using cached single agent results
+['contains shot1 cocktail4 and all hands are empty.', 'contains shot2 cocktail5 and all hands are empty.']
+['./experiments_multiagent_help/run2031/barman-enabled/p11_1.pddl', './experiments_multiagent_help/run2031/barman-enabled/p11_2.pddl']
+agent1
+[info][subgoal_1][barman-enabled] task 11 takes 243.66 sec, found a plan with cost 11.0
+planner successful
+validating
+validator time 0.006107807159423828
+agent2
+[info][subgoal_2][barman-enabled] task 11 takes 105.22 sec, found a plan with cost 11.0
+planner successful
+validating
+validator time 0.005175590515136719
+[info][multiagent main goal][barman-enabled] task 11 takes 334.23 sec, found a plan with cost 37.0
+TASK: barman-enabled - 2031 - 11
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (grasp left shot6)
+2 (Single): Agent 1: (fill-shot shot6 ingredient1 left right dispenser1)
+3 (Single): Agent 1: (pour-shot-to-clean-shaker shot6 ingredient1 shaker1 left l0 l1)
+4 (Single): Agent 1: (clean-shot shot6 ingredient1 left right)
+5 (Single): Agent 1: (fill-shot shot6 ingredient3 left right dispenser3)
+6 (Single): Agent 1: (pour-shot-to-used-shaker shot6 ingredient3 shaker1 left l1 l2)
+7 (Single): Agent 1: (leave left shot6)
+8 (Single): Agent 1: (grasp left shaker1)
+9 (Single): Agent 1: (shake cocktail4 ingredient1 ingredient3 shaker1 left right)
+10 (Single): Agent 1: (pour-shaker-to-shot cocktail4 shot1 left shaker1 l2 l1)
+11 (Single): Agent 1: (leave left shaker1)
+
+merging plan 2 into initial_plan
+11 True
+verifying entire plan.
+unsatisfied precondition encountered in merged plan, stopping process.
+Type-checking grasp
+...action passes type checking.
+Type-checking leave
+...action passes type checking.
+Type-checking fill-shot
+...action passes type checking.
+Type-checking refill-shot
+...action passes type checking.
+Type-checking empty-shot
+...action passes type checking.
+Type-checking clean-shot
+...action passes type checking.
+Type-checking pour-shot-to-clean-shaker
+...action passes type checking.
+Type-checking pour-shot-to-used-shaker
+...action passes type checking.
+Type-checking empty-shaker
+...action passes type checking.
+Type-checking clean-shaker
+...action passes type checking.
+Type-checking shake
+...action passes type checking.
+Type-checking pour-shaker-to-shot
+...action passes type checking.
+Checking plan: ./experiments_multiagent_help/run2031/barman-enabled/agent2_plan_final_temp.txt
+Plan to validate:
+
+Plan size: 22
+1:
+(grasp left shot6)
+ 
+2:
+(grasp left shot5)
+ 
+3:
+(fill-shot shot6 ingredient1 left right dispenser1)
+ 
+4:
+(fill-shot shot5 ingredient1 left right dispenser1)
+ 
+5:
+(pour-shot-to-clean-shaker shot6 ingredient1 shaker1 left l0 l1)
+ 
+6:
+(pour-shot-to-clean-shaker shot5 ingredient1 shaker2 left l0 l1)
+ 
+7:
+(clean-shot shot6 ingredient1 left right)
+ 
+8:
+(clean-shot shot5 ingredient1 left right)
+ 
+9:
+(fill-shot shot6 ingredient3 left right dispenser3)
+ 
+10:
+(fill-shot shot5 ingredient2 left right dispenser2)
+ 
+11:
+(pour-shot-to-used-shaker shot6 ingredient3 shaker1 left l1 l2)
+ 
+12:
+(pour-shot-to-used-shaker shot5 ingredient2 shaker2 left l1 l2)
+ 
+13:
+(leave left shot6)
+ 
+14:
+(leave left shot5)
+ 
+15:
+(grasp left shaker1)
+ 
+16:
+(grasp left shaker2)
+ 
+17:
+(shake cocktail4 ingredient1 ingredient3 shaker1 left right)
+ 
+18:
+(shake cocktail5 ingredient1 ingredient2 shaker2 left right)
+ 
+19:
+(pour-shaker-to-shot cocktail4 shot1 left shaker1 l2 l1)
+ 
+20:
+(pour-shaker-to-shot cocktail5 shot2 left shaker2 l2 l1)
+ 
+21:
+(leave left shaker1)
+ 
+22:
+(leave left shaker2)
+ 
+
+Plan Validation details
+-----------------------
+
+Checking next happening (time 1)
+Deleting (ontable shot6)
+Deleting (handempty left)
+Adding (holding left shot6)
+
+Checking next happening (time 2)
+Plan failed because of unsatisfied precondition in:
+(grasp left shot5)
+
+
+Plan failed to execute
+
+Plan Repair Advice:
+
+(grasp left shot5) has an unsatisfied precondition at time 2
+(Set (handempty left) to true)
+
+
+Failed plans:
+ ./experiments_multiagent_help/run2031/barman-enabled/agent2_plan_final_temp.txt 
+
+[results][barman-enabled][11]
+[single_agent][planning time: 1000.36][cost: 56.0]
+[multi_agent][planning_time: 685.8464192008972][cost: inf][agents: 3][optimization time 9.257390975952148]
+----------------------------------------
+Using cached single agent results
+['contains shot2 cocktail1 and all hands are empty.', 'contains shot3 cocktail3 and all hands are empty.']
+['./experiments_multiagent_help/run2031/barman-enabled/p12_1.pddl', './experiments_multiagent_help/run2031/barman-enabled/p12_2.pddl']
+agent1
+[info][subgoal_1][barman-enabled] task 12 takes 240.0 sec, found a plan with cost 11.0
+planner successful
+validating
+validator time 0.005426168441772461
+agent2
+[info][subgoal_2][barman-enabled] task 12 takes 67.95 sec, found a plan with cost 11.0
+planner successful
+validating
+validator time 0.003430604934692383
+[info][multiagent main goal][barman-enabled] task 12 takes 334.22 sec, found a plan with cost 37.0
+TASK: barman-enabled - 2031 - 12
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (grasp left shot6)
+2 (Single): Agent 1: (fill-shot shot6 ingredient1 left right dispenser1)
+3 (Single): Agent 1: (pour-shot-to-clean-shaker shot6 ingredient1 shaker1 left l0 l1)
+4 (Single): Agent 1: (clean-shot shot6 ingredient1 left right)
+5 (Single): Agent 1: (fill-shot shot6 ingredient3 left right dispenser3)
+6 (Single): Agent 1: (pour-shot-to-used-shaker shot6 ingredient3 shaker1 left l1 l2)
+7 (Single): Agent 1: (leave left shot6)
+8 (Single): Agent 1: (grasp left shaker1)
+9 (Single): Agent 1: (shake cocktail1 ingredient3 ingredient1 shaker1 left right)
+10 (Single): Agent 1: (pour-shaker-to-shot cocktail1 shot2 left shaker1 l2 l1)
+11 (Single): Agent 1: (leave left shaker1)
+
+merging plan 2 into initial_plan
+11 True
+verifying entire plan.
+unsatisfied precondition encountered in merged plan, stopping process.
+Type-checking grasp
+...action passes type checking.
+Type-checking leave
+...action passes type checking.
+Type-checking fill-shot
+...action passes type checking.
+Type-checking refill-shot
+...action passes type checking.
+Type-checking empty-shot
+...action passes type checking.
+Type-checking clean-shot
+...action passes type checking.
+Type-checking pour-shot-to-clean-shaker
+...action passes type checking.
+Type-checking pour-shot-to-used-shaker
+...action passes type checking.
+Type-checking empty-shaker
+...action passes type checking.
+Type-checking clean-shaker
+...action passes type checking.
+Type-checking shake
+...action passes type checking.
+Type-checking pour-shaker-to-shot
+...action passes type checking.
+Checking plan: ./experiments_multiagent_help/run2031/barman-enabled/agent2_plan_final_temp.txt
+Plan to validate:
+
+Plan size: 22
+1:
+(grasp left shot6)
+ 
+2:
+(grasp left shot5)
+ 
+3:
+(fill-shot shot6 ingredient1 left right dispenser1)
+ 
+4:
+(fill-shot shot5 ingredient1 left right dispenser1)
+ 
+5:
+(pour-shot-to-clean-shaker shot6 ingredient1 shaker1 left l0 l1)
+ 
+6:
+(pour-shot-to-clean-shaker shot5 ingredient1 shaker2 left l0 l1)
+ 
+7:
+(clean-shot shot6 ingredient1 left right)
+ 
+8:
+(clean-shot shot5 ingredient1 left right)
+ 
+9:
+(fill-shot shot6 ingredient3 left right dispenser3)
+ 
+10:
+(fill-shot shot5 ingredient2 left right dispenser2)
+ 
+11:
+(pour-shot-to-used-shaker shot6 ingredient3 shaker1 left l1 l2)
+ 
+12:
+(pour-shot-to-used-shaker shot5 ingredient2 shaker2 left l1 l2)
+ 
+13:
+(leave left shot6)
+ 
+14:
+(grasp right shaker2)
+ 
+15:
+(grasp left shaker1)
+ 
+16:
+(leave left shot5)
+ 
+17:
+(shake cocktail1 ingredient3 ingredient1 shaker1 left right)
+ 
+18:
+(shake cocktail3 ingredient1 ingredient2 shaker2 right left)
+ 
+19:
+(pour-shaker-to-shot cocktail1 shot2 left shaker1 l2 l1)
+ 
+20:
+(pour-shaker-to-shot cocktail3 shot3 right shaker2 l2 l1)
+ 
+21:
+(leave left shaker1)
+ 
+22:
+(leave right shaker2)
+ 
+
+Plan Validation details
+-----------------------
+
+Checking next happening (time 1)
+Deleting (ontable shot6)
+Deleting (handempty left)
+Adding (holding left shot6)
+
+Checking next happening (time 2)
+Plan failed because of unsatisfied precondition in:
+(grasp left shot5)
+
+
+Plan failed to execute
+
+Plan Repair Advice:
+
+(grasp left shot5) has an unsatisfied precondition at time 2
+(Set (handempty left) to true)
+
+
+Failed plans:
+ ./experiments_multiagent_help/run2031/barman-enabled/agent2_plan_final_temp.txt 
+
+[results][barman-enabled][12]
+[single_agent][planning time: 1000.34][cost: 53.0]
+[multi_agent][planning_time: 645.4797288608552][cost: inf][agents: 3][optimization time 14.901541233062744]
+----------------------------------------
+Using cached single agent results
+['contains shot4 cocktail1 and all hands are empty.', 'contains shot3 cocktail3 and all hands are empty.']
+['./experiments_multiagent_help/run2031/barman-enabled/p13_1.pddl', './experiments_multiagent_help/run2031/barman-enabled/p13_2.pddl']
+agent1
+[info][subgoal_1][barman-enabled] task 13 takes 334.28 sec, found a plan with cost 11.0
+planner successful
+validating
+validator time 0.010031700134277344
+agent2
+[info][subgoal_2][barman-enabled] task 13 takes 334.26 sec, found a plan with cost 11.0
+planner successful
+validating
+validator time 0.006808757781982422
+[info][multiagent main goal][barman-enabled] task 13 takes 334.26 sec, found a plan with cost 50.0
+TASK: barman-enabled - 2031 - 13
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (grasp left shot8)
+2 (Single): Agent 1: (fill-shot shot8 ingredient2 left right dispenser2)
+3 (Single): Agent 1: (pour-shot-to-clean-shaker shot8 ingredient2 shaker1 left l0 l1)
+4 (Single): Agent 1: (clean-shot shot8 ingredient2 left right)
+5 (Single): Agent 1: (fill-shot shot8 ingredient3 left right dispenser3)
+6 (Single): Agent 1: (pour-shot-to-used-shaker shot8 ingredient3 shaker1 left l1 l2)
+7 (Single): Agent 1: (leave left shot8)
+8 (Single): Agent 1: (grasp left shaker1)
+9 (Single): Agent 1: (shake cocktail1 ingredient2 ingredient3 shaker1 left right)
+10 (Single): Agent 1: (pour-shaker-to-shot cocktail1 shot4 left shaker1 l2 l1)
+11 (Single): Agent 1: (leave left shaker1)
+
+merging plan 2 into initial_plan
+18 True
+verifying entire plan.
+unsatisfied precondition encountered in merged plan, stopping process.
+Type-checking grasp
+...action passes type checking.
+Type-checking leave
+...action passes type checking.
+Type-checking fill-shot
+...action passes type checking.
+Type-checking refill-shot
+...action passes type checking.
+Type-checking empty-shot
+...action passes type checking.
+Type-checking clean-shot
+...action passes type checking.
+Type-checking pour-shot-to-clean-shaker
+...action passes type checking.
+Type-checking pour-shot-to-used-shaker
+...action passes type checking.
+Type-checking empty-shaker
+...action passes type checking.
+Type-checking clean-shaker
+...action passes type checking.
+Type-checking shake
+...action passes type checking.
+Type-checking pour-shaker-to-shot
+...action passes type checking.
+Checking plan: ./experiments_multiagent_help/run2031/barman-enabled/agent2_plan_final_temp.txt
+Plan to validate:
+
+Plan size: 22
+1:
+(grasp left shot8)
+ 
+2:
+(fill-shot shot8 ingredient2 left right dispenser2)
+ 
+3:
+(pour-shot-to-clean-shaker shot8 ingredient2 shaker1 left l0 l1)
+ 
+4:
+(clean-shot shot8 ingredient2 left right)
+ 
+5:
+(fill-shot shot8 ingredient3 left right dispenser3)
+ 
+6:
+(pour-shot-to-used-shaker shot8 ingredient3 shaker1 left l1 l2)
+ 
+7:
+(leave left shot8)
+ 
+8:
+(grasp right shot8)
+ 
+9:
+(refill-shot shot8 ingredient3 right left dispenser3)
+ 
+10:
+(pour-shot-to-clean-shaker shot8 ingredient3 shaker2 right l0 l1)
+ 
+11:
+(clean-shot shot8 ingredient3 right left)
+ 
+12:
+(fill-shot shot8 ingredient1 right left dispenser1)
+ 
+13:
+(pour-shot-to-used-shaker shot8 ingredient1 shaker2 right l1 l2)
+ 
+14:
+(grasp left shaker2)
+ 
+15:
+(grasp left shaker1)
+ 
+16:
+(leave right shot8)
+ 
+17:
+(shake cocktail1 ingredient2 ingredient3 shaker1 left right)
+ 
+18:
+(shake cocktail3 ingredient1 ingredient3 shaker2 left right)
+ 
+19:
+(pour-shaker-to-shot cocktail1 shot4 left shaker1 l2 l1)
+ 
+20:
+(pour-shaker-to-shot cocktail3 shot3 left shaker2 l2 l1)
+ 
+21:
+(leave left shaker1)
+ 
+22:
+(leave left shaker2)
+ 
+
+Plan Validation details
+-----------------------
+
+Checking next happening (time 1)
+Deleting (ontable shot8)
+Deleting (handempty left)
+Adding (holding left shot8)
+
+Checking next happening (time 2)
+Deleting (empty shot8)
+Deleting (clean shot8)
+Adding (contains shot8 ingredient2)
+Adding (used shot8 ingredient2)
+
+Checking next happening (time 3)
+Deleting (contains shot8 ingredient2)
+Deleting (empty shaker1)
+Deleting (clean shaker1)
+Deleting (shaker-level shaker1 l0)
+Adding (empty shot8)
+Adding (contains shaker1 ingredient2)
+Adding (unshaked shaker1)
+Adding (shaker-level shaker1 l1)
+
+Checking next happening (time 4)
+Deleting (used shot8 ingredient2)
+Adding (clean shot8)
+
+Checking next happening (time 5)
+Deleting (empty shot8)
+Deleting (clean shot8)
+Adding (contains shot8 ingredient3)
+Adding (used shot8 ingredient3)
+
+Checking next happening (time 6)
+Deleting (contains shot8 ingredient3)
+Deleting (shaker-level shaker1 l1)
+Adding (contains shaker1 ingredient3)
+Adding (empty shot8)
+Adding (shaker-level shaker1 l2)
+
+Checking next happening (time 7)
+Deleting (holding left shot8)
+Adding (handempty left)
+Adding (ontable shot8)
+
+Checking next happening (time 8)
+Deleting (ontable shot8)
+Deleting (handempty right)
+Adding (holding right shot8)
+
+Checking next happening (time 9)
+Deleting (empty shot8)
+Adding (contains shot8 ingredient3)
+
+Checking next happening (time 10)
+Deleting (contains shot8 ingredient3)
+Deleting (empty shaker2)
+Deleting (clean shaker2)
+Deleting (shaker-level shaker2 l0)
+Adding (empty shot8)
+Adding (contains shaker2 ingredient3)
+Adding (unshaked shaker2)
+Adding (shaker-level shaker2 l1)
+
+Checking next happening (time 11)
+Deleting (used shot8 ingredient3)
+Adding (clean shot8)
+
+Checking next happening (time 12)
+Deleting (empty shot8)
+Deleting (clean shot8)
+Adding (contains shot8 ingredient1)
+Adding (used shot8 ingredient1)
+
+Checking next happening (time 13)
+Deleting (contains shot8 ingredient1)
+Deleting (shaker-level shaker2 l1)
+Adding (contains shaker2 ingredient1)
+Adding (empty shot8)
+Adding (shaker-level shaker2 l2)
+
+Checking next happening (time 14)
+Deleting (ontable shaker2)
+Deleting (handempty left)
+Adding (holding left shaker2)
+
+Checking next happening (time 15)
+Plan failed because of unsatisfied precondition in:
+(grasp left shaker1)
+
+
+Plan failed to execute
+
+Plan Repair Advice:
+
+(grasp left shaker1) has an unsatisfied precondition at time 15
+(Set (handempty left) to true)
+
+
+Failed plans:
+ ./experiments_multiagent_help/run2031/barman-enabled/agent2_plan_final_temp.txt 
+
+[results][barman-enabled][13]
+[single_agent][planning time: 1000.41][cost: 74.0]
+[multi_agent][planning_time: 1005.7380671977996][cost: inf][agents: 3][optimization time 4.2680370807647705]
+----------------------------------------
+Using cached single agent results
+['contains shot3 cocktail4 and all hands are empty.', 'contains shot5 cocktail2 and all hands are empty.']
+['./experiments_multiagent_help/run2031/barman-enabled/p14_1.pddl', './experiments_multiagent_help/run2031/barman-enabled/p14_2.pddl']
+agent1
+[info][subgoal_1][barman-enabled] task 14 takes 334.27 sec, found a plan with cost 11.0
+planner successful
+validating
+validator time 0.0054476261138916016
+agent2
+[info][subgoal_2][barman-enabled] task 14 takes 302.89 sec, found a plan with cost 11.0
+planner successful
+validating
+validator time 0.004645109176635742
+[info][multiagent main goal][barman-enabled] task 14 takes 334.31 sec, found a plan with cost 49.0
+TASK: barman-enabled - 2031 - 14
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (grasp left shot8)
+2 (Single): Agent 1: (fill-shot shot8 ingredient1 left right dispenser1)
+3 (Single): Agent 1: (pour-shot-to-clean-shaker shot8 ingredient1 shaker1 left l0 l1)
+4 (Single): Agent 1: (clean-shot shot8 ingredient1 left right)
+5 (Single): Agent 1: (fill-shot shot8 ingredient3 left right dispenser3)
+6 (Single): Agent 1: (pour-shot-to-used-shaker shot8 ingredient3 shaker1 left l1 l2)
+7 (Single): Agent 1: (leave left shot8)
+8 (Single): Agent 1: (grasp left shaker1)
+9 (Single): Agent 1: (shake cocktail4 ingredient3 ingredient1 shaker1 left right)
+10 (Single): Agent 1: (pour-shaker-to-shot cocktail4 shot3 left shaker1 l2 l1)
+11 (Single): Agent 1: (leave left shaker1)
+
+merging plan 2 into initial_plan
+11 True
+verifying entire plan.
+unsatisfied precondition encountered in merged plan, stopping process.
+Type-checking grasp
+...action passes type checking.
+Type-checking leave
+...action passes type checking.
+Type-checking fill-shot
+...action passes type checking.
+Type-checking refill-shot
+...action passes type checking.
+Type-checking empty-shot
+...action passes type checking.
+Type-checking clean-shot
+...action passes type checking.
+Type-checking pour-shot-to-clean-shaker
+...action passes type checking.
+Type-checking pour-shot-to-used-shaker
+...action passes type checking.
+Type-checking empty-shaker
+...action passes type checking.
+Type-checking clean-shaker
+...action passes type checking.
+Type-checking shake
+...action passes type checking.
+Type-checking pour-shaker-to-shot
+...action passes type checking.
+Checking plan: ./experiments_multiagent_help/run2031/barman-enabled/agent2_plan_final_temp.txt
+Plan to validate:
+
+Plan size: 22
+1:
+(grasp left shot8)
+ 
+2:
+(grasp left shot7)
+ 
+3:
+(fill-shot shot8 ingredient1 left right dispenser1)
+ 
+4:
+(fill-shot shot7 ingredient1 left right dispenser1)
+ 
+5:
+(pour-shot-to-clean-shaker shot8 ingredient1 shaker1 left l0 l1)
+ 
+6:
+(pour-shot-to-clean-shaker shot7 ingredient1 shaker2 left l0 l1)
+ 
+7:
+(clean-shot shot8 ingredient1 left right)
+ 
+8:
+(clean-shot shot7 ingredient1 left right)
+ 
+9:
+(fill-shot shot8 ingredient3 left right dispenser3)
+ 
+10:
+(fill-shot shot7 ingredient2 left right dispenser2)
+ 
+11:
+(pour-shot-to-used-shaker shot8 ingredient3 shaker1 left l1 l2)
+ 
+12:
+(pour-shot-to-used-shaker shot7 ingredient2 shaker2 left l1 l2)
+ 
+13:
+(leave left shot8)
+ 
+14:
+(grasp right shaker2)
+ 
+15:
+(grasp left shaker1)
+ 
+16:
+(leave left shot7)
+ 
+17:
+(shake cocktail4 ingredient3 ingredient1 shaker1 left right)
+ 
+18:
+(shake cocktail2 ingredient2 ingredient1 shaker2 right left)
+ 
+19:
+(pour-shaker-to-shot cocktail4 shot3 left shaker1 l2 l1)
+ 
+20:
+(pour-shaker-to-shot cocktail2 shot5 right shaker2 l2 l1)
+ 
+21:
+(leave left shaker1)
+ 
+22:
+(leave right shaker2)
+ 
+
+Plan Validation details
+-----------------------
+
+Checking next happening (time 1)
+Deleting (ontable shot8)
+Deleting (handempty left)
+Adding (holding left shot8)
+
+Checking next happening (time 2)
+Plan failed because of unsatisfied precondition in:
+(grasp left shot7)
+
+
+Plan failed to execute
+
+Plan Repair Advice:
+
+(grasp left shot7) has an unsatisfied precondition at time 2
+(Set (handempty left) to true)
+
+
+Failed plans:
+ ./experiments_multiagent_help/run2031/barman-enabled/agent2_plan_final_temp.txt 
+
+[results][barman-enabled][14]
+[single_agent][planning time: 1000.4][cost: 74.0]
+[multi_agent][planning_time: 974.6947912883759][cost: inf][agents: 3][optimization time 9.836465835571289]
+----------------------------------------
+Using cached single agent results
+['contains shot1 cocktail4 and all hands are empty.', 'contains shot2 cocktail1 and all hands are empty.']
+['./experiments_multiagent_help/run2031/barman-enabled/p15_1.pddl', './experiments_multiagent_help/run2031/barman-enabled/p15_2.pddl']
+agent1
+[info][subgoal_1][barman-enabled] task 15 takes 334.28 sec, found a plan with cost 11.0
+planner successful
+validating
+validator time 0.006453990936279297
+agent2
+[info][subgoal_2][barman-enabled] task 15 takes 334.25 sec, found a plan with cost 11.0
+planner successful
+validating
+validator time 0.004860877990722656
+[info][multiagent main goal][barman-enabled] task 15 takes 334.26 sec, found a plan with cost 52.0
+TASK: barman-enabled - 2031 - 15
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (grasp left shot8)
+2 (Single): Agent 1: (fill-shot shot8 ingredient1 left right dispenser1)
+3 (Single): Agent 1: (pour-shot-to-clean-shaker shot8 ingredient1 shaker1 left l0 l1)
+4 (Single): Agent 1: (clean-shot shot8 ingredient1 left right)
+5 (Single): Agent 1: (fill-shot shot8 ingredient2 left right dispenser2)
+6 (Single): Agent 1: (pour-shot-to-used-shaker shot8 ingredient2 shaker1 left l1 l2)
+7 (Single): Agent 1: (leave left shot8)
+8 (Single): Agent 1: (grasp left shaker1)
+9 (Single): Agent 1: (shake cocktail4 ingredient2 ingredient1 shaker1 left right)
+10 (Single): Agent 1: (pour-shaker-to-shot cocktail4 shot1 left shaker1 l2 l1)
+11 (Single): Agent 1: (leave left shaker1)
+
+merging plan 2 into initial_plan
+11 True
+verifying entire plan.
+unsatisfied precondition encountered in merged plan, stopping process.
+Type-checking grasp
+...action passes type checking.
+Type-checking leave
+...action passes type checking.
+Type-checking fill-shot
+...action passes type checking.
+Type-checking refill-shot
+...action passes type checking.
+Type-checking empty-shot
+...action passes type checking.
+Type-checking clean-shot
+...action passes type checking.
+Type-checking pour-shot-to-clean-shaker
+...action passes type checking.
+Type-checking pour-shot-to-used-shaker
+...action passes type checking.
+Type-checking empty-shaker
+...action passes type checking.
+Type-checking clean-shaker
+...action passes type checking.
+Type-checking shake
+...action passes type checking.
+Type-checking pour-shaker-to-shot
+...action passes type checking.
+Checking plan: ./experiments_multiagent_help/run2031/barman-enabled/agent2_plan_final_temp.txt
+Plan to validate:
+
+Plan size: 22
+1:
+(grasp left shot8)
+ 
+2:
+(grasp right shot7)
+ 
+3:
+(fill-shot shot8 ingredient1 left right dispenser1)
+ 
+4:
+(fill-shot shot7 ingredient2 right left dispenser2)
+ 
+5:
+(pour-shot-to-clean-shaker shot8 ingredient1 shaker1 left l0 l1)
+ 
+6:
+(pour-shot-to-clean-shaker shot7 ingredient2 shaker2 right l0 l1)
+ 
+7:
+(clean-shot shot8 ingredient1 left right)
+ 
+8:
+(clean-shot shot7 ingredient2 right left)
+ 
+9:
+(fill-shot shot8 ingredient2 left right dispenser2)
+ 
+10:
+(fill-shot shot7 ingredient3 right left dispenser3)
+ 
+11:
+(pour-shot-to-used-shaker shot8 ingredient2 shaker1 left l1 l2)
+ 
+12:
+(pour-shot-to-used-shaker shot7 ingredient3 shaker2 right l1 l2)
+ 
+13:
+(leave left shot8)
+ 
+14:
+(leave right shot7)
+ 
+15:
+(grasp left shaker1)
+ 
+16:
+(grasp left shaker2)
+ 
+17:
+(shake cocktail4 ingredient2 ingredient1 shaker1 left right)
+ 
+18:
+(shake cocktail1 ingredient3 ingredient2 shaker2 left right)
+ 
+19:
+(pour-shaker-to-shot cocktail4 shot1 left shaker1 l2 l1)
+ 
+20:
+(pour-shaker-to-shot cocktail1 shot2 left shaker2 l2 l1)
+ 
+21:
+(leave left shaker1)
+ 
+22:
+(leave left shaker2)
+ 
+
+Plan Validation details
+-----------------------
+
+Checking next happening (time 1)
+Deleting (ontable shot8)
+Deleting (handempty left)
+Adding (holding left shot8)
+
+Checking next happening (time 2)
+Deleting (ontable shot7)
+Deleting (handempty right)
+Adding (holding right shot7)
+
+Checking next happening (time 3)
+Plan failed because of unsatisfied precondition in:
+(fill-shot shot8 ingredient1 left right dispenser1)
+
+
+Plan failed to execute
+
+Plan Repair Advice:
+
+(fill-shot shot8 ingredient1 left right dispenser1) has an unsatisfied precondition at time 3
+(Set (handempty right) to true)
+
+
+Failed plans:
+ ./experiments_multiagent_help/run2031/barman-enabled/agent2_plan_final_temp.txt 
+
+[results][barman-enabled][15]
+[single_agent][planning time: 1000.41][cost: 75.0]
+[multi_agent][planning_time: 1006.3036907100677][cost: inf][agents: 3][optimization time 10.825320720672607]
+----------------------------------------
+Using cached single agent results
+['contains shot1 cocktail1 and all hands are empty.', 'contains shot2 cocktail5 and all hands are empty.']
+['./experiments_multiagent_help/run2031/barman-enabled/p16_1.pddl', './experiments_multiagent_help/run2031/barman-enabled/p16_2.pddl']
+agent1
+[info][subgoal_1][barman-enabled] task 16 takes 334.28 sec, found a plan with cost 11.0
+planner successful
+validating
+validator time 0.0055654048919677734
+agent2
+[info][subgoal_2][barman-enabled] task 16 takes 334.25 sec, found a plan with cost 11.0
+planner successful
+validating
+validator time 0.004785776138305664
+[info][multiagent main goal][barman-enabled] task 16 takes 334.27 sec, found a plan with cost 53.0
+TASK: barman-enabled - 2031 - 16
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (grasp left shot8)
+2 (Single): Agent 1: (fill-shot shot8 ingredient1 left right dispenser1)
+3 (Single): Agent 1: (pour-shot-to-clean-shaker shot8 ingredient1 shaker1 left l0 l1)
+4 (Single): Agent 1: (clean-shot shot8 ingredient1 left right)
+5 (Single): Agent 1: (fill-shot shot8 ingredient3 left right dispenser3)
+6 (Single): Agent 1: (pour-shot-to-used-shaker shot8 ingredient3 shaker1 left l1 l2)
+7 (Single): Agent 1: (leave left shot8)
+8 (Single): Agent 1: (grasp left shaker1)
+9 (Single): Agent 1: (shake cocktail1 ingredient3 ingredient1 shaker1 left right)
+10 (Single): Agent 1: (pour-shaker-to-shot cocktail1 shot1 left shaker1 l2 l1)
+11 (Single): Agent 1: (leave left shaker1)
+
+merging plan 2 into initial_plan
+11 True
+verifying entire plan.
+unsatisfied precondition encountered in merged plan, stopping process.
+Type-checking grasp
+...action passes type checking.
+Type-checking leave
+...action passes type checking.
+Type-checking fill-shot
+...action passes type checking.
+Type-checking refill-shot
+...action passes type checking.
+Type-checking empty-shot
+...action passes type checking.
+Type-checking clean-shot
+...action passes type checking.
+Type-checking pour-shot-to-clean-shaker
+...action passes type checking.
+Type-checking pour-shot-to-used-shaker
+...action passes type checking.
+Type-checking empty-shaker
+...action passes type checking.
+Type-checking clean-shaker
+...action passes type checking.
+Type-checking shake
+...action passes type checking.
+Type-checking pour-shaker-to-shot
+...action passes type checking.
+Checking plan: ./experiments_multiagent_help/run2031/barman-enabled/agent2_plan_final_temp.txt
+Plan to validate:
+
+Plan size: 22
+1:
+(grasp left shot8)
+ 
+2:
+(grasp right shot7)
+ 
+3:
+(fill-shot shot8 ingredient1 left right dispenser1)
+ 
+4:
+(fill-shot shot7 ingredient3 right left dispenser3)
+ 
+5:
+(pour-shot-to-clean-shaker shot8 ingredient1 shaker1 left l0 l1)
+ 
+6:
+(pour-shot-to-clean-shaker shot7 ingredient3 shaker2 right l0 l1)
+ 
+7:
+(clean-shot shot8 ingredient1 left right)
+ 
+8:
+(clean-shot shot7 ingredient3 right left)
+ 
+9:
+(fill-shot shot8 ingredient3 left right dispenser3)
+ 
+10:
+(fill-shot shot7 ingredient2 right left dispenser2)
+ 
+11:
+(pour-shot-to-used-shaker shot8 ingredient3 shaker1 left l1 l2)
+ 
+12:
+(pour-shot-to-used-shaker shot7 ingredient2 shaker2 right l1 l2)
+ 
+13:
+(leave left shot8)
+ 
+14:
+(leave right shot7)
+ 
+15:
+(grasp left shaker1)
+ 
+16:
+(grasp left shaker2)
+ 
+17:
+(shake cocktail1 ingredient3 ingredient1 shaker1 left right)
+ 
+18:
+(shake cocktail5 ingredient3 ingredient2 shaker2 left right)
+ 
+19:
+(pour-shaker-to-shot cocktail1 shot1 left shaker1 l2 l1)
+ 
+20:
+(pour-shaker-to-shot cocktail5 shot2 left shaker2 l2 l1)
+ 
+21:
+(leave left shaker1)
+ 
+22:
+(leave left shaker2)
+ 
+
+Plan Validation details
+-----------------------
+
+Checking next happening (time 1)
+Deleting (ontable shot8)
+Deleting (handempty left)
+Adding (holding left shot8)
+
+Checking next happening (time 2)
+Deleting (ontable shot7)
+Deleting (handempty right)
+Adding (holding right shot7)
+
+Checking next happening (time 3)
+Plan failed because of unsatisfied precondition in:
+(fill-shot shot8 ingredient1 left right dispenser1)
+
+
+Plan failed to execute
+
+Plan Repair Advice:
+
+(fill-shot shot8 ingredient1 left right dispenser1) has an unsatisfied precondition at time 3
+(Set (handempty right) to true)
+
+
+Failed plans:
+ ./experiments_multiagent_help/run2031/barman-enabled/agent2_plan_final_temp.txt 
+
+[results][barman-enabled][16]
+[single_agent][planning time: 1000.41][cost: 80.0]
+[multi_agent][planning_time: 1006.2032502174377][cost: inf][agents: 3][optimization time 11.902100563049316]
+----------------------------------------
+Using cached single agent results
+['contains shot1 cocktail1 and all hands are empty.', 'contains shot2 cocktail6 and all hands are empty.']
+['./experiments_multiagent_help/run2031/barman-enabled/p17_1.pddl', './experiments_multiagent_help/run2031/barman-enabled/p17_2.pddl']
+agent1
+[info][subgoal_1][barman-enabled] task 17 takes 334.34 sec, found a plan with cost 11.0
+planner successful
+validating
+validator time 0.007302522659301758
+agent2
+[info][subgoal_2][barman-enabled] task 17 takes 334.29 sec, found a plan with cost 11.0
+planner successful
+validating
+validator time 0.004654884338378906
+[info][multiagent main goal][barman-enabled] task 17 takes 334.3 sec, found a plan with cost 64.0
+TASK: barman-enabled - 2031 - 17
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (grasp left shot9)
+2 (Single): Agent 1: (fill-shot shot9 ingredient1 left right dispenser1)
+3 (Single): Agent 1: (pour-shot-to-clean-shaker shot9 ingredient1 shaker1 left l0 l1)
+4 (Single): Agent 1: (clean-shot shot9 ingredient1 left right)
+5 (Single): Agent 1: (fill-shot shot9 ingredient3 left right dispenser3)
+6 (Single): Agent 1: (pour-shot-to-used-shaker shot9 ingredient3 shaker1 left l1 l2)
+7 (Single): Agent 1: (leave left shot9)
+8 (Single): Agent 1: (grasp left shaker1)
+9 (Single): Agent 1: (shake cocktail1 ingredient1 ingredient3 shaker1 left right)
+10 (Single): Agent 1: (pour-shaker-to-shot cocktail1 shot1 left shaker1 l2 l1)
+11 (Single): Agent 1: (leave left shaker1)
+
+merging plan 2 into initial_plan
+11 True
+verifying entire plan.
+unsatisfied precondition encountered in merged plan, stopping process.
+Type-checking grasp
+...action passes type checking.
+Type-checking leave
+...action passes type checking.
+Type-checking fill-shot
+...action passes type checking.
+Type-checking refill-shot
+...action passes type checking.
+Type-checking empty-shot
+...action passes type checking.
+Type-checking clean-shot
+...action passes type checking.
+Type-checking pour-shot-to-clean-shaker
+...action passes type checking.
+Type-checking pour-shot-to-used-shaker
+...action passes type checking.
+Type-checking empty-shaker
+...action passes type checking.
+Type-checking clean-shaker
+...action passes type checking.
+Type-checking shake
+...action passes type checking.
+Type-checking pour-shaker-to-shot
+...action passes type checking.
+Checking plan: ./experiments_multiagent_help/run2031/barman-enabled/agent2_plan_final_temp.txt
+Plan to validate:
+
+Plan size: 22
+1:
+(grasp left shot9)
+ 
+2:
+(grasp left shot8)
+ 
+3:
+(fill-shot shot9 ingredient1 left right dispenser1)
+ 
+4:
+(fill-shot shot8 ingredient1 left right dispenser1)
+ 
+5:
+(pour-shot-to-clean-shaker shot9 ingredient1 shaker1 left l0 l1)
+ 
+6:
+(pour-shot-to-clean-shaker shot8 ingredient1 shaker2 left l0 l1)
+ 
+7:
+(clean-shot shot9 ingredient1 left right)
+ 
+8:
+(clean-shot shot8 ingredient1 left right)
+ 
+9:
+(fill-shot shot9 ingredient3 left right dispenser3)
+ 
+10:
+(fill-shot shot8 ingredient2 left right dispenser2)
+ 
+11:
+(pour-shot-to-used-shaker shot9 ingredient3 shaker1 left l1 l2)
+ 
+12:
+(pour-shot-to-used-shaker shot8 ingredient2 shaker2 left l1 l2)
+ 
+13:
+(leave left shot9)
+ 
+14:
+(leave left shot8)
+ 
+15:
+(grasp left shaker1)
+ 
+16:
+(grasp left shaker2)
+ 
+17:
+(shake cocktail1 ingredient1 ingredient3 shaker1 left right)
+ 
+18:
+(shake cocktail6 ingredient1 ingredient2 shaker2 left right)
+ 
+19:
+(pour-shaker-to-shot cocktail1 shot1 left shaker1 l2 l1)
+ 
+20:
+(pour-shaker-to-shot cocktail6 shot2 left shaker2 l2 l1)
+ 
+21:
+(leave left shaker1)
+ 
+22:
+(leave left shaker2)
+ 
+
+Plan Validation details
+-----------------------
+
+Checking next happening (time 1)
+Deleting (ontable shot9)
+Deleting (handempty left)
+Adding (holding left shot9)
+
+Checking next happening (time 2)
+Plan failed because of unsatisfied precondition in:
+(grasp left shot8)
+
+
+Plan failed to execute
+
+Plan Repair Advice:
+
+(grasp left shot8) has an unsatisfied precondition at time 2
+(Set (handempty left) to true)
+
+
+Failed plans:
+ ./experiments_multiagent_help/run2031/barman-enabled/agent2_plan_final_temp.txt 
+
+[results][barman-enabled][17]
+[single_agent][planning time: 1000.39][cost: 83.0]
+[multi_agent][planning_time: 1007.4951535987855][cost: inf][agents: 3][optimization time 9.3445143699646]
+----------------------------------------
+Using cached single agent results
+['contains shot2 cocktail1 and all hands are empty.', 'contains shot7 cocktail2 and all hands are empty.']
+['./experiments_multiagent_help/run2031/barman-enabled/p18_1.pddl', './experiments_multiagent_help/run2031/barman-enabled/p18_2.pddl']
+agent1
+[info][subgoal_1][barman-enabled] task 18 takes 334.33 sec, found a plan with cost 11.0
+planner successful
+validating
+validator time 0.006515026092529297
+agent2
+[info][subgoal_2][barman-enabled] task 18 takes 334.29 sec, found a plan with cost 11.0
+planner successful
+validating
+validator time 0.004420280456542969
+[info][multiagent main goal][barman-enabled] task 18 takes 334.32 sec, found a plan with cost 71.0
+TASK: barman-enabled - 2031 - 18
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (grasp left shot9)
+2 (Single): Agent 1: (fill-shot shot9 ingredient1 left right dispenser1)
+3 (Single): Agent 1: (pour-shot-to-clean-shaker shot9 ingredient1 shaker1 left l0 l1)
+4 (Single): Agent 1: (clean-shot shot9 ingredient1 left right)
+5 (Single): Agent 1: (fill-shot shot9 ingredient2 left right dispenser2)
+6 (Single): Agent 1: (pour-shot-to-used-shaker shot9 ingredient2 shaker1 left l1 l2)
+7 (Single): Agent 1: (leave left shot9)
+8 (Single): Agent 1: (grasp left shaker1)
+9 (Single): Agent 1: (shake cocktail1 ingredient1 ingredient2 shaker1 left right)
+10 (Single): Agent 1: (pour-shaker-to-shot cocktail1 shot2 left shaker1 l2 l1)
+11 (Single): Agent 1: (leave left shaker1)
+
+merging plan 2 into initial_plan
+11 True
+verifying entire plan.
+unsatisfied precondition encountered in merged plan, stopping process.
+Type-checking grasp
+...action passes type checking.
+Type-checking leave
+...action passes type checking.
+Type-checking fill-shot
+...action passes type checking.
+Type-checking refill-shot
+...action passes type checking.
+Type-checking empty-shot
+...action passes type checking.
+Type-checking clean-shot
+...action passes type checking.
+Type-checking pour-shot-to-clean-shaker
+...action passes type checking.
+Type-checking pour-shot-to-used-shaker
+...action passes type checking.
+Type-checking empty-shaker
+...action passes type checking.
+Type-checking clean-shaker
+...action passes type checking.
+Type-checking shake
+...action passes type checking.
+Type-checking pour-shaker-to-shot
+...action passes type checking.
+Checking plan: ./experiments_multiagent_help/run2031/barman-enabled/agent2_plan_final_temp.txt
+Plan to validate:
+
+Plan size: 22
+1:
+(grasp left shot9)
+ 
+2:
+(grasp right shot8)
+ 
+3:
+(fill-shot shot9 ingredient1 left right dispenser1)
+ 
+4:
+(fill-shot shot8 ingredient2 right left dispenser2)
+ 
+5:
+(pour-shot-to-clean-shaker shot9 ingredient1 shaker1 left l0 l1)
+ 
+6:
+(pour-shot-to-clean-shaker shot8 ingredient2 shaker2 right l0 l1)
+ 
+7:
+(clean-shot shot9 ingredient1 left right)
+ 
+8:
+(clean-shot shot8 ingredient2 right left)
+ 
+9:
+(fill-shot shot9 ingredient2 left right dispenser2)
+ 
+10:
+(fill-shot shot8 ingredient3 right left dispenser3)
+ 
+11:
+(pour-shot-to-used-shaker shot9 ingredient2 shaker1 left l1 l2)
+ 
+12:
+(pour-shot-to-used-shaker shot8 ingredient3 shaker2 right l1 l2)
+ 
+13:
+(leave left shot9)
+ 
+14:
+(leave right shot8)
+ 
+15:
+(grasp left shaker1)
+ 
+16:
+(grasp left shaker2)
+ 
+17:
+(shake cocktail1 ingredient1 ingredient2 shaker1 left right)
+ 
+18:
+(shake cocktail2 ingredient2 ingredient3 shaker2 left right)
+ 
+19:
+(pour-shaker-to-shot cocktail1 shot2 left shaker1 l2 l1)
+ 
+20:
+(pour-shaker-to-shot cocktail2 shot7 left shaker2 l2 l1)
+ 
+21:
+(leave left shaker1)
+ 
+22:
+(leave left shaker2)
+ 
+
+Plan Validation details
+-----------------------
+
+Checking next happening (time 1)
+Deleting (ontable shot9)
+Deleting (handempty left)
+Adding (holding left shot9)
+
+Checking next happening (time 2)
+Deleting (ontable shot8)
+Deleting (handempty right)
+Adding (holding right shot8)
+
+Checking next happening (time 3)
+Plan failed because of unsatisfied precondition in:
+(fill-shot shot9 ingredient1 left right dispenser1)
+
+
+Plan failed to execute
+
+Plan Repair Advice:
+
+(fill-shot shot9 ingredient1 left right dispenser1) has an unsatisfied precondition at time 3
+(Set (handempty right) to true)
+
+
+Failed plans:
+ ./experiments_multiagent_help/run2031/barman-enabled/agent2_plan_final_temp.txt 
+
+[results][barman-enabled][18]
+[single_agent][planning time: 1000.44][cost: 86.0]
+[multi_agent][planning_time: 1005.9922496700287][cost: inf][agents: 3][optimization time 9.966780424118042]
+----------------------------------------
+Using cached single agent results
+['contains shot5 cocktail1 and all hands are empty.', 'contains shot2 cocktail2 and all hands are empty.']
+['./experiments_multiagent_help/run2031/barman-enabled/p19_1.pddl', './experiments_multiagent_help/run2031/barman-enabled/p19_2.pddl']
+agent1
+[info][subgoal_1][barman-enabled] task 19 takes 334.34 sec, found a plan with cost 11.0
+planner successful
+validating
+validator time 0.004404783248901367
+agent2
+[info][subgoal_2][barman-enabled] task 19 takes 334.29 sec, found a plan with cost 11.0
+planner successful
+validating
+validator time 0.0045430660247802734
+[info][multiagent main goal][barman-enabled] task 19 takes 334.33 sec, found a plan with cost 68.0
+TASK: barman-enabled - 2031 - 19
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (grasp left shot9)
+2 (Single): Agent 1: (fill-shot shot9 ingredient1 left right dispenser1)
+3 (Single): Agent 1: (pour-shot-to-clean-shaker shot9 ingredient1 shaker1 left l0 l1)
+4 (Single): Agent 1: (clean-shot shot9 ingredient1 left right)
+5 (Single): Agent 1: (fill-shot shot9 ingredient3 left right dispenser3)
+6 (Single): Agent 1: (pour-shot-to-used-shaker shot9 ingredient3 shaker1 left l1 l2)
+7 (Single): Agent 1: (leave left shot9)
+8 (Single): Agent 1: (grasp left shaker1)
+9 (Single): Agent 1: (shake cocktail1 ingredient3 ingredient1 shaker1 left right)
+10 (Single): Agent 1: (pour-shaker-to-shot cocktail1 shot5 left shaker1 l2 l1)
+11 (Single): Agent 1: (leave left shaker1)
+
+merging plan 2 into initial_plan
+18 True
+verifying entire plan.
+unsatisfied precondition encountered in merged plan, stopping process.
+Type-checking grasp
+...action passes type checking.
+Type-checking leave
+...action passes type checking.
+Type-checking fill-shot
+...action passes type checking.
+Type-checking refill-shot
+...action passes type checking.
+Type-checking empty-shot
+...action passes type checking.
+Type-checking clean-shot
+...action passes type checking.
+Type-checking pour-shot-to-clean-shaker
+...action passes type checking.
+Type-checking pour-shot-to-used-shaker
+...action passes type checking.
+Type-checking empty-shaker
+...action passes type checking.
+Type-checking clean-shaker
+...action passes type checking.
+Type-checking shake
+...action passes type checking.
+Type-checking pour-shaker-to-shot
+...action passes type checking.
+Checking plan: ./experiments_multiagent_help/run2031/barman-enabled/agent2_plan_final_temp.txt
+Plan to validate:
+
+Plan size: 22
+1:
+(grasp left shot9)
+ 
+2:
+(fill-shot shot9 ingredient1 left right dispenser1)
+ 
+3:
+(pour-shot-to-clean-shaker shot9 ingredient1 shaker1 left l0 l1)
+ 
+4:
+(clean-shot shot9 ingredient1 left right)
+ 
+5:
+(fill-shot shot9 ingredient3 left right dispenser3)
+ 
+6:
+(pour-shot-to-used-shaker shot9 ingredient3 shaker1 left l1 l2)
+ 
+7:
+(leave left shot9)
+ 
+8:
+(grasp right shot9)
+ 
+9:
+(refill-shot shot9 ingredient3 right left dispenser3)
+ 
+10:
+(pour-shot-to-clean-shaker shot9 ingredient3 shaker2 right l0 l1)
+ 
+11:
+(clean-shot shot9 ingredient3 right left)
+ 
+12:
+(fill-shot shot9 ingredient1 right left dispenser1)
+ 
+13:
+(pour-shot-to-used-shaker shot9 ingredient1 shaker2 right l1 l2)
+ 
+14:
+(grasp left shaker2)
+ 
+15:
+(grasp left shaker1)
+ 
+16:
+(leave right shot9)
+ 
+17:
+(shake cocktail1 ingredient3 ingredient1 shaker1 left right)
+ 
+18:
+(shake cocktail2 ingredient1 ingredient3 shaker2 left right)
+ 
+19:
+(pour-shaker-to-shot cocktail1 shot5 left shaker1 l2 l1)
+ 
+20:
+(pour-shaker-to-shot cocktail2 shot2 left shaker2 l2 l1)
+ 
+21:
+(leave left shaker1)
+ 
+22:
+(leave left shaker2)
+ 
+
+Plan Validation details
+-----------------------
+
+Checking next happening (time 1)
+Deleting (ontable shot9)
+Deleting (handempty left)
+Adding (holding left shot9)
+
+Checking next happening (time 2)
+Deleting (empty shot9)
+Deleting (clean shot9)
+Adding (contains shot9 ingredient1)
+Adding (used shot9 ingredient1)
+
+Checking next happening (time 3)
+Deleting (contains shot9 ingredient1)
+Deleting (empty shaker1)
+Deleting (clean shaker1)
+Deleting (shaker-level shaker1 l0)
+Adding (empty shot9)
+Adding (contains shaker1 ingredient1)
+Adding (unshaked shaker1)
+Adding (shaker-level shaker1 l1)
+
+Checking next happening (time 4)
+Deleting (used shot9 ingredient1)
+Adding (clean shot9)
+
+Checking next happening (time 5)
+Deleting (empty shot9)
+Deleting (clean shot9)
+Adding (contains shot9 ingredient3)
+Adding (used shot9 ingredient3)
+
+Checking next happening (time 6)
+Deleting (contains shot9 ingredient3)
+Deleting (shaker-level shaker1 l1)
+Adding (contains shaker1 ingredient3)
+Adding (empty shot9)
+Adding (shaker-level shaker1 l2)
+
+Checking next happening (time 7)
+Deleting (holding left shot9)
+Adding (handempty left)
+Adding (ontable shot9)
+
+Checking next happening (time 8)
+Deleting (ontable shot9)
+Deleting (handempty right)
+Adding (holding right shot9)
+
+Checking next happening (time 9)
+Deleting (empty shot9)
+Adding (contains shot9 ingredient3)
+
+Checking next happening (time 10)
+Deleting (contains shot9 ingredient3)
+Deleting (empty shaker2)
+Deleting (clean shaker2)
+Deleting (shaker-level shaker2 l0)
+Adding (empty shot9)
+Adding (contains shaker2 ingredient3)
+Adding (unshaked shaker2)
+Adding (shaker-level shaker2 l1)
+
+Checking next happening (time 11)
+Deleting (used shot9 ingredient3)
+Adding (clean shot9)
+
+Checking next happening (time 12)
+Deleting (empty shot9)
+Deleting (clean shot9)
+Adding (contains shot9 ingredient1)
+Adding (used shot9 ingredient1)
+
+Checking next happening (time 13)
+Deleting (contains shot9 ingredient1)
+Deleting (shaker-level shaker2 l1)
+Adding (contains shaker2 ingredient1)
+Adding (empty shot9)
+Adding (shaker-level shaker2 l2)
+
+Checking next happening (time 14)
+Deleting (ontable shaker2)
+Deleting (handempty left)
+Adding (holding left shaker2)
+
+Checking next happening (time 15)
+Plan failed because of unsatisfied precondition in:
+(grasp left shaker1)
+
+
+Plan failed to execute
+
+Plan Repair Advice:
+
+(grasp left shaker1) has an unsatisfied precondition at time 15
+(Set (handempty left) to true)
+
+
+Failed plans:
+ ./experiments_multiagent_help/run2031/barman-enabled/agent2_plan_final_temp.txt 
+
+[results][barman-enabled][19]
+[single_agent][planning time: 1000.44][cost: 87.0]
+[multi_agent][planning_time: 1005.8862809753418][cost: inf][agents: 3][optimization time 4.62299919128418]
+----------------------------------------
+Using cached single agent results
+['contains shot3 cocktail1 and all hands are empty.', 'contains shot5 cocktail2 and all hands are empty.']
+['./experiments_multiagent_help/run2031/barman-enabled/p20_1.pddl', './experiments_multiagent_help/run2031/barman-enabled/p20_2.pddl']
+agent1
+[info][subgoal_1][barman-enabled] task 20 takes 334.34 sec, found a plan with cost 11.0
+planner successful
+validating
+validator time 0.00597691535949707
+agent2
+[info][subgoal_2][barman-enabled] task 20 takes 334.29 sec, found a plan with cost 11.0
+planner successful
+validating
+validator time 0.004273891448974609
+[info][multiagent main goal][barman-enabled] task 20 takes 334.31 sec, found a plan with cost 69.0
+TASK: barman-enabled - 2031 - 20
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (grasp right shot9)
+2 (Single): Agent 1: (fill-shot shot9 ingredient3 right left dispenser3)
+3 (Single): Agent 1: (pour-shot-to-clean-shaker shot9 ingredient3 shaker1 right l0 l1)
+4 (Single): Agent 1: (clean-shot shot9 ingredient3 right left)
+5 (Single): Agent 1: (fill-shot shot9 ingredient2 right left dispenser2)
+6 (Single): Agent 1: (pour-shot-to-used-shaker shot9 ingredient2 shaker1 right l1 l2)
+7 (Single): Agent 1: (leave right shot9)
+8 (Single): Agent 1: (grasp left shaker1)
+9 (Single): Agent 1: (shake cocktail1 ingredient2 ingredient3 shaker1 left right)
+10 (Single): Agent 1: (pour-shaker-to-shot cocktail1 shot3 left shaker1 l2 l1)
+11 (Single): Agent 1: (leave left shaker1)
+
+merging plan 2 into initial_plan
+18 True
+verifying entire plan.
+unsatisfied precondition encountered in merged plan, stopping process.
+Type-checking grasp
+...action passes type checking.
+Type-checking leave
+...action passes type checking.
+Type-checking fill-shot
+...action passes type checking.
+Type-checking refill-shot
+...action passes type checking.
+Type-checking empty-shot
+...action passes type checking.
+Type-checking clean-shot
+...action passes type checking.
+Type-checking pour-shot-to-clean-shaker
+...action passes type checking.
+Type-checking pour-shot-to-used-shaker
+...action passes type checking.
+Type-checking empty-shaker
+...action passes type checking.
+Type-checking clean-shaker
+...action passes type checking.
+Type-checking shake
+...action passes type checking.
+Type-checking pour-shaker-to-shot
+...action passes type checking.
+Checking plan: ./experiments_multiagent_help/run2031/barman-enabled/agent2_plan_final_temp.txt
+Plan to validate:
+
+Plan size: 22
+1:
+(grasp right shot9)
+ 
+2:
+(fill-shot shot9 ingredient3 right left dispenser3)
+ 
+3:
+(pour-shot-to-clean-shaker shot9 ingredient3 shaker1 right l0 l1)
+ 
+4:
+(clean-shot shot9 ingredient3 right left)
+ 
+5:
+(fill-shot shot9 ingredient2 right left dispenser2)
+ 
+6:
+(pour-shot-to-used-shaker shot9 ingredient2 shaker1 right l1 l2)
+ 
+7:
+(leave right shot9)
+ 
+8:
+(grasp left shot9)
+ 
+9:
+(refill-shot shot9 ingredient2 left right dispenser2)
+ 
+10:
+(pour-shot-to-clean-shaker shot9 ingredient2 shaker2 left l0 l1)
+ 
+11:
+(clean-shot shot9 ingredient2 left right)
+ 
+12:
+(fill-shot shot9 ingredient3 left right dispenser3)
+ 
+13:
+(pour-shot-to-used-shaker shot9 ingredient3 shaker2 left l1 l2)
+ 
+14:
+(grasp right shaker2)
+ 
+15:
+(grasp left shaker1)
+ 
+16:
+(leave left shot9)
+ 
+17:
+(shake cocktail1 ingredient2 ingredient3 shaker1 left right)
+ 
+18:
+(shake cocktail2 ingredient3 ingredient2 shaker2 right left)
+ 
+19:
+(pour-shaker-to-shot cocktail1 shot3 left shaker1 l2 l1)
+ 
+20:
+(pour-shaker-to-shot cocktail2 shot5 right shaker2 l2 l1)
+ 
+21:
+(leave left shaker1)
+ 
+22:
+(leave right shaker2)
+ 
+
+Plan Validation details
+-----------------------
+
+Checking next happening (time 1)
+Deleting (ontable shot9)
+Deleting (handempty right)
+Adding (holding right shot9)
+
+Checking next happening (time 2)
+Deleting (empty shot9)
+Deleting (clean shot9)
+Adding (contains shot9 ingredient3)
+Adding (used shot9 ingredient3)
+
+Checking next happening (time 3)
+Deleting (contains shot9 ingredient3)
+Deleting (empty shaker1)
+Deleting (clean shaker1)
+Deleting (shaker-level shaker1 l0)
+Adding (empty shot9)
+Adding (contains shaker1 ingredient3)
+Adding (unshaked shaker1)
+Adding (shaker-level shaker1 l1)
+
+Checking next happening (time 4)
+Deleting (used shot9 ingredient3)
+Adding (clean shot9)
+
+Checking next happening (time 5)
+Deleting (empty shot9)
+Deleting (clean shot9)
+Adding (contains shot9 ingredient2)
+Adding (used shot9 ingredient2)
+
+Checking next happening (time 6)
+Deleting (contains shot9 ingredient2)
+Deleting (shaker-level shaker1 l1)
+Adding (contains shaker1 ingredient2)
+Adding (empty shot9)
+Adding (shaker-level shaker1 l2)
+
+Checking next happening (time 7)
+Deleting (holding right shot9)
+Adding (handempty right)
+Adding (ontable shot9)
+
+Checking next happening (time 8)
+Deleting (ontable shot9)
+Deleting (handempty left)
+Adding (holding left shot9)
+
+Checking next happening (time 9)
+Deleting (empty shot9)
+Adding (contains shot9 ingredient2)
+
+Checking next happening (time 10)
+Deleting (contains shot9 ingredient2)
+Deleting (empty shaker2)
+Deleting (clean shaker2)
+Deleting (shaker-level shaker2 l0)
+Adding (empty shot9)
+Adding (contains shaker2 ingredient2)
+Adding (unshaked shaker2)
+Adding (shaker-level shaker2 l1)
+
+Checking next happening (time 11)
+Deleting (used shot9 ingredient2)
+Adding (clean shot9)
+
+Checking next happening (time 12)
+Deleting (empty shot9)
+Deleting (clean shot9)
+Adding (contains shot9 ingredient3)
+Adding (used shot9 ingredient3)
+
+Checking next happening (time 13)
+Deleting (contains shot9 ingredient3)
+Deleting (shaker-level shaker2 l1)
+Adding (contains shaker2 ingredient3)
+Adding (empty shot9)
+Adding (shaker-level shaker2 l2)
+
+Checking next happening (time 14)
+Deleting (ontable shaker2)
+Deleting (handempty right)
+Adding (holding right shaker2)
+
+Checking next happening (time 15)
+Plan failed because of unsatisfied precondition in:
+(grasp left shaker1)
+
+
+Plan failed to execute
+
+Plan Repair Advice:
+
+(grasp left shaker1) has an unsatisfied precondition at time 15
+(Set (handempty left) to true)
+
+
+Failed plans:
+ ./experiments_multiagent_help/run2031/barman-enabled/agent2_plan_final_temp.txt 
+
+[results][barman-enabled][20]
+[single_agent][planning time: 1000.4][cost: 86.0]
+[multi_agent][planning_time: 1006.1949705505372][cost: inf][agents: 3][optimization time 4.3886353969573975]
+----------------------------------------

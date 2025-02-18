@@ -1,0 +1,1506 @@
+Using cached single agent results
+['b3 is on the table.']
+['./experiments_multiagent_help/run1030/blocksworld/p01_1.pddl']
+agent1
+[info][subgoal_1][blocksworld] task 01 takes 0.07 sec, found a plan with cost 4.0
+planner successful
+validating
+validator time 0.046219825744628906
+[info][multiagent main goal][blocksworld] task 01 takes 0.07 sec, found a plan with cost 4.0
+TASK: blocksworld - 1030 - 01
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (unstack b2 b3)
+2 (Single): Agent 1: (putdown b2)
+3 (Single): Agent 1: (unstack b3 b1)
+4 (Single): Agent 1: (putdown b3)
+
+merging main agent's plan into combined plan
+
+Main Agent's Plan:
+1 (Single): Agent 0: (pickup b3)
+2 (Single): Agent 0: (stack b3 b2)
+3 (Single): Agent 0: (pickup b1)
+4 (Single): Agent 0: (stack b1 b3)
+
+Current Combined Plan:
+1 (Single): Agent 1: (unstack b2 b3)
+2 (Single): Agent 1: (putdown b2)
+3 (Single): Agent 1: (unstack b3 b1)
+4 (Single): Agent 1: (putdown b3)
+
+8 True
+verifying final merged plan.
+
+Final Merged Plan:
+1 (Single): Agent 0: (unstack b2 b3)
+2 (Single): Agent 0: (putdown b2)
+3 (Single): Agent 0: (unstack b3 b1)
+4 (Single): Agent 0: (putdown b3)
+5 (Single): Agent 1: (pickup b3)
+6 (Single): Agent 1: (stack b3 b2)
+7 (Single): Agent 1: (pickup b1)
+8 (Single): Agent 1: (stack b1 b3)
+
+Total Cost: 8
+[results][blocksworld][01]
+[single_agent][planning time: 0.06][cost: 6.0]
+[multi_agent][planning_time: 2.1552797698974606][cost: 8.0][agents: 2][optimization time 0.4703192710876465]
+----------------------------------------
+Using cached single agent results
+LLM generated no subgoal for agent 1, reducing number of agents
+args.num_agents: 1
+[]
+[]
+[info][multiagent main goal][blocksworld] task 02 takes 0.07 sec, found a plan with cost 4.0
+[results][blocksworld][02]
+[single_agent][planning time: 0.07][cost: 6.0]
+[multi_agent][planning_time: 0.07][cost: 6.0][agents: 1][optimization time 0]
+----------------------------------------
+Using cached single agent results
+['b3 should be on top of b4.']
+['./experiments_multiagent_help/run1030/blocksworld/p03_1.pddl']
+agent1
+[info][subgoal_1][blocksworld] task 03 takes 0.07 sec, found a plan with cost 4.0
+planner successful
+validating
+validator time 0.0024089813232421875
+[info][multiagent main goal][blocksworld] task 03 takes 0.07 sec, found a plan with cost 2.0
+TASK: blocksworld - 1030 - 03
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (unstack b1 b3)
+2 (Single): Agent 1: (putdown b1)
+3 (Single): Agent 1: (unstack b3 b2)
+4 (Single): Agent 1: (stack b3 b4)
+
+merging main agent's plan into combined plan
+
+Main Agent's Plan:
+1 (Single): Agent 0: (pickup b2)
+2 (Single): Agent 0: (stack b2 b1)
+
+Current Combined Plan:
+1 (Single): Agent 1: (unstack b1 b3)
+2 (Single): Agent 1: (putdown b1)
+3 (Single): Agent 1: (unstack b3 b2)
+4 (Single): Agent 1: (stack b3 b4)
+
+5 True
+verifying final merged plan.
+
+Final Merged Plan:
+1 (Single): Agent 0: (unstack b1 b3)
+2 (Single): Agent 0: (putdown b1)
+3 (Single): Agent 0: (unstack b3 b2)
+4 (Single): Agent 1: (pickup b2)
+5 (Parallel):
+  Agent 0: (stack b3 b4)
+  Agent 1: (stack b2 b1)
+
+Total Cost: 5
+[results][blocksworld][03]
+[single_agent][planning time: 0.06][cost: 6.0]
+[multi_agent][planning_time: 1.6620465660095216][cost: 5.0][agents: 2][optimization time 2.4452855587005615]
+----------------------------------------
+Using cached single agent results
+['b1 is on the table.']
+['./experiments_multiagent_help/run1030/blocksworld/p04_1.pddl']
+agent1
+[info][subgoal_1][blocksworld] task 04 takes 0.07 sec, found a plan with cost 4.0
+planner successful
+validating
+validator time 0.002454996109008789
+[info][multiagent main goal][blocksworld] task 04 takes 0.08 sec, found a plan with cost 8.0
+TASK: blocksworld - 1030 - 04
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (unstack b3 b1)
+2 (Single): Agent 1: (putdown b3)
+3 (Single): Agent 1: (unstack b1 b4)
+4 (Single): Agent 1: (putdown b1)
+
+merging main agent's plan into combined plan
+
+Main Agent's Plan:
+1 (Single): Agent 0: (unstack b4 b2)
+2 (Single): Agent 0: (putdown b4)
+3 (Single): Agent 0: (pickup b3)
+4 (Single): Agent 0: (stack b3 b4)
+5 (Single): Agent 0: (pickup b2)
+6 (Single): Agent 0: (stack b2 b3)
+7 (Single): Agent 0: (pickup b1)
+8 (Single): Agent 0: (stack b1 b2)
+
+Current Combined Plan:
+1 (Single): Agent 1: (unstack b3 b1)
+2 (Single): Agent 1: (putdown b3)
+3 (Single): Agent 1: (unstack b1 b4)
+4 (Single): Agent 1: (putdown b1)
+
+11 True
+verifying final merged plan.
+
+Final Merged Plan:
+1 (Single): Agent 0: (unstack b3 b1)
+2 (Single): Agent 0: (putdown b3)
+3 (Single): Agent 0: (unstack b1 b4)
+4 (Single): Agent 1: (unstack b4 b2)
+5 (Single): Agent 1: (putdown b4)
+6 (Single): Agent 1: (pickup b3)
+7 (Single): Agent 1: (stack b3 b4)
+8 (Single): Agent 1: (pickup b2)
+9 (Parallel):
+  Agent 0: (putdown b1)
+  Agent 1: (stack b2 b3)
+10 (Single): Agent 1: (pickup b1)
+11 (Single): Agent 1: (stack b1 b2)
+
+Total Cost: 11
+[results][blocksworld][04]
+[single_agent][planning time: 0.06][cost: 12.0]
+[multi_agent][planning_time: 1.641710424423218][cost: 11.0][agents: 2][optimization time 6.207913398742676]
+----------------------------------------
+Using cached single agent results
+['b4 should be on the table.']
+['./experiments_multiagent_help/run1030/blocksworld/p05_1.pddl']
+agent1
+[info][subgoal_1][blocksworld] task 05 takes 0.08 sec, found a plan with cost 2.0
+planner successful
+validating
+validator time 0.0020742416381835938
+[info][multiagent main goal][blocksworld] task 05 takes 0.07 sec, found a plan with cost 6.0
+TASK: blocksworld - 1030 - 05
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (unstack b4 b1)
+2 (Single): Agent 1: (putdown b4)
+
+merging main agent's plan into combined plan
+
+Main Agent's Plan:
+1 (Single): Agent 0: (unstack b1 b2)
+2 (Single): Agent 0: (putdown b1)
+3 (Single): Agent 0: (unstack b2 b3)
+4 (Single): Agent 0: (putdown b2)
+5 (Single): Agent 0: (pickup b1)
+6 (Single): Agent 0: (stack b1 b3)
+
+Current Combined Plan:
+1 (Single): Agent 1: (unstack b4 b1)
+2 (Single): Agent 1: (putdown b4)
+
+7 True
+verifying final merged plan.
+
+Final Merged Plan:
+1 (Single): Agent 0: (unstack b4 b1)
+2 (Single): Agent 1: (unstack b1 b2)
+3 (Single): Agent 1: (putdown b1)
+4 (Single): Agent 1: (unstack b2 b3)
+5 (Single): Agent 1: (putdown b2)
+6 (Single): Agent 1: (pickup b1)
+7 (Parallel):
+  Agent 0: (putdown b4)
+  Agent 1: (stack b1 b3)
+
+Total Cost: 7
+[results][blocksworld][05]
+[single_agent][planning time: 0.06][cost: 8.0]
+[multi_agent][planning_time: 3.378360414505005][cost: 7.0][agents: 2][optimization time 4.481872081756592]
+----------------------------------------
+Using cached single agent results
+['b3 should be on top of b5.']
+['./experiments_multiagent_help/run1030/blocksworld/p06_1.pddl']
+agent1
+[info][subgoal_1][blocksworld] task 06 takes 0.07 sec, found a plan with cost 4.0
+planner successful
+validating
+validator time 0.002126932144165039
+[info][multiagent main goal][blocksworld] task 06 takes 0.08 sec, found a plan with cost 8.0
+TASK: blocksworld - 1030 - 06
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (unstack b5 b3)
+2 (Single): Agent 1: (putdown b5)
+3 (Single): Agent 1: (unstack b3 b4)
+4 (Single): Agent 1: (stack b3 b5)
+
+merging main agent's plan into combined plan
+
+Main Agent's Plan:
+1 (Single): Agent 0: (unstack b4 b2)
+2 (Single): Agent 0: (putdown b4)
+3 (Single): Agent 0: (unstack b2 b1)
+4 (Single): Agent 0: (putdown b2)
+5 (Single): Agent 0: (pickup b1)
+6 (Single): Agent 0: (stack b1 b2)
+7 (Single): Agent 0: (pickup b4)
+8 (Single): Agent 0: (stack b4 b1)
+
+Current Combined Plan:
+1 (Single): Agent 1: (unstack b5 b3)
+2 (Single): Agent 1: (putdown b5)
+3 (Single): Agent 1: (unstack b3 b4)
+4 (Single): Agent 1: (stack b3 b5)
+
+11 True
+verifying final merged plan.
+
+Final Merged Plan:
+1 (Single): Agent 0: (unstack b5 b3)
+2 (Single): Agent 0: (putdown b5)
+3 (Single): Agent 0: (unstack b3 b4)
+4 (Single): Agent 1: (unstack b4 b2)
+5 (Single): Agent 1: (putdown b4)
+6 (Single): Agent 1: (unstack b2 b1)
+7 (Single): Agent 1: (putdown b2)
+8 (Single): Agent 1: (pickup b1)
+9 (Single): Agent 1: (stack b1 b2)
+10 (Single): Agent 1: (pickup b4)
+11 (Parallel):
+  Agent 0: (stack b3 b5)
+  Agent 1: (stack b4 b1)
+
+Total Cost: 11
+[results][blocksworld][06]
+[single_agent][planning time: 0.08][cost: 12.0]
+[multi_agent][planning_time: 1.0557657718658449][cost: 11.0][agents: 2][optimization time 7.478176593780518]
+----------------------------------------
+Using cached single agent results
+['b3 is on top of b5.']
+['./experiments_multiagent_help/run1030/blocksworld/p07_1.pddl']
+agent1
+[info][subgoal_1][blocksworld] task 07 takes 0.09 sec, found a plan with cost 6.0
+planner successful
+validating
+validator time 0.01127767562866211
+[info][multiagent main goal][blocksworld] task 07 takes 0.08 sec, found a plan with cost 2.0
+TASK: blocksworld - 1030 - 07
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (unstack b5 b2)
+2 (Single): Agent 1: (putdown b5)
+3 (Single): Agent 1: (unstack b2 b3)
+4 (Single): Agent 1: (putdown b2)
+5 (Single): Agent 1: (unstack b3 b1)
+6 (Single): Agent 1: (stack b3 b5)
+
+merging main agent's plan into combined plan
+
+Main Agent's Plan:
+1 (Single): Agent 0: (pickup b4)
+2 (Single): Agent 0: (stack b4 b3)
+
+Current Combined Plan:
+1 (Single): Agent 1: (unstack b5 b2)
+2 (Single): Agent 1: (putdown b5)
+3 (Single): Agent 1: (unstack b2 b3)
+4 (Single): Agent 1: (putdown b2)
+5 (Single): Agent 1: (unstack b3 b1)
+6 (Single): Agent 1: (stack b3 b5)
+
+7 True
+verifying final merged plan.
+
+Final Merged Plan:
+1 (Single): Agent 0: (unstack b5 b2)
+2 (Single): Agent 0: (putdown b5)
+3 (Single): Agent 0: (unstack b2 b3)
+4 (Single): Agent 0: (putdown b2)
+5 (Single): Agent 0: (unstack b3 b1)
+6 (Parallel):
+  Agent 0: (stack b3 b5)
+  Agent 1: (pickup b4)
+7 (Single): Agent 1: (stack b4 b3)
+
+Total Cost: 7
+[results][blocksworld][07]
+[single_agent][planning time: 0.08][cost: 8.0]
+[multi_agent][planning_time: 1.6863245201110841][cost: 7.0][agents: 2][optimization time 6.696522951126099]
+----------------------------------------
+Using cached single agent results
+['b3 should be on top of b5.']
+['./experiments_multiagent_help/run1030/blocksworld/p08_1.pddl']
+agent1
+[info][subgoal_1][blocksworld] task 08 takes 0.08 sec, found a plan with cost 10.0
+planner successful
+validating
+validator time 0.0020666122436523438
+[info][multiagent main goal][blocksworld] task 08 takes 0.08 sec, found a plan with cost 4.0
+TASK: blocksworld - 1030 - 08
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (unstack b6 b4)
+2 (Single): Agent 1: (putdown b6)
+3 (Single): Agent 1: (unstack b4 b5)
+4 (Single): Agent 1: (putdown b4)
+5 (Single): Agent 1: (unstack b5 b1)
+6 (Single): Agent 1: (putdown b5)
+7 (Single): Agent 1: (unstack b1 b3)
+8 (Single): Agent 1: (putdown b1)
+9 (Single): Agent 1: (unstack b3 b2)
+10 (Single): Agent 1: (stack b3 b5)
+
+merging main agent's plan into combined plan
+
+Main Agent's Plan:
+1 (Single): Agent 0: (pickup b6)
+2 (Single): Agent 0: (stack b6 b2)
+3 (Single): Agent 0: (pickup b1)
+4 (Single): Agent 0: (stack b1 b6)
+
+Current Combined Plan:
+1 (Single): Agent 1: (unstack b6 b4)
+2 (Single): Agent 1: (putdown b6)
+3 (Single): Agent 1: (unstack b4 b5)
+4 (Single): Agent 1: (putdown b4)
+5 (Single): Agent 1: (unstack b5 b1)
+6 (Single): Agent 1: (putdown b5)
+7 (Single): Agent 1: (unstack b1 b3)
+8 (Single): Agent 1: (putdown b1)
+9 (Single): Agent 1: (unstack b3 b2)
+10 (Single): Agent 1: (stack b3 b5)
+
+12 True
+verifying final merged plan.
+
+Final Merged Plan:
+1 (Single): Agent 0: (unstack b6 b4)
+2 (Single): Agent 0: (putdown b6)
+3 (Single): Agent 0: (unstack b4 b5)
+4 (Single): Agent 0: (putdown b4)
+5 (Single): Agent 0: (unstack b5 b1)
+6 (Single): Agent 0: (putdown b5)
+7 (Single): Agent 0: (unstack b1 b3)
+8 (Single): Agent 0: (putdown b1)
+9 (Parallel):
+  Agent 0: (unstack b3 b2)
+  Agent 1: (pickup b6)
+10 (Single): Agent 1: (stack b6 b2)
+11 (Single): Agent 1: (pickup b1)
+12 (Parallel):
+  Agent 0: (stack b3 b5)
+  Agent 1: (stack b1 b6)
+
+Total Cost: 12
+[results][blocksworld][08]
+[single_agent][planning time: 0.1][cost: 14.0]
+[multi_agent][planning_time: 1.4365130996704103][cost: 12.0][agents: 2][optimization time 13.276390314102173]
+----------------------------------------
+Using cached single agent results
+['b3 should be on top of b7.']
+['./experiments_multiagent_help/run1030/blocksworld/p09_1.pddl']
+agent1
+[info][subgoal_1][blocksworld] task 09 takes 0.08 sec, found a plan with cost 6.0
+planner successful
+validating
+validator time 0.005856990814208984
+[info][multiagent main goal][blocksworld] task 09 takes 1.13 sec, found a plan with cost 14.0
+TASK: blocksworld - 1030 - 09
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (unstack b4 b7)
+2 (Single): Agent 1: (putdown b4)
+3 (Single): Agent 1: (unstack b7 b3)
+4 (Single): Agent 1: (putdown b7)
+5 (Single): Agent 1: (unstack b3 b6)
+6 (Single): Agent 1: (stack b3 b7)
+
+merging main agent's plan into combined plan
+
+Main Agent's Plan:
+1 (Single): Agent 0: (unstack b3 b7)
+2 (Single): Agent 0: (putdown b3)
+3 (Single): Agent 0: (pickup b7)
+4 (Single): Agent 0: (stack b7 b4)
+5 (Single): Agent 0: (pickup b3)
+6 (Single): Agent 0: (stack b3 b7)
+7 (Single): Agent 0: (pickup b5)
+8 (Single): Agent 0: (stack b5 b3)
+9 (Single): Agent 0: (pickup b6)
+10 (Single): Agent 0: (stack b6 b5)
+11 (Single): Agent 0: (pickup b2)
+12 (Single): Agent 0: (stack b2 b6)
+13 (Single): Agent 0: (pickup b1)
+14 (Single): Agent 0: (stack b1 b2)
+
+Current Combined Plan:
+1 (Single): Agent 1: (unstack b4 b7)
+2 (Single): Agent 1: (putdown b4)
+3 (Single): Agent 1: (unstack b7 b3)
+4 (Single): Agent 1: (putdown b7)
+5 (Single): Agent 1: (unstack b3 b6)
+6 (Single): Agent 1: (stack b3 b7)
+
+20 True
+verifying final merged plan.
+
+Final Merged Plan:
+1 (Single): Agent 0: (unstack b4 b7)
+2 (Single): Agent 0: (putdown b4)
+3 (Single): Agent 0: (unstack b7 b3)
+4 (Single): Agent 0: (putdown b7)
+5 (Single): Agent 0: (unstack b3 b6)
+6 (Single): Agent 0: (stack b3 b7)
+7 (Single): Agent 1: (unstack b3 b7)
+8 (Single): Agent 1: (putdown b3)
+9 (Single): Agent 1: (pickup b7)
+10 (Single): Agent 1: (stack b7 b4)
+11 (Single): Agent 1: (pickup b3)
+12 (Single): Agent 1: (stack b3 b7)
+13 (Single): Agent 1: (pickup b5)
+14 (Single): Agent 1: (stack b5 b3)
+15 (Single): Agent 1: (pickup b6)
+16 (Single): Agent 1: (stack b6 b5)
+17 (Single): Agent 1: (pickup b2)
+18 (Single): Agent 1: (stack b2 b6)
+19 (Single): Agent 1: (pickup b1)
+20 (Single): Agent 1: (stack b1 b2)
+
+Total Cost: 20
+[results][blocksworld][09]
+[single_agent][planning time: 0.97][cost: 14.0]
+[multi_agent][planning_time: 2.37414737701416][cost: 20.0][agents: 2][optimization time 6.119789361953735]
+----------------------------------------
+Using cached single agent results
+['b2 should be on top of b3.']
+['./experiments_multiagent_help/run1030/blocksworld/p10_1.pddl']
+agent1
+[info][subgoal_1][blocksworld] task 10 takes 0.08 sec, found a plan with cost 4.0
+planner successful
+validating
+validator time 0.002140522003173828
+[info][multiagent main goal][blocksworld] task 10 takes 1.16 sec, found a plan with cost 14.0
+TASK: blocksworld - 1030 - 10
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (unstack b6 b3)
+2 (Single): Agent 1: (putdown b6)
+3 (Single): Agent 1: (unstack b2 b5)
+4 (Single): Agent 1: (stack b2 b3)
+
+merging main agent's plan into combined plan
+
+Main Agent's Plan:
+1 (Single): Agent 0: (pickup b5)
+2 (Single): Agent 0: (stack b5 b6)
+3 (Single): Agent 0: (unstack b2 b3)
+4 (Single): Agent 0: (stack b2 b5)
+5 (Single): Agent 0: (pickup b3)
+6 (Single): Agent 0: (stack b3 b2)
+7 (Single): Agent 0: (unstack b4 b7)
+8 (Single): Agent 0: (putdown b4)
+9 (Single): Agent 0: (unstack b7 b1)
+10 (Single): Agent 0: (stack b7 b3)
+11 (Single): Agent 0: (pickup b1)
+12 (Single): Agent 0: (stack b1 b7)
+13 (Single): Agent 0: (pickup b4)
+14 (Single): Agent 0: (stack b4 b1)
+
+Current Combined Plan:
+1 (Single): Agent 1: (unstack b6 b3)
+2 (Single): Agent 1: (putdown b6)
+3 (Single): Agent 1: (unstack b2 b5)
+4 (Single): Agent 1: (stack b2 b3)
+
+17 True
+verifying final merged plan.
+
+Final Merged Plan:
+1 (Single): Agent 0: (unstack b6 b3)
+2 (Single): Agent 0: (putdown b6)
+3 (Single): Agent 0: (unstack b2 b5)
+4 (Single): Agent 1: (pickup b5)
+5 (Parallel):
+  Agent 0: (stack b2 b3)
+  Agent 1: (stack b5 b6)
+6 (Single): Agent 1: (unstack b2 b3)
+7 (Single): Agent 1: (stack b2 b5)
+8 (Single): Agent 1: (pickup b3)
+9 (Single): Agent 1: (stack b3 b2)
+10 (Single): Agent 1: (unstack b4 b7)
+11 (Single): Agent 1: (putdown b4)
+12 (Single): Agent 1: (unstack b7 b1)
+13 (Single): Agent 1: (stack b7 b3)
+14 (Single): Agent 1: (pickup b1)
+15 (Single): Agent 1: (stack b1 b7)
+16 (Single): Agent 1: (pickup b4)
+17 (Single): Agent 1: (stack b4 b1)
+
+Total Cost: 17
+[results][blocksworld][10]
+[single_agent][planning time: 0.99][cost: 18.0]
+[multi_agent][planning_time: 2.826873769760132][cost: 17.0][agents: 2][optimization time 7.525744676589966]
+----------------------------------------
+Using cached single agent results
+['b4 should be on top of b2.']
+['./experiments_multiagent_help/run1030/blocksworld/p11_1.pddl']
+agent1
+[info][subgoal_1][blocksworld] task 11 takes 498.62 sec, no solution found
+planner successful
+validating
+validator time 0.004723310470581055
+[info][multiagent main goal][blocksworld] task 11 takes 10.82 sec, found a plan with cost 22.0
+TASK: blocksworld - 1030 - 11
+Initial Plan (Agent 1):
+
+
+merging main agent's plan into combined plan
+
+Main Agent's Plan:
+1 (Single): Agent 0: (unstack b8 b3)
+2 (Single): Agent 0: (putdown b8)
+3 (Single): Agent 0: (unstack b3 b7)
+4 (Single): Agent 0: (putdown b3)
+5 (Single): Agent 0: (unstack b7 b5)
+6 (Single): Agent 0: (putdown b7)
+7 (Single): Agent 0: (unstack b5 b6)
+8 (Single): Agent 0: (putdown b5)
+9 (Single): Agent 0: (unstack b6 b4)
+10 (Single): Agent 0: (putdown b6)
+11 (Single): Agent 0: (pickup b3)
+12 (Single): Agent 0: (stack b3 b5)
+13 (Single): Agent 0: (pickup b8)
+14 (Single): Agent 0: (stack b8 b7)
+15 (Single): Agent 0: (unstack b4 b2)
+16 (Single): Agent 0: (putdown b4)
+17 (Single): Agent 0: (unstack b2 b1)
+18 (Single): Agent 0: (stack b2 b3)
+19 (Single): Agent 0: (pickup b1)
+20 (Single): Agent 0: (stack b1 b8)
+21 (Single): Agent 0: (pickup b4)
+22 (Single): Agent 0: (stack b4 b2)
+
+Current Combined Plan:
+
+
+22 True
+verifying final merged plan.
+
+Final Merged Plan:
+1 (Single): Agent 1: (unstack b8 b3)
+2 (Single): Agent 1: (putdown b8)
+3 (Single): Agent 1: (unstack b3 b7)
+4 (Single): Agent 1: (putdown b3)
+5 (Single): Agent 1: (unstack b7 b5)
+6 (Single): Agent 1: (putdown b7)
+7 (Single): Agent 1: (unstack b5 b6)
+8 (Single): Agent 1: (putdown b5)
+9 (Single): Agent 1: (unstack b6 b4)
+10 (Single): Agent 1: (putdown b6)
+11 (Single): Agent 1: (pickup b3)
+12 (Single): Agent 1: (stack b3 b5)
+13 (Single): Agent 1: (pickup b8)
+14 (Single): Agent 1: (stack b8 b7)
+15 (Single): Agent 1: (unstack b4 b2)
+16 (Single): Agent 1: (putdown b4)
+17 (Single): Agent 1: (unstack b2 b1)
+18 (Single): Agent 1: (stack b2 b3)
+19 (Single): Agent 1: (pickup b1)
+20 (Single): Agent 1: (stack b1 b8)
+21 (Single): Agent 1: (pickup b4)
+22 (Single): Agent 1: (stack b4 b2)
+
+Total Cost: 22
+[results][blocksworld][11]
+[single_agent][planning time: 9.69][cost: 22.0]
+[multi_agent][planning_time: 11.17672426223755][cost: 22.0][agents: 2][optimization time 5.095842361450195]
+----------------------------------------
+Using cached single agent results
+['b5 should be on top of b6.']
+['./experiments_multiagent_help/run1030/blocksworld/p12_1.pddl']
+agent1
+[info][subgoal_1][blocksworld] task 12 takes 0.11 sec, found a plan with cost 8.0
+planner successful
+validating
+validator time 0.0023431777954101562
+[info][multiagent main goal][blocksworld] task 12 takes 13.63 sec, found a plan with cost 18.0
+TASK: blocksworld - 1030 - 12
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (unstack b7 b8)
+2 (Single): Agent 1: (putdown b7)
+3 (Single): Agent 1: (unstack b8 b1)
+4 (Single): Agent 1: (putdown b8)
+5 (Single): Agent 1: (unstack b1 b6)
+6 (Single): Agent 1: (putdown b1)
+7 (Single): Agent 1: (pickup b5)
+8 (Single): Agent 1: (stack b5 b6)
+
+merging main agent's plan into combined plan
+
+Main Agent's Plan:
+1 (Single): Agent 0: (pickup b2)
+2 (Single): Agent 0: (stack b2 b8)
+3 (Single): Agent 0: (pickup b3)
+4 (Single): Agent 0: (stack b3 b2)
+5 (Single): Agent 0: (pickup b1)
+6 (Single): Agent 0: (stack b1 b3)
+7 (Single): Agent 0: (pickup b7)
+8 (Single): Agent 0: (stack b7 b1)
+9 (Single): Agent 0: (unstack b5 b6)
+10 (Single): Agent 0: (putdown b5)
+11 (Single): Agent 0: (unstack b6 b4)
+12 (Single): Agent 0: (stack b6 b5)
+13 (Single): Agent 0: (pickup b4)
+14 (Single): Agent 0: (stack b4 b7)
+15 (Single): Agent 0: (unstack b6 b5)
+16 (Single): Agent 0: (stack b6 b4)
+17 (Single): Agent 0: (pickup b5)
+18 (Single): Agent 0: (stack b5 b6)
+
+Current Combined Plan:
+1 (Single): Agent 1: (unstack b7 b8)
+2 (Single): Agent 1: (putdown b7)
+3 (Single): Agent 1: (unstack b8 b1)
+4 (Single): Agent 1: (putdown b8)
+5 (Single): Agent 1: (unstack b1 b6)
+6 (Single): Agent 1: (putdown b1)
+7 (Single): Agent 1: (pickup b5)
+8 (Single): Agent 1: (stack b5 b6)
+
+21 True
+verifying final merged plan.
+
+Final Merged Plan:
+1 (Single): Agent 0: (unstack b7 b8)
+2 (Single): Agent 0: (putdown b7)
+3 (Single): Agent 0: (unstack b8 b1)
+4 (Parallel):
+  Agent 0: (putdown b8)
+  Agent 1: (pickup b2)
+5 (Single): Agent 1: (stack b2 b8)
+6 (Parallel):
+  Agent 0: (unstack b1 b6)
+  Agent 1: (pickup b3)
+7 (Parallel):
+  Agent 0: (putdown b1)
+  Agent 1: (stack b3 b2)
+8 (Single): Agent 1: (pickup b1)
+9 (Single): Agent 1: (stack b1 b3)
+10 (Parallel):
+  Agent 0: (pickup b5)
+  Agent 1: (pickup b7)
+11 (Parallel):
+  Agent 0: (stack b5 b6)
+  Agent 1: (stack b7 b1)
+12 (Single): Agent 1: (unstack b5 b6)
+13 (Single): Agent 1: (putdown b5)
+14 (Single): Agent 1: (unstack b6 b4)
+15 (Single): Agent 1: (stack b6 b5)
+16 (Single): Agent 1: (pickup b4)
+17 (Single): Agent 1: (stack b4 b7)
+18 (Single): Agent 1: (unstack b6 b5)
+19 (Single): Agent 1: (stack b6 b4)
+20 (Single): Agent 1: (pickup b5)
+21 (Single): Agent 1: (stack b5 b6)
+
+Total Cost: 21
+[results][blocksworld][12]
+[single_agent][planning time: 12.21][cost: 20.0]
+[multi_agent][planning_time: 15.312441577911377][cost: 21.0][agents: 2][optimization time 4.1372082233428955]
+----------------------------------------
+Using cached single agent results
+['b8 should be on top of b7.']
+['./experiments_multiagent_help/run1030/blocksworld/p13_1.pddl']
+agent1
+[info][subgoal_1][blocksworld] task 13 takes 0.08 sec, found a plan with cost 2.0
+planner successful
+validating
+validator time 0.0020287036895751953
+[info][multiagent main goal][blocksworld] task 13 takes 117.89 sec, found a plan with cost 24.0
+TASK: blocksworld - 1030 - 13
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (unstack b8 b6)
+2 (Single): Agent 1: (stack b8 b7)
+
+merging main agent's plan into combined plan
+
+Main Agent's Plan:
+1 (Single): Agent 0: (unstack b6 b9)
+2 (Single): Agent 0: (putdown b6)
+3 (Single): Agent 0: (unstack b9 b5)
+4 (Single): Agent 0: (putdown b9)
+5 (Single): Agent 0: (unstack b5 b2)
+6 (Single): Agent 0: (putdown b5)
+7 (Single): Agent 0: (unstack b2 b3)
+8 (Single): Agent 0: (stack b2 b8)
+9 (Single): Agent 0: (unstack b3 b1)
+10 (Single): Agent 0: (putdown b3)
+11 (Single): Agent 0: (unstack b1 b4)
+12 (Single): Agent 0: (putdown b1)
+13 (Single): Agent 0: (pickup b3)
+14 (Single): Agent 0: (stack b3 b1)
+15 (Single): Agent 0: (pickup b5)
+16 (Single): Agent 0: (stack b5 b3)
+17 (Single): Agent 0: (unstack b2 b8)
+18 (Single): Agent 0: (stack b2 b5)
+19 (Single): Agent 0: (pickup b4)
+20 (Single): Agent 0: (stack b4 b8)
+21 (Single): Agent 0: (pickup b6)
+22 (Single): Agent 0: (stack b6 b4)
+23 (Single): Agent 0: (pickup b9)
+24 (Single): Agent 0: (stack b9 b2)
+
+Current Combined Plan:
+1 (Single): Agent 1: (unstack b8 b6)
+2 (Single): Agent 1: (stack b8 b7)
+
+25 True
+verifying final merged plan.
+
+Final Merged Plan:
+1 (Single): Agent 0: (unstack b8 b6)
+2 (Single): Agent 1: (unstack b6 b9)
+3 (Single): Agent 1: (putdown b6)
+4 (Single): Agent 1: (unstack b9 b5)
+5 (Single): Agent 1: (putdown b9)
+6 (Single): Agent 1: (unstack b5 b2)
+7 (Single): Agent 1: (putdown b5)
+8 (Parallel):
+  Agent 0: (stack b8 b7)
+  Agent 1: (unstack b2 b3)
+9 (Single): Agent 1: (stack b2 b8)
+10 (Single): Agent 1: (unstack b3 b1)
+11 (Single): Agent 1: (putdown b3)
+12 (Single): Agent 1: (unstack b1 b4)
+13 (Single): Agent 1: (putdown b1)
+14 (Single): Agent 1: (pickup b3)
+15 (Single): Agent 1: (stack b3 b1)
+16 (Single): Agent 1: (pickup b5)
+17 (Single): Agent 1: (stack b5 b3)
+18 (Single): Agent 1: (unstack b2 b8)
+19 (Single): Agent 1: (stack b2 b5)
+20 (Single): Agent 1: (pickup b4)
+21 (Single): Agent 1: (stack b4 b8)
+22 (Single): Agent 1: (pickup b6)
+23 (Single): Agent 1: (stack b6 b4)
+24 (Single): Agent 1: (pickup b9)
+25 (Single): Agent 1: (stack b9 b2)
+
+Total Cost: 25
+[results][blocksworld][13]
+[single_agent][planning time: 146.4][cost: 26.0]
+[multi_agent][planning_time: 119.11875292778015][cost: 25.0][agents: 2][optimization time 8.154164552688599]
+----------------------------------------
+Using cached single agent results
+['b3 should be on top of b5.']
+['./experiments_multiagent_help/run1030/blocksworld/p14_1.pddl']
+agent1
+[info][subgoal_1][blocksworld] task 14 takes 0.1 sec, found a plan with cost 6.0
+planner successful
+validating
+validator time 0.002325773239135742
+[info][multiagent main goal][blocksworld] task 14 takes 87.83 sec, found a plan with cost 22.0
+TASK: blocksworld - 1030 - 14
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (unstack b5 b1)
+2 (Single): Agent 1: (putdown b5)
+3 (Single): Agent 1: (unstack b1 b3)
+4 (Single): Agent 1: (putdown b1)
+5 (Single): Agent 1: (pickup b3)
+6 (Single): Agent 1: (stack b3 b5)
+
+merging main agent's plan into combined plan
+
+Main Agent's Plan:
+1 (Single): Agent 0: (unstack b4 b6)
+2 (Single): Agent 0: (putdown b4)
+3 (Single): Agent 0: (unstack b3 b5)
+4 (Single): Agent 0: (putdown b3)
+5 (Single): Agent 0: (pickup b5)
+6 (Single): Agent 0: (stack b5 b6)
+7 (Single): Agent 0: (pickup b3)
+8 (Single): Agent 0: (stack b3 b5)
+9 (Single): Agent 0: (unstack b8 b9)
+10 (Single): Agent 0: (stack b8 b3)
+11 (Single): Agent 0: (unstack b9 b7)
+12 (Single): Agent 0: (putdown b9)
+13 (Single): Agent 0: (unstack b7 b2)
+14 (Single): Agent 0: (stack b7 b8)
+15 (Single): Agent 0: (pickup b2)
+16 (Single): Agent 0: (stack b2 b7)
+17 (Single): Agent 0: (pickup b1)
+18 (Single): Agent 0: (stack b1 b2)
+19 (Single): Agent 0: (pickup b4)
+20 (Single): Agent 0: (stack b4 b1)
+21 (Single): Agent 0: (pickup b9)
+22 (Single): Agent 0: (stack b9 b4)
+
+Current Combined Plan:
+1 (Single): Agent 1: (unstack b5 b1)
+2 (Single): Agent 1: (putdown b5)
+3 (Single): Agent 1: (unstack b1 b3)
+4 (Single): Agent 1: (putdown b1)
+5 (Single): Agent 1: (pickup b3)
+6 (Single): Agent 1: (stack b3 b5)
+
+26 True
+verifying final merged plan.
+
+Final Merged Plan:
+1 (Single): Agent 0: (unstack b5 b1)
+2 (Single): Agent 0: (putdown b5)
+3 (Single): Agent 0: (unstack b1 b3)
+4 (Single): Agent 0: (putdown b1)
+5 (Parallel):
+  Agent 0: (pickup b3)
+  Agent 1: (unstack b4 b6)
+6 (Parallel):
+  Agent 0: (stack b3 b5)
+  Agent 1: (putdown b4)
+7 (Single): Agent 1: (unstack b3 b5)
+8 (Single): Agent 1: (putdown b3)
+9 (Single): Agent 1: (pickup b5)
+10 (Single): Agent 1: (stack b5 b6)
+11 (Single): Agent 1: (pickup b3)
+12 (Single): Agent 1: (stack b3 b5)
+13 (Single): Agent 1: (unstack b8 b9)
+14 (Single): Agent 1: (stack b8 b3)
+15 (Single): Agent 1: (unstack b9 b7)
+16 (Single): Agent 1: (putdown b9)
+17 (Single): Agent 1: (unstack b7 b2)
+18 (Single): Agent 1: (stack b7 b8)
+19 (Single): Agent 1: (pickup b2)
+20 (Single): Agent 1: (stack b2 b7)
+21 (Single): Agent 1: (pickup b1)
+22 (Single): Agent 1: (stack b1 b2)
+23 (Single): Agent 1: (pickup b4)
+24 (Single): Agent 1: (stack b4 b1)
+25 (Single): Agent 1: (pickup b9)
+26 (Single): Agent 1: (stack b9 b4)
+
+Total Cost: 26
+[results][blocksworld][14]
+[single_agent][planning time: 71.57][cost: 22.0]
+[multi_agent][planning_time: 89.297614030838][cost: 26.0][agents: 2][optimization time 12.77859115600586]
+----------------------------------------
+Using cached single agent results
+['b3 should be on top of b10.']
+['./experiments_multiagent_help/run1030/blocksworld/p15_1.pddl']
+agent1
+[info][subgoal_1][blocksworld] task 15 takes 0.35 sec, found a plan with cost 16.0
+planner successful
+validating
+validator time 0.003056764602661133
+[info][multiagent main goal][blocksworld] task 15 takes 500.21 sec, found a plan with cost 16.0
+TASK: blocksworld - 1030 - 15
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (unstack b9 b2)
+2 (Single): Agent 1: (putdown b9)
+3 (Single): Agent 1: (unstack b2 b10)
+4 (Single): Agent 1: (putdown b2)
+5 (Single): Agent 1: (unstack b10 b7)
+6 (Single): Agent 1: (putdown b10)
+7 (Single): Agent 1: (unstack b7 b4)
+8 (Single): Agent 1: (putdown b7)
+9 (Single): Agent 1: (unstack b4 b8)
+10 (Single): Agent 1: (putdown b4)
+11 (Single): Agent 1: (unstack b8 b6)
+12 (Single): Agent 1: (putdown b8)
+13 (Single): Agent 1: (unstack b6 b3)
+14 (Single): Agent 1: (putdown b6)
+15 (Single): Agent 1: (unstack b3 b1)
+16 (Single): Agent 1: (stack b3 b10)
+
+merging main agent's plan into combined plan
+
+Main Agent's Plan:
+1 (Single): Agent 0: (pickup b2)
+2 (Single): Agent 0: (stack b2 b1)
+3 (Single): Agent 0: (pickup b4)
+4 (Single): Agent 0: (stack b4 b7)
+5 (Single): Agent 0: (pickup b8)
+6 (Single): Agent 0: (stack b8 b2)
+7 (Single): Agent 0: (pickup b6)
+8 (Single): Agent 0: (stack b6 b8)
+9 (Single): Agent 0: (pickup b9)
+10 (Single): Agent 0: (stack b9 b4)
+11 (Single): Agent 0: (unstack b3 b10)
+12 (Single): Agent 0: (stack b3 b6)
+13 (Single): Agent 0: (pickup b10)
+14 (Single): Agent 0: (stack b10 b9)
+15 (Single): Agent 0: (unstack b3 b6)
+16 (Single): Agent 0: (stack b3 b10)
+
+Current Combined Plan:
+1 (Single): Agent 1: (unstack b9 b2)
+2 (Single): Agent 1: (putdown b9)
+3 (Single): Agent 1: (unstack b2 b10)
+4 (Single): Agent 1: (putdown b2)
+5 (Single): Agent 1: (unstack b10 b7)
+6 (Single): Agent 1: (putdown b10)
+7 (Single): Agent 1: (unstack b7 b4)
+8 (Single): Agent 1: (putdown b7)
+9 (Single): Agent 1: (unstack b4 b8)
+10 (Single): Agent 1: (putdown b4)
+11 (Single): Agent 1: (unstack b8 b6)
+12 (Single): Agent 1: (putdown b8)
+13 (Single): Agent 1: (unstack b6 b3)
+14 (Single): Agent 1: (putdown b6)
+15 (Single): Agent 1: (unstack b3 b1)
+16 (Single): Agent 1: (stack b3 b10)
+
+30 True
+verifying final merged plan.
+
+Final Merged Plan:
+1 (Single): Agent 0: (unstack b9 b2)
+2 (Single): Agent 0: (putdown b9)
+3 (Single): Agent 0: (unstack b2 b10)
+4 (Single): Agent 0: (putdown b2)
+5 (Single): Agent 0: (unstack b10 b7)
+6 (Single): Agent 0: (putdown b10)
+7 (Single): Agent 0: (unstack b7 b4)
+8 (Single): Agent 0: (putdown b7)
+9 (Single): Agent 0: (unstack b4 b8)
+10 (Single): Agent 0: (putdown b4)
+11 (Single): Agent 0: (unstack b8 b6)
+12 (Single): Agent 0: (putdown b8)
+13 (Single): Agent 0: (unstack b6 b3)
+14 (Single): Agent 0: (putdown b6)
+15 (Parallel):
+  Agent 0: (unstack b3 b1)
+  Agent 1: (pickup b2)
+16 (Single): Agent 1: (stack b2 b1)
+17 (Single): Agent 1: (pickup b4)
+18 (Single): Agent 1: (stack b4 b7)
+19 (Single): Agent 1: (pickup b8)
+20 (Single): Agent 1: (stack b8 b2)
+21 (Single): Agent 1: (pickup b6)
+22 (Single): Agent 1: (stack b6 b8)
+23 (Single): Agent 1: (pickup b9)
+24 (Parallel):
+  Agent 0: (stack b3 b10)
+  Agent 1: (stack b9 b4)
+25 (Single): Agent 1: (unstack b3 b10)
+26 (Single): Agent 1: (stack b3 b6)
+27 (Single): Agent 1: (pickup b10)
+28 (Single): Agent 1: (stack b10 b9)
+29 (Single): Agent 1: (unstack b3 b6)
+30 (Single): Agent 1: (stack b3 b10)
+
+Total Cost: 30
+[results][blocksworld][15]
+[single_agent][planning time: 222.96][cost: 26.0]
+[multi_agent][planning_time: 501.7129335975647][cost: 30.0][agents: 2][optimization time 3.643564462661743]
+----------------------------------------
+Using cached single agent results
+['b8 should be on top of b7.']
+['./experiments_multiagent_help/run1030/blocksworld/p16_1.pddl']
+agent1
+[info][subgoal_1][blocksworld] task 16 takes 3.31 sec, found a plan with cost 16.0
+planner successful
+validating
+validator time 0.0026009082794189453
+[info][multiagent main goal][blocksworld] task 16 takes 500.22 sec, found a plan with cost 16.0
+TASK: blocksworld - 1030 - 16
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (unstack b5 b4)
+2 (Single): Agent 1: (putdown b5)
+3 (Single): Agent 1: (unstack b4 b2)
+4 (Single): Agent 1: (putdown b4)
+5 (Single): Agent 1: (unstack b2 b3)
+6 (Single): Agent 1: (putdown b2)
+7 (Single): Agent 1: (unstack b3 b6)
+8 (Single): Agent 1: (putdown b3)
+9 (Single): Agent 1: (unstack b6 b9)
+10 (Single): Agent 1: (putdown b6)
+11 (Single): Agent 1: (unstack b9 b10)
+12 (Single): Agent 1: (putdown b9)
+13 (Single): Agent 1: (unstack b10 b8)
+14 (Single): Agent 1: (putdown b10)
+15 (Single): Agent 1: (pickup b8)
+16 (Single): Agent 1: (stack b8 b7)
+
+merging main agent's plan into combined plan
+
+Main Agent's Plan:
+1 (Single): Agent 0: (pickup b5)
+2 (Single): Agent 0: (stack b5 b3)
+3 (Single): Agent 0: (unstack b8 b7)
+4 (Single): Agent 0: (putdown b8)
+5 (Single): Agent 0: (unstack b7 b1)
+6 (Single): Agent 0: (stack b7 b4)
+7 (Single): Agent 0: (pickup b1)
+8 (Single): Agent 0: (stack b1 b5)
+9 (Single): Agent 0: (pickup b8)
+10 (Single): Agent 0: (stack b8 b7)
+11 (Single): Agent 0: (pickup b10)
+12 (Single): Agent 0: (stack b10 b8)
+13 (Single): Agent 0: (pickup b2)
+14 (Single): Agent 0: (stack b2 b10)
+15 (Single): Agent 0: (pickup b9)
+16 (Single): Agent 0: (stack b9 b2)
+
+Current Combined Plan:
+1 (Single): Agent 1: (unstack b5 b4)
+2 (Single): Agent 1: (putdown b5)
+3 (Single): Agent 1: (unstack b4 b2)
+4 (Single): Agent 1: (putdown b4)
+5 (Single): Agent 1: (unstack b2 b3)
+6 (Single): Agent 1: (putdown b2)
+7 (Single): Agent 1: (unstack b3 b6)
+8 (Single): Agent 1: (putdown b3)
+9 (Single): Agent 1: (unstack b6 b9)
+10 (Single): Agent 1: (putdown b6)
+11 (Single): Agent 1: (unstack b9 b10)
+12 (Single): Agent 1: (putdown b9)
+13 (Single): Agent 1: (unstack b10 b8)
+14 (Single): Agent 1: (putdown b10)
+15 (Single): Agent 1: (pickup b8)
+16 (Single): Agent 1: (stack b8 b7)
+
+30 True
+verifying final merged plan.
+
+Final Merged Plan:
+1 (Single): Agent 0: (unstack b5 b4)
+2 (Single): Agent 0: (putdown b5)
+3 (Single): Agent 0: (unstack b4 b2)
+4 (Single): Agent 0: (putdown b4)
+5 (Single): Agent 0: (unstack b2 b3)
+6 (Single): Agent 0: (putdown b2)
+7 (Single): Agent 0: (unstack b3 b6)
+8 (Single): Agent 0: (putdown b3)
+9 (Single): Agent 0: (unstack b6 b9)
+10 (Single): Agent 0: (putdown b6)
+11 (Single): Agent 0: (unstack b9 b10)
+12 (Single): Agent 0: (putdown b9)
+13 (Single): Agent 0: (unstack b10 b8)
+14 (Single): Agent 0: (putdown b10)
+15 (Parallel):
+  Agent 0: (pickup b8)
+  Agent 1: (pickup b5)
+16 (Parallel):
+  Agent 0: (stack b8 b7)
+  Agent 1: (stack b5 b3)
+17 (Single): Agent 1: (unstack b8 b7)
+18 (Single): Agent 1: (putdown b8)
+19 (Single): Agent 1: (unstack b7 b1)
+20 (Single): Agent 1: (stack b7 b4)
+21 (Single): Agent 1: (pickup b1)
+22 (Single): Agent 1: (stack b1 b5)
+23 (Single): Agent 1: (pickup b8)
+24 (Single): Agent 1: (stack b8 b7)
+25 (Single): Agent 1: (pickup b10)
+26 (Single): Agent 1: (stack b10 b8)
+27 (Single): Agent 1: (pickup b2)
+28 (Single): Agent 1: (stack b2 b10)
+29 (Single): Agent 1: (pickup b9)
+30 (Single): Agent 1: (stack b9 b2)
+
+Total Cost: 30
+[results][blocksworld][16]
+[single_agent][planning time: 983.49][cost: 28.0]
+[multi_agent][planning_time: 504.96487024307254][cost: 30.0][agents: 2][optimization time 6.979797601699829]
+----------------------------------------
+Using cached single agent results
+['b5 should be on top of b4.']
+['./experiments_multiagent_help/run1030/blocksworld/p17_1.pddl']
+agent1
+[info][subgoal_1][blocksworld] task 17 takes 0.09 sec, found a plan with cost 4.0
+planner successful
+validating
+validator time 0.0023288726806640625
+[info][multiagent main goal][blocksworld] task 17 takes 500.31 sec, found a plan with cost 22.0
+TASK: blocksworld - 1030 - 17
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (unstack b3 b4)
+2 (Single): Agent 1: (putdown b3)
+3 (Single): Agent 1: (unstack b5 b2)
+4 (Single): Agent 1: (stack b5 b4)
+
+merging main agent's plan into combined plan
+
+Main Agent's Plan:
+1 (Single): Agent 0: (unstack b5 b4)
+2 (Single): Agent 0: (putdown b5)
+3 (Single): Agent 0: (unstack b4 b10)
+4 (Single): Agent 0: (putdown b4)
+5 (Single): Agent 0: (pickup b5)
+6 (Single): Agent 0: (stack b5 b4)
+7 (Single): Agent 0: (unstack b9 b6)
+8 (Single): Agent 0: (stack b9 b5)
+9 (Single): Agent 0: (unstack b10 b7)
+10 (Single): Agent 0: (stack b10 b9)
+11 (Single): Agent 0: (pickup b6)
+12 (Single): Agent 0: (stack b6 b10)
+13 (Single): Agent 0: (unstack b7 b8)
+14 (Single): Agent 0: (stack b7 b3)
+15 (Single): Agent 0: (pickup b2)
+16 (Single): Agent 0: (stack b2 b7)
+17 (Single): Agent 0: (unstack b8 b1)
+18 (Single): Agent 0: (putdown b8)
+19 (Single): Agent 0: (unstack b1 b11)
+20 (Single): Agent 0: (putdown b1)
+21 (Single): Agent 0: (pickup b11)
+22 (Single): Agent 0: (stack b11 b1)
+
+Current Combined Plan:
+1 (Single): Agent 1: (unstack b3 b4)
+2 (Single): Agent 1: (putdown b3)
+3 (Single): Agent 1: (unstack b5 b2)
+4 (Single): Agent 1: (stack b5 b4)
+
+26 True
+verifying final merged plan.
+
+Final Merged Plan:
+1 (Single): Agent 0: (unstack b3 b4)
+2 (Single): Agent 0: (putdown b3)
+3 (Single): Agent 0: (unstack b5 b2)
+4 (Single): Agent 0: (stack b5 b4)
+5 (Single): Agent 1: (unstack b5 b4)
+6 (Single): Agent 1: (putdown b5)
+7 (Single): Agent 1: (unstack b4 b10)
+8 (Single): Agent 1: (putdown b4)
+9 (Single): Agent 1: (pickup b5)
+10 (Single): Agent 1: (stack b5 b4)
+11 (Single): Agent 1: (unstack b9 b6)
+12 (Single): Agent 1: (stack b9 b5)
+13 (Single): Agent 1: (unstack b10 b7)
+14 (Single): Agent 1: (stack b10 b9)
+15 (Single): Agent 1: (pickup b6)
+16 (Single): Agent 1: (stack b6 b10)
+17 (Single): Agent 1: (unstack b7 b8)
+18 (Single): Agent 1: (stack b7 b3)
+19 (Single): Agent 1: (pickup b2)
+20 (Single): Agent 1: (stack b2 b7)
+21 (Single): Agent 1: (unstack b8 b1)
+22 (Single): Agent 1: (putdown b8)
+23 (Single): Agent 1: (unstack b1 b11)
+24 (Single): Agent 1: (putdown b1)
+25 (Single): Agent 1: (pickup b11)
+26 (Single): Agent 1: (stack b11 b1)
+
+Total Cost: 26
+[results][blocksworld][17]
+[single_agent][planning time: 1000.34][cost: 22.0]
+[multi_agent][planning_time: 501.8822483062744][cost: 26.0][agents: 2][optimization time 1.2644317150115967]
+----------------------------------------
+Using cached single agent results
+['b10 should be on top of b9.']
+['./experiments_multiagent_help/run1030/blocksworld/p18_1.pddl']
+agent1
+[info][subgoal_1][blocksworld] task 18 takes 1.74 sec, found a plan with cost 16.0
+planner successful
+validating
+validator time 0.0024170875549316406
+[info][multiagent main goal][blocksworld] task 18 takes 500.35 sec, found a plan with cost 22.0
+TASK: blocksworld - 1030 - 18
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (unstack b10 b2)
+2 (Single): Agent 1: (putdown b10)
+3 (Single): Agent 1: (unstack b2 b5)
+4 (Single): Agent 1: (putdown b2)
+5 (Single): Agent 1: (unstack b5 b3)
+6 (Single): Agent 1: (putdown b5)
+7 (Single): Agent 1: (unstack b3 b6)
+8 (Single): Agent 1: (putdown b3)
+9 (Single): Agent 1: (unstack b6 b7)
+10 (Single): Agent 1: (putdown b6)
+11 (Single): Agent 1: (unstack b7 b1)
+12 (Single): Agent 1: (putdown b7)
+13 (Single): Agent 1: (unstack b1 b9)
+14 (Single): Agent 1: (putdown b1)
+15 (Single): Agent 1: (pickup b10)
+16 (Single): Agent 1: (stack b10 b9)
+
+merging main agent's plan into combined plan
+
+Main Agent's Plan:
+1 (Single): Agent 0: (pickup b6)
+2 (Single): Agent 0: (stack b6 b5)
+3 (Single): Agent 0: (pickup b7)
+4 (Single): Agent 0: (stack b7 b2)
+5 (Single): Agent 0: (pickup b3)
+6 (Single): Agent 0: (stack b3 b7)
+7 (Single): Agent 0: (unstack b10 b9)
+8 (Single): Agent 0: (putdown b10)
+9 (Single): Agent 0: (unstack b9 b11)
+10 (Single): Agent 0: (putdown b9)
+11 (Single): Agent 0: (unstack b11 b8)
+12 (Single): Agent 0: (putdown b11)
+13 (Single): Agent 0: (pickup b8)
+14 (Single): Agent 0: (stack b8 b3)
+15 (Single): Agent 0: (pickup b10)
+16 (Single): Agent 0: (stack b10 b9)
+17 (Single): Agent 0: (pickup b11)
+18 (Single): Agent 0: (stack b11 b8)
+19 (Single): Agent 0: (pickup b4)
+20 (Single): Agent 0: (stack b4 b11)
+21 (Single): Agent 0: (pickup b1)
+22 (Single): Agent 0: (stack b1 b4)
+
+Current Combined Plan:
+1 (Single): Agent 1: (unstack b10 b2)
+2 (Single): Agent 1: (putdown b10)
+3 (Single): Agent 1: (unstack b2 b5)
+4 (Single): Agent 1: (putdown b2)
+5 (Single): Agent 1: (unstack b5 b3)
+6 (Single): Agent 1: (putdown b5)
+7 (Single): Agent 1: (unstack b3 b6)
+8 (Single): Agent 1: (putdown b3)
+9 (Single): Agent 1: (unstack b6 b7)
+10 (Single): Agent 1: (putdown b6)
+11 (Single): Agent 1: (unstack b7 b1)
+12 (Single): Agent 1: (putdown b7)
+13 (Single): Agent 1: (unstack b1 b9)
+14 (Single): Agent 1: (putdown b1)
+15 (Single): Agent 1: (pickup b10)
+16 (Single): Agent 1: (stack b10 b9)
+
+32 True
+verifying final merged plan.
+
+Final Merged Plan:
+1 (Single): Agent 0: (unstack b10 b2)
+2 (Single): Agent 0: (putdown b10)
+3 (Single): Agent 0: (unstack b2 b5)
+4 (Single): Agent 0: (putdown b2)
+5 (Single): Agent 0: (unstack b5 b3)
+6 (Single): Agent 0: (putdown b5)
+7 (Single): Agent 0: (unstack b3 b6)
+8 (Single): Agent 0: (putdown b3)
+9 (Single): Agent 0: (unstack b6 b7)
+10 (Single): Agent 0: (putdown b6)
+11 (Parallel):
+  Agent 0: (unstack b7 b1)
+  Agent 1: (pickup b6)
+12 (Parallel):
+  Agent 0: (putdown b7)
+  Agent 1: (stack b6 b5)
+13 (Parallel):
+  Agent 0: (unstack b1 b9)
+  Agent 1: (pickup b7)
+14 (Parallel):
+  Agent 0: (putdown b1)
+  Agent 1: (stack b7 b2)
+15 (Parallel):
+  Agent 0: (pickup b10)
+  Agent 1: (pickup b3)
+16 (Parallel):
+  Agent 0: (stack b10 b9)
+  Agent 1: (stack b3 b7)
+17 (Single): Agent 1: (unstack b10 b9)
+18 (Single): Agent 1: (putdown b10)
+19 (Single): Agent 1: (unstack b9 b11)
+20 (Single): Agent 1: (putdown b9)
+21 (Single): Agent 1: (unstack b11 b8)
+22 (Single): Agent 1: (putdown b11)
+23 (Single): Agent 1: (pickup b8)
+24 (Single): Agent 1: (stack b8 b3)
+25 (Single): Agent 1: (pickup b10)
+26 (Single): Agent 1: (stack b10 b9)
+27 (Single): Agent 1: (pickup b11)
+28 (Single): Agent 1: (stack b11 b8)
+29 (Single): Agent 1: (pickup b4)
+30 (Single): Agent 1: (stack b4 b11)
+31 (Single): Agent 1: (pickup b1)
+32 (Single): Agent 1: (stack b1 b4)
+
+Total Cost: 32
+[results][blocksworld][18]
+[single_agent][planning time: 969.95][cost: 30.0]
+[multi_agent][planning_time: 503.96328505516055][cost: 32.0][agents: 2][optimization time 6.703891038894653]
+----------------------------------------
+Using cached single agent results
+['b9 should be on top of b2.']
+['./experiments_multiagent_help/run1030/blocksworld/p19_1.pddl']
+agent1
+[info][subgoal_1][blocksworld] task 19 takes 0.12 sec, found a plan with cost 6.0
+planner successful
+validating
+validator time 0.0019195079803466797
+[info][multiagent main goal][blocksworld] task 19 takes 500.29 sec, found a plan with cost 24.0
+TASK: blocksworld - 1030 - 19
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (unstack b4 b12)
+2 (Single): Agent 1: (putdown b4)
+3 (Single): Agent 1: (unstack b12 b9)
+4 (Single): Agent 1: (putdown b12)
+5 (Single): Agent 1: (pickup b9)
+6 (Single): Agent 1: (stack b9 b2)
+
+merging main agent's plan into combined plan
+
+Main Agent's Plan:
+1 (Single): Agent 0: (unstack b3 b8)
+2 (Single): Agent 0: (putdown b3)
+3 (Single): Agent 0: (pickup b8)
+4 (Single): Agent 0: (stack b8 b3)
+5 (Single): Agent 0: (unstack b9 b2)
+6 (Single): Agent 0: (putdown b9)
+7 (Single): Agent 0: (unstack b2 b5)
+8 (Single): Agent 0: (putdown b2)
+9 (Single): Agent 0: (pickup b9)
+10 (Single): Agent 0: (stack b9 b2)
+11 (Single): Agent 0: (unstack b5 b7)
+12 (Single): Agent 0: (putdown b5)
+13 (Single): Agent 0: (unstack b7 b10)
+14 (Single): Agent 0: (stack b7 b4)
+15 (Single): Agent 0: (unstack b10 b11)
+16 (Single): Agent 0: (stack b10 b8)
+17 (Single): Agent 0: (pickup b11)
+18 (Single): Agent 0: (stack b11 b7)
+19 (Single): Agent 0: (pickup b5)
+20 (Single): Agent 0: (stack b5 b10)
+21 (Single): Agent 0: (pickup b12)
+22 (Single): Agent 0: (stack b12 b11)
+23 (Single): Agent 0: (unstack b6 b1)
+24 (Single): Agent 0: (stack b6 b12)
+
+Current Combined Plan:
+1 (Single): Agent 1: (unstack b4 b12)
+2 (Single): Agent 1: (putdown b4)
+3 (Single): Agent 1: (unstack b12 b9)
+4 (Single): Agent 1: (putdown b12)
+5 (Single): Agent 1: (pickup b9)
+6 (Single): Agent 1: (stack b9 b2)
+
+26 True
+verifying final merged plan.
+
+Final Merged Plan:
+1 (Single): Agent 0: (unstack b4 b12)
+2 (Single): Agent 0: (putdown b4)
+3 (Parallel):
+  Agent 0: (unstack b12 b9)
+  Agent 1: (unstack b3 b8)
+4 (Parallel):
+  Agent 0: (putdown b12)
+  Agent 1: (putdown b3)
+5 (Parallel):
+  Agent 0: (pickup b9)
+  Agent 1: (pickup b8)
+6 (Parallel):
+  Agent 0: (stack b9 b2)
+  Agent 1: (stack b8 b3)
+7 (Single): Agent 1: (unstack b9 b2)
+8 (Single): Agent 1: (putdown b9)
+9 (Single): Agent 1: (unstack b2 b5)
+10 (Single): Agent 1: (putdown b2)
+11 (Single): Agent 1: (pickup b9)
+12 (Single): Agent 1: (stack b9 b2)
+13 (Single): Agent 1: (unstack b5 b7)
+14 (Single): Agent 1: (putdown b5)
+15 (Single): Agent 1: (unstack b7 b10)
+16 (Single): Agent 1: (stack b7 b4)
+17 (Single): Agent 1: (unstack b10 b11)
+18 (Single): Agent 1: (stack b10 b8)
+19 (Single): Agent 1: (pickup b11)
+20 (Single): Agent 1: (stack b11 b7)
+21 (Single): Agent 1: (pickup b5)
+22 (Single): Agent 1: (stack b5 b10)
+23 (Single): Agent 1: (pickup b12)
+24 (Single): Agent 1: (stack b12 b11)
+25 (Single): Agent 1: (unstack b6 b1)
+26 (Single): Agent 1: (stack b6 b12)
+
+Total Cost: 26
+[results][blocksworld][19]
+[single_agent][planning time: 958.85][cost: 24.0]
+[multi_agent][planning_time: 501.8007573223114][cost: 26.0][agents: 2][optimization time 3.9512271881103516]
+----------------------------------------
+Using cached single agent results
+['b11 should be on top of b12.']
+['./experiments_multiagent_help/run1030/blocksworld/p20_1.pddl']
+agent1
+[info][subgoal_1][blocksworld] task 20 takes 16.5 sec, found a plan with cost 14.0
+planner successful
+validating
+validator time 0.002763986587524414
+[info][multiagent main goal][blocksworld] task 20 takes 500.38 sec, found a plan with cost 20.0
+TASK: blocksworld - 1030 - 20
+Initial Plan (Agent 1):
+1 (Single): Agent 1: (unstack b11 b4)
+2 (Single): Agent 1: (putdown b11)
+3 (Single): Agent 1: (unstack b4 b10)
+4 (Single): Agent 1: (putdown b4)
+5 (Single): Agent 1: (unstack b10 b3)
+6 (Single): Agent 1: (putdown b10)
+7 (Single): Agent 1: (unstack b3 b9)
+8 (Single): Agent 1: (putdown b3)
+9 (Single): Agent 1: (unstack b9 b1)
+10 (Single): Agent 1: (putdown b9)
+11 (Single): Agent 1: (unstack b1 b12)
+12 (Single): Agent 1: (putdown b1)
+13 (Single): Agent 1: (pickup b11)
+14 (Single): Agent 1: (stack b11 b12)
+
+merging main agent's plan into combined plan
+
+Main Agent's Plan:
+1 (Single): Agent 0: (unstack b11 b12)
+2 (Single): Agent 0: (putdown b11)
+3 (Single): Agent 0: (unstack b12 b2)
+4 (Single): Agent 0: (putdown b12)
+5 (Single): Agent 0: (pickup b6)
+6 (Single): Agent 0: (stack b6 b2)
+7 (Single): Agent 0: (pickup b1)
+8 (Single): Agent 0: (stack b1 b6)
+9 (Single): Agent 0: (pickup b10)
+10 (Single): Agent 0: (stack b10 b1)
+11 (Single): Agent 0: (pickup b9)
+12 (Single): Agent 0: (stack b9 b10)
+13 (Single): Agent 0: (unstack b5 b8)
+14 (Single): Agent 0: (stack b5 b3)
+15 (Single): Agent 0: (pickup b8)
+16 (Single): Agent 0: (stack b8 b9)
+17 (Single): Agent 0: (pickup b12)
+18 (Single): Agent 0: (stack b12 b8)
+19 (Single): Agent 0: (pickup b11)
+20 (Single): Agent 0: (stack b11 b12)
+
+Current Combined Plan:
+1 (Single): Agent 1: (unstack b11 b4)
+2 (Single): Agent 1: (putdown b11)
+3 (Single): Agent 1: (unstack b4 b10)
+4 (Single): Agent 1: (putdown b4)
+5 (Single): Agent 1: (unstack b10 b3)
+6 (Single): Agent 1: (putdown b10)
+7 (Single): Agent 1: (unstack b3 b9)
+8 (Single): Agent 1: (putdown b3)
+9 (Single): Agent 1: (unstack b9 b1)
+10 (Single): Agent 1: (putdown b9)
+11 (Single): Agent 1: (unstack b1 b12)
+12 (Single): Agent 1: (putdown b1)
+13 (Single): Agent 1: (pickup b11)
+14 (Single): Agent 1: (stack b11 b12)
+
+34 True
+verifying final merged plan.
+
+Final Merged Plan:
+1 (Single): Agent 0: (unstack b11 b4)
+2 (Single): Agent 0: (putdown b11)
+3 (Single): Agent 0: (unstack b4 b10)
+4 (Single): Agent 0: (putdown b4)
+5 (Single): Agent 0: (unstack b10 b3)
+6 (Single): Agent 0: (putdown b10)
+7 (Single): Agent 0: (unstack b3 b9)
+8 (Single): Agent 0: (putdown b3)
+9 (Single): Agent 0: (unstack b9 b1)
+10 (Single): Agent 0: (putdown b9)
+11 (Single): Agent 0: (unstack b1 b12)
+12 (Single): Agent 0: (putdown b1)
+13 (Single): Agent 0: (pickup b11)
+14 (Single): Agent 0: (stack b11 b12)
+15 (Single): Agent 1: (unstack b11 b12)
+16 (Single): Agent 1: (putdown b11)
+17 (Single): Agent 1: (unstack b12 b2)
+18 (Single): Agent 1: (putdown b12)
+19 (Single): Agent 1: (pickup b6)
+20 (Single): Agent 1: (stack b6 b2)
+21 (Single): Agent 1: (pickup b1)
+22 (Single): Agent 1: (stack b1 b6)
+23 (Single): Agent 1: (pickup b10)
+24 (Single): Agent 1: (stack b10 b1)
+25 (Single): Agent 1: (pickup b9)
+26 (Single): Agent 1: (stack b9 b10)
+27 (Single): Agent 1: (unstack b5 b8)
+28 (Single): Agent 1: (stack b5 b3)
+29 (Single): Agent 1: (pickup b8)
+30 (Single): Agent 1: (stack b8 b9)
+31 (Single): Agent 1: (pickup b12)
+32 (Single): Agent 1: (stack b12 b8)
+33 (Single): Agent 1: (pickup b11)
+34 (Single): Agent 1: (stack b11 b12)
+
+Total Cost: 34
+[results][blocksworld][20]
+[single_agent][planning time: 1001.37][cost: 30.0]
+[multi_agent][planning_time: 518.0802577781677][cost: 34.0][agents: 2][optimization time 1.4553139209747314]
+----------------------------------------
