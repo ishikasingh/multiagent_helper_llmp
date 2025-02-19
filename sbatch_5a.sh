@@ -5,20 +5,44 @@ BASE_DIR="/home/davidbai/multiagent_helper_llmp"
 
 #Array of experiment configurations with domains - only missing 5-agent tasks
 declare -a experiments=(
+    # Barman tasks (missing 10-20)
+    "--output-file 5a_barman.txt --summary-file 5a_barman_summary.txt --python-script helper_script_n_agents.py --num-agents 5 --model 'gpt-4o' --run 4035 --time-limit 250 --domains barman-enabled"
+
+    # Termes tasks (missing 7-20)
+    "--output-file 5a_termes.txt --summary-file 5a_termes_summary.txt --python-script helper_script_n_agents.py --num-agents 5 --model 'gpt-4o' --run 4036 --time-limit 250 --domains termes"
+
+    # Tyreworld tasks (missing 8-20)
+    "--output-file 5a_tyreworld.txt --summary-file 5a_tyreworld_summary.txt --python-script helper_script_n_agents.py --num-agents 5 --model 'gpt-4o' --run 4037 --time-limit 250 --domains tyreworld"
+    
     # Blocksworld tasks
-    "--output-file 2_18_5a_blocksworld.txt --summary-file 2_18_5a_blocksworld_summary.txt --python-script helper_script_n_agents.py --num-agents 5 --model 'gpt-4o' --run 4030 --time-limit 200 --domains blocksworld"
+    "--output-file 5a2_blocksworld.txt --summary-file 5a2_blocksworld_summary.txt --python-script helper_script_n_agents.py --num-agents 5 --model 'gpt-4o' --run 4038 --time-limit 200 --domains blocksworld"
     
     # Barman tasks
-    "--output-file 2_18_5a_barman.txt --summary-file 2_18_5a_barman_summary.txt --python-script helper_script_n_agents.py --num-agents 5 --model 'gpt-4o' --run 4031 --time-limit 200 --domains barman-enabled"
+    "--output-file 5a2_barman.txt --summary-file 5a2_barman_summary.txt --python-script helper_script_n_agents.py --num-agents 5 --model 'gpt-4o' --run 4039 --time-limit 200 --domains barman-enabled"
     
     # Grippers tasks
-    "--output-file 2_18_5a_grippers.txt --summary-file 2_18_5a_grippers_summary.txt --python-script helper_script_n_agents.py --num-agents 5 --model 'gpt-4o' --run 4032 --time-limit 200 --domains grippers"
+    "--output-file 5a2_grippers.txt --summary-file 5a2_grippers_summary.txt --python-script helper_script_n_agents.py --num-agents 5 --model 'gpt-4o' --run 4040 --time-limit 200 --domains grippers"
 
     #Tyreworld tasks
-    "--output-file 2_18_5a_tyreworld.txt --summary-file 2_18_5a_tyreworld_summary.txt --python-script helper_script_n_agents.py --num-agents 5 --model 'gpt-4o' --run 4033 --time-limit 200 --domains tyreworld"
+    "--output-file 5a2_tyreworld.txt --summary-file 5a2_tyreworld_summary.txt --python-script helper_script_n_agents.py --num-agents 5 --model 'gpt-4o' --run 4041 --time-limit 200 --domains tyreworld"
 
     # Termes tasks
-    "--output-file 2_18_5a_termes.txt --summary-file 2_18_5a_termes_summary.txt --python-script helper_script_n_agents.py --num-agents 5 --model 'gpt-4o' --run 4034 --time-limit 200 --domains termes"
+    "--output-file 5a2_termes.txt --summary-file 5a2_termes_summary.txt --python-script helper_script_n_agents.py --num-agents 5 --model 'gpt-4o' --run 4042 --time-limit 200 --domains termes"
+
+     # Blocksworld tasks
+    "--output-file 5a3_blocksworld.txt --summary-file 5a3_blocksworld_summary.txt --python-script helper_script_n_agents.py --num-agents 5 --model 'gpt-4o' --run 4043 --time-limit 200 --domains blocksworld"
+    
+    # Barman tasks
+    "--output-file 5a3_barman.txt --summary-file 5a3_barman_summary.txt --python-script helper_script_n_agents.py --num-agents 5 --model 'gpt-4o' --run 4044 --time-limit 200 --domains barman-enabled"
+    
+    # Grippers tasks
+    "--output-file 5a3_grippers.txt --summary-file 5a3_grippers_summary.txt --python-script helper_script_n_agents.py --num-agents 5 --model 'gpt-4o' --run 4045 --time-limit 200 --domains grippers"
+
+    #Tyreworld tasks
+    "--output-file 5a3_tyreworld.txt --summary-file 5a3_tyreworld_summary.txt --python-script helper_script_n_agents.py --num-agents 5 --model 'gpt-4o' --run 4046 --time-limit 200 --domains tyreworld"
+
+    # Termes tasks
+    "--output-file 5a3_termes.txt --summary-file 5a3_termes_summary.txt --python-script helper_script_n_agents.py --num-agents 5 --model 'gpt-4o' --run 4047 --time-limit 200 --domains termes"
 )
 
 
@@ -32,11 +56,10 @@ for exp in "${experiments[@]}"; do
     sbatch --job-name=exp_${run_num} \
            --output=${BASE_DIR}/slurm_exp_${run_num}_%j.out \
            --error=${BASE_DIR}/slurm_exp_${run_num}_%j.err \
-           --cpus-per-task=8 \
+           --cpus-per-task=16 \
            --mem=32G \
-           --time=24:00:00 \
+           --time=36:00:00 \
            --qos=general \
-           --exclude ink-gary \
            --wrap="cd ${BASE_DIR} && ./run_experiments.sh $exp"
     
     # Add a delay between job submissions

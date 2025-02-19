@@ -4,20 +4,42 @@
 BASE_DIR="/home/davidbai/multiagent_helper_llmp"
 
 declare -a experiments=(
-    # Blocksworld tasks
-    "--output-file 2_18_3a_blocksworld.txt --summary-file 2_18_3a_blocksworld_summary.txt --python-script helper_script_n_agents.py --num-agents 3 --model 'gpt-4o' --run 2030 --time-limit 334 --domains blocksworld"
-    
-    # Barman tasks
-   "--output-file 2_18_3a_barman.txt --summary-file 2_18_3a_barman_summary.txt --python-script helper_script_n_agents.py --num-agents 3 --model 'gpt-4o' --run 2031 --time-limit 334 --domains barman-enabled"
-    
-    # Grippers tasks
-    "--output-file 2_18_3a_grippers.txt --summary-file 2_18_3a_grippers_summary.txt --python-script helper_script_n_agents.py --num-agents 3 --model 'gpt-4o' --run 2032 --time-limit 334 --domains grippers"
-
-    #Tyreworld tasks
-    "--output-file 2_18_3a_tyreworld.txt --summary-file 2_18_3a_tyreworld_summary.txt --python-script helper_script_n_agents.py --num-agents 3 --model 'gpt-4o' --run 2033 --time-limit 334 --domains tyreworld"
+    # Tyreworld tasks
+    "--output-file 3a_tyreworld.txt --summary-file 3a_tyreworld_summary.txt --python-script helper_script_n_agents.py --num-agents 3 --model 'gpt-4o' --run 2001 --time-limit 334 --domains tyreworld --tasks 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20"
 
     # Termes tasks
-    "--output-file 2_18_3a_termes.txt --summary-file 2_18_3a_termes_summary.txt --python-script helper_script_n_agents.py --num-agents 3 --model 'gpt-4o' --run 2034 --time-limit 334 --domains termes"
+    "--output-file 3a_termes.txt --summary-file 3a_termes_summary.txt --python-script helper_script_n_agents.py --num-agents 3 --model 'gpt-4o' --run 2002 --time-limit 334 --domains termes --tasks 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20"
+
+    # Blocksworld tasks
+    "--output-file 3a2_blocksworld.txt --summary-file 3a2_blocksworld_summary.txt --python-script helper_script_n_agents.py --num-agents 3 --model 'gpt-4o' --run 2003 --time-limit 334 --domains blocksworld"
+    
+    # Barman tasks
+    "--output-file 3a2_barman.txt --summary-file 3a2_barman_summary.txt --python-script helper_script_n_agents.py --num-agents 3 --model 'gpt-4o' --run 2004 --time-limit 334 --domains barman-enabled"
+    
+    # Grippers tasks
+    "--output-file 3a2_grippers.txt --summary-file 3a2_grippers_summary.txt --python-script helper_script_n_agents.py --num-agents 3 --model 'gpt-4o' --run 2005 --time-limit 334 --domains grippers"
+
+    # Tyreworld tasks
+    "--output-file 3a2_tyreworld.txt --summary-file 3a2_tyreworld_summary.txt --python-script helper_script_n_agents.py --num-agents 3 --model 'gpt-4o' --run 2006 --time-limit 334 --domains tyreworld"
+
+    # Termes tasks
+    "--output-file 3a2_termes.txt --summary-file 3a2_termes_summary.txt --python-script helper_script_n_agents.py --num-agents 3 --model 'gpt-4o' --run 2007 --time-limit 334 --domains termes"
+
+    # Blocksworld tasks
+    "--output-file 3a3_blocksworld.txt --summary-file 3a3_blocksworld_summary.txt --python-script helper_script_n_agents.py --num-agents 3 --model 'gpt-4o' --run 2008 --time-limit 334 --domains blocksworld"
+    
+    # Barman tasks
+    "--output-file 3a3_barman.txt --summary-file 3a3_barman_summary.txt --python-script helper_script_n_agents.py --num-agents 3 --model 'gpt-4o' --run 2009 --time-limit 334 --domains barman-enabled"
+    
+    # Grippers tasks
+    "--output-file 3a3_grippers.txt --summary-file 3a3_grippers_summary.txt --python-script helper_script_n_agents.py --num-agents 3 --model 'gpt-4o' --run 2010 --time-limit 334 --domains grippers"
+
+    # Tyreworld tasks
+    "--output-file 3a3_tyreworld.txt --summary-file 3a3_tyreworld_summary.txt --python-script helper_script_n_agents.py --num-agents 3 --model 'gpt-4o' --run 2011 --time-limit 334 --domains tyreworld"
+
+    # Termes tasks
+    "--output-file 3a3_termes.txt --summary-file 3a3_termes_summary.txt --python-script helper_script_n_agents.py --num-agents 3 --model 'gpt-4o' --run 2012 --time-limit 334 --domains termes"
+
 )
 
 
@@ -33,9 +55,8 @@ for exp in "${experiments[@]}"; do
            --error=${BASE_DIR}/slurm_exp_${run_num}_%j.err \
            --cpus-per-task=4 \
            --mem=32G \
-           --time=16:00:00 \
+           --time=24:00:00 \
            --qos=general \
-           --exclude ink-gary \
            --wrap="cd ${BASE_DIR} && ./run_experiments.sh $exp"
     
     # Add a delay between job submissions
