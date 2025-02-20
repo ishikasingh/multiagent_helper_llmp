@@ -5,40 +5,40 @@ BASE_DIR="/home/davidbai/multiagent_helper_llmp"
 
 declare -a experiments=(
     # Tyreworld tasks
-    "--output-file 3a_tyreworld.txt --summary-file 3a_tyreworld_summary.txt --python-script helper_script_n_agents.py --num-agents 3 --model 'gpt-4o' --run 2001 --time-limit 334 --domains tyreworld --tasks 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20"
+    # "--output-file 3a_tyreworld.txt --summary-file 3a_tyreworld_summary.txt --python-script helper_script_n_agents.py --num-agents 3 --model 'gpt-4o' --run 2001 --time-limit 334 --domains tyreworld --tasks 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20"
 
     # Termes tasks
-    "--output-file 3a_termes.txt --summary-file 3a_termes_summary.txt --python-script helper_script_n_agents.py --num-agents 3 --model 'gpt-4o' --run 2002 --time-limit 334 --domains termes --tasks 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20"
+    # "--output-file 3a_termes.txt --summary-file 3a_termes_summary.txt --python-script helper_script_n_agents.py --num-agents 3 --model 'gpt-4o' --run 2002 --time-limit 334 --domains termes --tasks 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20"
 
     # Blocksworld tasks
-    "--output-file 3a2_blocksworld.txt --summary-file 3a2_blocksworld_summary.txt --python-script helper_script_n_agents.py --num-agents 3 --model 'gpt-4o' --run 2003 --time-limit 334 --domains blocksworld"
+    "--output-file 3a2_blocksworld.txt --summary-file 3a2_blocksworld_summary.txt --python-script helper_script_n_agents.py --num-agents 3 --model 'gpt-4o' --run 2003 --time-limit 334 --domains blocksworld --tasks 4"
     
     # Barman tasks
-    "--output-file 3a2_barman.txt --summary-file 3a2_barman_summary.txt --python-script helper_script_n_agents.py --num-agents 3 --model 'gpt-4o' --run 2004 --time-limit 334 --domains barman-enabled"
+    "--output-file 3a2_barman.txt --summary-file 3a2_barman_summary.txt --python-script helper_script_n_agents.py --num-agents 3 --model 'gpt-4o' --run 2004 --time-limit 334 --domains barman-enabled --tasks 14 15"
     
     # Grippers tasks
-    "--output-file 3a2_grippers.txt --summary-file 3a2_grippers_summary.txt --python-script helper_script_n_agents.py --num-agents 3 --model 'gpt-4o' --run 2005 --time-limit 334 --domains grippers"
+    # "--output-file 3a2_grippers.txt --summary-file 3a2_grippers_summary.txt --python-script helper_script_n_agents.py --num-agents 3 --model 'gpt-4o' --run 2005 --time-limit 334 --domains grippers"
 
     # Tyreworld tasks
-    "--output-file 3a2_tyreworld.txt --summary-file 3a2_tyreworld_summary.txt --python-script helper_script_n_agents.py --num-agents 3 --model 'gpt-4o' --run 2006 --time-limit 334 --domains tyreworld"
+    "--output-file 3a2_tyreworld.txt --summary-file 3a2_tyreworld_summary.txt --python-script helper_script_n_agents.py --num-agents 3 --model 'gpt-4o' --run 2006 --time-limit 334 --domains tyreworld --tasks 2 6 8 9 10 11 12 13 14 15 16 17 18 19 20"
 
     # Termes tasks
-    "--output-file 3a2_termes.txt --summary-file 3a2_termes_summary.txt --python-script helper_script_n_agents.py --num-agents 3 --model 'gpt-4o' --run 2007 --time-limit 334 --domains termes"
+    "--output-file 3a2_termes.txt --summary-file 3a2_termes_summary.txt --python-script helper_script_n_agents.py --num-agents 3 --model 'gpt-4o' --run 2007 --time-limit 334 --domains terme --tasks 17 18 19 20"
 
     # Blocksworld tasks
-    "--output-file 3a3_blocksworld.txt --summary-file 3a3_blocksworld_summary.txt --python-script helper_script_n_agents.py --num-agents 3 --model 'gpt-4o' --run 2008 --time-limit 334 --domains blocksworld"
+    # "--output-file 3a3_blocksworld.txt --summary-file 3a3_blocksworld_summary.txt --python-script helper_script_n_agents.py --num-agents 3 --model 'gpt-4o' --run 2008 --time-limit 334 --domains blocksworld"
     
     # Barman tasks
-    "--output-file 3a3_barman.txt --summary-file 3a3_barman_summary.txt --python-script helper_script_n_agents.py --num-agents 3 --model 'gpt-4o' --run 2009 --time-limit 334 --domains barman-enabled"
+    # "--output-file 3a3_barman.txt --summary-file 3a3_barman_summary.txt --python-script helper_script_n_agents.py --num-agents 3 --model 'gpt-4o' --run 2009 --time-limit 334 --domains barman-enabled"
     
     # Grippers tasks
-    "--output-file 3a3_grippers.txt --summary-file 3a3_grippers_summary.txt --python-script helper_script_n_agents.py --num-agents 3 --model 'gpt-4o' --run 2010 --time-limit 334 --domains grippers"
+    "--output-file 3a3_grippers.txt --summary-file 3a3_grippers_summary.txt --python-script helper_script_n_agents.py --num-agents 3 --model 'gpt-4o' --run 2010 --time-limit 334 --domains grippers --tasks 8"
 
     # Tyreworld tasks
-    "--output-file 3a3_tyreworld.txt --summary-file 3a3_tyreworld_summary.txt --python-script helper_script_n_agents.py --num-agents 3 --model 'gpt-4o' --run 2011 --time-limit 334 --domains tyreworld"
+    "--output-file 3a3_tyreworld.txt --summary-file 3a3_tyreworld_summary.txt --python-script helper_script_n_agents.py --num-agents 3 --model 'gpt-4o' --run 2011 --time-limit 334 --domains tyreworld --tasks 2 6 8 20"
 
     # Termes tasks
-    "--output-file 3a3_termes.txt --summary-file 3a3_termes_summary.txt --python-script helper_script_n_agents.py --num-agents 3 --model 'gpt-4o' --run 2012 --time-limit 334 --domains termes"
+    "--output-file 3a3_termes.txt --summary-file 3a3_termes_summary.txt --python-script helper_script_n_agents.py --num-agents 3 --model 'gpt-4o' --run 2012 --time-limit 334 --domains termes --tasks 16 17 18 19 20"
 
 )
 

@@ -1,0 +1,1580 @@
+Using cached single agent results
+['contains shot3 cocktail2 and all hands are empty.']
+['./experiments_multiagent_help/run1036/barman-enabled/p01_1.pddl']
+agent1
+[info][subgoal_1][barman-enabled] task 01 takes 43.69 sec, found a plan with cost 11.0
+planner successful
+validating
+validator time 0.0036296844482421875
+[info][multiagent main goal][barman-enabled] task 01 takes 228.08 sec, found a plan with cost 19.0
+TASK: barman-enabled - 1036 - 01
+25.0 True
+tracing optimal path
+[results][barman-enabled][01]
+[single_agent][planning time: 1006.43][cost: 27.0]
+[multi_agent][planning_time: 273.7632086467743][cost: 25.0][agents: 2][optimization time 78.35474371910095]
+----------------------------------------
+Using cached single agent results
+['contains shot2 cocktail3 and all hands are empty.']
+['./experiments_multiagent_help/run1036/barman-enabled/p02_1.pddl']
+agent1
+[info][subgoal_1][barman-enabled] task 02 takes 43.8 sec, found a plan with cost 11.0
+planner successful
+validating
+validator time 0.0044269561767578125
+[info][multiagent main goal][barman-enabled] task 02 takes 228.28 sec, found a plan with cost 19.0
+TASK: barman-enabled - 1036 - 02
+26.0 True
+tracing optimal path
+[results][barman-enabled][02]
+[single_agent][planning time: 1002.14][cost: 27.0]
+[multi_agent][planning_time: 276.3143258857727][cost: 26.0][agents: 2][optimization time 98.79699611663818]
+----------------------------------------
+Using cached single agent results
+['contains shot3 cocktail3 and all hands are empty.']
+['./experiments_multiagent_help/run1036/barman-enabled/p03_1.pddl']
+agent1
+[info][subgoal_1][barman-enabled] task 03 takes 43.28 sec, found a plan with cost 11.0
+planner successful
+validating
+validator time 0.04142045974731445
+[info][multiagent main goal][barman-enabled] task 03 takes 454.93 sec, found a plan with cost 19.0
+TASK: barman-enabled - 1036 - 03
+25.0 True
+tracing optimal path
+[results][barman-enabled][03]
+[single_agent][planning time: 1002.03][cost: 27.0]
+[multi_agent][planning_time: 501.75781365394596][cost: 25.0][agents: 2][optimization time 199.68285655975342]
+----------------------------------------
+Using cached single agent results
+['contains shot3 cocktail2 and all hands are empty.']
+['./experiments_multiagent_help/run1036/barman-enabled/p04_1.pddl']
+agent1
+[info][subgoal_1][barman-enabled] task 04 takes 29.11 sec, found a plan with cost 11.0
+planner successful
+validating
+validator time 0.010419130325317383
+[info][multiagent main goal][barman-enabled] task 04 takes 302.96 sec, found a plan with cost 18.0
+TASK: barman-enabled - 1036 - 04
+25.0 True
+tracing optimal path
+[results][barman-enabled][04]
+[single_agent][planning time: 1004.02][cost: 27.0]
+[multi_agent][planning_time: 334.175655670166][cost: 25.0][agents: 2][optimization time 339.5459930896759]
+----------------------------------------
+Using cached single agent results
+['contains shot3 cocktail3 and all hands are empty.']
+['./experiments_multiagent_help/run1036/barman-enabled/p05_1.pddl']
+agent1
+[info][subgoal_1][barman-enabled] task 05 takes 110.68 sec, found a plan with cost 11.0
+planner successful
+validating
+validator time 0.04892110824584961
+[info][multiagent main goal][barman-enabled] task 05 takes 500.27 sec, found a plan with cost 31.0
+TASK: barman-enabled - 1036 - 05
+37.0 True
+tracing optimal path
+[results][barman-enabled][05]
+[single_agent][planning time: 1002.25][cost: 40.0]
+[multi_agent][planning_time: 613.5015887737275][cost: 37.0][agents: 2][optimization time 351.0531871318817]
+----------------------------------------
+Using cached single agent results
+['contains shot3 cocktail1 and all hands are empty.']
+['./experiments_multiagent_help/run1036/barman-enabled/p06_1.pddl']
+agent1
+[info][subgoal_1][barman-enabled] task 06 takes 109.94 sec, found a plan with cost 11.0
+planner successful
+validating
+validator time 0.08527851104736328
+[info][multiagent main goal][barman-enabled] task 06 takes 500.28 sec, found a plan with cost 31.0
+TASK: barman-enabled - 1036 - 06
+37.0 True
+tracing optimal path
+[results][barman-enabled][06]
+[single_agent][planning time: 1002.03][cost: 40.0]
+[multi_agent][planning_time: 612.9298073959351][cost: 37.0][agents: 2][optimization time 314.9311020374298]
+----------------------------------------
+Using cached single agent results
+['contains shot2 cocktail1 and all hands are empty.']
+['./experiments_multiagent_help/run1036/barman-enabled/p07_1.pddl']
+agent1
+[info][subgoal_1][barman-enabled] task 07 takes 117.4 sec, found a plan with cost 11.0
+planner successful
+validating
+validator time 0.013854742050170898
+[info][multiagent main goal][barman-enabled] task 07 takes 500.28 sec, found a plan with cost 31.0
+TASK: barman-enabled - 1036 - 07
+41.0 True
+tracing optimal path
+[results][barman-enabled][07]
+[single_agent][planning time: 1001.01][cost: 39.0]
+[multi_agent][planning_time: 620.0666209983825][cost: 41.0][agents: 2][optimization time 52.44794964790344]
+----------------------------------------
+Using cached single agent results
+['contains shot1 cocktail3 and all hands are empty.']
+['./experiments_multiagent_help/run1036/barman-enabled/p08_1.pddl']
+agent1
+[info][subgoal_1][barman-enabled] task 08 takes 116.45 sec, found a plan with cost 11.0
+planner successful
+validating
+validator time 0.030362844467163086
+[info][multiagent main goal][barman-enabled] task 08 takes 500.25 sec, found a plan with cost 31.0
+TASK: barman-enabled - 1036 - 08
+37.0 True
+tracing optimal path
+[results][barman-enabled][08]
+[single_agent][planning time: 1001.36][cost: 40.0]
+[multi_agent][planning_time: 619.0448305130005][cost: 37.0][agents: 2][optimization time 202.65684866905212]
+----------------------------------------
+Using cached single agent results
+['contains shot4 cocktail1 and all hands are empty.']
+['./experiments_multiagent_help/run1036/barman-enabled/p09_1.pddl']
+agent1
+[info][subgoal_1][barman-enabled] task 09 takes 244.05 sec, found a plan with cost 11.0
+planner successful
+validating
+validator time 0.053517818450927734
+[info][multiagent main goal][barman-enabled] task 09 takes 500.27 sec, found a plan with cost 44.0
+TASK: barman-enabled - 1036 - 09
+50.0 True
+tracing optimal path
+[results][barman-enabled][09]
+[single_agent][planning time: 1001.45][cost: 50.0]
+[multi_agent][planning_time: 746.3023868274688][cost: 50.0][agents: 2][optimization time 264.85286235809326]
+----------------------------------------
+Using cached single agent results
+['contains shot5 cocktail1 and all hands are empty.']
+['./experiments_multiagent_help/run1036/barman-enabled/p10_1.pddl']
+agent1
+[info][subgoal_1][barman-enabled] task 10 takes 244.99 sec, found a plan with cost 11.0
+planner successful
+validating
+validator time 0.050539493560791016
+[info][multiagent main goal][barman-enabled] task 10 takes 500.24 sec, found a plan with cost 43.0
+TASK: barman-enabled - 1036 - 10
+49.0 True
+tracing optimal path
+[results][barman-enabled][10]
+[single_agent][planning time: 1001.53][cost: 53.0]
+[multi_agent][planning_time: 747.2507984447479][cost: 49.0][agents: 2][optimization time 245.1958110332489]
+----------------------------------------
+Using cached single agent results
+['contains shot3 cocktail2 and all hands are empty.']
+['./experiments_multiagent_help/run1036/barman-enabled/p11_1.pddl']
+agent1
+[info][subgoal_1][barman-enabled] task 11 takes 241.09 sec, found a plan with cost 11.0
+planner successful
+validating
+validator time 0.013001680374145508
+[info][multiagent main goal][barman-enabled] task 11 takes 500.27 sec, found a plan with cost 44.0
+TASK: barman-enabled - 1036 - 11
+54.0 True
+tracing optimal path
+[results][barman-enabled][11]
+[single_agent][planning time: 1000.36][cost: 56.0]
+[multi_agent][planning_time: 752.6614268875122][cost: 54.0][agents: 2][optimization time 42.3235969543457]
+----------------------------------------
+Using cached single agent results
+['contains shot2 cocktail1 and all hands are empty.']
+['./experiments_multiagent_help/run1036/barman-enabled/p12_1.pddl']
+agent1
+[info][subgoal_1][barman-enabled] task 12 takes 240.69 sec, found a plan with cost 11.0
+planner successful
+validating
+validator time 0.018002748489379883
+[info][multiagent main goal][barman-enabled] task 12 takes 500.28 sec, found a plan with cost 43.0
+TASK: barman-enabled - 1036 - 12
+49.0 True
+tracing optimal path
+[results][barman-enabled][12]
+[single_agent][planning time: 1000.34][cost: 53.0]
+[multi_agent][planning_time: 742.8107037258148][cost: 49.0][agents: 2][optimization time 223.49566078186035]
+----------------------------------------
+Using cached single agent results
+['contains shot4 cocktail1 and all hands are empty.']
+['./experiments_multiagent_help/run1036/barman-enabled/p13_1.pddl']
+agent1
+[info][subgoal_1][barman-enabled] task 13 takes 500.29 sec, found a plan with cost 11.0
+planner successful
+validating
+validator time 0.010370016098022461
+[info][multiagent main goal][barman-enabled] task 13 takes 500.35 sec, found a plan with cost 62.0
+TASK: barman-enabled - 1036 - 13
+65.0 True
+tracing optimal path
+[results][barman-enabled][13]
+[single_agent][planning time: 1000.41][cost: 74.0]
+[multi_agent][planning_time: 1002.6958891296388][cost: 65.0][agents: 2][optimization time 725.1351006031036]
+----------------------------------------
+Using cached single agent results
+['contains shot3 cocktail4 and all hands are empty.']
+['./experiments_multiagent_help/run1036/barman-enabled/p14_1.pddl']
+agent1
+[info][subgoal_1][barman-enabled] task 14 takes 500.3 sec, found a plan with cost 11.0
+planner successful
+validating
+validator time 0.04892420768737793
+[info][multiagent main goal][barman-enabled] task 14 takes 500.35 sec, found a plan with cost 59.0
+TASK: barman-enabled - 1036 - 14
+60.0 True
+tracing optimal path
+[results][barman-enabled][14]
+[single_agent][planning time: 1000.4][cost: 74.0]
+[multi_agent][planning_time: 1003.0523838043214][cost: 60.0][agents: 2][optimization time 1640.9485688209534]
+----------------------------------------
+Using cached single agent results
+['contains shot3 cocktail5 and all hands are empty.']
+['./experiments_multiagent_help/run1036/barman-enabled/p15_1.pddl']
+agent1
+[info][subgoal_1][barman-enabled] task 15 takes 500.3 sec, found a plan with cost 11.0
+planner successful
+validating
+validator time 0.36130785942077637
+[info][multiagent main goal][barman-enabled] task 15 takes 500.35 sec, found a plan with cost 62.0
+TASK: barman-enabled - 1036 - 15
+65.0 True
+tracing optimal path
+[results][barman-enabled][15]
+[single_agent][planning time: 1000.41][cost: 75.0]
+[multi_agent][planning_time: 1006.8681413173676][cost: 65.0][agents: 2][optimization time 1383.7360134124756]
+----------------------------------------
+Using cached single agent results
+['contains shot3 cocktail6 and all hands are empty.']
+['./experiments_multiagent_help/run1036/barman-enabled/p16_1.pddl']
+agent1
+[info][subgoal_1][barman-enabled] task 16 takes 500.29 sec, found a plan with cost 11.0
+planner successful
+validating
+validator time 0.3180100917816162
+[info][multiagent main goal][barman-enabled] task 16 takes 500.38 sec, found a plan with cost 64.0
+TASK: barman-enabled - 1036 - 16
+64.0 True
+tracing optimal path
+[results][barman-enabled][16]
+[single_agent][planning time: 1000.41][cost: 80.0]
+[multi_agent][planning_time: 1003.0264858436585][cost: 64.0][agents: 2][optimization time 502.0786609649658]
+----------------------------------------
+Using cached single agent results
+['contains shot5 cocktail5 and all hands are empty.']
+['./experiments_multiagent_help/run1036/barman-enabled/p17_1.pddl']
+agent1
+[info][subgoal_1][barman-enabled] task 17 takes 500.34 sec, found a plan with cost 11.0
+planner successful
+validating
+validator time 0.17462372779846191
+[info][multiagent main goal][barman-enabled] task 17 takes 500.4 sec, found a plan with cost 77.0
+TASK: barman-enabled - 1036 - 17
+77.0 True
+tracing optimal path
+[results][barman-enabled][17]
+[single_agent][planning time: 1000.39][cost: 83.0]
+[multi_agent][planning_time: 1012.3648750686646][cost: 77.0][agents: 2][optimization time 895.8061680793762]
+----------------------------------------
+Using cached single agent results
+['contains shot7 cocktail2 and all hands are empty.']
+['./experiments_multiagent_help/run1036/barman-enabled/p18_1.pddl']
+agent1
+[info][subgoal_1][barman-enabled] task 18 takes 500.34 sec, found a plan with cost 11.0
+planner successful
+validating
+validator time 0.059325218200683594
+[info][multiagent main goal][barman-enabled] task 18 takes 500.36 sec, found a plan with cost 77.0
+TASK: barman-enabled - 1036 - 18
+83.0 True
+tracing optimal path
+[results][barman-enabled][18]
+[single_agent][planning time: 1000.44][cost: 86.0]
+[multi_agent][planning_time: 1006.1175562858582][cost: 83.0][agents: 2][optimization time 693.8075730800629]
+----------------------------------------
+Using cached single agent results
+['contains shot5 cocktail1 and all hands are empty.']
+['./experiments_multiagent_help/run1036/barman-enabled/p19_1.pddl']
+agent1
+[info][subgoal_1][barman-enabled] task 19 takes 500.35 sec, found a plan with cost 11.0
+planner successful
+validating
+validator time 0.1610093116760254
+[info][multiagent main goal][barman-enabled] task 19 takes 500.4 sec, found a plan with cost 78.0
+TASK: barman-enabled - 1036 - 19
+81.0 True
+tracing optimal path
+[results][barman-enabled][19]
+[single_agent][planning time: 1000.44][cost: 87.0]
+[multi_agent][planning_time: 1003.439905166626][cost: 81.0][agents: 2][optimization time 1252.230901479721]
+----------------------------------------
+Using cached single agent results
+['contains shot3 cocktail1 and all hands are empty.']
+['./experiments_multiagent_help/run1036/barman-enabled/p20_1.pddl']
+agent1
+[info][subgoal_1][barman-enabled] task 20 takes 500.37 sec, found a plan with cost 11.0
+planner successful
+validating
+validator time 0.10113382339477539
+[info][multiagent main goal][barman-enabled] task 20 takes 500.39 sec, found a plan with cost 76.0
+TASK: barman-enabled - 1036 - 20
+79.0 True
+tracing optimal path
+[results][barman-enabled][20]
+[single_agent][planning time: 1000.4][cost: 86.0]
+[multi_agent][planning_time: 1006.1398339366913][cost: 79.0][agents: 2][optimization time 1105.6387567520142]
+----------------------------------------
+Using cached single agent results
+LLM generated no subgoal for agent 1, reducing number of agents
+args.num_agents: 1
+[]
+[]
+copying original pddl file to main agent for single agent case
+[info][multiagent main goal][blocksworld] task 01 takes 0.06 sec, found a plan with cost 6.0
+[results][blocksworld][01]
+[single_agent][planning time: 0.06][cost: 6.0]
+[multi_agent][planning_time: 0.06][cost: 6.0][agents: 1][optimization time 0]
+----------------------------------------
+Using cached single agent results
+['b2 is on top of b3.']
+['./experiments_multiagent_help/run1035/blocksworld/p02_1.pddl']
+agent1
+[info][subgoal_1][blocksworld] task 02 takes 0.07 sec, found a plan with cost 6.0
+planner successful
+validating
+validator time 0.002244710922241211
+[info][multiagent main goal][blocksworld] task 02 takes 0.07 sec, found a plan with cost 6.0
+TASK: blocksworld - 1035 - 02
+12 True
+tracing optimal path
+[results][blocksworld][02]
+[single_agent][planning time: 0.07][cost: 6.0]
+[multi_agent][planning_time: 1.714753522872925][cost: 12.0][agents: 2][optimization time 1.0525894165039062]
+----------------------------------------
+Using cached single agent results
+['b3 should be on top of b4.']
+['./experiments_multiagent_help/run1035/blocksworld/p03_1.pddl']
+agent1
+[info][subgoal_1][blocksworld] task 03 takes 0.07 sec, found a plan with cost 4.0
+planner successful
+validating
+validator time 0.002199411392211914
+[info][multiagent main goal][blocksworld] task 03 takes 0.07 sec, found a plan with cost 2.0
+TASK: blocksworld - 1035 - 03
+5 True
+tracing optimal path
+[results][blocksworld][03]
+[single_agent][planning time: 0.06][cost: 6.0]
+[multi_agent][planning_time: 1.5836185359954835][cost: 5.0][agents: 2][optimization time 0.57574462890625]
+----------------------------------------
+Using cached single agent results
+['b1 is on the table.']
+['./experiments_multiagent_help/run1035/blocksworld/p04_1.pddl']
+agent1
+[info][subgoal_1][blocksworld] task 04 takes 0.06 sec, found a plan with cost 4.0
+planner successful
+validating
+validator time 0.0021092891693115234
+[info][multiagent main goal][blocksworld] task 04 takes 0.07 sec, found a plan with cost 8.0
+TASK: blocksworld - 1035 - 04
+11.0 True
+tracing optimal path
+[results][blocksworld][04]
+[single_agent][planning time: 0.06][cost: 12.0]
+[multi_agent][planning_time: 1.315373067855835][cost: 11.0][agents: 2][optimization time 1.3609132766723633]
+----------------------------------------
+Using cached single agent results
+['b4 should be on the table.']
+['./experiments_multiagent_help/run1035/blocksworld/p05_1.pddl']
+agent1
+[info][subgoal_1][blocksworld] task 05 takes 0.07 sec, found a plan with cost 2.0
+planner successful
+validating
+validator time 0.0020797252655029297
+[info][multiagent main goal][blocksworld] task 05 takes 0.07 sec, found a plan with cost 6.0
+TASK: blocksworld - 1035 - 05
+7 True
+tracing optimal path
+[results][blocksworld][05]
+[single_agent][planning time: 0.06][cost: 8.0]
+[multi_agent][planning_time: 2.2451368713378903][cost: 7.0][agents: 2][optimization time 5.95538330078125]
+----------------------------------------
+Using cached single agent results
+['b3 should be on top of b5.']
+['./experiments_multiagent_help/run1035/blocksworld/p06_1.pddl']
+agent1
+[info][subgoal_1][blocksworld] task 06 takes 0.07 sec, found a plan with cost 4.0
+planner successful
+validating
+validator time 0.006913900375366211
+[info][multiagent main goal][blocksworld] task 06 takes 0.08 sec, found a plan with cost 8.0
+TASK: blocksworld - 1035 - 06
+11 True
+tracing optimal path
+[results][blocksworld][06]
+[single_agent][planning time: 0.08][cost: 12.0]
+[multi_agent][planning_time: 2.7639187812805175][cost: 11.0][agents: 2][optimization time 3.175279140472412]
+----------------------------------------
+Using cached single agent results
+['b3 should be on top of b5.']
+['./experiments_multiagent_help/run1035/blocksworld/p07_1.pddl']
+agent1
+[info][subgoal_1][blocksworld] task 07 takes 0.08 sec, found a plan with cost 6.0
+planner successful
+validating
+validator time 0.001990795135498047
+[info][multiagent main goal][blocksworld] task 07 takes 0.08 sec, found a plan with cost 2.0
+TASK: blocksworld - 1035 - 07
+6.0 True
+tracing optimal path
+[results][blocksworld][07]
+[single_agent][planning time: 0.08][cost: 8.0]
+[multi_agent][planning_time: 1.7393304443359376][cost: 6.0][agents: 2][optimization time 1.3233489990234375]
+----------------------------------------
+Using cached single agent results
+['b3 should be on top of b5.']
+['./experiments_multiagent_help/run1035/blocksworld/p08_1.pddl']
+agent1
+[info][subgoal_1][blocksworld] task 08 takes 0.08 sec, found a plan with cost 10.0
+planner successful
+validating
+validator time 0.002183675765991211
+[info][multiagent main goal][blocksworld] task 08 takes 0.08 sec, found a plan with cost 4.0
+TASK: blocksworld - 1035 - 08
+12.0 True
+tracing optimal path
+[results][blocksworld][08]
+[single_agent][planning time: 0.1][cost: 14.0]
+[multi_agent][planning_time: 1.9877873992919923][cost: 12.0][agents: 2][optimization time 4.0931830406188965]
+----------------------------------------
+Using cached single agent results
+['b3 should be on top of b7.']
+['./experiments_multiagent_help/run1035/blocksworld/p09_1.pddl']
+agent1
+[info][subgoal_1][blocksworld] task 09 takes 0.08 sec, found a plan with cost 6.0
+planner successful
+validating
+validator time 0.0020568370819091797
+[info][multiagent main goal][blocksworld] task 09 takes 1.12 sec, found a plan with cost 14.0
+TASK: blocksworld - 1035 - 09
+20 True
+tracing optimal path
+[results][blocksworld][09]
+[single_agent][planning time: 0.97][cost: 14.0]
+[multi_agent][planning_time: 2.3952829360961916][cost: 20.0][agents: 2][optimization time 1.9955077171325684]
+----------------------------------------
+Using cached single agent results
+['b2 should be on top of b5.']
+['./experiments_multiagent_help/run1035/blocksworld/p10_1.pddl']
+agent1
+[info][subgoal_1][blocksworld] task 10 takes 497.83 sec, no solution found
+planner successful
+validating
+validator time 0.024737119674682617
+[info][multiagent main goal][blocksworld] task 10 takes 1.13 sec, found a plan with cost 18.0
+TASK: blocksworld - 1035 - 10
+18 True
+tracing optimal path
+[results][blocksworld][10]
+[single_agent][planning time: 0.99][cost: 18.0]
+[multi_agent][planning_time: 3.8548947620391845][cost: 18.0][agents: 2][optimization time 20.03648614883423]
+----------------------------------------
+Using cached single agent results
+['b4 should be on top of b2.']
+['./experiments_multiagent_help/run1035/blocksworld/p11_1.pddl']
+agent1
+[info][subgoal_1][blocksworld] task 11 takes 497.83 sec, no solution found
+planner successful
+validating
+validator time 0.05530953407287598
+[info][multiagent main goal][blocksworld] task 11 takes 10.55 sec, found a plan with cost 22.0
+TASK: blocksworld - 1035 - 11
+22 True
+tracing optimal path
+[results][blocksworld][11]
+[single_agent][planning time: 9.69][cost: 22.0]
+[multi_agent][planning_time: 11.383635568618775][cost: 22.0][agents: 2][optimization time 31.24328923225403]
+----------------------------------------
+Using cached single agent results
+['b2 should be on top of b8.']
+['./experiments_multiagent_help/run1035/blocksworld/p12_1.pddl']
+agent1
+[info][subgoal_1][blocksworld] task 12 takes 0.08 sec, found a plan with cost 4.0
+planner successful
+validating
+validator time 0.02422809600830078
+[info][multiagent main goal][blocksworld] task 12 takes 12.23 sec, found a plan with cost 20.0
+TASK: blocksworld - 1035 - 12
+24 True
+tracing optimal path
+[results][blocksworld][12]
+[single_agent][planning time: 12.21][cost: 20.0]
+[multi_agent][planning_time: 14.140769777297974][cost: 24.0][agents: 2][optimization time 30.2193820476532]
+----------------------------------------
+Using cached single agent results
+['b8 should be on top of b7.']
+['./experiments_multiagent_help/run1035/blocksworld/p13_1.pddl']
+agent1
+[info][subgoal_1][blocksworld] task 13 takes 0.09 sec, found a plan with cost 2.0
+planner successful
+validating
+validator time 0.025852203369140625
+[info][multiagent main goal][blocksworld] task 13 takes 115.21 sec, found a plan with cost 24.0
+TASK: blocksworld - 1035 - 13
+25.0 True
+tracing optimal path
+[results][blocksworld][13]
+[single_agent][planning time: 146.4][cost: 26.0]
+[multi_agent][planning_time: 116.75895838737488][cost: 25.0][agents: 2][optimization time 38.03787398338318]
+----------------------------------------
+Using cached single agent results
+['b3 should be on top of b5.']
+['./experiments_multiagent_help/run1035/blocksworld/p14_1.pddl']
+agent1
+[info][subgoal_1][blocksworld] task 14 takes 0.09 sec, found a plan with cost 6.0
+planner successful
+validating
+validator time 0.07133221626281738
+[info][multiagent main goal][blocksworld] task 14 takes 85.47 sec, found a plan with cost 22.0
+TASK: blocksworld - 1035 - 14
+26.0 True
+tracing optimal path
+[results][blocksworld][14]
+[single_agent][planning time: 71.57][cost: 22.0]
+[multi_agent][planning_time: 87.28259044647217][cost: 26.0][agents: 2][optimization time 92.4294261932373]
+----------------------------------------
+Using cached single agent results
+['b3 should be on top of b10.']
+['./experiments_multiagent_help/run1035/blocksworld/p15_1.pddl']
+agent1
+[info][subgoal_1][blocksworld] task 15 takes 0.37 sec, found a plan with cost 16.0
+planner successful
+validating
+validator time 0.03150629997253418
+[info][multiagent main goal][blocksworld] task 15 takes 500.24 sec, found a plan with cost 16.0
+TASK: blocksworld - 1035 - 15
+30.0 True
+tracing optimal path
+[results][blocksworld][15]
+[single_agent][planning time: 222.96][cost: 26.0]
+[multi_agent][planning_time: 503.32389627456666][cost: 30.0][agents: 2][optimization time 204.8717761039734]
+----------------------------------------
+Using cached single agent results
+['b7 should be on top of b4.']
+['./experiments_multiagent_help/run1035/blocksworld/p16_1.pddl']
+agent1
+[info][subgoal_1][blocksworld] task 16 takes 0.11 sec, found a plan with cost 4.0
+planner successful
+validating
+validator time 0.038796186447143555
+[info][multiagent main goal][blocksworld] task 16 takes 500.31 sec, found a plan with cost 28.0
+TASK: blocksworld - 1035 - 16
+32 True
+tracing optimal path
+[results][blocksworld][16]
+[single_agent][planning time: 983.49][cost: 28.0]
+[multi_agent][planning_time: 502.1506797504425][cost: 32.0][agents: 2][optimization time 98.70439863204956]
+----------------------------------------
+Using cached single agent results
+['b11 should be on top of b1.']
+['./experiments_multiagent_help/run1035/blocksworld/p17_1.pddl']
+agent1
+[info][subgoal_1][blocksworld] task 17 takes 6.31 sec, found a plan with cost 14.0
+planner successful
+validating
+validator time 0.012315988540649414
+[info][multiagent main goal][blocksworld] task 17 takes 437.94 sec, found a plan with cost 12.0
+TASK: blocksworld - 1035 - 17
+18.0 True
+tracing optimal path
+[results][blocksworld][17]
+[single_agent][planning time: 1000.34][cost: 22.0]
+[multi_agent][planning_time: 445.75511622428894][cost: 18.0][agents: 2][optimization time 336.1422290802002]
+----------------------------------------
+Using cached single agent results
+['b10 should be on top of b9.']
+['./experiments_multiagent_help/run1035/blocksworld/p18_1.pddl']
+agent1
+[info][subgoal_1][blocksworld] task 18 takes 1.75 sec, found a plan with cost 16.0
+planner successful
+validating
+validator time 0.0066165924072265625
+[info][multiagent main goal][blocksworld] task 18 takes 500.4 sec, found a plan with cost 22.0
+TASK: blocksworld - 1035 - 18
+32.0 True
+tracing optimal path
+[results][blocksworld][18]
+[single_agent][planning time: 969.95][cost: 30.0]
+[multi_agent][planning_time: 504.2632388114929][cost: 32.0][agents: 2][optimization time 60.30077385902405]
+----------------------------------------
+Using cached single agent results
+['b6 should be on top of b12.']
+['./experiments_multiagent_help/run1035/blocksworld/p19_1.pddl']
+agent1
+[info][subgoal_1][blocksworld] task 19 takes 0.1 sec, found a plan with cost 4.0
+planner successful
+validating
+validator time 0.03816652297973633
+[info][multiagent main goal][blocksworld] task 19 takes 500.28 sec, found a plan with cost 24.0
+TASK: blocksworld - 1035 - 19
+24.0 True
+tracing optimal path
+[results][blocksworld][19]
+[single_agent][planning time: 958.85][cost: 24.0]
+[multi_agent][planning_time: 502.2672470855713][cost: 24.0][agents: 2][optimization time 58.930381536483765]
+----------------------------------------
+Using cached single agent results
+['b5 should be on top of b3.']
+['./experiments_multiagent_help/run1035/blocksworld/p20_1.pddl']
+agent1
+[info][subgoal_1][blocksworld] task 20 takes 0.18 sec, found a plan with cost 8.0
+planner successful
+validating
+validator time 0.0074672698974609375
+[info][multiagent main goal][blocksworld] task 20 takes 500.4 sec, found a plan with cost 26.0
+TASK: blocksworld - 1035 - 20
+34 True
+tracing optimal path
+[results][blocksworld][20]
+[single_agent][planning time: 1001.37][cost: 30.0]
+[multi_agent][planning_time: 502.50267155647276][cost: 34.0][agents: 2][optimization time 27.677680253982544]
+----------------------------------------
+Using cached single agent results
+['ball1 is in room2.']
+['./experiments_multiagent_help/run1037/grippers/p01_1.pddl']
+agent1
+[info][subgoal_1][grippers] task 01 takes 0.08 sec, found a plan with cost 3.0
+planner successful
+validating
+validator time 0.002444028854370117
+[info][multiagent main goal][grippers] task 01 takes 0.07 sec, found a plan with cost 3.0
+TASK: grippers - 1037 - 01
+3.0 True
+tracing optimal path
+[results][grippers][01]
+[single_agent][planning time: 0.04][cost: 5.0]
+[multi_agent][planning_time: 1.127268934249878][cost: 3.0][agents: 2][optimization time 1.1684930324554443]
+----------------------------------------
+Using cached single agent results
+['ball3 is in room3.']
+['./experiments_multiagent_help/run1037/grippers/p02_1.pddl']
+agent1
+[info][subgoal_1][grippers] task 02 takes 0.07 sec, found a plan with cost 4.0
+planner successful
+validating
+validator time 0.0022895336151123047
+[info][multiagent main goal][grippers] task 02 takes 0.07 sec, found a plan with cost 7.0
+TASK: grippers - 1037 - 02
+7.0 True
+tracing optimal path
+[results][grippers][02]
+[single_agent][planning time: 0.05][cost: 9.0]
+[multi_agent][planning_time: 2.094487800598144][cost: 7.0][agents: 2][optimization time 6.101735591888428]
+----------------------------------------
+Using cached single agent results
+LLM generated no subgoal for agent 1, reducing number of agents
+args.num_agents: 1
+[]
+[]
+copying original pddl file to main agent for single agent case
+[info][multiagent main goal][grippers] task 03 takes 0.08 sec, found a plan with cost 6.0
+[results][grippers][03]
+[single_agent][planning time: 0.05][cost: 6.0]
+[multi_agent][planning_time: 0.05][cost: 6.0][agents: 1][optimization time 0]
+----------------------------------------
+Using cached single agent results
+['ball3 should be in room3.']
+['./experiments_multiagent_help/run1037/grippers/p04_1.pddl']
+agent1
+[info][subgoal_1][grippers] task 04 takes 0.07 sec, found a plan with cost 4.0
+planner successful
+validating
+validator time 0.0022878646850585938
+[info][multiagent main goal][grippers] task 04 takes 497.79 sec, no solution found
+TASK: grippers - 1037 - 04
+4 True
+tracing optimal path
+[results][grippers][04]
+[single_agent][planning time: 0.05][cost: 4.0]
+[multi_agent][planning_time: 0.2979877662658692][cost: 4.0][agents: 2][optimization time 6.838505268096924]
+----------------------------------------
+Using cached single agent results
+['ball3 should be in room2.']
+['./experiments_multiagent_help/run1037/grippers/p05_1.pddl']
+agent1
+[info][subgoal_1][grippers] task 05 takes 0.07 sec, found a plan with cost 4.0
+planner successful
+validating
+validator time 0.008214473724365234
+[info][multiagent main goal][grippers] task 05 takes 497.87 sec, no solution found
+TASK: grippers - 1037 - 05
+4 True
+tracing optimal path
+[results][grippers][05]
+[single_agent][planning time: 0.05][cost: 4.0]
+[multi_agent][planning_time: 0.4464367103576661][cost: 4.0][agents: 2][optimization time 9.728543043136597]
+----------------------------------------
+Using cached single agent results
+LLM generated no subgoal for agent 1, reducing number of agents
+args.num_agents: 1
+[]
+[]
+copying original pddl file to main agent for single agent case
+[info][multiagent main goal][grippers] task 06 takes 0.08 sec, found a plan with cost 4.0
+[results][grippers][06]
+[single_agent][planning time: 0.06][cost: 4.0]
+[multi_agent][planning_time: 0.06][cost: 4.0][agents: 1][optimization time 0]
+----------------------------------------
+Using cached single agent results
+['ball3 should be in room3.']
+['./experiments_multiagent_help/run1037/grippers/p07_1.pddl']
+agent1
+[info][subgoal_1][grippers] task 07 takes 0.07 sec, found a plan with cost 4.0
+planner successful
+validating
+validator time 0.017874479293823242
+[info][multiagent main goal][grippers] task 07 takes 0.07 sec, found a plan with cost 6.0
+TASK: grippers - 1037 - 07
+6.0 True
+tracing optimal path
+[results][grippers][07]
+[single_agent][planning time: 0.06][cost: 8.0]
+[multi_agent][planning_time: 1.912620439529419][cost: 6.0][agents: 2][optimization time 69.88257241249084]
+----------------------------------------
+Using cached single agent results
+['ball3 is in room2.']
+['./experiments_multiagent_help/run1037/grippers/p08_1.pddl']
+agent1
+[info][subgoal_1][grippers] task 08 takes 0.07 sec, found a plan with cost 4.0
+planner successful
+validating
+validator time 0.022026538848876953
+[info][multiagent main goal][grippers] task 08 takes 0.08 sec, found a plan with cost 9.0
+TASK: grippers - 1037 - 08
+9.0 True
+tracing optimal path
+[results][grippers][08]
+[single_agent][planning time: 0.06][cost: 11.0]
+[multi_agent][planning_time: 3.403388166427612][cost: 9.0][agents: 2][optimization time 99.4732940196991]
+----------------------------------------
+Using cached single agent results
+['ball2 should be in room4.']
+['./experiments_multiagent_help/run1037/grippers/p09_1.pddl']
+agent1
+[info][subgoal_1][grippers] task 09 takes 0.08 sec, found a plan with cost 4.0
+planner successful
+validating
+validator time 0.026955366134643555
+[info][multiagent main goal][grippers] task 09 takes 5.54 sec, found a plan with cost 15.0
+TASK: grippers - 1037 - 09
+15.0 True
+tracing optimal path
+[results][grippers][09]
+[single_agent][planning time: 5.85][cost: 17.0]
+[multi_agent][planning_time: 7.247800226211548][cost: 15.0][agents: 2][optimization time 140.8499825000763]
+----------------------------------------
+Using cached single agent results
+['ball2 in room1']
+['./experiments_multiagent_help/run1037/grippers/p10_1.pddl']
+agent1
+[info][subgoal_1][grippers] task 10 takes 0.08 sec, found a plan with cost 4.0
+planner successful
+validating
+validator time 0.04839324951171875
+[info][multiagent main goal][grippers] task 10 takes 0.07 sec, found a plan with cost 6.0
+TASK: grippers - 1037 - 10
+6.0 True
+tracing optimal path
+[results][grippers][10]
+[single_agent][planning time: 0.05][cost: 10.0]
+[multi_agent][planning_time: 3.219216728210449][cost: 6.0][agents: 2][optimization time 104.63082551956177]
+----------------------------------------
+Using cached single agent results
+['ball3 should be in room2.']
+['./experiments_multiagent_help/run1037/grippers/p11_1.pddl']
+agent1
+[info][subgoal_1][grippers] task 11 takes 0.07 sec, found a plan with cost 3.0
+planner successful
+validating
+validator time 0.057474374771118164
+[info][multiagent main goal][grippers] task 11 takes 497.63 sec, no solution found
+TASK: grippers - 1037 - 11
+3 True
+tracing optimal path
+[results][grippers][11]
+[single_agent][planning time: 0.04][cost: 3.0]
+[multi_agent][planning_time: 1.1781235408782957][cost: 3.0][agents: 2][optimization time 14.062075853347778]
+----------------------------------------
+Using cached single agent results
+['ball4 should be in room2.']
+['./experiments_multiagent_help/run1037/grippers/p12_1.pddl']
+agent1
+[info][subgoal_1][grippers] task 12 takes 0.08 sec, found a plan with cost 4.0
+planner successful
+validating
+validator time 0.09260845184326172
+[info][multiagent main goal][grippers] task 12 takes 0.08 sec, found a plan with cost 6.0
+TASK: grippers - 1037 - 12
+6.0 True
+tracing optimal path
+[results][grippers][12]
+[single_agent][planning time: 0.09][cost: 9.0]
+[multi_agent][planning_time: 2.042572889328003][cost: 6.0][agents: 2][optimization time 185.63526892662048]
+----------------------------------------
+Using cached single agent results
+['ball2 is in room1.']
+['./experiments_multiagent_help/run1037/grippers/p13_1.pddl']
+agent1
+[info][subgoal_1][grippers] task 13 takes 0.09 sec, found a plan with cost 4.0
+planner successful
+validating
+validator time 0.04014134407043457
+[info][multiagent main goal][grippers] task 13 takes 0.07 sec, found a plan with cost 4.0
+TASK: grippers - 1037 - 13
+4.0 True
+tracing optimal path
+[results][grippers][13]
+[single_agent][planning time: 0.05][cost: 6.0]
+[multi_agent][planning_time: 2.015729341506958][cost: 4.0][agents: 2][optimization time 98.2186439037323]
+----------------------------------------
+Using cached single agent results
+LLM generated no subgoal for agent 1, reducing number of agents
+args.num_agents: 1
+[]
+[]
+copying original pddl file to main agent for single agent case
+[info][multiagent main goal][grippers] task 14 takes 0.08 sec, found a plan with cost 6.0
+[results][grippers][14]
+[single_agent][planning time: 0.06][cost: 6.0]
+[multi_agent][planning_time: 0.06][cost: 6.0][agents: 1][optimization time 0]
+----------------------------------------
+Using cached single agent results
+['ball2 is in room2.']
+['./experiments_multiagent_help/run1037/grippers/p15_1.pddl']
+agent1
+[info][subgoal_1][grippers] task 15 takes 0.07 sec, found a plan with cost 4.0
+planner successful
+validating
+validator time 0.04356956481933594
+[info][multiagent main goal][grippers] task 15 takes 0.08 sec, found a plan with cost 7.0
+TASK: grippers - 1037 - 15
+7.0 True
+tracing optimal path
+[results][grippers][15]
+[single_agent][planning time: 0.1][cost: 10.0]
+[multi_agent][planning_time: 1.9111565589904786][cost: 7.0][agents: 2][optimization time 105.44788098335266]
+----------------------------------------
+Using cached single agent results
+['ball3 should be in room1.']
+['./experiments_multiagent_help/run1037/grippers/p16_1.pddl']
+agent1
+[info][subgoal_1][grippers] task 16 takes 0.08 sec, found a plan with cost 4.0
+planner successful
+validating
+validator time 0.0176846981048584
+[info][multiagent main goal][grippers] task 16 takes 6.85 sec, found a plan with cost 16.0
+TASK: grippers - 1037 - 16
+16.0 True
+tracing optimal path
+[results][grippers][16]
+[single_agent][planning time: 14.17][cost: 19.0]
+[multi_agent][planning_time: 8.269113235473633][cost: 16.0][agents: 2][optimization time 138.0116946697235]
+----------------------------------------
+Using cached single agent results
+['ball3 should be in room1.']
+['./experiments_multiagent_help/run1037/grippers/p17_1.pddl']
+agent1
+[info][subgoal_1][grippers] task 17 takes 0.07 sec, found a plan with cost 4.0
+planner successful
+validating
+validator time 0.01430654525756836
+[info][multiagent main goal][grippers] task 17 takes 0.08 sec, found a plan with cost 6.0
+TASK: grippers - 1037 - 17
+6.0 True
+tracing optimal path
+[results][grippers][17]
+[single_agent][planning time: 0.04][cost: 8.0]
+[multi_agent][planning_time: 2.0099157333374023][cost: 6.0][agents: 2][optimization time 84.44775748252869]
+----------------------------------------
+Using cached single agent results
+['ball3 is in room2.']
+['./experiments_multiagent_help/run1037/grippers/p18_1.pddl']
+agent1
+[info][subgoal_1][grippers] task 18 takes 0.08 sec, found a plan with cost 4.0
+planner successful
+validating
+validator time 0.037114620208740234
+[info][multiagent main goal][grippers] task 18 takes 0.08 sec, found a plan with cost 6.0
+TASK: grippers - 1037 - 18
+6.0 True
+tracing optimal path
+[results][grippers][18]
+[single_agent][planning time: 0.09][cost: 9.0]
+[multi_agent][planning_time: 1.993357334136963][cost: 6.0][agents: 2][optimization time 91.2153389453888]
+----------------------------------------
+Using cached single agent results
+['ball3 should be in room1.']
+['./experiments_multiagent_help/run1037/grippers/p19_1.pddl']
+agent1
+[info][subgoal_1][grippers] task 19 takes 0.09 sec, found a plan with cost 4.0
+planner successful
+validating
+validator time 0.010976552963256836
+[info][multiagent main goal][grippers] task 19 takes 2.25 sec, found a plan with cost 14.0
+TASK: grippers - 1037 - 19
+14.0 True
+tracing optimal path
+[results][grippers][19]
+[single_agent][planning time: 2.55][cost: 17.0]
+[multi_agent][planning_time: 3.8502908611297606][cost: 14.0][agents: 2][optimization time 157.26038885116577]
+----------------------------------------
+Using cached single agent results
+['ball1 is in room3.']
+['./experiments_multiagent_help/run1037/grippers/p20_1.pddl']
+agent1
+[info][subgoal_1][grippers] task 20 takes 0.08 sec, found a plan with cost 4.0
+planner successful
+validating
+validator time 0.015182256698608398
+[info][multiagent main goal][grippers] task 20 takes 0.07 sec, found a plan with cost 4.0
+TASK: grippers - 1037 - 20
+4.0 True
+tracing optimal path
+[results][grippers][20]
+[single_agent][planning time: 0.04][cost: 7.0]
+[multi_agent][planning_time: 1.7083732128143312][cost: 4.0][agents: 2][optimization time 48.92339253425598]
+----------------------------------------
+Using cached single agent results
+['height-at pos-0-2 is 2 and all blocks are placed.']
+['./experiments_multiagent_help/run1039/termes/p01_1.pddl']
+agent1
+[info][subgoal_1][termes] task 01 takes 0.6 sec, found a plan with cost 20.0
+planner successful
+validating
+validator time 0.0028531551361083984
+[info][multiagent main goal][termes] task 01 takes 26.4 sec, found a plan with cost 34.0
+TASK: termes - 1039 - 01
+44.0 True
+tracing optimal path
+[results][termes][01]
+[single_agent][planning time: 28.84][cost: 36.0]
+[multi_agent][planning_time: 30.425599575042725][cost: 44.0][agents: 2][optimization time 33.43255043029785]
+----------------------------------------
+Using cached single agent results
+['height pos-3-0 3']
+['./experiments_multiagent_help/run1039/termes/p02_1.pddl']
+agent1
+[info][subgoal_1][termes] task 02 takes 5.08 sec, found a plan with cost 32.0
+planner successful
+validating
+validator time 0.011356353759765625
+[info][multiagent main goal][termes] task 02 takes 14.01 sec, found a plan with cost 32.0
+TASK: termes - 1039 - 02
+57.0 True
+tracing optimal path
+[results][termes][02]
+[single_agent][planning time: 194.87][cost: 54.0]
+[multi_agent][planning_time: 23.39598545074463][cost: 57.0][agents: 2][optimization time 188.88585782051086]
+----------------------------------------
+Using cached single agent results
+['height-at pos-3-1 is 2 and all blocks are placed.']
+['./experiments_multiagent_help/run1039/termes/p03_1.pddl']
+agent1
+[info][subgoal_1][termes] task 03 takes 0.24 sec, found a plan with cost 12.0
+planner successful
+validating
+validator time 0.0037953853607177734
+[info][multiagent main goal][termes] task 03 takes 500.15 sec, found a plan with cost 60.0
+TASK: termes - 1039 - 03
+60.0 True
+tracing optimal path
+[results][termes][03]
+[single_agent][planning time: 1000.06][cost: 68.0]
+[multi_agent][planning_time: 505.11211384773253][cost: 60.0][agents: 2][optimization time 1501.738439321518]
+----------------------------------------
+Using cached single agent results
+['height pos-3-2 4']
+['./experiments_multiagent_help/run1039/termes/p04_1.pddl']
+agent1
+[info][subgoal_1][termes] task 04 takes 500.21 sec, found a plan with cost 80.0
+planner successful
+validating
+validator time 0.09357953071594238
+[info][multiagent main goal][termes] task 04 takes 3.26 sec, found a plan with cost 32.0
+TASK: termes - 1039 - 04
+109.0 True
+tracing optimal path
+[results][termes][04]
+[single_agent][planning time: 955.4][cost: 80.0]
+[multi_agent][planning_time: 507.66278478622434][cost: 109.0][agents: 2][optimization time 4763.211310863495]
+----------------------------------------
+Using cached single agent results
+['The height at pos-1-0 is 3 and all blocks are placed.']
+['./experiments_multiagent_help/run1039/termes/p05_1.pddl']
+agent1
+[info][subgoal_1][termes] task 05 takes 5.49 sec, found a plan with cost 32.0
+planner successful
+validating
+validator time 0.008328676223754883
+[info][multiagent main goal][termes] task 05 takes 500.18 sec, found a plan with cost 140.0
+TASK: termes - 1039 - 05
+162.0 True
+tracing optimal path
+[results][termes][05]
+[single_agent][planning time: 1000.17][cost: 136.0]
+[multi_agent][planning_time: 513.0448888969421][cost: 162.0][agents: 2][optimization time 741.6534652709961]
+----------------------------------------
+Using cached single agent results
+['height pos-3-2 5']
+['./experiments_multiagent_help/run1039/termes/p06_1.pddl']
+agent1
+[info][subgoal_1][termes] task 06 takes 500.21 sec, found a plan with cost 82.0
+planner successful
+validating
+validator time 0.026779890060424805
+[info][multiagent main goal][termes] task 06 takes 500.16 sec, found a plan with cost 98.0
+TASK: termes - 1039 - 06
+144.0 True
+tracing optimal path
+[results][termes][06]
+[single_agent][planning time: 1000.16][cost: 172.0]
+[multi_agent][planning_time: 1002.315249080658][cost: 144.0][agents: 2][optimization time 9582.105352640152]
+----------------------------------------
+Using cached single agent results
+['The height at pos-1-1 is 2 and all blocks are placed.']
+['./experiments_multiagent_help/run1039/termes/p07_1.pddl']
+agent1
+[info][subgoal_1][termes] task 07 takes 0.53 sec, found a plan with cost 12.0
+planner successful
+validating
+validator time 0.016152381896972656
+[info][multiagent main goal][termes] task 07 takes 500.19 sec, found a plan with cost 48.0
+TASK: termes - 1039 - 07
+57.0 True
+tracing optimal path
+[results][termes][07]
+[single_agent][planning time: 1000.18][cost: 56.0]
+[multi_agent][planning_time: 507.761571855545][cost: 57.0][agents: 2][optimization time 158.93576788902283]
+----------------------------------------
+Using cached single agent results
+['height pos-1-1 3']
+['./experiments_multiagent_help/run1039/termes/p08_1.pddl']
+agent1
+[info][subgoal_1][termes] task 08 takes 20.84 sec, found a plan with cost 23.0
+planner successful
+validating
+validator time 0.011333703994750977
+[info][multiagent main goal][termes] task 08 takes 500.24 sec, found a plan with cost 50.0
+TASK: termes - 1039 - 08
+63.0 True
+tracing optimal path
+[results][termes][08]
+[single_agent][planning time: 1000.25][cost: 64.0]
+[multi_agent][planning_time: 523.4120453166962][cost: 63.0][agents: 2][optimization time 2006.8614809513092]
+----------------------------------------
+Using cached single agent results
+['height-at pos-1-1 is 2 and all blocks are placed.']
+['./experiments_multiagent_help/run1039/termes/p09_1.pddl']
+agent1
+[info][subgoal_1][termes] task 09 takes 0.65 sec, found a plan with cost 12.0
+planner successful
+validating
+validator time 0.06359004974365234
+[info][multiagent main goal][termes] task 09 takes 500.25 sec, found a plan with cost 104.0
+TASK: termes - 1039 - 09
+104.0 True
+tracing optimal path
+[results][termes][09]
+[single_agent][planning time: 1000.2][cost: 100.0]
+[multi_agent][planning_time: 516.7855695724487][cost: 104.0][agents: 2][optimization time 1834.983773469925]
+----------------------------------------
+Using cached single agent results
+['height at pos-3-0 is 2 and all blocks are placed.']
+['./experiments_multiagent_help/run1039/termes/p10_1.pddl']
+agent1
+[info][subgoal_1][termes] task 10 takes 0.86 sec, found a plan with cost 14.0
+planner successful
+validating
+validator time 0.03699159622192383
+[info][multiagent main goal][termes] task 10 takes 500.24 sec, found a plan with cost 78.0
+TASK: termes - 1039 - 10
+78.0 True
+tracing optimal path
+[results][termes][10]
+[single_agent][planning time: 1000.3][cost: 76.0]
+[multi_agent][planning_time: 510.0167141914368][cost: 78.0][agents: 2][optimization time 3341.9776499271393]
+----------------------------------------
+Using cached single agent results
+['height at pos-2-0 is 3 and all blocks are placed.']
+['./experiments_multiagent_help/run1039/termes/p11_1.pddl']
+agent1
+[info][subgoal_1][termes] task 11 takes 5.33 sec, found a plan with cost 32.0
+planner successful
+validating
+validator time 0.04939889907836914
+[info][multiagent main goal][termes] task 11 takes 500.12 sec, found a plan with cost 64.0
+TASK: termes - 1039 - 11
+89.0 True
+tracing optimal path
+[results][termes][11]
+[single_agent][planning time: 522.23][cost: 66.0]
+[multi_agent][planning_time: 511.3800167560577][cost: 89.0][agents: 2][optimization time 445.08509516716003]
+----------------------------------------
+Using cached single agent results
+['height at pos-0-0 is 2 and all blocks are placed.']
+['./experiments_multiagent_help/run1039/termes/p12_1.pddl']
+agent1
+[info][subgoal_1][termes] task 12 takes 0.28 sec, found a plan with cost 14.0
+planner successful
+validating
+validator time 0.03322958946228027
+[info][multiagent main goal][termes] task 12 takes 51.71 sec, found a plan with cost 40.0
+TASK: termes - 1039 - 12
+46.0 True
+tracing optimal path
+[results][termes][12]
+[single_agent][planning time: 73.53][cost: 46.0]
+[multi_agent][planning_time: 56.38707398414612][cost: 46.0][agents: 2][optimization time 215.53632998466492]
+----------------------------------------
+Using cached single agent results
+['height at pos-3-0 is 3 and no unplaced block at pos-2-0.']
+['./experiments_multiagent_help/run1039/termes/p13_1.pddl']
+agent1
+[info][subgoal_1][termes] task 13 takes 1.49 sec, found a plan with cost 22.0
+planner successful
+validating
+validator time 0.0060558319091796875
+[info][multiagent main goal][termes] task 13 takes 500.16 sec, found a plan with cost 68.0
+TASK: termes - 1039 - 13
+73.0 True
+tracing optimal path
+[results][termes][13]
+[single_agent][planning time: 1000.21][cost: 92.0]
+[multi_agent][planning_time: 503.965601348877][cost: 73.0][agents: 2][optimization time 728.6800117492676]
+----------------------------------------
+Using cached single agent results
+['height at pos-3-0 is 3 and all blocks are placed.']
+['./experiments_multiagent_help/run1039/termes/p14_1.pddl']
+agent1
+[info][subgoal_1][termes] task 14 takes 2.68 sec, found a plan with cost 25.0
+planner successful
+validating
+validator time 0.02400946617126465
+[info][multiagent main goal][termes] task 14 takes 500.18 sec, found a plan with cost 78.0
+TASK: termes - 1039 - 14
+89.0 True
+tracing optimal path
+[results][termes][14]
+[single_agent][planning time: 1000.21][cost: 104.0]
+[multi_agent][planning_time: 505.62661467552186][cost: 89.0][agents: 2][optimization time 1722.0778653621674]
+----------------------------------------
+Using cached single agent results
+['height pos-3-0 3']
+['./experiments_multiagent_help/run1039/termes/p15_1.pddl']
+agent1
+[info][subgoal_1][termes] task 15 takes 1.57 sec, found a plan with cost 22.0
+planner successful
+validating
+validator time 0.03254866600036621
+[info][multiagent main goal][termes] task 15 takes 500.2 sec, found a plan with cost 142.0
+TASK: termes - 1039 - 15
+157.0 True
+tracing optimal path
+[results][termes][15]
+[single_agent][planning time: 1000.16][cost: 146.0]
+[multi_agent][planning_time: 503.5833578300476][cost: 157.0][agents: 2][optimization time 1338.8428013324738]
+----------------------------------------
+Using cached single agent results
+['height at pos-3-1 is 5 and all blocks are placed.']
+['./experiments_multiagent_help/run1039/termes/p16_1.pddl']
+agent1
+[info][subgoal_1][termes] task 16 takes 500.2 sec, found a plan with cost 82.0
+planner successful
+validating
+validator time 0.04756045341491699
+[info][multiagent main goal][termes] task 16 takes 500.22 sec, found a plan with cost 116.0
+TASK: termes - 1039 - 16
+188.0 True
+tracing optimal path
+[results][termes][16]
+[single_agent][planning time: 1000.2][cost: 154.0]
+[multi_agent][planning_time: 1002.2550744247437][cost: 188.0][agents: 2][optimization time 1514.5357494354248]
+----------------------------------------
+Using cached single agent results
+['height at pos-1-0 is 3 and all blocks are placed.']
+['./experiments_multiagent_help/run1039/termes/p17_1.pddl']
+agent1
+[info][subgoal_1][termes] task 17 takes 1.91 sec, found a plan with cost 25.0
+planner successful
+validating
+validator time 0.005922079086303711
+[info][multiagent main goal][termes] task 17 takes 500.2 sec, found a plan with cost 94.0
+TASK: termes - 1039 - 17
+111.0 True
+tracing optimal path
+[results][termes][17]
+[single_agent][planning time: 1000.16][cost: 116.0]
+[multi_agent][planning_time: 506.24542222976686][cost: 111.0][agents: 2][optimization time 2634.304488658905]
+----------------------------------------
+Using cached single agent results
+['height at pos-0-0 is 2 and all blocks are placed.']
+['./experiments_multiagent_help/run1039/termes/p18_1.pddl']
+agent1
+[info][subgoal_1][termes] task 18 takes 0.14 sec, found a plan with cost 9.0
+planner successful
+validating
+validator time 0.019132614135742188
+[info][multiagent main goal][termes] task 18 takes 439.08 sec, found a plan with cost 66.0
+TASK: termes - 1039 - 18
+66.0 True
+tracing optimal path
+[results][termes][18]
+[single_agent][planning time: 490.77][cost: 76.0]
+[multi_agent][planning_time: 441.4389826965332][cost: 66.0][agents: 2][optimization time 621.8684704303741]
+----------------------------------------
+Using cached single agent results
+['height at pos-2-0 is 2 and all blocks are placed.']
+['./experiments_multiagent_help/run1039/termes/p19_1.pddl']
+agent1
+[info][subgoal_1][termes] task 19 takes 0.16 sec, found a plan with cost 10.0
+planner successful
+validating
+validator time 0.0045549869537353516
+[info][multiagent main goal][termes] task 19 takes 500.17 sec, found a plan with cost 86.0
+TASK: termes - 1039 - 19
+93.0 True
+tracing optimal path
+[results][termes][19]
+[single_agent][planning time: 1000.24][cost: 94.0]
+[multi_agent][planning_time: 502.48858960151676][cost: 93.0][agents: 2][optimization time 514.624354839325]
+----------------------------------------
+Using cached single agent results
+['height pos-3-0 2 and no unplaced blocks']
+['./experiments_multiagent_help/run1039/termes/p20_1.pddl']
+agent1
+[info][subgoal_1][termes] task 20 takes 0.19 sec, found a plan with cost 10.0
+planner successful
+validating
+validator time 0.3071024417877197
+[info][multiagent main goal][termes] task 20 takes 500.15 sec, found a plan with cost 96.0
+TASK: termes - 1039 - 20
+96.0 True
+tracing optimal path
+[results][termes][20]
+[single_agent][planning time: 1000.26][cost: 106.0]
+[multi_agent][planning_time: 503.9024074935913][cost: 96.0][agents: 2][optimization time 1166.234911441803]
+----------------------------------------
+Using cached single agent results
+['inflate r1']
+['./experiments_multiagent_help/run1038/tyreworld/p01_1.pddl']
+agent1
+[info][subgoal_1][tyreworld] task 01 takes 0.07 sec, found a plan with cost 1.0
+planner successful
+validating
+validator time 0.002497434616088867
+[info][multiagent main goal][tyreworld] task 01 takes 0.09 sec, found a plan with cost 12.0
+TASK: tyreworld - 1038 - 01
+12 True
+tracing optimal path
+[results][tyreworld][01]
+[single_agent][planning time: 0.11][cost: 13.0]
+[multi_agent][planning_time: 1.476117286682129][cost: 12.0][agents: 2][optimization time 1.9755618572235107]
+----------------------------------------
+Using cached single agent results
+['inflate r1']
+['./experiments_multiagent_help/run1038/tyreworld/p02_1.pddl']
+agent1
+[info][subgoal_1][tyreworld] task 02 takes 0.12 sec, found a plan with cost 1.0
+planner successful
+validating
+validator time 0.0025413036346435547
+[info][multiagent main goal][tyreworld] task 02 takes 500.54 sec, found a plan with cost 100.0
+TASK: tyreworld - 1038 - 02
+100 True
+tracing optimal path
+[results][tyreworld][02]
+[single_agent][planning time: 1007.04][cost: 101.0]
+[multi_agent][planning_time: 502.16758957862857][cost: 100.0][agents: 2][optimization time 187.7117781639099]
+----------------------------------------
+Using cached single agent results
+['inflate r3']
+['./experiments_multiagent_help/run1038/tyreworld/p03_1.pddl']
+agent1
+[info][subgoal_1][tyreworld] task 03 takes 0.07 sec, found a plan with cost 1.0
+planner successful
+validating
+validator time 0.008728265762329102
+[info][multiagent main goal][tyreworld] task 03 takes 500.55 sec, found a plan with cost 34.0
+TASK: tyreworld - 1038 - 03
+34 True
+tracing optimal path
+[results][tyreworld][03]
+[single_agent][planning time: 1006.17][cost: 35.0]
+[multi_agent][planning_time: 502.18125140190125][cost: 34.0][agents: 2][optimization time 123.54659962654114]
+----------------------------------------
+Using cached single agent results
+['inflate r3']
+['./experiments_multiagent_help/run1038/tyreworld/p04_1.pddl']
+agent1
+[info][subgoal_1][tyreworld] task 04 takes 0.08 sec, found a plan with cost 1.0
+planner successful
+validating
+validator time 0.018611431121826172
+[info][multiagent main goal][tyreworld] task 04 takes 500.6 sec, found a plan with cost 45.0
+TASK: tyreworld - 1038 - 04
+45 True
+tracing optimal path
+[results][tyreworld][04]
+[single_agent][planning time: 1004.44][cost: 46.0]
+[multi_agent][planning_time: 502.41805952072144][cost: 45.0][agents: 2][optimization time 364.298597574234]
+----------------------------------------
+Using cached single agent results
+['inflate r1']
+['./experiments_multiagent_help/run1038/tyreworld/p05_1.pddl']
+agent1
+[info][subgoal_1][tyreworld] task 05 takes 0.09 sec, found a plan with cost 1.0
+planner successful
+validating
+validator time 0.1304473876953125
+[info][multiagent main goal][tyreworld] task 05 takes 500.65 sec, found a plan with cost 56.0
+TASK: tyreworld - 1038 - 05
+56 True
+tracing optimal path
+[results][tyreworld][05]
+[single_agent][planning time: 1003.45][cost: 57.0]
+[multi_agent][planning_time: 502.76996110916133][cost: 56.0][agents: 2][optimization time 228.25947451591492]
+----------------------------------------
+Using cached single agent results
+['inflate r1, r2, r3, r4, r5, r6']
+['./experiments_multiagent_help/run1038/tyreworld/p06_1.pddl']
+agent1
+[info][subgoal_1][tyreworld] task 06 takes 0.09 sec, found a plan with cost 6.0
+planner successful
+validating
+validator time 0.019568681716918945
+[info][multiagent main goal][tyreworld] task 06 takes 500.64 sec, found a plan with cost 62.0
+TASK: tyreworld - 1038 - 06
+62.0 True
+tracing optimal path
+[results][tyreworld][06]
+[single_agent][planning time: 1003.51][cost: 68.0]
+[multi_agent][planning_time: 503.42082474708553][cost: 62.0][agents: 2][optimization time 785.1370429992676]
+----------------------------------------
+Using cached single agent results
+['inflate all intact tyres']
+['./experiments_multiagent_help/run1038/tyreworld/p07_1.pddl']
+agent1
+[info][subgoal_1][tyreworld] task 07 takes 0.1 sec, found a plan with cost 7.0
+planner successful
+validating
+validator time 0.008563041687011719
+[info][multiagent main goal][tyreworld] task 07 takes 500.62 sec, found a plan with cost 72.0
+TASK: tyreworld - 1038 - 07
+72.0 True
+tracing optimal path
+[results][tyreworld][07]
+[single_agent][planning time: 1003.07][cost: 79.0]
+[multi_agent][planning_time: 503.965635509491][cost: 72.0][agents: 2][optimization time 346.1759889125824]
+----------------------------------------
+Using cached single agent results
+['inflate all intact tyres']
+['./experiments_multiagent_help/run1038/tyreworld/p08_1.pddl']
+agent1
+[info][subgoal_1][tyreworld] task 08 takes 0.12 sec, found a plan with cost 8.0
+planner successful
+validating
+validator time 0.00957632064819336
+[info][multiagent main goal][tyreworld] task 08 takes 500.56 sec, found a plan with cost 82.0
+TASK: tyreworld - 1038 - 08
+82.0 True
+tracing optimal path
+[results][tyreworld][08]
+[single_agent][planning time: 1003.37][cost: 90.0]
+[multi_agent][planning_time: 503.16530530929566][cost: 82.0][agents: 2][optimization time 793.3203802108765]
+----------------------------------------
+Using cached single agent results
+['inflate all intact tyres']
+['./experiments_multiagent_help/run1038/tyreworld/p09_1.pddl']
+agent1
+[info][subgoal_1][tyreworld] task 09 takes 0.13 sec, found a plan with cost 9.0
+planner successful
+validating
+validator time 0.015531778335571289
+[info][multiagent main goal][tyreworld] task 09 takes 500.55 sec, found a plan with cost 92.0
+TASK: tyreworld - 1038 - 09
+92.0 True
+tracing optimal path
+[results][tyreworld][09]
+[single_agent][planning time: 1002.95][cost: 101.0]
+[multi_agent][planning_time: 503.2013930606842][cost: 92.0][agents: 2][optimization time 886.4900238513947]
+----------------------------------------
+Using cached single agent results
+['inflate all intact tyres']
+['./experiments_multiagent_help/run1038/tyreworld/p10_1.pddl']
+agent1
+[info][subgoal_1][tyreworld] task 10 takes 0.16 sec, found a plan with cost 10.0
+planner successful
+validating
+validator time 0.0205690860748291
+[info][multiagent main goal][tyreworld] task 10 takes 500.59 sec, found a plan with cost 102.0
+TASK: tyreworld - 1038 - 10
+102.0 True
+tracing optimal path
+[results][tyreworld][10]
+[single_agent][planning time: 1003.95][cost: 112.0]
+[multi_agent][planning_time: 506.12143778800964][cost: 102.0][agents: 2][optimization time 1100.8845608234406]
+----------------------------------------
+Using cached single agent results
+['inflate all intact tyres']
+['./experiments_multiagent_help/run1038/tyreworld/p11_1.pddl']
+agent1
+[info][subgoal_1][tyreworld] task 11 takes 0.2 sec, found a plan with cost 11.0
+planner successful
+validating
+validator time 0.009543895721435547
+[info][multiagent main goal][tyreworld] task 11 takes 500.61 sec, found a plan with cost 112.0
+TASK: tyreworld - 1038 - 11
+112.0 True
+tracing optimal path
+[results][tyreworld][11]
+[single_agent][planning time: 1003.21][cost: 123.0]
+[multi_agent][planning_time: 503.44227558135987][cost: 112.0][agents: 2][optimization time 2488.035440683365]
+----------------------------------------
+Using cached single agent results
+['inflate all intact tyres']
+['./experiments_multiagent_help/run1038/tyreworld/p12_1.pddl']
+agent1
+[info][subgoal_1][tyreworld] task 12 takes 0.27 sec, found a plan with cost 12.0
+planner successful
+validating
+validator time 0.014302968978881836
+[info][multiagent main goal][tyreworld] task 12 takes 500.57 sec, found a plan with cost 122.0
+TASK: tyreworld - 1038 - 12
+122.0 True
+tracing optimal path
+[results][tyreworld][12]
+[single_agent][planning time: 1002.76][cost: 134.0]
+[multi_agent][planning_time: 505.0066951179504][cost: 122.0][agents: 2][optimization time 5957.450679779053]
+----------------------------------------
+Using cached single agent results
+['inflate all intact tyres']
+['./experiments_multiagent_help/run1038/tyreworld/p13_1.pddl']
+agent1
+[info][subgoal_1][tyreworld] task 13 takes 0.47 sec, found a plan with cost 13.0
+planner successful
+validating
+validator time 0.051720380783081055
+[info][multiagent main goal][tyreworld] task 13 takes 500.59 sec, found a plan with cost 132.0
+TASK: tyreworld - 1038 - 13
+132.0 True
+tracing optimal path
+[results][tyreworld][13]
+[single_agent][planning time: 1002.57][cost: 145.0]
+[multi_agent][planning_time: 505.4718278026581][cost: 132.0][agents: 2][optimization time 3581.873033285141]
+----------------------------------------
+Using cached single agent results
+['inflate all intact tyres']
+['./experiments_multiagent_help/run1038/tyreworld/p14_1.pddl']
+agent1
+[info][subgoal_1][tyreworld] task 14 takes 0.72 sec, found a plan with cost 14.0
+planner successful
+validating
+validator time 0.03664231300354004
+[info][multiagent main goal][tyreworld] task 14 takes 500.56 sec, found a plan with cost 142.0
+TASK: tyreworld - 1038 - 14
+142.0 True
+tracing optimal path
+[results][tyreworld][14]
+[single_agent][planning time: 1002.43][cost: 156.0]
+[multi_agent][planning_time: 508.5413162994385][cost: 142.0][agents: 2][optimization time 6558.562047481537]
+----------------------------------------
+Using cached single agent results
+['inflate all intact tyres']
+['./experiments_multiagent_help/run1038/tyreworld/p15_1.pddl']
+agent1
+[info][subgoal_1][tyreworld] task 15 takes 1.34 sec, found a plan with cost 15.0
+planner successful
+validating
+validator time 0.023203134536743164
+[info][multiagent main goal][tyreworld] task 15 takes 500.67 sec, found a plan with cost 152.0
+TASK: tyreworld - 1038 - 15
+152.0 True
+tracing optimal path
+[results][tyreworld][15]
+[single_agent][planning time: 1002.54][cost: 167.0]
+[multi_agent][planning_time: 505.4721856212616][cost: 152.0][agents: 2][optimization time 3431.0851652622223]
+----------------------------------------
+Using cached single agent results
+['inflate all intact tyres']
+['./experiments_multiagent_help/run1038/tyreworld/p16_1.pddl']
+agent1
+[info][subgoal_1][tyreworld] task 16 takes 2.63 sec, found a plan with cost 16.0
+planner successful
+validating
+validator time 0.03662729263305664
+[info][multiagent main goal][tyreworld] task 16 takes 500.65 sec, found a plan with cost 162.0
+TASK: tyreworld - 1038 - 16
+162.0 True
+tracing optimal path
+[results][tyreworld][16]
+[single_agent][planning time: 1003.11][cost: 178.0]
+[multi_agent][planning_time: 508.3281686592102][cost: 162.0][agents: 2][optimization time 2438.8788979053497]
+----------------------------------------
+Using cached single agent results
+['inflate r1']
+['./experiments_multiagent_help/run1038/tyreworld/p17_1.pddl']
+agent1
+[info][subgoal_1][tyreworld] task 17 takes 0.24 sec, found a plan with cost 1.0
+planner successful
+validating
+validator time 0.00575709342956543
+[info][multiagent main goal][tyreworld] task 17 takes 500.64 sec, found a plan with cost 188.0
+TASK: tyreworld - 1038 - 17
+188 True
+tracing optimal path
+[results][tyreworld][17]
+[single_agent][planning time: 1003.33][cost: 189.0]
+[multi_agent][planning_time: 502.79745138168335][cost: 188.0][agents: 2][optimization time 414.9468104839325]
+----------------------------------------
+Using cached single agent results
+['inflate all intact tyres']
+['./experiments_multiagent_help/run1038/tyreworld/p18_1.pddl']
+agent1
+[info][subgoal_1][tyreworld] task 18 takes 10.86 sec, found a plan with cost 18.0
+planner successful
+validating
+validator time 0.005362033843994141
+[info][multiagent main goal][tyreworld] task 18 takes 500.68 sec, found a plan with cost 182.0
+TASK: tyreworld - 1038 - 18
+182.0 True
+tracing optimal path
+[results][tyreworld][18]
+[single_agent][planning time: 1002.99][cost: 200.0]
+[multi_agent][planning_time: 517.5456536197662][cost: 182.0][agents: 2][optimization time 4163.900215387344]
+----------------------------------------
+Using cached single agent results
+['inflate all intact tyres']
+['./experiments_multiagent_help/run1038/tyreworld/p19_1.pddl']
+agent1
+[info][subgoal_1][tyreworld] task 19 takes 23.44 sec, found a plan with cost 19.0
+planner successful
+validating
+validator time 0.008982181549072266
+[info][multiagent main goal][tyreworld] task 19 takes 500.58 sec, found a plan with cost 192.0
+TASK: tyreworld - 1038 - 19
+192.0 True
+tracing optimal path
+[results][tyreworld][19]
+[single_agent][planning time: 1003.0][cost: 211.0]
+[multi_agent][planning_time: 528.5433628749847][cost: 192.0][agents: 2][optimization time 5268.496427774429]
+----------------------------------------
+Using cached single agent results
+['inflate all intact tyres']
+['./experiments_multiagent_help/run1038/tyreworld/p20_1.pddl']
+agent1
+[info][subgoal_1][tyreworld] task 20 takes 47.3 sec, found a plan with cost 20.0
+planner successful
+validating
+validator time 0.005396842956542969
+[info][multiagent main goal][tyreworld] task 20 takes 500.58 sec, found a plan with cost 202.0
+TASK: tyreworld - 1038 - 20
+202.0 True
+tracing optimal path
+[results][tyreworld][20]
+[single_agent][planning time: 1003.02][cost: 222.0]
+[multi_agent][planning_time: 551.704458360672][cost: 202.0][agents: 2][optimization time 4617.881844758987]
+----------------------------------------
