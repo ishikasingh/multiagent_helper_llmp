@@ -58,6 +58,7 @@ def query(prompt_text, system_text=None, model="gpt-4o"):
         except Exception as e:
             server_cnt += 1
             print(e)
+            print(response)
     return result_text
 
 import re
