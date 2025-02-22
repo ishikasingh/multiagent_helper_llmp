@@ -22,7 +22,7 @@ def get_helper_subgoal_without_plan(expt_path, args, log_file):
     system_text += '\n'
 
     system_text += ''' Your goal is to generate goals for agents such that they can be executed in parallel to decrease plan execution length. Generate only one clearly stated small independent subgoal for each helper agent to help the main agent complete the given task. The subgoal must be executable by a helper agent completely independently without waiting for any main agent actions to change predicates. The subgoal SHOULD NOT be interwoven with other generated subgoals or the main task, but rather run uninterrupted from inception time in PARALLEL with other subgoals.  
-    The subgoal should be clearly stated with unambiguous terminology. Do not use actions like assist or help, only actions CLEARLY DEFINED IN THE DOMAIN. The main goal will be augmented based on the generated subgoals, but will run in parallel with them. Do not overtake the full sequence of actions. Remember, the helper agents are only assisting the main agent and act agnostically to the main agent. If there are no subgoals that will make the task run faster, return "none". Remember that even if the domain states that there is "one" agent, you can generate as many as you'd like. 
+    The subgoal should be clearly stated with unambiguous terminology. Do not use actions like assist or help, only actions CLEARLY DEFINED IN THE DOMAIN. The main goal will be augmented based on the generated subgoals, but will run in parallel with them. Do not overtake the full sequence of actions. Remember, the helper agents are only assisting the main agent and act agnostically to the main agent. 
     '''
     
     # print("system_text \n", system_text, "\n")
@@ -108,13 +108,6 @@ def get_helper_subgoal_without_plan(expt_path, args, log_file):
         prompt_text += f"\n agent{i} subgoal:"
         helper_subgoal = generator.query(prompt_text, system_text=system_text, model=args.model)
         prompt_text += helper_subgoal
-        
-        if helper_subgoal == "none":
-            print(f"LLM generated no subgoal for agent {i}, reducing number of agents")
-            args.num_agents = i
-            print(f"args.num_agents: {args.num_agents}")
-            break
-            
         all_subgoals.append(helper_subgoal)
         valid_subgoals += 1
 
@@ -281,6 +274,11 @@ if __name__ == "__main__":
             print(f"agent{i}")
             try:
                 planner_total_time, planner_total_time_opt, best_cost, planner_search_time_1st_plan, first_plan_cost = planner.planner(path, args, subgoal_idx=i)
+                if planner_total_time == -1:
+                    # planner couldn't complete for this number subgoal, so set args.num_agents to i
+                    args.num_agents = i
+                    print(f"planner couldn't complete for {i}th subgoal, setting args.num_agents to {i}")
+                    break
                 print("planner successful")
                 success, validator_time = planner.validator(path, subgoal_idx=i)
                 print("validator time", validator_time)

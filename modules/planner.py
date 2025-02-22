@@ -66,10 +66,15 @@ def planner(expt_path, args_, subgoal_idx=-1):
         print("planner broke")
         print(output)
         
-    planner_search_time_1st_plan = float(output.split('Actual search time: ')[1].split('\n')[0].strip()[:-1])
-    planner_total_time = float(output.split('Planner time: ')[1].split('\n')[0].strip()[:-1])
-    planner_total_time_opt = float(output.split('Actual search time: ')[-1].split('\n')[0].strip()[:-1])
-    first_plan_cost = int(output.split('Plan cost: ')[1].split('\n')[0].strip())
+    try:
+        planner_search_time_1st_plan = float(output.split('Actual search time: ')[1].split('\n')[0].strip()[:-1])
+        planner_total_time = float(output.split('Planner time: ')[1].split('\n')[0].strip()[:-1])
+        planner_total_time_opt = float(output.split('Actual search time: ')[-1].split('\n')[0].strip()[:-1])
+        first_plan_cost = int(output.split('Plan cost: ')[1].split('\n')[0].strip())
+    except Exception as e:
+        print("planner broke")
+        print(output)
+        return -1, -1, -1, -1, -1
     #import ipdb; ipdb.set_trace()
     # collect the least cost plan
     best_cost = 1e10
