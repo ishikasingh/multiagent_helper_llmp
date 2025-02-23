@@ -207,8 +207,28 @@ Results:
 
 ----------------------------------------
 Domain: barman-enabled
-Success rate: 66.67% (6/9)
+Success rate: 69.23% (9/13)
 Results:
+  [results][barman-enabled][13]
+  [single_agent][planning time: 1000.41][cost: 74.0]
+  [multi_agent][planning_time: 1259.107796163559][cost: 64.0][agents: 5][optimization time 9991.70431470871]
+  Success: Yes
+
+  [results][barman-enabled][10]
+  [single_agent][planning time: 1001.53][cost: 53.0]
+  [multi_agent][planning_time: 476.22085515975954][cost: 45.0][agents: 5][optimization time 43534.010585308075]
+  Success: Yes
+
+  [results][barman-enabled][11]
+  [single_agent][planning time: 1000.36][cost: 56.0]
+  [multi_agent][planning_time: 488.08654250144957][cost: 49.0][agents: 5][optimization time 14257.824502944946]
+  Success: Yes
+
+  [results][barman-enabled][12]
+  [single_agent][planning time: 1000.34][cost: 53.0]
+  [multi_agent][planning_time: 396.71624019622806][cost: 53.0][agents: 5][optimization time 7510.797098875046]
+  Success: No
+
   [results][barman-enabled][01]
   [single_agent][planning time: 1006.43][cost: 27.0]
   [multi_agent][planning_time: 59.00874370574951][cost: 20.0][agents: 4][optimization time 2245.6747801303864]
@@ -256,8 +276,18 @@ Results:
 
 ----------------------------------------
 Domain: termes
-Success rate: 16.67% (1/6)
+Success rate: 12.50% (1/8)
 Results:
+  [results][termes][07]
+  [single_agent][planning time: 1000.18][cost: 56.0]
+  [multi_agent][planning_time: 293.5807274246216][cost: 113.0][agents: 5][optimization time 72192.77188944817]
+  Success: No
+
+  [results][termes][08]
+  [single_agent][planning time: 1000.25][cost: 64.0]
+  [multi_agent][planning_time: 531.3026412296294][cost: 98.0][agents: 3][optimization time 3993.2489891052246]
+  Success: No
+
   [results][termes][01]
   [single_agent][planning time: 28.84][cost: 36.0]
   [multi_agent][planning_time: 9.746861057281494][cost: 39.0][agents: 2][optimization time 141.94867086410522]
@@ -290,8 +320,73 @@ Results:
 
 ----------------------------------------
 Domain: tyreworld
-Success rate: 100.00% (7/7)
+Success rate: 100.00% (20/20)
 Results:
+  [results][tyreworld][20]
+  [single_agent][planning time: 1003.02][cost: 222.0]
+  [multi_agent][planning_time: 555.433192024231][cost: 182.0][agents: 3][optimization time 70774.87863779068]
+  Success: Yes
+
+  [results][tyreworld][08]
+  [single_agent][planning time: 1003.37][cost: 90.0]
+  [multi_agent][planning_time: 256.3204359722137][cost: 86.0][agents: 5][optimization time 2071.0902738571167]
+  Success: Yes
+
+  [results][tyreworld][09]
+  [single_agent][planning time: 1002.95][cost: 101.0]
+  [multi_agent][planning_time: 255.40707353591918][cost: 97.0][agents: 5][optimization time 6492.809294700623]
+  Success: Yes
+
+  [results][tyreworld][10]
+  [single_agent][planning time: 1003.95][cost: 112.0]
+  [multi_agent][planning_time: 506.4606800460815][cost: 92.0][agents: 3][optimization time 19507.25917506218]
+  Success: Yes
+
+  [results][tyreworld][11]
+  [single_agent][planning time: 1003.21][cost: 123.0]
+  [multi_agent][planning_time: 262.9650164794922][cost: 112.0][agents: 2][optimization time 1422.0557315349579]
+  Success: Yes
+
+  [results][tyreworld][12]
+  [single_agent][planning time: 1002.76][cost: 134.0]
+  [multi_agent][planning_time: 255.6209576702118][cost: 130.0][agents: 5][optimization time 5571.377422094345]
+  Success: Yes
+
+  [results][tyreworld][13]
+  [single_agent][planning time: 1002.57][cost: 145.0]
+  [multi_agent][planning_time: 256.35381328582764][cost: 141.0][agents: 5][optimization time 4396.259651660919]
+  Success: Yes
+
+  [results][tyreworld][14]
+  [single_agent][planning time: 1002.43][cost: 156.0]
+  [multi_agent][planning_time: 258.31920563697815][cost: 152.0][agents: 5][optimization time 5994.054157972336]
+  Success: Yes
+
+  [results][tyreworld][15]
+  [single_agent][planning time: 1002.54][cost: 167.0]
+  [multi_agent][planning_time: 255.85339339256285][cost: 163.0][agents: 5][optimization time 4633.124094963074]
+  Success: Yes
+
+  [results][tyreworld][16]
+  [single_agent][planning time: 1003.11][cost: 178.0]
+  [multi_agent][planning_time: 256.0732411003113][cost: 162.0][agents: 2][optimization time 1337.6268365383148]
+  Success: Yes
+
+  [results][tyreworld][17]
+  [single_agent][planning time: 1003.33][cost: 189.0]
+  [multi_agent][planning_time: 256.05207530021664][cost: 185.0][agents: 5][optimization time 3699.3179540634155]
+  Success: Yes
+
+  [results][tyreworld][18]
+  [single_agent][planning time: 1002.99][cost: 200.0]
+  [multi_agent][planning_time: 267.0030135631561][cost: 182.0][agents: 2][optimization time 1794.9906759262085]
+  Success: Yes
+
+  [results][tyreworld][19]
+  [single_agent][planning time: 1003.0][cost: 211.0]
+  [multi_agent][planning_time: 277.8955288505554][cost: 192.0][agents: 2][optimization time 2216.1526877880096]
+  Success: Yes
+
   [results][tyreworld][01]
   [single_agent][planning time: 0.11][cost: 13.0]
   [multi_agent][planning_time: 1.9852274990081789][cost: 12.0][agents: 2][optimization time 50.15060496330261]
@@ -348,25 +443,25 @@ Domain: blocksworld
 
 Domain: barman-enabled
   Single Agent:
-    Average Cost: 35.22
-    Average Planning Time: 1002.52 sec
+    Average Cost: 42.54
+    Average Planning Time: 1001.95 sec
   Multi Agent:
-    Average Cost: 31.56
-    Average Planning Time: 152.32 sec
+    Average Cost: 38.08
+    Average Planning Time: 307.00 sec
 
 Domain: termes
   Single Agent:
-    Average Cost: 91.00
-    Average Planning Time: 696.58 sec
+    Average Cost: 83.25
+    Average Planning Time: 772.49 sec
   Multi Agent:
-    Average Cost: 111.50
-    Average Planning Time: 224.44 sec
+    Average Cost: 110.00
+    Average Planning Time: 271.44 sec
 
 Domain: tyreworld
   Single Agent:
-    Average Cost: 57.00
-    Average Planning Time: 861.11 sec
+    Average Cost: 121.35
+    Average Planning Time: 953.35 sec
   Multi Agent:
-    Average Cost: 52.86
-    Average Planning Time: 176.69 sec
+    Average Cost: 112.30
+    Average Planning Time: 257.83 sec
 

@@ -311,8 +311,53 @@ Results:
 
 ----------------------------------------
 Domain: tyreworld
-Success rate: 100.00% (5/5)
+Success rate: 100.00% (14/14)
 Results:
+  [results][tyreworld][06]
+  [single_agent][planning time: 1003.51][cost: 68.0]
+  [multi_agent][planning_time: 254.216604347229][cost: 65.0][agents: 4][optimization time 386.78824067115784]
+  Success: Yes
+
+  [results][tyreworld][11]
+  [single_agent][planning time: 1003.21][cost: 123.0]
+  [multi_agent][planning_time: 253.21487021446228][cost: 112.0][agents: 2][optimization time 1146.012027978897]
+  Success: Yes
+
+  [results][tyreworld][07]
+  [single_agent][planning time: 1003.07][cost: 79.0]
+  [multi_agent][planning_time: 338.07179376602176][cost: 77.0][agents: 3][optimization time 916.2790012359619]
+  Success: Yes
+
+  [results][tyreworld][08]
+  [single_agent][planning time: 1003.37][cost: 90.0]
+  [multi_agent][planning_time: 337.58243830680846][cost: 82.0][agents: 2][optimization time 1504.263807296753]
+  Success: Yes
+
+  [results][tyreworld][09]
+  [single_agent][planning time: 1002.95][cost: 101.0]
+  [multi_agent][planning_time: 342.12655626297][cost: 99.0][agents: 3][optimization time 754.6417360305786]
+  Success: Yes
+
+  [results][tyreworld][10]
+  [single_agent][planning time: 1003.95][cost: 112.0]
+  [multi_agent][planning_time: 338.2967878627777][cost: 102.0][agents: 2][optimization time 3574.664397239685]
+  Success: Yes
+
+  [results][tyreworld][12]
+  [single_agent][planning time: 1002.76][cost: 134.0]
+  [multi_agent][planning_time: 674.8113923931121][cost: 110.0][agents: 3][optimization time 37062.58265018463]
+  Success: Yes
+
+  [results][tyreworld][14]
+  [single_agent][planning time: 1002.43][cost: 156.0]
+  [multi_agent][planning_time: 339.0370380592346][cost: 142.0][agents: 2][optimization time 1129.6491267681122]
+  Success: Yes
+
+  [results][tyreworld][15]
+  [single_agent][planning time: 1002.54][cost: 167.0]
+  [multi_agent][planning_time: 340.1213680839538][cost: 152.0][agents: 2][optimization time 2000.244259595871]
+  Success: Yes
+
   [results][tyreworld][01]
   [single_agent][planning time: 0.11][cost: 13.0]
   [multi_agent][planning_time: 2.4890641307830808][cost: 12.0][agents: 2][optimization time 14.756102323532104]
@@ -340,8 +385,13 @@ Results:
 
 ----------------------------------------
 Domain: termes
-Success rate: 50.00% (1/2)
+Success rate: 16.67% (1/6)
 Results:
+  [results][termes][06]
+  [single_agent][planning time: 1000.16][cost: 172.0]
+  [multi_agent][planning_time: 1009.3621142482759][cost: 302.0][agents: 3][optimization time 21528.50371003151]
+  Success: No
+
   [results][termes][01]
   [single_agent][planning time: 28.84][cost: 36.0]
   [multi_agent][planning_time: 22.413479919433595][cost: 35.0][agents: 3][optimization time 207.12171268463135]
@@ -350,6 +400,21 @@ Results:
   [results][termes][02]
   [single_agent][planning time: 194.87][cost: 54.0]
   [multi_agent][planning_time: 263.5516408348084][cost: 106.0][agents: 3][optimization time 10354.604389429092]
+  Success: No
+
+  [results][termes][03]
+  [single_agent][planning time: 1000.06][cost: 68.0]
+  [multi_agent][planning_time: 343.22925665855405][cost: 82.0][agents: 3][optimization time 6673.7683136463165]
+  Success: No
+
+  [results][termes][04]
+  [single_agent][planning time: 955.4][cost: 80.0]
+  [multi_agent][planning_time: 1015.7848406314849][cost: 219.0][agents: 3][optimization time 55170.78484797478]
+  Success: No
+
+  [results][termes][05]
+  [single_agent][planning time: 1000.17][cost: 136.0]
+  [multi_agent][planning_time: 373.90984674453733][cost: 207.0][agents: 3][optimization time 3997.633036375046]
   Success: No
 
 ----------------------------------------
@@ -381,17 +446,17 @@ Domain: grippers
 
 Domain: tyreworld
   Single Agent:
-    Average Cost: 50.40
-    Average Planning Time: 804.24 sec
+    Average Cost: 91.57
+    Average Planning Time: 932.07 sec
   Multi Agent:
-    Average Cost: 42.60
-    Average Planning Time: 212.61 sec
+    Average Cost: 82.43
+    Average Planning Time: 305.75 sec
 
 Domain: termes
   Single Agent:
-    Average Cost: 45.00
-    Average Planning Time: 111.86 sec
+    Average Cost: 91.00
+    Average Planning Time: 696.58 sec
   Multi Agent:
-    Average Cost: 70.50
-    Average Planning Time: 142.98 sec
+    Average Cost: 158.50
+    Average Planning Time: 504.71 sec
 

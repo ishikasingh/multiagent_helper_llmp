@@ -207,8 +207,13 @@ Results:
 
 ----------------------------------------
 Domain: grippers
-Success rate: 73.68% (14/19)
+Success rate: 75.00% (15/20)
 Results:
+  [results][grippers][08]
+  [single_agent][planning time: 0.06][cost: 11.0]
+  [multi_agent][planning_time: 1.9868754100799562][cost: 9.0][agents: 2][optimization time 11.905819654464722]
+  Success: Yes
+
   [results][grippers][01]
   [single_agent][planning time: 0.04][cost: 5.0]
   [multi_agent][planning_time: 1.8172036361694337][cost: 3.0][agents: 3][optimization time 16.588386058807373]
@@ -306,8 +311,33 @@ Results:
 
 ----------------------------------------
 Domain: termes
-Success rate: 13.33% (2/15)
+Success rate: 25.00% (5/20)
 Results:
+  [results][termes][16]
+  [single_agent][planning time: 1000.2][cost: 154.0]
+  [multi_agent][planning_time: 673.8569008350372][cost: 190.0][agents: 3][optimization time 13527.885095357895]
+  Success: No
+
+  [results][termes][17]
+  [single_agent][planning time: 1000.16][cost: 116.0]
+  [multi_agent][planning_time: 339.62248242378234][cost: 108.0][agents: 3][optimization time 24829.362147331238]
+  Success: Yes
+
+  [results][termes][18]
+  [single_agent][planning time: 490.77][cost: 76.0]
+  [multi_agent][planning_time: 229.6263185310364][cost: 93.0][agents: 3][optimization time 6163.074198007584]
+  Success: No
+
+  [results][termes][19]
+  [single_agent][planning time: 1000.24][cost: 94.0]
+  [multi_agent][planning_time: 337.3558052158356][cost: 90.0][agents: 3][optimization time 1445.113496541977]
+  Success: Yes
+
+  [results][termes][20]
+  [single_agent][planning time: 1000.26][cost: 106.0]
+  [multi_agent][planning_time: 338.25225808143614][cost: 92.0][agents: 3][optimization time 6612.1577224731445]
+  Success: Yes
+
   [results][termes][01]
   [single_agent][planning time: 28.84][cost: 36.0]
   [multi_agent][planning_time: 23.272540731430055][cost: 35.0][agents: 3][optimization time 62.08998918533325]
@@ -385,8 +415,28 @@ Results:
 
 ----------------------------------------
 Domain: tyreworld
-Success rate: 100.00% (16/16)
+Success rate: 100.00% (20/20)
 Results:
+  [results][tyreworld][02]
+  [single_agent][planning time: 1007.04][cost: 101.0]
+  [multi_agent][planning_time: 346.14524795532225][cost: 92.0][agents: 2][optimization time 1685.9672400951385]
+  Success: Yes
+
+  [results][tyreworld][06]
+  [single_agent][planning time: 1003.51][cost: 68.0]
+  [multi_agent][planning_time: 338.43889583587645][cost: 66.0][agents: 3][optimization time 757.0027539730072]
+  Success: Yes
+
+  [results][tyreworld][08]
+  [single_agent][planning time: 1003.37][cost: 90.0]
+  [multi_agent][planning_time: 337.73377983093263][cost: 88.0][agents: 3][optimization time 415.9742147922516]
+  Success: Yes
+
+  [results][tyreworld][20]
+  [single_agent][planning time: 1003.02][cost: 222.0]
+  [multi_agent][planning_time: 386.8675703716278][cost: 202.0][agents: 2][optimization time 10427.793764352798]
+  Success: Yes
+
   [results][tyreworld][01]
   [single_agent][planning time: 0.11][cost: 13.0]
   [multi_agent][planning_time: 1.5377716159820558][cost: 12.0][agents: 2][optimization time 1.8089666366577148]
@@ -488,25 +538,25 @@ Domain: blocksworld
 
 Domain: grippers
   Single Agent:
-    Average Cost: 8.47
-    Average Planning Time: 1.24 sec
+    Average Cost: 8.60
+    Average Planning Time: 1.18 sec
   Multi Agent:
-    Average Cost: 5.58
-    Average Planning Time: 2.75 sec
+    Average Cost: 5.75
+    Average Planning Time: 2.71 sec
 
 Domain: termes
   Single Agent:
-    Average Cost: 86.40
-    Average Planning Time: 785.12 sec
+    Average Cost: 92.10
+    Average Planning Time: 813.42 sec
   Multi Agent:
-    Average Cost: 108.27
-    Average Planning Time: 337.52 sec
+    Average Cost: 109.85
+    Average Planning Time: 349.08 sec
 
 Domain: tyreworld
   Single Agent:
-    Average Cost: 121.62
-    Average Planning Time: 940.63 sec
+    Average Cost: 121.35
+    Average Planning Time: 953.35 sec
   Multi Agent:
-    Average Cost: 107.38
-    Average Planning Time: 423.90 sec
+    Average Cost: 108.30
+    Average Planning Time: 409.58 sec
 
