@@ -1,0 +1,41 @@
+----------------------------------------
+Using cached single agent results
+['The height at pos-1-1 is 3 and all blocks are placed.', 'The height at pos-0-2 is 3 and all blocks are placed.']
+['./experiments_multiagent_help/run2010/termes/p08_1.pddl', './experiments_multiagent_help/run2010/termes/p08_2.pddl']
+agent1
+[info][subgoal_1][termes] task 08 takes 26.6 sec, found a plan with cost 23.0
+planner successful
+validating
+validator time 0.033850908279418945
+agent2
+[info][subgoal_2][termes] task 08 takes 32.65 sec, found a plan with cost 25.0
+planner successful
+validating
+validator time 0.016020774841308594
+Traceback (most recent call last):
+  File "/home/davidbai/multiagent_helper_llmp_equals_n/helper_script_n_agents.py", line 313, in <module>
+    planner.get_updated_init_conditions(path, validation_filename=f"./{path}/p{args.task_id}_{args.num_agents-1}_validation.txt", pddl_problem_filename=init_problem, pddl_problem_filename_edited=init_problem_out,is_main=True)
+  File "/home/davidbai/multiagent_helper_llmp_equals_n/modules/planner.py", line 149, in get_updated_init_conditions
+    with open(pddl_problem_filename, 'r') as f:
+FileNotFoundError: [Errno 2] No such file or directory: './domains/termes/p08_2.pddl'
+----------------------------------------
+Using cached single agent results
+['The height at pos-1-3 is 2 and all blocks are placed.', 'The height at pos-3-3 is 2 and all blocks are placed.']
+['./experiments_multiagent_help/run2010/termes/p09_1.pddl', './experiments_multiagent_help/run2010/termes/p09_2.pddl']
+agent1
+[info][subgoal_1][termes] task 09 takes 4.18 sec, found a plan with cost 20.0
+planner successful
+validating
+validator time 0.016024351119995117
+agent2
+[info][subgoal_2][termes] task 09 takes 16.3 sec, found a plan with cost 20.0
+planner successful
+validating
+validator time 0.0157468318939209
+Traceback (most recent call last):
+  File "/home/davidbai/multiagent_helper_llmp_equals_n/helper_script_n_agents.py", line 313, in <module>
+    planner.get_updated_init_conditions(path, validation_filename=f"./{path}/p{args.task_id}_{args.num_agents-1}_validation.txt", pddl_problem_filename=init_problem, pddl_problem_filename_edited=init_problem_out,is_main=True)
+  File "/home/davidbai/multiagent_helper_llmp_equals_n/modules/planner.py", line 149, in get_updated_init_conditions
+    with open(pddl_problem_filename, 'r') as f:
+FileNotFoundError: [Errno 2] No such file or directory: './domains/termes/p09_2.pddl'
+----------------------------------------

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Base directory where your code is located
-BASE_DIR="/home/davidbai/multiagent_helper_llmp"
+BASE_DIR="/home/davidbai/multiagent_helper_llmp_equals_n"
 
 #Array of experiment configurations with domains - only missing 5-agent tasks
 declare -a experiments=(

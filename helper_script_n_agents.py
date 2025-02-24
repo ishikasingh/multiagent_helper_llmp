@@ -306,12 +306,11 @@ if __name__ == "__main__":
             init_problem_out = f"./{path}/p{args.task_id}_{i+1}.pddl"
             if i == 1:
                 init_problem = f"./domains/{args.domain}/p{args.task_id}.pddl"
-            main_goal = False
-            if args.num_agents == i+1: 
-                main_goal = True 
-                init_problem_out = f"./{path}/p{args.task_id}_0.pddl"
-            planner.get_updated_init_conditions(path, validation_filename=f"./{path}/p{args.task_id}_{i}_validation.txt", pddl_problem_filename=init_problem, pddl_problem_filename_edited=init_problem_out,is_main=main_goal)
-
+                planner.get_updated_init_conditions(path, validation_filename=f"./{path}/p{args.task_id}_{i}_validation.txt", pddl_problem_filename=init_problem, pddl_problem_filename_edited=init_problem_out,is_main=False)
+        # handle main once subgoals finish or terminate early
+        init_problem_out = f"./{path}/p{args.task_id}_0.pddl"
+        init_problem = f"./domains/{args.domain}/p{args.task_id}_{args.num_agents-1}.pddl"
+        planner.get_updated_init_conditions(path, validation_filename=f"./{path}/p{args.task_id}_{args.num_agents-1}_validation.txt", pddl_problem_filename=init_problem, pddl_problem_filename_edited=init_problem_out,is_main=True)
         # handle main agent
         try:
             # init conditions should be good from last iter of subgoal loop

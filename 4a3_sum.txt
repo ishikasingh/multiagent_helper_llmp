@@ -1,0 +1,118 @@
+Domain: barman-enabled
+Success rate: 100.00% (2/2)
+Results:
+  [results][barman-enabled][01]
+  [single_agent][planning time: 1006.43][cost: 27.0]
+  [multi_agent][planning_time: 76.11177580833436][cost: 20.0][agents: 4][optimization time 1496.0921025276184]
+  Success: Yes
+
+  [results][barman-enabled][02]
+  [single_agent][planning time: 1002.14][cost: 27.0]
+  [multi_agent][planning_time: 59.968931722640995][cost: 26.0][agents: 4][optimization time 5823.329485416412]
+  Success: Yes
+
+----------------------------------------
+Domain: blocksworld
+Success rate: 27.27% (3/11)
+Results:
+  [results][blocksworld][01]
+  [single_agent][planning time: 0.06][cost: 6.0]
+  [multi_agent][planning_time: 4.958189315795898][cost: 20.0][agents: 4][optimization time 12.321133136749268]
+  Success: No
+
+  [results][blocksworld][02]
+  [single_agent][planning time: 0.07][cost: 6.0]
+  [multi_agent][planning_time: 4.825093574523925][cost: 10.0][agents: 4][optimization time 32.237149238586426]
+  Success: No
+
+  [results][blocksworld][04]
+  [single_agent][planning time: 0.06][cost: 12.0]
+  [multi_agent][planning_time: 4.894176321029662][cost: 9.0][agents: 4][optimization time 33.46794557571411]
+  Success: Yes
+
+  [results][blocksworld][05]
+  [single_agent][planning time: 0.06][cost: 8.0]
+  [multi_agent][planning_time: 4.932816848754882][cost: 20.0][agents: 4][optimization time 34.8510844707489]
+  Success: No
+
+  [results][blocksworld][06]
+  [single_agent][planning time: 0.08][cost: 12.0]
+  [multi_agent][planning_time: 4.05880763053894][cost: 10.0][agents: 4][optimization time 27.365981101989746]
+  Success: Yes
+
+  [results][blocksworld][07]
+  [single_agent][planning time: 0.08][cost: 8.0]
+  [multi_agent][planning_time: 3.6816832637786865][cost: 7.0][agents: 4][optimization time 364.7524983882904]
+  Success: Yes
+
+  [results][blocksworld][08]
+  [single_agent][planning time: 0.1][cost: 14.0]
+  [multi_agent][planning_time: 5.747275342941284][cost: 15.0][agents: 4][optimization time 562.2256937026978]
+  Success: No
+
+  [results][blocksworld][09]
+  [single_agent][planning time: 0.97][cost: 14.0]
+  [multi_agent][planning_time: 8.320909996032714][cost: 25.0][agents: 4][optimization time 1080.4391720294952]
+  Success: No
+
+  [results][blocksworld][10]
+  [single_agent][planning time: 0.99][cost: 18.0]
+  [multi_agent][planning_time: 0.99][cost: 18.0][agents: 1][optimization time 0]
+  Success: No
+
+  [results][blocksworld][11]
+  [single_agent][planning time: 9.69][cost: 22.0]
+  [multi_agent][planning_time: 9.69][cost: 22.0][agents: 1][optimization time 0]
+  Success: No
+
+  [results][blocksworld][12]
+  [single_agent][planning time: 12.21][cost: 20.0]
+  [multi_agent][planning_time: 16.151327447891234][cost: 28.0][agents: 4][optimization time 6507.399502515793]
+  Success: No
+
+----------------------------------------
+Domain: grippers
+Success rate: 66.67% (2/3)
+Results:
+  [results][grippers][02]
+  [single_agent][planning time: 0.05][cost: 9.0]
+  [multi_agent][planning_time: 3.964361143112183][cost: 4.0][agents: 4][optimization time 135.59623885154724]
+  Success: Yes
+
+  [results][grippers][05]
+  [single_agent][planning time: 0.05][cost: 4.0]
+  [multi_agent][planning_time: 5.740940513610839][cost: 12.0][agents: 4][optimization time 2298.8453731536865]
+  Success: No
+
+  [results][grippers][07]
+  [single_agent][planning time: 0.06][cost: 8.0]
+  [multi_agent][planning_time: 4.870808124542236][cost: 4.0][agents: 4][optimization time 1998.7842128276825]
+  Success: Yes
+
+----------------------------------------
+
+Domain Averages:
+Domain: barman-enabled
+  Single Agent:
+    Average Cost: 27.00
+    Average Planning Time: 1004.28 sec
+  Multi Agent:
+    Average Cost: 23.00
+    Average Planning Time: 68.04 sec
+
+Domain: blocksworld
+  Single Agent:
+    Average Cost: 12.73
+    Average Planning Time: 2.22 sec
+  Multi Agent:
+    Average Cost: 16.73
+    Average Planning Time: 6.20 sec
+
+Domain: grippers
+  Single Agent:
+    Average Cost: 7.00
+    Average Planning Time: 0.05 sec
+  Multi Agent:
+    Average Cost: 6.67
+    Average Planning Time: 4.86 sec
+
