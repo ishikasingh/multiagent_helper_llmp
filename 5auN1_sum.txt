@@ -207,8 +207,18 @@ Results:
 
 ----------------------------------------
 Domain: barman-enabled
-Success rate: 69.23% (9/13)
+Success rate: 73.33% (11/15)
 Results:
+  [results][barman-enabled][14]
+  [single_agent][planning time: 1000.4][cost: 74.0]
+  [multi_agent][planning_time: 1260.4302048110962][cost: 57.0][agents: 5][optimization time 10488.64655470848]
+  Success: Yes
+
+  [results][barman-enabled][16]
+  [single_agent][planning time: 1000.41][cost: 80.0]
+  [multi_agent][planning_time: 1165.1800662612916][cost: 66.0][agents: 5][optimization time 17971.618902683258]
+  Success: Yes
+
   [results][barman-enabled][13]
   [single_agent][planning time: 1000.41][cost: 74.0]
   [multi_agent][planning_time: 1259.107796163559][cost: 64.0][agents: 5][optimization time 9991.70431470871]
@@ -276,8 +286,13 @@ Results:
 
 ----------------------------------------
 Domain: termes
-Success rate: 12.50% (1/8)
+Success rate: 11.11% (1/9)
 Results:
+  [results][termes][13]
+  [single_agent][planning time: 1000.21][cost: 92.0]
+  [multi_agent][planning_time: 160.36163840293884][cost: 92.0][agents: 4][optimization time 19076.207287311554]
+  Success: No
+
   [results][termes][07]
   [single_agent][planning time: 1000.18][cost: 56.0]
   [multi_agent][planning_time: 293.5807274246216][cost: 113.0][agents: 5][optimization time 72192.77188944817]
@@ -443,19 +458,19 @@ Domain: blocksworld
 
 Domain: barman-enabled
   Single Agent:
-    Average Cost: 42.54
-    Average Planning Time: 1001.95 sec
+    Average Cost: 47.13
+    Average Planning Time: 1001.74 sec
   Multi Agent:
-    Average Cost: 38.08
-    Average Planning Time: 307.00 sec
+    Average Cost: 41.20
+    Average Planning Time: 427.77 sec
 
 Domain: termes
   Single Agent:
-    Average Cost: 83.25
-    Average Planning Time: 772.49 sec
+    Average Cost: 84.22
+    Average Planning Time: 797.79 sec
   Multi Agent:
-    Average Cost: 110.00
-    Average Planning Time: 271.44 sec
+    Average Cost: 108.00
+    Average Planning Time: 259.10 sec
 
 Domain: tyreworld
   Single Agent:

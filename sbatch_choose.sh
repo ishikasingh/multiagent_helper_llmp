@@ -39,7 +39,7 @@ for exp in "${experiments[@]}"; do
            --wrap="cd ${BASE_DIR} && ./run_experiments.sh $exp"
     
     # Add a delay between job submissions
-    sleep 2
+    sleep 5
 done
 
 echo "All jobs have been submitted to the cluster."

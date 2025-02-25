@@ -221,7 +221,7 @@ if __name__ == "__main__":
     parser.add_argument('--domain', type=str, choices=utils.DOMAINS, default="tyreworld")
     parser.add_argument('--time-limit', type=int, default=200)
     parser.add_argument('--task_id', type=str)
-    parser.add_argument('--experiment_folder', type=str, default='experiments_multiagent_help')
+    parser.add_argument('--experiment_folder', type=str, default='/run/user/1188')
     parser.add_argument('--human_eval', type=bool, default=False)
     parser.add_argument('--run', type=int, default=1)
     parser.add_argument('--model', type=str, default='gpt-4o')

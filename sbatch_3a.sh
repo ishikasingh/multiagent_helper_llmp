@@ -10,9 +10,9 @@ declare -a experiments=(
     # Termes tasks (split into 3 parts)
     "--output-file 3a_termes_1.txt --summary-file 3a_termes_summary_1.txt --python-script helper_script_n_agents.py --num-agents 3 --model 'gpt-4o' --run 2002 --time-limit 334 --domains termes --tasks 7,8,9,10,11"
     
-    "--output-file 3a_termes_2.txt --summary-file 3a_termes_summary_2.txt --python-script helper_script_n_agents.py --num-agents 3 --model 'gpt-4o' --run 2003 --time-limit 334 --domains termes --tasks 12,13,14,15,16"
+    # "--output-file 3a_termes_2.txt --summary-file 3a_termes_summary_2.txt --python-script helper_script_n_agents.py --num-agents 3 --model 'gpt-4o' --run 2003 --time-limit 334 --domains termes --tasks 12,13,14,15,16"
     
-    "--output-file 3a_termes_3.txt --summary-file 3a_termes_summary_3.txt --python-script helper_script_n_agents.py --num-agents 3 --model 'gpt-4o' --run 2004 --time-limit 334 --domains termes --tasks 17,18,19,20"
+    # "--output-file 3a_termes_3.txt --summary-file 3a_termes_summary_3.txt --python-script helper_script_n_agents.py --num-agents 3 --model 'gpt-4o' --run 2004 --time-limit 334 --domains termes --tasks 17,18,19,20"
 
     # Tyreworld tasks
     "--output-file 3a2_tyreworld.txt --summary-file 3a2_tyreworld_summary.txt --python-script helper_script_n_agents.py --num-agents 3 --model 'gpt-4o' --run 2006 --time-limit 334 --domains tyreworld --tasks 13"
@@ -48,14 +48,13 @@ for exp in "${experiments[@]}"; do
     sbatch --job-name=exp_${run_num} \
            --output=${BASE_DIR}/slurm_exp_${run_num}_%j.out \
            --error=${BASE_DIR}/slurm_exp_${run_num}_%j.err \
-           --cpus-per-task=4 \
+           --cpus-per-task=8 \
            --mem=16G \
-           --time=12:00:00 \
-           --qos=general \
+           --time=24:00:00 \
            --wrap="cd ${BASE_DIR} && ./run_experiments.sh $exp"
     
     # Add a delay between job submissions
-    sleep 2
+    sleep 5
 done
 
 echo "All jobs have been submitted to the cluster."

@@ -311,7 +311,7 @@ Results:
 
 ----------------------------------------
 Domain: termes
-Success rate: 21.05% (4/19)
+Success rate: 25.00% (5/20)
 Results:
   [results][termes][16]
   [single_agent][planning time: 1000.2][cost: 154.0]
@@ -331,6 +331,11 @@ Results:
   [results][termes][19]
   [single_agent][planning time: 1000.24][cost: 94.0]
   [multi_agent][planning_time: 256.0879466629028][cost: 93.0][agents: 4][optimization time 2399.9920201301575]
+  Success: Yes
+
+  [results][termes][20]
+  [single_agent][planning time: 1000.26][cost: 106.0]
+  [multi_agent][planning_time: 259.1031211471558][cost: 100.0][agents: 4][optimization time 12790.33963394165]
   Success: Yes
 
   [results][termes][14]
@@ -541,11 +546,11 @@ Domain: grippers
 
 Domain: termes
   Single Agent:
-    Average Cost: 91.37
-    Average Planning Time: 803.59 sec
+    Average Cost: 92.10
+    Average Planning Time: 813.42 sec
   Multi Agent:
-    Average Cost: 111.32
-    Average Planning Time: 321.66 sec
+    Average Cost: 110.75
+    Average Planning Time: 318.53 sec
 
 Domain: tyreworld
   Single Agent:

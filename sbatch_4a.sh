@@ -9,27 +9,33 @@ declare -a experiments=(
     # "--output-file 4a_barman_remaining.txt --summary-file 4a_barman_remaining_summary.txt --python-script helper_script_n_agents.py --num-agents 4 --model 'gpt-4o' --run 3001 --time-limit 250 --domains barman-enabled --tasks 14,15,20"
 
     # Termes tasks (missing 7-20)
-    "--output-file 4a_termes_remaining.txt --summary-file 4a_termes_remaining_summary.txt --python-script helper_script_n_agents.py --num-agents 4 --model 'gpt-4o' --run 3002 --time-limit 250 --domains termes --tasks 14,15,16,17,18,19,20"
+     "--output-file 4a_termes_remaining_p1.txt --summary-file 4a_termes_remaining_p1_summary.txt --python-script helper_script_n_agents.py --num-agents 4 --model 'gpt-4o' --run 3002 --time-limit 250 --domains termes --tasks 14,15,16,17"
 
-    # Tyreworld tasks (missing 15-20)
-    "--output-file 4a_tyreworld_remaining.txt --summary-file 4a_tyreworld_remaining_summary.txt --python-script helper_script_n_agents.py --num-agents 4 --model 'gpt-4o' --run 3003 --time-limit 250 --domains tyreworld --tasks 19,20"
+    # Termes tasks (missing 7-20) - Split 2
+    # "--output-file 4a_termes_remaining_p2.txt --summary-file 4a_termes_remaining_p2_summary.txt --python-script helper_script_n_agents.py --num-agents 4 --model 'gpt-4o' --run 3014 --time-limit 250 --domains termes --tasks 18,19,20"
+
+#     # Tyreworld tasks (missing 15-20)
+    # "--output-file 4a_tyreworld_remaining.txt --summary-file 4a_tyreworld_remaining_summary.txt --python-script helper_script_n_agents.py --num-agents 4 --model 'gpt-4o' --run 3003 --time-limit 250 --domains tyreworld --tasks 20"
     
-    # Blocksworld tasks
-    # "--output-file 4a2_blocksworld.txt --summary-file 4a2_blocksworld_summary.txt --python-script helper_script_n_agents.py --num-agents 4 --model 'gpt-4o' --run 3004 --time-limit 250 --domains blocksworld"
+#     # Blocksworld tasks
+#     # "--output-file 4a2_blocksworld.txt --summary-file 4a2_blocksworld_summary.txt --python-script helper_script_n_agents.py --num-agents 4 --model 'gpt-4o' --run 3004 --time-limit 250 --domains blocksworld"
     
-    # Barman tasks
-#    "--output-file 4a2_barman.txt --summary-file 4a2_barman_summary.txt --python-script helper_script_n_agents.py --num-agents 4 --model 'gpt-4o' --run 3005 --time-limit 250 --domains barman-enabled --tasks 14,15"
+#     # Barman tasks
+# #    "--output-file 4a2_barman.txt --summary-file 4a2_barman_summary.txt --python-script helper_script_n_agents.py --num-agents 4 --model 'gpt-4o' --run 3005 --time-limit 250 --domains barman-enabled --tasks 14,15"
 
-    # Grippers tasks
-    # "--output-file 4a2_grippers.txt --summary-file 4a2_grippers_summary.txt --python-script helper_script_n_agents.py --num-agents 4 --model 'gpt-4o' --run 3006 --time-limit 250 --domains grippers"
+#     # Grippers tasks
+#     # "--output-file 4a2_grippers.txt --summary-file 4a2_grippers_summary.txt --python-script helper_script_n_agents.py --num-agents 4 --model 'gpt-4o' --run 3006 --time-limit 250 --domains grippers"
 
-    #Tyreworld tasks
-    "--output-file 4a2_tyreworld.txt --summary-file 4a2_tyreworld_summary.txt --python-script helper_script_n_agents.py --num-agents 4 --model 'gpt-4o' --run 3007 --time-limit 250 --domains tyreworld --tasks 12,19,20"
+#     #Tyreworld tasks
+    "--output-file 4a2_tyreworld.txt --summary-file 4a2_tyreworld_summary.txt --python-script helper_script_n_agents.py --num-agents 4 --model 'gpt-4o' --run 3007 --time-limit 250 --domains tyreworld --tasks 20"
 
-    # Termes tasks
-    "--output-file 4a2_termes.txt --summary-file 4a2_termes_summary.txt --python-script helper_script_n_agents.py --num-agents 4 --model 'gpt-4o' --run 3008 --time-limit 250 --domains termes --tasks 14,15,16,17,18,19,20"
+#     # Termes tasks
+    "--output-file 4a2_termes_p1.txt --summary-file 4a2_termes_p1_summary.txt --python-script helper_script_n_agents.py --num-agents 4 --model 'gpt-4o' --run 3008 --time-limit 250 --domains termes --tasks 14,15,16,17"
 
-     # Blocksworld tasks
+#     # Termes tasks - Split 2
+    "--output-file 4a2_termes_p2.txt --summary-file 4a2_termes_p2_summary.txt --python-script helper_script_n_agents.py --num-agents 4 --model 'gpt-4o' --run 3015 --time-limit 250 --domains termes --tasks 20"
+
+#      # Blocksworld tasks
     # "--output-file 4a3_blocksworld.txt --summary-file 4a3_blocksworld_summary.txt --python-script helper_script_n_agents.py --num-agents 4 --model 'gpt-4o' --run 3009 --time-limit 250 --domains blocksworld"
     
     # Barman tasks
@@ -42,7 +48,7 @@ declare -a experiments=(
     # "--output-file 4a3_tyreworld.txt --summary-file 4a3_tyreworld_summary.txt --python-script helper_script_n_agents.py --num-agents 4 --model 'gpt-4o' --run 3012 --time-limit 250 --domains tyreworld --tasks 6,11"
 
     # Termes tasks
-    "--output-file 4a3_termes.txt --summary-file 4a3_termes_summary.txt --python-script helper_script_n_agents.py --num-agents 4 --model 'gpt-4o' --run 3013 --time-limit 250 --domains termes --tasks 16,17,18,19,20"
+    # "--output-file 4a3_termes.txt --summary-file 4a3_termes_summary.txt --python-script helper_script_n_agents.py --num-agents 4 --model 'gpt-4o' --run 3013 --time-limit 250 --domains termes --tasks 20"
 
 )
 
@@ -57,14 +63,14 @@ for exp in "${experiments[@]}"; do
     sbatch --job-name=exp_${run_num} \
            --output=${BASE_DIR}/slurm_exp_${run_num}_%j.out \
            --error=${BASE_DIR}/slurm_exp_${run_num}_%j.err \
+           --nodelist ink-lucy \
            --cpus-per-task=8 \
            --mem=32G \
-           --time=36:00:00 \
-           --qos=general \
+           --time=24:00:00 \
            --wrap="cd ${BASE_DIR} && ./run_experiments.sh $exp"
     
     # Add a delay between job submissions
-    sleep 2
+    sleep 5
 done
 
 echo "All jobs have been submitted to the cluster."

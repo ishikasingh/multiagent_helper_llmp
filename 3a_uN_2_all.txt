@@ -1619,6 +1619,27 @@ tracing optimal path
 [multi_agent][planning_time: 691.2805214881898][cost: 183.0][agents: 3][optimization time 859.4819140434265]
 ----------------------------------------
 Using cached single agent results
+['inflate all intact tyres.', 'replace flat tyres with intact tyres on hubs7 to hubs13.']
+['./experiments_multiagent_help/run2006/tyreworld/p13_1.pddl', './experiments_multiagent_help/run2006/tyreworld/p13_2.pddl']
+agent1
+[info][subgoal_1][tyreworld] task 13 takes 0.42 sec, found a plan with cost 13.0
+planner successful
+validating
+validator time 0.002818584442138672
+agent2
+[info][subgoal_2][tyreworld] task 13 takes 334.36 sec, found a plan with cost 71.0
+planner successful
+validating
+validator time 0.00558161735534668
+[info][multiagent main goal][tyreworld] task 13 takes 334.38 sec, found a plan with cost 61.0
+TASK: tyreworld - 2006 - 13
+71.0 True
+tracing optimal path
+[results][tyreworld][13]
+[single_agent][planning time: 1002.57][cost: 145.0]
+[multi_agent][planning_time: 677.3662823772431][cost: 71.0][agents: 3][optimization time 19001.961261749268]
+----------------------------------------
+Using cached single agent results
 LLM generated no subgoal for agent 2, reducing number of agents
 args.num_agents: 2
 ['inflate all intact tyres']

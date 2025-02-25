@@ -311,8 +311,18 @@ Results:
 
 ----------------------------------------
 Domain: tyreworld
-Success rate: 100.00% (18/18)
+Success rate: 100.00% (20/20)
 Results:
+  [results][tyreworld][20]
+  [single_agent][planning time: 1003.02][cost: 222.0]
+  [multi_agent][planning_time: 307.6820952415466][cost: 202.0][agents: 2][optimization time 8853.360609054565]
+  Success: Yes
+
+  [results][tyreworld][19]
+  [single_agent][planning time: 1003.0][cost: 211.0]
+  [multi_agent][planning_time: 531.5886216831208][cost: 173.0][agents: 3][optimization time 24823.74112534523]
+  Success: Yes
+
   [results][tyreworld][12]
   [single_agent][planning time: 1002.76][cost: 134.0]
   [multi_agent][planning_time: 254.44481813430787][cost: 131.0][agents: 4][optimization time 904.3405582904816]
@@ -405,8 +415,18 @@ Results:
 
 ----------------------------------------
 Domain: termes
-Success rate: 15.38% (2/13)
+Success rate: 26.67% (4/15)
 Results:
+  [results][termes][18]
+  [single_agent][planning time: 490.77][cost: 76.0]
+  [multi_agent][planning_time: 258.82106969833376][cost: 63.0][agents: 4][optimization time 7536.207134008408]
+  Success: Yes
+
+  [results][termes][19]
+  [single_agent][planning time: 1000.24][cost: 94.0]
+  [multi_agent][planning_time: 256.21507477760315][cost: 93.0][agents: 4][optimization time 1560.3130695819855]
+  Success: Yes
+
   [results][termes][13]
   [single_agent][planning time: 1000.21][cost: 92.0]
   [multi_agent][planning_time: 165.94034823417664][cost: 92.0][agents: 4][optimization time 52354.60534739494]
@@ -501,17 +521,17 @@ Domain: grippers
 
 Domain: tyreworld
   Single Agent:
-    Average Cost: 110.78
-    Average Planning Time: 947.83 sec
+    Average Cost: 121.35
+    Average Planning Time: 953.35 sec
   Multi Agent:
-    Average Cost: 97.00
-    Average Planning Time: 346.11 sec
+    Average Cost: 106.05
+    Average Planning Time: 353.46 sec
 
 Domain: termes
   Single Agent:
-    Average Cost: 80.46
-    Average Planning Time: 752.03 sec
+    Average Cost: 81.07
+    Average Planning Time: 751.16 sec
   Multi Agent:
-    Average Cost: 98.69
-    Average Planning Time: 243.43 sec
+    Average Cost: 95.93
+    Average Planning Time: 245.31 sec
 
