@@ -415,8 +415,13 @@ Results:
 
 ----------------------------------------
 Domain: termes
-Success rate: 26.67% (4/15)
+Success rate: 31.25% (5/16)
 Results:
+  [results][termes][20]
+  [single_agent][planning time: 1000.26][cost: 106.0]
+  [multi_agent][planning_time: 260.0505068206787][cost: 97.0][agents: 4][optimization time 2168.6484999656677]
+  Success: Yes
+
   [results][termes][18]
   [single_agent][planning time: 490.77][cost: 76.0]
   [multi_agent][planning_time: 258.82106969833376][cost: 63.0][agents: 4][optimization time 7536.207134008408]
@@ -529,9 +534,9 @@ Domain: tyreworld
 
 Domain: termes
   Single Agent:
-    Average Cost: 81.07
-    Average Planning Time: 751.16 sec
+    Average Cost: 82.62
+    Average Planning Time: 766.73 sec
   Multi Agent:
-    Average Cost: 95.93
-    Average Planning Time: 245.31 sec
+    Average Cost: 96.00
+    Average Planning Time: 246.23 sec
 

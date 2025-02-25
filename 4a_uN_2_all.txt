@@ -1878,6 +1878,32 @@ tracing optimal path
 [multi_agent][planning_time: 518.4292213535309][cost: 155.0][agents: 3][optimization time 16417.158348798752]
 ----------------------------------------
 Using cached single agent results
+['height pos-0-2 2', 'height pos-3-0 2', 'height pos-3-2 2']
+['./experiments_multiagent_help/run3015/termes/p20_1.pddl', './experiments_multiagent_help/run3015/termes/p20_2.pddl', './experiments_multiagent_help/run3015/termes/p20_3.pddl']
+agent1
+[info][subgoal_1][termes] task 20 takes 0.2 sec, found a plan with cost 15.0
+planner successful
+validating
+validator time 0.00837397575378418
+agent2
+[info][subgoal_2][termes] task 20 takes 0.2 sec, found a plan with cost 10.0
+planner successful
+validating
+validator time 0.012318849563598633
+agent3
+[info][subgoal_3][termes] task 20 takes 0.15 sec, found a plan with cost 8.0
+planner successful
+validating
+validator time 0.01544499397277832
+[info][multiagent main goal][termes] task 20 takes 251.19 sec, found a plan with cost 86.0
+TASK: termes - 3015 - 20
+97.0 True
+tracing optimal path
+[results][termes][20]
+[single_agent][planning time: 1000.26][cost: 106.0]
+[multi_agent][planning_time: 260.0505068206787][cost: 97.0][agents: 4][optimization time 2168.6484999656677]
+----------------------------------------
+Using cached single agent results
 ['height at pos-0-0 is 2 and no unplaced blocks', 'height at pos-0-2 is 2 and no unplaced blocks', 'height at pos-3-1 is 2 and no unplaced blocks']
 ['./experiments_multiagent_help/run3015/termes/p18_1.pddl', './experiments_multiagent_help/run3015/termes/p18_2.pddl', './experiments_multiagent_help/run3015/termes/p18_3.pddl']
 agent1
