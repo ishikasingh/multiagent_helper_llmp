@@ -1878,6 +1878,112 @@ tracing optimal path
 [multi_agent][planning_time: 518.4292213535309][cost: 155.0][agents: 3][optimization time 16417.158348798752]
 ----------------------------------------
 Using cached single agent results
+['height pos-3-0 3', 'height pos-3-1 3', 'height pos-3-2 4']
+['./experiments_multiagent_help/run3008/termes/p14_1.pddl', './experiments_multiagent_help/run3008/termes/p14_2.pddl', './experiments_multiagent_help/run3008/termes/p14_3.pddl']
+agent1
+[info][subgoal_1][termes] task 14 takes 3.09 sec, found a plan with cost 25.0
+planner successful
+validating
+validator time 0.008255958557128906
+agent2
+[info][subgoal_2][termes] task 14 takes 0.4 sec, found a plan with cost 14.0
+planner successful
+validating
+validator time 0.006502866744995117
+agent3
+[info][subgoal_3][termes] task 14 takes 69.58 sec, found a plan with cost 31.0
+planner successful
+validating
+validator time 0.007297039031982422
+[info][multiagent main goal][termes] task 14 takes 251.43 sec, found a plan with cost 48.0
+TASK: termes - 3008 - 14
+101.0 True
+tracing optimal path
+[results][termes][14]
+[single_agent][planning time: 1000.21][cost: 104.0]
+[multi_agent][planning_time: 333.8223829269409][cost: 101.0][agents: 4][optimization time 83140.00986003876]
+----------------------------------------
+Using cached single agent results
+['height at pos-3-0 is 3 and no unplaced blocks', 'height at pos-3-2 is 2 and no unplaced blocks', 'height at pos-0-2 is 5 and no unplaced blocks']
+['./experiments_multiagent_help/run3008/termes/p15_1.pddl', './experiments_multiagent_help/run3008/termes/p15_2.pddl', './experiments_multiagent_help/run3008/termes/p15_3.pddl']
+agent1
+[info][subgoal_1][termes] task 15 takes 1.39 sec, found a plan with cost 22.0
+planner successful
+validating
+validator time 0.02574920654296875
+agent2
+[info][subgoal_2][termes] task 15 takes 0.14 sec, found a plan with cost 8.0
+planner successful
+validating
+validator time 0.008059024810791016
+agent3
+[info][subgoal_3][termes] task 15 takes 250.7 sec, found a plan with cost 77.0
+planner successful
+validating
+validator time 0.022822141647338867
+[info][multiagent main goal][termes] task 15 takes 250.75 sec, found a plan with cost 48.0
+TASK: termes - 3008 - 15
+145.0 True
+tracing optimal path
+[results][termes][15]
+[single_agent][planning time: 1000.16][cost: 146.0]
+[multi_agent][planning_time: 508.6097655105591][cost: 145.0][agents: 4][optimization time 1239.3841140270233]
+Running experiment: Domain=termes, Time Limit=250, Task ID=15, Agents=4
+----------------------------------------
+Using cached single agent results
+['height at pos-3-1 is 5 and all blocks are placed.', 'height at pos-3-2 is 4 and all blocks are placed.', 'height at pos-2-0 is 2 and all blocks are placed.']
+['./experiments_multiagent_help/run3008/termes/p16_1.pddl', './experiments_multiagent_help/run3008/termes/p16_2.pddl', './experiments_multiagent_help/run3008/termes/p16_3.pddl']
+agent1
+[info][subgoal_1][termes] task 16 takes 250.92 sec, found a plan with cost 82.0
+planner successful
+validating
+validator time 0.017544031143188477
+agent2
+[info][subgoal_2][termes] task 16 takes 12.6 sec, found a plan with cost 29.0
+planner successful
+validating
+validator time 0.01771068572998047
+agent3
+[info][subgoal_3][termes] task 16 takes 0.11 sec, found a plan with cost 4.0
+planner successful
+validating
+validator time 0.0064067840576171875
+[info][multiagent main goal][termes] task 16 takes 250.65 sec, found a plan with cost 94.0
+TASK: termes - 3008 - 16
+197.0 True
+tracing optimal path
+[results][termes][16]
+[single_agent][planning time: 1000.2][cost: 154.0]
+[multi_agent][planning_time: 521.1104214477539][cost: 197.0][agents: 4][optimization time 346.1017680168152]
+Running experiment: Domain=termes, Time Limit=250, Task ID=16, Agents=4
+----------------------------------------
+Using cached single agent results
+['height at pos-1-0 is 3 and no unplaced block', 'height at pos-1-2 is 3 and no unplaced block', 'height at pos-3-2 is 3 and no unplaced block']
+['./experiments_multiagent_help/run3008/termes/p17_1.pddl', './experiments_multiagent_help/run3008/termes/p17_2.pddl', './experiments_multiagent_help/run3008/termes/p17_3.pddl']
+agent1
+[info][subgoal_1][termes] task 17 takes 1.77 sec, found a plan with cost 25.0
+planner successful
+validating
+validator time 0.01980280876159668
+agent2
+[info][subgoal_2][termes] task 17 takes 1.8 sec, found a plan with cost 21.0
+planner successful
+validating
+validator time 0.007961750030517578
+agent3
+[info][subgoal_3][termes] task 17 takes 1.35 sec, found a plan with cost 19.0
+planner successful
+validating
+validator time 0.008383035659790039
+[info][multiagent main goal][termes] task 17 takes 251.29 sec, found a plan with cost 64.0
+TASK: termes - 3008 - 17
+120.0 True
+tracing optimal path
+[results][termes][17]
+[single_agent][planning time: 1000.16][cost: 116.0]
+[multi_agent][planning_time: 262.55255576133726][cost: 120.0][agents: 4][optimization time 596.0675683021545]
+----------------------------------------
+Using cached single agent results
 ['height pos-0-2 2', 'height pos-3-0 2', 'height pos-3-2 2']
 ['./experiments_multiagent_help/run3015/termes/p20_1.pddl', './experiments_multiagent_help/run3015/termes/p20_2.pddl', './experiments_multiagent_help/run3015/termes/p20_3.pddl']
 agent1

@@ -1,4 +1,66 @@
 Using cached single agent results
+['contains shot4 cocktail3 and all hands are empty.', 'contains shot5 cocktail5 and all hands are empty.', 'contains shot6 cocktail7 and all hands are empty.', 'contains shot7 cocktail4 and all hands are empty.']
+['./experiments_multiagent_help/run4039/barman-enabled/p17_1.pddl', './experiments_multiagent_help/run4039/barman-enabled/p17_2.pddl', './experiments_multiagent_help/run4039/barman-enabled/p17_3.pddl', './experiments_multiagent_help/run4039/barman-enabled/p17_4.pddl']
+agent1
+[info][subgoal_1][barman-enabled] task 17 takes 200.33 sec, found a plan with cost 11.0
+planner successful
+validating
+validator time 0.004678249359130859
+agent2
+[info][subgoal_2][barman-enabled] task 17 takes 200.3 sec, found a plan with cost 11.0
+planner successful
+validating
+validator time 0.005364656448364258
+agent3
+[info][subgoal_3][barman-enabled] task 17 takes 200.27 sec, found a plan with cost 11.0
+planner successful
+validating
+validator time 0.0072062015533447266
+agent4
+[info][subgoal_4][barman-enabled] task 17 takes 200.27 sec, found a plan with cost 16.0
+planner successful
+validating
+validator time 0.006703615188598633
+[info][multiagent main goal][barman-enabled] task 17 takes 200.25 sec, found a plan with cost 42.0
+TASK: barman-enabled - 4039 - 17
+81.0 True
+tracing optimal path
+[results][barman-enabled][17]
+[single_agent][planning time: 1000.39][cost: 83.0]
+[multi_agent][planning_time: 1009.0615507793427][cost: 81.0][agents: 5][optimization time 46563.92395234108]
+----------------------------------------
+Using cached single agent results
+['contains shot7 cocktail2 and all hands are empty.', 'contains shot6 cocktail4 and all hands are empty.', 'contains shot3 cocktail3 and all hands are empty.', 'contains shot5 cocktail5 and all hands are empty.']
+['./experiments_multiagent_help/run4039/barman-enabled/p18_1.pddl', './experiments_multiagent_help/run4039/barman-enabled/p18_2.pddl', './experiments_multiagent_help/run4039/barman-enabled/p18_3.pddl', './experiments_multiagent_help/run4039/barman-enabled/p18_4.pddl']
+agent1
+[info][subgoal_1][barman-enabled] task 18 takes 200.33 sec, found a plan with cost 11.0
+planner successful
+validating
+validator time 0.007138490676879883
+agent2
+[info][subgoal_2][barman-enabled] task 18 takes 200.3 sec, found a plan with cost 11.0
+planner successful
+validating
+validator time 0.006815910339355469
+agent3
+[info][subgoal_3][barman-enabled] task 18 takes 200.26 sec, found a plan with cost 11.0
+planner successful
+validating
+validator time 0.005121707916259766
+agent4
+[info][subgoal_4][barman-enabled] task 18 takes 200.26 sec, found a plan with cost 15.0
+planner successful
+validating
+validator time 0.005838632583618164
+[info][multiagent main goal][barman-enabled] task 18 takes 200.23 sec, found a plan with cost 42.0
+TASK: barman-enabled - 4039 - 18
+76.0 True
+tracing optimal path
+[results][barman-enabled][18]
+[single_agent][planning time: 1000.44][cost: 86.0]
+[multi_agent][planning_time: 1008.6608647155762][cost: 76.0][agents: 5][optimization time 2839.9348940849304]
+----------------------------------------
+Using cached single agent results
 ['contains shot2 cocktail1 and all hands are empty.', 'contains shot6 cocktail2 and all hands are empty.', 'contains shot4 cocktail3 and all hands are empty.', 'contains shot5 cocktail6 and all hands are empty.']
 ['./experiments_multiagent_help/run4039/barman-enabled/p15_1.pddl', './experiments_multiagent_help/run4039/barman-enabled/p15_2.pddl', './experiments_multiagent_help/run4039/barman-enabled/p15_3.pddl', './experiments_multiagent_help/run4039/barman-enabled/p15_4.pddl']
 agent1
@@ -2004,6 +2066,204 @@ tracing optimal path
 [results][tyreworld][01]
 [single_agent][planning time: 0.11][cost: 13.0]
 [multi_agent][planning_time: 2.6023057556152347][cost: 12.0][agents: 2][optimization time 4.635156154632568]
+----------------------------------------
+Using cached single agent results
+['height at pos-0-0 is 2 and all blocks are placed.', 'height at pos-0-1 is 2 and all blocks are placed.', 'height at pos-2-0 is 2 and all blocks are placed.', 'height at pos-2-1 is 3 and all blocks are placed.']
+['./experiments_multiagent_help/run4042/termes/p12_1.pddl', './experiments_multiagent_help/run4042/termes/p12_2.pddl', './experiments_multiagent_help/run4042/termes/p12_3.pddl', './experiments_multiagent_help/run4042/termes/p12_4.pddl']
+agent1
+[info][subgoal_1][termes] task 12 takes 0.27 sec, found a plan with cost 14.0
+planner successful
+validating
+validator time 0.003168821334838867
+agent2
+[info][subgoal_2][termes] task 12 takes 0.14 sec, found a plan with cost 10.0
+planner successful
+validating
+validator time 0.0030303001403808594
+agent3
+[info][subgoal_3][termes] task 12 takes 0.43 sec, found a plan with cost 16.0
+planner successful
+validating
+validator time 0.00417780876159668
+agent4
+[info][subgoal_4][termes] task 12 takes 19.6 sec, found a plan with cost 34.0
+planner successful
+validating
+validator time 0.004854679107666016
+[info][multiagent main goal][termes] task 12 takes 23.28 sec, found a plan with cost 34.0
+TASK: termes - 4042 - 12
+95.0 True
+tracing optimal path
+[results][termes][12]
+[single_agent][planning time: 73.53][cost: 46.0]
+[multi_agent][planning_time: 70.49984714508057][cost: 95.0][agents: 5][optimization time 23251.074419260025]
+----------------------------------------
+Using cached single agent results
+LLM generated no subgoal for agent 4, reducing number of agents
+args.num_agents: 4
+['height at pos-3-0 is 3 and no unplaced block at pos-2-0.', 'height at pos-2-2 is 4 and no unplaced block at pos-2-0.', 'height at pos-0-1 is 3 and no unplaced block at pos-2-0.']
+['./experiments_multiagent_help/run4042/termes/p13_1.pddl', './experiments_multiagent_help/run4042/termes/p13_2.pddl', './experiments_multiagent_help/run4042/termes/p13_3.pddl']
+agent1
+[info][subgoal_1][termes] task 13 takes 1.52 sec, found a plan with cost 22.0
+planner successful
+validating
+validator time 0.0030074119567871094
+agent2
+[info][subgoal_2][termes] task 13 takes 109.94 sec, found a plan with cost 35.0
+planner successful
+validating
+validator time 0.007834911346435547
+agent3
+[info][subgoal_3][termes] task 13 takes 1.17 sec, found a plan with cost 22.0
+planner successful
+validating
+validator time 0.003999471664428711
+[info][multiagent main goal][termes] task 13 takes 4.1 sec, found a plan with cost 24.0
+TASK: termes - 4042 - 13
+92.0 True
+tracing optimal path
+[results][termes][13]
+[single_agent][planning time: 1000.21][cost: 92.0]
+[multi_agent][planning_time: 123.96685216903686][cost: 92.0][agents: 4][optimization time 13391.740126609802]
+----------------------------------------
+Using cached single agent results
+LLM generated no subgoal for agent 4, reducing number of agents
+args.num_agents: 4
+['height pos-3-0 3', 'height pos-3-2 2', 'height pos-0-2 5']
+['./experiments_multiagent_help/run4043/termes/p15_1.pddl', './experiments_multiagent_help/run4043/termes/p15_2.pddl', './experiments_multiagent_help/run4043/termes/p15_3.pddl']
+agent1
+[info][subgoal_1][termes] task 15 takes 1.59 sec, found a plan with cost 22.0
+planner successful
+validating
+validator time 0.06448054313659668
+agent2
+[info][subgoal_2][termes] task 15 takes 0.19 sec, found a plan with cost 8.0
+planner successful
+validating
+validator time 0.01507115364074707
+agent3
+[info][subgoal_3][termes] task 15 takes 200.19 sec, found a plan with cost 77.0
+planner successful
+validating
+validator time 0.016102313995361328
+[info][multiagent main goal][termes] task 15 takes 200.24 sec, found a plan with cost 48.0
+TASK: termes - 4043 - 15
+148.0 True
+tracing optimal path
+[results][termes][15]
+[single_agent][planning time: 1000.16][cost: 146.0]
+[multi_agent][planning_time: 407.4714901065827][cost: 148.0][agents: 4][optimization time 14570.44036769867]
+----------------------------------------
+Using cached single agent results
+['height at pos-3-1 is 5 and no unplaced block', 'height at pos-3-2 is 4 and no unplaced block', 'height at pos-2-0 is 2 and no unplaced block', 'height at pos-1-2 is 5 and no unplaced block']
+['./experiments_multiagent_help/run4043/termes/p16_1.pddl', './experiments_multiagent_help/run4043/termes/p16_2.pddl', './experiments_multiagent_help/run4043/termes/p16_3.pddl', './experiments_multiagent_help/run4043/termes/p16_4.pddl']
+agent1
+[info][subgoal_1][termes] task 16 takes 200.19 sec, found a plan with cost 82.0
+planner successful
+validating
+validator time 0.010830163955688477
+agent2
+[info][subgoal_2][termes] task 16 takes 15.89 sec, found a plan with cost 29.0
+planner successful
+validating
+validator time 0.0056078433990478516
+agent3
+[info][subgoal_3][termes] task 16 takes 0.16 sec, found a plan with cost 4.0
+planner successful
+validating
+validator time 0.00426483154296875
+agent4
+[info][subgoal_4][termes] task 16 takes 200.19 sec, found a plan with cost 39.0
+planner successful
+validating
+validator time 0.006329059600830078
+[info][multiagent main goal][termes] task 16 takes 200.21 sec, found a plan with cost 54.0
+TASK: termes - 4043 - 16
+194.0 True
+tracing optimal path
+[results][termes][16]
+[single_agent][planning time: 1000.2][cost: 154.0]
+[multi_agent][planning_time: 626.7361458683014][cost: 194.0][agents: 5][optimization time 6669.775048971176]
+----------------------------------------
+Using cached single agent results
+['height at pos-1-0 is 3 and all blocks are placed.', 'height at pos-1-2 is 3 and all blocks are placed.', 'height at pos-2-0 is 3 and all blocks are placed.', 'height at pos-3-2 is 3 and all blocks are placed.']
+['./experiments_multiagent_help/run4043/termes/p17_1.pddl', './experiments_multiagent_help/run4043/termes/p17_2.pddl', './experiments_multiagent_help/run4043/termes/p17_3.pddl', './experiments_multiagent_help/run4043/termes/p17_4.pddl']
+agent1
+[info][subgoal_1][termes] task 17 takes 1.96 sec, found a plan with cost 25.0
+planner successful
+validating
+validator time 0.08678913116455078
+agent2
+[info][subgoal_2][termes] task 17 takes 1.93 sec, found a plan with cost 21.0
+planner successful
+validating
+validator time 0.012157678604125977
+agent3
+[info][subgoal_3][termes] task 17 takes 0.5 sec, found a plan with cost 12.0
+planner successful
+validating
+validator time 0.008488655090332031
+agent4
+[info][subgoal_4][termes] task 17 takes 8.53 sec, found a plan with cost 23.0
+planner successful
+validating
+validator time 0.07390332221984863
+[info][multiagent main goal][termes] task 17 takes 200.26 sec, found a plan with cost 74.0
+TASK: termes - 4043 - 17
+141.0 True
+tracing optimal path
+[results][termes][17]
+[single_agent][planning time: 1000.16][cost: 116.0]
+[multi_agent][planning_time: 221.44666045188902][cost: 141.0][agents: 5][optimization time 25189.11328959465]
+----------------------------------------
+Using cached single agent results
+['height at pos-1-3 is 2 and all blocks are placed.', 'height at pos-0-2 is 2 and all blocks are placed.', 'height at pos-2-3 is 2 and all blocks are placed.', 'height at pos-3-3 is 2 and all blocks are placed.']
+['./experiments_multiagent_help/run4050/termes/p09_1.pddl', './experiments_multiagent_help/run4050/termes/p09_2.pddl', './experiments_multiagent_help/run4050/termes/p09_3.pddl', './experiments_multiagent_help/run4050/termes/p09_4.pddl']
+agent1
+[info][subgoal_1][termes] task 09 takes 2.76 sec, found a plan with cost 20.0
+planner successful
+validating
+validator time 0.00531005859375
+agent2
+[info][subgoal_2][termes] task 09 takes 5.05 sec, found a plan with cost 18.0
+planner successful
+validating
+validator time 0.01391744613647461
+agent3
+[info][subgoal_3][termes] task 09 takes 4.79 sec, found a plan with cost 18.0
+planner successful
+validating
+validator time 0.0043218135833740234
+agent4
+[info][subgoal_4][termes] task 09 takes 1.13 sec, found a plan with cost 14.0
+planner successful
+validating
+validator time 0.004628419876098633
+[info][multiagent main goal][termes] task 09 takes 200.23 sec, found a plan with cost 108.0
+TASK: termes - 4050 - 09
+155.0 True
+tracing optimal path
+[results][termes][09]
+[single_agent][planning time: 1000.2][cost: 100.0]
+[multi_agent][planning_time: 236.90530129432676][cost: 155.0][agents: 5][optimization time 76370.85047221184]
+----------------------------------------
+Using cached single agent results
+LLM generated no subgoal for agent 2, reducing number of agents
+args.num_agents: 2
+['height at pos-3-0 is 2 and no unplaced block at pos-2-0.']
+['./experiments_multiagent_help/run4050/termes/p10_1.pddl']
+agent1
+[info][subgoal_1][termes] task 10 takes 0.38 sec, found a plan with cost 10.0
+planner successful
+validating
+validator time 0.004179716110229492
+[info][multiagent main goal][termes] task 10 takes 200.21 sec, found a plan with cost 74.0
+TASK: termes - 4050 - 10
+74.0 True
+tracing optimal path
+[results][termes][10]
+[single_agent][planning time: 1000.3][cost: 76.0]
+[multi_agent][planning_time: 213.58404501914978][cost: 74.0][agents: 2][optimization time 64.20274424552917]
 ----------------------------------------
 Using cached single agent results
 LLM generated no subgoal for agent 4, reducing number of agents

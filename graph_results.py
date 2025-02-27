@@ -82,12 +82,12 @@ twostep_data = {
     'termes': {
         2: {'runs': [(513.31, 99.70), (508.23, 98.60), (483.86, 94.30)]},
         3: {'runs': [(402.16, 117.30), (423.61, 116.95), (349.08, 109.85)]},
-        4: {'runs': [(243.23, 99.75), (245.31, 95.93), (318.53, 110.75)]}
+        4: {'runs': [(276.06, 107.75), (278.29, 104.95), (318.53, 110.75)]}
     },
     'tyreworld': {
         2: {'runs': [(482.60, 113.50), (483.91, 112.20), (483.39, 112.15)]},
         3: {'runs': [(354.27, 108.15), (360.68, 108.45), (409.58, 108.30)]},
-        4: {'runs': [(322.95, 112.40), (355.87, 101.00), (315.78, 109.05)]}
+        4: {'runs': [(322.95, 112.40), (353.46, 106.05), (315.78, 109.05)]}
     }
 }
 
@@ -111,7 +111,8 @@ def create_domain_plot(domain, metric, ylabel, title_suffix):
     x_values = []
     y_values = []
     
-    for n in range(1, 6):
+    # Only graph up to 4 agents for multiagent approach
+    for n in range(1, 5):  # Changed from range(1, 6)
         key = f'{domain}-{n}'
         if key in results_dict:
             x_values.append(n)
@@ -149,7 +150,7 @@ def create_domain_plot(domain, metric, ylabel, title_suffix):
     plt.title(f'{domain.capitalize()} Domain {title_suffix}', fontsize=16, fontweight='bold')
     plt.grid(True, linestyle='--', alpha=0.7)
     plt.legend(fontsize=12, frameon=True, fancybox=True, shadow=True)
-    plt.xticks(range(1, 6), fontsize=12)
+    plt.xticks(range(1, 5), fontsize=12)
     plt.yticks(fontsize=12)
     
     # Add a light background color
@@ -169,25 +170,25 @@ def create_domain_plot(domain, metric, ylabel, title_suffix):
 
 # Function to create grid layout with properly normalized standard deviation
 def create_combined_grid_layout():
-    plt.figure(figsize=(15, 8))
-    gs = GridSpec(2, 6, figure=plt.gcf(), hspace=0.4, wspace=0.4)
+    plt.figure(figsize=(18, 7))
+    gs = GridSpec(2, 6, figure=plt.gcf(), hspace=0.1, wspace=0.35)
     
     # Create a single legend for the entire figure
     legend_elements = [
         Line2D([0], [0], color=approach_colors['multiagent'], marker='o', linestyle='-', 
-               linewidth=2, markersize=8, label='Multiagent Approach'),
+               linewidth=2, markersize=8, label='MA PDDL'),
         Line2D([0], [0], color=approach_colors['twostep'], marker='s', linestyle='--', 
                linewidth=2, markersize=8, label='Two-step Approach')
     ]
     
     # Store normalized data for averaging
     normalized_planning_time = {
-        'multiagent': {n: [] for n in range(1, 6)},
+        'multiagent': {n: [] for n in range(1, 5)},  # Changed from range(1, 6)
         'twostep': {n: [] for n in range(2, 5)}
     }
     
     normalized_solution_cost = {
-        'multiagent': {n: [] for n in range(1, 6)},
+        'multiagent': {n: [] for n in range(1, 5)},  # Changed from range(1, 6)
         'twostep': {n: [] for n in range(2, 5)}
     }
     
@@ -203,7 +204,8 @@ def create_combined_grid_layout():
         x_values = []
         y_values = []
         
-        for n in range(1, 6):
+        # Only graph up to 4 agents for multiagent approach
+        for n in range(1, 5):  # Changed from range(1, 6)
             key = f'{domain}-{n}'
             if key in results_dict:
                 x_values.append(n)
@@ -212,7 +214,7 @@ def create_combined_grid_layout():
         # Normalize planning time for multiagent approach
         if y_values:
             max_time = max(y_values)
-            for n, time in zip(range(1, 6), y_values):
+            for n, time in zip(range(1, 5), y_values):  # Changed from range(1, 6)
                 normalized_planning_time['multiagent'][n].append(time / max_time if max_time > 0 else 0)
         
         ax_time.plot(x_values, y_values, 
@@ -255,26 +257,27 @@ def create_combined_grid_layout():
         
         ax_time.set_title(f'{domain.capitalize()}', fontsize=12, fontweight='bold')
         ax_time.grid(True, linestyle='--', alpha=0.7)
-        ax_time.set_xticks(range(1, 6))
+        ax_time.set_xticks(range(1, 5))
         ax_time.tick_params(axis='both', labelsize=10)  # Slightly smaller tick labels
         
-        # Bottom row - Solution Cost
+        # Bottom row - Execution Length (formerly Solution Cost)
         ax_cost = plt.subplot(gs[1, idx])
         
-        # Multiagent approach data - solution cost
+        # Multiagent approach data - execution length
         x_values = []
         y_values = []
         
-        for n in range(1, 6):
+        # Only graph up to 4 agents for multiagent approach
+        for n in range(1, 5):  # Changed from range(1, 6)
             key = f'{domain}-{n}'
             if key in results_dict:
                 x_values.append(n)
                 y_values.append(results_dict[key]['avg_solution_cost'])
         
-        # Normalize solution cost for multiagent approach
+        # Normalize execution length for multiagent approach
         if y_values:
             max_cost = max(y_values)
-            for n, cost in zip(range(1, 6), y_values):
+            for n, cost in zip(range(1, 5), y_values):  # Changed from range(1, 6)
                 normalized_solution_cost['multiagent'][n].append(cost / max_cost if max_cost > 0 else 0)
         
         ax_cost.plot(x_values, y_values, 
@@ -284,17 +287,20 @@ def create_combined_grid_layout():
                markersize=6,
                linestyle='-')
         
-        # Two-step approach data - solution cost
+        # Two-step approach data - execution length
         if domain in twostep_data:
             x_values_twostep = sorted(twostep_data[domain].keys())
             y_values_twostep = [twostep_data[domain][n]['avg_solution_cost'] for n in x_values_twostep]
             y_std_twostep = [twostep_data[domain][n]['std_solution_cost'] for n in x_values_twostep]
             
-            # Normalize solution cost for two-step approach
+            # Normalize execution length and std for two-step approach
             if y_values and y_values_twostep:
                 max_cost = max(max(y_values), max(y_values_twostep))
-                for n, cost in zip(x_values_twostep, y_values_twostep):
-                    normalized_solution_cost['twostep'][n].append(cost / max_cost if max_cost > 0 else 0)
+                for n, cost, std in zip(x_values_twostep, y_values_twostep, y_std_twostep):
+                    norm_factor = max_cost if max_cost > 0 else 1
+                    normalized_solution_cost['twostep'][n].append(cost / norm_factor)
+                    # Normalize std by the same factor
+                    normalized_solution_cost_std[n].append(std / norm_factor)
             
             ax_cost.plot(x_values_twostep, y_values_twostep,
                    color=approach_colors['twostep'],
@@ -310,18 +316,18 @@ def create_combined_grid_layout():
         
         # Only add y-label to the first plot in each row
         if idx == 0:
-            ax_cost.set_ylabel('Solution Cost', fontsize=12, fontweight='bold')
+            ax_cost.set_ylabel('Execution Length', fontsize=12, fontweight='bold')
         
         ax_cost.set_xlabel('Number of Agents', fontsize=10, fontweight='bold')
         ax_cost.grid(True, linestyle='--', alpha=0.7)
-        ax_cost.set_xticks(range(1, 6))
+        ax_cost.set_xticks(range(1, 5))
         ax_cost.tick_params(axis='both', labelsize=10)  # Slightly smaller tick labels
     
     # Add average planning time plot (top right)
     ax_avg_time = plt.subplot(gs[0, 5])
     
     # Calculate average normalized planning time for multiagent approach
-    x_values_multi = list(range(1, 6))
+    x_values_multi = list(range(1, 5))  # Changed from range(1, 6)
     y_values_multi = [np.mean(normalized_planning_time['multiagent'][n]) for n in x_values_multi]
     
     # Calculate average normalized planning time and std for two-step approach
@@ -329,6 +335,16 @@ def create_combined_grid_layout():
     y_values_twostep = [np.mean(normalized_planning_time['twostep'][n]) for n in x_values_twostep]
     # Average the normalized standard deviations
     y_std_twostep = [np.mean(normalized_planning_time_std[n]) for n in x_values_twostep]
+    
+    # Print statistics for normalized planning time
+    print("\n=== Normalized Planning Time Statistics ===")
+    print("Multiagent approach:")
+    for n, value in zip(x_values_multi, y_values_multi):
+        print(f"  {n} agents: {value:.4f}")
+    
+    print("\nTwo-step approach:")
+    for n, value, std in zip(x_values_twostep, y_values_twostep, y_std_twostep):
+        print(f"  {n} agents: {value:.4f} ± {std:.4f}")
     
     # Plot average planning time
     ax_avg_time.plot(x_values_multi, y_values_multi,
@@ -353,20 +369,30 @@ def create_combined_grid_layout():
     ax_avg_time.set_ylabel('Normalized Planning Time', fontsize=12, fontweight='bold')
     ax_avg_time.set_title('Average Across Domains', fontsize=12, fontweight='bold')
     ax_avg_time.grid(True, linestyle='--', alpha=0.7)
-    ax_avg_time.set_xticks(range(1, 6))
+    ax_avg_time.set_xticks(range(1, 5))
     ax_avg_time.tick_params(axis='both', labelsize=10)
     
-    # Add average solution cost plot (bottom right)
+    # Add average execution length plot (bottom right)
     ax_avg_cost = plt.subplot(gs[1, 5])
     
-    # Calculate average normalized solution cost for multiagent approach
+    # Calculate average normalized execution length for multiagent approach
     y_values_multi = [np.mean(normalized_solution_cost['multiagent'][n]) for n in x_values_multi]
     
-    # Calculate average normalized solution cost for two-step approach
+    # Calculate average normalized execution length for two-step approach
     y_values_twostep = [np.mean(normalized_solution_cost['twostep'][n]) for n in x_values_twostep]
     y_std_twostep = [np.mean(normalized_solution_cost_std[n]) for n in x_values_twostep]
     
-    # Plot average solution cost
+    # Print statistics for normalized execution length
+    print("\n=== Normalized Execution Length Statistics ===")
+    print("Multiagent approach:")
+    for n, value in zip(x_values_multi, y_values_multi):
+        print(f"  {n} agents: {value:.4f}")
+    
+    print("\nTwo-step approach:")
+    for n, value, std in zip(x_values_twostep, y_values_twostep, y_std_twostep):
+        print(f"  {n} agents: {value:.4f} ± {std:.4f}")
+    
+    # Plot average execution length
     ax_avg_cost.plot(x_values_multi, y_values_multi,
                     color=approach_colors['multiagent'],
                     marker='o',
@@ -386,10 +412,10 @@ def create_combined_grid_layout():
                            [y + std for y, std in zip(y_values_twostep, y_std_twostep)],
                            color=approach_colors['twostep'], alpha=0.2)
     
-    ax_avg_cost.set_ylabel('Normalized Solution Cost', fontsize=12, fontweight='bold')
+    ax_avg_cost.set_ylabel('Normalized Execution Length', fontsize=12, fontweight='bold')
     ax_avg_cost.set_xlabel('Number of Agents', fontsize=10, fontweight='bold')
     ax_avg_cost.grid(True, linestyle='--', alpha=0.7)
-    ax_avg_cost.set_xticks(range(1, 6))
+    ax_avg_cost.set_xticks(range(1, 5))
     ax_avg_cost.tick_params(axis='both', labelsize=10)
     
     # Add a single legend at the top of the figure
@@ -397,7 +423,7 @@ def create_combined_grid_layout():
     fig.legend(handles=legend_elements, loc='upper center', ncol=2, fontsize=12, 
                frameon=True, bbox_to_anchor=(0.5, 0.98))
     
-    plt.suptitle('Planning Time and Solution Cost Comparison', 
+    plt.suptitle('Planning Time and Execution Length Comparison', 
                  fontsize=14, fontweight='bold', y=1.02)
     
     plt.tight_layout(rect=[0, 0, 1, 0.95])  # Adjust the rect to leave space for the legend
@@ -406,7 +432,7 @@ def create_combined_grid_layout():
 
 # Create individual plots for each domain and metric
 for domain in domains:
-    create_domain_plot(domain, 'avg_solution_cost', 'Solution Cost', 'Solution Costs')
+    create_domain_plot(domain, 'avg_solution_cost', 'Execution Length', 'Execution Lengths')
     create_domain_plot(domain, 'avg_planning_time', 'Planning Time (s)', 'Planning Times')
 
 # Create the combined 2x5 grid layout
