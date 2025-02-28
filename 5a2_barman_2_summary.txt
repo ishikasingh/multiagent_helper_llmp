@@ -1,0 +1,19 @@
+Domain: barman-enabled
+Success rate: 100.00% (1/1)
+Results:
+  [results][barman-enabled][19]
+  [single_agent][planning time: 1000.44][cost: 87.0]
+  [multi_agent][planning_time: 1009.1683170032502][cost: 76.0][agents: 5][optimization time 5618.399402618408]
+  Success: Yes
+
+----------------------------------------
+
+Domain Averages:
+Domain: barman-enabled
+  Single Agent:
+    Average Cost: 87.00
+    Average Planning Time: 1000.44 sec
+  Multi Agent:
+    Average Cost: 76.00
+    Average Planning Time: 1009.17 sec
+
