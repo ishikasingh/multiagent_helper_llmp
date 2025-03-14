@@ -91,7 +91,8 @@ TwoStep/
 │   └── tyreworld-multi/         # Multi-agent variant of tyreworld domain
 ├── modules/                     # Core functionality modules
 │   ├── generator.py             # Generates subgoals and handles LLM integration
-│   ├── planner.py               # Planning functionality and integration with fast-downward
+│   ├── planner.py               # Planning functionality and integration with fast-downward 
+│   ├── utils.py                 # Utility functions and constants
 │   └── __init__.py
 ├── SA_cache/                    # Cache of single-agent solutions to avoid replanning
 ├── helper_script_n_agents.py    # Main script for running individual multi-agent experiments
