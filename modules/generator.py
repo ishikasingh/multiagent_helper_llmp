@@ -144,6 +144,7 @@ def get_pddl_goal(expt_path, args, helper_subgoal, log_file):
         # import ipdb; ipdb.set_trace()
         # print("\n natural language to pddl prompt \n", prompt_text)
         # keep this to 4o
+        print("prompt_text", prompt_text)
         pddl_goal = query(prompt_text, system_text=system_text, model='gpt-4o')
         # import ipdb; ipdb.set_trace()
         # remove undefined goal conditions using domain predicate list
@@ -151,7 +152,7 @@ def get_pddl_goal(expt_path, args, helper_subgoal, log_file):
             pddl_goal = pddl_goal.replace('(empty hands)', '').replace('(empty-hand)', '').replace('(empty-hands)', '').replace('empty hand', '')
         #print("old",pddl_goal)
         pddl_goal = clean_pddl_goal(pddl_goal)
-        #print("cleaned", pddl_goal)
+        print("cleaned", pddl_goal)
         with open(log_file, 'a+') as f:
             f.write(f"\n\n{pddl_goal}")
         with open(pddl_problem_filename, 'w') as f:

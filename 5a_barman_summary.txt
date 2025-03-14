@@ -1,0 +1,39 @@
+Domain: barman-enabled
+Success rate: 100.00% (5/5)
+Results:
+  [results][barman-enabled][15]
+  [single_agent][planning time: 1000.41][cost: 75.0]
+  [multi_agent][planning_time: 1213.7772027015685][cost: 67.0][agents: 5][optimization time 29253.14559006691]
+  Success: Yes
+
+  [results][barman-enabled][17]
+  [single_agent][planning time: 1000.39][cost: 83.0]
+  [multi_agent][planning_time: 1224.2816306877137][cost: 81.0][agents: 5][optimization time 7414.217755794525]
+  Success: Yes
+
+  [results][barman-enabled][18]
+  [single_agent][planning time: 1000.44][cost: 86.0]
+  [multi_agent][planning_time: 1259.0644137096406][cost: 76.0][agents: 5][optimization time 855.3816380500793]
+  Success: Yes
+
+  [results][barman-enabled][19]
+  [single_agent][planning time: 1000.44][cost: 87.0]
+  [multi_agent][planning_time: 1259.8315653419495][cost: 76.0][agents: 5][optimization time 326.07490587234497]
+  Success: Yes
+
+  [results][barman-enabled][20]
+  [single_agent][planning time: 1000.4][cost: 86.0]
+  [multi_agent][planning_time: 1263.5312163829803][cost: 75.0][agents: 5][optimization time 18634.085030317307]
+  Success: Yes
+
+----------------------------------------
+
+Domain Averages:
+Domain: barman-enabled
+  Single Agent:
+    Average Cost: 83.40
+    Average Planning Time: 1000.42 sec
+  Multi Agent:
+    Average Cost: 75.00
+    Average Planning Time: 1244.10 sec
+
