@@ -5,31 +5,27 @@ from modules.planner import planner
 
 def evaluate_domain(domain_path, time_limit=300):
     domain_name = os.path.basename(domain_path)
-    
-    # Create Args object with necessary parameters
     class Args:
         def __init__(self):
             self.domain = domain_name
             self.time_limit = time_limit
             self.run = 10000
             self.task_id = None
-            self.num_agents = 1  # Set default, adjust if needed
+            self.num_agents = 1 
     
     args = Args()
     
     # Get all problem files
     problem_files = [f for f in os.listdir(domain_path) if f.startswith('p') and f.endswith('.pddl')]
     
-    # Create domain-specific folder in MA_cache
     domain_cache_path = os.path.join("MA_cache", domain_name)
     os.makedirs(domain_cache_path, exist_ok=True)
     
     for problem_file in sorted(problem_files):
-        task_id = int(problem_file[1:-5])  # Extract number from pXX.pddl
-        args.task_id = f"{task_id:02d}"  # Update task_id for current problem
+        task_id = int(problem_file[1:-5]) 
+        args.task_id = f"{task_id:02d}" 
         print(f"\nEvaluating {domain_name} problem {args.task_id}", flush=True)
         
-        # Create domain-specific cache directory
         cache_path = os.path.join("experiments_multiagent_help/run_10000", domain_name, )
         os.makedirs(cache_path, exist_ok=True)
         
@@ -72,7 +68,6 @@ def main():
     
     args = parser.parse_args()
     
-    # Construct the full domain path
     domain_path = os.path.join('domains', args.domain)
     
     if not os.path.isdir(domain_path):

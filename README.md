@@ -1,114 +1,99 @@
 # TwoStep: Multi-agent Task Planning using Classical Planners and Large Language Models
 This repo contains the official source code of `TwoStep` for generating multi-agent plans based on problems decribed by natural language, in symbolic domains.
 
-## Dependency
+Check out our [paper]() and [website]()!
 
-1. Install OpenAI GPT [API](https://platform.openai.com/docs/quickstart/build-your-application). Remember to put openai_keys under the ```keys``` folder.
-   - for now it exists in ```query()``` fuction in ```helper_script.py``` (don't share this key or use for anything unrelated to the project)
+## Getting Started
 
+1. Install required python libraries with ```pip install -r requirements.txt```
 2. Install [fast-downward](https://drive.google.com/file/d/16HlP14IN06asIXYAZ8RHR1P7-cEYwhA6/view). For more details on fast-downward, please check the official [github repo](https://github.com/aibasel/downward) and the fast-downward [website](https://www.fast-downward.org/).
-
-## Running Code
-To run a for a specific task in a specific domain:
-```
-python helper_script.py --run $run --domain $domain --time-limit $timelimit --task_id $task_id
-```
-`$run` is experiment number,
-`$task_id` is task number - between 1 to 20,
-`$timelimit` is the planner timelimit - default is `1000` seconds, and
-`$domain` is selected from
-```[barman, blocksworld, grippers, termes, tyreworld, barman-multi, blocksworld-multi, grippers-multi, termes-multi, tyreworld-multi]```
-- `floortile` and `storage` are not impletemented to run with `TwoStep`.
+3. Create a .env file to store your OpenAI API key— alternatively any API key with an OpenAI compatible API. 
 
 
-Run this file to launch a full sweep of experiment:
-- don't do that yet, but check it out for how to run different variations of the experiments
-```
-bash run_all_domains.sh
-```
+## Running an Experiment
 
 
----
-IGNORE THE STUFF AFTER THIS
-
----
-
-# LLM+P: Empowering Large Language Models with Optimal Planning Proficiency
-This repo contains the source code for making plans based on problems decribed by natural language.
-
-## Dependency
-
-1. Install OpenAI GPT [API](https://platform.openai.com/docs/quickstart/build-your-application). Remember to put openai_keys under the ```keys``` folder.
-
-2. Install [fast-downward](https://drive.google.com/file/d/16HlP14IN06asIXYAZ8RHR1P7-cEYwhA6/view). For more details on fast-downward, please check the official [github repo](https://github.com/aibasel/downward) and the fast-downward [website](https://www.fast-downward.org/).
-
-## Running Code
-To run a for a specific task in a specific domain using a specific method:
-```
-python main.py --domain DOMAIN --method METHOD --task TASK_ID
-```
-`DOMAIN` is selected from
-```[barman, blocksworld, floortile, grippers, storage, termes, tyreworld]```
-
-`METHOD` is selected from
-```[llm_ic_pddl_planner, llm_pddl_planner, llm_planner, llm_ic_planner]```
-
-Alternatively, you can just use:
-```
-bash run.sh DOMAIN METHOD TASK_ID
-```
-
-## Citations
-Please cite [this pre-print](https://arxiv.org/abs/2304.11477) if you find this repo useful.
+To run an individual multi-agent planning experiment, use `helper_script_n_agents.py`:
 
 ```
-@article{liu2023llmp,
-  title={LLM+P: Empowering Large Language Models with Optimal Planning Proficiency},
-  author={Liu, Bo and Jiang, Yuqian and Zhang, Xiaohan and Liu, Qiang and Zhang, Shiqi and Biswas, Joydeep and Stone, Peter},
-  journal={arXiv preprint arXiv:2304.11477},
-  year={2023}
-}
+python helper_script_n_agents.py --domain $DOMAIN --time-limit $LIMIT --task_id $ID --num_agents $N --run $RUN --model $MODEL
 ```
 
-## The File Hierarchy:
+Parameters:
+- `$DOMAIN`: One of the 5 domains: blocksworld, barman, grippers, termes, and tyreworld
+- `$LIMIT`: Number of seconds allocated for fast-downward to spend on planning each subgoal/goal
+- `$ID`: Task identifier (1-20) for each domain
+- `$N`: Number of agents/subgoals to generate
+- `$RUN`: Run identifier for tracking experiments
+- `$MODEL`: LLM model to use (e.g., 'gpt-4o')
+
+This script will:
+1. Generate N subgoals using the specified LLM
+2. Create a multi-agent plan where each agent handles a subgoal
+3. Print out the final merged plan with metrics for execution time
+4. Benchmark the multi-agent solution against a single agent execution of the same task
+
+The system saves single agent results to the folder SA_cache, which we have provided, to save time by not replanning tasks that have already been solved.
+
+## Running Multiple Experiments
+
+To run a batch of experiments, you can use the `run_experiments.sh` script:
+
 ```
-llm-pddl
- └─main.py                         (the main python script)
- └─keys
-    └─ openai_keys.txt             (you should place your openai keys here, one line each)
- └─domains                         (the generated domain files)
-    └─ barman
-        └─ description_geneator.py (generating natural language description)
-        └─ p_example.nl            (example natural language)
-        └─ p_example.pddl          (example problem pddl file)
-        └─ domain.pddl             (the shared domain.pddl file for all problems)
-        └─ xxx.nl                  (task natural language description)
-        └─ xxx.pddl                (ground-truth problem pddl, might not be used)
-    └─ blocksworld
-    └─ floortile
-    └─ grippers
-    └─ storage
-    └─ termes
-    └─ tyreworld
- └─problems                        (the generated problem pddl files)
-    └─ llm                         (empty, since llm -> plan does not generate pddl)
-    └─ llm_ic                      (empty, since llm + context -> plan does not generate pddl)    
-    └─ llm_pddl                    (baseline 2: llm -> p.pddl)
-    └─ llm_ic_pddl                 (ours: llm + context -> p.pddl)
-        └─ barman
-        └─ ...
- └─plans                           (the tmp folder for storing raw solutions found by fast-downward)
-    └─ llm                         (empty, since llm -> plan does not generate raw plans)
-    └─ llm_ic                      (empty, since llm + context -> plan does not generate raw plans)
-    └─ llm_pddl                    (baseline 2: llm -> p.pddl)
-    └─ llm_ic_pddl                 (ours: llm + context -> p.pddl)
-        └─ barman
-        └─ ...
- └─results                         (the final plan in natural language)
-    └─ llm                         (baseline 1: llm -> plan)
-    └─ llm_ic                      (baseline 3: llm + context -> plan)
-    └─ llm_pddl                    (baseline 2: llm -> p.pddl)
-    └─ llm_ic_pddl                 (ours: llm + context -> p.pddl)
-        └─ barman
-        └─ ...
- ```
+./run_experiments.sh --output-file results.txt --summary-file summary.txt --python-script helper_script_n_agents.py --num-agents N --model MODEL_NAME --run RUN_ID --time-limit SECONDS --domains DOMAIN1,DOMAIN2 --tasks ID1,ID2,ID3
+```
+
+Parameters:
+- `--output-file`: File to store detailed experiment results
+- `--summary-file`: File to store the summary of all experiments
+- `--python-script`: Script to run (helper_script_n_agents.py for multi-agent planning)
+- `--num-agents`: Number of agents to use
+- `--model`: LLM model to use (e.g., 'gpt-4o')
+- `--run`: Run identifier
+- `--time-limit`: Time limit in seconds for each planning task
+- `--domains`: Comma-separated list of domains to test
+- `--tasks`: Comma-separated list of task IDs to run
+
+Example:
+```
+./run_experiments.sh --output-file termes_results.txt --summary-file termes_summary.txt --python-script helper_script_n_agents.py --num-agents 4 --model 'gpt-4o' --run 1001 --time-limit 250 --domains termes --tasks 1,2,3,4,5
+```
+
+This simply iterates over all experiments and saves their results to a file, then calls `processor.py` and formats everything in the summary file. 
+
+## Visualizing Results
+`graph_results.py` contains the code we used to plot the graphs in our paper. We store a dictionary of all results that can be updated with your own results—— if you want to rerun the multi-agent planning, you can run 
+```
+python solve_pddl_MA.py --time-limit SECONDS --domain DOMAIN
+```
+Parameters
+- `--time-limit`: Time limit in seconds for the planner.
+- `--domain`: the domain to test
+
+TwoStep/
+├── domains/                     # Domain definitions and problem files
+│   ├── barman/                  # Single-agent barman domain
+│   │   ├── domain.nl            # Natural language domain description
+│   │   ├── description_generator.py  # Problem description generator
+│   │   ├── p*.nl                # Problem descriptions in natural language
+│   │   └── p_example.sol        # Example solution files
+│   ├── barman-multi/            # Multi-agent variant of barman domain
+│   ├── blocksworld/             # Single-agent blocksworld domain
+│   ├── blocksworld-multi/       # Multi-agent variant of blocksworld domain
+│   ├── grippers/                # Single-agent grippers domain
+│   ├── grippers-multi/          # Multi-agent variant of grippers domain
+│   ├── termes/                  # Single-agent termes domain
+│   ├── termes-multi/            # Multi-agent variant of termes domain
+│   ├── tyreworld/               # Single-agent tyreworld domain
+│   └── tyreworld-multi/         # Multi-agent variant of tyreworld domain
+├── modules/                     # Core functionality modules
+│   ├── generator.py             # Generates subgoals and handles LLM integration
+│   ├── planner.py               # Planning functionality and integration with fast-downward
+│   └── __init__.py
+├── SA_cache/                    # Cache of single-agent solutions to avoid replanning
+├── helper_script_n_agents.py    # Main script for running individual multi-agent experiments
+├── run_experiments.sh           # Shell script for batch running multiple experiments
+├── solve_pddl_MA.py             # Script for multi-agent PDDL problem solving
+├── processor.py                 # Processes experiment results for analysis
+├── graph_results.py             # Creates visualizations comparing different approaches
+└── requirements.txt             # Python dependencies
