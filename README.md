@@ -70,6 +70,9 @@ Parameters
 - `--time-limit`: Time limit in seconds for the planner.
 - `--domain`: the domain to test
 
+## Project Structure
+
+```
 TwoStep/
 ├── domains/                     # Domain definitions and problem files
 │   ├── barman/                  # Single-agent barman domain
