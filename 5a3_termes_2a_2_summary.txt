@@ -1,0 +1,19 @@
+Domain: termes
+Success rate: 0.00% (0/1)
+Results:
+  [results][termes][15]
+  [single_agent][planning time: 1000.16][cost: 146.0]
+  [multi_agent][planning_time: 407.87959079742427][cost: 148.0][agents: 4][optimization time 4919.9400317668915]
+  Success: No
+
+----------------------------------------
+
+Domain Averages:
+Domain: termes
+  Single Agent:
+    Average Cost: 146.00
+    Average Planning Time: 1000.16 sec
+  Multi Agent:
+    Average Cost: 148.00
+    Average Planning Time: 407.88 sec
+
